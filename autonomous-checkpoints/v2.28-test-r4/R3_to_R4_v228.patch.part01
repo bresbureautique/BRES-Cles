@@ -1,0 +1,52 @@
+{length:8},()=>Array(16).fill(0));
++    for(let gy=0;gy<8;gy++)for(let gx=0;gx<16;gx++){let on=0,n=0;const xa=Math.floor(x0+gx*bw/16),xb=Math.max(xa+1,Math.floor(x0+(gx+1)*bw/16)),ya=Math.floor(y0+gy*bh/8),yb=Math.max(ya+1,Math.floor(y0+(gy+1)*bh/8));for(let y=ya;y<yb&&y<h;y++)for(let x=xa;x<xb&&x<w;x++){on+=best.mask[y*w+x];n++;}bits[gy][gx]=(on/Math.max(1,n))>.28?1:0;}
++    if(preview){preview.width=320;preview.height=160;preview.style.display='block';const pc=preview.getContext('2d');pc.fillStyle='#fff';pc.fillRect(0,0,320,160);pc.fillStyle='#111';for(let y=0;y<8;y++)for(let x=0;x<16;x++)if(bits[y][x])pc.fillRect(x*20,y*20,20,20);pc.strokeStyle='#ddd';for(let x=0;x<=16;x++){pc.beginPath();pc.moveTo(x*20,0);pc.lineTo(x*20,160);pc.stroke();}for(let y=0;y<=8;y++){pc.beginPath();pc.moveTo(0,y*20);pc.lineTo(320,y*20);pc.stroke();}}
++    return bits;
++  }
++  function candidateProfileRows(rows){return rows.filter(r=>Number(r[10]||0)>=.8&&r[9]);}
++  function renderProfileCandidates(rows,host){
++    const good=candidateProfileRows(rows);if(!good.length){host.innerHTML='<b>Aucun profil catalogue exploitable pour ce groupe.</b>';return;}
++    let h='<b>Profils catalogue des candidats :</b><div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px">';
++    for(const r of good){h+=`<div style="min-width:132px;text-align:center"><b>${escapeHtml(r[0])}</b><br>${profileSvg(r[9],r[0])}</div>`;}host.innerHTML=h+'</div>';
++  }
++  async function compareProfilePhoto(){
++    const st=el2('profilePhotoStatus'),inp=el2('profilePhoto'),prev=el2('profilePhotoPreview'),cand=el2('profileCandidateVisuals');if(!st||!inp)return;
++    if(!lastCatalogueResults||!lastCatalogueResults.length){st.className='status bad';st.textContent='Lancez d’abord la recherche catalogue sur les photos recto/verso.';return;}
++    const rows=lastCatalogueResults[0].rows,good=candidateProfileRows(rows);renderProfileCandidates(rows,cand);
++    if(good.length<2){st.className='status warn';st.innerHTML='<b>Le profil n’est pas nécessaire pour ce meilleur groupe.</b>';return;}
++    try{st.className='status warn';st.textContent='Analyse expérimentale du profil…';const bits=await fileToProfileBits(inp.files&&inp.files[0],prev);let scores=good.map(r=>({ref:r[0],score:bestProfileSimilarity(bits,r[9])})).sort((a,b)=>b.score-a.score);const top=scores[0],second=scores[1],margin=(top.score-(second?second.score:0));
++      const pct=x=>Math.round(x*100);let h=`<b>Comparaison du profil — EXPÉRIMENTAL :</b><br>${scores.map((x,i)=>`${i+1}. <b>${escapeHtml(x.ref)}</b> — ${pct(x.score)} %`).join('<br>')}<br>`;
++      if(top.score>=.58&&margin>=.10){h+=`<br><b>Le profil photographié préfère ${escapeHtml(top.ref)}</b> (marge ${pct(margin)} points). Ce résultat reste À CONFIRMER jusqu’au test avec des clés réelles.`;st.className='status warn';}
++      else h+=`<br><b>Profil non concluant.</b> Aucun choix automatique n’est autorisé.`;
++      st.innerHTML=h;
++    }catch(e){st.className='status bad';st.textContent=e.message||String(e);}
++  }
+   function render(results,box,db){
++    lastCatalogueResults=results;lastCatalogueDb=db;
+     if(!results.length){box.className='status warn';box.innerHTML='<b>Aucun candidat catalogue suffisamment proche.</b>';return;}
+     const top=results[0],second=results[1],margin=second?top.m.score-second.m.score:99,ps=profileStatus(top.rows),stats=catalogueStatsFor(db);
++    const pcv=el2('profileCandidateVisuals');if(pcv)renderProfileCandidates(top.rows,pcv);
+     const refs=top.rows.map(r=>r[0]),brands=unique(top.rows.map(r=>r[1]).filter(Boolean)),pages=unique(top.rows.map(r=>r[2]));
+     const q=Math.max(...top.rows.map(r=>Number(r[11]||0)));
+     let h=`<b>Catalogue Silca massif : ${db.length} silhouettes chargées.</b><br>`;
+@@ -152,15 +233,23 @@
+       const gp=profileStatus(g.rows);
+       h+=`<br>${i+1}. <b>${rr.slice(0,6).join(', ')}${rr.length>6?'…':''}</b> — ${g.m.score}%${g.brandHit?' — marque compatible':''}${g.rows.length>1?` — ${g.rows.length} mêmes silhouettes / profil: ${escapeHtml(gp.kind)}`:''}`;
+     });
+-    h+=`<br><br><small>Contrôle R3 : ${stats.collisionGroups} groupes de silhouettes identiques (${stats.refsInCollision} références). Le profil catalogue sépare entièrement ${stats.fullyProfileResolved} de ces groupes ; ${stats.partialProfileResolved} partiellement ; ${stats.notProfileResolved} restent non séparés par le profil extrait. Aucune validation automatique n’est produite par la forme seule.</small>`;
++    h+=`<br><br><small>Contrôle R4 : ${stats.collisionGroups} groupes de silhouettes identiques (${stats.refsInCollision} références). Le profil catalogue sépare entièrement ${stats.fullyProfileResolved} de ces groupes ; ${stats.partialProfileResolved} partiellement ; ${stats.notProfileResolved} restent non séparés par le profil extrait. Aucune validation automatique n’est produite par la forme seule.</small>`;
+     box.className='status warn';box.innerHTML=h;
+   }
++  function installAutoCatalogueSearch(){
++    const analyse=el2('analyseBtn');if(!analyse||analyse.dataset.v228auto==='1')return;analyse.dataset.v228auto='1';const original=analyse.onclick;
++    analyse.onclick=async function(ev){
++      if(original)await original.call(this,ev);
++      const status=el2('catalogueMassifStatus');if(!status||!currentSig)return;
++      try{status.className='status warn';status.textContent='V2.28 R4 : recherche catalogue automatique après analyse…';const db=await ensureCatalogue(status);render(groupSearchCatalogue(currentSig,db),status,db);}catch(e){status.className='status bad';status.textContent='Recherche catalogue automatique indisponible : '+(e.message||e);}
++    };
++  }
+   function addCard(){
+     const cards=document.querySelectorAll('main .card'); if(!cards.length)return;
+     const card=document.createElement('section');card.className='card';card.id='catalogueMassifCard';
+-    card.innerHTML=`<h2>2. Catalogue Silca massif — V2.28 TEST R3</h2><p class="small">Recherche automatique par <b>groupes de formes</b> dans plus de 5 000 silhouettes. Les références ayant exactement la même silhouette restent groupées ; le moteur indique si leur profil catalogue permet de les départager.</p><button id="catalogueMassifBtn">🔎 Rechercher automatiquement dans le catalogue Silca</button><div id="catalogueMassifStatus" class="status">Analysez d’abord recto + verso, puis lancez la recherche catalogue.</div>`;
++    card.innerHTML=`<h2>2. Catalo
