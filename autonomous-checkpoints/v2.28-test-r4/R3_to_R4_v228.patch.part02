@@ -1,0 +1,22 @@
+gue Silca massif — V2.28 TEST R4</h2><p class="small">Recherche automatique par <b>groupes de formes</b> dans plus de 5 000 silhouettes. Les références ayant exactement la même silhouette restent groupées. R4 affiche leurs <b>profils catalogue</b> et ajoute un comparateur photo expérimental du bout de la clé.</p><button id="catalogueMassifBtn">🔎 Rechercher automatiquement dans le catalogue Silca</button><div id="catalogueMassifStatus" class="status">Analysez d’abord recto + verso, puis lancez la recherche catalogue.</div><div id="profileCandidateVisuals" class="status">Les profils des candidats apparaîtront ici après la recherche.</div><h3>Profil / section de la clé — expérimental</h3><p class="small">Photographiez <b>le bout de la clé dans l’axe</b>, sur fond uni. Cette étape ne valide jamais seule une référence : elle sert à départager les silhouettes identiques.</p><label class="btn alt" for="profilePhoto">📷 Photo du profil</label><input id="profilePhoto" type="file" accept="image/*" capture="environment"><canvas id="profilePhotoPreview"></canvas><button id="profileCompareBtn" class="alt">Comparer le profil aux candidats</button><div id="profilePhotoStatus" class="status">Aucune photo de profil analysée.</div>`;
+     cards[0].insertAdjacentElement('afterend',card);
+-    const btn=el2('catalogueMassifBtn'),status=el2('catalogueMassifStatus');
++    const btn=el2('catalogueMassifBtn'),status=el2('catalogueMassifStatus');const pbtn=el2('profileCompareBtn');if(pbtn)pbtn.onclick=compareProfilePhoto;
+     btn.onclick=async()=>{
+       const sig=(typeof currentSig!=='undefined')?currentSig:window.currentSig;
+       if(!sig){status.className='status bad';status.textContent='Analysez d’abord les deux photos recto + verso.';return;}
+@@ -168,10 +257,11 @@
+     };
+   }
+   try{
+-    document.title='BRES Clés V2.28 TEST R3';
+-    const badge=document.querySelector('.app-version-badge');if(badge)badge.textContent='V2.28 TEST R3 • GROUPES SILHOUETTES + PROFILS • STABLE CONSERVÉE';
++    document.title='BRES Clés V2.28 TEST R4';
++    const badge=document.querySelector('.app-version-badge');if(badge)badge.textContent='V2.28 TEST R4 • PROFILS VISUELS + COMPARATEUR PHOTO EXPÉRIMENTAL • STABLE CONSERVÉE';
+     const hdr=document.querySelector('header p');if(hdr)hdr.textContent=hdr.textContent.replace(/V2\.2[5-8](?: TEST)?/,'V2.28 TEST');
+     installSafetyWrappers();
+     addCard();
++    installAutoCatalogueSearch();
+-  }catch(e){console.warn('V2.28 test R3 non initialisée',e)}
++  }catch(e){console.warn('V2.28 test R4 non initialisée',e)}
+ })();
