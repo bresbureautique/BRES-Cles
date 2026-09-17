@@ -1,0 +1,74 @@
+--- /mnt/data/bres_r3/unzip/BRES_Cles_Mobile_V2_28_TEST_R3/v228-catalogue.js	2026-09-17 17:46:28.000000000 +0000
++++ /mnt/data/bres_r4/BRES_Cles_Mobile_V2_28_TEST_R4/v228-catalogue.js	2026-09-17 18:48:00.932019817 +0000
+@@ -1,7 +1,7 @@
+-/* BRES Clés V2.28 TEST R3 — recherche catalogue Silca par groupes + intelligence profil */
++/* BRES Clés V2.28 TEST R4 — recherche catalogue Silca par groupes + intelligence profil */
+ (function(){
+-  const CHUNKS=Array.from({length:10},(_,i)=>`catalogue/v3/catalog-${String(i+1).padStart(2,'0')}.js?v=228r3`);
+-  let loadingPromise=null, catalogueStats=null;
++  const CHUNKS=Array.from({length:10},(_,i)=>`catalogue/v3/catalog-${String(i+1).padStart(2,'0')}.js?v=228r4`);
++  let loadingPromise=null, catalogueStats=null, lastCatalogueResults=null, lastCatalogueDb=null;
+   function el2(id){return document.getElementById(id)}
+   function loadScript(src){return new Promise((resolve,reject)=>{const s=document.createElement('script');s.src=src;s.onload=resolve;s.onerror=()=>reject(new Error('Chargement impossible : '+src));document.head.appendChild(s);});}
+   function normText(s){return String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toUpperCase().replace(/[^A-Z0-9]+/g,' ').trim();}
+@@ -126,9 +126,90 @@
+     if(sigs.length>1)return {text:`PARTIEL — ${sigs.length} profils distincts pour ${rows.length} références`,kind:'partial',distinct:sigs.length};
+     return {text:'NON — même profil extrait',kind:'none',distinct:sigs.length};
+   }
++  function profileBits(hex){
++    const s=String(hex||'').trim(); if(!/^[0-9a-f]{32}$/i.test(s))return null;
++    const bin=BigInt('0x'+s).toString(2).padStart(128,'0');
++    const rows=[];for(let y=0;y<8;y++)rows.push([...bin.slice(y*16,(y+1)*16)].map(x=>x==='1'?1:0));
++    return rows;
++  }
++  function profileSvg(hex,label){
++    const b=profileBits(hex);if(!b)return '';
++    let cells='';for(let y=0;y<8;y++)for(let x=0;x<16;x++)if(b[y][x])cells+=`<rect x="${x}" y="${y}" width="1" height="1"/>`;
++    return `<svg viewBox="0 0 16 8" role="img" aria-label="Profil catalogue ${escapeHtml(label||'')}" style="width:128px;max-width:100%;height:auto;background:#fff;border:1px solid #ccd3da;border-radius:6px;padding:4px"><g fill="#111">${cells}</g></svg>`;
++  }
++  function popcnt(n){let c=0;while(n){n&=n-1;c++;}return c;}
++  function bitsToMasks(bits){
++    const rows=[];for(let y=0;y<8;y++){let m=0;for(let x=0;x<16;x++)if(bits[y]&&bits[y][x])m|=(1<<(15-x));rows.push(m>>>0);}return rows;
++  }
++  function transformProfile(bits,flipH,flipV,dx,dy){
++    const out=Array.from({length:8},()=>Array(16).fill(0));
++    for(let y=0;y<8;y++)for(let x=0;x<16;x++)if(bits[y][x]){
++      const xx=(flipH?15-x:x)+dx, yy=(flipV?7-y:y)+dy;
++      if(xx>=0&&xx<16&&yy>=0&&yy<8)out[yy][xx]=1;
++    }
++    return out;
++  }
++  function profileSimilarity(a,b){
++    if(!a||!b)return 0;const A=bitsToMasks(a),B=bitsToMasks(b);let inter=0,uni=0;
++    for(let y=0;y<8;y++){inter+=popcnt((A[y]&B[y])>>>0);uni+=popcnt((A[y]|B[y])>>>0);}return uni?inter/uni:0;
++  }
++  function bestProfileSimilarity(photoBits,hex){
++    const cat=profileBits(hex);if(!photoBits||!cat)return 0;let best=0;
++    for(const fh of [false,true])for(const fv of [false,true])for(let dx=-3;dx<=3;dx++)for(let dy=-2;dy<=2;dy++)best=Math.max(best,profileSimilarity(transformProfile(photoBits,fh,fv,dx,dy),cat));
++    return best;
++  }
++  function otsuThreshold(gray){
++    const h=new Uint32Array(256);for(const v of gray)h[v]++;const n=gray.length;let sum=0;for(let i=0;i<256;i++)sum+=i*h[i];let wb=0,sb=0,best=-1,t=127;
++    for(let i=0;i<256;i++){wb+=h[i];if(!wb)continue;const wf=n-wb;if(!wf)break;sb+=i*h[i];const mb=sb/wb,mf=(sum-sb)/wf,v=wb*wf*(mb-mf)*(mb-mf);if(v>best){best=v;t=i;}}
++    return t;
++  }
++  function largestComponent(mask,w,h){
++    const seen=new Uint8Array(w*h);let best=null;const qx=new Int32Array(w*h),qy=new Int32Array(w*h);
++    for(let sy=0;sy<h;sy++)for(let sx=0;sx<w;sx++){const si=sy*w+sx;if(!mask[si]||seen[si])continue;let q0=0,q1=0,n=0,minx=sx,maxx=sx,miny=sy,maxy=sy;qx[q1]=sx;qy[q1++]=sy;seen[si]=1;
++      while(q0<q1){const x=qx[q0],y=qy[q0++];n++;if(x<minx)minx=x;if(x>maxx)maxx=x;if(y<miny)miny=y;if(y>maxy)maxy=y;for(const [dx,dy] of [[1,0],[-1,0],[0,1],[0,-1]]){const xx=x+dx,yy=y+dy;if(xx<0||yy<0||xx>=w||yy>=h)continue;const ii=yy*w+xx;if(mask[ii]&&!seen[ii]){seen[ii]=1;qx[q1]=xx;qy[q1++]=yy;}}}
++      const bw=maxx-minx+1,bh=maxy-miny+1,area=bw*bh,fill=n/Math.max(1,area);if(n>80&&bw>8&&bh>8&&fill>.08&&fill<.92){const touches=(minx<=1)+(miny<=1)+(maxx>=w-2)+(maxy>=h-2),borderPenalty=touches>=3?.18:touches===2?.45:touches===1?.78:1;const score=n*(1-Math.abs(.38-fill))*borderPenalty;if(!best||score>best.score)best={minx,maxx,miny,maxy,n,fill,score};}
++    }return best;
++  }
++  async function loadProfileImage(file){
++    if(typeof createImageBitmap==='function')return await createImageBitmap(file);
++    return await new Promise((resolve,reject)=>{const u=URL.createObjectURL(file),im=new Image();im.onload=()=>{URL.revokeObjectURL(u);resolve(im)};im.onerror=()=>{URL.revokeObjectURL(u);reject(new Error('Photo illisible.'))};im.src=u;});
++  }
++  async function fileToProfileBits(file,preview){
++    if(!file)throw new Error('Ajoutez une photo du profil.');
++    const bmp=await loadProfileImage(file);const iw=bmp.width||bmp.naturalWidth,ih=bmp.height||bmp.naturalHeight;const scale=Math.min(1,520/Math.max(iw,ih)),w=Math.max(32,Math.round(iw*scale)),h=Math.max(32,Math.round(ih*scale));
++    const c=document.createElement('canvas');c.width=w;c.height=h;const cx=c.getContext('2d',{willReadFrequently:true});cx.drawImage(bmp,0,0,w,h);if(bmp.close)bmp.close();
++    const im=cx.getImageData(0,0,w,h),gray=new Uint8Array(w*h);for(let i=0,j=0;i<im.data.length;i+=4,j++)gray[j]=Math.round(.299*im.data[i]+.587*im.data[i+1]+.114*im.data[i+2]);const t=otsuThreshold(gray);
++    let best=null;for(const dark of [true,false]){const mask=new Uint8Array(w*h);for(let i=0;i<gray.length;i++)mask[i]=dark?(gray[i]<t?1:0):(gray[i]>t?1:0);const cc=largestComponent(mask,w,h);if(cc&&(!best||cc.score>best.cc.score))best={mask,cc,dark};}
++    if(!best)throw new Error('Profil non isolé. Posez le bout de la clé devant un fond uni et rapprochez-vous.');
++    const b=best.cc,pad=Math.round(Math.max(b.maxx-b.minx,b.maxy-b.miny)*.08),x0=Math.max(0,b.minx-pad),y0=Math.max(0,b.miny-pad),x1=Math.min(w-1,b.maxx+pad),y1=Math.min(h-1,b.maxy+pad),bw=x1-x0+1,bh=y1-y0+1;
++    const bits=Array.from(
