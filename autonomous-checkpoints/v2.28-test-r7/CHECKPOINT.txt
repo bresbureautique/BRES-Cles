@@ -38,4 +38,4 @@ SHA-256
 SAUVEGARDE LIBRARY
 /BRES Cles/Sauvegardes/BRES_Cles_Mobile_V2_28_TEST_R7.zip
 
-Le checkpoint GitHub contient ce manifeste, le module R7, l’outil de replay, son self-test, le manifeste de build et le rapport de vérification. La sauvegarde complète reste dans la Library avec le SHA-256 ci-dessus.
+Le checkpoint GitHub contient le présent manifeste, l’outil de replay, son self-test, le manifeste de build et le rapport de vérification. Les empreintes SHA-256 permettent de vérifier le module R7 et le ZIP complet, conservé dans la Library.
