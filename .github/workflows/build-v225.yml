@@ -43,3 +43,5 @@ jobs:
           fi
           git commit -m 'Construire index V2.25 direct sans fetch navigateur'
           git push
+
+# relance après réparation des 3 parties
