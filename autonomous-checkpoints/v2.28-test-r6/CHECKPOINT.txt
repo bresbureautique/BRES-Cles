@@ -1,0 +1,36 @@
+BRES CLÉS — CHECKPOINT V2.28 TEST R6
+Date: 2026-09-17
+
+STATUT
+- Branche de test uniquement: v2.28-test-r1
+- V2.27 stable à conserver sur main: 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8
+- Ne pas promouvoir sans essai physique sur une clé de référence connue.
+
+NOUVEAUTÉS R6
+- recadrage réel de la zone blanche de la caméra profil (x 18 %, y 32 %, largeur 64 %, hauteur 36 %) avant analyse ;
+- suppression du fond hors cadre ;
+- cohérence entre deux captures successives ;
+- blocage explicite si deux captures fortes choisissent des références différentes ;
+- diagnostic JSON exportable sans image brute ;
+- aucune validation automatique par la silhouette ou le profil seuls.
+
+VÉRIFICATION
+- catalogue: 5 103 références uniques ;
+- 3 712 groupes de silhouettes ;
+- 1 053 groupes en collision / 2 444 références ;
+- 1 051 groupes entièrement séparables par profil ;
+- syntaxe JavaScript: OK ;
+- recadrage ROI: OK ;
+- garde-fou double capture: OK ;
+- ZIP testé sans erreur et verify_build.py relancé après extraction: OK.
+
+SHA-256
+- ZIP Library: b1604bcd563c545645c124a1ad602a79b57b0ecf854ea591284382f9a04c8d49
+- index.html: 534b7db40f5f4d3bf4990651bfb6dc1f4cd02fb624803e0aacd083a9f64622e6
+- v228-catalogue.js: 71f94e8752b77f269646297edac8a56bf421758b400776dddb4e6a23964abc0f
+- BUILD_MANIFEST.json: cd43247eda151b8dad06e595318c135b2f92ffaa2726fbf872262ec059547e00
+
+SAUVEGARDE LIBRARY
+/BRES Cles/Sauvegardes/BRES_Cles_Mobile_V2_28_TEST_R6.zip
+
+Le checkpoint GitHub contient le présent manifeste, le rapport de vérification et le test R6 ; la sauvegarde complète reste dans la Library avec le SHA-256 ci-dessus.
