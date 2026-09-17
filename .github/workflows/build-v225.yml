@@ -4,9 +4,14 @@ on:
   push:
     branches: [main]
     paths:
-      - 'app-v225.gz.b64'
-      - 'app-v225-part2.b64'
-      - 'app-v225-part3.b64'
+      - 'v225-01.b64'
+      - 'v225-02.b64'
+      - 'v225-03.b64'
+      - 'v225-04.b64'
+      - 'v225-05.b64'
+      - 'v225-06.b64'
+      - 'v225-07.b64'
+      - 'v225-08.b64'
       - '.github/workflows/build-v225.yml'
 
 permissions:
@@ -23,12 +28,15 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          cat app-v225.gz.b64 app-v225-part2.b64 app-v225-part3.b64 \
-            | tr -d '\r\n\t ' \
-            | base64 -d \
-            | gzip -dc > index.new.html
+          {
+            cat v225-01.b64 v225-02.b64 v225-03.b64 v225-04.b64 v225-05.b64
+            head -c 6512 v225-06.b64
+            head -c 6516 v225-07.b64
+            cat v225-08.b64
+          } | tr -d '\r\n\t ' | base64 -d | gzip -dc > index.new.html
           grep -q 'V2.25' index.new.html
           grep -q 'APPLICATION COMPLETE' index.new.html
+          test "$(wc -c < index.new.html)" -gt 100000
           mv index.new.html index.html
 
       - name: Commit direct index
@@ -43,5 +51,3 @@ jobs:
           fi
           git commit -m 'Construire index V2.25 direct sans fetch navigateur'
           git push
-
-# relance après réparation des 3 parties
