@@ -1,0 +1,45 @@
+name: Build BRES V2.25 direct index
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'app-v225.gz.b64'
+      - 'app-v225-part2.b64'
+      - 'app-v225-part3.b64'
+      - '.github/workflows/build-v225.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Reconstruct direct application HTML
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat app-v225.gz.b64 app-v225-part2.b64 app-v225-part3.b64 \
+            | tr -d '\r\n\t ' \
+            | base64 -d \
+            | gzip -dc > index.new.html
+          grep -q 'V2.25' index.new.html
+          grep -q 'APPLICATION COMPLETE' index.new.html
+          mv index.new.html index.html
+
+      - name: Commit direct index
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html
+          if git diff --cached --quiet; then
+            echo 'No change to commit'
+            exit 0
+          fi
+          git commit -m 'Construire index V2.25 direct sans fetch navigateur'
+          git push
