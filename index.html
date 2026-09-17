@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>BRES Clés V2.25</title>
+<title>BRES Clés V2.26</title>
 <style>
 :root{--b:#173b63;--bg:#f4f6f8;--ok:#e8f5ea;--warn:#fff3d6;--bad:#fde9e7}
 *{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:#17202a}
@@ -31,14 +31,14 @@ details{margin-top:8px}.candidate{padding:10px;border:1px solid #dde3e8;border-r
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
 </head>
 <body>
-<div class="app-version-badge">V2.25 • APPLICATION COMPLETE • AUTOFOCUS</div>
-<header><h1>BRES — Identification de clés</h1><p>V2.25 • vraie application + gabarit compact 0–50 mm + caméra guidée autofocus + OCR + contrôle catalogue</p></header>
+<div class="app-version-badge">V2.26 • APPLICATION COMPLETE • AUTOFOCUS</div>
+<header><h1>BRES — Identification de clés</h1><p>V2.26 • vraie application + gabarit compact 0–50 mm + caméra guidée autofocus + OCR + contrôle catalogue</p></header>
 
 <div id="cameraModal" class="camera-modal hidden" aria-hidden="true">
- <div class="cam-top">BRES : CAMÉRA GUIDÉE V2.25 — <span id="camSideLabel">Recto</span></div>
+ <div class="cam-top">BRES : CAMÉRA GUIDÉE V2.26 — <span id="camSideLabel">Recto</span></div>
  <div class="cam-stage">
   <video id="camVideo" autoplay playsinline muted></video>
-  <div class="cam-version">V2.25 • APPLICATION</div>
+  <div class="cam-version">V2.26 • APPLICATION</div>
   <div id="camGuide" class="cam-guide"><span class="cam-corner cc1"></span><span class="cam-corner cc2"></span><span class="cam-corner cc3"></span><span class="cam-corner cc4"></span></div>
   <div class="cam-tools"><button id="camRotateKey" type="button">↻ Tourner le repère</button><button id="camRefocus" type="button">🎯 Relancer mise au point</button></div>
   <div class="cam-marker-hint">Cadrez A • B • C • D<br>4 idéal • 3 minimum</div>
@@ -54,7 +54,7 @@ details{margin-top:8px}.candidate{padding:10px;border:1px solid #dde3e8;border-r
 
 <section class="card">
 <h2>1. Photographier la clé</h2>
-<div class="status ok"><b>V2.25 — test réel de l’application complète.</b><br>Gabarit compact 0–50 mm V2.18 : pointe sur ZERO, tête à l’autre extrémité. Cadrez si possible les 4 repères A-B-C-D (3 minimum). Le faux niveau couleur est désactivé. La caméra demande maintenant l’autofocus continu lorsque le téléphone et le navigateur l’autorisent.</div>
+<div class="status ok"><b>V2.26 — test réel de l’application complète.</b><br>Gabarit compact 0–50 mm V2.18 : pointe sur ZERO, tête à l’autre extrémité. Cadrez si possible les 4 repères A-B-C-D (3 minimum). Le faux niveau couleur est désactivé. La caméra demande maintenant l’autofocus continu lorsque le téléphone et le navigateur l’autorisent.</div>
 <div class="row">
 <button type="button" class="btn guidedCamBtn" data-side="recto">📷 Recto guidé</button>
 <button type="button" class="btn guidedCamBtn" data-side="verso">📷 Verso guidé</button>
@@ -126,7 +126,7 @@ details{margin-top:8px}.candidate{padding:10px;border:1px solid #dde3e8;border-r
 <section class="card">
 <h2>4. Équivalences fabricants</h2>
 <div id="xref" class="status">Les équivalences apparaîtront après identification.</div>
-<p class="small">La V2.25 croise la référence lue/saisie avec les équivalences disponibles et un visuel catalogue SILCA pilote. Les catalogues complets pourront être enrichis sans changer le gabarit.</p>
+<p class="small">La V2.26 croise la référence lue/saisie avec les équivalences disponibles et un visuel catalogue SILCA pilote. Les catalogues complets pourront être enrichis sans changer le gabarit.</p>
 <a class="btn alt" href="https://ecatalogo.jma.es/fr/llaves/" target="_blank">JMA</a>
 <a class="btn alt" href="https://www.silca.biz/fr/global/extranet/catalogues/catalogues-de-cles/110-catalogue" target="_blank">Silca</a>
 <a class="btn alt" href="https://keyline.it/fr/catalogue-interactif-cl%C3%A9s" target="_blank">Keyline</a>
@@ -888,7 +888,7 @@ el("analyseBtn").onclick=async()=>{
  }
 };
 function photoRefresh(){let n=(getMainPhoto("recto")?1:0)+(getMainPhoto("verso")?1:0);el("photoStatus").textContent=n+" / 2 photo(s).";currentSig=null;currentAnalyses=null;}
-// --- V2.25 : caméra guidée intégrée à l'application complète + autofocus ---
+// --- V2.26 : caméra guidée intégrée à l'application complète + autofocus ---
 let camStream=null,camTrack=null,camSide='recto',camKeyRotation=0;
 function setCamFocus(message,kind=''){
   const box=el('camFocus'); if(!box)return;
@@ -944,7 +944,7 @@ async function captureGuided(){
   const blob=await new Promise(res=>c.toBlob(res,'image/jpeg',0.95));
   guidedCapture[camSide]=new File([blob],`BRES_${camSide}_${Date.now()}.jpg`,{type:'image/jpeg'});
   closeGuidedCamera();photoRefresh();
-  el('analysis').className='status';el('analysis').textContent=`Photo ${camSide} capturée en V2.25. Prenez l’autre face puis lancez l’analyse.`;
+  el('analysis').className='status';el('analysis').textContent=`Photo ${camSide} capturée en V2.26. Prenez l’autre face puis lancez l’analyse.`;
 }
 document.querySelectorAll('.guidedCamBtn').forEach(b=>b.addEventListener('click',()=>openGuidedCamera(b.dataset.side)));
 el('camClose').onclick=closeGuidedCamera;el('camCapture').onclick=captureGuided;
@@ -1555,4 +1555,4 @@ async function searchFromHeadPhotos(){
 el("headSearchBtn").onclick=searchFromHeadPhotos;
 
 </script>
-</main></body></html>
+</main><script src="v226-patch.js?v=226"></script></body></html>
