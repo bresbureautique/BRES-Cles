@@ -1,45 +1,33 @@
-name: Build BRES V2.25 direct index
+name: Build BRES V2.26 direct patch
 
 on:
   push:
     branches: [main]
     paths:
-      - 'v225-01.b64'
-      - 'v225-02.b64'
-      - 'v225-03.b64'
-      - 'v225-04.b64'
-      - 'v225-05.b64'
-      - 'v225-06.b64'
-      - 'v225-07.b64'
-      - 'v225-08.b64'
       - '.github/workflows/build-v225.yml'
 
 permissions:
   contents: write
 
 jobs:
-  build:
+  patch:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Reconstruct direct application HTML
+      - name: Activate V2.26 patch
         shell: bash
         run: |
           set -euo pipefail
-          {
-            cat v225-01.b64 v225-02.b64 v225-03.b64 v225-04.b64 v225-05.b64
-            head -c 6512 v225-06.b64
-            head -c 6516 v225-07.b64
-            cat v225-08.b64
-          } | tr -d '\r\n\t ' | base64 -d | gzip -dc > index.new.html
-          grep -q 'V2.25' index.new.html
-          grep -q 'APPLICATION COMPLETE' index.new.html
-          test "$(wc -c < index.new.html)" -gt 100000
-          mv index.new.html index.html
+          if ! grep -q 'v226-patch.js' index.html; then
+            sed -i 's#</body>#<script src="v226-patch.js?v=226"></script></body>#' index.html
+          fi
+          sed -i 's/V2\.25/V2.26/g' index.html
+          grep -q 'v226-patch.js' index.html
+          grep -q 'V2.26' index.html
 
-      - name: Commit direct index
+      - name: Commit V2.26
         shell: bash
         run: |
           git config user.name 'github-actions[bot]'
@@ -49,5 +37,5 @@ jobs:
             echo 'No change to commit'
             exit 0
           fi
-          git commit -m 'Construire index V2.25 direct sans fetch navigateur'
+          git commit -m 'Activer BRES V2.26 anti faux positif'
           git push
