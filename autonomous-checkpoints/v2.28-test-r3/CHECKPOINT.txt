@@ -1,0 +1,12 @@
+BRES CLÉS V2.28 TEST R3 — CHECKPOINT
+
+Library ZIP SHA-256:
+2a3fc78a9b6de05eb58cf81a6becb9be5a845ead8b124feac4665e265c9a2cd8  BRES_Cles_Mobile_V2_28_TEST_R3.zip
+
+GitHub R3 engine blob SHA:
+e5e0388acb80d14a54e9dc2bccbf80632379d714  autonomous-checkpoints/v2.28-test-r3/v228-catalogue.js
+
+Stable main reference (V2.27):
+9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8
+
+Règle: ne pas remplacer main/V2.27 par ce test sans validation réelle.
