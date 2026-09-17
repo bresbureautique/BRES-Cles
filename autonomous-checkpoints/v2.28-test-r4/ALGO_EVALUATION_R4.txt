@@ -1,0 +1,23 @@
+BRES CLÉS V2.28 TEST R4 — PROFILS VISUELS ET COMPARATEUR PHOTO
+
+Évolution depuis R3 :
+- la recherche catalogue se lance maintenant automatiquement après « Analyser la forme et les mesures » ; le bouton de recherche reste disponible pour relancer manuellement ;
+- affichage graphique des signatures de profil catalogue 16×8 pour les candidats du meilleur groupe ;
+- ajout d’une photo optionnelle du bout de la clé (vue dans l’axe) ;
+- extraction locale expérimentale : niveaux de gris, seuil Otsu, composante principale, normalisation sur grille 16×8 ;
+- comparaison tolérante aux petits décalages et retournements ;
+- seuil de préférence volontairement strict : score >= 58 % ET marge >= 10 points ; sinon « profil non concluant » ;
+- le profil ne produit JAMAIS un état VALIDÉ : seulement une préférence expérimentale ou « non concluant » ;
+- les groupes structurellement non séparables (ex. VAC151/VAC151SM) restent explicitement ambigus.
+
+Test synthétique du comparateur (700 cas pour le contrôle de seuil) :
+- sur signature exacte, le seuil strict prend une décision sur environ 52 % des cas testés avec 100 % de précision dans l’échantillon ;
+- avec 8 % de cellules bruitées, il prend une décision sur environ 33 % des cas avec 100 % de précision dans l’échantillon ;
+- la logique brute Top 1 est moins sûre car plusieurs profils deviennent proches lorsqu’on autorise les décalages/retournements : le seuil strict est donc conservé.
+- ces tests ne remplacent PAS des photos réelles.
+
+Sécurité :
+- la V2.27 stable n’est pas modifiée ;
+- la silhouette seule ne valide jamais ;
+- la photo de profil seule ne valide jamais ;
+- un test réel sur téléphone reste requis avant promotion.
