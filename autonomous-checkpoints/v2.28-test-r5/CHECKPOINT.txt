@@ -1,0 +1,35 @@
+BRES CLES — CHECKPOINT V2.28 TEST R5
+Date: 2026-09-17
+Branche: v2.28-test-r1
+
+Objet: profil guide + controle qualite + tolerance rotation.
+
+Base: V2.28 TEST R4.
+Modifications R5:
+- camera guidee optionnelle getUserMedia, avec repli sur le selecteur photo;
+- cadre de centrage du bout de la cle;
+- controle qualite de photo (contraste, marges, taille, coupure);
+- aucune preference de profil si qualite < 60/100;
+- comparaison de profil tolerante aux rotations de -15 a +15 degres;
+- seuil prudent conserve: score >= 58% ET marge >= 10 points;
+- silhouette seule et profil seul ne produisent jamais VALIDÉ.
+
+Verification locale:
+- JavaScript: node --check OK;
+- catalogue: 5103 references uniques;
+- groupes silhouettes: 3712;
+- groupes collisions: 1053 / 2444 references;
+- profils: 1051 groupes completement separables, 1 partiel, 1 non separe;
+- ZIP testzip: OK.
+
+Sauvegarde complete Library:
+/BRES Cles/Sauvegardes/BRES_Cles_Mobile_V2_28_TEST_R5.zip
+SHA-256 ZIP:
+6d98738edfd87194bc5598f060c5108681be9ea8248c6e6bbb8db7a856d8a60a
+
+Test synthetique rotation, 300 references:
+- bruit 0%: Top1 95.7%, decisions 50.7%, precision decisions 100%;
+- bruit 2%: Top1 95.3%, decisions 44.0%, precision decisions 100%;
+- bruit 8%: Top1 92.0%, decisions 33.0%, precision decisions 100%.
+
+IMPORTANT: V2.27 stable sur main ne doit pas etre modifiee. R5 reste TEST jusqu'a essai physique sur telephone.
