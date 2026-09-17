@@ -1,0 +1,23 @@
+BRES CLÉS V2.28 TEST R3 — ÉVALUATION DU MOTEUR DE GROUPES
+
+Catalogue compact : 5 103 références
+Groupes de silhouettes exactes : 3 712
+Groupes avec collision de silhouette : 1 053
+Références dans ces groupes : 2 444
+
+Pouvoir discriminant du profil catalogue dans les collisions :
+- groupes entièrement séparables par profil : 1 051
+- références appartenant à ces groupes : 2 438 / 2 444 (99,75 %)
+- groupe partiellement séparable : RO45 / RO4 / RO4R / RO48R (RONIS)
+- groupe non séparable : VAC151 / VAC151SM (VACHETTE)
+
+Conséquence R3 :
+- le classement s'effectue d'abord par groupe de forme et non par référence individuelle ;
+- les égalités structurelles du catalogue ne génèrent plus un faux gagnant arbitraire ;
+- un groupe ambigu affiche explicitement toutes ses références ;
+- la disponibilité d'un profil catalogue distinct est indiquée comme prochain critère ;
+- la marque ne sert que de préférence secondaire si deux groupes sont déjà géométriquement proches ;
+- aucune silhouette seule n'affiche un état de validation (status warn).
+
+Contrôle syntaxique :
+- v228-catalogue.js : node --check = OK.
