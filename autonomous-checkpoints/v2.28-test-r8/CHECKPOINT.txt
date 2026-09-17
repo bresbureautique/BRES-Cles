@@ -1,0 +1,33 @@
+BRES CLÉS — CHECKPOINT AUTONOME V2.28 TEST R8
+
+Branche GitHub cible : v2.28-test-r1 (branche de test séparée)
+Version stable à préserver : V2.27 sur main
+
+Objectif du jalon R8 :
+- empêcher qu'une session de calibration mélange deux références certaines ;
+- effacer la référence certaine lors d'une remise à zéro ;
+- vérifier si la référence certaine existe dans le catalogue chargé ;
+- conserver comme signal de calibration le cas où la vraie référence n'est pas dans le meilleur groupe de forme ;
+- exporter un bloc integrity et marquer explicitement validForReplay ;
+- écarter automatiquement les sessions contaminées/incomplètes lors du replay ;
+- ne pas recommander de nouveaux seuils globaux à partir d'un échantillon trop petit.
+
+Règle de diversité R8 :
+- 1–2 références certaines distinctes : OBSERVATION_ONLY ;
+- 3–9 : PROVISIONAL ;
+- 10 ou plus : THRESHOLD_TUNING_READY.
+
+Contrôles :
+- 5 103 références uniques ;
+- 3 712 groupes de forme ;
+- 1 053 groupes de collisions / 2 444 références ;
+- syntaxe JavaScript OK ;
+- self-test replay OK ;
+- self-test intégrité session OK ;
+- 26 fichiers contrôlés par SHA-256 dans BUILD_MANIFEST.json ;
+- aucune image brute dans les exports de calibration.
+
+Archive Library vérifiée : BRES_Cles_Mobile_V2_28_TEST_R8.zip
+SHA-256 archive : 096b181ffbf77273d29d349f8c8ca4c047afcd2c26af684a0fff357cdaa4af45
+
+Ce checkpoint ne remplace pas la V2.27 stable.
