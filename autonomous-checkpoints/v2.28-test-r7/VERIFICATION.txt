@@ -1,0 +1,23 @@
+OK
+{
+  "ok": true,
+  "version": "V2.28 TEST R7",
+  "catalog_count": 5103,
+  "unique_refs": 5103,
+  "silhouette_groups": 3712,
+  "collision_groups": 1053,
+  "collision_refs": 2444,
+  "profile_full_groups": 1051,
+  "profile_partial_groups": 1,
+  "profile_unresolved_groups": 1,
+  "javascript_syntax_ok": true,
+  "guided_camera_markers_ok": true,
+  "roi_crop_marker_ok": true,
+  "double_capture_marker_ok": true,
+  "calibration_export_marker_ok": true,
+  "derived_profile_marker_ok": true,
+  "replay_selftest_ok": true,
+  "raw_image_export_fields_absent": true,
+  "files_hashed": 24,
+  "errors": []
+}
