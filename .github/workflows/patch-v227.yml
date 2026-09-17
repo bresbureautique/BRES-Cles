@@ -1,0 +1,44 @@
+name: Patch BRES V2.27 local template
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/patch-v227.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Add V2.27 patch to index
+        shell: python
+        run: |
+          from pathlib import Path
+          p=Path('index.html')
+          s=p.read_text(encoding='utf-8')
+          old='</main><script src="v226-patch.js?v=226"></script></body></html>'
+          new='</main><script src="v226-patch.js?v=226"></script><script src="v227-patch.js?v=227"></script></body></html>'
+          if 'v227-patch.js?v=227' not in s:
+              if old not in s:
+                  raise SystemExit('Point insertion V2.27 introuvable')
+              s=s.replace(old,new,1)
+          p.write_text(s,encoding='utf-8')
+
+      - name: Commit index
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html
+          if git diff --cached --quiet; then
+            echo 'No change to commit'
+            exit 0
+          fi
+          git commit -m 'Activer BRES V2.27 étalon local'
+          git push
