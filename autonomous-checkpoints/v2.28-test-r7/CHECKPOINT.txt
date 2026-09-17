@@ -1,0 +1,41 @@
+BRES CLÉS — CHECKPOINT V2.28 TEST R7
+Date: 2026-09-17
+
+STATUT
+- Branche de test uniquement: v2.28-test-r1
+- V2.27 stable à conserver sur main: 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8
+- Ne pas promouvoir sans essai physique sur une clé de référence connue.
+
+NOUVEAUTÉS R7
+- seuils profil centralisés: qualité 60, score 58 %, marge 10 points, cohérence inter-captures 55 % ;
+- champ « Référence certaine » pour le protocole de calibration ;
+- remise à zéro explicite entre deux clés pour éviter toute contamination de session ;
+- diagnostic enrichi avec un profil binaire dérivé 8x16 / 32 hex, sans photo brute ;
+- export JSON de session de calibration multi-capture ;
+- outil profile_calibration_replay.py pour rejouer les mesures et balayer les seuils hors ligne ;
+- règle du replay: zéro faux accepté prioritaire, puis maximum de décisions correctes ;
+- aucune validation automatique par la silhouette ou le profil seuls.
+
+VÉRIFICATION
+- catalogue: 5 103 références uniques ;
+- 3 712 groupes de silhouettes ;
+- 1 053 groupes en collision / 2 444 références ;
+- 1 051 groupes entièrement séparables par profil ;
+- syntaxe JavaScript: OK ;
+- recadrage ROI: OK ;
+- garde-fou double capture: OK ;
+- export calibration sans champ image brute: OK ;
+- replay self-test: 4 sessions synthétiques, 2 correctes, 0 faux accepté, 2 rejets ;
+- ZIP extrait puis verify_build.py relancé: OK.
+
+SHA-256
+- ZIP Library: b0b9b31d96fbcc1e99bf2dc9c96d9adbeff92976060ea6cf22b316d9d28800e6
+- index.html: b8027bb484e9a0b2cfc83d5cdf0e463a8eecb78b6053732880ec11eafd5d2f76
+- v228-catalogue.js: 64853c7f07b61cec603471dfbd0046f4ca212af48c142424a6dcb531c2abf33d
+- BUILD_MANIFEST.json: 08210557ef9a6cbffa45e116f7730adfca9b0c305bebf7f07ed0036ab642c5f2
+- profile_calibration_replay.py: d3aedee167ee7cbf7cf392e763b909b9729593c06a65ffcd1f4ba8ec65b8ab3e
+
+SAUVEGARDE LIBRARY
+/BRES Cles/Sauvegardes/BRES_Cles_Mobile_V2_28_TEST_R7.zip
+
+Le checkpoint GitHub contient ce manifeste, le module R7, l’outil de replay, son self-test, le manifeste de build et le rapport de vérification. La sauvegarde complète reste dans la Library avec le SHA-256 ci-dessus.
