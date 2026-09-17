@@ -1,0 +1,12 @@
+BRES CLÉS V2.28 TEST R3 — ROBUSTESSE DU CLASSEMENT PAR GROUPES
+
+Test hors ligne sur 500 références Silca tirées au hasard parmi les silhouettes éligibles.
+Le score est évalué au niveau du groupe de silhouette exact (et non de la référence arbitraire).
+Les perturbations sont synthétiques et servent à comparer la robustesse relative ; elles ne remplacent pas un test photo réel.
+
+Bruit 0 : Top1 94,0 % ; Top5 99,4 % ; marge médiane 8 points ; score vrai médian 99 %.
+Bruit 0,005 : Top1 90,2 % ; Top5 98,8 % ; marge médiane 6 points ; score vrai médian 97 %.
+Bruit 0,01 : Top1 76,6 % ; Top5 92,6 % ; marge médiane 4 points ; score vrai médian 94 %.
+Bruit 0,02 : Top1 56,0 % ; Top5 76,0 % ; marge médiane 2 points ; score vrai médian 87,5 %.
+
+Lecture : le regroupement corrige l'essentiel des faux perdants causés par les références à silhouette identique. Même sans bruit, environ 6 % des cas ont un autre groupe de forme au moins aussi proche : la silhouette seule ne doit donc jamais valider une référence. Le Top 5 est le bon mode de travail ; profil, marque/marquage et étalon local doivent départager les finalistes.
