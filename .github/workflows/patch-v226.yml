@@ -1,0 +1,117 @@
+name: Patch BRES V2.26 anti faux positif
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/patch-v226.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Patch V2.26
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          p = Path('index.html')
+          s = p.read_text(encoding='utf-8')
+
+          # Marqueur de version visible partout.
+          s = s.replace('V2.25', 'V2.26')
+
+          # Ajoute un contrôle explicite des signatures catalogue non discriminantes.
+          pat = re.compile(r'''function catalogVisualScore\(sig,cat\)\{.*?\n\}\nfunction renderCatalogVisual\(canon\)\{''', re.S)
+          repl = r'''function catalogVisualScore(sig,cat){
+  let a=catalogVisualScoreOne(sig,cat);
+  // Filet de sécurité : même si l'orientation de tête a été mal estimée, on teste
+  // aussi le miroir horizontal. Cela évite un faux rejet à cause d'un simple 180°.
+  let b=catalogVisualScoreOne(horizontalFlipSig(sig),cat);
+  let best=b.score>a.score?b:a;
+  best.orientationUsed=b.score>a.score?'miroir de sécurité':'orientation normalisée';
+  return best;
+}
+function catalogSignatureDistance(a,b){
+  let x=a?.sig||a, y=b?.sig||b;
+  if(!x||!y)return Infinity;
+  let contour=(arrRms(x.top||[],y.top||[])+arrRms(x.bot||[],y.bot||[]))/2;
+  let columns=arrRms(x.colFill||[],y.colFill||[]);
+  let dims=Math.abs((x.width_mm||0)-(y.width_mm||0))/10 + Math.abs((x.height_mm||0)-(y.height_mm||0))/10;
+  let area=Math.abs((x.area||0)-(y.area||0));
+  let blade=Math.abs((x.bladeFill||0)-(y.bladeFill||0));
+  let head=Math.abs((x.headFill||0)-(y.headFill||0));
+  return dims+area+contour+columns+blade+head;
+}
+function catalogVisualAmbiguity(canon){
+  let base=catalogVisualEntry(canon);
+  if(!base)return {ambiguous:false,peers:[]};
+  let peers=[];
+  for(const other of Object.keys(XREF)){
+    if(other===canon)continue;
+    let o=catalogVisualEntry(other);
+    if(!o)continue;
+    // Seuil très strict : on bloque uniquement quand l'index catalogue contient
+    // pratiquement la même signature 2D pour deux références différentes.
+    if(catalogSignatureDistance(base,o)<0.003)peers.push(other);
+  }
+  return {ambiguous:peers.length>0,peers};
+}
+function renderCatalogVisual(canon){'''
+          s, n = pat.subn(repl, s, count=1)
+          if n != 1:
+              raise SystemExit('Bloc catalogVisualScore introuvable')
+
+          # Dans renderCatalogVisual, calcule l'ambiguïté et l'affiche clairement.
+          old = '''  let check=currentSig?catalogVisualScore(currentSig,cat):null;\n  let th=parseFloat(String(el("manualThickness")?.value||"").replace(",","."));'''
+          new = '''  let check=currentSig?catalogVisualScore(currentSig,cat):null;\n  let amb=catalogVisualAmbiguity(canon);\n  let th=parseFloat(String(el("manualThickness")?.value||"").replace(",","."));'''
+          if old not in s:
+              raise SystemExit('Insertion ambiguïté render introuvable')
+          s = s.replace(old, new, 1)
+
+          old = '''    if(check.score>=68){el("catalogVisual").className="status ok";h+=`<br><b>Forme catalogue cohérente.</b>`;}\n    else if(check.score<30){el("catalogVisual").className="status bad";h+=`<br><b>La forme photographiée ne correspond pas assez au visuel catalogue.</b>`;}\n    else{el("catalogVisual").className="status warn";h+=`<br><b>Correspondance visuelle partielle : contrôle nécessaire.</b>`;}'''
+          new = '''    if(amb.ambiguous){\n      el("catalogVisual").className="status warn";\n      h+=`<br><b>Silhouette générale cohérente, mais contrôle NON discriminant.</b><br>L'index actuel partage pratiquement la même signature 2D avec : <b>${amb.peers.join(", ")}</b>. Une photo à plat ne suffit donc pas pour départager ces variantes ; il faut un marquage fiable, le profil/rainures ou un étalon distinct.`;\n    }else if(check.score>=68){el("catalogVisual").className="status ok";h+=`<br><b>Forme catalogue cohérente et discriminante.</b>`;}\n    else if(check.score<30){el("catalogVisual").className="status bad";h+=`<br><b>La forme photographiée ne correspond pas assez au visuel catalogue.</b>`;}\n    else{el("catalogVisual").className="status warn";h+=`<br><b>Correspondance visuelle partielle : contrôle nécessaire.</b>`;}'''
+          if old not in s:
+              raise SystemExit('Bloc affichage score introuvable')
+          s = s.replace(old, new, 1)
+
+          old = '''  return {available:true,cat,check};'''
+          new = '''  return {available:true,cat,check,discriminating:!amb.ambiguous,ambiguousPeers:amb.peers};'''
+          if old not in s:
+              raise SystemExit('Retour render introuvable')
+          s = s.replace(old, new, 1)
+
+          # Empêche VALIDÉ si le visuel catalogue est partagé par plusieurs références.
+          old = '''    if(vis.check.score>=68){\n      el("finalDecision").className="status ok";\n      el("finalDecision").innerHTML=`<b>VALIDÉ : ${r.canon}</b><br>Votre référence + catalogue + forme photographiée concordent (${vis.check.score} %).`;\n    }else if(vis.check.score<30){'''
+          new = '''    if(vis.check.score>=68 && !vis.discriminating){\n      let peers=(vis.ambiguousPeers||[]).join(", ");\n      el("finalDecision").className="status warn";\n      el("finalDecision").innerHTML=`<b>À CONFIRMER : ${r.canon}</b><br>La silhouette générale correspond (${vis.check.score} %), mais le visuel 2D ne permet pas de départager cette référence de ${peers||"références très proches"}. <b>Aucune validation automatique n'est autorisée dans ce cas.</b>`;\n    }else if(vis.check.score>=68){\n      el("finalDecision").className="status ok";\n      el("finalDecision").innerHTML=`<b>VALIDÉ : ${r.canon}</b><br>Votre référence + catalogue + forme photographiée concordent (${vis.check.score} %) et le visuel est discriminant.`;\n    }else if(vis.check.score<30){'''
+          if old not in s:
+              raise SystemExit('Bloc validation manuelle introuvable')
+          s = s.replace(old, new, 1)
+
+          # Marqueur explicite dans la zone de test.
+          s = s.replace('V2.26 — test réel de l’application complète.', 'V2.26 — contrôle anti-faux positif actif.', 1)
+
+          p.write_text(s, encoding='utf-8')
+          PY
+
+          # Vérifications simples avant commit.
+          grep -q 'V2.26 • APPLICATION COMPLETE • AUTOFOCUS' index.html
+          grep -q 'catalogVisualAmbiguity' index.html
+          grep -q 'Aucune validation automatique' index.html
+
+      - name: Commit V2.26
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html
+          git commit -m 'BRES V2.26 anti faux positif TE8I TE8D'
+          git push
