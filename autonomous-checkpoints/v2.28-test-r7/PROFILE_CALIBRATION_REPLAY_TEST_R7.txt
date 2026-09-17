@@ -1,0 +1,16 @@
+SELFTEST OK
+{
+  "recommended": {
+    "quality": 60,
+    "score": 0.58,
+    "margin": 0.1,
+    "cross": 0.55
+  },
+  "metrics": {
+    "tested": 4,
+    "correct": 2,
+    "false": 0,
+    "rejected": 2,
+    "missing_truth": 0
+  }
+}
