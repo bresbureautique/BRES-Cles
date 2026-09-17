@@ -1,0 +1,12 @@
+BRES CLÉS — CHECKPOINT AUTONOME V2.28 TEST R4
+Date: 2026-09-17
+Branche de travail: v2.28-test-r1
+Version stable protégée: main / V2.27 / 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8
+
+R4 ajoute:
+- recherche catalogue automatique après analyse recto/verso;
+- affichage des profils catalogue des candidats;
+- photo optionnelle du profil de la clé et comparaison expérimentale;
+- seuil strict, jamais de VALIDÉ par profil seul.
+
+Sauvegarde complète: Library /BRES Cles/Sauvegardes/BRES_Cles_Mobile_V2_28_TEST_R4.zip
