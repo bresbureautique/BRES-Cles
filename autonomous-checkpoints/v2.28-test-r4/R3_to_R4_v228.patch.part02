@@ -17,6 +17,5 @@ gue Silca massif — V2.28 TEST R4</h2><p class="small">Recherche automatique pa
      installSafetyWrappers();
      addCard();
 +    installAutoCatalogueSearch();
--  }catch(e){console.warn('V2.28 test R3 non initialisée',e)}
-+  }catch(e){console.warn('V2.28 test R4 non initialisée',e)}
+   }catch(e){console.warn('V2.28 test R3 non initialisée',e)}
  })();
