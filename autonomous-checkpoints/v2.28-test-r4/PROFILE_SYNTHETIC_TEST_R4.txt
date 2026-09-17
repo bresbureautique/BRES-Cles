@@ -1,0 +1,15 @@
+BRES CLÉS V2.28 TEST R4 — TEST SYNTHÉTIQUE DU COMPARATEUR DE PROFIL
+
+Groupes de collision entièrement séparables par signature profil : 1051
+Cas testés : 300 références (échantillon déterministe).
+
+Le test part de la signature catalogue vraie et applique la même tolérance aux retournements/décalages que le moteur R4. Le bruit inverse aléatoirement des cellules 16×8. Il valide la logique de comparaison, pas la qualité d’une vraie photo.
+
+Bruit cellules 0 % : Top 1 96.0 % ; score médian vrai 100.0 % ; marge médiane 10.8 points
+Bruit cellules 1 % : Top 1 96.0 % ; score médian vrai 97.4 % ; marge médiane 10.3 points
+Bruit cellules 2 % : Top 1 95.7 % ; score médian vrai 94.6 % ; marge médiane 9.6 points
+Bruit cellules 4 % : Top 1 95.3 % ; score médian vrai 88.4 % ; marge médiane 8.8 points
+Bruit cellules 8 % : Top 1 94.0 % ; score médian vrai 77.7 % ; marge médiane 7.2 points
+
+Profils ayant un concurrent du même groupe à similarité ≥ 90 % : 1209.
+Conclusion : la comparaison R4 est cohérente sur signatures synthétiques. Les seuils réels resteront provisoires jusqu’au test avec photos physiques sur téléphone ; R4 ne produit aucune validation à partir du profil seul.
