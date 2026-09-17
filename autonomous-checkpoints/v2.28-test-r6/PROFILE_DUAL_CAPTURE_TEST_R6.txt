@@ -1,0 +1,26 @@
+BRES CLÉS V2.28 TEST R6 — CONTRÔLE RECADRAGE + DOUBLE CAPTURE
+
+OK  PROFILE_GUIDE présent
+OK  Guide caméra identique au cadre affiché — x=0.18, y=0.32, w=0.64, h=0.36
+OK  Recadrage supprime la majorité du fond — [(1280, 720, 230, 230, 819, 259, 0.230166015625), (1920, 1080, 346, 346, 1229, 389, 0.23055603780864198), (4032, 3024, 726, 968, 2580, 1089, 0.23043331916099774]
+OK  Marqueur drawImage(v,sx,sy,sw,sh,0,0,sw,sh)
+OK  Marqueur source:'camera-guided-roi'
+OK  Marqueur crossCaptureSimilarity
+OK  Marqueur previousProfileResult.topRef===top.ref
+OK  Marqueur Deux captures ne sont pas d’accord
+OK  Marqueur Double capture cohérente
+OK  Marqueur exportProfileDiagnostic
+OK  Marqueur candidateRefs:good.map(r=>r[0])
+OK  Cache R6 dans index
+OK  Aucune image brute dans diagnostic
+OK  Qualité faible bloquée
+OK  Deux gagnants différents bloqués
+OK  Double capture concordante renforcée
+OK  Première capture forte reste seulement préférence
+
+Exemples de zone réellement enregistrée :
+- 1280x720 -> crop x=230, y=230, 819x259 (23.0% du cadre original)
+- 1920x1080 -> crop x=346, y=346, 1229x389 (23.1% du cadre original)
+- 4032x3024 -> crop x=726, y=968, 2580x1089 (23.0% du cadre original)
+
+Conclusion : PASS — le cadre visuel et le recadrage enregistré sont cohérents ; le second cliché sert de garde-fou et ne crée aucun VALIDÉ automatique.
