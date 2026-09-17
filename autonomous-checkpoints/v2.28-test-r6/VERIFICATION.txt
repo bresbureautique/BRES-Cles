@@ -1,0 +1,22 @@
+OK
+{
+  "ok": true,
+  "version": "V2.28 TEST R6",
+  "catalog_count": 5103,
+  "unique_refs": 5103,
+  "silhouette_groups": 3712,
+  "collision_groups": 1053,
+  "collision_refs": 2444,
+  "profile_full_groups": 1051,
+  "profile_partial_groups": 1,
+  "profile_unresolved_groups": 1,
+  "javascript_syntax_ok": true,
+  "guided_camera_markers_ok": true,
+  "quality_gate_marker_ok": true,
+  "rotation_marker_ok": true,
+  "roi_crop_marker_ok": true,
+  "double_capture_marker_ok": true,
+  "diagnostic_marker_ok": true,
+  "files_hashed": 22,
+  "errors": []
+}
