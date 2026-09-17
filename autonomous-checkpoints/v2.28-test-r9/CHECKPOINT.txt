@@ -1,0 +1,29 @@
+BRES CLÉS V2.28 TEST R9 — CHECKPOINT
+
+Objet du jalon
+- Renforcer la calibration du profil avec un consensus multi-captures sur toute la session.
+- Ne plus dépendre uniquement de deux captures consécutives.
+- Bloquer toute préférence si plusieurs références obtiennent chacune une paire forte cohérente.
+
+Évolutions R9
+- sessionConsensusSummary() examine toutes les paires de captures fortes.
+- Une paire forte non consécutive peut être récupérée malgré une capture faible intermédiaire.
+- Un conflit entre plusieurs références disposant de paires fortes est explicitement rejeté.
+- Export calibration : bres-profile-calibration-v3.
+- Diagnostic : bres-profile-diagnostic-v4.
+- Outil de rejeu R9 recalcule la similarité entre profils dérivés 16x8 et applique la même logique de consensus.
+- Aucun profil seul ne produit un statut VALIDÉ.
+
+Contrôles
+- Catalogue : 5 103 références uniques.
+- Groupes silhouette : 3 712 ; collisions : 1 053 groupes / 2 444 références.
+- JavaScript : syntaxe valide.
+- Self-test consensus : PASS.
+- Self-test rejeu : zéro fausse acceptation sur l'échantillon synthétique de contrôle.
+- Aucune photo brute dans les exports de calibration/diagnostic.
+
+Limite connue
+Les seuils restent provisoires jusqu'à un essai physique Samsung avec une clé de référence certaine. R9 améliore la robustesse de session mais ne remplace pas cette calibration réelle.
+
+Sécurité versions
+La V2.27 stable ne doit pas être remplacée par cette version de test. R9 reste confinée à la branche de test et aux sauvegardes dédiées.

@@ -1,0 +1,49 @@
+BRES CLÉS V2.28 TEST R9 — TEST CONSENSUS MULTI-CAPTURES
+
+OK  schema calibration R9 v3
+OK  diagnostic R9 v4
+OK  consensus multi-captures
+OK  toutes les paires fortes
+OK  conflit de paires bloqué
+OK  consensus visible
+OK  référence session verrouillée
+OK  reset efface la référence
+OK  contrôle existence catalogue
+OK  minimum deux captures
+OK  aucune photo brute exportée
+OK  replay R9 selftest
+
+R9 peut retrouver une paire forte non consécutive et bloque une session si plusieurs références disposent chacune d’un consensus fort.
+
+SELFTEST REPLAY:
+SELFTEST OK
+{
+  "eligible": 6,
+  "skipped": 1,
+  "candidate": {
+    "quality": 60,
+    "score": 0.58,
+    "margin": 0.1,
+    "cross": 0.55
+  },
+  "metrics": {
+    "tested": 6,
+    "correct": 3,
+    "false": 0,
+    "rejected": 3
+  },
+  "evidence": {
+    "level": "PROVISIONAL",
+    "distinct_known_references": 6,
+    "references": ["AB12","CD34","EF56","GH78","IJ90","TE8D"],
+    "message": "Échantillon encore limité : un jeu de seuils candidat peut être calculé, mais il ne doit pas remplacer les seuils globaux."
+  },
+  "non_consecutive_pair": {
+    "pred": "GH78",
+    "reason": "consensus R9 : 1 paire(s) forte(s) cohérente(s)"
+  },
+  "conflict_pair": {
+    "pred": null,
+    "reason": "conflit entre paires fortes cohérentes : IJ90, WRONG"
+  }
+}
