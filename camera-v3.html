@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#173b63">
+<title>BRES Clés — caméra guidée V3</title>
+<style>
+:root{--b:#173b63;--g:#2ecc71;--o:#ff9800;--r:#ff4d4f;--u:#9aa3ad}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f4f6f8;color:#17202a}header{background:var(--b);color:white;padding:12px 14px}h1{font-size:20px;margin:0}header p{margin:5px 0 0;font-size:13px;opacity:.9}main{max-width:760px;margin:auto;padding:12px}.card{background:white;border-radius:14px;padding:14px;box-shadow:0 2px 9px #0001}.status{padding:11px;border-radius:10px;background:#edf1f4;line-height:1.4;margin:8px 0}.ok{background:#e8f5ea}.warn{background:#fff3d6}.bad{background:#fde9e7}button{width:100%;border:0;border-radius:11px;padding:13px;margin:8px 0;font-size:16px;font-weight:700;background:var(--b);color:white}.row{display:grid;grid-template-columns:1fr 1fr;gap:8px}.camera-modal{position:fixed;inset:0;background:#000;z-index:9999;display:flex;flex-direction:column}.hidden{display:none}.top{color:#fff;text-align:center;font-weight:700;padding:7px 10px;font-size:14px}.stage{position:relative;flex:1;overflow:hidden;background:#111}.stage video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.guide{position:absolute;left:4%;right:4%;top:5%;bottom:13%;border:4px solid var(--u);border-radius:18px;pointer-events:none}.guide.green{border-color:var(--g)}.guide.orange{border-color:var(--o)}.guide.red{border-color:var(--r)}
+.keywrap{position:absolute;left:50%;top:50%;width:78%;height:45%;transform:translate(-50%,-50%) rotate(0deg);transform-origin:center;pointer-events:none;transition:transform .2s}.keymask{width:100%;height:100%;opacity:.82}.zeroMark,.headMark{position:absolute;top:50%;transform:translateY(-50%);color:white;font-weight:800;font-size:13px;background:#0009;padding:4px 6px;border-radius:6px;white-space:nowrap}.zeroMark{left:0}.headMark{right:0}
+.vbar{position:absolute;right:2.5%;top:18%;bottom:24%;width:6px;background:#ffffff55;border-radius:6px}.hbar{position:absolute;left:25%;right:25%;bottom:7%;height:6px;background:#ffffff55;border-radius:6px}.dot{position:absolute;width:22px;height:22px;border-radius:50%;background:var(--u);box-shadow:0 0 0 2px #fff}.vbar .dot{left:50%;top:50%;transform:translate(-50%,-50%)}.hbar .dot{left:50%;top:50%;transform:translate(-50%,-50%)}.dot.green{background:var(--g)}.dot.orange{background:var(--o)}.dot.red{background:var(--r)}.hint{position:absolute;left:6%;right:6%;bottom:1.2%;background:#000b;color:#fff;padding:7px;border-radius:9px;text-align:center;font-size:12px}.rotateKey{position:absolute;z-index:25;left:8px;top:8px;width:auto;margin:0;padding:8px 10px;background:#000a;border:1px solid #fff;font-size:13px}.markerHint{position:absolute;z-index:24;right:8px;top:8px;background:#000a;color:#fff;border:1px solid #fff;border-radius:9px;padding:7px 9px;font-size:12px}.controls{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:8px;background:#000}.controls button{margin:0;padding:11px}.close{background:#555}.capture{background:#d71920}img.preview{width:100%;border-radius:10px;margin-top:8px;display:none}
+</style>
+</head>
+<body>
+<header><h1>BRES — Identification de clés</h1><p>Caméra guidée V3 • sans orientation imposée</p></header>
+<main><section class="card">
+<div class="status ok"><b>À cadrer :</b> la clé sur le gabarit, pointe sur ZERO et tête à l’autre extrémité. Essayez d’avoir les 4 repères A-B-C-D visibles ; 3 repères pourront suffire pour la calibration.</div>
+<div class="row"><button id="recto">📷 Recto guidé</button><button id="verso">📷 Verso guidé</button></div>
+<div id="state" class="status">Aucune photo prise.</div>
+<img id="prev" class="preview" alt="aperçu">
+</section></main>
+<div id="modal" class="camera-modal hidden">
+ <div class="top">BRES : CAMÉRA GUIDÉE — <span id="side">Recto</span></div>
+ <div class="stage">
+  <video id="video" autoplay playsinline muted></video>
+  <div id="guide" class="guide"></div>
+  <button id="rotateKey" class="rotateKey">↻ Tourner le repère</button>
+  <div class="markerHint">A-B-C-D si possible<br>3 minimum</div>
+  <div id="keywrap" class="keywrap">
+    <svg class="keymask" viewBox="0 0 600 220" aria-hidden="true"><path d="M35 110 L330 110 L350 92 L390 92 C403 45 446 18 493 22 C546 27 585 68 585 110 C585 152 546 193 493 198 C446 202 403 175 390 128 L350 128 L330 110 Z M494 75 A35 35 0 1 0 494 145 A35 35 0 1 0 494 75" fill="none" stroke="white" stroke-width="10" stroke-linejoin="round"/></svg>
+    <div class="zeroMark">ZERO / POINTE ←</div><div class="headMark">TÊTE →</div>
+  </div>
+  <div class="vbar"><span id="vdot" class="dot"></span></div>
+  <div class="hbar"><span id="hdot" class="dot"></span></div>
+  <div id="hint" class="hint">Niveau en attente du capteur… Le cadre ne devient vert que si le téléphone est presque parallèle à la feuille.</div>
+ </div>
+ <div class="controls"><button id="close" class="close">Fermer</button><button id="capture" class="capture">Photographier</button></div>
+</div>
+<canvas id="shot" hidden></canvas>
+<script>
+const $=id=>document.getElementById(id);let stream=null,currentSide='recto',sensorSeen=false,rotation=0,sensorTimer=null,lastMotionTs=0;
+function clsFromDeg(v){v=Math.abs(v);return v<=4?'green':v<=9?'orange':'red'}
+function paint(cx,cy){sensorSeen=true;clearTimeout(sensorTimer);$('vdot').className='dot '+clsFromDeg(cx);$('hdot').className='dot '+clsFromDeg(cy);let m=Math.max(Math.abs(cx),Math.abs(cy)),c=clsFromDeg(m);$('guide').className='guide '+c;$('hint').textContent=c==='green'?'Très bien : téléphone presque parallèle. Cadrez A-B-C-D si possible.':c==='orange'?'Inclinaison acceptable, mais vous pouvez encore redresser un peu le téléphone.':'Téléphone trop incliné : remettez-le plus parallèle à la feuille.'}
+window.addEventListener('devicemotion',e=>{let a=e.accelerationIncludingGravity;if(!a||a.x==null||a.y==null||a.z==null)return;lastMotionTs=Date.now();let x=a.x,y=a.y,z=a.z;let tx=Math.atan2(x,Math.sqrt(y*y+z*z))*180/Math.PI;let ty=Math.atan2(y,Math.sqrt(x*x+z*z))*180/Math.PI;paint(tx,ty)});
+window.addEventListener('deviceorientation',e=>{if(Date.now()-lastMotionTs<1500)return;if(e.beta==null||e.gamma==null)return;let b=e.beta,g=e.gamma;let tiltB=Math.min(Math.abs(b),Math.abs(180-Math.abs(b)));paint(tiltB,g)});
+async function requestSensors(){try{if(typeof DeviceMotionEvent!=='undefined'&&typeof DeviceMotionEvent.requestPermission==='function')await DeviceMotionEvent.requestPermission();if(typeof DeviceOrientationEvent!=='undefined'&&typeof DeviceOrientationEvent.requestPermission==='function')await DeviceOrientationEvent.requestPermission()}catch(e){}sensorSeen=false;$('guide').className='guide';$('vdot').className='dot';$('hdot').className='dot';$('hint').textContent='Niveau en attente du capteur…';sensorTimer=setTimeout(()=>{if(!sensorSeen){$('hint').textContent='Niveau indisponible dans ce navigateur : cadrez la clé et les repères A-B-C-D, mais ne vous fiez pas à la couleur.'}},1400)}
+async function openCam(side){currentSide=side;$('side').textContent=side==='recto'?'Recto':'Verso';rotation=0;$('keywrap').style.transform='translate(-50%,-50%) rotate(0deg)';$('modal').classList.remove('hidden');await requestSensors();try{stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:'environment'},width:{ideal:1920},height:{ideal:1080}},audio:false});$('video').srcObject=stream;$('state').className='status ok';$('state').textContent='Caméra guidée active. Aucun sens de téléphone imposé.'}catch(e){$('modal').classList.add('hidden');$('state').className='status bad';$('state').textContent='Caméra inaccessible : '+(e.message||e)+'. Autorisez la caméra pour ce site.'}}
+function stopCam(){clearTimeout(sensorTimer);if(stream){stream.getTracks().forEach(t=>t.stop());stream=null}$('modal').classList.add('hidden')}
+$('recto').onclick=()=>openCam('recto');$('verso').onclick=()=>openCam('verso');$('close').onclick=stopCam;$('rotateKey').onclick=()=>{rotation=(rotation+90)%360;$('keywrap').style.transform=`translate(-50%,-50%) rotate(${rotation}deg)`};
+$('capture').onclick=()=>{let v=$('video'),c=$('shot');if(!v.videoWidth)return;c.width=v.videoWidth;c.height=v.videoHeight;c.getContext('2d').drawImage(v,0,0);$('prev').src=c.toDataURL('image/jpeg',.92);$('prev').style.display='block';$('state').className='status ok';$('state').textContent='Photo '+currentSide+' prise. Vérifiez que la clé et au moins 3 repères A-B-C-D sont visibles.';stopCam()};
+</script>
+</body></html>
