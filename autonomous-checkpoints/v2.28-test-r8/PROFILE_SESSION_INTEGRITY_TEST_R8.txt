@@ -1,0 +1,44 @@
+BRES CLÉS V2.28 TEST R8 — TEST INTÉGRITÉ SESSION CALIBRATION
+
+OK  schema calibration R8 v2
+OK  diagnostic R8 v3
+OK  référence session verrouillée
+OK  reset efface la référence
+OK  contrôle existence catalogue
+OK  contrôle présence groupe top
+OK  bloc intégrité exporté
+OK  minimum deux captures
+OK  aucune photo brute exportée
+OK  replay R8 selftest
+
+R8 empêche le mélange de deux références dans une même session, marque les exports non exploitables quand nécessaire, et refuse de transformer un très petit échantillon en réglage global.
+
+SELFTEST REPLAY:
+SELFTEST OK
+{
+  "eligible": 4,
+  "skipped": 1,
+  "candidate": {
+    "quality": 60,
+    "score": 0.58,
+    "margin": 0.1,
+    "cross": 0.55
+  },
+  "metrics": {
+    "tested": 4,
+    "correct": 2,
+    "false": 0,
+    "rejected": 2
+  },
+  "evidence": {
+    "level": "PROVISIONAL",
+    "distinct_known_references": 4,
+    "references": [
+      "AB12",
+      "CD34",
+      "EF56",
+      "TE8D"
+    ],
+    "message": "Échantillon encore limité : un jeu de seuils candidat peut être calculé, mais il ne doit pas remplacer les seuils globaux."
+  }
+}
