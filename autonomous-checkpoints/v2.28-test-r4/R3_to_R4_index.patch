@@ -1,0 +1,63 @@
+--- /mnt/data/bres_r3/unzip/BRES_Cles_Mobile_V2_28_TEST_R3/index.html	2026-09-17 17:46:28.000000000 +0000
++++ /mnt/data/bres_r4/BRES_Cles_Mobile_V2_28_TEST_R4/index.html	2026-09-17 18:46:02.562406858 +0000
+@@ -3,7 +3,7 @@
+ <head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+-<title>BRES Clés V2.28 TEST R2</title>
++<title>BRES Clés V2.28 TEST R4</title>
+ <style>
+ :root{--b:#173b63;--bg:#f4f6f8;--ok:#e8f5ea;--warn:#fff3d6;--bad:#fde9e7}
+ *{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:#17202a}
+@@ -31,14 +31,14 @@
+ <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+ </head>
+ <body>
+-<div class="app-version-badge">V2.28 TEST R2 • CATALOGUE SILCA MASSIF • STABLE NON REMPLACÉE</div>
+-<header><h1>BRES — Identification de clés</h1><p>V2.28 TEST R2 • application de test séparée + gabarit compact 0–50 mm + caméra guidée autofocus + OCR + catalogue Silca massif</p></header>
++<div class="app-version-badge">V2.28 TEST R4 • CATALOGUE SILCA MASSIF • STABLE NON REMPLACÉE</div>
++<header><h1>BRES — Identification de clés</h1><p>V2.28 TEST R4 • application de test séparée + gabarit compact 0–50 mm + caméra guidée autofocus + OCR + catalogue Silca massif</p></header>
+ 
+ <div id="cameraModal" class="camera-modal hidden" aria-hidden="true">
+- <div class="cam-top">BRES : CAMÉRA GUIDÉE V2.28 TEST R2 — <span id="camSideLabel">Recto</span></div>
++ <div class="cam-top">BRES : CAMÉRA GUIDÉE V2.28 TEST R4 — <span id="camSideLabel">Recto</span></div>
+  <div class="cam-stage">
+   <video id="camVideo" autoplay playsinline muted></video>
+-  <div class="cam-version">V2.28 TEST R2</div>
++  <div class="cam-version">V2.28 TEST R4</div>
+   <div id="camGuide" class="cam-guide"><span class="cam-corner cc1"></span><span class="cam-corner cc2"></span><span class="cam-corner cc3"></span><span class="cam-corner cc4"></span></div>
+   <div class="cam-tools"><button id="camRotateKey" type="button">↻ Tourner le repère</button><button id="camRefocus" type="button">🎯 Relancer mise au point</button></div>
+   <div class="cam-marker-hint">Cadrez A • B • C • D<br>4 idéal • 3 minimum</div>
+@@ -54,7 +54,7 @@
+ 
+ <section class="card">
+ <h2>1. Photographier la clé</h2>
+-<div class="status ok"><b>V2.28 TEST R2 — version séparée de la version stable.</b><br>Gabarit compact 0–50 mm V2.18 : pointe sur ZERO, tête à l’autre extrémité. Cadrez si possible les 4 repères A-B-C-D (3 minimum). Le faux niveau couleur est désactivé. La caméra demande maintenant l’autofocus continu lorsque le téléphone et le navigateur l’autorisent.</div>
++<div class="status ok"><b>V2.28 TEST R4 — version séparée de la version stable.</b><br>Gabarit compact 0–50 mm V2.18 : pointe sur ZERO, tête à l’autre extrémité. Cadrez si possible les 4 repères A-B-C-D (3 minimum). Le faux niveau couleur est désactivé. La caméra demande maintenant l’autofocus continu lorsque le téléphone et le navigateur l’autorisent.</div>
+ <div class="row">
+ <button type="button" class="btn guidedCamBtn" data-side="recto">📷 Recto guidé</button>
+ <button type="button" class="btn guidedCamBtn" data-side="verso">📷 Verso guidé</button>
+@@ -126,7 +126,7 @@
+ <section class="card">
+ <h2>4. Équivalences fabricants</h2>
+ <div id="xref" class="status">Les équivalences apparaîtront après identification.</div>
+-<p class="small">La V2.28 TEST R2 croise la référence lue/saisie avec les équivalences disponibles, les étalons locaux et la recherche catalogue Silca massive. Une ambiguïté ne doit jamais produire une validation automatique.</p>
++<p class="small">La V2.28 TEST R4 croise la référence lue/saisie avec les équivalences disponibles, les étalons locaux et la recherche catalogue Silca massive. Une ambiguïté ne doit jamais produire une validation automatique.</p>
+ <a class="btn alt" href="https://ecatalogo.jma.es/fr/llaves/" target="_blank">JMA</a>
+ <a class="btn alt" href="https://www.silca.biz/fr/global/extranet/catalogues/catalogues-de-cles/110-catalogue" target="_blank">Silca</a>
+ <a class="btn alt" href="https://keyline.it/fr/catalogue-interactif-cl%C3%A9s" target="_blank">Keyline</a>
+@@ -944,7 +944,7 @@
+   const blob=await new Promise(res=>c.toBlob(res,'image/jpeg',0.95));
+   guidedCapture[camSide]=new File([blob],`BRES_${camSide}_${Date.now()}.jpg`,{type:'image/jpeg'});
+   closeGuidedCamera();photoRefresh();
+-  el('analysis').className='status';el('analysis').textContent=`Photo ${camSide} capturée en V2.28 TEST R2. Prenez l’autre face puis lancez l’analyse.`;
++  el('analysis').className='status';el('analysis').textContent=`Photo ${camSide} capturée en V2.28 TEST R4. Prenez l’autre face puis lancez l’analyse.`;
+ }
+ document.querySelectorAll('.guidedCamBtn').forEach(b=>b.addEventListener('click',()=>openGuidedCamera(b.dataset.side)));
+ el('camClose').onclick=closeGuidedCamera;el('camCapture').onclick=captureGuided;
+@@ -1555,4 +1555,4 @@
+ el("headSearchBtn").onclick=searchFromHeadPhotos;
+ 
+ </script>
+-</main><script src="v228-catalogue.js?v=228r3"></script></body></html>
++</main><script src="v228-catalogue.js?v=228r4"></script></body></html>
