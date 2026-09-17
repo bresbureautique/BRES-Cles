@@ -1,0 +1,26 @@
+{
+  "ok": true,
+  "catalog_count": 5103,
+  "unique_refs": 5103,
+  "files_hashed": 16,
+  "errors": [],
+  "zip_sha256": "7f04f632efc7a10d69dc12abc3bb6b831b740bcc9a9300d3b51449ae2085b748",
+  "sha256": {
+    "ALGO_EVALUATION.txt": "d51460b382f95a26a3edbefdceffadb968304447bcdfe1609a41787a22e1c93f",
+    "BRES_Cles_Gabarit_Compact_0_50mm_V2_18.pdf": "6e917aa5d53cc84c300346bd0f1f5692b94936c1e16853fb9709595e05fdf065",
+    "LISEZ-MOI.txt": "1a4592cd4b16108d47d65e8e3474628cdab01c1fa3af1a0f41fbc699d2f486ee",
+    "catalogue/v3/catalog-01.js": "e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b",
+    "catalogue/v3/catalog-02.js": "955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75",
+    "catalogue/v3/catalog-03.js": "9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210",
+    "catalogue/v3/catalog-04.js": "14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942",
+    "catalogue/v3/catalog-05.js": "5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b",
+    "catalogue/v3/catalog-06.js": "b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac",
+    "catalogue/v3/catalog-07.js": "b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1",
+    "catalogue/v3/catalog-08.js": "3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814",
+    "catalogue/v3/catalog-09.js": "4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f",
+    "catalogue/v3/catalog-10.js": "f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4",
+    "index.html": "8c880d06d6375343d217e836ec17cb84124062a74f7ee904bad2b766feb310af",
+    "v228-catalogue.js": "de145f9b08884d1f460f96331af60977e022b8e40c02486728f5fd14957e7d9c",
+    "verify_build.py": "db681b31d755b177ebd1f3d6b90778093a0be206bd6274ad128a690d91c1e30b"
+  }
+}
