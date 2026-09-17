@@ -8,37 +8,32 @@
 <style>
 :root{--b:#173b63;--g:#2ecc71;--o:#ff9800;--r:#ff4d4f}
 *{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f4f6f8;color:#17202a}header{background:var(--b);color:white;padding:14px 16px}h1{font-size:21px;margin:0}header p{margin:5px 0 0;font-size:13px;opacity:.9}main{max-width:760px;margin:auto;padding:12px}.card{background:white;border-radius:14px;padding:14px;box-shadow:0 2px 9px #0001}.status{padding:11px;border-radius:10px;background:#edf1f4;line-height:1.4;margin:8px 0}.ok{background:#e8f5ea}.warn{background:#fff3d6}.bad{background:#fde9e7}button{width:100%;border:0;border-radius:11px;padding:13px;margin:8px 0;font-size:16px;font-weight:700;background:var(--b);color:white}.row{display:grid;grid-template-columns:1fr 1fr;gap:8px}.camera-modal{position:fixed;inset:0;background:#000;z-index:9999;display:flex;flex-direction:column}.hidden{display:none}.top{color:#fff;text-align:center;font-weight:700;padding:7px 10px;font-size:14px}.stage{position:relative;flex:1;overflow:hidden;background:#111}.stage video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.guide{position:absolute;left:5%;right:5%;top:8%;bottom:16%;border:4px solid var(--g);border-radius:18px;pointer-events:none}.guide.orange{border-color:var(--o)}.guide.red{border-color:var(--r)}
-.keymask{position:absolute;left:50%;top:50%;width:80%;height:45%;transform:translate(-50%,-50%);opacity:.82;pointer-events:none}
-.zeroMark{position:absolute;left:12%;top:50%;transform:translateY(-50%);color:white;font-weight:800;font-size:13px;background:#0009;padding:4px 6px;border-radius:6px;pointer-events:none}.headMark{position:absolute;right:11%;top:50%;transform:translateY(-50%);color:white;font-weight:800;font-size:13px;background:#0009;padding:4px 6px;border-radius:6px;pointer-events:none}
-.vbar{position:absolute;right:3%;top:18%;bottom:23%;width:6px;background:#ffffff55;border-radius:6px}.hbar{position:absolute;left:25%;right:25%;bottom:8%;height:6px;background:#ffffff55;border-radius:6px}.dot{position:absolute;width:22px;height:22px;border-radius:50%;background:var(--g);box-shadow:0 0 0 2px #fff}.vbar .dot{left:50%;top:50%;transform:translate(-50%,-50%)}.hbar .dot{left:50%;top:50%;transform:translate(-50%,-50%)}.dot.orange{background:var(--o)}.dot.red{background:var(--r)}.hint{position:absolute;left:8%;right:8%;bottom:1.5%;background:#000b;color:#fff;padding:7px;border-radius:9px;text-align:center;font-size:12px}.controls{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:8px;background:#000}.controls button{margin:0;padding:11px}.close{background:#555}.capture{background:#d71920}img.preview{width:100%;border-radius:10px;margin-top:8px;display:none}
-.rotateWarn{display:none;position:absolute;z-index:20;left:7%;right:7%;top:8%;background:#000d;color:white;border:2px solid #fff;border-radius:12px;padding:12px;text-align:center;font-weight:700;pointer-events:none}
-@media (orientation:portrait){.rotateWarn{display:block}.keymask{width:88%;height:32%}.guide{top:18%;bottom:20%}}
+.keymask{position:absolute;left:50%;top:50%;width:80%;height:45%;transform:translate(-50%,-50%);opacity:.82;pointer-events:none}.zeroMark{position:absolute;left:12%;top:50%;transform:translateY(-50%);color:white;font-weight:800;font-size:13px;background:#0009;padding:4px 6px;border-radius:6px;pointer-events:none}.headMark{position:absolute;right:11%;top:50%;transform:translateY(-50%);color:white;font-weight:800;font-size:13px;background:#0009;padding:4px 6px;border-radius:6px;pointer-events:none}.vbar{position:absolute;right:3%;top:18%;bottom:23%;width:6px;background:#ffffff55;border-radius:6px}.hbar{position:absolute;left:25%;right:25%;bottom:8%;height:6px;background:#ffffff55;border-radius:6px}.dot{position:absolute;width:22px;height:22px;border-radius:50%;background:var(--g);box-shadow:0 0 0 2px #fff}.vbar .dot{left:50%;top:50%;transform:translate(-50%,-50%)}.hbar .dot{left:50%;top:50%;transform:translate(-50%,-50%)}.dot.orange{background:var(--o)}.dot.red{background:var(--r)}.hint{position:absolute;left:8%;right:8%;bottom:1.5%;background:#000b;color:#fff;padding:7px;border-radius:9px;text-align:center;font-size:12px}.controls{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:8px;background:#000}.controls button{margin:0;padding:11px}.close{background:#555}.capture{background:#d71920}img.preview{width:100%;border-radius:10px;margin-top:8px;display:none}
+@media (orientation:portrait){.keymask{width:88%;height:32%}.guide{top:14%;bottom:18%}.zeroMark{left:12%}.headMark{right:11%}}
 @media (orientation:landscape){.camera-modal{flex-direction:column}.top{padding:5px 8px}.controls{position:absolute;z-index:30;right:8px;bottom:8px;width:280px;background:#0009;border-radius:12px}.hint{left:18%;right:35%;bottom:2%}.guide{left:4%;right:4%;top:5%;bottom:5%}.keymask{width:78%;height:58%}.zeroMark{left:11%}.headMark{right:10%}.hbar{left:28%;right:38%;bottom:5%}.vbar{right:2%;top:15%;bottom:15%}}
 </style>
 </head>
 <body>
-<header><h1>BRES — Identification de clés</h1><p>Caméra guidée • gabarit compact horizontal 0–50 mm</p></header>
+<header><h1>BRES — Identification de clés</h1><p>Caméra guidée adaptative • gabarit compact horizontal 0–50 mm</p></header>
 <main><section class="card">
-<div class="status ok"><b>Placement :</b> gabarit horizontal. Pointe de la clé sur ZERO à gauche, tête vers la droite. Pour la photo, tournez le téléphone horizontalement.</div>
+<div class="status ok"><b>Placement :</b> gabarit horizontal. Pointe de la clé sur ZERO à gauche, tête vers la droite. Vous pouvez tenir le téléphone verticalement ou horizontalement.</div>
 <div class="row"><button id="recto">📷 Recto guidé</button><button id="verso">📷 Verso guidé</button></div>
 <div id="state" class="status">Aucune photo prise.</div>
 <img id="prev" class="preview" alt="aperçu">
 </section></main>
 <div id="modal" class="camera-modal hidden">
- <div class="top">BRES : CAMÉRA GUIDÉE — <span id="side">Recto</span> — TÉLÉPHONE HORIZONTAL</div>
+ <div class="top">BRES : CAMÉRA GUIDÉE — <span id="side">Recto</span> — GABARIT HORIZONTAL</div>
  <div class="stage">
   <video id="video" autoplay playsinline muted></video>
-  <div class="rotateWarn">↻ Tournez le téléphone à l’horizontale pour correspondre au gabarit.</div>
   <div id="guide" class="guide"></div>
   <svg class="keymask" viewBox="0 0 600 220" aria-hidden="true">
-    <!-- Pointe à gauche, tête à droite -->
     <path d="M35 110 L330 110 L350 92 L390 92 C403 45 446 18 493 22 C546 27 585 68 585 110 C585 152 546 193 493 198 C446 202 403 175 390 128 L350 128 L330 110 Z M494 75 A35 35 0 1 0 494 145 A35 35 0 1 0 494 75" fill="none" stroke="white" stroke-width="10" stroke-linejoin="round"/>
   </svg>
   <div class="zeroMark">ZERO / POINTE ←</div>
   <div class="headMark">TÊTE →</div>
   <div class="vbar"><span id="vdot" class="dot"></span></div>
   <div class="hbar"><span id="hdot" class="dot"></span></div>
-  <div id="hint" class="hint">Placez la pointe à gauche sur ZERO et la tête à droite. Vert = téléphone presque parallèle.</div>
+  <div id="hint" class="hint">Alignez le gabarit horizontalement. Pointe à gauche sur ZERO, tête à droite. Vert = téléphone presque parallèle.</div>
  </div>
  <div class="controls"><button id="close" class="close">Fermer</button><button id="capture" class="capture">Photographier</button></div>
 </div>
@@ -49,9 +44,9 @@ function levelClass(v){v=Math.abs(v);return v<=4?'':v<=9?'orange':'red'}
 function updateLevels(){let cv=levelClass(lastBeta),ch=levelClass(lastGamma);$('vdot').className='dot '+cv;$('hdot').className='dot '+ch;let worst=(cv==='red'||ch==='red')?'red':(cv==='orange'||ch==='orange')?'orange':'';$('guide').className='guide '+worst;$('hint').textContent=worst==='red'?'Téléphone trop incliné : remettez-le parallèle au gabarit.':worst==='orange'?'Cadrage acceptable. Gardez la pointe sur ZERO à gauche.':'Très bien : téléphone presque parallèle. Pointe à gauche, tête à droite.'}
 window.addEventListener('deviceorientation',e=>{if(e.beta==null||e.gamma==null)return;lastBeta=e.beta;lastGamma=e.gamma;updateLevels()});
 async function requestMotion(){try{if(typeof DeviceOrientationEvent!=='undefined'&&typeof DeviceOrientationEvent.requestPermission==='function')await DeviceOrientationEvent.requestPermission()}catch(e){}}
-async function openCam(side){currentSide=side;$('side').textContent=side==='recto'?'Recto':'Verso';$('modal').classList.remove('hidden');await requestMotion();try{stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:'environment'},width:{ideal:1920},height:{ideal:1080}},audio:false});$('video').srcObject=stream;$('state').className='status ok';$('state').textContent='Caméra guidée active. Tournez le téléphone horizontalement.'}catch(e){$('modal').classList.add('hidden');$('state').className='status bad';$('state').textContent='Caméra inaccessible : '+(e.message||e)+'. Autorisez la caméra pour ce site dans Chrome.'}}
+async function openCam(side){currentSide=side;$('side').textContent=side==='recto'?'Recto':'Verso';$('modal').classList.remove('hidden');await requestMotion();try{stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:'environment'},width:{ideal:1920},height:{ideal:1080}},audio:false});$('video').srcObject=stream;$('state').className='status ok';$('state').textContent='Caméra guidée active. Cadrez simplement le gabarit horizontal.'}catch(e){$('modal').classList.add('hidden');$('state').className='status bad';$('state').textContent='Caméra inaccessible : '+(e.message||e)+'. Autorisez la caméra pour ce site dans Chrome.'}}
 function stopCam(){if(stream){stream.getTracks().forEach(t=>t.stop());stream=null}$('modal').classList.add('hidden')}
 $('recto').onclick=()=>openCam('recto');$('verso').onclick=()=>openCam('verso');$('close').onclick=stopCam;
-$('capture').onclick=()=>{let v=$('video'),c=$('shot');if(!v.videoWidth)return;c.width=v.videoWidth;c.height=v.videoHeight;c.getContext('2d').drawImage(v,0,0);$('prev').src=c.toDataURL('image/jpeg',.92);$('prev').style.display='block';$('state').className='status ok';$('state').textContent='Photo '+currentSide+' prise en cadrage horizontal.';stopCam()};
+$('capture').onclick=()=>{let v=$('video'),c=$('shot');if(!v.videoWidth)return;c.width=v.videoWidth;c.height=v.videoHeight;c.getContext('2d').drawImage(v,0,0);$('prev').src=c.toDataURL('image/jpeg',.92);$('prev').style.display='block';$('state').className='status ok';$('state').textContent='Photo '+currentSide+' prise avec le gabarit horizontal.';stopCam()};
 </script>
 </body></html>
