@@ -1,0 +1,35 @@
+{
+  "schema": "bres-catalogue-evidence-v1",
+  "milestone": "V2.28 TEST R14",
+  "created_on": "2026-09-18",
+  "case": "RONIS RO4 / RO45 residual ambiguity",
+  "decision_policy": {
+    "positive_only": true,
+    "can_validate": false,
+    "absence_never_selects_ro45": true,
+    "manufacturer_namespace_required_for_ro45": true,
+    "bare_ro45_never_selects_candidate": true
+  },
+  "ro4_cross_reference_aliases": [
+    {"canonical":"RO7D","display":"JMA RO-7D / RO7D","confidence":"multi-source","sources":["Nauta","EasyKeys"]},
+    {"canonical":"RI10","display":"Keyline RI10","confidence":"multi-source","sources":["Nauta","BASI"]},
+    {"canonical":"R23R","display":"Errebi R23R","confidence":"multi-source","sources":["Nauta","BASI"]},
+    {"canonical":"RN13","display":"Orion RN13","confidence":"multi-source","sources":["Nauta","EasyKeys"]}
+  ],
+  "namespace_guard": {
+    "can_validate": false,
+    "can_prefer_ro45": false,
+    "blocked_or_outside_cluster_evidence": [
+      {"input":"JMA RO-45 / JMA RO45","maps_to":"Silca RO85","action":"no preference inside Silca RO4/RO45"},
+      {"input":"Errebi R39","maps_to":"Silca RO85","action":"no preference inside Silca RO4/RO45"},
+      {"input":"Silca RO85","maps_to":"outside current Silca RO4/RO45 residual cluster","action":"no preference"},
+      {"input":"RO45 without manufacturer","maps_to":"namespace ambiguous","action":"no preference; require manufacturer/source"}
+    ]
+  },
+  "sources": [
+    {"name":"Nauta RO85 cross-reference","url":"https://www.nauta.com/nl/7501001657-pcs-r39-ro45-ro85-l472"},
+    {"name":"Serrures en Ligne JMA RO-45","url":"https://serruresenligne.fr/produit/ebauches-de-cles/cles-plates/ebauche-de-cle-jma-ro-45/"},
+    {"name":"Charles Birch Silca RO85","url":"https://charlesbirch.com/hardware/silca-ro85-ronis-cylinder-blank-6340"},
+    {"name":"Steenhauer Silca list","url":"https://steenhauer.nl/silca-3/?i=26&o=6&s=120"}
+  ]
+}
