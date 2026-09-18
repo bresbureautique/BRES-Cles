@@ -1,0 +1,29 @@
+BRES CLÉS V2.28 TEST R14 — GARDE-FOU D’ESPACE DE NOMS RONIS / JMA / SILCA
+
+Gain du jalon
+- L’ambiguïté de profil Silca RO4 / Silca RO45 reste structurelle : aucun choix par silhouette/profil seul.
+- R14 conserve les indices positifs RO4 de R13, toujours non validants.
+- R14 ajoute un pare-feu d’espace de noms pour empêcher une collision de référence fabricant de produire un faux RO45.
+
+Constat documentaire nouveau
+- Nauta associe Errebi R39 + JMA RO-45 + Silca RO85 au même blanc RONIS/WSS.
+- Serrures en Ligne associe JMA RO-45 à Errebi R39 pour Ronis.
+- Charles Birch décrit Silca RO85 comme un blanc de cylindre Ronis.
+- Steenhauer liste Silca RO45 et Silca RO4 comme produits Silca distincts et confirme plusieurs alias RO4.
+
+Règles R14
+- « JMA RO-45 » / « JMA RO45 » -> indice hors sous-groupe : cible documentaire Silca RO85 ; aucune préférence RO4/RO45 ; jamais VALIDÉ.
+- « Errebi R39 » -> même garde-fou hors sous-groupe ; aucune préférence.
+- « Silca RO85 » -> hors sous-groupe RO4/RO45 ; aucune préférence.
+- « RO45 » sans fabricant -> token ambigu entre espaces de noms ; aucune préférence, fabricant/source exigé.
+- Les alias/code RO4 déjà documentés restent capables de produire seulement une préférence RO4, canValidate=false.
+- L’absence de preuve RO4 ne produit toujours jamais RO45.
+
+Sources
+- Nauta: https://www.nauta.com/nl/7501001657-pcs-r39-ro45-ro85-l472
+- Serrures en Ligne: https://serruresenligne.fr/produit/ebauches-de-cles/cles-plates/ebauche-de-cle-jma-ro-45/
+- Charles Birch: https://charlesbirch.com/hardware/silca-ro85-ronis-cylinder-blank-6340
+- Steenhauer: https://steenhauer.nl/silca-3/?i=26&o=6&s=120
+
+Sécurité
+Aucune règle R14 ne sélectionne Silca RO45. Aucune preuve documentaire/manuelle R14 ne peut produire VALIDÉ. Une future préférence RO45 nécessitera une preuve positive, fabricant-qualifiée et recoupée spécifiquement pour Silca RO45.
