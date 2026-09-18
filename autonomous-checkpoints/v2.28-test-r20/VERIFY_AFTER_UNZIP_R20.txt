@@ -1,0 +1,27 @@
+BRES CLÉS V2.28 TEST R20 — VÉRIFICATION APRÈS DÉCOMPRESSION
+
+Application
+- ok=true
+- errors=[]
+- version=V2.28 TEST R20
+- 5 103 références / 5 103 uniques
+- 2 clusters résiduels : RO4/RO45 et VAC151/VAC151SM
+- JavaScript OK
+- replay / consensus / intégrité / identité références / ambiguïtés / namespace : OK
+- strong_delimiter_segment_guard_ok=true
+- 152 fichiers hachés
+- aucune photo brute exportée
+
+Catalogue séparé
+- ok=true
+- errors=[]
+- version=Catalogue Snapshot R20
+- 5 103 références / 5 103 uniques
+- 8 règles inter-fabricants
+- strong_delimiter_segment_guard=true
+- runtime_audit_cases=38
+- 32 fichiers hachés
+
+Archives
+- Application SHA-256 : a2a42222cc6618797fb4d7a58c6ee5290ddd6fdb0e84ef19e406889ef1d9e250
+- Catalogue SHA-256 : 7028e01ac0810eb556605021e6316a626b060ce425e58a16d3442287325e984a
