@@ -1,0 +1,12 @@
+BRES CLÉS — CHECKPOINT R28
+Date : 2026-09-18
+Parent R27 : f26aafea0d1120b12d3af52d3281f5732609371a
+Stable V2.27 main attendu : 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8
+
+R28 corrige deux sur-tolérances OCR résiduelles de R27 :
+1) budget cumulé maximal de 3 caractères OCR faibles ignorés dans un token ;
+2) appairage fabricant↔référence limité à ponctuation/espaces horizontaux/« = », ce qui bloque symboles, emoji et caractères de format invisibles.
+
+Les 5 103 références du catalogue restent inchangées bit-à-bit dans les 10 chunks.
+Les seuils photographiques Samsung ne sont pas modifiés par ce jalon.
+Les ambiguïtés RO4/RO45 et VAC151/VAC151SM restent volontairement non forcées.

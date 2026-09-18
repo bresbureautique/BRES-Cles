@@ -1,0 +1,25 @@
+BRES CLÉS — VÉRIFICATION R28
+
+APPLICATION V2.28 TEST R28
+ok=true
+catalog_count=5103
+unique_refs=5103
+files_hashed=301
+javascript_runtime_namespace_cases=113
+namespace_cumulative_weak_gap_blocked=true
+namespace_pair_gap_symbol_format_guard=true
+errors=[]
+
+CATALOGUE SNAPSHOT R28
+ok=true
+catalog_count=5103
+unique_refs=5103
+qualified_rule_count=8
+runtime_audit_cases=113
+code_series_positive_cases=23
+code_series_negative_cases=42
+files_hashed=89
+residual_profile_sets=RO4/RO45; VAC151/VAC151SM
+errors=[]
+
+Vérifications effectuées après décompression des deux ZIP.
