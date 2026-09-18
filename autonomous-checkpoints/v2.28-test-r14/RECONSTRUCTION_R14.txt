@@ -1,0 +1,28 @@
+BRES CLÉS V2.28 TEST R14 — RECONSTRUCTION / VÉRIFICATION
+
+Base : checkpoint R13 (commit db1bed68e4e1bf8d10bef64fb120da0e62847e2d) et ZIP R13 conservé dans Library.
+
+Transformations applicatives R14 :
+1. Dans index.html et v228-catalogue.js, faire évoluer les libellés V2.28 TEST R13 -> V2.28 TEST R14 et le cache catalogue 228r13 -> 228r14.
+2. Ajouter RONIS_NAMESPACE_CONFLICT_RULES et ronisNamespaceEvidence avant manualEvidenceFor.
+3. Traiter la preuve d’espace de noms AVANT ronisRo4PositiveEvidence :
+   - JMA RO-45 / RO45 -> cible documentaire Silca RO85, preferredRefs=[] ;
+   - Errebi R39 -> cible documentaire Silca RO85, preferredRefs=[] ;
+   - Silca RO85 -> hors sous-groupe, preferredRefs=[] ;
+   - RO45 sans fabricant -> namespace ambiguous, preferredRefs=[].
+4. Conserver les règles positives RO4 R13, mais toujours canValidate=false.
+5. Passer le schéma de preuve manuelle à bres-manual-ambiguity-evidence-v3.
+6. Ajouter catalogue/evidence/ronis_ro4_ro45_r14.json et le selftest R14.
+
+Empreintes attendues des sources principales :
+aab5a13e56555417321f88ad884b8bf18ba5f4f8178fcf75647a8f380c048e90  index.html
+ee7640a2775030269582bc3d4ea6c2376e12e51d586bc95c3195cd49688f620d  v228-catalogue.js
+707d680ad64a70d94a1c70deaae37ef3759232a175b4c6f890368e5a11d99735  catalogue/evidence/ronis_ro4_ro45_r14.json
+4cf41abe700412bb6a622b33accf15d101b0fe3ddbc18f88be026fa041a6ca17  manual_ambiguity_resolution_test.py
+3491704e54c90f9d2020b654ed13f106111085d9b3fabe428eb70e0541a58c5a  verify_build.py
+
+Archive complète vérifiée dans Library :
+SHA-256 74c87930781968e20ac6871cf5a674903544bb56c24bbe7d3732b142d4217290
+BRES_Cles_Mobile_V2_28_TEST_R14.zip
+
+Vérification finale attendue : verify_build.py -> ok=true, 5103 références uniques, ronis_namespace_guard_ok=true, errors=[] ; archive décompressée et revérifiée avant clôture du jalon.
