@@ -1,0 +1,10 @@
+BRES CLÉS V2.28 TEST R31 — VÉRIFICATION DU JALON
+
+Application après décompression : ok=true ; version=V2.28 TEST R31 ; catalogue=5103 ; références uniques=5103 ; fichiers contrôlés=364 ; errors=[]
+Catalogue séparé après décompression : ok=true ; version=Catalogue Snapshot R31 ; catalogue=5103 ; références uniques=5103 ; cas runtime namespace=133 ; fichiers contrôlés=116 ; errors=[]
+
+Garde R31 namespace : ponctuation ASCII non revue bloquée=true ; budget ponctuation fabricant↔référence=2.
+Garde R31 OCR fabricant : noms détectés uniquement aux frontières alphanumériques ; 5 faux sous-chaînes de régression bloquées.
+Continuité catalogue : 10/10 morceaux identiques à R30.
+Seuils photo Samsung : inchangés.
+V2.27 stable : non modifiée.
