@@ -1,0 +1,20 @@
+BRES CLÉS V2.28 TEST R11 — TEST CONSENSUS MAJORITAIRE MULTI-CAPTURES (compatibilité R10)
+
+OK  schema calibration R11 v4
+OK  diagnostic R11 v6
+OK  consensus multi-captures
+OK  toutes les paires fortes
+OK  seuil majoritaire 2/3
+OK  ratio de soutien calculé
+OK  soutien partagé bloqué
+OK  consensus majoritaire visible
+OK  référence session verrouillée
+OK  reset efface la référence
+OK  contrôle existence catalogue
+OK  minimum deux captures
+OK  aucune photo brute exportée
+OK  replay R10 compatible selftest
+
+R11 conserve la règle majoritaire introduite en R10 : avec au moins 3 captures fortes, une référence doit être soutenue par au moins 2/3 des captures fortes. Une paire isolée parmi plusieurs captures contradictoires ne suffit plus.
+
+SELFTEST REPLAY: SELFTEST OK ; 9 sessions éligibles, 0 fausse acceptation ; 2/3 et 3/4 acceptés ; 2/4 et 2+2 contradictoires rejetés.
