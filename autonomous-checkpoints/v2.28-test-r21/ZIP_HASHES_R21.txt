@@ -1,0 +1,2 @@
+0be28a6347e19ea012f574456a854dec11ea6dcc754dfc12c8d1c626bf358aae  BRES_Cles_Mobile_V2_28_TEST_R21.zip  1014379 bytes
+cd89374e498eaf80e393b543c36d7b0e4bae25e7909644f1f19db4bb62ccfcf0  BRES_Cles_Catalogue_Snapshot_R21.zip  659972 bytes
