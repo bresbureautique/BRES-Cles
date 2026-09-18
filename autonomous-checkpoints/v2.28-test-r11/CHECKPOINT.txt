@@ -1,0 +1,32 @@
+BRES CLÉS V2.28 TEST R11 — CHECKPOINT
+
+Objet du jalon
+- Corriger le traitement des références ayant exactement la même signature de profil catalogue.
+- Transformer les ambiguïtés résiduelles en sous-groupes explicites plutôt qu’en égalités artificielles.
+- Conserver la V2.27 stable intacte sur main.
+
+Évolutions R11
+- candidateProfileClusters() regroupe les candidats par signature de profil 16×8 identique.
+- La comparaison photo score désormais les signatures distinctes, pas chaque référence dupliquée.
+- Une signature partagée peut réduire le résultat à un sous-groupe mais ne peut jamais créer topRef/strong pour une référence unique.
+- Le consensus multi-captures reste réservé aux décisions de référence unique.
+- ambiguityGuidance() ajoute une aide ciblée pour les deux ambiguïtés structurelles restantes.
+- VAC151/VAC151SM : signalement du critère d’usinage d’épaulement documenté par Silca en septembre 2024.
+- RO4/RO45 : sous-groupe commun ; marquage/code/application/étalon local requis après le profil.
+- Diagnostic dérivé : bres-profile-diagnostic-v6.
+- Export calibration : bres-profile-calibration-v4 inchangé pour compatibilité replay.
+
+Contrôles attendus
+- Catalogue : 5 103 références uniques.
+- Groupes silhouette : 3 712 ; collisions : 1 053 groupes / 2 444 références.
+- Profil catalogue : 1 051 groupes entièrement séparables, 1 partiellement, 1 non séparé.
+- Ambiguïtés résiduelles par signature profil : 2 sous-groupes / 4 références.
+- JavaScript : syntaxe valide.
+- Self-test R11 : RO4/RO45 regroupés ; RO4R et RO48R distincts ; VAC151/VAC151SM commun ; aucun profil partagé transformé en décision individuelle.
+- Aucune photo brute dans les exports.
+
+Limite connue
+Les seuils photo restent provisoires tant qu’une première session physique Samsung avec une clé de référence certaine n’a pas été enregistrée. R11 améliore le traitement structurel du catalogue mais ne remplace pas cette calibration réelle.
+
+Sécurité versions
+La V2.27 stable ne doit pas être remplacée par cette version de test. R11 reste confinée à la branche de test et aux sauvegardes dédiées.
