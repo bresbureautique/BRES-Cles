@@ -1,0 +1,7 @@
+BRES CLÉS V2.28 TEST R30 — CHECKPOINT
+
+Défaut OCR corrigé : la reconstruction des références espacées ne compacte plus toute la ligne. « JMA TE 8 D » récupère désormais TE8D exactement, tandis que slash, retour ligne, emoji, bruit Unicode et ponts excessifs sont bloqués.
+Défaut de paquet corrigé : LISEZ-MOI et l’aide catalogue visibles sont alignés sur R30 ; le test de cohérence couvre désormais ces surfaces.
+Catalogue source : 5 103 références, 10 morceaux strictement inchangés par rapport à R29.
+Reconnaissance photo Samsung : seuils inchangés.
+V2.27 stable : ne doit pas être remplacée.
