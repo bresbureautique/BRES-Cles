@@ -1,0 +1,9 @@
+BRES CLÉS V2.28 TEST R30 — RECONSTRUCTION LOCALE DES CANDIDATS OCR
+
+OK  10 formes positives contrôlées : TE8D, TE-8D, TE 8 D, T E 8 D, fabricant + référence espacée
+OK  11 séparateurs forts/bruits/longs ponts ne reconstruisent pas TE8D
+OK  3 textes intermédiaires restent sous le seuil OCR de préremplissage
+OK  compactage global de toute la ligne OCR supprimé
+OK  budget total des séparateurs faibles locaux = 3 caractères
+
+SELFTEST OK
