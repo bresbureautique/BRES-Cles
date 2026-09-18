@@ -1,0 +1,8 @@
+BRES CLÉS V2.28 TEST R29 — CHECKPOINT
+
+Défaut corrigé : R28 acceptait toute ponctuation Unicode entre fabricant et référence et une distance locale de 32 caractères.
+R29 : allowlist explicite du gap fabricant↔référence + distance maximale 12 caractères.
+Tests adversariaux ajoutés : séparateurs visuels Unicode, ponctuation non revue et gaps excessifs.
+Catalogue source : 5 103 références, 10 morceaux inchangés par rapport à R28.
+Reconnaissance photo Samsung : inchangée.
+V2.27 stable : ne doit pas être remplacée.
