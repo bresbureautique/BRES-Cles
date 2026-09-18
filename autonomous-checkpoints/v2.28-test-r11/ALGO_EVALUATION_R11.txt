@@ -1,0 +1,26 @@
+BRES CLÉS V2.28 TEST R11 — ÉVALUATION DES AMBIGUÏTÉS DE PROFIL
+
+But
+Éviter qu’une signature de profil identique entre plusieurs références soit traitée comme plusieurs concurrents artificiels ou comme un faux gagnant individuel.
+
+Résultat structurel sur les 5 103 références
+- 1 053 groupes de silhouettes identiques / 2 444 références concernées.
+- 1 051 groupes entièrement séparables par profil.
+- 1 groupe partiellement séparable : RO45 / RO4 / RO4R / RO48R.
+- 1 groupe non séparable par profil axial : VAC151 / VAC151SM.
+- Après regroupement des profils identiques : seulement 2 sous-groupes résiduels ambigus, 4 références au total : RO4/RO45 et VAC151/VAC151SM.
+
+Évolution R11
+- La comparaison photo ne classe plus chaque référence dupliquée séparément : elle classe les signatures de profil distinctes.
+- RO4/RO45 peuvent donc être reconnus comme un sous-groupe commun sans qu’une égalité artificielle bloque tout le groupe RONIS.
+- Si un profil partagé arrive en tête, R11 peut réduire la liste, mais topRef reste nul et strong reste faux : aucune référence individuelle n’est validée ni utilisée dans le consensus de calibration.
+- VAC151/VAC151SM est explicitement signalé comme non départageable par le profil axial.
+
+Critères catalogue complémentaires documentés
+- Silca Catalogue 110, page RONIS 189 : RO4, RO4R, RO45 et RO48R sont regroupées dans la même famille de dessin ; la base extrait 3 signatures de profil, dont une commune RO4/RO45.
+- Silca New Keys Collection 09/2024 : VAC151SM est présentée avec une « shoulder milling view » ; l’usinage d’épaulement devient donc le critère physique complémentaire à contrôler lorsque silhouette et profil axial sont identiques.
+
+Sécurité
+- Un profil partagé n’alimente pas le consensus de référence R10/R11.
+- Aucun VALIDÉ automatique ajouté.
+- Les seuils de photo réels restent provisoires jusqu’au test Samsung sur une clé de référence certaine.
