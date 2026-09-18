@@ -1,0 +1,14 @@
+BRES CLÉS V2.28 TEST R13 — ÉVALUATION INDICES RO4
+
+But
+Réduire utilement l'ambiguïté RO4/RO45 sans introduire de choix par défaut ou par exclusion.
+
+Résultat
+- Les alias RO4 RO-7D/RO7D, RI10, R23R et RN13 sont recoupés par au moins deux sources indépendantes.
+- Des séries de codes RO4 publiées par KeyTrader sont reconnues comme indice documentaire plus faible (source unique).
+- Un indice positif peut produire preferredRefs=[RO4], mais canValidate reste toujours false.
+- L'absence d'indice positif produit preferredRefs=[] et ne sélectionne jamais RO45.
+- VAC151/VAC151SM reste inchangé : shoulder milling positif -> préférence VAC151SM, jamais validation.
+
+Conclusion
+R13 apporte un gain opérationnel mesurable sur RO4/RO45 tout en conservant la priorité anti-faux-positif. La résolution définitive de cas sans indice documentaire et la calibration du profil photo nécessitent toujours une preuve physique/étalon.
