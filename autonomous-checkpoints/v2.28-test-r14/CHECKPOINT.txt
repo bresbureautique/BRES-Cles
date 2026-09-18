@@ -1,0 +1,23 @@
+BRES CLÉS — CHECKPOINT V2.28 TEST R14
+Date : 2026-09-18
+
+Jalon
+- Ajout d’un garde-fou d’espace de noms catalogue pour l’ambiguïté résiduelle Silca RO4 / Silca RO45.
+- Les mentions JMA RO-45, Errebi R39 et Silca RO85 sont reconnues comme des indices vers un blanc hors du sous-groupe courant (Silca RO85), donc ne sélectionnent jamais Silca RO45.
+- Une saisie « RO45 » sans fabricant reste volontairement ambiguë et ne produit aucun choix.
+- Les preuves positives RO4 de R13 sont conservées, toujours canValidate=false.
+- Les règles VAC151/VAC151SM et le consensus photo restent inchangés.
+
+Séparation / sécurité
+- V2.27 stable : ne pas remplacer ; branche main inchangée.
+- V2.28 TEST R14 : branche de test uniquement.
+- Catalogue : preuves R14 stockées séparément dans catalogue/evidence/ronis_ro4_ro45_r14.json.
+- Aucun mécanisme de R14 ne peut produire preferredRefs=['RO45'] ni VALIDÉ sur cette preuve documentaire.
+
+Tests attendus
+- JavaScript valide.
+- 5 103 références uniques.
+- Ambiguïtés structurelles inchangées : RO4/RO45 et VAC151/VAC151SM.
+- Selftests profil / consensus / preuve manuelle OK.
+- Tests espace de noms : JMA RO-45, Errebi R39, Silca RO85 et RO45 nu bloqués sans préférence.
+- Pas de photo brute dans les exports diagnostics/calibration.
