@@ -1,0 +1,48 @@
+BRES CLÉS V2.28 TEST R21 — CHECKPOINT GITHUB VÉRIFIABLE
+Date : 2026-09-18
+
+Base et séparation
+- Parent test R20 : 8c0b5c82d363b900d3a25e11e483f1e640d2764f sur v2.28-test-r1.
+- V2.27 stable : main doit rester sur 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8.
+- V2.28 TEST R21 reste exclusivement sur la branche de test et dans les sauvegardes dédiées.
+- Base catalogue auditée et sauvegardée séparément de l’application.
+
+Jalon R21
+- Défaut R20 reproduit : le matcher de token pouvait reconstruire une référence à travers un séparateur fort, par exemple "JMA RO / 7D" -> RO7D.
+- R21 impose que le début et la fin d’un token logique appartiennent au même segment délimité par / ; , | + ou saut de ligne.
+- Les ponctuations faibles restent tolérées dans le même segment (ex. RO.7D, R O 7 D).
+- 50 cas runtime du resolver sont désormais testés, dont les variantes adversariales de token fragmenté.
+- Aucune nouvelle équivalence fabricant n’est ajoutée ; les 8 règles qualifiées existantes restent inchangées.
+- Aucune règle ne produit VALIDÉ ; RO45 n’est jamais sélectionnée par absence de preuve.
+- Calibration v5 et seuils photo inchangés.
+
+Vérification application
+- verify_build.py après décompression : ok=true, errors=[].
+- Catalogue : 5 103 références / 5 103 uniques.
+- 2 clusters de profil résiduels / 4 références : RO4/RO45 et VAC151/VAC151SM.
+- token_span_strong_delimiter_guard_ok=true.
+- JavaScript, caméra guidée, ROI, consensus multi-captures, replay, intégrité, identité BK3-4/BK34 et garde-fous manuels : OK.
+- 166 fichiers hachés dans BUILD_MANIFEST.json.
+- Aucune photo brute dans les exports.
+
+Vérification snapshot catalogue séparé
+- verify_catalogue_snapshot.py après décompression : ok=true, errors=[].
+- 5 103 références / 5 103 uniques.
+- 8 règles inter-fabricants documentées.
+- Audit runtime : 50 cas, garde de segment et garde token inter-segment actives.
+- 36 fichiers hachés dans le snapshot.
+
+Archives Library
+- BRES_Cles_Mobile_V2_28_TEST_R21.zip : 1014379 octets ; SHA-256 0be28a6347e19ea012f574456a854dec11ea6dcc754dfc12c8d1c626bf358aae
+- BRES_Cles_Catalogue_Snapshot_R21.zip : 659972 octets ; SHA-256 cd89374e498eaf80e393b543c36d7b0e4bae25e7909644f1f19db4bb62ccfcf0
+
+Règle de sécurité
+Ne jamais fusionner ce checkpoint dans main tant que V2.28 n’a pas été explicitement promue en version stable après essais physiques réels.
+
+Empreintes sources principales
+e954be372388f8f15e563f249ec261fda5760c079cf674d2196485348e3dd16c  index.html
+8e8c3b94e5eb9f2914e9fd6c59ff2992eaa7f1ed3a55ccb35e4e9367f1c3c1d6  v228-catalogue.js
+605320f98571aab85a5eaaa1da67b865804f59fdee4cc38758765cfbaea62bf8  verify_build.py
+8255d3d76ae9f4e19281fe0a2e534796338066a75a65bac749a7163d31fd5958  catalogue_namespace_registry_test.py
+4643e927039c1e40dbddf790020ff5e220bfd9b06731db05aedc417a3cc8b49b  catalogue/evidence/cross_reference_registry_r21.json
+1f36070ab8954502851831819be1f971468e05b05a954b5baed18ea01e6fe172  catalogue/evidence/namespace_registry_audit_r21.json
