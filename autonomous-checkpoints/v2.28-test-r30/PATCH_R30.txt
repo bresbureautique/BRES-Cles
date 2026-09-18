@@ -1,0 +1,38 @@
+BRES CLÉS V2.28 TEST R30 — PATCH FONCTIONNEL DEPUIS R29
+
+1. Le compactage global de la ligne OCR a été supprimé. La reconstruction d’une référence espacée se fait maintenant localement, sur des groupes alphanumériques voisins.
+2. Les seuls séparateurs locaux tolérés sont espace/tabulation, point, tirets/minus revus, NBSP et espace fine insécable ; chaque pont <= 3 caractères et budget cumulé <= 3.
+3. Les candidats reconstruits doivent respecter ^[A-Z]{1,4}\d{1,3}[A-Z]$.
+4. Slash, retour ligne, emoji, caractère de format/zero-width, ponctuation Unicode non revue et longues suites ne peuvent plus fabriquer TE8D.
+5. Le test runtime couvre 10 positifs, 11 négatifs et 3 cas de texte intermédiaire.
+6. LISEZ-MOI et l’aide catalogue visibles ont été réalignés sur R30, et version_consistency_test.py vérifie désormais ces surfaces.
+7. Aucun des 10 morceaux catalogue n’a été modifié depuis R29. Aucun seuil photo Samsung n’a été modifié.
+
+Fonction active ajoutée à index.html :
+
+function recoverOCRCandidates(raw){
+  const s=(raw||"").toUpperCase();
+  const chunks=[];
+  const re=/[A-Z0-9]+/g;
+  let m;
+  while((m=re.exec(s))) chunks.push({text:m[0],start:m.index,end:re.lastIndex});
+  const weakGap=/^[ \t.\-‐‑‒–—−﹣－\u00A0\u202F]{1,3}$/u;
+  const out=[];
+  for(let i=0;i<chunks.length;i++){
+    let compact="",totalGap=0;
+    for(let j=i;j<Math.min(chunks.length,i+8);j++){
+      if(j>i){
+        const gap=s.slice(chunks[j-1].end,chunks[j].start);
+        if(!weakGap.test(gap)) break;
+        totalGap+=gap.length;
+        if(totalGap>3) break;
+      }
+      compact+=chunks[j].text;
+      if(compact.length>10) break;
+      if(/^[A-Z]{1,4}\d{1,3}[A-Z]$/.test(compact)) out.push(compact);
+    }
+  }
+  return [...new Set(out)];
+}
+
+Le bloc interpretOCR actif concatène désormais recoverOCRCandidates(raw) aux candidats existants au lieu d’utiliser compactRef(txt) sur toute la ligne.
