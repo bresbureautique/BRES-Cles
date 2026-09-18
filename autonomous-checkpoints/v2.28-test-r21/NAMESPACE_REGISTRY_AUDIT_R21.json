@@ -1,0 +1,30 @@
+{
+  "schema": "bres-catalogue-namespace-registry-test-v5",
+  "milestone": "V2.28 TEST R21",
+  "catalog_count": 5103,
+  "maker_namespaces": [
+    "JMA",
+    "SILCA",
+    "ERREBI",
+    "KEYLINE",
+    "ORION"
+  ],
+  "qualified_rule_count": 8,
+  "local_targets_verified": [
+    "RO4",
+    "RO85"
+  ],
+  "maker_token_local_pairing": true,
+  "pair_max_gap_chars": 32,
+  "global_cross_pairing_blocked": true,
+  "strong_delimiter_segment_guard": true,
+  "token_span_guard": true,
+  "orphan_token_does_not_inherit_previous_maker": true,
+  "javascript_runtime_cases": 50,
+  "javascript_runtime_cases_ok": true,
+  "composite_conflict_cases_blocked": true,
+  "same_target_composites_preserved": true,
+  "redirect_non_validating": true,
+  "errors": [],
+  "ok": true
+}
