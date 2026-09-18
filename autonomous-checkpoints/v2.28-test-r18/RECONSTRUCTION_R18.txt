@@ -1,0 +1,52 @@
+BRES CLÉS V2.28 TEST R18 — CHECKPOINT GITHUB VÉRIFIABLE
+Date : 2026-09-18
+
+Base et séparation
+- Parent test R17 : 9deb884a92dae7fd5df5acf26e2bea308398b35d sur v2.28-test-r1.
+- V2.27 stable : main doit rester sur 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8.
+- V2.28 TEST R18 reste exclusivement sur la branche de test et dans les sauvegardes dédiées.
+- Base catalogue auditée et sauvegardée séparément de l’application.
+
+Jalon R18
+- Correction d’un risque de faux rapprochement lorsqu’un même champ de marquage contient plusieurs équivalences fabricant-qualifiées.
+- Le resolver R18 collecte désormais toutes les correspondances qualifiées au lieu de conserver la première trouvée.
+- Deux indices qualifiés qui convergent vers la même cible restent exploitables comme preuve non-validante.
+- Deux indices qualifiés qui pointent vers des cibles différentes (RO4 / RO85) déclenchent un conflit explicite et bloquent toute préférence ou suggestion automatique.
+- Registre fabricant-qualifié maintenu pour JMA, Silca, Errebi, Keyline et Orion : 8 règles documentées.
+- Batterie du resolver exécutée sur 22 cas, dont 4 marquages composites : 2 convergents conservés, 2 contradictoires bloqués.
+- Aucune règle ne produit VALIDÉ ; aucune absence de preuve ne sélectionne RO45.
+- Calibration v5 et seuils photo inchangés.
+
+Vérification finale
+- verify_build.py : ok=true, errors=[].
+- Catalogue : 5 103 références / 5 103 uniques.
+- 2 clusters de profil résiduels / 4 références : RO4/RO45 et VAC151/VAC151SM.
+- JavaScript, caméra guidée, ROI, consensus multi-captures, replay, intégrité, identité BK3-4/BK34, registre d’espaces de noms, conflits composites et garde-fous manuels : OK.
+- 122 fichiers hachés dans BUILD_MANIFEST.json.
+- Batterie consolidée : 10 PASS/SELFTEST OK.
+- Aucune photo brute dans les exports.
+- Archive application décompressée puis verify_build.py rejoué : OK, 122 fichiers hachés, 5 103 références uniques.
+- Snapshot catalogue décompressé et re-haché : OK, 25 fichiers contrôlés, 5 103 références uniques.
+
+Archives Library
+- /BRES Cles/Sauvegardes/BRES_Cles_Mobile_V2_28_TEST_R18.zip
+- Taille application : 899740 octets.
+- SHA-256 application : 05f0f5bcb94016805bc8225cb0f3914523a982b88cd7dc07dc96d994d9fab7f6
+- /BRES Cles/Sauvegardes/BRES_Cles_Catalogue_Snapshot_R18.zip
+- Taille catalogue : 645806 octets.
+- SHA-256 catalogue : 4184b39ad8be8dd8279c37dd7aa045dc2fab55f4477978958deb55b22ec27d88
+- Vérification, manifestes, batterie de tests et snapshots JSON sauvegardés dans le même dossier.
+
+Empreintes sources principales
+ab0b54b31f4ba6425ba9f44c742105ed0964822daa00cf82a072a4bca8a103b6  index.html
+88372a98f649fcd57e032f44294c6bd0f88a26476d2ae95884ed6468a1b4de6a  v228-catalogue.js
+d2e813be4cb88697493e5b732b34b7a088c0cd32bbb4630fde06d85e8cc9a6d6  verify_build.py
+3d4bf56d8f6386e866a51b796a73294199b7ab584c4eb32071ced570fa810ab3  catalogue_namespace_registry_test.py
+750125a590d05116aaf44f5b346e24657d16f32f883b3d97fc23e5d1f60a9e8c  manual_ambiguity_resolution_test.py
+745663496fa7418b3775ae3674d364c01cbafceb80dc65638be2850f18018bef  catalogue/evidence/cross_reference_registry_r18.json
+a89ea3557b2bc5bc0cab637c925f8ea09efbda955b908de06f8a67fdecc0013a  catalogue/evidence/namespace_registry_audit_r18.json
+2adddc2b28f4cb03e9233368c9f06062c9edbe1c44aaa1299b6add57a5c85e83  CATALOGUE_EVIDENCE_R18.txt
+8c678bf0eb078adf4ceb80fc873746c4ca3ae41f3df449be0677dc3f0cf7c5f4  ALL_TESTS_R18.txt
+
+Règle de sécurité
+Ne jamais fusionner ce checkpoint dans main tant que V2.28 n’a pas été explicitement promue en version stable après essais physiques réels.
