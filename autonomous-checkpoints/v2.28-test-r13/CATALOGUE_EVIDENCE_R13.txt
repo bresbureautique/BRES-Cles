@@ -1,0 +1,30 @@
+BRES CLÉS V2.28 TEST R13 — PREUVES CATALOGUE RONIS RO4 / RO45
+
+Gain du jalon
+- L'ambiguïté de profil RO4/RO45 reste structurelle : aucun choix par silhouette/profil seul.
+- R13 ajoute uniquement des indices POSITIFS documentés de RO4, toujours avec canValidate=false.
+- L'absence d'un indice RO4 ne devient jamais une preuve de RO45.
+
+Alias RO4 recoupés par au moins deux sources
+- JMA RO-7D / RO7D : Nauta + EasyKeys (KeyTrader en corroboration).
+- Keyline RI10 : Nauta + BASI.
+- Errebi R23R : Nauta + BASI.
+- Orion RN13 : Nauta + EasyKeys.
+
+Séries de codes RO4 documentées (KeyTrader, une source ; préférence seulement)
+D0001-D1000 ; F001-F200 ; GV001-GV300 ; PS01-PS30 ; S001-S106 ; T001-T106 ; T313-T380 ; TA001-TA224 ; A001A-A200A ; A501A-A700A ; C101-C600 ; 101C-600C ; 001F-500F ; 1F01-1F21.
+
+Règle applicative R13
+- Alias recoupé reconnu -> préférence RO4, strength=catalogue-positive-multisource, jamais VALIDÉ.
+- Série de code reconnue -> préférence RO4, strength=catalogue-positive-single-source, jamais VALIDÉ.
+- Aucun indice reconnu -> aucune préférence ; jamais RO45 par exclusion.
+- Les champs application/marquage restent exportés comme preuve à recouper.
+
+Sources
+- Nauta: https://www.nauta.com/nl/7501000420-pcs-r23r-ro7d-ri10-ro4-l461
+- EasyKeys: https://easykeys.com/801_JMA_RO-7D_Key_Blank
+- BASI: https://shop.basi.eu/en/key-blank/item-1-1201900.html
+- KeyTrader: https://www.keytrader.co.uk/Cylinder-Keys/RONIS/RO4-Key-Blank.html
+
+Sécurité
+Aucune règle R13 ne sélectionne RO45. Aucune preuve documentaire R13 ne peut produire VALIDÉ. Le test physique Samsung reste nécessaire pour calibrer les seuils photo profil.
