@@ -1,0 +1,14 @@
+{
+  "version": "V2.28 TEST R12",
+  "catalog_count": 5103,
+  "unique_refs": 5103,
+  "residual_profile_sets": [["RO4", "RO45"], ["VAC151", "VAC151SM"]],
+  "javascript_syntax_ok": true,
+  "manual_ambiguity_selftest_ok": true,
+  "manual_evidence_guardrails_ok": true,
+  "raw_image_export_fields_absent": true,
+  "files_hashed": 49,
+  "errors": [],
+  "zip_sha256": "971078b543c4cd408f707eb434d32bbba5383847f40bfbfe4941bdc9f18353c0",
+  "zip_size_bytes": 771360
+}
