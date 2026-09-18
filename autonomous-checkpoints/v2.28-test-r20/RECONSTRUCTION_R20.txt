@@ -1,0 +1,55 @@
+BRES CLÉS V2.28 TEST R20 — CHECKPOINT GITHUB VÉRIFIABLE
+Date : 2026-09-18
+
+Base et séparation
+- Parent test R19 : ce8281f5913bedc7a1b793859714a3aab351c2dd sur v2.28-test-r1.
+- V2.27 stable : main doit rester sur 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8.
+- V2.28 TEST R20 reste exclusivement sur la branche de test et dans les sauvegardes dédiées.
+- Base catalogue auditée et sauvegardée séparément de l’application.
+
+Jalon R20
+- R19 appariait déjà chaque référence au fabricant le plus proche dans une fenêtre de 32 caractères.
+- R20 ajoute une frontière de segment sur / ; , | + et saut de ligne.
+- Un fabricant ne peut plus qualifier une référence située dans un segment voisin.
+- Une référence orpheline placée après un séparateur fort n’hérite pas du fabricant précédent.
+- Les couples fabricant↔référence valides dans un même segment restent reconnus.
+- Les composites convergents restent utilisables et les composites contradictoires RO4/RO85 restent bloqués.
+- Aucune règle ne produit VALIDÉ ; aucune absence de preuve ne sélectionne RO45.
+- Calibration v5 et seuils photo inchangés.
+
+Vérification application
+- verify_build.py après décompression : ok=true, errors=[].
+- Catalogue : 5 103 références / 5 103 uniques.
+- 2 clusters de profil résiduels / 4 références : RO4/RO45 et VAC151/VAC151SM.
+- Resolver fabricant/référence : 38 cas runtime.
+- Garde séparateurs forts : active et testée.
+- JavaScript, caméra guidée, ROI, consensus multi-captures, replay, intégrité, identité BK3-4/BK34 et garde-fous manuels : OK.
+- 152 fichiers hachés dans BUILD_MANIFEST.json.
+- Aucune photo brute dans les exports.
+
+Vérification snapshot catalogue séparé
+- verify_catalogue_snapshot.py autonome : ok=true, errors=[].
+- 5 103 références / 5 103 uniques.
+- 8 règles inter-fabricants documentées.
+- 32 fichiers hachés dans le snapshot.
+- Audit runtime app-side recoupé : 38 cas et garde de segment active.
+
+Archives Library prévues
+- /BRES Cles/Sauvegardes/BRES_Cles_Mobile_V2_28_TEST_R20.zip
+- Taille application : 972902 octets.
+- SHA-256 application : a2a42222cc6618797fb4d7a58c6ee5290ddd6fdb0e84ef19e406889ef1d9e250
+- /BRES Cles/Sauvegardes/BRES_Cles_Catalogue_Snapshot_R20.zip
+- Taille catalogue : 655368 octets.
+- SHA-256 catalogue : 7028e01ac0810eb556605021e6316a626b060ce425e58a16d3442287325e984a
+
+Règle de sécurité
+Ne jamais fusionner ce checkpoint dans main tant que V2.28 n’a pas été explicitement promue en version stable après essais physiques réels.
+
+Empreintes sources principales
+1b3a37ed72d62171b08fea663d1795fb6ead3ad6980c61094cfc9e97637b6bad  index.html
+753bf5c404cafa52b6280f767063ec9bd1343a37c0eb4e37b79babbc0c71e8d4  v228-catalogue.js
+8fbed8d20fcc638bdf89aa51fe0bbc45c0d068688e0f87fc334a3a8cd36f6bb1  verify_build.py
+2e66c71dd74ef1158d2c5d10046c7f16eeaea348970876f2ad0b5f396d30cb9c  catalogue_namespace_registry_test.py
+b8160f6913c29b0b8b5bda7585dc1291ebef3843d5437e6a5b1a4fc948148fcc  catalogue/evidence/cross_reference_registry_r20.json
+3b62f6d40f2b25fbab72c99cfe43fdb9816b77848f4cadb5f2e5723e51cd329b  catalogue/evidence/namespace_registry_audit_r20.json
+735c0192a32c9c9bfa543b609ce1df57c0ff462e9a3b1976ab4d430d8257ebcf  verify_catalogue_snapshot.py
