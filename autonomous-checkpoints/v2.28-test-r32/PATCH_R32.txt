@@ -1,0 +1,13 @@
+BRES CLÉS V2.28 TEST R32 — DESCRIPTION DU PATCH
+
+Défaut découvert en R31
+- Les limites fabricant/référence utilisaient encore des frontières ASCII [A-Z0-9].
+- Une lettre ou un nombre Unicode adjacent pouvait être interprété à tort comme un séparateur : ΩJMA RO7D, ÉJMA RO7D, １JMA RO7D, JMA RO7DΩ.
+- Le nettoyage OCR ASCII pouvait aussi effacer ce caractère avant la détection fabricant et fabriquer une fausse frontière.
+
+Correction R32
+- namespaceMakerOccurrences, namespaceTokenOccurrences et namespaceTokenPattern utilisent désormais les propriétés Unicode \p{L} / \p{N}.
+- interpretOCR détecte les fabricants sur le texte brut Unicode avant cleanOCR.
+- 143 cas runtime namespace passent.
+- OCR : 5 contrôles positifs fabricant + 13 négatifs sous-chaîne/frontière passent.
+- Les 10 fichiers catalogue restent identiques à R31.
