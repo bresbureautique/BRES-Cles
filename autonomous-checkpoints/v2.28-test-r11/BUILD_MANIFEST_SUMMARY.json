@@ -1,0 +1,22 @@
+{
+  "version": "V2.28 TEST R11",
+  "catalog_count": 5103,
+  "unique_refs": 5103,
+  "silhouette_groups": 3712,
+  "collision_groups": 1053,
+  "collision_refs": 2444,
+  "profile_full_groups": 1051,
+  "profile_partial_groups": 1,
+  "profile_unresolved_groups": 1,
+  "residual_profile_clusters": 2,
+  "residual_profile_refs": 4,
+  "residual_profile_sets": [["RO4","RO45"],["VAC151","VAC151SM"]],
+  "files_hashed": 41,
+  "javascript_syntax_ok": true,
+  "replay_selftest_ok": true,
+  "session_consensus_selftest_ok": true,
+  "profile_ambiguity_selftest_ok": true,
+  "raw_image_export_fields_absent": true,
+  "zip_sha256": "655abb8caf9d6b8ec620baaeafb789a5ae657a854a1acf88ecc8536f7af6d4d3",
+  "stable_main_expected": "9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8"
+}
