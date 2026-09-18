@@ -1,0 +1,8 @@
+BRES CLÉS — CHECKPOINT R26
+Date : 2026-09-18
+Parent R25 : 3213e42ef2eb2e9a4693f8b307fb10edf026af60
+Stable V2.27 main attendu : 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8
+
+R26 corrige les ponts OCR faibles de longueur illimitée : chaque séquence interne espace/point/tab/tiret tolérée est désormais bornée à 3 caractères.
+Application : 5 103 références, 279 fichiers hachés, errors=[].
+Catalogue séparé : 5 103 références, 86 cas namespace, 23 positifs + 42 négatifs RONIS, 70 fichiers hachés, errors=[].
