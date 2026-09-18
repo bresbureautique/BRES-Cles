@@ -1,0 +1,11 @@
+{
+  "ok": true,
+  "version": "V2.28 TEST R23",
+  "catalog_count": 5103,
+  "unique_refs": 5103,
+  "residual_profile_sets": [["RO4","RO45"],["VAC151","VAC151SM"]],
+  "files_hashed": 202,
+  "errors": [],
+  "namespace_runtime_cases": 58,
+  "alternate_unicode_delimiter_guard": true
+}

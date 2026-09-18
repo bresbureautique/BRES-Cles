@@ -1,0 +1,15 @@
+BRES CLÉS V2.28 TEST R23 — CHECKPOINT VÉRIFIABLE
+Date : 2026-09-18
+
+Base : R22 commit GitHub a9154432b237a0e400097096800b769035b75c38.
+Défaut reproduit : R22 acceptait à tort des tokens fragmentés par certains séparateurs Unicode/fullwidth ou backslash (ex. JMA RO／7D).
+Correction : R23 étend la frontière forte aux variantes ／ ⁄ ∕ ＼ ； ， ｜ ＋ et au backslash ASCII ; les séparateurs faibles utiles à l’OCR restent tolérés.
+Audit runtime : 58 cas, tous conformes.
+Catalogue : 5 103 références uniques, 8 règles fabricant-qualifiées, sources catalogue inchangées bit-à-bit depuis R22.
+Ambiguïtés physiques résiduelles : RO4/RO45 et VAC151/VAC151SM.
+Seuils photo/calibration : inchangés.
+
+ZIP application SHA-256 : fc0c12a34572ad59188fdd2946711b6664b8235e6288f53cdcdf424f6be5c2ac
+ZIP catalogue SHA-256 : e64cb076ad1cf4a088a9a75a0fd6b7e661b1488486dda5943e7a3e1b6ddcdec7
+Vérification après décompression : application ok=true/errors=[] ; catalogue ok=true/errors=[].
+V2.27 stable : main doit rester sur 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8.
