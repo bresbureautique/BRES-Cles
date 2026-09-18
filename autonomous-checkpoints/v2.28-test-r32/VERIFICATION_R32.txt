@@ -1,0 +1,10 @@
+BRES CLÉS V2.28 TEST R32 — VÉRIFICATION DU JALON
+
+Application après décompression : ok=true ; version=V2.28 TEST R32 ; catalogue=5103 ; références uniques=5103 ; fichiers contrôlés=383 ; errors=[]
+Catalogue séparé après décompression : ok=true ; version=Catalogue Snapshot R32 ; catalogue=5103 ; références uniques=5103 ; cas runtime namespace=143 ; fichiers contrôlés=124 ; errors=[]
+
+Garde R32 namespace : frontières alphanumériques Unicode actives ; 8 cas adjacents Unicode négatifs bloqués ; contrôles ponctuation légitime préservés.
+Garde R32 OCR fabricant : détection sur texte brut avant nettoyage ASCII ; 13 faux sous-chaînes/frontières négatives bloquées, dont 8 Unicode.
+Continuité catalogue : 10/10 morceaux identiques à R31.
+Seuils photo Samsung : inchangés.
+V2.27 stable : non modifiée.
