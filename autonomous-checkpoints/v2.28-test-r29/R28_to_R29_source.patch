@@ -1,1 +1,29 @@
-*** PATCH CONTENT OMITTED IN THIS SUMMARY ***
+--- R28/v228-catalogue.js
++++ R29/v228-catalogue.js
+@@
+-/* BRES Clés V2.28 TEST R28 — preuves manuelles résiduelles séparées + garde-fous anti-validation */
++/* BRES Clés V2.28 TEST R29 — preuves manuelles résiduelles séparées + garde-fous anti-validation */
+@@
+-  const CATALOGUE_NAMESPACE_REGISTRY_R28=[
++  const CATALOGUE_NAMESPACE_REGISTRY_R29=[
+@@
+-  const NAMESPACE_PAIR_MAX_GAP=32;
++  const NAMESPACE_PAIR_MAX_GAP=12;
++  const NAMESPACE_PAIR_SAFE_GAP_RE=/^[ \t\u00A0\u202F.:#!?()\[\]{}'"\-_\u2010\u2011\u2012\u2013\u2014\u2212\uFE63\uFF0D\u2026=]*$/u;
+@@
+-    // R28 allowed every Unicode punctuation character between maker and reference.
+-    try{return /^(?:[\p{P}\p{Zs}\t=])*$/u.test(gap);}catch(e){
+-      return /^[ \t\u00A0\u202F.,:#!?()\[\]{}'"\-_=]*$/.test(gap);
+-    }
++    // R29 uses a reviewed explicit allowlist and a 12-character locality cap.
++    return NAMESPACE_PAIR_SAFE_GAP_RE.test(gap);
+@@
+-    for(const rule of CATALOGUE_NAMESPACE_REGISTRY_R28){
++    for(const rule of CATALOGUE_NAMESPACE_REGISTRY_R29){
+@@
+-    for(const rule of CATALOGUE_NAMESPACE_REGISTRY_R28)for(const token of rule.tokens)
++    for(const rule of CATALOGUE_NAMESPACE_REGISTRY_R29)for(const token of rule.tokens)
+
+R29 also updates active labels/cache-busting from r28/R28 to r29/R29, adds 10 adversarial namespace cases (123 runtime cases total), adds cross_reference_registry_r29.json, and updates verification scripts to require: explicit maker-token gap allowlist, maximum pair gap 12, unreviewed Unicode punctuation blocked, and excessive pair gaps blocked.
+
+Full reconstructible R29 application and catalogue ZIPs are preserved in Library; their SHA-256 values are recorded in ZIP_HASHES_R29.txt. SOURCE_HASHES_R29.txt records the exact hashes of all current source/test files and the 10 unchanged catalogue chunks.
