@@ -1,0 +1,26 @@
+BRES CLÉS V2.28 TEST R30 — VÉRIFICATION
+
+APPLICATION APRÈS DÉCOMPRESSION
+OK=true
+Version=V2.28 TEST R30
+Catalogue=5103 références / 5103 uniques
+Fichiers contrôlés=335
+Javascript syntax=OK
+OCR reconstruction selftest=OK
+Version consistency selftest=OK
+Catalogue namespace registry selftest=OK
+Ronis code-series guard selftest=OK
+Ambiguïtés physiques résiduelles=RO4/RO45 ; VAC151/VAC151SM
+errors=[]
+
+CATALOGUE SÉPARÉ APRÈS DÉCOMPRESSION
+OK=true
+Version=Catalogue Snapshot R30
+Catalogue=5103 références / 5103 uniques
+Runtime namespace=123 cas
+RONIS=23 positifs / 42 négatifs
+Fichiers contrôlés=105
+10/10 morceaux catalogue identiques à R29
+errors=[]
+
+Les seuils photographiques Samsung restent inchangés. V2.27 reste la version stable.
