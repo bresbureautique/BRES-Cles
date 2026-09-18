@@ -1,0 +1,7 @@
+BRES Clés R30 — empreintes ZIP vérifiées après décompression et après rematérialisation Library
+
+9aa6fafaeb965cade4fbb6d673cb337a1ba09b5333b93b93922cf3de9d99ace4  BRES_Cles_Catalogue_Snapshot_R30.zip  722504 bytes
+62ed3628e485bef626495b207f321d491d25bfbd563fd6ac37b4893e1ad12f83  BRES_Cles_Mobile_V2_28_TEST_R30.zip  1216445 bytes
+
+Library: /BRES Cles/Sauvegardes/
+Comparaison binaire des deux copies rematérialisées: exacte.
