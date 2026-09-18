@@ -1,0 +1,15 @@
+BRES CLÉS — CHECKPOINT V2.28 TEST R33
+Date : 2026-09-19
+
+Jalon
+- Audit R32 : le chemin OCR direct compactait encore un token contenant une suite excessive de tirets ASCII avant d’appliquer la reconstruction locale protégée.
+- Défaut reproduit : « TE-----8D » devenait « TE8D » avec une similarité de 100 %.
+- R33 impose au chemin direct le même budget cumulatif de séparateurs faibles que la reconstruction locale : 3 caractères maximum.
+- Cas adversariaux ajoutés : TE----8D, TE-----8D, T--E--8--D et JMA TE-----8D.
+
+Séparation / sécurité
+- V2.27 reste stable et ne doit pas être remplacée.
+- V2.28 TEST R33 reste sur la branche de test.
+- Base catalogue contrôlée et empaquetée séparément.
+- Les 5 103 références et les 10 morceaux catalogue restent inchangés.
+- Anciennes versions et sauvegardes conservées.
