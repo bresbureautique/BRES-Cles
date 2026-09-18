@@ -1,0 +1,12 @@
+BRES CLÉS — CHECKPOINT V2.28 TEST R31
+Date : 2026-09-18
+
+Jalon
+- R30 reproduit deux sur-tolérances : ponctuation décorative entre fabricant et référence, et fabricant OCR détecté comme sous-chaîne.
+- R31 resserre ces deux chemins sans modifier les 5 103 références catalogue ni les seuils photo Samsung.
+
+Séparation / sécurité
+- V2.27 reste stable et ne doit pas être remplacée.
+- V2.28 TEST R31 reste sur la branche de test.
+- Base catalogue contrôlée et empaquetée séparément.
+- Anciennes versions et sauvegardes conservées.
