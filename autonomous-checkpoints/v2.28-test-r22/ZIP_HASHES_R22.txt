@@ -1,0 +1,2 @@
+f921671d7c2a0d0305117eef3663aa9f4cf7d180aca7e67299bc5bb885563927  BRES_Cles_Mobile_V2_28_TEST_R22.zip  1042950 octets
+32ff7305b6b5af5f25ce990e9ea54c8de1cadc79c80194877cb9fe9b758a49ab  BRES_Cles_Catalogue_Snapshot_R22.zip  661741 octets

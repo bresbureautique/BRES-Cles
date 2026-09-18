@@ -1,0 +1,36 @@
+BRES CLÉS V2.28 TEST R22 — RECONSTRUCTION / VÉRIFICATION
+Date : 2026-09-18
+
+Base vérifiée
+- V2.28 TEST R21 sur branche v2.28-test-r1, commit parent f7ad7e51289647daf03a0531e9bfdeb56c929fc9.
+- V2.27 stable reste sur main au commit 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8 et ne doit jamais être remplacée par R22.
+
+Défaut réel corrigé dans R22
+- R21 contenait encore plusieurs libellés actifs R18 dans index.html et v228-catalogue.js.
+- Les exports diagnostic/calibration portaient encore R18.
+- Le chargeur des dix segments catalogue utilisait encore le cache-buster r15.
+- R22 aligne interface, exports, script principal et segments catalogue sur R22/r22.
+- version_consistency_test.py interdit le retour de versions actives R18/R19/R20/R21 et des cache-busters r15/r21.
+
+Catalogue séparé
+- 5 103 références exactes / 5 103 uniques.
+- Les dix segments source sont bit-à-bit identiques au snapshot R21, contrôlés par SHA-256.
+- 8 règles fabricant-qualifiées inchangées, 5 espaces fabricants, 50 cas runtime.
+- Deux ambiguïtés physiques résiduelles : RO4/RO45 et VAC151/VAC151SM.
+
+Vérification application
+- verify_build.py après décompression : ok=true, errors=[].
+- 182 fichiers hachés dans le build décompressé.
+- JavaScript valide, garde-fous et régressions actifs OK.
+- Aucune photo brute dans les exports.
+
+Vérification snapshot catalogue
+- verify_catalogue_snapshot.py après décompression : ok=true, errors=[].
+- 41 fichiers hachés dans le snapshot catalogue.
+- 5 103 références, 8 règles, 50 cas runtime audités.
+
+Archives Library vérifiables
+- BRES_Cles_Mobile_V2_28_TEST_R22.zip : 1042950 octets ; SHA-256 f921671d7c2a0d0305117eef3663aa9f4cf7d180aca7e67299bc5bb885563927
+- BRES_Cles_Catalogue_Snapshot_R22.zip : 661741 octets ; SHA-256 32ff7305b6b5af5f25ce990e9ea54c8de1cadc79c80194877cb9fe9b758a49ab
+
+Le checkpoint GitHub conserve les empreintes des sources actives et des dix segments catalogue, les résultats de vérification après décompression, l'audit du registre fabricant, le test de cohérence de version et les empreintes des deux archives Library. La reconstruction complète du build est assurée par le ZIP Library dont l'empreinte est fixée ici.

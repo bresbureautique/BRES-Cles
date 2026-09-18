@@ -1,0 +1,9 @@
+{
+  "schema": "bres-active-version-consistency-test-v1",
+  "milestone": "V2.28 TEST R22",
+  "index_ok": true,
+  "js_ok": true,
+  "catalogue_registry_ok": true,
+  "errors": [],
+  "ok": true
+}
