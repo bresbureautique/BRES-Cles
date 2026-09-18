@@ -1,0 +1,25 @@
+BRES CLÉS — VÉRIFICATION V2.28 TEST R33
+Date : 2026-09-19
+
+Application après décompression
+- version : V2.28 TEST R33
+- catalogue : 5 103 références / 5 103 uniques
+- fichiers hachés : 399
+- erreurs : []
+- vérification source : OK
+
+Catalogue séparé après décompression
+- version : Catalogue Snapshot R33
+- catalogue : 5 103 références / 5 103 uniques
+- fichiers hachés : 129
+- erreurs : []
+- vérification source : OK
+
+Continuité
+- 10/10 morceaux catalogue identiques à R32.
+- Ambiguïtés physiques volontairement non forcées : RO4/RO45 et VAC151/VAC151SM.
+- V2.27 stable inchangée ; R33 reste une version de test.
+
+SHA-256 ZIP
+- application : 449f17348802eedc83e5381529f6be5ba60ac33bc892b29da126374acf04df55
+- catalogue : c37285124003ba3a891a3120cedb9a16a532685bbdca83d1204f6575a8800f4d
