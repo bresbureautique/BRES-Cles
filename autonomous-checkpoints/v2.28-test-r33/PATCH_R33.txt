@@ -1,0 +1,11 @@
+BRES CLÉS V2.28 TEST R33 — DESCRIPTION DU PATCH
+
+Défaut découvert en R32
+- Le chemin OCR direct compactait un token complet avant la reconstruction locale protégée.
+- Une suite excessive de tirets ASCII pouvait donc contourner le budget cumulatif de séparateurs faibles : TE-----8D devenait TE8D.
+
+Correction R33
+- Le chemin direct applique désormais le même plafond de 3 caractères de séparation faible que la reconstruction locale.
+- Les formes normales restent acceptées : TE8D, TE-8D, TE 8 D, T E 8 D, JMA TE 8 D.
+- Nouveaux cas adversariaux bloqués : TE----8D, TE-----8D, T--E--8--D et JMA TE-----8D.
+- Les 10 fichiers catalogue restent strictement identiques à R32.
