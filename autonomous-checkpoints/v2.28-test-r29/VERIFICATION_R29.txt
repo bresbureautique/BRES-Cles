@@ -1,0 +1,10 @@
+BRES CLÉS V2.28 TEST R29 — VÉRIFICATION
+
+Application : ok=true ; catalogue=5103 ; refs uniques=5103 ; fichiers contrôlés=316 ; errors=[]
+Catalogue séparé : ok=true ; catalogue=5103 ; refs uniques=5103 ; cas runtime=123 ; fichiers contrôlés=96 ; errors=[]
+Garde R29 : ponctuation Unicode non revue bloquée=true ; gap fabricant/référence excessif bloqué=true
+Vérification après décompression : application OK ; catalogue OK.
+Vérification Library : SHA-256 rematérialisés identiques aux ZIP locaux.
+
+357d0326807c0d68f1ca148e1427ed245b63cb6a92772b599ab385ab464c2c48  BRES_Cles_Mobile_V2_28_TEST_R29.zip
+e2116cd6cc54a3744794a9235ff580cae77dc699cc809884dd43ae1eb70934ef  BRES_Cles_Catalogue_Snapshot_R29.zip
