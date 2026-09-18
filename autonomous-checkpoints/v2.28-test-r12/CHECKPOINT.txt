@@ -1,0 +1,29 @@
+BRES CLÉS V2.28 TEST R12 — CHECKPOINT
+
+Objet du jalon
+- Traiter les deux ambiguïtés structurelles résiduelles sans inventer une certitude.
+- Ajouter une couche de preuve manuelle distincte de la décision automatique.
+- Conserver V2.27 stable intacte sur main.
+
+Évolutions R12
+- Nouveau panneau « Contrôle manuel résiduel » uniquement lorsque le meilleur groupe contient VAC151/VAC151SM ou RO4/RO45.
+- VAC151/VAC151SM : l'observation positive de l'usinage d'épaulement peut produire une préférence manuelle VAC151SM, mais canValidate reste toujours false.
+- L'absence visible d'usinage d'épaulement ne sélectionne jamais VAC151 automatiquement.
+- RO4/RO45 : marquage/code/application sont enregistrés pour recoupement, sans mapping automatique vers une référence.
+- Les preuves manuelles sont ajoutées aux exports diagnostic et calibration sous schema bres-manual-ambiguity-evidence-v1, sans photo brute.
+- Diagnostic dérivé : bres-profile-diagnostic-v7.
+- Calibration : bres-profile-calibration-v4 conservé pour compatibilité replay.
+
+Contrôles attendus
+- Catalogue : 5 103 références uniques.
+- Ambiguïtés profil résiduelles : exactement RO4/RO45 et VAC151/VAC151SM.
+- JavaScript valide.
+- Test preuves manuelles : shoulder milling positif -> VAC151SM préférence seulement ; négatif -> aucun choix ; RONIS -> mémorisation seulement.
+- Aucun chemin de preuve manuelle ne produit VALIDÉ.
+- Aucune photo brute dans les exports.
+
+Limite connue
+Les seuils de photographie du profil restent provisoires tant qu'une session physique Samsung avec une clé de référence certaine n'a pas été enregistrée.
+
+Sécurité versions
+V2.28 TEST R12 reste séparée. V2.27 stable ne doit pas être remplacée.
