@@ -1,0 +1,9 @@
+BRES CLÉS V2.28 TEST R13 — TEST PREUVES DOCUMENTAIRES/MANUELLES RÉSIDUELLES
+OK  alias RO4 multi-sources : RO7D / RI10 / R23R / RN13
+OK  séries de codes RO4 bornées : préférence seulement
+OK  absence/non-correspondance -> aucune préférence, jamais RO45 par exclusion
+OK  shoulder milling positif -> préférence VAC151SM sans VALIDÉ
+OK  toutes les preuves documentaires/manuelles restent canValidate=false
+OK  aucune photo brute ajoutée aux exports
+
+SELFTEST OK
