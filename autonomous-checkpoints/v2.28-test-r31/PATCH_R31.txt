@@ -1,0 +1,9 @@
+BRES CLÉS V2.28 TEST R31 — PATCH FONCTIONNEL DEPUIS R30
+
+1. Namespace fabricant↔référence : NAMESPACE_PAIR_SAFE_GAP_RE ne permet plus underscore, crochets/accolades, guillemets, ! ou ?.
+2. Nouveau NAMESPACE_PAIR_MAX_PUNCT=2 : une suite de plus de deux caractères de ponctuation dans le gap fabricant↔référence est bloquée.
+3. Les séparateurs déjà validés restent admis : espaces horizontaux, point, deux-points, # isolé, parenthèses, tirets/minus revus, ellipse Unicode et =.
+4. Détection OCR fabricant : remplacement de txt.includes(m) par une détection aux frontières alphanumériques. JMASTER, ABUSER, KEYLINER, SILCAM et RONISE ne sont plus pris pour des fabricants connus.
+5. Batterie namespace : 133 cas runtime. Batterie OCR : 10 positifs, 11 négatifs bruit/séparateurs, 3 textes intermédiaires, 3 positifs fabricants et 5 négatifs sous-chaînes.
+6. Les 10 morceaux catalogue sont strictement identiques à R30 ; les seuils photo Samsung sont inchangés.
+7. V2.27 reste stable sur main et n'est pas remplacée.
