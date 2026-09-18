@@ -1,0 +1,8 @@
+BRES CLÉS V2.28 TEST R12 — TEST PREUVES MANUELLES RÉSIDUELLES
+OK  shoulder milling visible -> préférence VAC151SM sans VALIDÉ
+OK  shoulder milling non visible -> aucune préférence automatique pour VAC151
+OK  RO4/RO45 marquage et application -> mémorisation seulement, aucun mapping inventé
+OK  preuves manuelles exportées séparément du score automatique
+OK  aucune photo brute ajoutée aux exports
+
+SELFTEST OK
