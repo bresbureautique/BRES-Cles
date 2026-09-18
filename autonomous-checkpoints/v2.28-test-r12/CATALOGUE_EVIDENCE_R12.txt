@@ -1,0 +1,13 @@
+BRES CLÉS V2.28 TEST R12 — PREUVES CATALOGUE RÉSIDUELLES
+
+Sources contrôlées
+- Catalogue général Silca 2024, page imprimée 189 : RONIS RO45, RO4, RO4R et RO48R figurent dans le même ensemble catalogue. L'extraction disponible ne fournit pas de critère textuel certain permettant de transformer RO4/RO45 en choix automatique.
+- Catalogue général Silca 2024, page imprimée 236 : VACHETTE VAC151 et VAC151SM sont listées séparément mais partagent le même profil axial dans la base extraite.
+- Bulletin Silca NEW KEYS, février 2024 : VAC151SM est illustrée avec une vue d'usinage d'épaulement (« shoulder milling view »).
+- Fiche produit Silca VAC151 standard : dimensions et profil standard contrôlés ; aucune règle négative fiable n'est déduite de l'absence visuelle d'usinage sur une photo.
+
+Règles R12 dérivées
+1. Observation positive d'un usinage d'épaulement : préférence manuelle possible pour VAC151SM, sans VALIDÉ automatique.
+2. Usinage non visible : aucune préférence automatique pour VAC151, car l'absence sur une photo peut dépendre de l'angle, de l'éclairage ou du cadrage.
+3. RO4/RO45 : marquage, code et application peuvent être mémorisés comme preuves à recouper, mais aucun mapping code→référence n'est créé sans source certaine ou étalon local.
+4. Toutes ces preuves restent séparées du score silhouette/profil et ne peuvent pas changer à elles seules l'état en VALIDÉ.
