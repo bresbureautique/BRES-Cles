@@ -1,0 +1,46 @@
+BRES CLÉS V2.28 TEST R15 — RECONSTRUCTION / VÉRIFICATION
+
+Base : checkpoint R14 commit 21811809124d74fda401a3b2e820b4871e430841 et ZIP R14 conservé dans Library.
+
+Objet du jalon R15
+1. Auditer l’identité exacte des 5 103 références catalogue indépendamment des silhouettes/profils.
+2. Corriger la collision cachée BK3-4 / BK34 provoquée par l’ancienne suppression de ponctuation.
+3. Introduire strictRefKey + looseRefKey + catalogueRefResolution : égalité exacte prioritaire ; normalisation lâche acceptée uniquement si elle mène à une seule référence ; sinon blocage ambiguous-normalization.
+4. Passer l’export calibration à bres-profile-calibration-v5 et le diagnostic à bres-profile-diagnostic-v9.
+5. Mettre à jour le replay : v5 préserve la ponctuation, v1-v4 gardent leur comportement historique pour compatibilité.
+6. Conserver sans modification les deux ambiguïtés physiques résiduelles RO4/RO45 et VAC151/VAC151SM et tous les garde-fous R14.
+
+Audit catalogue
+- 5 103 références exactes / 5 103 uniques.
+- 1 collision sous normalisation lâche / 2 références : BK3-4 et BK34.
+- L’audit est stocké séparément dans catalogue/evidence/ref_identity_audit_r15.json.
+
+Empreintes SHA-256 des sources principales
+d04d4678a464c83a04c008aeeaa0bf06659173ce1e8358f76bbf8405e103cd8e  index.html
+20bcdb6da391d3e8efe35244ff160be600103263b15d20218524cfa299cf9561  v228-catalogue.js
+5175f93cef6ac0d4ff2a5889b56b743722ce91f1a3968c2456ff9e6be1452ec0  profile_calibration_replay.py
+d6e97a43ef234170d82341920d3e4967fedd1c22542bd70bdbe3235e94cad034  profile_session_majority_test.py
+ebc20ed50ab3e05dfda2b7a708fc07dd9f9a2183654636677c18137b07142567  profile_ambiguity_cluster_test.py
+d49395ff12029cc73e8329580b4d7eacd8ffe9df0137d314e1a168fc3641a982  manual_ambiguity_resolution_test.py
+d7864fe5e9f2efd55ecc203a4e0b5efccf0e40323e495ffa4264b14faea05a78  catalogue_ref_identity_test.py
+c3a9f10fc529587ca3ebdb273dfdba2e5b3a0040fa40fa41d13e23584addb150  catalogue/evidence/ref_identity_audit_r15.json
+6e2be615cf335fc03037335d66a95775a2c671f9c7ddfbe539d538ae1338bc0b  verify_build.py
+
+Empreintes des patches de reconstruction
+12de3e58aea3b676f4b3969f2ec5adb0ffc7d0b599effd5bdaac99cfcdeb5972  R14_to_R15_index.patch
+6061635ac12762bbe71d0ae927516e403eaf29a648d38211f3ec0eed4ac20b06  R14_to_R15_v228.patch
+c57b6ff4150cfba58117a408495d6a5116e2e28e1b3a6760f79eb01cb95b790f  R14_to_R15_replay.patch
+
+Archive complète vérifiée dans Library
+SHA-256 ad99623e297b891007817e0aa0918fbe4e0262998ee8655c7ee78314359b8cd6
+BRES_Cles_Mobile_V2_28_TEST_R15.zip
+Taille : 843930 octets.
+
+Vérification finale
+- verify_build.py : ok=true, errors=[] ; 79 fichiers hachés.
+- archive décompressée puis verify_build.py rejoué : ok=true.
+- reference_identity_policy_ok=true ; catalogue_ref_identity_selftest_ok=true.
+- aucune photo brute dans les exports.
+
+Sécurité de version
+V2.27 stable reste sur main et ne doit jamais être remplacée par R15. R15 reste sur la branche v2.28-test-r1 et dans les sauvegardes dédiées.
