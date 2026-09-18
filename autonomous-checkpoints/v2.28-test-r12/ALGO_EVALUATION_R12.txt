@@ -1,0 +1,13 @@
+BRES CLÉS V2.28 TEST R12 — ÉVALUATION DES PREUVES MANUELLES
+
+But
+Exploiter les derniers critères physiques documentés sans transformer une observation manuelle ou une absence visuelle en certitude artificielle.
+
+Décisions de sécurité
+- VAC151SM : un usinage d'épaulement clairement observé est une preuve positive utile et crée uniquement une préférence manuelle.
+- VAC151 : l'absence d'usinage visible n'est pas une preuve négative assez robuste pour une sélection automatique.
+- RO4/RO45 : les champs de marquage/code/application sont enregistrés, mais restent non interprétés tant qu'aucune correspondance certaine n'est disponible.
+- Toutes les preuves ont canValidate=false et restent séparées du moteur silhouette/profil.
+
+Conclusion
+R12 améliore l'utilité opérationnelle des deux ambiguïtés restantes tout en conservant la règle anti-faux-positif. La calibration photo réelle Samsung demeure nécessaire pour valider les seuils de profil photographié.
