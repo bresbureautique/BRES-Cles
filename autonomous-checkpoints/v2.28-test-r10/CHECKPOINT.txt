@@ -1,0 +1,31 @@
+BRES CLÉS V2.28 TEST R10 — CHECKPOINT
+
+Objet du jalon
+- Renforcer le consensus multi-captures de R9 par une règle de majorité explicite.
+- Éviter qu’une simple paire de clichés concordants suffise lorsqu’elle est noyée dans plusieurs captures fortes contradictoires.
+- Conserver la V2.27 stable intacte sur main.
+
+Évolutions R10
+- sessionConsensusSummary() calcule désormais le nombre de captures fortes réellement soutenant chaque référence.
+- Avec 2 captures fortes, les 2 doivent soutenir la même référence.
+- À partir de 3 captures fortes, une référence doit être soutenue par au moins 2/3 des captures fortes.
+- Une paire isolée parmi 4 captures fortes (2/4 = 50 %) est rejetée.
+- Un résultat 2/3 ou 3/4 cohérent peut former un consensus de session, toujours À CONFIRMER.
+- Un soutien partagé ou insuffisant est affiché explicitement et ne produit aucune préférence automatique.
+- Export calibration : bres-profile-calibration-v4 avec requiredSupportRatio, consensusSupportRatio et splitSupport.
+- Diagnostic dérivé : bres-profile-diagnostic-v5.
+- Outil de rejeu R10 compatible avec les exports v1, v2, v3 et v4.
+
+Contrôles
+- Catalogue : 5 103 références uniques.
+- Groupes silhouette : 3 712 ; collisions : 1 053 groupes / 2 444 références.
+- Profil catalogue : 1 051 groupes de collision entièrement séparables, 1 partiellement, 1 non séparé.
+- JavaScript : syntaxe valide.
+- Self-test R10 : 9 sessions éligibles, 0 fausse acceptation ; majorité 2/3 et 3/4 acceptée, partage 2/2 et paire isolée 2/4 rejetés.
+- Aucune photo brute dans les exports de calibration/diagnostic.
+
+Limite connue
+Les seuils photo restent provisoires tant qu’une première session physique Samsung avec une clé de référence certaine n’a pas été enregistrée. R10 renforce la sécurité logique de session mais ne remplace pas cette calibration réelle.
+
+Sécurité versions
+La V2.27 stable ne doit pas être remplacée par cette version de test. R10 reste confinée à la branche de test et aux sauvegardes dédiées.
