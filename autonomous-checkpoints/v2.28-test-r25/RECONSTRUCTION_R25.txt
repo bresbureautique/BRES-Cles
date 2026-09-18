@@ -1,0 +1,17 @@
+BRES CLÉS V2.28 TEST R25 — RECONSTRUCTION / VÉRIFICATION
+
+Branche de développement : v2.28-test-r1
+Parent attendu : 58647b1348648e2b2d6411dfbdba568855480efd (R24).
+Stable V2.27 protégée sur main : 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8.
+
+R25 corrige un défaut réel séparé du catalogue source : ronisRo4CodeSeries supprimait tout caractère non [A-Z0-9], ce qui pouvait fabriquer D0001 à partir de D0/001, D(0001), D_0001, D:0001, bruit Unicode, etc.
+La correction applique une allowlist OCR stricte avant normalisation.
+
+Pour vérifier :
+1. appliquer R24_to_R25_v228-catalogue.js.patch sur le v228-catalogue.js de R24 ;
+2. utiliser cross_reference_registry_r25.json et ronis_code_series_guard_test.py ;
+3. comparer SOURCE_HASHES_R25.txt ;
+4. vérifier les ZIP avec ZIP_HASHES_R25.txt ;
+5. les vérifications après décompression doivent avoir ok=true, errors=[] et 5 103 références.
+
+Le catalogue v3 (10 chunks) est bit-à-bit inchangé depuis R24.

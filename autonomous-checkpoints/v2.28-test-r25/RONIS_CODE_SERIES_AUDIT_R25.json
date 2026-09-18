@@ -1,0 +1,11 @@
+{
+  "schema": "bres-ronis-code-series-guard-v1",
+  "milestone": "V2.28 TEST R25",
+  "positive_cases": 21,
+  "negative_cases": 37,
+  "weak_gap_tolerance_preserved": true,
+  "noise_bridge_blocked": true,
+  "strong_delimiter_bridge_blocked": true,
+  "errors": [],
+  "ok": true
+}

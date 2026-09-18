@@ -1,0 +1,21 @@
+{
+  "ok": true,
+  "version": "Catalogue Snapshot R25",
+  "catalog_count": 5103,
+  "unique_refs": 5103,
+  "loose_reference_collisions": {"BK34":["BK3-4","BK34"]},
+  "qualified_rule_count": 8,
+  "maker_namespaces": ["JMA","SILCA","ERREBI","KEYLINE","ORION"],
+  "strong_delimiter_segment_guard": true,
+  "token_gap_allowlist_guard": true,
+  "weak_gap_ocr_tolerance_preserved": true,
+  "runtime_audit_cases": 78,
+  "code_series_positive_cases": 21,
+  "code_series_negative_cases": 37,
+  "code_series_noise_bridge_blocked": true,
+  "code_series_strong_delimiter_blocked": true,
+  "code_series_weak_gap_tolerance_preserved": true,
+  "residual_profile_sets": [["RO4","RO45"],["VAC151","VAC151SM"]],
+  "files_hashed": 60,
+  "errors": []
+}

@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "version": "V2.28 TEST R25",
+  "catalog_count": 5103,
+  "unique_refs": 5103,
+  "residual_profile_sets": [["RO4","RO45"],["VAC151","VAC151SM"]],
+  "javascript_syntax_ok": true,
+  "manual_ambiguity_selftest_ok": true,
+  "ronis_code_series_guard_selftest_ok": true,
+  "catalogue_namespace_registry_selftest_ok": true,
+  "version_consistency_selftest_ok": true,
+  "ronis_code_series_noise_bridge_blocked": true,
+  "ronis_code_series_strong_delimiter_blocked": true,
+  "ronis_code_series_weak_gap_tolerance_preserved": true,
+  "files_hashed": 248,
+  "errors": []
+}
