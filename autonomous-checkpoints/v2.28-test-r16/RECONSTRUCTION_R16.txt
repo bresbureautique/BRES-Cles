@@ -1,0 +1,59 @@
+BRES CLÉS V2.28 TEST R16 — RECONSTRUCTION / VÉRIFICATION
+
+Base : checkpoint R15 commit 46a899e14ca091807e4154f4ed216343eabc6133 et ZIP R15 conservé dans Library.
+
+Objet du jalon R16
+1. Conserver strictement V2.27 stable sur main.
+2. Garder toutes les protections R15 : identité exacte des 5 103 références, collision BK3-4/BK34 bloquée, calibration v5.
+3. Transformer les conflits d’espace de noms RONIS en action utile mais non-validante : JMA RO-45 / Errebi R39 / Silca RO85 -> suggestion de contrôle Silca RO85 hors du groupe RO4/RO45.
+4. Ne jamais convertir cette suggestion en preferredRefs ni en VALIDÉ.
+5. Conserver « RO45 » sans fabricant comme ambigu, sans préférence et sans redirection.
+6. Ajouter un audit catalogue séparé des équivalences fabricant-qualifiées et vérifier que les cibles RO4/RO85 existent réellement dans la base locale.
+
+Audit catalogue séparé
+- 5 103 références exactes / 5 103 uniques.
+- RO4 et RO85 présents localement sous RONIS.
+- collision sémantique documentée : JMA RO-45 signifie Silca RO85 alors que Silca RO45 est une référence locale distincte.
+- catalogue/evidence/cross_reference_namespace_r16.json : registre de preuves.
+- catalogue/evidence/alias_namespace_audit_r16.json : audit déterministe local.
+
+Archive complète vérifiée
+SHA-256 253151dff1dbd448fd118d522de27d6f0effd1451fdc7e556470794f3d7e58b4
+BRES_Cles_Mobile_V2_28_TEST_R16.zip
+Taille : 844986 octets.
+
+Vérification finale
+- verify_build.py : ok=true, errors=[] ; 90 fichiers hachés.
+- archive décompressée puis verify_build.py rejoué : ok=true.
+- catalogue_alias_namespace_selftest_ok=true.
+- manual_ambiguity_selftest_ok=true.
+- catalogue_ref_identity_selftest_ok=true.
+- aucune photo brute dans les exports.
+
+Sources documentaires recoupées
+- Nauta R39-RO45-RO85-L472 : Errebi R39 / JMA RO-45 / Silca RO85 / RONIS-WSS.
+- Serrures en Ligne JMA RO-45 : JMA RO-45 / Errebi R39 / Ronis.
+- preuves RO4 multi-sources R13/R14 conservées.
+
+Sécurité de version
+V2.27 stable reste sur main au commit 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8 et ne doit jamais être remplacée par R16.
+R16 reste sur la branche v2.28-test-r1 et dans les sauvegardes dédiées.
+
+Empreintes SHA-256 des sources principales
+1dfce076324a05bbaff5cabc06b92f2629c1fd0e924c075db349a16ed599e828  index.html
+e0a58737df46b2a545d215e0f4a089ade538fe44df1e4dda943d082a1a83bd71  v228-catalogue.js
+2582374f2004276fb12cc52c1b946a51fc54a0b14699f104337e442a573eb864  verify_build.py
+37aeb2354dd1bbba85a68fede11b560a942ee53a41cd14571eb234ce93026e0c  manual_ambiguity_resolution_test.py
+de5d21a057c2aa446520f18902b06303254734f1b2cc40d27a61d17d59a9f16f  profile_ambiguity_cluster_test.py
+04dd34772f4d5868a2d894a1e83198ff2b14f4711167cc7d505f3304d11fe183  profile_session_majority_test.py
+e3e0d80ad4f4b97efea5c63bc1c3f8f3a3b37b9471d9a846a3dbf2082dea1e3e  catalogue_ref_identity_test.py
+77f2dbeaa445d3c23d98c011afaacbe7bc14fcabdfa0bc8ad4aaf509dda18f66  catalogue_alias_namespace_test.py
+174010625f6096d77a3bef73c9ebafed001c3ff399b13c7b664c9af95493f2ff  catalogue/evidence/cross_reference_namespace_r16.json
+d9f26e4e892322f3923d2fde33ff68cdbdec9c7b182641d34ef6d32aea0a4f49  catalogue/evidence/alias_namespace_audit_r16.json
+cc703f903cf4149dc30712c2635c843f59ec84906b89e6a3e69abdb5cb7dcab1  CATALOGUE_EVIDENCE_R16.txt
+9870fd50324f47e9371a7ac8f78cb94b40aaf9aa74d3ceeb86303ca129dbea9c  ALGO_EVALUATION_R16.txt
+1c403fb5d0a6f6c1b0062d6eebee9ab38a8b89bb317ae2c105dfb466775ec864  LISEZ-MOI.txt
+d271d38f11910a5a8e1ec2bb39e3105ca03535d0e0d1bcefe0298386ed87d0bd  CHECKPOINT.txt
+94fabc76eccf1b49867598027550898225e6549fcb5f0f00852ef42cd5c5c452  R15_to_R16_index.patch
+160ff4e7514f26b997a4e5b66e8d11c871edf617830e6ab4283d393a563ba15a  R15_to_R16_v228.patch
+56717fa78c4acf8246c9345239309d6552336d5d730146b19fe12959d1eefe41  R15_to_R16_verify.patch
