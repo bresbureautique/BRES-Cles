@@ -1,0 +1,28 @@
+--- r12/BRES_Cles_Mobile_V2_28_TEST_R12/index.html
++++ r13/index.html
+@@
+-<title>BRES Clés V2.28 TEST R12</title>
++<title>BRES Clés V2.28 TEST R13</title>
+@@
+-<div class="app-version-badge">V2.28 TEST R12 • CATALOGUE SILCA MASSIF • STABLE NON REMPLACÉE</div>
+-<header><h1>BRES — Identification de clés</h1><p>V2.28 TEST R12 • application de test séparée + gabarit compact 0–50 mm + caméra guidée autofocus + OCR + catalogue Silca massif</p></header>
++<div class="app-version-badge">V2.28 TEST R13 • CATALOGUE SILCA MASSIF • STABLE NON REMPLACÉE</div>
++<header><h1>BRES — Identification de clés</h1><p>V2.28 TEST R13 • application de test séparée + gabarit compact 0–50 mm + caméra guidée autofocus + OCR + catalogue Silca massif</p></header>
+@@
+- <div class="cam-top">BRES : CAMÉRA GUIDÉE V2.28 TEST R12 — <span id="camSideLabel">Recto</span></div>
++ <div class="cam-top">BRES : CAMÉRA GUIDÉE V2.28 TEST R13 — <span id="camSideLabel">Recto</span></div>
+@@
+-  <div class="cam-version">V2.28 TEST R12</div>
++  <div class="cam-version">V2.28 TEST R13</div>
+@@
+-<div class="status ok"><b>V2.28 TEST R12 — version séparée de la version stable.</b>
++<div class="status ok"><b>V2.28 TEST R13 — version séparée de la version stable.</b>
+@@
+-<p class="small">La V2.28 TEST R12 croise la référence lue/saisie avec les équivalences disponibles, les étalons locaux et la recherche catalogue Silca massive.
++<p class="small">La V2.28 TEST R13 croise la référence lue/saisie avec les équivalences disponibles, les étalons locaux et la recherche catalogue Silca massive.
+@@
+-  el('analysis').className='status';el('analysis').textContent=`Photo ${camSide} capturée en V2.28 TEST R12. Prenez l’autre face puis lancez l’analyse.`;
++  el('analysis').className='status';el('analysis').textContent=`Photo ${camSide} capturée en V2.28 TEST R13. Prenez l’autre face puis lancez l’analyse.`;
+@@
+-</main><script src="v228-catalogue.js?v=228r12"></script></body></html>
++</main><script src="v228-catalogue.js?v=228r13"></script></body></html>
