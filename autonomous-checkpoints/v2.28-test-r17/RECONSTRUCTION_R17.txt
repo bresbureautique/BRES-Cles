@@ -1,0 +1,48 @@
+BRES CLÉS V2.28 TEST R17 — CHECKPOINT GITHUB VÉRIFIABLE
+Date : 2026-09-18
+
+Base et séparation
+- Parent test R16 : b64d25f690d589bb181b9659bf8cf1ae95329f19 sur v2.28-test-r1.
+- V2.27 stable : main doit rester sur 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8.
+- V2.28 TEST R17 reste exclusivement sur la branche de test et dans les sauvegardes dédiées.
+- Base catalogue auditée séparément de l’application.
+
+Jalon R17
+- Registre générique fabricant-qualifié couvrant JMA, Silca, Errebi, Keyline et Orion.
+- 8 règles documentées autour de RO4 / RO45 / RO85 ; cibles locales RO4 et RO85 vérifiées.
+- Les alias externes nus sont bloqués comme ambigus ; mauvais fabricant et fabricant inconnu ne produisent aucun rapprochement.
+- JMA RO-45 / Errebi R39 / Silca RO85 peuvent seulement suggérer Silca RO85 hors du groupe RO4/RO45, jamais VALIDÉ et jamais preferredRefs=RO45.
+- Les preuves RO4 restent positives et non-validantes ; absence de preuve ne sélectionne jamais RO45.
+- Calibration v5 et seuils photo inchangés.
+- Régressions historiques R6/R8/R9 adaptées aux marqueurs actifs R17 et rejouées sans affaiblir les garde-fous.
+
+Vérification finale
+- verify_build.py : ok=true, errors=[].
+- Catalogue : 5 103 références / 5 103 uniques.
+- 2 clusters de profil résiduels / 4 références : RO4/RO45 et VAC151/VAC151SM.
+- JavaScript, caméra guidée, ROI, consensus multi-captures, replay, intégrité, identité BK3-4/BK34, registre d’espaces de noms et garde-fous manuels : OK.
+- 112 fichiers hachés dans BUILD_MANIFEST.json.
+- Batterie consolidée : 10 PASS/SELFTEST OK.
+- Aucune photo brute dans les exports.
+- Archive décompressée puis verify_build.py rejoué : OK, 112 fichiers hachés, 5 103 références uniques.
+
+Archive Library
+- /BRES Cles/Sauvegardes/BRES_Cles_Mobile_V2_28_TEST_R17.zip
+- Taille : 887269 octets.
+- SHA-256 : 83869cd618f78d9719051662e852013e6b065c3ce2cac32d048999eee23f7bbb
+- Fichier SHA : BRES_Cles_Mobile_V2_28_TEST_R17.zip.sha256
+- Vérification : BRES_Cles_Mobile_V2_28_TEST_R17_VERIFICATION.txt
+- Manifest : BRES_Cles_Mobile_V2_28_TEST_R17_BUILD_MANIFEST.json
+- Catalogue séparé : BRES_Cles_Catalogue_Cross_Reference_Registry_R17.json et BRES_Cles_Catalogue_Namespace_Registry_Audit_R17.json
+
+Empreintes sources principales
+057fb940d30c05a8f1b07860b5cc94c3b3cfcd1f38d0cbefed4a4eadb3d06d3e  index.html
+adfc68faa2348aaa9bc2db2396b98c31119fe2e6a12d19f600278383081ce598  v228-catalogue.js
+a8dc02151995d1b1ebed8bb6b9e4f1b13b1b3e153194bb000d9229478bfb6cc6  verify_build.py
+a915533fd994a624fe2ac56c7408bf31c3a0dcddd8962633025c395f2d9f075d  catalogue_namespace_registry_test.py
+a096f805316f7036f178db6c5689a97e724d81db50df639c9b021936c80a710e  catalogue/evidence/cross_reference_registry_r17.json
+0291de2f635fcf96c336f2f3e83c4de49aa455d1ee80d7a19148eb8ec8cc4fea  catalogue/evidence/namespace_registry_audit_r17.json
+f18d837bef80ec8633ebb6f1aec13572198e9b8c3ba7217edefb20865c50cec4  ALL_TESTS_R17.txt
+
+Règle de sécurité
+Ne jamais fusionner ce checkpoint dans main tant que V2.28 n’a pas été explicitement promue en version stable après essais physiques réels.
