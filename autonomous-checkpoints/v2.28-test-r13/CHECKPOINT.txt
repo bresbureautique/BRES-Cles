@@ -1,0 +1,30 @@
+BRES CLÉS V2.28 TEST R13 — CHECKPOINT
+
+Objet du jalon
+- Ajouter une preuve documentaire positive et traçable pour RO4 sans inventer de règle RO45.
+- Conserver la base catalogue et l'application séparées.
+- Conserver V2.27 stable intacte sur main.
+
+Évolutions R13
+- Nouveau snapshot catalogue indépendant : catalogue/evidence/ronis_ro4_ro45_r13.json.
+- Alias RO4 multi-sources : JMA RO-7D/RO7D, Keyline RI10, Errebi R23R, Orion RN13.
+- Séries de codes RO4 bornées, issues de KeyTrader, classées comme indice source unique.
+- Preuve manuelle schema bres-manual-ambiguity-evidence-v2.
+- RO4 peut recevoir une préférence documentaire positive, canValidate=false.
+- RO45 n'est jamais choisi par exclusion ou absence d'indice.
+- VAC151/VAC151SM conserve le garde-fou R12.
+- Diagnostic dérivé : bres-profile-diagnostic-v8 ; calibration v4 conservée.
+
+Contrôles attendus
+- Catalogue : 5 103 références uniques.
+- Ambiguïtés profil résiduelles : exactement RO4/RO45 et VAC151/VAC151SM.
+- JavaScript valide.
+- Self-test R13 : alias/code RO4 positifs, bornes négatives, aucun preferredRefs=[RO45], canValidate=false.
+- Tous les self-tests antérieurs restent OK.
+- Aucune photo brute dans les exports.
+
+Limite connue
+Les seuils du profil photographié restent provisoires tant qu'une session physique Samsung avec une clé de référence certaine n'a pas été enregistrée.
+
+Sécurité versions
+V2.28 TEST R13 reste séparée. V2.27 stable ne doit pas être remplacée.
