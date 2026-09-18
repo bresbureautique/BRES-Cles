@@ -1,0 +1,57 @@
+BRES CLÉS V2.28 TEST R19 — CHECKPOINT GITHUB VÉRIFIABLE
+Date : 2026-09-18
+
+Base et séparation
+- Parent test R18 : 3ad3b05208c27563c03f55497e45b5c8285d0dd7 sur v2.28-test-r1.
+- V2.27 stable : main reste sur 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8.
+- V2.28 TEST R19 reste exclusivement sur la branche de test et dans les sauvegardes dédiées.
+- Base catalogue auditée et sauvegardée séparément de l’application.
+
+Jalon R19
+- Correction d’un faux appairage encore possible en R18 lorsqu’un même champ contenait plusieurs fabricants et plusieurs références.
+- Risque reproduit sur R18 : « JMA RO4 / SILCA RO-7D » et « JMA RO85 / SILCA RO45 » pouvaient créer de fausses correspondances en croisant fabricant et référence globalement.
+- R19 localise chaque fabricant et chaque référence, puis rattache la référence uniquement au fabricant le plus proche dans une fenêtre maximale de 32 caractères.
+- En cas d’égalité entre deux fabricants, aucune qualification n’est créée.
+- 4 cas de faux appairage croisé R18 sont désormais bloqués.
+- Les composites réellement qualifiés et convergents restent utilisables ; les composites RO4/RO85 contradictoires restent bloqués.
+- Aucune règle ne produit VALIDÉ ; aucune absence de preuve ne sélectionne RO45.
+- Calibration v5 et seuils photo inchangés.
+
+Vérification finale
+- verify_build.py : ok=true, errors=[].
+- Catalogue : 5 103 références / 5 103 uniques.
+- 2 clusters de profil résiduels / 4 références : RO4/RO45 et VAC151/VAC151SM.
+- Resolver fabricant/référence : 30 cas runtime, dont 4 régressions de faux croisement R18.
+- JavaScript, caméra guidée, ROI, consensus multi-captures, replay, intégrité, identité BK3-4/BK34, registre d’espaces de noms et garde-fous manuels : OK.
+- 137 fichiers hachés dans BUILD_MANIFEST.json.
+- Batterie consolidée : 10 exécutions PASS/SELFTEST OK.
+- Aucune photo brute dans les exports.
+- Archive application décompressée puis verify_build.py rejoué : OK, 137 fichiers hachés, 5 103 références uniques.
+- Snapshot catalogue décompressé et re-haché : OK, 27 fichiers contrôlés, 5 103 références uniques.
+
+Archives Library prévues
+- /BRES Cles/Sauvegardes/BRES_Cles_Mobile_V2_28_TEST_R19.zip
+- Taille application : 929238 octets.
+- SHA-256 application : 7dbbb02034dbdc0c4775dd27fabb5fa0f2029319a6ba82f8f37ad0f68ddfc564
+- /BRES Cles/Sauvegardes/BRES_Cles_Catalogue_Snapshot_R19.zip
+- Taille catalogue : 647925 octets.
+- SHA-256 catalogue : a7a5eeac328fbcd93530dced66d6151048a9881fe6966ab816b6ad4b432f8db0
+
+Règle de sécurité
+Ne jamais fusionner ce checkpoint dans main tant que V2.28 n’a pas été explicitement promue en version stable après essais physiques réels.
+
+Empreintes sources principales
+c32aca7f838c000fa9bc20da30b93080b336db85e15e94066bbc75173ce984b8  index.html
+7e518eaf6f55bc81adefecc1e5bf1a389514b050532bb43053fe019fd27d60f3  v228-catalogue.js
+c45477515aa8468e531c4bda215cab5d82aebcd3dffa44873b4fb859c1b7d9b5  verify_build.py
+f0fbb6a421b5fc5639186d364ac448eefff0fc95bac76b0e543124ba4f46a7e2  catalogue_namespace_registry_test.py
+9d6f22f0ab98c69f14b95cd7f391df65621d78e13f2605b21f8ff7c2515e4d3c  manual_ambiguity_resolution_test.py
+1d529a8b95e3a3796ee262bcc09d4f7ef023c02262fb8c27cf92c7fe76516cac  catalogue/evidence/cross_reference_registry_r19.json
+85f04f7bd6bc7e2c88a7b4255155cd049c2c5d69ec417402073f8a23b0fa35bf  catalogue/evidence/namespace_registry_audit_r19.json
+4417235d1dc5dc84fe34f10b3d0568898b2979cdbbeb5b7439e4164fb784d29b  ALL_TESTS_R19.txt
+
+Empreintes patches R18→R19
+f5006091216d6d42419878fce52b44e8859d31d5847891a4a2b7602e5f8e2ce6  R18_to_R19_index.patch
+df41632cecc32dec57b3ebd60c339639e29a3a1a0d7ae29348bb9e70baebf265  R18_to_R19_namespace_test.patch
+a4e63cc500e1fb8c63aa8fe3df83ecf176ccd035c4634fb8ce53ceec18e910ca  R18_to_R19_v228.patch
+b42002b9a5d280b520f980e60825693ac3d52c88d988de6f60795265308d0f4a  R18_to_R19_verify.patch
