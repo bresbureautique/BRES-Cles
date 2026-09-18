@@ -1,0 +1,33 @@
+{
+  "milestone": "V2.28 TEST R24",
+  "date": "2026-09-18",
+  "base": "V2.28 TEST R23",
+  "stable_main_sha": "9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8",
+  "application_verify": {
+    "ok": true,
+    "version": "V2.28 TEST R24",
+    "catalog_count": 5103,
+    "unique_refs": 5103,
+    "residual_profile_sets": [["RO4","RO45"],["VAC151","VAC151SM"]],
+    "token_gap_allowlist_guard_ok": true,
+    "weak_gap_ocr_tolerance_preserved": true,
+    "files_hashed": 227,
+    "errors": []
+  },
+  "catalogue_verify": {
+    "ok": true,
+    "version": "Catalogue Snapshot R24",
+    "catalog_count": 5103,
+    "unique_refs": 5103,
+    "qualified_rule_count": 8,
+    "runtime_audit_cases": 78,
+    "token_gap_allowlist_guard": true,
+    "weak_gap_ocr_tolerance_preserved": true,
+    "files_hashed": 51,
+    "errors": []
+  },
+  "archives": {
+    "BRES_Cles_Mobile_V2_28_TEST_R24.zip": {"sha256":"3f1dbd42d5ac411c27c8cf099406f5fa651112b260658a55c6cbc930248641cd","size_bytes":1127865},
+    "BRES_Cles_Catalogue_Snapshot_R24.zip": {"sha256":"1c81e30078f5227edc3d645125f0468b88bdc160790ece55259499ad0245a7fa","size_bytes":676911}
+  }
+}

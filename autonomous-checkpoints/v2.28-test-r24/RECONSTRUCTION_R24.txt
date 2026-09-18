@@ -1,0 +1,25 @@
+BRES CLÉS V2.28 TEST R24 — RECONSTRUCTION / VÉRIFICATION
+Date : 2026-09-18
+
+Base
+- V2.28 TEST R23 est la base logique du jalon.
+- Branche de test GitHub : v2.28-test-r1.
+- V2.27 stable reste exclusivement sur main, commit 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8.
+
+Objet R24
+- Bloquer le faux appairage OCR où les caractères d'un token pouvaient être recollés à travers une ponctuation ou un symbole arbitraire.
+- Cas désormais bloqués : JMA R(O)7D, R[O]7D, R_O_7D, R…O…7D, RΩO7D, R<ZWSP>O7D, RO÷7D, RO∥7D et variantes assimilées.
+- Tolérance conservée pour espaces horizontaux, point et variantes usuelles de tiret/moins : RO.7D, R O 7 D, RO–7D, RO—7D, RO−7D, NBSP et narrow-NBSP.
+- Aucun seuil photo/calibration Samsung modifié.
+- Les 10 chunks catalogue sont bit-à-bit identiques à R23.
+
+Vérifications
+- Application après décompression : ok=true, 5103 références uniques, 227 fichiers hachés, errors=[].
+- Catalogue après décompression : ok=true, 5103 références uniques, 78 cas runtime, 51 fichiers hachés, errors=[].
+- Ambiguïtés physiques volontairement non tranchées : RO4/RO45 et VAC151/VAC151SM.
+
+Sauvegardes binaires Library
+- BRES_Cles_Mobile_V2_28_TEST_R24.zip SHA-256 3f1dbd42d5ac411c27c8cf099406f5fa651112b260658a55c6cbc930248641cd
+- BRES_Cles_Catalogue_Snapshot_R24.zip SHA-256 1c81e30078f5227edc3d645125f0468b88bdc160790ece55259499ad0245a7fa
+
+Ce checkpoint GitHub conserve les hashes sources, les résultats de vérification après décompression, la continuité catalogue et les hashes des archives afin de vérifier les sauvegardes Library.
