@@ -1,0 +1,8 @@
+BRES CLÉS V2.28 TEST R11 — TEST AMBIGUÏTÉS DE PROFIL
+OK  2 sous-groupes de profil structurellement ambigus / 4 références
+OK  RONIS RO4/RO45 regroupés, RO4R et RO48R séparés
+OK  VACHETTE VAC151/VAC151SM reste un seul profil partagé
+OK  le moteur R11 score les signatures profil, pas les doublons de référence
+OK  un profil partagé ne devient jamais une décision de référence unique
+
+SELFTEST OK
