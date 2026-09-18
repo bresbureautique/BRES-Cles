@@ -1,0 +1,26 @@
+{
+  "schema": "bres-catalogue-evidence-v1",
+  "milestone": "V2.28 TEST R13",
+  "created_on": "2026-09-18",
+  "case": "RONIS RO4 / RO45 residual ambiguity",
+  "decision_policy": {
+    "positive_only": true,
+    "can_validate": false,
+    "absence_never_selects_ro45": true,
+    "note": "Only documented positive RO4 evidence can create a preference. No negative or missing evidence maps to RO45."
+  },
+  "ro4_cross_reference_aliases": [
+    {"canonical":"RO7D","display":"JMA RO-7D / RO7D","confidence":"multi-source","sources":["Nauta","EasyKeys"]},
+    {"canonical":"RI10","display":"Keyline RI10","confidence":"multi-source","sources":["Nauta","BASI"]},
+    {"canonical":"R23R","display":"Errebi R23R","confidence":"multi-source","sources":["Nauta","BASI"]},
+    {"canonical":"RN13","display":"Orion RN13","confidence":"multi-source","sources":["Nauta","EasyKeys"]}
+  ],
+  "ro4_key_code_series": ["D0001-D1000","F001-F200","GV001-GV300","PS01-PS30","S001-S106","T001-T106","T313-T380","TA001-TA224","A001A-A200A","A501A-A700A","C101-C600","101C-600C","001F-500F","1F01-1F21"],
+  "code_series_confidence": "single-source preference only",
+  "sources": [
+    {"name":"Nauta","url":"https://www.nauta.com/nl/7501000420-pcs-r23r-ro7d-ri10-ro4-l461","supports":["Silca RO4","Errebi R23R","JMA RO-7D","Keyline RI10","Orion RN13"]},
+    {"name":"EasyKeys","url":"https://easykeys.com/801_JMA_RO-7D_Key_Blank","supports":["JMA RO-7D","Silca RO4","Orion RN13","Ronis S001-S106","Hafele C101-C600"]},
+    {"name":"BASI","url":"https://shop.basi.eu/en/key-blank/item-1-1201900.html","supports":["RO-7D","Silca RO4","Errebi R23R","Keyline RI10"]},
+    {"name":"KeyTrader","url":"https://www.keytrader.co.uk/Cylinder-Keys/RONIS/RO4-Key-Blank.html","supports":["Silca RO4 code-series list","JMA RO7D","JMA RO-7D"]}
+  ]
+}
