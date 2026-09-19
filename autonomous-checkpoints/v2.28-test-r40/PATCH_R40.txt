@@ -1,0 +1,12 @@
+BRES CLÉS V2.28 TEST R40 — CORRECTIF
+
+Défaut reproduit en R39
+- interpretOCR savait bloquer les séparateurs forts, mais bestOCR nettoyait le texte Tesseract avant de le transmettre.
+- Dans le chemin réel, TE|8D ou TE“8D devenait TE 8D et pouvait être reconstruit en TE8D.
+
+Correctif R40
+- bestOCR conserve rawText exact en plus du texte nettoyé d’affichage.
+- Toute décision interpretOCR / interpretOCRViews reçoit rawText.
+- Les formes légitimes TE 8 D et TE-8D restent reconnues.
+- Les 10 morceaux catalogue restent inchangés.
+- V2.27 stable n’est pas modifiée.
