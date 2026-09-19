@@ -1,0 +1,15 @@
+BRES CLÉS — CHECKPOINT V2.28 TEST R35
+Date : 2026-09-19
+
+Jalon
+- Audit R34 : les textes OCR recto/verso étaient concaténés avant interprétation.
+- Défaut reproduit : « TE » sur une vue + « 8D » sur l'autre pouvait fabriquer « TE8D ».
+- R35 interprète chaque photo indépendamment puis fusionne seulement fabricants/candidats déjà valides.
+- Même protection appliquée à la recherche OCR sur photos rapprochées de tête.
+
+Séparation / sécurité
+- V2.27 reste stable et ne doit pas être remplacée.
+- V2.28 TEST R35 reste sur la branche de test.
+- Base catalogue contrôlée et empaquetée séparément.
+- Les 5 103 références et les 10 morceaux catalogue restent inchangés.
+- Anciennes versions et sauvegardes conservées.
