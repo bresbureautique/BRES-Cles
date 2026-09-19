@@ -1,0 +1,7 @@
+BRES CLÉS V2.28 TEST R43 — VÉRIFICATION ALLER-RETOUR LIBRARY
+
+OK  BRES_Cles_Mobile_V2_28_TEST_R43.zip rematérialisé depuis Library : bit-à-bit identique à l'original.
+SHA-256 : a24353f96d4302e7702cf97afa861297eda3d2f030c189f3a8cc0d457915832d
+
+OK  BRES_Cles_Catalogue_Snapshot_R43.zip rematérialisé depuis Library : bit-à-bit identique à l'original.
+SHA-256 : b856367f093bec5ff4afb6650d8172400c53a6ae38387d6695c53c07d7bf902c
