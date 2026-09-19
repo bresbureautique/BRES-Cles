@@ -1,0 +1,11 @@
+BRES Clés R49 — vérification aller-retour Library
+
+Application originale : 52abb5855c18bea06b1d91ba3840f5d5eba58d20ab08cbac89e92e7f8b427855
+Application rematérialisée : 52abb5855c18bea06b1d91ba3840f5d5eba58d20ab08cbac89e92e7f8b427855
+Résultat application : IDENTIQUE
+Vérification après réextraction : OK — 5103 références uniques, 17 suites, 788 fichiers contrôlés, errors=[]
+
+Catalogue original : ae501afd32347edb4eca47a96b0d68c3340a1f0340bfb6127366319fab6622d5
+Catalogue rematérialisé : ae501afd32347edb4eca47a96b0d68c3340a1f0340bfb6127366319fab6622d5
+Résultat catalogue : IDENTIQUE
+Vérification après réextraction : OK — 5103 références uniques, 3 suites, 258 fichiers contrôlés, errors=[]

@@ -1,0 +1,10 @@
+OK  JMA TE-8D / SILCA TE2R / ERREBI TS7 / KEYLINE TES5S reconnus dans leur espace
+OK  JMA FRANCE, JMA? et SILCA FRANCE conservent la garde de leur fabricant
+OK  JMA SILCA et JMA/SILCA sont détectés comme conflits et ne désactivent plus la garde
+OK  JMASTER ne déclenche pas à tort l’espace JMA (correspondance par token complet)
+OK  alias croisés fabricant/référence contradictoires sont bloqués
+OK  alias sans fabricant et marque de serrure TESA conservent le comportement prévu
+OK  référence canonique interne reste acceptée même avec un champ marque contradictoire
+OK  vérification manuelle et déclenchement automatique utilisent la marque saisie
+
+SELFTEST OK

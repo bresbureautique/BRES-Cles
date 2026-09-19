@@ -1,0 +1,8 @@
+BRES Cles - V2.28 TEST R49 - Release verification
+Application ZIP SHA-256: 52abb5855c18bea06b1d91ba3840f5d5eba58d20ab08cbac89e92e7f8b427855
+Application clean re-extract: OK | refs=5103 | tests=17 | files_hashed=788 | errors=[]
+Catalogue ZIP SHA-256: ae501afd32347edb4eca47a96b0d68c3340a1f0340bfb6127366319fab6622d5
+Catalogue clean re-extract: OK | refs=5103 | tests=3 | files_hashed=258 | errors=[]
+Catalogue data chunks: byte-identical to R48/R47/R40 baseline
+Fix: harden manual manufacturer namespace detection against decorated/conflicting maker strings while preserving canonical exact references.
+VERDICT: OK

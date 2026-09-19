@@ -1,0 +1,13 @@
+BRES CLÉS V2.28 TEST R49 — RÉSUMÉ DU CORRECTIF
+
+Défaut reproduit : en R48, manualAliasMakerHint reconnaissait uniquement une égalité exacte du champ marque. Les variantes réalistes « JMA FRANCE », « JMA? » ou « SILCA FRANCE » désactivaient donc la garde fabricant. Un champ contenant deux fabricants (« JMA SILCA », « JMA/SILCA ») désactivait lui aussi la qualification.
+
+Correction :
+- ajout d’une extraction par mots complets des espaces fabricants connus ;
+- conservation de la garde malgré qualificatifs et ponctuation ;
+- détection séparée des conflits multi-fabricants ;
+- refus d’une résolution d’alias lorsqu’un conflit est présent ;
+- conservation des références canoniques internes exactes ;
+- test de non-régression étendu pour les variantes enrichies, ponctuées, conflictuelles et les faux sous-mots.
+
+Test principal étendu : manual_reference_maker_guard_test.py.

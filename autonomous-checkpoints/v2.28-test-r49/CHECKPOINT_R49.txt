@@ -1,0 +1,20 @@
+BRES CLÉS — CHECKPOINT V2.28 TEST R49
+
+Objet : empêcher qu’un libellé de fabricant enrichi, ponctué ou contradictoire désactive la garde fabricant de la saisie manuelle.
+
+Défaut reproduit en R48 :
+- « JMA FRANCE » + « TE2R » pouvait être accepté comme TE8D alors que TE2R appartient à l’espace SILCA ;
+- « JMA? » avait le même défaut ;
+- « SILCA FRANCE » + « TE-8D » pouvait basculer dans l’espace JMA ;
+- « JMA SILCA » ou « JMA/SILCA » supprimait implicitement la qualification et rouvrait une recherche d’alias non contrainte.
+
+Correctif R49 :
+- reconnaissance des fabricants d’ébauches comme mots complets dans le champ marque ;
+- maintien de la garde avec des qualificatifs et de la ponctuation ;
+- détection explicite des conflits lorsque plusieurs espaces fabricants sont présents ;
+- blocage d’une résolution d’alias en cas de conflit ;
+- absence de faux positif par sous-chaîne (« JMASTER » n’est pas « JMA ») ;
+- conservation de l’acceptation d’une référence canonique interne exacte.
+
+Catalogue : 5 103 références, 10 morceaux de données inchangés.
+Sécurité : V2.27 reste stable sur main. R49 reste uniquement une version de test.

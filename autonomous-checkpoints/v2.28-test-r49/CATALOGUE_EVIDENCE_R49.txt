@@ -1,0 +1,6 @@
+BRES CLÉS V2.28 TEST R49 — PREUVE CATALOGUE
+
+Catalogue séparé : 5 103 références uniques dans 10 morceaux v3.
+Aucun morceau de données catalogue n’est modifié par R49.
+Les tests namespace fabricant/référence, garde RONIS et identité catalogue restent exécutés séparément.
+Le correctif R49 agit uniquement sur l’interprétation du champ marque lors de la résolution locale d’une référence manuelle ; il ne change ni les références ni les silhouettes catalogue.
