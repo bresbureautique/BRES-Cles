@@ -1,0 +1,6 @@
+BRES CLÉS V2.28 TEST R48 — RÉSUMÉ DU CORRECTIF
+
+Défaut reproduit : la saisie manuelle utilisait bien la référence saisie, mais ignorait la marque au moment de résoudre un alias. Ainsi « JMA » + « TE2R » pouvait être accepté comme TE8D alors que TE2R appartient à l’espace SILCA.
+
+Correction : qualification fabricant/alias appliquée aussi à la saisie manuelle, avec contrôle strict de la ponctuation avant compaction afin qu’un alias comme TE-8D ne contourne pas la garde fabricant en devenant TE8D.
+Test ajouté : manual_reference_maker_guard_test.py.
