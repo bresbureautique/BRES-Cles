@@ -1,0 +1,14 @@
+BRES CLÉS — CHECKPOINT V2.28 TEST R46
+
+Objet : empêcher une contradiction forte entre les deux vues OCR de choisir arbitrairement une référence.
+
+Correctif R46 :
+- chaque photo reste interprétée indépendamment ;
+- si deux vues fortes (similarité catalogue >= 92 %) convergent vers la même référence canonique, la référence reste exploitable ;
+- si elles convergent vers deux références canoniques différentes, la lecture est marquée en conflit et aucune référence n’est choisie automatiquement ;
+- l’interface affiche explicitement les références contradictoires ;
+- une ancienne référence remplie par OCR est effacée lorsqu’une nouvelle lecture est non fiable ou contradictoire ;
+- une saisie manuelle utilisateur reste prioritaire et n’est jamais effacée par ce garde-fou.
+
+Catalogue : 5 103 références, 10 morceaux de données inchangés.
+Sécurité : V2.27 reste stable sur main. R46 reste uniquement sur la branche de test.

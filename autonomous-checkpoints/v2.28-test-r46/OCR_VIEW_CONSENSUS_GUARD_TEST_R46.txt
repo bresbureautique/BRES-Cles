@@ -1,0 +1,9 @@
+BRES CLÉS V2.28 TEST R46 — CONSENSUS ENTRE VUES OCR
+
+OK  deux faces qui convergent vers la même référence restent acceptées
+OK  deux lectures fortes vers des références différentes restent non résolues
+OK  le conflit expose les deux références au lieu de choisir arbitrairement la première
+OK  une ancienne référence remplie par OCR est effacée si la nouvelle lecture est non fiable ou contradictoire
+OK  une saisie manuelle utilisateur reste prioritaire et n’est pas effacée
+
+SELFTEST OK

@@ -1,0 +1,5 @@
+R45 -> R46
+
+Défaut reproduit : R45 bloquait les fabricants contradictoires dans une même vue, mais interpretOCRViews comparait encore recto et verso uniquement par score. Deux lectures exactes différentes (ex. recto « JMA TE-8D », verso « RONIS RO4 ») obtenaient toutes deux 100 %, et la première était conservée silencieusement.
+
+Correction : R46 exige un consensus canonique entre vues fortes. Deux vues fortes vers des références différentes deviennent un conflit non résolu. Les deux vues vers la même référence via des alias différents restent acceptées. R46 efface aussi une ancienne valeur uniquement si elle provenait de l’OCR et que la nouvelle lecture n’est plus fiable ; une saisie manuelle n’est jamais effacée.

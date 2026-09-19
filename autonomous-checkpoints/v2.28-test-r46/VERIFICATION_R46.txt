@@ -1,0 +1,18 @@
+BRES CLÉS V2.28 TEST R46 — VÉRIFICATION FINALE APRÈS EXTRACTION
+
+Application : OK
+- version : V2.28 TEST R46
+- catalogue : 5103 références exactes / 5103 uniques
+- suites de tests : 15/15
+- fichiers hachés : 698
+- errors : []
+
+Catalogue séparé : OK
+- version : V2.28 TEST R46
+- catalogue : 5103 références exactes / 5103 uniques
+- suites de tests : 3/3
+- fichiers hachés : 230
+- errors : []
+
+Continuité catalogue : 10/10 morceaux bit-identiques à R45 dans application + snapshot.
+V2.27 stable : non modifiée par ce jalon.
