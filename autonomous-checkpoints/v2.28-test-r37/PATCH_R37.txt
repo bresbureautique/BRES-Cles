@@ -1,0 +1,8 @@
+BRES CLÉS V2.28 TEST R37 — PATCH
+
+1. recoverOCRCandidates : frontière Unicode étendue de [\p{L}\p{N}] à [\p{L}\p{N}\p{M}].
+2. interpretOCR / référence directe : mêmes frontières Unicode lettre/nombre/marque.
+3. interpretOCR / fabricant : mêmes frontières Unicode lettre/nombre/marque.
+4. Tests OCR : +6 cas négatifs de frontière référence et +3 cas négatifs fabricant avec marques combinantes / sélecteur de variation.
+5. Version active/cache-busting déplacés de R36 vers R37 ; V2.27 stable non touchée.
+6. Catalogue : 10 morceaux inchangés ; snapshot séparé à vérifier.
