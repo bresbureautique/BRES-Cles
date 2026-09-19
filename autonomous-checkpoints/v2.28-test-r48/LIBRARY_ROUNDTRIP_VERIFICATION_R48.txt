@@ -1,0 +1,10 @@
+BRES Cles - Library round-trip verification R48
+Application original SHA-256: b4f9eff8058bfe1e278fe1f1dfe763acb66dfd00b9170614c5a1cc65131cfe57
+Application Library SHA-256:  b4f9eff8058bfe1e278fe1f1dfe763acb66dfd00b9170614c5a1cc65131cfe57
+Application bit-identical: True
+Application re-extract verify: OK
+Catalogue original SHA-256: c1ecf02a72f942e338ecc5a7ff76dce8fb1d786e53dae9bdc069e7ae1a41a3f0
+Catalogue Library SHA-256:  c1ecf02a72f942e338ecc5a7ff76dce8fb1d786e53dae9bdc069e7ae1a41a3f0
+Catalogue bit-identical: True
+Catalogue re-extract verify: OK
+VERDICT: OK
