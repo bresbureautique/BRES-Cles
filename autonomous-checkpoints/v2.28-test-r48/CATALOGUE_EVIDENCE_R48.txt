@@ -1,0 +1,6 @@
+BRES CLÉS V2.28 TEST R48 — PREUVE CATALOGUE
+
+Catalogue séparé : 5 103 références uniques dans 10 morceaux v3.
+Aucun morceau de données catalogue n’est modifié par R48.
+Les tests namespace fabricant/référence, garde RONIS et identité catalogue restent exécutés séparément.
+Le correctif R48 agit seulement sur la résolution locale d’une référence manuelle lorsque la marque saisie correspond à un fabricant d’ébauche connu.
