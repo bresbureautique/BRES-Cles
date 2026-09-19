@@ -1,0 +1,6 @@
+BRES CLÉS V2.28 TEST R48 — EMPREINTES ZIP
+
+b4f9eff8058bfe1e278fe1f1dfe763acb66dfd00b9170614c5a1cc65131cfe57  BRES_Cles_Mobile_V2_28_TEST_R48.zip
+c1ecf02a72f942e338ecc5a7ff76dce8fb1d786e53dae9bdc069e7ae1a41a3f0  BRES_Cles_Catalogue_Snapshot_R48.zip
+
+Les deux ZIP ont été réextraits et vérifiés avant validation du jalon.
