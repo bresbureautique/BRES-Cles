@@ -1,0 +1,10 @@
+BRES CLÉS V2.28 TEST R48 — TEST GARDE FABRICANT/RÉFÉRENCE MANUELLE
+
+OK  JMA TE-8D / SILCA TE2R / ERREBI TS7 / KEYLINE TES5S reconnus dans leur espace
+OK  JMA TE2R et autres croisements fabricant/alias contradictoires sont bloqués
+OK  alias sans fabricant reste accepté
+OK  marque de serrure TESA ne restreint pas les alias fabricant
+OK  référence canonique interne reste acceptée quel que soit le fabricant saisi
+OK  vérification manuelle et déclenchement automatique utilisent la marque saisie
+
+SELFTEST OK
