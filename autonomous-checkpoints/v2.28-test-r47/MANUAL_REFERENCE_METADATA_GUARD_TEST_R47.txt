@@ -1,0 +1,9 @@
+BRES CLÉS V2.28 TEST R47 — GARDE MÉTADONNÉES / RÉFÉRENCE MANUELLE
+
+OK  références canoniques et alias fabricant restent reconnus
+OK  numéro de page catalogue ne peut plus devenir une référence
+OK  note descriptive ne peut plus devenir une référence
+OK  URL et visuel catalogue restent exclus de la normalisation manuelle
+OK  alias manuel exige au moins une lettre et un chiffre
+
+SELFTEST OK
