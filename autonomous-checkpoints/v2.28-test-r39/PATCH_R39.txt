@@ -1,0 +1,14 @@
+BRES CLÉS V2.28 TEST R39 — CORRECTIF
+
+Défaut reproduit en R38
+- JavaScript RegExp fournit m.index / lastIndex en unités UTF-16.
+- La reconstruction OCR locale lisait le voisin avec s[index-1] / s[lastIndex].
+- Pour un caractère Unicode hors BMP (lettre/chiffre représenté par une paire de substitution), cette lecture pouvait ne voir qu'une moitié de la paire et la prendre à tort pour une frontière.
+- Des chaînes comme 𝐀TE8D, TE8D𝐀, 𝟙TE8D, TE8D𝟙, 𐐀TE8D ou TE8D𐐀 pouvaient donc faire remonter TE8D.
+
+Correctif R39
+- Lecture du voisin précédent/suivant par point de code Unicode : [...s.slice(...)].
+- Même principe documenté dans la politique catalogue / namespace.
+- Ajout de cas négatifs astral/non-BMP autour des références et fabricants.
+- Les 10 morceaux catalogue restent inchangés.
+- V2.27 stable n'est pas modifiée.
