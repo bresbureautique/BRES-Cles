@@ -1,0 +1,7 @@
+BRES CLÉS V2.28 TEST R42 — CONTINUITÉ SOURCE CATALOGUE
+
+Le correctif R42 porte uniquement sur la sélection des régions OCR dans l’application.
+Les 10 morceaux catalogue v3 restent bit-identiques à R41, R40 et R39.
+Nombre attendu : 5 103 références exactes et 5 103 uniques.
+Aucune préférence automatique n’est ajoutée pour RO4/RO45 ni VAC151/VAC151SM.
+La vérification séparée du snapshot catalogue doit repasser namespace, garde RONIS et identité de référence avant validation du jalon.
