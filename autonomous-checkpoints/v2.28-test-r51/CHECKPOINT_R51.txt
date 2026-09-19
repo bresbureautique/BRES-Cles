@@ -1,0 +1,25 @@
+BRES CLÉS — CHECKPOINT V2.28 TEST R51
+
+Objet : empêcher une marque remplie automatiquement par un ancien OCR de rester dans le formulaire et de biaiser la clé suivante.
+
+Défaut reproduit en R50 :
+- un premier passage OCR pouvait remplir « JMA » dans le champ marque ;
+- un passage OCR suivant sans fabricant fiable effaçait éventuellement la référence OCR, mais ne vidait pas la marque OCR précédente ;
+- une saisie manuelle ultérieure comme « TE2R » pouvait alors être refusée à tort dans l’espace JMA alors que la marque JMA provenait seulement d’une ancienne photo.
+
+Correctif R51 :
+- ajout d’un nettoyage explicite de la marque lorsque sa source est OCR et que la lecture courante ne fournit plus de fabricant fiable ;
+- conservation stricte d’une marque saisie manuellement par l’utilisateur ;
+- préférence au fabricant d’ébauche unique lorsqu’une marque de serrure est lue en même temps ;
+- deux fabricants d’ébauches contradictoires ne laissent plus un premier choix arbitraire dans le champ marque ;
+- les deux parcours OCR utilisent la même synchronisation de marque.
+
+Catalogue : 5 103 références, 10 morceaux de données inchangés.
+Sécurité : V2.27 reste stable sur main. R51 reste uniquement une version de test.
+
+Vérifications application : 5 103 références uniques, 19 suites de tests, 858 fichiers contrôlés, errors=[].
+Vérifications catalogue séparé : 5 103 références uniques, 10/10 morceaux identiques à R40, errors=[].
+
+ZIP application SHA-256 : 74db6fdf69e02d711aa22e65f1fcb8a175249578ec39384ade51e79234521cc5
+ZIP catalogue SHA-256 : ffaa4155407850c7c33ed9737e789b6f3a3e566104a47898ebbf1a313ed76844
+Library roundtrip : les deux ZIP rematérialisés sont bit à bit identiques puis repassent leurs vérifications après extraction propre.
