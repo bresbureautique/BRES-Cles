@@ -1,0 +1,30 @@
+BRES Cles V2.28 TEST R35 - Verification finale du jalon
+
+Application V2.28 TEST R35:
+- verification source: OK
+- catalogue: 5103 references / 5103 uniques
+- 13 commandes de non-regression: 0 echec
+- isolation OCR entre vues recto/verso: OK
+- verification apres decompression du ZIP: OK
+- fichiers controles/haches: 445
+- errors=[]
+
+Catalogue Snapshot R35:
+- verification separee: OK
+- catalogue: 5103 references / 5103 uniques
+- audit namespace runtime: 143 cas
+- serie RONIS: 23 positifs + 42 negatifs
+- verification apres decompression du ZIP: OK
+- fichiers controles/haches: 145
+- errors=[]
+
+Continuite:
+- 10/10 morceaux catalogue identiques a R34 et identiques dans application/snapshot/ZIPs decompressed
+- seuils photographiques Samsung non modifies
+- ambiguite RO4/RO45 non forcee
+- ambiguite VAC151/VAC151SM non forcee
+- V2.27 stable conservee sur main au commit 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8
+
+ZIP SHA-256:
+a4b412c585bd6b47c2504b7e4f731a94c7d61875adebbc91e9b8f28654d86dc6  BRES_Cles_Mobile_V2_28_TEST_R35.zip
+77ae766d70d31be0afb26b43ea4a84ab3719d791f016918e12540cdf2826e9b0  BRES_Cles_Catalogue_Snapshot_R35.zip
