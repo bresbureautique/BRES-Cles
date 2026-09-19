@@ -1,0 +1,13 @@
+BRES CLÉS V2.28 TEST R48 — VÉRIFICATION APPLICATION
+
+Version: V2.28 TEST R48
+Références catalogue: 5103
+Morceaux catalogue: 10
+Suites de tests: 17/17 OK
+Fichiers contrôlés: 758
+Erreurs: 0
+Catalogue chunks identiques: True
+Garde saisie manuelle fabricant/alias: OK
+Verdict: OK
+
+Vérification effectuée après extraction propre du ZIP R48.
