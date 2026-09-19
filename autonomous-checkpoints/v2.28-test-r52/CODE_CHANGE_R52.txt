@@ -1,0 +1,14 @@
+BRES CLÉS V2.28 TEST R52 — CHANGEMENT DE CODE
+
+Défaut R51 reproduit :
+- une référence manuelle non vide pouvait rester visuellement intacte dans le parcours « photos de tête » mais une autre référence OCR pouvait tout de même alimenter la décision catalogue affichée ;
+- effacer complètement la référence ou la marque au clavier laissait la propriété du champ à la source « manual », ce qui pouvait bloquer une future mise à jour OCR.
+
+Correctif R52 :
+- garde de priorité manuelle placée dans searchFromHeadPhotos avant toute décision OCR ;
+- verifyManualReference(true) est appelé puis le flux retourne immédiatement ;
+- les listeners manualRef/manualBrand libèrent leur source lorsque le champ est vide ;
+- une saisie manuelle non vide reste prioritaire et protégée.
+
+Test dédié : manual_priority_state_guard_test.py — SELFTEST OK.
+Catalogue : données inchangées, 5 103 références, 10/10 morceaux identiques à R40.
