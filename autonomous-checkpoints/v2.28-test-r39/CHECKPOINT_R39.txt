@@ -1,0 +1,21 @@
+BRES CLÉS — CHECKPOINT V2.28 TEST R39
+Date : 2026-09-19
+
+Objet
+- Fermer un défaut de frontière Unicode hors BMP identifié après R38.
+- Les offsets RegExp JavaScript sont en unités UTF-16 ; le voisinage OCR doit être lu en points de code complets.
+
+Correctif application
+- Reconstruction locale OCR : lecture du caractère précédent/suivant par points de code Unicode complets.
+- Les lettres/nombres astrales (ex. 𝐀, 𝟙, 𐐀) ne peuvent plus fabriquer une frontière autour d’une référence ASCII.
+- Extraction directe, fabricant, isolation recto/verso, budgets de séparateurs et seuils Samsung inchangés.
+
+Catalogue
+- Données catalogue inchangées : 5 103 références exactes / 5 103 uniques.
+- Les 10 morceaux catalogue restent identiques à R38.
+- Le registre namespace est retesté séparément avec des caractères Unicode hors BMP.
+- RO4/RO45 et VAC151/VAC151SM restent volontairement non forcées.
+
+Sécurité
+- V2.27 reste la version stable sur main.
+- V2.28 TEST R39 reste une version de test séparée.
