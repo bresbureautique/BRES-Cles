@@ -1,0 +1,13 @@
+BRES CLÉS — CHECKPOINT V2.28 TEST R47
+
+Objet : empêcher les métadonnées du visuel pilote de devenir une fausse référence lors d’une saisie manuelle.
+
+Correctif R47 :
+- normalizeKnownRef exclut désormais URL, marque de serrure, page, visuel et note descriptive ;
+- un alias manuel doit contenir au moins une lettre et un chiffre ;
+- les références canoniques et vrais alias JMA/SILCA/ERREBI/KEYLINE restent reconnus ;
+- les entrées de métadonnées comme 211 ou SILCATE2R ne peuvent plus valider TE8D ;
+- un test de non-régression dédié couvre les métadonnées.
+
+Catalogue : 5 103 références, 10 morceaux de données inchangés.
+Sécurité : V2.27 reste stable sur main. R47 reste uniquement sur la branche de test.
