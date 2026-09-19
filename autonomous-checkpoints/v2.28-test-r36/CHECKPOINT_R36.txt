@@ -1,0 +1,17 @@
+BRES CLÉS — CHECKPOINT V2.28 TEST R36
+Date : 2026-09-19
+
+Jalon
+- Audit R35 : le nettoyage/reconstructeur OCR acceptait encore une référence ASCII accolée à une lettre ou un chiffre Unicode.
+- Défaut reproduit : « ΩTE8D », « TE8DЖ », « ÉTE-8D » et « １TE8D » pouvaient fabriquer le candidat TE8D.
+- R36 impose des frontières Unicode lettre/nombre au chemin direct et à la reconstruction locale.
+- 12 cas négatifs Unicode adjacents ajoutés ; les formes OCR légitimes restent reconnues.
+- La séparation recto/verso introduite en R35 est conservée.
+
+Séparation / sécurité
+- V2.27 reste stable et ne doit pas être remplacée.
+- V2.28 TEST R36 reste sur la branche de test.
+- Base catalogue contrôlée et empaquetée séparément.
+- Les 5 103 références et les 10 morceaux catalogue restent inchangés.
+- Seuils photographiques Samsung inchangés.
+- Anciennes versions et sauvegardes conservées.
