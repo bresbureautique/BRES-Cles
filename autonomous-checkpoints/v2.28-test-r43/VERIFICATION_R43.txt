@@ -1,0 +1,17 @@
+BRES CLÉS V2.28 TEST R43 — VÉRIFICATION APRÈS ARCHIVAGE
+
+Application : OK
+- 5 103 références uniques
+- 13 suites de tests réussies
+- 620 fichiers contrôlés
+- errors=[]
+
+Catalogue séparé : OK
+- 5 103 références uniques
+- 3 suites catalogue réussies
+- 206 fichiers contrôlés
+- 10 morceaux catalogue bit-identiques à R42/R40
+- errors=[]
+
+Les deux ZIP ont été décompressés dans un répertoire neuf puis leurs vérificateurs ont été relancés avec succès.
+V2.27 stable n'a pas été modifiée : main reste au commit 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8.
