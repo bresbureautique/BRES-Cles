@@ -1,0 +1,6 @@
+BRES CLÉS V2.28 TEST R44 — CONTINUITÉ SOURCE CATALOGUE
+
+Les 10 morceaux catalogue/v3/catalog-01.js ... catalog-10.js sont volontairement inchangés depuis R43/R42/R40.
+R44 modifie uniquement la logique OCR de l’application et le petit registre XREF embarqué.
+La base catalogue séparée reste à 5 103 références uniques.
+RO4/RO45 et VAC151/VAC151SM restent volontairement non forcées.

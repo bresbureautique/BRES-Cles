@@ -1,0 +1,14 @@
+BRES CLÉS — CHECKPOINT V2.28 TEST R44
+
+Objet : empêcher un fabricant OCR explicite de valider l’alias d’un autre fabricant.
+
+Correctif R44 :
+- les alias XREF sont étiquetés par fabricant (JMA, SILCA, ERREBI, KEYLINE, etc.) ;
+- lorsqu’un fabricant d’ébauche est réellement lu, seuls ses alias peuvent participer au rapprochement OCR ;
+- une référence sans fabricant reste exploitable si aucun fabricant d’ébauche n’est lisible ;
+- les métadonnées XREF (page, note, URL, visuel, destination) sont exclues du dictionnaire OCR ;
+- cas contradictoires bloqués : JMA TE2R, SILCA TE-8D, ERREBI TES5S, KEYLINE TS7 ;
+- cas valides conservés : JMA TE-8D, SILCA TE2R, ERREBI TS7, KEYLINE TES5S, TE2R seul.
+
+Catalogue : 5 103 références, 10 morceaux de données inchangés.
+Sécurité : V2.27 reste stable sur main. R44 reste uniquement sur la branche de test.

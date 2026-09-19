@@ -1,0 +1,5 @@
+R43 -> R44
+
+Défaut reproduit : interpretOCR rapprochait tous les alias XREF sans tenir compte du fabricant explicitement lu. Ainsi « JMA TE2R » pouvait être accepté comme TE8D avec une similarité 100 %, alors que TE2R est l’alias Silca enregistré dans la même fiche. Les champs descriptifs page/note n’étaient pas exclus par une liste de métadonnées complète.
+
+Correction : les alias sont étiquetés par fabricant, les fabricants d’ébauche effectivement présents dans le texte OCR restreignent les alias éligibles, et les métadonnées sont exclues du dictionnaire de références. Sans fabricant d’ébauche lisible, la recherche multi-alias reste inchangée.

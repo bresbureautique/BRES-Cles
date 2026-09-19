@@ -1,0 +1,20 @@
+BRES CLÉS V2.28 TEST R44 — VÉRIFICATION
+
+Application après extraction du ZIP : OK
+- version : V2.28 TEST R44
+- catalogue : 5 103 références uniques
+- tests actifs : 14/14 OK
+- garde fabricant/alias OCR : OK
+- fichiers contrôlés par empreinte : 645
+- erreurs : []
+
+Catalogue séparé après extraction du ZIP : OK
+- 5 103 références uniques
+- 3 suites catalogue : OK
+- fichiers contrôlés par empreinte : 214
+- erreurs : []
+- 10 morceaux catalogue inchangés
+
+SHA-256 ZIP :
+34f40479a44a79bbde97c11e47c5bf82fc456d45ab44f0bf1c741bf9c01348a2  BRES_Cles_Mobile_V2_28_TEST_R44.zip
+23292775a5100222d2b7c9648a28b89863dd8a1af830859b96f1d3330e438b3f  BRES_Cles_Catalogue_Snapshot_R44.zip

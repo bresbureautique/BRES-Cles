@@ -1,0 +1,2 @@
+23292775a5100222d2b7c9648a28b89863dd8a1af830859b96f1d3330e438b3f  /mnt/data/bres_r44_work/release/BRES_Cles_Catalogue_Snapshot_R44.zip
+34f40479a44a79bbde97c11e47c5bf82fc456d45ab44f0bf1c741bf9c01348a2  /mnt/data/bres_r44_work/release/BRES_Cles_Mobile_V2_28_TEST_R44.zip
