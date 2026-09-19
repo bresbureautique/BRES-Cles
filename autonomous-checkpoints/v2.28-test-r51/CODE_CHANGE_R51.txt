@@ -1,0 +1,18 @@
+BRES CLÉS V2.28 TEST R51 — MODIFICATION DE CODE EXACTE
+
+Fichier : index.html
+
+Ajouts :
+- clearOCRBrandIfCurrent() : efface manualBrand uniquement quand sa source est OCR.
+- resolvedOCRBrand(info) : choisit un fabricant OCR uniquement s’il est non ambigu ; un fabricant d’ébauche unique est préféré à une simple marque de serrure.
+- syncOCRBrand(info) : conserve toute marque saisie manuellement, sinon applique le fabricant OCR sûr ou efface la marque OCR périmée.
+
+Intégration :
+- runOCR() appelle désormais syncOCRBrand(info) après l’affichage des fabricants détectés.
+- searchFromHeadPhotos() applique exactement la même synchronisation.
+
+Effet vérifié :
+- JMA provenant d’une ancienne photo ne reste plus présent quand la nouvelle lecture ne détecte aucun fabricant ;
+- TE2R n’est donc plus refusé à tort dans l’espace JMA ;
+- une marque saisie manuellement reste prioritaire ;
+- un conflit JMA/SILCA ne laisse plus un premier choix arbitraire dans manualBrand.
