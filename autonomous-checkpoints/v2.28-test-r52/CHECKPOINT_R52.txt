@@ -1,0 +1,23 @@
+BRES CLÉS — CHECKPOINT V2.28 TEST R52
+
+Objet : rendre la priorité manuelle cohérente dans les deux parcours OCR et libérer correctement les champs vidés au clavier.
+
+Défauts reproduits en R51 :
+- dans la recherche par photos de tête, setOCRField protégeait bien la valeur manuelle mais le flux pouvait malgré tout afficher le catalogue et la décision finale d’une autre référence trouvée par OCR ; l’écran devenait contradictoire avec la saisie manuelle prioritaire ;
+- effacer manuellement tout le contenu du champ référence ou marque laissait sa source marquée « manual », ce qui pouvait empêcher l’OCR de remplir de nouveau le champ tant que le bouton d’effacement global n’était pas utilisé.
+
+Correctif R52 :
+- la recherche OCR par photos de tête détecte désormais immédiatement une référence manuelle non vide, la revérifie avec le catalogue/visuel puis sort avant toute décision OCR contradictoire ;
+- vider la référence au clavier remet manualRefSource à vide ;
+- vider la marque au clavier remet manualBrandSource à vide ;
+- une saisie manuelle non vide reste strictement prioritaire et protégée de tout écrasement OCR.
+
+Catalogue : 5 103 références, 10 morceaux de données inchangés.
+Sécurité : V2.27 reste stable sur main. R52 reste uniquement une version de test.
+
+Vérifications finales R52 :
+- application : 5 103 références uniques, 20/20 suites de tests réussies, 894 fichiers contrôlés après réextraction propre du ZIP, errors=[] ;
+- catalogue séparé : 5 103 références uniques, 10/10 morceaux identiques à R40, errors=[] ;
+- ZIP application SHA-256 : 1562093da8250e62188da3f14b1683ef373155e1419c40b6a3964d045c017b32 ;
+- ZIP catalogue SHA-256 : abc54480bf034492845cf1ad6f647e06c787479314240671b5d6c598f29b36b4 ;
+- Library roundtrip : les deux ZIP rematérialisés sont bit à bit identiques puis repassent leurs vérifications après extraction propre.
