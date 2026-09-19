@@ -1,0 +1,9 @@
+BRES CLÉS — CHECKPOINT V2.28 TEST R50
+
+Défaut corrigé : le wrapper de validation par étalon local pouvait contourner la garde fabricant de la saisie manuelle en recalculant une référence sans transmettre la marque. Exemple reproduit en R49 : JMA + TE2R pouvait finir validé comme TE8D si un étalon local TE8D très fort était présent.
+
+Correctif R50 : le wrapper d'étalon local transmet maintenant manualBrand à normalizeKnownRef. Le test d'intégration réel vérifie les cas JMA/SILCA, conflits multi-fabricants, alias valides et référence canonique exacte.
+
+Vérifications : application 5 103 références uniques, 18 suites de tests OK, 823 fichiers contrôlés, errors=[] ; catalogue séparé 5 103 références uniques, 10/10 morceaux identiques à R40, errors=[]. Les deux ZIP ont été décompressés dans des dossiers vierges et revérifiés avec succès.
+
+Sécurité : V2.27 reste stable sur main ; R50 reste uniquement sur la branche de test v2.28-test-r1.

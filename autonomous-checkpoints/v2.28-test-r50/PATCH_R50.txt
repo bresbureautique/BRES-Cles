@@ -1,0 +1,11 @@
+BRES CLÉS V2.28 TEST R50 — RÉSUMÉ DU CORRECTIF
+
+Défaut reproduit : en R49, le contrôle final d’un étalon local recalculait la référence manuelle sans transmettre la marque saisie. Une combinaison déjà refusée par la garde fabricant pouvait donc être réinterprétée puis validée par un étalon local fort.
+
+Correction :
+- transmission systématique du champ de marque au recalcul final ;
+- conservation du refus fabricant jusque dans la décision finale ;
+- non-régression des références canoniques exactes ;
+- test dynamique du chemin complet de décision locale.
+
+Test principal ajouté : local_template_maker_guard_test.py.

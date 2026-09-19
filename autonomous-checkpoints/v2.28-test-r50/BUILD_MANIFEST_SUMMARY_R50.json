@@ -1,0 +1,24 @@
+{
+  "milestone": "V2.28 TEST R50",
+  "app": {
+    "ok": true,
+    "catalog_count": 5103,
+    "unique_refs": 5103,
+    "test_suites": 18,
+    "files_hashed": 823,
+    "errors": []
+  },
+  "catalogue": {
+    "ok": true,
+    "catalog_count": 5103,
+    "unique_refs": 5103,
+    "chunks_identical_to_r40": true,
+    "errors": []
+  },
+  "zip_sha256": {
+    "app": "c455d82e3adecd5badec66bb64ac2de19999288b750fd6ace64a4254282d6b5b",
+    "catalogue": "bcd3f19e1b32b4f48c7c8ac1016a0d6a662dd2f019c27f31e01391540ea4d0c3"
+  },
+  "stable_main_expected": "9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8",
+  "parent_test_commit": "13111999c09df5941c8da1309c132ba181207dd1"
+}
