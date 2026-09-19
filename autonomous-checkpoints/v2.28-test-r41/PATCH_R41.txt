@@ -1,0 +1,14 @@
+BRES CLÉS V2.28 TEST R41 — CORRECTIF
+
+Défaut reproduit en R40
+- bestOCR conservait rawText après Tesseract, mais imposait encore une whitelist A-Z/0-9/- au moteur OCR.
+- Avec Tesseract 5.5.0, une image synthétique TE|8D est lue TE|8D sans whitelist mais TE8D avec l’ancienne whitelist.
+- Un séparateur fort pouvait donc disparaître avant même la création de rawText et contourner la protection R40.
+
+Correctif R41
+- Suppression de tessedit_char_whitelist dans bestOCR.
+- Le texte moteur non contraint reste conservé dans rawText jusqu’à interpretOCR / interpretOCRViews.
+- Le nettoyage reste réservé à l’affichage et au score.
+- Test de régression du chemin réel : contrôle source, cas forts/faibles et sonde Tesseract optionnelle.
+- Les 10 morceaux catalogue restent inchangés.
+- V2.27 stable n’est pas modifiée.
