@@ -1,0 +1,6 @@
+BRES CLÉS V2.28 TEST R47 — RÉSUMÉ DU CORRECTIF
+
+Défaut reproduit : normalizeKnownRef parcourait aussi les champs page/note du XREF. Une saisie manuelle « 211 » ou « SILCATE2R » pouvait donc être interprétée à tort comme TE8D.
+
+Correction : filtre de métadonnées aligné sur le parseur OCR + validation stricte des alias manuels (lettre + chiffre).
+Test ajouté : manual_reference_metadata_guard_test.py.
