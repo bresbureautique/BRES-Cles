@@ -1,0 +1,23 @@
+BRES CLÉS V2.28 TEST R47 — VÉRIFICATION APRÈS DÉCOMPRESSION
+
+APPLICATION:
+- version: V2.28 TEST R47
+- ok: True
+- catalogue: 5103 références / 5103 uniques
+- suites: 16
+- fichiers contrôlés: 726
+- erreurs: []
+
+CATALOGUE SÉPARÉ:
+- version: V2.28 TEST R47
+- ok: True
+- catalogue: 5103 références / 5103 uniques
+- suites: 3
+- fichiers contrôlés: 238
+- erreurs: []
+
+ZIP SHA-256:
+- 1c9913e23763ffe846fa037881ea4b7aad3260ee162c6a8a692371db47713ca4  BRES_Cles_Catalogue_Snapshot_R47.zip  (864449 octets)
+- 1d6fc41ed52acc03d957b9dedae5452bf1235250759882f94ee3880b510cf930  BRES_Cles_Mobile_V2_28_TEST_R47.zip  (1908074 octets)
+
+JALON R47 VÉRIFIÉ
