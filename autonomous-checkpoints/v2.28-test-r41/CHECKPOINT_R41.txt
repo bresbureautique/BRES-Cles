@@ -1,0 +1,25 @@
+BRES CLÉS — CHECKPOINT V2.28 TEST R41
+Date : 2026-09-19
+
+Objet
+- Fermer un défaut réel restant dans le chemin OCR après R40 : la liste blanche Tesseract pouvait supprimer un séparateur fort avant la création de rawText.
+
+Défaut reproduit
+- Image synthétique « TE|8D » avec Tesseract 5.5.0 : lecture sans whitelist = TE|8D ; ancienne whitelist A-Z/0-9/- = TE8D.
+- Le garde R40 sur rawText ne pouvait donc pas bloquer un séparateur déjà supprimé par le moteur.
+
+Correctif application
+- Suppression de tessedit_char_whitelist dans bestOCR.
+- Conservation du texte brut Tesseract jusqu’à interpretOCR inchangée.
+- Les garde-fous de reconstruction locale, frontières Unicode et isolation recto/verso restent actifs.
+- Nouveau test de régression du chemin OCR réel avec contrôle source + sonde moteur optionnelle.
+
+Catalogue
+- 5 103 références exactes et uniques attendues.
+- Les 10 morceaux catalogue restent bit-identiques à R40/R39.
+- Registre namespace, garde RONIS et identité de référence retestés séparément.
+- RO4/RO45 et VAC151/VAC151SM restent volontairement non forcées.
+
+Sécurité
+- V2.27 reste la version stable sur main.
+- V2.28 TEST R41 reste une version de test séparée.
