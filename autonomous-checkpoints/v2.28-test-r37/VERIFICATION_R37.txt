@@ -1,0 +1,28 @@
+BRES CLÉS V2.28 TEST R37 — VÉRIFICATION DU JALON
+Date : 2026-09-19
+
+Application extraite du ZIP
+- ok=true
+- version=V2.28 TEST R37
+- catalogue=5103 références / 5103 uniques
+- fichiers_haches=489
+- errors=[]
+- test OCR R37 : 18 cas négatifs frontière référence Unicode, 16 cas négatifs fabricant/sous-chaîne, aucune erreur
+
+Catalogue extrait du ZIP
+- ok=true
+- version=Catalogue Snapshot R37
+- catalogue=5103 références / 5103 uniques
+- runtime_namespace_cases=143
+- RONIS=23 positifs + 42 négatifs
+- fichiers_haches=161
+- errors=[]
+
+Continuité
+- 10/10 morceaux catalogue identiques à R36.
+- RO4/RO45 et VAC151/VAC151SM restent non forcées.
+- V2.27 stable non modifiée.
+
+ZIP SHA-256
+d9342a3ec6660593d1e1ab3a8fb1bc3e2b2f9dfbf89dcb8ee61752cb9d8ab7ef  BRES_Cles_Mobile_V2_28_TEST_R37.zip
+c484363e50d82a337e3d32e7a1f4c42eef98d44538d645ef91051ad8cbd0fd3d  BRES_Cles_Catalogue_Snapshot_R37.zip
