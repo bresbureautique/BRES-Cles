@@ -1,0 +1,159 @@
+===== CHECKPOINT_R56.txt =====
+BRES CLÉS — CHECKPOINT V2.28 TEST R56
+
+Objet : empêcher les sorties asynchrones intermédiaires d’un ancien cycle d’identification de réécrire l’interface après une nouvelle photo ou une nouvelle saisie.
+
+Défauts reproduits en R55 :
+- le logger de progression Tesseract écrivait directement dans ocrStatus sans vérifier l’époque d’identification ; après remplacement d’une photo, l’ancienne tâche pouvait donc réafficher « Lecture … » sur le nouvel état ;
+- les blocs catch de l’analyse géométrique, de l’OCR principal et de l’OCR tête pouvaient publier une erreur provenant d’une tâche devenue obsolète ;
+- le chargement asynchrone de l’aperçu d’une photo de tête pouvait finir après une sélection plus récente et dessiner l’ancienne image ;
+- l’OCR des photos de tête utilisait le panneau de progression OCR principal au lieu de son panneau dédié.
+
+Correctif R56 :
+- bestOCR reçoit l’époque attendue et l’identifiant du panneau de statut ; toutes les progressions Tesseract passent par une publication protégée par l’époque ;
+- une passe OCR devenue obsolète s’arrête dès le retour de Tesseract au lieu de continuer les orientations suivantes ;
+- les erreurs asynchrones obsolètes sont ignorées dans analyse, OCR principal et OCR tête ;
+- les aperçus de tête sont liés à l’époque de la sélection et ne peuvent plus écraser une sélection plus récente ;
+- l’OCR tête publie sa progression dans headSearchStatus ;
+- un test dédié verrouille ces comportements.
+
+Catalogue : 5 103 références uniques ; les 10 morceaux de données catalogue restent strictement inchangés par rapport à R40/R55.
+Sécurité : V2.27 reste stable sur main. R56 reste uniquement une version de test sur la branche v2.28-test-r1.
+
+===== CODE_CHANGE_R56.txt =====
+BRES CLÉS V2.28 TEST R56 — RÉSUMÉ DU CORRECTIF
+
+- bestOCR(canvas,label,expectedEpoch,statusId) protège désormais toute progression Tesseract contre les résultats obsolètes.
+- les passes OCR s’arrêtent après un await si l’époque a changé.
+- runOCR(), searchFromHeadPhotos() et le gestionnaire d’analyse ignorent les erreurs arrivées d’un ancien cycle.
+- drawPreviewFromFile() vérifie l’époque avant de publier un aperçu de tête.
+- les lectures de tête utilisent headSearchStatus au lieu de polluer ocrStatus.
+- version/cache-busting actifs passés à R56.
+- catalogue de données inchangé.
+
+===== DEFECT_REPRO_R55_TO_R56.txt =====
+BRES CLÉS V2.28 TEST R56 — REPRODUCTION DU DÉFAUT R55
+
+Le code R55 protégeait le résultat final des fonctions asynchrones, mais pas toutes leurs sorties intermédiaires.
+Le logger Tesseract continuait à écrire directement dans ocrStatus pendant une ancienne reconnaissance ; les catch pouvaient aussi publier une erreur après changement d’époque ; et un aperçu de tête chargé lentement pouvait être dessiné après une sélection plus récente.
+
+La sonde R55 dédiée échoue sur 6 points : absence d’époque dans bestOCR, logger non protégé, 3 catch non protégés et aperçu tête non protégé.
+R56 ferme ces six fenêtres de course et les verrouille par async_ui_publication_guard_test.py.
+
+===== R55_DEFECT_PROBE_R56.txt =====
+R55 async publication probe
+FAIL: bestOCR does not receive an epoch token
+FAIL: Tesseract progress logger writes ocrStatus without an epoch guard
+FAIL: runOCR catch can publish an obsolete error after input epoch changes
+FAIL: head OCR catch can publish an obsolete error after input epoch changes
+FAIL: geometry catch can publish an obsolete error after input epoch changes
+FAIL: head preview loader can draw an older selected image after a newer change
+FAILURES 6
+
+Exit code attendu sur R55: 1 (non-zéro = défaut reproduit)
+
+===== ASYNC_UI_PUBLICATION_GUARD_TEST_R56.txt =====
+BRES CLÉS V2.28 TEST R56 — PUBLICATION UI ASYNCHRONE
+
+OK  progression Tesseract ne peut plus réécrire un statut après changement d’entrée
+OK  erreurs OCR principal/tête obsolètes sont ignorées
+OK  erreur géométrique obsolète est ignorée
+OK  aperçu de tête ancien ne peut plus écraser une sélection plus récente
+OK  OCR tête publie sa progression dans son propre panneau
+
+SELFTEST OK
+
+===== TEST_SUMMARY_R56.txt =====
+BRES CLÉS V2.28 TEST R56 — RÉSUMÉ DE VÉRIFICATION
+
+Application : OK
+- version : V2.28 TEST R56
+- catalogue : 5 103 références / 5 103 uniques
+- suites de tests : 25/25 réussies
+- fichiers contrôlés par verify_build.py : 1 065
+- erreurs : []
+- garde des publications UI asynchrones : OK
+- garde d’époque globale : OK
+- invalidation géométrique après changement photo : OK
+- ZIP extrait dans dossier vierge puis verify_build.py : OK
+
+Catalogue séparé : OK
+- version : V2.28 TEST R56 catalogue snapshot
+- catalogue : 5 103 références / 5 103 uniques
+- 10 morceaux catalogue identiques à R40/R55 : OUI
+- fichiers contrôlés par verify_snapshot.py : 24
+- erreurs : []
+- ZIP extrait dans dossier vierge puis verify_snapshot.py : OK
+
+Continuité :
+- données catalogue non modifiées
+- V2.27 doit rester stable sur main
+
+===== CATALOGUE_SOURCE_CONTINUITY_R56.txt =====
+BRES CLÉS V2.28 TEST R56 — CONTINUITÉ SOURCE CATALOGUE
+
+OK  catalog-01.js  e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b
+OK  catalog-02.js  955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75
+OK  catalog-03.js  9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210
+OK  catalog-04.js  14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942
+OK  catalog-05.js  5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b
+OK  catalog-06.js  b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac
+OK  catalog-07.js  b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1
+OK  catalog-08.js  3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814
+OK  catalog-09.js  4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f
+OK  catalog-10.js  f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4
+
+10/10 morceaux identiques à R55/R40 : OUI
+Références attendues : 5 103 uniques.
+Aucune donnée catalogue modifiée par R56.
+
+===== RELEASE_SHA256_R56.txt =====
+681d59506b15e0190d60d13780978cb192e6aea0346bc29b6e26311ed0c4dd79  BRES_Cles_Catalogue_Snapshot_R56.zip
+90a930e97af322f3231077a7e3ce1c00060a730cbbd32b067f93f6c88bc6567d  BRES_Cles_Mobile_V2_28_TEST_R56.zip
+
+===== LIBRARY_ROUNDTRIP_VERIFICATION_R56.txt =====
+BRES CLÉS V2.28 TEST R56 — VÉRIFICATION ALLER-RETOUR LIBRARY
+
+Dossier : /BRES Cles/Sauvegardes
+
+Application ZIP :
+- SHA-256 original : 90a930e97af322f3231077a7e3ce1c00060a730cbbd32b067f93f6c88bc6567d
+- SHA-256 rematérialisé : 90a930e97af322f3231077a7e3ce1c00060a730cbbd32b067f93f6c88bc6567d
+- identité binaire : OK
+- extraction + verify_build.py : OK (5103 références, 1065 fichiers contrôlés, errors=[])
+
+Catalogue ZIP :
+- SHA-256 original : 681d59506b15e0190d60d13780978cb192e6aea0346bc29b6e26311ed0c4dd79
+- SHA-256 rematérialisé : 681d59506b15e0190d60d13780978cb192e6aea0346bc29b6e26311ed0c4dd79
+- identité binaire : OK
+- extraction + verify_snapshot.py : OK (5103 références, 24 fichiers contrôlés, errors=[])
+
+Verdict : les deux sauvegardes Library sont bit-identiques aux ZIP de release et restent vérifiables après rematérialisation.
+
+===== SOURCE_HASHES_R56.txt =====
+BRES CLÉS V2.28 TEST R56 — SHA-256 DES SOURCES ACTIVES
+
+6aacbe5e9fa9560a19e99bf20cadc9040e834772c0dfdb9fa4cd21f7ff9b0d10  index.html
+7a3a650755053a97325907e37f8711cbfb98493edbe4fe5e215abe72338cdb05  v228-catalogue.js
+a06a10b2213bcb7cafb089ae2545247f2dd421a48f3408b102125cf5b061d9ce  verify_build.py
+1a2aa03fb0674cb189cb93d022454cea1bdd8237bb2430ad0d6fe70cd16054d8  CHECKPOINT.txt
+1a2aa03fb0674cb189cb93d022454cea1bdd8237bb2430ad0d6fe70cd16054d8  CHECKPOINT_R56.txt
+18d12388731097f1e547f91eb3ac71175783ed29109e426ae4b951bb746d6cff  PATCH_R56.txt
+18c34cd3c488f3bd66d22c5b8bab06bbc7b895ac437761ea272907ed90c9d849  CODE_CHANGE_R56.txt
+ba81f4a50570cb2950e25a1eb2c95feadba0b9a01ae472b9f382c6f9ee4efeb4  DEFECT_REPRO_R55_TO_R56.txt
+a0e0b2a18967e9feea0e61e5b93cd131a0dd92b88313e8245af2050b144799be  async_state_epoch_guard_test.py
+8354218689b5c42d3fbbd30b25c94df9a7cd7e9ce20a685f11db3558ca3bfdd8  async_ui_publication_guard_test.py
+c41e9c30500986d3cc1c2de5edcac7bafd481ace9efb591686fd8c22965e85bc  main_photo_geometry_invalidation_test.py
+0d82346d0f503af1fc9aa2325e68ba5f286b64c4c857af5d812afc64a9df2d20  ocr_best_selection_test.py
+1628dcdcfdcfa3dbf11b7551e1afc06fecc74671a5e656104576a40a3370d2e9  version_consistency_test.py
+0973df0d57baf95eae2c31192d5b0b1592f059149e51c5e6dc9813ccec7d38b0  catalogue/evidence/cross_reference_registry_r56.json
+e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b  catalogue/v3/catalog-01.js
+955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75  catalogue/v3/catalog-02.js
+9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210  catalogue/v3/catalog-03.js
+14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942  catalogue/v3/catalog-04.js
+5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b  catalogue/v3/catalog-05.js
+b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac  catalogue/v3/catalog-06.js
+b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1  catalogue/v3/catalog-07.js
+3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814  catalogue/v3/catalog-08.js
+4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f  catalogue/v3/catalog-09.js
+f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4  catalogue/v3/catalog-10.js
