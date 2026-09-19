@@ -1,0 +1,24 @@
+BRES Cles V2.28 TEST R35 - Resume du correctif
+
+Defaut corrige:
+- R34 pouvait assembler des fragments OCR provenant de deux photos physiques distinctes.
+- Exemple bloque en R35: recto="TE" + verso="8D" ne doit jamais fabriquer TE8D.
+
+Correction:
+- ajout de interpretOCRViews(rawViews), qui interprete chaque vue independamment;
+- union des fabricants/candidats uniquement apres interpretation de chaque vue;
+- choix du meilleur candidat parmi les vues, sans reconstruction a cheval sur recto/verso;
+- meme isolation appliquee au flux principal et aux photos de tete;
+- test de regression dedie pour TE/8D et T E/8 D repartis sur deux vues;
+- une reference complete espacee sur une seule vue reste reconnue;
+- le fabricant detecte sur une vue peut toujours qualifier un candidat deja valide sur l'autre vue.
+
+Catalogue:
+- donnees de reference inchangees: 5103 references uniques;
+- 10/10 morceaux catalogue identiques a R34;
+- seuls les wrappers/metadonnees/tests de jalon passent a R35.
+
+Invariants:
+- V2.27 stable non modifiee;
+- seuils photo Samsung non modifies;
+- RO4/RO45 et VAC151/VAC151SM restent non forces.
