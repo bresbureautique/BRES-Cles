@@ -1,0 +1,18 @@
+BRES CLÉS — CHECKPOINT V2.28 TEST R54
+
+Objet : empêcher qu’une décision OCR/catalogue issue d’une ancienne photo rapprochée de la tête reste visible après remplacement de cette photo.
+
+Défaut reproduit en R53 :
+- après une lecture réussie des photos de tête, remplacer tête recto ou tête verso ne remettait pas immédiatement à zéro le résultat ;
+- l’ancienne référence remplie par OCR, le visuel catalogue, les équivalences et la décision finale pouvaient rester affichés jusqu’à la lecture suivante ;
+- cela pouvait donner l’impression qu’une nouvelle photo avait déjà confirmé l’ancienne référence alors qu’elle n’avait pas encore été relue.
+
+Correctif R54 :
+- tout changement de photo de tête invalide immédiatement les résultats OCR/catalogue précédents ;
+- les champs référence/marque remplis uniquement par OCR sont effacés ;
+- une saisie manuelle explicite n’est pas effacée mais reste à revérifier ;
+- l’invalidation intervient avant le redessin asynchrone de l’aperçu ;
+- un test dédié HEAD_PHOTO_STATE_INVALIDATION_TEST_R54 verrouille cette non-régression.
+
+Catalogue : 5 103 références uniques ; les 10 morceaux de données catalogue restent strictement inchangés par rapport à R40/R53.
+Sécurité : V2.27 reste stable sur main. R54 reste uniquement une version de test sur la branche v2.28-test-r1.
