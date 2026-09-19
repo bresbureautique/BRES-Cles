@@ -1,0 +1,9 @@
+BRES CLÉS V2.28 TEST R43 — CONTINUITÉ SOURCE CATALOGUE
+
+OK  catalogue séparé de l'application
+OK  5 103 références uniques attendues
+OK  10 morceaux catalogue v3 inchangés depuis R42/R40
+OK  aucune modification de données catalogue dans R43
+OK  RO4/RO45 et VAC151/VAC151SM restent non forcées
+
+R43 ne modifie que la sélection OCR de l'application. Les données catalogue restent bit-identiques au jalon précédent.
