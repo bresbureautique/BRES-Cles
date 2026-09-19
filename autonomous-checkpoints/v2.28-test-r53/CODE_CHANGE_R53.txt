@@ -1,0 +1,11 @@
+BRES CLÉS V2.28 TEST R53 — MODIFICATION CODE
+
+Fichier actif : index.html
+- ajout clearCatalogVisual(), resetXref(), invalidateIdentificationOutputs(), invalidatePhotoDerivedIdentification() ;
+- photoRefresh() invalide la décision précédente et retire les champs provenant uniquement de l’OCR ;
+- modification référence/marque manuelle invalide l’ancien résultat avant revérification ;
+- échec de vérification manuelle efface décision/visuel/équivalences précédents ;
+- branches OCR faible, géométrique, conflit, aucune décision et photos de tête non fiables ne conservent plus de preuve catalogue obsolète.
+
+Fichier actif : v228-catalogue.js
+- uniquement étiquette/cache de version R53 ; aucune donnée catalogue modifiée.

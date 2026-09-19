@@ -1,0 +1,13 @@
+BRES CLÉS V2.28 TEST R53 — VÉRIFICATION ALLER-RETOUR LIBRARY
+
+Application ZIP originale : bbb5148bd80674c2c10e1c97648bd9c61b354a19e6983249a6f9802c853b9e51
+Application ZIP Library  : bbb5148bd80674c2c10e1c97648bd9c61b354a19e6983249a6f9802c853b9e51
+Identiques bit à bit      : OUI
+Vérification après réextraction Library : OK
+
+Catalogue ZIP original : 70d0e9551bf5f0bd3f4a97715400bf4089b0525bcf1bef3bfcf29cf2356b511e
+Catalogue ZIP Library  : 70d0e9551bf5f0bd3f4a97715400bf4089b0525bcf1bef3bfcf29cf2356b511e
+Identiques bit à bit    : OUI
+Vérification après réextraction Library : OK
+
+Catalogue : 5103 références, 5103 uniques, 10 morceaux inchangés.

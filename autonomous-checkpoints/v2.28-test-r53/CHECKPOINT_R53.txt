@@ -1,0 +1,17 @@
+BRES CLÉS — CHECKPOINT V2.28 TEST R53
+
+Objet : empêcher tout résultat d’une clé ou d’une saisie précédente de rester affiché après modification des photos, de la référence ou de la marque.
+
+Défaut reproduit en R52 :
+- remplacer une photo principale remettait bien la géométrie à zéro, mais pouvait laisser visibles une ancienne référence OCR, une décision VALIDÉ, un visuel catalogue et des équivalences provenant de la clé précédente ;
+- effacer ou modifier la référence/marque manuelle pouvait laisser la décision précédente affichée pendant ou après une saisie devenue invalide ;
+- une lecture OCR insuffisante ou contradictoire pouvait laisser un ancien visuel catalogue ou d’anciennes équivalences à l’écran.
+
+Correctif R53 :
+- changement des photos principales = invalidation immédiate de toute décision précédente et effacement des valeurs uniquement dérivées de l’OCR ;
+- une saisie manuelle explicite est conservée mais marquée à revérifier avec les nouvelles photos ;
+- toute modification de référence ou de marque invalide immédiatement les panneaux résultat/catalogue/décision/équivalences puis relance la vérification automatique si possible ;
+- une référence manuelle invalide, un OCR insuffisant ou un conflit de photos de tête effacent désormais les preuves catalogue obsolètes.
+
+Catalogue : 5 103 références ; les 10 morceaux de données restent inchangés par rapport à R40/R52.
+Sécurité : V2.27 reste stable sur main. R53 reste uniquement une version de test sur la branche v2.28-test-r1.
