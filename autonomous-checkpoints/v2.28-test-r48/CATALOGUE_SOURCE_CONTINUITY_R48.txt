@@ -1,0 +1,4 @@
+BRES CLÉS V2.28 TEST R48 — CONTINUITÉ SOURCE CATALOGUE
+
+Les 10 morceaux catalogue/v3/catalog-01.js à catalog-10.js sont conservés bit à bit par rapport à R47/R40.
+R48 ne modifie aucune donnée catalogue. Le changement concerne uniquement la qualification fabricant/alias de la saisie manuelle dans l’application.
