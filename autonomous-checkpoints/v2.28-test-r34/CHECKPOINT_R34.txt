@@ -1,0 +1,15 @@
+BRES CLÉS — CHECKPOINT V2.28 TEST R34
+Date : 2026-09-19
+
+Jalon
+- Audit R33 : le nettoyage OCR supprimait encore les guillemets typographiques “ ” ‘ ’ et transformait la barre verticale | en lettre I.
+- Défauts reproduits : « TE“8D » devenait « TE8D » à 100 % ; « TE|8D » devenait « TEI8D » puis atteignait TE8D à 80 %, au-dessus du seuil de préremplissage OCR de 70 %.
+- R34 traite désormais ces caractères comme des séparateurs forts : ils coupent un token au lieu de fabriquer ou rapprocher artificiellement une référence.
+- Cas adversariaux ajoutés : guillemets typographiques entre caractères, barre verticale simple et répétée.
+
+Séparation / sécurité
+- V2.27 reste stable et ne doit pas être remplacée.
+- V2.28 TEST R34 reste sur la branche de test.
+- Base catalogue contrôlée et empaquetée séparément.
+- Les 5 103 références et les 10 morceaux catalogue restent inchangés.
+- Anciennes versions et sauvegardes conservées.

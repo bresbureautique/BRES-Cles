@@ -1,0 +1,25 @@
+BRES CLÉS — VÉRIFICATION V2.28 TEST R34
+Date : 2026-09-19
+
+Application après décompression
+- version : V2.28 TEST R34
+- catalogue : 5103 références / 5103 uniques
+- fichiers hachés : 420
+- erreurs : []
+- vérification source : OK
+
+Catalogue séparé après décompression
+- version : Catalogue Snapshot R34
+- catalogue : 5103 références / 5103 uniques
+- fichiers hachés : 137
+- erreurs : []
+- vérification source : OK
+
+Continuité
+- 10/10 morceaux catalogue identiques à R33 : OK
+- Ambiguïtés physiques volontairement non forcées : RO4/RO45 et VAC151/VAC151SM.
+- V2.27 stable inchangée ; R34 reste une version de test.
+
+SHA-256 ZIP
+- BRES_Cles_Mobile_V2_28_TEST_R34.zip : 24f30cca5f478338417d01a0532a9f84acf2e89938f9c757828ed098bfe6a261
+- BRES_Cles_Catalogue_Snapshot_R34.zip : f182c1ef916894029db9a80206ad312a95331ad0b5d7400599342ae8b782ae73

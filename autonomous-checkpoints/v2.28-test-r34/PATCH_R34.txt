@@ -1,0 +1,13 @@
+BRES CLÉS — PATCH V2.28 TEST R34
+Date : 2026-09-19
+
+Défauts R33 reproduits
+- TE“8D : les guillemets typographiques étaient supprimés, donnant TE8D à 100 %.
+- TE|8D : la barre verticale était convertie en I, donnant TEI8D puis une similitude TE8D de 80 %, supérieure au seuil OCR de préremplissage (70 %).
+
+Correction R34
+- Les guillemets typographiques “ ” ‘ ’ deviennent des frontières fortes.
+- La barre verticale | devient une frontière forte au lieu d'être convertie en lettre I.
+- 8 cas adversariaux ajoutés au test OCR ; total négatif/bruit = 23.
+- Les formes OCR utiles TE8D / TE-8D / TE 8 D / T E 8 D / JMA TE 8 D restent reconnues.
+- Catalogue et seuils photographiques Samsung inchangés.
