@@ -1,0 +1,24 @@
+BRES Clés V2.28 TEST R38 — vérification finale
+
+Application après extraction : OK
+catalogue_count=5103
+unique_refs=5103
+app_files_hashed=514
+errors=[]
+
+Catalogue séparé après extraction : OK
+catalogue_count=5103
+unique_refs=5103
+namespace_runtime_cases=157
+catalogue_files_hashed=165
+errors=[]
+
+Tests applicatifs : 12/12 scripts de test réussis.
+Catalogue : 10/10 morceaux identiques à R37.
+Ambiguïtés non forcées : RO4/RO45 ; VAC151/VAC151SM.
+Seuils photographiques Samsung : inchangés.
+
+Library roundtrip : application IDENTIQUE ; catalogue IDENTIQUE.
+
+c2aff6b7c90ad3fd113da1e544ea1587b39c9072de420a2e7afbba94dc136cc4  BRES_Cles_Mobile_V2_28_TEST_R38.zip
+3f93dd9d493a2b46e085e7bf5ad35549a041fe4350ed4616ee65710ba82d0848  BRES_Cles_Catalogue_Snapshot_R38.zip
