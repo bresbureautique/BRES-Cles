@@ -1,0 +1,14 @@
+BRES CLÉS V2.28 TEST R45 — VÉRIFICATION ALLER-RETOUR LIBRARY
+
+BRES_Cles_Mobile_V2_28_TEST_R45.zip
+- original : 5efe98204a02cda6a28618333a1328d51bbf00b88f1a4a093854e93bbb15e9a8
+- Library  : 5efe98204a02cda6a28618333a1328d51bbf00b88f1a4a093854e93bbb15e9a8
+- identique : True
+
+BRES_Cles_Catalogue_Snapshot_R45.zip
+- original : 1f7494c53d9dd99f59d709adea775bfc64a10879cc0c9e2feba0bbaa05d8c29a
+- Library  : 1f7494c53d9dd99f59d709adea775bfc64a10879cc0c9e2feba0bbaa05d8c29a
+- identique : True
+
+Application réextraite depuis Library : OK — 5103 références, 14 suites, errors=[]
+Catalogue réextrait depuis Library : OK — 5103 références, 3 suites, errors=[]

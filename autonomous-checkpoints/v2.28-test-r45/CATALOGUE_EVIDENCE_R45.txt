@@ -1,0 +1,6 @@
+BRES CLÉS V2.28 TEST R45 — PREUVE CATALOGUE
+
+Catalogue séparé : 5 103 références uniques dans 10 morceaux v3.
+Aucun morceau de données catalogue n’est modifié par R45.
+Les tests namespace fabricant/référence, garde RONIS et identité catalogue restent exécutés séparément.
+Le correctif R45 concerne exclusivement la résolution des fabricants d’ébauches contradictoires dans le parseur OCR XREF de l’application.

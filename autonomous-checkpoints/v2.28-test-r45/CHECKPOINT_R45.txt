@@ -1,0 +1,14 @@
+BRES CLÉS — CHECKPOINT V2.28 TEST R45
+
+Objet : bloquer une lecture OCR contenant plusieurs fabricants d’ébauches contradictoires dans une même vue.
+
+Correctif R45 :
+- le parseur distingue toujours les espaces de noms JMA, SILCA, ERREBI et KEYLINE ;
+- si deux fabricants d’ébauches différents sont lus dans la même zone OCR, aucun alias XREF n’est retenu ;
+- la lecture reste volontairement non résolue au lieu de choisir l’alias exact de l’un des fabricants ;
+- un fabricant de serrure hors espace de noms XREF, comme TESA, ne crée pas de faux conflit ;
+- les protections R44 fabricant/alias et toutes les protections de frontières OCR restent actives ;
+- cas de régression ajoutés : JMA SILCA TE2R, JMA ERREBI TS7, SILCA JMA TE-8D, KEYLINE SILCA TES5S.
+
+Catalogue : 5 103 références, 10 morceaux de données inchangés.
+Sécurité : V2.27 reste stable sur main. R45 reste uniquement sur la branche de test.

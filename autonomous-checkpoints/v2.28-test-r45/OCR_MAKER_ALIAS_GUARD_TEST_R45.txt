@@ -1,0 +1,10 @@
+BRES CLÉS V2.28 TEST R45 — GARDE FABRICANT / ALIAS OCR
+
+OK  alias JMA/SILCA/ERREBI/KEYLINE accepté avec son fabricant
+OK  alias nu accepté lorsque le fabricant n’est pas lisible
+OK  fabricant de serrure TESA ne bloque pas un alias Silca
+OK  combinaisons contradictoires fabricant/alias bloquées
+OK  plusieurs fabricants d’ébauche dans une même vue OCR => conflit non résolu
+OK  champs page/note/métadonnées exclus du dictionnaire OCR
+
+SELFTEST OK

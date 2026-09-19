@@ -1,0 +1,22 @@
+BRES CLÉS V2.28 TEST R45 — VÉRIFICATION FINALE APRÈS EXTRACTION
+
+Application : OK
+- version : V2.28 TEST R45
+- catalogue : 5103 références exactes / 5103 uniques
+- suites de tests : 14/14
+- fichiers hachés : 672
+- errors : []
+
+Catalogue séparé : OK
+- version : V2.28 TEST R45
+- catalogue : 5103 références exactes / 5103 uniques
+- suites de tests : 3/3
+- fichiers hachés : 222
+- errors : []
+
+Empreintes ZIP :
+5efe98204a02cda6a28618333a1328d51bbf00b88f1a4a093854e93bbb15e9a8  BRES_Cles_Mobile_V2_28_TEST_R45.zip
+1f7494c53d9dd99f59d709adea775bfc64a10879cc0c9e2feba0bbaa05d8c29a  BRES_Cles_Catalogue_Snapshot_R45.zip
+
+Continuité catalogue : 10/10 morceaux bit-identiques à R44/R43/R42/R40 dans l'application et le snapshot.
+V2.27 stable : non modifiée.

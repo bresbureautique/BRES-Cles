@@ -1,0 +1,5 @@
+R44 -> R45
+
+Défaut reproduit : R44 savait empêcher « JMA TE2R » de valider l’alias SILCA, mais si deux fabricants d’ébauches étaient présents dans la même vue OCR, par exemple « JMA SILCA TE2R », le parseur autorisait les deux espaces de noms et acceptait encore TE2R à 100 % comme TE8D.
+
+Correction : lorsqu’au moins deux fabricants d’ébauches XREF distincts sont détectés dans une seule vue OCR, la lecture est marquée en conflit et aucun rapprochement alias n’est produit pour cette vue. Les fabricants de serrure qui ne sont pas des espaces de noms d’ébauches (ex. TESA) ne déclenchent pas ce blocage. Les lectures avec un seul fabricant, ainsi que les alias nus sans fabricant lisible, conservent le comportement R44.
