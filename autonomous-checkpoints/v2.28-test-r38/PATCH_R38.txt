@@ -1,0 +1,14 @@
+BRES Clés V2.28 TEST R38 — résumé du correctif
+
+Défaut confirmé dans R37 : des caractères Unicode de format/contrôle invisibles (catégorie Cf),
+tels que ZWJ, ZWNJ, espace largeur zéro, word joiner ou BOM, pouvaient disparaître lors de la
+normalisation et créer artificiellement une frontière OCR autour d'un fabricant ou d'une référence.
+Le même risque existait dans la logique de frontières du registre catalogue.
+
+R38 :
+- traite lettres, nombres, marques Unicode et caractères Cf comme prolongements de mot ;
+- interdit qu'un caractère combinant ou de format fabrique une frontière fabricant/référence ;
+- applique la même règle au registre de namespace catalogue ;
+- ajoute des cas adversariaux dédiés OCR et catalogue ;
+- ne modifie aucun des 10 morceaux de données catalogue ;
+- ne modifie pas les seuils de reconnaissance photographique Samsung.
