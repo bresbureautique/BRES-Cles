@@ -1,0 +1,14 @@
+BRES CLÉS V2.28 TEST R50 — MODIFICATION DE CODE EXACTE
+
+Fichier : v228-catalogue.js
+Contexte : installSafetyWrappers() / wrapper final de verifyManualReference.
+
+R49 :
+const canon=normalizeKnownRef(el('manualRef').value.trim());if(!canon||!currentSig)return;
+
+R50 :
+const canon=normalizeKnownRef(el('manualRef').value.trim(),el('manualBrand').value.trim());if(!canon||!currentSig)return;
+
+But : empêcher le contrôle final par étalon local de recalculer une référence sans tenir compte du fabricant déjà saisi et ainsi de contourner la garde fabricant.
+
+Le ZIP complet R50 est conservé dans Library /BRES Cles/Sauvegardes ; son SHA-256 est enregistré dans ZIP_HASHES_R50.txt et son aller-retour Library est prouvé dans LIBRARY_ROUNDTRIP_VERIFICATION_R50.txt.
