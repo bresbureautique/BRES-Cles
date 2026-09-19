@@ -1,0 +1,17 @@
+BRES CLÉS V2.28 TEST R42 — CORRECTIF
+
+Défaut
+- Le score de sélection bestOCR est calculé à partir du texte nettoyé, alors que la validité finale est décidée sur le texte brut.
+- Une sortie « JMA TE|8D » peut ainsi être refusée par interpretOCR mais rester assez bien notée pour arrêter la boucle primaire et supprimer le fallback.
+
+Correctif
+- Deux classements distincts : meilleur texte de secours et meilleure lecture de référence exploitable.
+- La lecture exploitable est prioritaire dès que interpretOCR atteint OCR_PREFILL_THRESHOLD.
+- Aucun arrêt anticipé de référence sans bestUsable.
+- Fallback renforcé obligatoire tant qu’aucune bestUsable n’existe.
+- Nouveau test ocr_best_selection_test.py avec moteur OCR simulé : première lecture invalide à score élevé, seconde lecture valide à score inférieur.
+
+Continuité
+- Garde rawText / absence de whitelist R41 conservée.
+- Catalogue inchangé.
+- V2.27 stable non modifiée.
