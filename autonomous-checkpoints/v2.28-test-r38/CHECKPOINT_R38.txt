@@ -1,0 +1,23 @@
+BRES CLÉS — CHECKPOINT V2.28 TEST R38
+Date : 2026-09-19
+
+Objet
+- Fermer un nouveau cas de fausse frontière Unicode identifié après R37.
+- Les caractères de format invisibles Unicode (catégorie Cf : ZWJ, ZWNJ, zero-width space, word joiner, BOM) ne doivent pas créer artificiellement une frontière autour d’une référence ou d’un fabricant.
+- Appliquer le même principe au registre fabricant↔référence du catalogue : lettres, nombres, marques combinantes et caractères de format sont traités comme prolongements de mot pour les frontières.
+
+Correctif application
+- OCR référence directe : frontières Unicode L + N + M + Cf.
+- Reconstruction locale OCR : voisinage Unicode L + N + M + Cf.
+- Fabricant OCR : frontières Unicode L + N + M + Cf.
+- Isolation recto/verso, budgets de séparateurs et seuils OCR antérieurs conservés.
+
+Correctif catalogue / namespace
+- Les frontières fabricant et token du registre utilisent désormais L + N + M + Cf.
+- Aucun changement des 5 103 références ni des 10 morceaux de données catalogue.
+- RO4/RO45 et VAC151/VAC151SM restent volontairement non forcées.
+
+Sécurité
+- V2.27 reste la version stable sur main et ne doit pas être remplacée.
+- V2.28 TEST R38 reste une version de test séparée.
+- Seuils photographiques Samsung inchangés.
