@@ -1,0 +1,20 @@
+BRES CLÉS — CHECKPOINT V2.28 TEST R40
+Date : 2026-09-19
+
+Objet
+- Fermer un défaut du chemin OCR réel : le nettoyage de bestOCR pouvait effacer une frontière forte avant interpretOCR.
+
+Correctif application
+- Conservation du texte brut Tesseract (rawText) jusqu’aux fonctions d’interprétation.
+- Affichage et score gardent le texte nettoyé séparément.
+- Recto/verso et recherche tête utilisent rawText pour la décision.
+- Nouveau test de régression du chemin OCR réel.
+
+Catalogue
+- 5 103 références exactes et uniques attendues.
+- Les 10 morceaux catalogue restent identiques à R39.
+- RO4/RO45 et VAC151/VAC151SM restent volontairement non forcées.
+
+Sécurité
+- V2.27 reste la version stable sur main.
+- V2.28 TEST R40 reste une version de test séparée.
