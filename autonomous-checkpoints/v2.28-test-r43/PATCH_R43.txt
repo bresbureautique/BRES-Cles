@@ -1,0 +1,5 @@
+R42 -> R43
+
+Défaut reproduit : une lecture « JMA TE8B » pouvait être rapprochée de TE8D avec une similarité suffisante pour être exploitable, obtenir un score global élevé puis couper la recherche avant « TE 8 D » exact dans une autre orientation. Le même cas pouvait empêcher les modes renforcés.
+
+Correction : bestOCR mémorise matchSim/matchCanon, classe bestUsable par similarité catalogue avant le score texte/confiance, n'autorise l'arrêt anticipé qu'à partir d'une correspondance forte (>= 0,92) et force les lectures renforcées tant que la meilleure lecture exploitable reste sous ce seuil.
