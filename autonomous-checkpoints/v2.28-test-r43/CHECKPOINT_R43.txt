@@ -1,0 +1,13 @@
+BRES CLÉS — CHECKPOINT V2.28 TEST R43
+
+Objet : empêcher une lecture OCR seulement floue mais fortement scorée de masquer une lecture exacte trouvée plus tard.
+
+Correctif R43 :
+- les lectures exploitables sont classées d'abord par similarité catalogue ;
+- le score texte et la confiance ne servent qu'à départager des similarités équivalentes ;
+- une lecture floue (< 92 %) ne déclenche plus d'arrêt anticipé ;
+- une lecture floue n'empêche plus les modes OCR renforcés ;
+- le meilleur texte de secours reste séparé de la meilleure référence exploitable.
+
+Catalogue : 5 103 références, 10 morceaux de données inchangés.
+Sécurité : V2.27 reste stable sur main. R43 reste uniquement sur la branche de test.
