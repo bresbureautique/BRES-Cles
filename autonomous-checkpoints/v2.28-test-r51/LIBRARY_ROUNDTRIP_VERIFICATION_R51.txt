@@ -1,0 +1,19 @@
+BRES CLÉS — LIBRARY ROUNDTRIP V2.28 TEST R51
+
+Library: /BRES Cles/Sauvegardes
+
+BRES_Cles_Mobile_V2_28_TEST_R51.zip
+SHA-256 original : 74db6fdf69e02d711aa22e65f1fcb8a175249578ec39384ade51e79234521cc5
+SHA-256 Library  : 74db6fdf69e02d711aa22e65f1fcb8a175249578ec39384ade51e79234521cc5
+Identique : OUI
+Après rematérialisation + extraction propre : verify_build.py OK
+5 103 références uniques ; 19 suites de tests ; 858 fichiers contrôlés ; errors=[]
+
+BRES_Cles_Catalogue_Snapshot_R51.zip
+SHA-256 original : ffaa4155407850c7c33ed9737e789b6f3a3e566104a47898ebbf1a313ed76844
+SHA-256 Library  : ffaa4155407850c7c33ed9737e789b6f3a3e566104a47898ebbf1a313ed76844
+Identique : OUI
+Après rematérialisation + extraction propre : verify_snapshot.py OK
+5 103 références uniques ; 10 morceaux catalogue identiques à R40 ; errors=[]
+
+Conclusion : aller-retour Library vérifié. R51 peut être considéré comme sauvegardé sans altération.
