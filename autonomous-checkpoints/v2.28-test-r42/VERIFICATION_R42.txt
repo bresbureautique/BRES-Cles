@@ -1,0 +1,27 @@
+BRES CLÉS V2.28 TEST R42 — VÉRIFICATION DU JALON
+
+Application après décompression
+- version : V2.28 TEST R42
+- catalogue : 5 103 références exactes / 5 103 uniques
+- 13 suites de tests : toutes réussies
+- garde OCR live raw boundary : OK
+- garde sélection bestOCR usable-first : OK
+- fichiers contrôlés : 600
+- erreurs : 0
+
+Catalogue séparé après décompression
+- version : V2.28 TEST R42
+- catalogue : 5 103 références exactes / 5 103 uniques
+- tests namespace, RONIS et identité : tous réussis
+- fichiers contrôlés : 198
+- erreurs : 0
+
+Continuité
+- 10 morceaux catalogue bit-identiques à R41/R40/R39
+- RO4/RO45 et VAC151/VAC151SM restent non forcées
+- V2.27 stable reste sur main, non modifiée
+
+Library
+- les deux ZIP R42 ont été rematérialisés après dépôt
+- SHA-256 des copies Library = SHA-256 des originaux vérifiés
+- les deux copies Library ont été réextraites et leurs vérificateurs ont repassé sans erreur
