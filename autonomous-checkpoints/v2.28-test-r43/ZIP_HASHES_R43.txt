@@ -1,0 +1,2 @@
+a24353f96d4302e7702cf97afa861297eda3d2f030c189f3a8cc0d457915832d  /mnt/data/bres_r43_work/release/BRES_Cles_Mobile_V2_28_TEST_R43.zip
+b856367f093bec5ff4afb6650d8172400c53a6ae38387d6695c53c07d7bf902c  /mnt/data/bres_r43_work/release/BRES_Cles_Catalogue_Snapshot_R43.zip
