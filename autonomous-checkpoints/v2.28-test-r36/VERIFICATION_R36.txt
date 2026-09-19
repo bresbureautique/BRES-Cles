@@ -1,0 +1,28 @@
+BRES Cles - Verification R36
+============================
+
+Application V2.28 TEST R36
+- verification apres extraction ZIP: OK
+- references catalogue: 5103
+- references uniques: 5103
+- fichiers haches: 470
+- errors: []
+- tests OCR: formes positives conservees; 12 cas negatifs de frontiere Unicode reference bloques
+- isolation recto/verso R35 conservee
+- seuils photo Samsung: inchanges
+
+Catalogue Snapshot R36
+- verification apres extraction ZIP: OK
+- references catalogue: 5103
+- references uniques: 5103
+- cas namespace runtime: 143
+- RONIS: 23 positifs / 42 negatifs
+- fichiers haches: 153
+- errors: []
+- 10/10 morceaux catalogue identiques a R35 et R34
+
+Ambiguites physiques volontairement non forcees:
+- RO4 / RO45
+- VAC151 / VAC151SM
+
+V2.27 stable: ne doit pas etre modifiee par ce jalon de test.
