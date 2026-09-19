@@ -1,0 +1,14 @@
+BRES CLÉS — CHECKPOINT V2.28 TEST R48
+
+Objet : empêcher une marque d’ébauche saisie manuellement de valider l’alias d’un autre fabricant.
+
+Correctif R48 :
+- la marque manuelle est maintenant transmise au résolveur de référence ;
+- lorsqu’elle correspond à un fabricant d’ébauche connu (JMA, SILCA, ERREBI, KEYLINE…), seuls les alias de cet espace sont acceptés ;
+- JMA + TE2R ou SILCA + TE-8D restent non résolus au lieu de valider TE8D par compaction ;
+- une marque de serrure comme TESA ne bloque pas un alias Silca, car elle n’est pas un espace d’alias d’ébauche ;
+- une référence canonique interne exacte reste utilisable ;
+- un test de non-régression dédié couvre la vérification manuelle et le déclenchement automatique.
+
+Catalogue : 5 103 références, 10 morceaux de données inchangés.
+Sécurité : V2.27 reste stable sur main. R48 reste uniquement sur la branche de test.
