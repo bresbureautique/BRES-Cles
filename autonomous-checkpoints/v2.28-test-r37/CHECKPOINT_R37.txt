@@ -1,0 +1,17 @@
+BRES CLÉS — CHECKPOINT V2.28 TEST R37
+Date : 2026-09-19
+
+Objet
+- Corriger les fausses frontières OCR créées par les marques Unicode combinantes et sélecteurs de variation.
+- Conserver l’isolation recto/verso R35/R36 et tous les garde-fous antérieurs.
+
+Correctif
+- Frontières référence directe : Unicode lettre + nombre + marque.
+- Frontières reconstruction locale : Unicode lettre + nombre + marque.
+- Frontières fabricant : Unicode lettre + nombre + marque.
+
+Sécurité
+- V2.27 reste la version stable ; R37 reste une version de test séparée.
+- Les 10 morceaux catalogue et les 5 103 références restent inchangés.
+- RO4/RO45 et VAC151/VAC151SM restent non forcées.
+- Seuils photographiques Samsung inchangés.
