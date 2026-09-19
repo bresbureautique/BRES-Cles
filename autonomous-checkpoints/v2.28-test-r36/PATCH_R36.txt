@@ -1,0 +1,22 @@
+BRES Cles V2.28 TEST R36 - Resume du correctif
+
+Defaut corrige:
+- R35 pouvait extraire TE8D a l'interieur d'un mot/numero Unicode plus long apres nettoyage OCR.
+- Exemples bloques en R36: ΩTE8D, TE8DЖ, ÉTE-8D, １TE8D.
+
+Correction:
+- extraction directe des candidats depuis le texte OCR brut avec frontieres Unicode lettre/nombre;
+- fragments de reconstruction locale refuses s'ils touchent une lettre ou un chiffre Unicode;
+- budget OCR faible de 3 caracteres conserve;
+- separateurs forts et isolation recto/verso R35 conserves;
+- 12 cas de regression Unicode adjacents ajoutes au test OCR.
+
+Catalogue:
+- donnees de reference inchangees: 5103 references uniques;
+- 10/10 morceaux catalogue identiques a R35 (et R34);
+- seules l'application OCR, les metadonnees et les tests de jalon passent a R36.
+
+Invariants:
+- V2.27 stable non modifiee;
+- seuils photo Samsung non modifies;
+- RO4/RO45 et VAC151/VAC151SM restent non forces.
