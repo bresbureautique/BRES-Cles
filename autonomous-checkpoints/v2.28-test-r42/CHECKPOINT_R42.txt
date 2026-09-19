@@ -1,0 +1,25 @@
+BRES CLÉS — CHECKPOINT V2.28 TEST R42
+Date : 2026-09-19
+
+Objet
+- Empêcher une zone OCR invalide mais très bien notée après nettoyage de masquer une lecture de référence exploitable dans une autre orientation/région.
+
+Défaut reproduit en R41
+- « JMA TE|8D » : le parseur boundary-safe refuse correctement TE8D, mais cleanOCR transforme le texte en JMA TEI8D pour le score.
+- Avec confiance moteur 80 %, cette lecture dépasse le seuil d’arrêt anticipé alors qu’elle ne contient aucune référence exploitable.
+- Une lecture valide ultérieure pouvait donc ne jamais être testée ; le score élevé pouvait aussi empêcher les lectures renforcées.
+
+Correctif application
+- bestOCR maintient séparément bestFallback et bestUsable.
+- bestUsable exige la même fiabilité minimale que le préremplissage OCR (similarité >= 0,70).
+- Seule une lecture exploitable peut déclencher les arrêts anticipés de référence.
+- Les lectures renforcées sont exécutées si aucune référence exploitable n’a été trouvée, même si un texte invalide avait un score élevé.
+
+Catalogue
+- 5 103 références exactes et uniques attendues.
+- Les 10 morceaux catalogue restent bit-identiques à R41/R40.
+- RO4/RO45 et VAC151/VAC151SM restent volontairement non forcées.
+
+Sécurité
+- V2.27 reste la version stable sur main.
+- V2.28 TEST R42 reste une version de test séparée.
