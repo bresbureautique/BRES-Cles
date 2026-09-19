@@ -1,0 +1,15 @@
+BRES CLÉS V2.28 TEST R54 — MODIFICATION CODE
+
+Fichier actif : index.html
+- ajout invalidateHeadPhotoDerivedIdentification() ;
+- changement tête recto/tête verso => invalidation immédiate des résultats précédents ;
+- effacement des champs provenant uniquement de l’OCR ;
+- conservation des saisies manuelles explicites ;
+- remise à zéro de headSearchStatus, résultat catalogue, visuel, décision finale et équivalences avant le redraw asynchrone.
+
+Tests :
+- ajout head_photo_state_invalidation_test.py ;
+- extension identification_state_invalidation_test.py ;
+- intégration du nouveau test à verify_build.py.
+
+Catalogue : aucune donnée catalogue modifiée ; seulement les marqueurs de jalon/preuves R54.
