@@ -1,0 +1,9 @@
+BRES CLÉS V2.28 TEST R54 — INVALIDATION APRÈS REMPLACEMENT PHOTO DE TÊTE
+
+OK  remplacer tête recto invalide immédiatement l’ancien résultat OCR/catalogue
+OK  remplacer tête verso invalide immédiatement l’ancien résultat OCR/catalogue
+OK  les valeurs remplies uniquement par OCR sont effacées
+OK  une saisie manuelle explicite n’est pas effacée
+OK  l’invalidation intervient avant le redraw asynchrone de l’aperçu
+
+SELFTEST OK
