@@ -1,0 +1,12 @@
+BRES CLÉS V2.28 TEST R54 — INVALIDATION DES RÉSULTATS OBSOLÈTES
+
+OK  changer une photo principale invalide la décision précédente et efface les valeurs OCR héritées
+OK  une référence saisie manuellement reste conservée mais doit être revérifiée avec les nouvelles photos
+OK  modifier/effacer référence ou marque invalide immédiatement l’ancien résultat
+OK  une référence manuelle invalide efface décision, visuel catalogue et équivalences précédents
+OK  un OCR insuffisant ne laisse plus un ancien visuel catalogue ou des équivalences visibles
+OK  remplacer une photo de tête invalide immédiatement une décision OCR/catalogue issue de l’ancienne photo
+OK  les champs OCR sont effacés lors d’un changement de photo de tête tandis qu’une saisie manuelle reste propriété de l’utilisateur
+OK  un échec/conflit des photos de tête efface les preuves catalogue devenues obsolètes
+
+SELFTEST OK
