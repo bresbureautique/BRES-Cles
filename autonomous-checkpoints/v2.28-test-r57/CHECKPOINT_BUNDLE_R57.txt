@@ -1,0 +1,166 @@
+===== CHECKPOINT_R57.txt =====
+BRES CLÉS — CHECKPOINT V2.28 TEST R57
+
+Objet : empêcher la caméra guidée de publier ou d'enregistrer un résultat provenant d'une ancienne ouverture après fermeture, réouverture ou changement recto/verso.
+
+Défaut reproduit en R56 :
+- openGuidedCamera() attendait getUserMedia(), video.play() puis l'autofocus sans identifiant de session ; une ancienne ouverture pouvait donc finir après une ouverture plus récente et reprendre la main sur camStream/camTrack ;
+- fermer la fenêtre pendant getUserMedia() n'invalidait pas la promesse en attente : le flux obtenu plus tard pouvait rester actif sans correspondre à l'état visible ;
+- requestCamAutofocus() utilisait directement le camTrack global et pouvait publier son statut après un changement de session ;
+- captureGuided() relisait camSide après l'attente asynchrone de toBlob() : une fermeture/réouverture très rapide pouvait donc attribuer la capture à la mauvaise face.
+
+Correctif R57 :
+- ajout d'une époque de session caméra indépendante de l'époque d'identification ;
+- chaque ouverture fige son numéro de session et arrête immédiatement tout flux getUserMedia devenu obsolète ;
+- fermeture, nouvelle ouverture, play et autofocus invalident/contrôlent la session avant toute publication ;
+- l'autofocus fige le track utilisé et refuse de publier si camTrack a changé ;
+- la capture fige recto/verso et le flux avant toBlob(), puis refuse tout retour devenu obsolète ;
+- test dédié GUIDED_CAMERA_SESSION_GUARD_TEST_R57 verrouillant ces comportements ;
+- vérification déterministe : l’audit namespace est produit avant la suite qui le lit, évitant un échec aléatoire au premier run R57.
+
+Catalogue : 5 103 références uniques ; les 10 morceaux de données catalogue restent strictement inchangés par rapport à R40/R56.
+Sécurité : V2.27 reste stable sur main. R57 reste uniquement une version de test sur la branche v2.28-test-r1.
+
+===== CODE_CHANGE_R57.txt =====
+BRES CLÉS V2.28 TEST R57 — RÉSUMÉ DU CORRECTIF
+
+- camSessionEpoch protège le cycle de vie de la caméra guidée indépendamment des calculs d'identification.
+- openGuidedCamera() attache getUserMedia/play/autofocus à une session et arrête les flux obsolètes.
+- closeGuidedCamera() invalide immédiatement toutes les opérations caméra encore en attente.
+- requestCamAutofocus(expectedSession) fige le track et refuse toute publication sur une autre session.
+- captureGuided() fige side + stream avant toBlob() et n'enregistre plus une capture devenue obsolète.
+- version/cache-busting actifs passés à R57.
+- verify_build.py exécute le producteur de l’audit namespace avant les tests qui le consomment, ce qui supprime une course de vérification au premier passage.
+- catalogue de données inchangé.
+
+===== DEFECT_REPRO_R56_TO_R57.txt =====
+BRES CLÉS V2.28 TEST R57 — REPRODUCTION DU DÉFAUT R56
+
+Sonde statique exécutée sur le ZIP R56 avant modification : 7 défauts détectés.
+
+1. aucune époque de session caméra ;
+2. openGuidedCamera ne liait pas le travail asynchrone à une session ;
+3. un flux getUserMedia obsolète n'était pas explicitement arrêté ;
+4. une ancienne ouverture pouvait republier flux/statut ;
+5. autofocus non protégé contre un changement de session ;
+6. captureGuided ne figeait pas recto/verso avant toBlob ;
+7. une capture pouvait être enregistrée après fermeture/réouverture pendant toBlob.
+
+Exit code de la sonde R56 : 1, donc défaut reproduit avant correctif.
+R57 ferme ces fenêtres de course et les verrouille par guided_camera_session_guard_test.py.
+
+===== R56_DEFECT_PROBE_R57.txt =====
+R56 guided camera race probe
+FAIL: no camera-session epoch primitive
+FAIL: openGuidedCamera does not bind async work to one camera session
+FAIL: stale getUserMedia stream is not explicitly stopped
+FAIL: openGuidedCamera can publish stale stream/status
+FAIL: autofocus can publish after camera session changes
+FAIL: capture does not freeze target side before awaiting toBlob
+FAIL: capture can commit after close/reopen during toBlob
+FAILURES 7
+
+Exit code attendu sur R56: 1 (non-zéro = défaut reproduit)
+
+===== GUIDED_CAMERA_SESSION_GUARD_TEST_R57.txt =====
+BRES CLÉS V2.28 TEST R57 — GARDE DE SESSION CAMÉRA GUIDÉE
+
+OK  chaque ouverture caméra reçoit un identifiant de session
+OK  un flux getUserMedia devenu obsolète est arrêté avant publication
+OK  play/autofocus ne peuvent plus publier après fermeture ou nouvelle ouverture
+OK  fermer la caméra invalide les opérations encore en attente
+OK  la capture fige recto/verso avant toBlob et refuse un retour obsolète
+
+SELFTEST OK
+
+===== TEST_SUMMARY_R57.txt =====
+BRES CLÉS V2.28 TEST R57 — RÉSUMÉ DE VÉRIFICATION
+
+Application : OK
+- version : V2.28 TEST R57
+- catalogue : 5103 références / 5103 uniques
+- suites de tests : 26/26 réussies
+- fichiers contrôlés par verify_build.py : 1115
+- erreurs : []
+- garde session caméra guidée : OK
+- ZIP extrait dans dossier vierge puis verify_build.py : OK
+
+Catalogue séparé : OK
+- version : V2.28 TEST R57 catalogue snapshot
+- catalogue : 5103 références / 5103 uniques
+- 10 morceaux catalogue identiques à R40/R56 : OUI
+- fichiers contrôlés par verify_snapshot.py : 24
+- erreurs : []
+- ZIP extrait dans dossier vierge puis verify_snapshot.py : OK
+
+Continuité :
+- données catalogue non modifiées
+- V2.27 reste stable sur main
+
+===== CATALOGUE_SOURCE_CONTINUITY_R57.txt =====
+BRES CLÉS V2.28 TEST R57 — CONTINUITÉ SOURCE CATALOGUE
+
+OK  catalog-01.js  e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b
+OK  catalog-02.js  955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75
+OK  catalog-03.js  9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210
+OK  catalog-04.js  14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942
+OK  catalog-05.js  5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b
+OK  catalog-06.js  b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac
+OK  catalog-07.js  b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1
+OK  catalog-08.js  3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814
+OK  catalog-09.js  4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f
+OK  catalog-10.js  f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4
+
+10/10 morceaux identiques à R56/R40 : OUI
+Références attendues : 5 103 uniques.
+Aucune donnée catalogue modifiée par R57.
+
+===== RELEASE_SHA256_R57.txt =====
+4ccbbd26a6e4960002e0656cbadd2c96f29da94a083c2f4fc6ecbada5de39747  /mnt/data/bres_r57_work/release/BRES_Cles_Catalogue_Snapshot_R57.zip
+d0018fb530ceac571c6e2f31c89e1a419e5e5553910239947c1fdd0e315c4bae  /mnt/data/bres_r57_work/release/BRES_Cles_Mobile_V2_28_TEST_R57.zip
+
+===== LIBRARY_ROUNDTRIP_VERIFICATION_R57.txt =====
+BRES CLÉS V2.28 TEST R57 — VÉRIFICATION ALLER-RETOUR LIBRARY
+
+Dossier : /BRES Cles/Sauvegardes
+
+Application ZIP :
+- SHA-256 original : d0018fb530ceac571c6e2f31c89e1a419e5e5553910239947c1fdd0e315c4bae
+- SHA-256 rematérialisé : d0018fb530ceac571c6e2f31c89e1a419e5e5553910239947c1fdd0e315c4bae
+- identité binaire : OK
+- extraction + verify_build.py : OK (5103 références, 1115 fichiers contrôlés, errors=[])
+
+Catalogue ZIP :
+- SHA-256 original : 4ccbbd26a6e4960002e0656cbadd2c96f29da94a083c2f4fc6ecbada5de39747
+- SHA-256 rematérialisé : 4ccbbd26a6e4960002e0656cbadd2c96f29da94a083c2f4fc6ecbada5de39747
+- identité binaire : OK
+- extraction + verify_snapshot.py : OK (5103 références, 24 fichiers contrôlés, errors=[])
+
+Verdict : les deux sauvegardes Library sont bit-identiques aux ZIP de release et restent vérifiables après rematérialisation.
+
+===== SOURCE_HASHES_R57.txt =====
+BRES CLÉS V2.28 TEST R57 — SHA-256 DES SOURCES ACTIVES
+
+9ae344482ad91d27c4a913861c0f2d274e3eda694a6c92277055771fd1460422  index.html
+8eac0a880c5d4fd467e22d00b8837d29211c2fa29a46857674cadb428f02750a  v228-catalogue.js
+768ab770cb068bafa4d1ef0c935cb36090fdc42f4d60e20cc9671418b459b331  verify_build.py
+732fd3ef9fc42deab73d8d8d34c395a292d429b146ea9c2e9b5027cc5964b36b  CHECKPOINT.txt
+732fd3ef9fc42deab73d8d8d34c395a292d429b146ea9c2e9b5027cc5964b36b  CHECKPOINT_R57.txt
+5aa294854fcb873938b0d904655c906f94194ff55852459f360ba0d1699ee05e  PATCH_R57.txt
+40f76f6929b592b8b9a41246f3d1f96fd597be0d1f6603e45fd8942f3936d77b  CODE_CHANGE_R57.txt
+8ff1e5ac2e3b44268de35a6d15aed9ac2f413fbf21ecdd71a6b4116cd6add5ce  DEFECT_REPRO_R56_TO_R57.txt
+3b6e1765b96ffafed7c18f2af3be163699a4b58a51701c90a146788b149e07f1  guided_camera_session_guard_test.py
+1d3152c4a7b99eb91fc758d1d80493214bd4c6e84490f8349deb32bc65ede5c2  async_state_epoch_guard_test.py
+a104ce926ce98996dda40968d317a670249b196e5ad99939cad89e1238871461  async_ui_publication_guard_test.py
+6900f47340d3236d4b9dd6511ed34d0d056bb1207e97663350a4f65c4781dcfe  version_consistency_test.py
+8055ec6503f65ee697e415cb107f331e2da0d88bb565e0a2c1b6de828c1740e1  catalogue/evidence/cross_reference_registry_r57.json
+e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b  catalogue/v3/catalog-01.js
+955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75  catalogue/v3/catalog-02.js
+9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210  catalogue/v3/catalog-03.js
+14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942  catalogue/v3/catalog-04.js
+5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b  catalogue/v3/catalog-05.js
+b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac  catalogue/v3/catalog-06.js
+b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1  catalogue/v3/catalog-07.js
+3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814  catalogue/v3/catalog-08.js
+4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f  catalogue/v3/catalog-09.js
+f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4  catalogue/v3/catalog-10.js
