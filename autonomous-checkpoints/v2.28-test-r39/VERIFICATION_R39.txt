@@ -1,0 +1,19 @@
+BRES CLÉS V2.28 TEST R39 — VÉRIFICATION
+
+Application après extraction ZIP : OK
+- 5 103 références exactes / 5 103 uniques
+- 539 fichiers hachés par verify_build.py
+- 34 cas négatifs de frontière Unicode référence
+- 28 cas fabricant/sous-chaîne/Unicode négatifs, dont 23 frontières Unicode fabricant
+- erreurs = []
+
+Catalogue séparé après extraction ZIP : OK
+- 5 103 références exactes / 5 103 uniques
+- 163 cas runtime namespace
+- 23 cas RONIS positifs + 42 négatifs
+- 174 fichiers hachés par verify_catalogue_snapshot.py
+- erreurs = []
+
+Continuité catalogue : 10/10 morceaux identiques à R38.
+Ambiguïtés volontaires : RO4/RO45 ; VAC151/VAC151SM.
+V2.27 stable : non modifiée.
