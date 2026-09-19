@@ -1,0 +1,7 @@
+BRES Cles - V2.28 TEST R48 - Release verification
+Application ZIP SHA-256: b4f9eff8058bfe1e278fe1f1dfe763acb66dfd00b9170614c5a1cc65131cfe57
+Application clean re-extract: OK | refs=5103 | tests=17 | files_hashed=758
+Catalogue ZIP SHA-256: c1ecf02a72f942e338ecc5a7ff76dce8fb1d786e53dae9bdc069e7ae1a41a3f0
+Catalogue clean re-extract: OK | refs=5103 | tests=3 | files_hashed=248
+Catalogue data chunks: byte-identical to R47 (separate R48 identity proof)
+VERDICT: OK
