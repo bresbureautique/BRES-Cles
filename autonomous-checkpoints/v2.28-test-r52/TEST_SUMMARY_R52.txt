@@ -1,0 +1,15 @@
+BRES CLÉS V2.28 TEST R52 — RÉSUMÉ DES VÉRIFICATIONS
+
+Application : OK
+- 5 103 références / 5 103 uniques
+- 20/20 suites de tests réussies
+- 894 fichiers contrôlés dans la réextraction ZIP
+- garde priorité manuelle : OK
+- morceaux catalogue identiques à R40 : OUI
+
+Catalogue séparé : OK
+- 5 103 références / 5 103 uniques
+- 10/10 morceaux identiques à R40
+- snapshot réextrait et vérifié : OK
+
+V2.27 stable : doit rester exclusivement sur main, non remplacée par R52.
