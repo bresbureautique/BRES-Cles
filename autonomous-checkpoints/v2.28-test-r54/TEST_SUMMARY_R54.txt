@@ -1,0 +1,19 @@
+BRES CLÉS V2.28 TEST R54 — RÉSUMÉ DE VÉRIFICATION
+
+Application :
+- 5 103 références catalogue / 5 103 uniques
+- 22 suites de régression : 22 réussies
+- 973 fichiers contrôlés/hachés
+- JavaScript index + wrapper : syntaxe OK
+- invalidation remplacement photo de tête : OK
+- invalidation générale des résultats obsolètes : OK
+- extraction propre du ZIP puis verify_build : OK
+- erreurs : 0
+
+Catalogue séparé :
+- 5 103 références / 5 103 uniques
+- 10/10 morceaux strictement identiques à R40/R53
+- extraction propre du snapshot ZIP puis verify_snapshot : OK
+- erreurs : 0
+
+V2.27 stable : ne doit pas être modifiée ; contrôle GitHub effectué séparément avant clôture du jalon.
