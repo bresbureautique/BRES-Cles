@@ -1,0 +1,11 @@
+BRES CLÉS — REPRODUCTION DU DÉFAUT R53 CORRIGÉ EN R54
+
+État R53 observé dans index.html :
+- headPhotoRecto.onchange : mise à jour du compteur + redessin de l’aperçu uniquement ;
+- headPhotoVerso.onchange : mise à jour du compteur + redessin de l’aperçu uniquement ;
+- aucune invalidation de finalDecision, catalogResult, catalogVisual ou xref ;
+- aucune suppression d’une référence/marque provenant de l’OCR précédent.
+
+Conséquence : après une ancienne identification par photo de tête, le remplacement d’une photo pouvait laisser l’ancien résultat visible alors que la nouvelle image n’avait pas encore été analysée.
+
+Verdict : défaut logiciel reproductible, justifiant R54.
