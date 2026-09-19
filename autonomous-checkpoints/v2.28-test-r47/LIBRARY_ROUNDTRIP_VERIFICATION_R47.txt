@@ -1,0 +1,15 @@
+BRES CLÉS V2.28 TEST R47 — VÉRIFICATION ALLER-RETOUR LIBRARY
+
+BRES_Cles_Mobile_V2_28_TEST_R47.zip:
+- original SHA-256: 1d6fc41ed52acc03d957b9dedae5452bf1235250759882f94ee3880b510cf930
+- Library SHA-256:  1d6fc41ed52acc03d957b9dedae5452bf1235250759882f94ee3880b510cf930
+- identique bit à bit: True
+BRES_Cles_Catalogue_Snapshot_R47.zip:
+- original SHA-256: 1c9913e23763ffe846fa037881ea4b7aad3260ee162c6a8a692371db47713ca4
+- Library SHA-256:  1c9913e23763ffe846fa037881ea4b7aad3260ee162c6a8a692371db47713ca4
+- identique bit à bit: True
+
+Application réextraite depuis Library : ok=True, 5103=5103, suites=16, fichiers=726, erreurs=[]
+Catalogue réextrait depuis Library : ok=True, 5103=5103, suites=3, fichiers=238, erreurs=[]
+
+ALLER-RETOUR LIBRARY R47 OK
