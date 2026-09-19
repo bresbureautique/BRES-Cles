@@ -1,0 +1,9 @@
+BRES CLÉS V2.28 TEST R55 — RÉSUMÉ DU CORRECTIF
+
+- identificationEpoch + fonctions bump/current pour invalider tout travail asynchrone ancien.
+- analyseCurrent(expectedEpoch) calcule dans des canevas temporaires et ne publie que si l’époque n’a pas changé.
+- runOCR() et searchFromHeadPhotos() vérifient l’époque après chaque await critique.
+- photoRefresh() efface état géométrique et canevas avant nouveau rendu.
+- modifications manuelles et remplacement des photos de tête incrémentent l’époque.
+- version/cache-busting actifs passés à R55.
+- catalogue de données inchangé.

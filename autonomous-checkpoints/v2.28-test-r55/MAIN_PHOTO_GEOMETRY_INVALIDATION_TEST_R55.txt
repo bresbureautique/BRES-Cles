@@ -1,0 +1,8 @@
+BRES CLÉS V2.28 TEST R55 — INVALIDATION GÉOMÉTRIE APRÈS CHANGEMENT PHOTO
+
+OK  anciens candidats géométriques effacés dès qu’une photo principale change
+OK  anciens diagnostics/crops effacés
+OK  currentSig/currentAnalyses remis à zéro
+OK  décisions OCR/catalogue invalidées dans le même cycle
+
+SELFTEST OK

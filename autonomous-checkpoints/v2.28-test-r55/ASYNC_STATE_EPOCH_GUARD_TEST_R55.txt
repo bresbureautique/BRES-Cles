@@ -1,0 +1,9 @@
+BRES CLÉS V2.28 TEST R55 — GARDE ANTI-RÉSULTAT ASYNCHRONE OBSOLÈTE
+
+OK  changement photo principale/tête invalide les calculs déjà lancés
+OK  analyse géométrique mise en tampon avant publication
+OK  OCR principal abandonne un résultat devenu obsolète
+OK  OCR tête abandonne un résultat devenu obsolète
+OK  modification manuelle invalide aussi les calculs en cours
+
+SELFTEST OK

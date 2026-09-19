@@ -1,0 +1,7 @@
+BRES CLÉS V2.28 TEST R55 — REPRODUCTION DU DÉFAUT R54
+
+R54 invalidait les panneaux de résultat au changement de photo, mais une Promise déjà en cours conservait les anciennes entrées et pouvait publier ses résultats après l’invalidation.
+La même fenêtre de course existait dans analyseCurrent(), runOCR() et searchFromHeadPhotos().
+En outre photoRefresh() ne vidait pas immédiatement results/currentSig/currentAnalyses ni les canevas diag/head, laissant de la géométrie obsolète visible.
+
+Verdict : défaut logiciel réel, reproductible par inspection d’enchaînement asynchrone et verrouillé en R55 par tests dédiés.

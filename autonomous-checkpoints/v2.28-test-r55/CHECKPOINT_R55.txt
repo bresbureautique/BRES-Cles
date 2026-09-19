@@ -1,0 +1,19 @@
+BRES CLÉS — CHECKPOINT V2.28 TEST R55
+
+Objet : empêcher qu’un calcul asynchrone ou une géométrie provenant d’une ancienne photo soit republié après changement d’entrée.
+
+Défauts reproduits en R54 :
+- une analyse géométrique déjà lancée pouvait finir après remplacement d’une photo et republier un résultat fondé sur l’ancienne image ;
+- une lecture OCR déjà lancée pouvait également terminer après changement de photo ou de saisie ;
+- après remplacement d’une photo principale, les anciens candidats géométriques et canevas de diagnostic pouvaient rester visibles avant la nouvelle analyse.
+
+Correctif R55 :
+- compteur d’époque d’identification : toute modification pertinente rend les calculs asynchrones précédents caducs ;
+- analyses géométriques exécutées dans des canevas temporaires et publiées seulement si l’époque est toujours courante ;
+- OCR principal et OCR des photos de tête vérifient l’époque après chaque étape asynchrone ;
+- remplacement d’une photo principale efface immédiatement signature, analyses, candidats et canevas de diagnostic/tête ;
+- saisies manuelles et remplacement des photos invalident les tâches en vol ;
+- deux tests dédiés verrouillent ces comportements.
+
+Catalogue : 5 103 références uniques ; 10/10 morceaux catalogue bit-identiques à R40/R54.
+Sécurité : V2.27 doit rester stable sur main ; R55 doit rester uniquement sur la branche de test v2.28-test-r1.
