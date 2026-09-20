@@ -1,0 +1,154 @@
+===== CHECKPOINT_R73.txt =====
+BRES CLÉS — CHECKPOINT V2.28 TEST R73
+
+Objet : renforcer la validation physique des signatures importées dans la base locale d’étalons.
+
+Défaut reproduit en R72 :
+- la validation vérifiait surtout que Number(v) était fini ;
+- des chaînes numériques comme « 30 », une largeur négative ou immense, une aire nulle, des valeurs de contour hors [0,1] et des tableaux démesurés pouvaient être acceptés ;
+- ces données ne correspondent jamais à une signature réellement produite par l’application et pouvaient fausser la distance locale ou alourdir inutilement les comparaisons.
+
+Correctif R73 :
+- les dimensions, l’aire et les remplissages doivent être de vrais nombres JSON finis ;
+- largeur admise : 5 à 200 mm ; hauteur : 2 à 120 mm ; aire normalisée : 0,001 à 1 ;
+- top, bot, texture et colFill restent dans [0,1] ; bladeFill et headFill restent dans [0,1] ;
+- chaque tableau de signature est plafonné à 512 valeurs ;
+- les anciennes bases valides produites par BRES Clés restent compatibles ;
+- la limite des 5 prises les plus récentes reste inchangée.
+
+Test renforcé : LOCAL_DB_IMPORT_SCHEMA_GUARD_TEST_R73.
+Catalogue : 5 103 références uniques attendues ; les 10 morceaux catalogue doivent rester bit-identiques à R40/R72.
+Sécurité : V2.27 reste stable sur main. R73 reste uniquement une version de test sur la branche v2.28-test-r1.
+
+===== PATCH_R73.txt =====
+BRES CLÉS V2.28 TEST R73 — PATCH CIBLÉ R72 → R73
+
+index.html
+- validImportedTemplateSignature() refuse désormais les mesures non physiques, les chaînes numériques et les valeurs normalisées hors [0,1].
+- largeur/hauteur/aire bornées à un domaine volontairement large mais compatible avec les signatures réellement produites.
+- tableaux top/bot/texture/colFill plafonnés à 512 valeurs pour éviter une base locale pathologiquement lourde.
+
+Tests
+- local_db_import_schema_guard_test.py couvre maintenant largeur négative, aire nulle, largeur énorme, contour hors plage, tableau >512 et chaînes numériques.
+- toutes les suites existantes restent actives.
+
+Catalogue
+- registre R73 séparé ; aucune modification des 10 morceaux catalog-01.js à catalog-10.js.
+
+===== LOCAL_DB_IMPORT_SCHEMA_GUARD_TEST_R73.txt =====
+BRES CLÉS V2.28 TEST R73 — VALIDATION SCHÉMA IMPORT BASE ÉTALON
+
+OK  défaut R67 reproduit : un objet JSON mal structuré pouvait franchir la validation d’import
+OK  R73 valide chaque signature avant toute écriture dans localStorage
+OK  samples doit être un tableau de signatures exploitables
+OK  les bases héritées avec sig unique restent compatibles
+OK  les collisions de références après normalisation sont refusées
+OK  une épaisseur invalide est refusée
+OK  un import de plus de 5 prises conserve uniquement les 5 plus récentes
+OK  dimensions négatives, nulles ou physiquement absurdes refusées
+OK  contours/profils hors domaine [0,1] et tableaux surdimensionnés refusés
+OK  chaînes numériques refusées : les mesures doivent rester de vrais nombres JSON
+OK  aucune base invalide n’est écrite avant la fin de la validation
+
+SELFTEST OK
+
+===== BUILD_MANIFEST_SUMMARY_R73.json =====
+{
+  "ok": true,
+  "version": "V2.28 TEST R73",
+  "catalog_count": 5103,
+  "unique_refs": 5103,
+  "catalogue_chunks_identical_to_r40": true,
+  "files_hashed": 2184,
+  "errors": [],
+  "tests_ok": 40,
+  "tests_total": 40
+}
+
+===== CATALOGUE_SOURCE_CONTINUITY_R73.txt =====
+BRES CLÉS V2.28 TEST R73 — CONTINUITÉ SOURCE CATALOGUE
+
+OK  catalog-01.js  e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b
+OK  catalog-02.js  955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75
+OK  catalog-03.js  9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210
+OK  catalog-04.js  14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942
+OK  catalog-05.js  5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b
+OK  catalog-06.js  b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac
+OK  catalog-07.js  b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1
+OK  catalog-08.js  3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814
+OK  catalog-09.js  4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f
+OK  catalog-10.js  f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4
+
+10/10 morceaux identiques à R72/R40 : OUI
+Références attendues : 5 103 uniques.
+Aucune donnée catalogue modifiée par R73.
+
+===== CATALOGUE_EVIDENCE_R73.txt =====
+BRES CLÉS V2.28 TEST R73 — PREUVE CATALOGUE SÉPARÉE
+
+Objet du jalon application : validation physique et bornage des signatures de la base étalon locale importée.
+Données catalogue : aucune modification des 10 chunks catalog-01.js à catalog-10.js.
+Registre de sécurité R73 : local_template_signature_physical_bounds_required=true ; local_template_signature_array_length_bounded=true.
+Le snapshot catalogue est construit et vérifié séparément de l’application.
+
+===== SOURCE_HASHES_R73.txt =====
+BRES CLES V2.28 TEST R73 — SOURCE HASHES
+
+672983f7499020927a48c28ce7d4d14bec139b61d9ef59b99518d05d94c6fb02  index.html
+b7ed415acbc2b11004c27a58e1781c7dff58a7a37da03735ecfeaa899d8a93cc  v228-catalogue.js
+097bd838f0852c5c425b8421faacf88b4351068353a591bb24beee71798e2690  LISEZ-MOI.txt
+7e4558c289a379efec0eb94e6ba874a73f0ad57153c33590ac41a3503eaf0d8e  verify_build.py
+afeaff02c9d82cfc44bc0353305b065a672e2329963c393031b46b1ed4b1ccc7  version_consistency_test.py
+e7876035b60ff9ae239bcef95f4f23e99ae8b5249129985d73319071ff0493c2  catalogue_namespace_registry_test.py
+0c15352a41b77513719efd4bf660663617cb30ab7ae8ab8abe5eb54bbf65b09b  local_db_import_schema_guard_test.py
+2be45e93e4d6bccc0916dd1ab768201f51e431a18b85afc3db5c6a5738c13d09  local_storage_availability_guard_test.py
+4646232e658c3ceb398ac48b696411d320937071431d981399b2a01853707497  local_storage_external_change_guard_test.py
+b373b0791e3eb7c09c8fc174d182e132668fe13964239cfe7d63d8d73eda60a2  catalogue/evidence/cross_reference_registry_r73.json
+
+===== RELEASE_SHA256_R73.txt =====
+43eeb1963ed35efbb366561a0cf607303de20005e56889a7186e8dc668edccb9  BRES_Cles_Catalogue_Snapshot_R73.zip
+6caa0cc4ea2dfdbe7a7f64a08c7220f7c2f021ddb6f612bbb9d6fc8e73822452  BRES_Cles_Mobile_V2_28_TEST_R73.zip
+
+===== LOCAL_RELEASE_VERIFICATION_R73.txt =====
+BRES CLÉS V2.28 TEST R73 — VÉRIFICATION LOCALE DES ARCHIVES
+
+Application : OK
+- archive ZIP : structure valide (unzip -t)
+- réextraction dans un dossier propre : OK
+- version : V2.28 TEST R73
+- catalogue : 5103 références / 5103 uniques
+- suites : 40/40 réussies
+- fichiers contrôlés : 2184
+- erreurs : 0
+
+Catalogue séparé : OK
+- archive ZIP : structure valide (unzip -t)
+- réextraction dans un dossier propre : OK
+- catalogue : 5103 références / 5103 uniques
+- 10 morceaux catalogue identiques à R40/R72 : OUI
+- erreurs : 0
+
+SHA-256 :
+6caa0cc4ea2dfdbe7a7f64a08c7220f7c2f021ddb6f612bbb9d6fc8e73822452  BRES_Cles_Mobile_V2_28_TEST_R73.zip
+43eeb1963ed35efbb366561a0cf607303de20005e56889a7186e8dc668edccb9  BRES_Cles_Catalogue_Snapshot_R73.zip
+
+Résultat : OK — archives locales vérifiées avant sauvegarde Library.
+
+===== LIBRARY_ROUNDTRIP_VERIFICATION_R73.txt =====
+BRES CLÉS V2.28 TEST R73 — VÉRIFICATION ALLER-RETOUR LIBRARY
+
+BRES_Cles_Mobile_V2_28_TEST_R73.zip
+- SHA local   : 6caa0cc4ea2dfdbe7a7f64a08c7220f7c2f021ddb6f612bbb9d6fc8e73822452
+- SHA Library : 6caa0cc4ea2dfdbe7a7f64a08c7220f7c2f021ddb6f612bbb9d6fc8e73822452
+- identiques  : OUI
+
+BRES_Cles_Catalogue_Snapshot_R73.zip
+- SHA local   : 43eeb1963ed35efbb366561a0cf607303de20005e56889a7186e8dc668edccb9
+- SHA Library : 43eeb1963ed35efbb366561a0cf607303de20005e56889a7186e8dc668edccb9
+- identiques  : OUI
+
+Réextraction de la copie Library : OK
+Application : V2.28 TEST R73 — 40/40 suites, 5103/5103 références, 2184 fichiers contrôlés, 0 erreur.
+Catalogue séparé : V2.28 TEST R73 catalogue snapshot — 5103/5103 références, chunks R40 identiques=True, 0 erreur.
+
+Résultat : OK — les deux archives sauvegardées dans Library sont bit à bit identiques aux archives locales et repassent leurs vérifications après réextraction.
