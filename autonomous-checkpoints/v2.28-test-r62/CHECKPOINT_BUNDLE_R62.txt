@@ -1,0 +1,162 @@
+===== CHECKPOINT_R62.txt =====
+BRES CLÉS — CHECKPOINT V2.28 TEST R62
+
+Objet : empêcher qu'un apprentissage lancé avec une référence étalon soit enregistré sous une référence devenue obsolète pendant l'analyse géométrique asynchrone.
+
+Défaut reproduit en R61 :
+- l'action « Enregistrer cet étalon » lisait teachRef avant analyseCurrent() ;
+- si currentSig n'était pas encore disponible, analyseCurrent() pouvait attendre le décodage et l'analyse des deux photos ;
+- pendant cette attente, le champ teachRef pouvait être modifié sans invalider l'opération ;
+- au retour, R61 enregistrait malgré tout la signature sous la référence capturée au départ, alors que l'interface pouvait désormais afficher une autre référence ;
+- cela pouvait contaminer la base d'étalons locale avec une association référence/signature non intentionnelle.
+
+Correctif R62 :
+- ajout d'un teachReferenceEpoch dédié ;
+- toute modification du champ teachRef incrémente cette époque ;
+- l'action d'apprentissage fige l'époque et la référence avant l'analyse asynchrone ;
+- avant toute lecture/écriture de la base locale, R62 vérifie que l'époque et la valeur normalisée du champ sont restées identiques ;
+- si elles ont changé, l'enregistrement est annulé et un message visible demande de relancer explicitement l'apprentissage ;
+- ajout du test dédié TEACH_REFERENCE_ASYNC_GUARD_TEST_R62.
+
+Catalogue : 5 103 références uniques attendues ; les 10 morceaux de données catalogue restent strictement inchangés par rapport à R40/R61.
+Sécurité : V2.27 reste stable sur main. R62 reste uniquement une version de test sur la branche v2.28-test-r1.
+
+===== CODE_CHANGE_R62.txt =====
+BRES CLÉS V2.28 TEST R62 — RÉSUMÉ DU CORRECTIF
+
+- Ajout d'une époque dédiée teachReferenceEpoch dans le shell principal.
+- Toute modification de la référence étalon invalide un apprentissage asynchrone déjà lancé.
+- Avant setDB(), la référence et son époque sont revérifiées après analyseCurrent().
+- Une référence modifiée pendant l'analyse provoque une annulation visible et exige une nouvelle validation utilisateur.
+- Les données catalogue restent inchangées.
+- La V2.27 stable n'est pas modifiée.
+
+===== DEFECT_REPRO_R61_TO_R62.txt =====
+BRES CLÉS V2.28 TEST R62 — REPRODUCTION DU DÉFAUT R61
+
+1. Partir sans currentSig pré-calculé afin que « Enregistrer cet étalon » lance analyseCurrent().
+2. Saisir une référence A dans teachRef et lancer l'enregistrement.
+3. Pendant le décodage/analyse des photos, remplacer teachRef par une référence B (ou A→B→A).
+4. En R61, teachRef n'incrémente pas identificationEpoch et la valeur capturée au départ reste utilisée après await.
+5. La signature peut donc être enregistrée sous A malgré une modification intervenue pendant l'opération.
+
+R62 introduit teachReferenceEpoch et revérifie aussi la valeur normalisée du champ après await, avant toute écriture de la base locale.
+
+===== TEACH_REFERENCE_ASYNC_GUARD_TEST_R62.txt =====
+BRES CLÉS V2.28 TEST R62 — GARDE ASYNCHRONE RÉFÉRENCE ÉTALON
+
+OK  la référence étalon possède une époque dédiée
+OK  toute modification du champ invalide l’enregistrement lancé
+OK  l’époque est figée avant l’analyse géométrique asynchrone
+OK  le retour asynchrone compare époque + valeur courante avant sauvegarde
+OK  aucune écriture base ne précède la garde
+OK  annulation visible demandant une relance explicite
+
+SELFTEST OK
+
+===== TEST_SUMMARY_R62.txt =====
+BRES CLÉS V2.28 TEST R62 — RÉSUMÉ DE VÉRIFICATION
+
+Application : OK
+- version : V2.28 TEST R62
+- catalogue : 5103 références / 5103 uniques
+- suites de tests : 31/31 réussies
+- fichiers contrôlés lors du passage complet : 1397
+- erreurs : []
+- garde asynchrone référence étalon : OK
+- garde mainPhotoEpoch profil : OK
+- données catalogue inchangées R40/R61 : OUI
+
+Défaut R61 corrigé : une modification de teachRef pendant l'analyse géométrique ne peut plus aboutir à un enregistrement sous une référence capturée avant la modification.
+
+===== CATALOGUE_SOURCE_CONTINUITY_R62.txt =====
+BRES CLÉS V2.28 TEST R62 — CONTINUITÉ SOURCE CATALOGUE
+
+OK  catalog-01.js  e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b
+OK  catalog-02.js  955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75
+OK  catalog-03.js  9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210
+OK  catalog-04.js  14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942
+OK  catalog-05.js  5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b
+OK  catalog-06.js  b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac
+OK  catalog-07.js  b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1
+OK  catalog-08.js  3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814
+OK  catalog-09.js  4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f
+OK  catalog-10.js  f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4
+
+10/10 morceaux identiques à R61/R40 : OUI
+Références attendues : 5 103 uniques.
+Aucune donnée catalogue modifiée par R62.
+
+===== SOURCE_HASHES_R62.txt =====
+BRES CLÉS V2.28 TEST R62 — SHA-256 DES SOURCES ACTIVES
+
+c522eec66f1a3e30a12c089e315103b5e44352b950b6a6c2899834687cf65719  index.html
+aa5c407fe1567898b74856352cf651978e76942c79f39f1c74363167ccc515bb  v228-catalogue.js
+995e6a349a8b0661c2b26d4e35e68c8661932db50f68541056b257f90bf8d336  verify_build.py
+ec4ea99f41e5b294862e04413eed70d0a52824e348209995e4a683312666c1f7  version_consistency_test.py
+697b2a09259b430b3d58d37e80abf3286dc8e9b15560638ca7ab2369d96e6b1f  teach_reference_async_guard_test.py
+2e42a6f18c6713e0b4d692540e8ac09a4af166706faf620aab28560fec6ce07a  profile_main_photo_epoch_guard_test.py
+cec5057961eb7c8066bd65df0b1c43ae53581745b4e3d39886a3d35f869bd4f3  CHECKPOINT.txt
+cec5057961eb7c8066bd65df0b1c43ae53581745b4e3d39886a3d35f869bd4f3  CHECKPOINT_R62.txt
+3928b12473b997b93bf35771f2b7d77034136ce8403beacecc208ed30972d2c2  PATCH_R62.txt
+cfda9ab5a60a6546335301eda472b02e852fc30fa1fbc6306adf8eec71353d13  CODE_CHANGE_R62.txt
+6c4354567074584ce33eda34642cbb6798d018cb4b01f86f2daee41ee7d0efab  DEFECT_REPRO_R61_TO_R62.txt
+8a2d9b10556190bdcb56cb525081c8f7b2ea30ab6c5ec04cee2172f080562542  CATALOGUE_SOURCE_CONTINUITY_R62.txt
+83bfe20e65f5c0aed4796781d8a6d684d6ce346cc70facc9c07de471058f5694  CATALOGUE_EVIDENCE_R62.txt
+3d1b6778320ccc2c78ce4d639e090913d171d4910e3050f66ba10a810f6c933c  catalogue/evidence/cross_reference_registry_r62.json
+e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b  catalogue/v3/catalog-01.js
+955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75  catalogue/v3/catalog-02.js
+9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210  catalogue/v3/catalog-03.js
+14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942  catalogue/v3/catalog-04.js
+5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b  catalogue/v3/catalog-05.js
+b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac  catalogue/v3/catalog-06.js
+b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1  catalogue/v3/catalog-07.js
+3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814  catalogue/v3/catalog-08.js
+4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f  catalogue/v3/catalog-09.js
+f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4  catalogue/v3/catalog-10.js
+
+===== CATALOGUE_SNAPSHOT_VERIFICATION.txt =====
+{
+  "ok": true,
+  "version": "V2.28 TEST R62 catalogue snapshot",
+  "catalog_count": 5103,
+  "unique_refs": 5103,
+  "chunks_identical_to_r40": true,
+  "chunk_hashes": {
+    "catalog-01.js": "e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b",
+    "catalog-02.js": "955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75",
+    "catalog-03.js": "9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210",
+    "catalog-04.js": "14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942",
+    "catalog-05.js": "5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b",
+    "catalog-06.js": "b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac",
+    "catalog-07.js": "b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1",
+    "catalog-08.js": "3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814",
+    "catalog-09.js": "4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f",
+    "catalog-10.js": "f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4"
+  },
+  "files_hashed": 23,
+  "errors": []
+}
+
+===== RELEASE_SHA256_R62.txt =====
+5c5e8dfd255807a400d73684058fb090f1d9ae4bb9d15f8efab807b996d381e9  /mnt/data/bres_r62_work/release/BRES_Cles_Mobile_V2_28_TEST_R62.zip
+9a235b9f9162c4c668cf0dc6ba40a578c7a87d3f804545bd0c4d5fc9a2684ce2  /mnt/data/bres_r62_work/release/BRES_Cles_Catalogue_Snapshot_R62.zip
+
+===== LIBRARY_ROUNDTRIP_VERIFICATION_R62.txt =====
+BRES CLÉS V2.28 TEST R62 — VÉRIFICATION ALLER-RETOUR LIBRARY
+
+Dossier : /BRES Cles/Sauvegardes
+
+Application ZIP :
+- SHA-256 original : 5c5e8dfd255807a400d73684058fb090f1d9ae4bb9d15f8efab807b996d381e9
+- SHA-256 rematérialisé : 5c5e8dfd255807a400d73684058fb090f1d9ae4bb9d15f8efab807b996d381e9
+- identité binaire : OK
+- extraction + verify_build.py : OK (5103 références, 31/31 suites, 1397 fichiers contrôlés, errors=[])
+
+Catalogue ZIP :
+- SHA-256 original : 9a235b9f9162c4c668cf0dc6ba40a578c7a87d3f804545bd0c4d5fc9a2684ce2
+- SHA-256 rematérialisé : 9a235b9f9162c4c668cf0dc6ba40a578c7a87d3f804545bd0c4d5fc9a2684ce2
+- identité binaire : OK
+- extraction + verify_snapshot.py : OK (5103 références, 24 fichiers contrôlés, errors=[])
+
+Verdict : les deux sauvegardes Library sont bit-identiques aux ZIP de release et restent vérifiables après rematérialisation.
