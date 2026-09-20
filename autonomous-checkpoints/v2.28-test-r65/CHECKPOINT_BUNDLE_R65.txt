@@ -1,0 +1,206 @@
+===== CHECKPOINT_R65.txt =====
+BRES CLÉS — CHECKPOINT V2.28 TEST R65
+
+Objet : invalider immédiatement les résultats d’identification dépendants de la base locale après ajout ou modification d’un étalon.
+
+Défaut reproduit en R64 :
+- une comparaison pouvait afficher un gagnant local calculé avec la base d’étalons A ;
+- l’utilisateur pouvait ensuite enregistrer une nouvelle prise d’étalon ou ajouter une nouvelle référence locale ;
+- R64 écrivait correctement la nouvelle base mais laissait les anciens candidats et la décision précédente visibles ;
+- l’écran pouvait donc présenter une conclusion calculée avant la modification de la base active.
+
+Correctif R65 :
+- après chaque écriture réussie d’un étalon local, invalidateLocalTemplateDependentResults() est appelée ;
+- les correspondances locales, la décision finale, le visuel catalogue et les équivalences précédentes sont remis en attente ;
+- currentSig est conservée puisque les photos principales n’ont pas changé ;
+- une référence manuelle reste conservée mais doit être revérifiée ;
+- le statut d’apprentissage demande explicitement de relancer la comparaison ;
+- aucune équivalence n’est republiée automatiquement après l’invalidation ;
+- ajout du test LOCAL_TEMPLATE_WRITE_INVALIDATION_TEST_R65 avec reproduction du comportement R64 puis validation du correctif R65.
+
+Catalogue : 5 103 références uniques attendues ; les 10 morceaux de données catalogue restent strictement inchangés par rapport à R40/R64.
+Sécurité : V2.27 reste stable sur main. R65 reste uniquement une version de test sur la branche v2.28-test-r1.
+
+===== PATCH_R65.txt =====
+BRES CLÉS V2.28 TEST R65 — PATCH CIBLÉ R64 → R65
+
+index.html
+- Version active et cache-busting : R64/r64 → R65/r65.
+- Après db[ref]=rec;setDB(db), appel de invalidateLocalTemplateDependentResults().
+- L’ancien gagnant local et toute décision dépendante de la base précédente sont effacés immédiatement.
+- currentSig et une saisie manuelle restent disponibles pour relancer la comparaison sans refaire les photos.
+- Suppression de showXref(ref) après apprentissage afin de ne pas republier une preuve partielle juste après l’invalidation.
+- Le message de succès d’apprentissage exige explicitement une nouvelle comparaison.
+
+Tests
+- nouveau local_template_write_invalidation_test.py ;
+- reproduction du défaut R64 : ancien gagnant TE8D encore visible après ajout/modification de la base locale ;
+- validation R65 : résultat local effacé, décision remise en attente et recomparaison obligatoire ;
+- total attendu : 34 suites.
+
+Catalogue
+- registre R65 séparé avec politique local_template_write_result_invalidation_required=true ;
+- aucune donnée des 10 morceaux catalogue n’est modifiée.
+
+===== CODE_CHANGE_R65.txt =====
+BRES CLÉS V2.28 TEST R65 — CHANGEMENT CODE
+
+Zone modifiée : apprentissage local dans index.html.
+
+Avant R65 :
+  db[ref]=rec;setDB(db);
+  statut succès;
+  showXref(ref);
+
+R65 :
+  db[ref]=rec;setDB(db);
+  invalidateLocalTemplateDependentResults("Étalon local enregistré : relancez la comparaison avant d’utiliser un résultat.");
+  statut succès + demande de recomparaison;
+
+Effet : toute conclusion locale calculée avant l’écriture d’un étalon est invalidée immédiatement. Les données photos/géométrie ne sont pas supprimées.
+
+===== DEFECT_REPRO_R64_TO_R65.txt =====
+BRES CLÉS — REPRODUCTION DÉFAUT R64 → CORRECTION R65
+
+Scénario reproduit :
+1. avec la base locale A, une comparaison affiche « TE8D — 91 % » ;
+2. enregistrer un nouvel étalon ou ajouter une nouvelle référence locale ;
+3. sans relancer la comparaison, observer l’écran.
+
+R64 :
+- la nouvelle base est correctement écrite dans localStorage ;
+- l’ancien gagnant local reste pourtant affiché ;
+- l’écran peut donc présenter un résultat calculé avec l’état précédent de la base.
+
+R65 :
+- la nouvelle base est écrite ;
+- les candidats calculés avant l’écriture sont immédiatement retirés ;
+- décision finale, visuel et équivalences sont remis en attente ;
+- currentSig et la saisie manuelle restent disponibles ;
+- il suffit de relancer la comparaison.
+
+Preuve exécutable : local_template_write_invalidation_test.py et LOCAL_TEMPLATE_WRITE_INVALIDATION_TEST_R65.json/.txt.
+
+===== LOCAL_TEMPLATE_WRITE_INVALIDATION_TEST_R65.txt =====
+BRES CLÉS V2.28 TEST R65 — INVALIDATION APRÈS ÉCRITURE D’UN ÉTALON LOCAL
+
+OK  défaut R64 reproduit : un ancien gagnant local pouvait rester affiché après ajout/modification d’un étalon
+OK  R65 invalide les correspondances locales immédiatement après l’écriture de la nouvelle base
+OK  décision finale, visuel catalogue et équivalences sont remis en attente de revérification
+OK  currentSig et la saisie manuelle restent disponibles pour une nouvelle comparaison
+OK  le succès d’apprentissage demande explicitement de relancer la comparaison
+OK  aucune équivalence n’est republiée automatiquement après l’invalidation
+
+SELFTEST OK
+
+===== BUILD_MANIFEST_SUMMARY_R65.json =====
+{
+  "ok": true,
+  "version": "V2.28 TEST R65",
+  "catalog_count": 5103,
+  "unique_refs": 5103,
+  "catalogue_chunks_identical_to_r40": true,
+  "local_template_write_invalidation_ok": true,
+  "tests_ok": 34,
+  "tests_total": 34,
+  "files_hashed": 1588,
+  "errors": []
+}
+
+===== CATALOGUE_SOURCE_CONTINUITY_R65.txt =====
+BRES CLÉS V2.28 TEST R65 — CONTINUITÉ SOURCE CATALOGUE
+
+OK  catalog-01.js  e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b
+OK  catalog-02.js  955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75
+OK  catalog-03.js  9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210
+OK  catalog-04.js  14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942
+OK  catalog-05.js  5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b
+OK  catalog-06.js  b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac
+OK  catalog-07.js  b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1
+OK  catalog-08.js  3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814
+OK  catalog-09.js  4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f
+OK  catalog-10.js  f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4
+
+10/10 morceaux identiques à R64/R40 : OUI
+Références attendues : 5 103 uniques.
+Aucune donnée catalogue modifiée par R65.
+
+===== CATALOGUE_EVIDENCE_R65.txt =====
+BRES CLÉS V2.28 TEST R65 — PREUVE CATALOGUE SÉPARÉE
+
+Objet du jalon application : invalidation des résultats locaux après ajout ou modification d’un étalon.
+Données catalogue : aucune modification des 10 chunks catalog-01.js à catalog-10.js.
+Registre de sécurité R65 : local_template_write_result_invalidation_required=true.
+Le snapshot catalogue est construit et vérifié séparément de l’application.
+
+===== SOURCE_HASHES_R65.txt =====
+BRES CLES V2.28 TEST R65 — SOURCE HASHES
+
+da8f6c9430a5cdc5eb2586d0c2c1f43508a91a6e0d7ef87de4ba883182a3f065  index.html
+726eceab606e8f28f0eb4c005e4f277ddd3b01c02ac8c5568f60286afb25f6a7  v228-catalogue.js
+6d706102b82b2b6a1955053a7e0a57351e2ceb389f71d67018f68799e97d286e  LISEZ-MOI.txt
+6932402bba6400da2c629a0dd7b2064a8bde20967ea0c7aedbfb3986849da4b4  verify_build.py
+799b96e0f892e7fd97ac1a438d1f07c0df6d28af31aba95e13dc24d942c4f7cb  version_consistency_test.py
+53479b845c1c9f0e325aac0915713cd3151d069297dbcaf008d9f88b0484dd6c  catalogue_namespace_registry_test.py
+98859095c87260575bec6a9f208953a3349a91deb35b0b81be85fb5a92f4bf39  import_async_guard_test.py
+04a3c5810da9049183ed2cb1f8c988ebd7184a39175e17c3786bb9ddf0d67e46  local_db_import_invalidation_test.py
+2f03bf9d1673e7cf471b1244687eb58c05242cb9333b7dd99d07e5a7263ef287  local_template_write_invalidation_test.py
+c6f5432853de4161d66c39de30b737eb4ac9e452344c99a50bf2f0b62602d58b  teach_reference_async_guard_test.py
+cc0cc8e7d30ca06d0501e1cd8008568681d1fa9b127fbe4b17b90af308e70786  CHECKPOINT.txt
+dccb74911eed208495d386e9fecbc5435dbd050348c676a9bcd89600135b0089  PATCH_R65.txt
+f5695e4eb82c78b8ec17a3a5981a0c4891f566485bb463fd054e504d75612cc8  CODE_CHANGE_R65.txt
+78b1cc92ac48e81d8c897115f21fa297f1b19c707098f68f717d81787ef98089  DEFECT_REPRO_R64_TO_R65.txt
+1b4316f0a4eea87e32ab6f3d6792c44a5ba911e76a2e8067c9124bd182b75b2e  CATALOGUE_SOURCE_CONTINUITY_R65.txt
+01175ca8c2416365d8a6f8db07f03142bb4359752a21ac476c4d802c3e49b668  CATALOGUE_EVIDENCE_R65.txt
+bb6b5c5cfb5f9f6aca608b0bbd5f89941c428dcb4271fa9dc2126e52608ceb35  catalogue/evidence/cross_reference_registry_r65.json
+
+===== RELEASE_SHA256_R65.txt =====
+987284668fc3b6236072540c89154ad63f6ce72459d5722d1f4719d9a5531c5d  /mnt/data/bres_r65_work/release/BRES_Cles_Catalogue_Snapshot_R65.zip
+561e3249081595e8bb5486fd4c53e2cd57549275c32b75e6f39796bb93ff8542  /mnt/data/bres_r65_work/release/BRES_Cles_Mobile_V2_28_TEST_R65.zip
+
+===== RELEASE_VERIFICATION_R65.txt =====
+BRES CLÉS V2.28 TEST R65 — VÉRIFICATION RELEASE EXTRAITE
+
+Application extraite : OK
+- version : V2.28 TEST R65
+- catalogue : 5103 références / 5103 uniques
+- suites : 34/34
+- fichiers contrôlés : 1590
+- erreurs : []
+
+Snapshot catalogue extrait : OK
+- version : V2.28 TEST R65 catalogue snapshot
+- catalogue : 5103 références / 5103 uniques
+- chunks identiques à R40 : True
+- fichiers contrôlés : 22
+- erreurs : []
+
+===== LIBRARY_ROUNDTRIP_VERIFICATION_R65.txt =====
+BRES CLÉS V2.28 TEST R65 — VÉRIFICATION ALLER-RETOUR LIBRARY
+
+Dossier : /BRES Cles/Sauvegardes
+
+Application ZIP :
+- SHA-256 original : 561e3249081595e8bb5486fd4c53e2cd57549275c32b75e6f39796bb93ff8542
+- SHA-256 rematérialisé : 561e3249081595e8bb5486fd4c53e2cd57549275c32b75e6f39796bb93ff8542
+- identité binaire : OK
+- extraction + verify_build.py : OK (5103 références, 34/34 suites, 1590 fichiers contrôlés, errors=[])
+
+Snapshot catalogue ZIP :
+- SHA-256 original : 987284668fc3b6236072540c89154ad63f6ce72459d5722d1f4719d9a5531c5d
+- SHA-256 rematérialisé : 987284668fc3b6236072540c89154ad63f6ce72459d5722d1f4719d9a5531c5d
+- identité binaire : OK
+- extraction + verify_snapshot.py : OK (5103 références / 5103 uniques, 10 chunks identiques à R40=True, 22 fichiers contrôlés, errors=[])
+
+===== R64_DEFECT_PROBE_R65.json =====
+{
+  "milestone": "R64 defect probe for R65",
+  "scenario": "write/add local template after a local candidate is already visible",
+  "checks": {
+    "teach_writes_db": true,
+    "teach_invalidates_local_match_results": false,
+    "teach_republishes_xref_after_write": true
+  },
+  "stale_result_risk": "a candidate calculated with the previous local-template DB can remain visible after DB mutation",
+  "defect_reproduced": true
+}
