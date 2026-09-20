@@ -1,0 +1,202 @@
+===== CHECKPOINT_R66.txt =====
+BRES CLÉS — CHECKPOINT V2.28 TEST R66
+
+Objet : garantir que seule la dernière action OCR demandée puisse publier un résultat, même lorsque plusieurs lectures utilisent les mêmes photos.
+
+Défaut reproduit en R65 :
+- l’analyse OCR principale et la recherche OCR par photos rapprochées de tête utilisaient uniquement identificationEpoch ;
+- deux actions lancées successivement sans changement de photo partageaient donc le même epoch ;
+- si la première action, plus lente, terminait après la seconde, elle pouvait encore publier sa progression, sa référence et sa décision et écraser le résultat de l’action la plus récente.
+
+Correctif R66 :
+- ajout d’un compteur partagé ocrRequestEpoch ;
+- runOCR() et searchFromHeadPhotos() appellent beginOCRRequest() au démarrage d’une lecture réelle ;
+- bestOCR() vérifie maintenant à la fois l’epoch des entrées et l’epoch de requête OCR ;
+- progression Tesseract, retours intermédiaires, erreurs et résultats finaux d’une ancienne requête sont ignorés ;
+- la garde est partagée entre OCR principal et OCR tête, ce qui impose une règle unique « dernière demande gagnante » ;
+- ajout du test OCR_REQUEST_ORDER_GUARD_TEST_R66 avec reproduction déterministe du comportement R65 puis validation R66.
+
+Catalogue : 5 103 références uniques attendues ; les 10 morceaux de données catalogue restent strictement inchangés par rapport à R40/R65.
+Sécurité : V2.27 reste stable sur main. R66 reste uniquement une version de test sur la branche v2.28-test-r1.
+
+===== PATCH_R66.txt =====
+BRES CLÉS V2.28 TEST R66 — PATCH CIBLÉ R65 → R66
+
+index.html
+- Version active et cache-busting : R65/r65 → R66/r66.
+- Nouveau compteur partagé ocrRequestEpoch.
+- beginOCRRequest() attribue un numéro monotone à chaque nouvelle lecture OCR.
+- ocrRequestIsCurrent() exige simultanément la même requête OCR et le même identificationEpoch.
+- bestOCR() reçoit expectedRequestEpoch et protège progression Tesseract + résultats intermédiaires.
+- runOCR() et searchFromHeadPhotos() partagent ce même compteur : démarrer l’un invalide l’autre s’il est encore en attente.
+- Les guards après chaque await et dans les catch utilisent la garde combinée.
+
+Tests
+- nouveau ocr_request_order_guard_test.py ;
+- adaptation des tests d’epoch/publication UI et de sélection bestOCR à la nouvelle garde combinée ;
+- reproduction R65 : deux requêtes mêmes photos restaient toutes deux publiables ;
+- validation R66 : la plus récente reste publiable, l’ancienne est rejetée.
+
+Catalogue
+- registre R66 séparé avec politique ocr_cross_flow_latest_request_wins_required=true ;
+- aucune donnée des 10 morceaux catalogue n’est modifiée.
+
+===== CODE_CHANGE_R66.txt =====
+BRES CLÉS V2.28 TEST R66 — CHANGEMENT CODE
+
+Avant R66 :
+- identificationEpoch protégeait correctement les changements de photos / saisies ;
+- mais deux lectures OCR successives sur les mêmes entrées avaient le même epoch et pouvaient toutes deux publier.
+
+R66 :
+  beginOCRRequest() -> {requestEpoch, identificationEpoch}
+  ocrRequestIsCurrent(requestEpoch, identificationEpoch)
+
+Les deux entrées OCR, principale et photos de tête, utilisent le même compteur. bestOCR() applique la garde à la progression Tesseract et à chaque retour asynchrone.
+
+Effet : une requête OCR plus ancienne ne peut plus écraser l’écran après qu’une nouvelle lecture a été demandée.
+
+===== DEFECT_REPRO_R65_TO_R66.txt =====
+BRES CLÉS — REPRODUCTION DÉFAUT R65 → CORRECTION R66
+
+Scénario reproduit :
+1. sur les mêmes photos, lancer une première lecture OCR A ;
+2. avant la fin de A, lancer une seconde lecture OCR B (par exemple la recherche sur photos de tête) ;
+3. B termine et publie son résultat ;
+4. A termine plus tard.
+
+R65 :
+- A et B ont le même identificationEpoch ;
+- la garde photo considère encore A comme valide ;
+- A peut donc republier après B et remplacer la dernière décision demandée.
+
+R66 :
+- A reçoit requestEpoch 1, B reçoit requestEpoch 2 ;
+- B reste valide ;
+- dès le lancement de B, A échoue ocrRequestIsCurrent() ;
+- progression, résultats et erreurs tardifs de A sont ignorés.
+
+Preuve exécutable : ocr_request_order_guard_test.py et OCR_REQUEST_ORDER_GUARD_TEST_R66.json/.txt.
+
+===== OCR_REQUEST_ORDER_GUARD_TEST_R66.txt =====
+BRES CLÉS V2.28 TEST R66 — ORDRE DES REQUÊTES OCR
+
+OK  défaut R65 reproduit : deux lectures sur les mêmes photos partageaient le même identificationEpoch
+OK  runOCR et la recherche par photos de tête partagent un compteur de requête OCR
+OK  une nouvelle lecture invalide immédiatement toute lecture OCR précédente encore en attente
+OK  la requête la plus récente reste autorisée
+OK  progression Tesseract et résultats bestOCR obéissent au même garde
+
+SELFTEST OK
+
+===== BUILD_MANIFEST_SUMMARY_R66.json =====
+{
+  "ok": true,
+  "version": "V2.28 TEST R66",
+  "catalog_count": 5103,
+  "unique_refs": 5103,
+  "catalogue_chunks_identical_to_r40": true,
+  "ocr_request_order_guard_ok": true,
+  "tests_ok": 35,
+  "tests_total": 35,
+  "files_hashed": 1664,
+  "errors": []
+}
+
+===== CATALOGUE_SOURCE_CONTINUITY_R66.txt =====
+BRES CLÉS V2.28 TEST R66 — CONTINUITÉ SOURCE CATALOGUE
+
+OK  catalog-01.js  e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b
+OK  catalog-02.js  955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75
+OK  catalog-03.js  9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210
+OK  catalog-04.js  14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942
+OK  catalog-05.js  5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b
+OK  catalog-06.js  b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac
+OK  catalog-07.js  b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1
+OK  catalog-08.js  3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814
+OK  catalog-09.js  4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f
+OK  catalog-10.js  f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4
+
+10/10 morceaux identiques à R65/R40 : OUI
+Références attendues : 5 103 uniques.
+Aucune donnée catalogue modifiée par R66.
+
+===== CATALOGUE_EVIDENCE_R66.txt =====
+BRES CLÉS V2.28 TEST R66 — PREUVE CATALOGUE SÉPARÉE
+
+Objet du jalon application : ordre des requêtes OCR concurrentes ; dernière demande gagnante.
+Données catalogue : aucune modification des 10 chunks catalog-01.js à catalog-10.js.
+Registre de sécurité R66 : ocr_cross_flow_latest_request_wins_required=true.
+Le snapshot catalogue est construit et vérifié séparément de l’application.
+
+===== SOURCE_HASHES_R66.txt =====
+BRES CLES V2.28 TEST R66 — SOURCE HASHES
+
+1005262922f07a6ca6dae170090be4368aa67e0948166911a716cc149764c040  index.html
+b9ef5773f2019b06547df4de19292e3cdbdeab3e18c7538dde18395346975f44  v228-catalogue.js
+842372ff8dceacafa9570844503288ad874e0f46d8f922f700fd98d9d1ad1aa4  LISEZ-MOI.txt
+6f3b46c7c7f55899eec67cef6f4f65574dbf514517104d2cae206c443275f69f  verify_build.py
+de4e5a56fd1518d9efe402eeb71af445c170a855dea3c11ff6b8d8a4873951a4  version_consistency_test.py
+b744dfcad2e14c8f90195e7df2960eb5a598fca591878f13dd90a0bc3abbce4e  catalogue_namespace_registry_test.py
+679c544ecea0eebec3e4e4f12d74efb21e06872bb00052a0160d88a0d2212c6e  async_state_epoch_guard_test.py
+75258d1f8802563dab9ab34efe93ba260a61252d633f7b7a799399f49e8f7e3b  async_ui_publication_guard_test.py
+a7d2d1a995539079af9cfe4b1b6761e1a05f428abdf63fc65951333421cee6b6  ocr_best_selection_test.py
+b1762b813db9bccbbeaa84a5e605c02329fe7d00e47ad0527e7cf5a78e1dd435  ocr_request_order_guard_test.py
+6cc9a3677feedac2ffe1843425f0f7ea00cf29bc2ee850487465107476963062  CHECKPOINT.txt
+1f2f1080bef0c37b526e02a95ba6563e46357e58c0b45a7acf46aff837e15301  PATCH_R66.txt
+edc08ccffca993a0b898ddbd3124ad6ddaaf3c772f69fbeb4e6b4fd756ba2f47  CODE_CHANGE_R66.txt
+8b3b481f745d63f990b4900d382dd90a6902c141040c728f2b15d75d5a564c03  DEFECT_REPRO_R65_TO_R66.txt
+68856c0ce174beb95e6c3e208100bf36c1e1f0f8c2f80b57e6c043479c7cbdd9  CATALOGUE_SOURCE_CONTINUITY_R66.txt
+e2710983a0a62284cd3ff3402e059e22e47cca372866342ef33a349744382e70  CATALOGUE_EVIDENCE_R66.txt
+e0b6bcf576738c23cad9f8e9daaf3a9cf68295bef7ec7ebea6603399c05a56bb  catalogue/evidence/cross_reference_registry_r66.json
+
+===== RELEASE_SHA256_R66.txt =====
+44ef3b5f6e26b5e74b1444ed7bf25735887e42fdfee1d65ef2c9b4483fa5dc87  BRES_Cles_Catalogue_Snapshot_R66.zip
+ca02f6406c56c41dd4df0263c1b9c1a103ec315a7e4bb5b5c0c079fc64fad2f8  BRES_Cles_Mobile_V2_28_TEST_R66.zip
+
+===== RELEASE_VERIFICATION_R66.txt =====
+BRES CLÉS V2.28 TEST R66 — VÉRIFICATION RELEASE EXTRAITE
+
+Application extraite : OK
+- version : V2.28 TEST R66
+- catalogue : 5103 références / 5103 uniques
+- suites : 35/35
+- fichiers contrôlés : 1666
+- erreurs : []
+
+Snapshot catalogue extrait : OK
+- version : V2.28 TEST R66 catalogue snapshot
+- catalogue : 5103 références / 5103 uniques
+- chunks identiques à R40 : True
+- fichiers contrôlés : 22
+- erreurs : []
+
+===== LIBRARY_ROUNDTRIP_VERIFICATION_R66.txt =====
+BRES CLÉS V2.28 TEST R66 — VÉRIFICATION ALLER-RETOUR LIBRARY
+
+Dossier : /BRES Cles/Sauvegardes
+
+Application ZIP :
+- SHA-256 original : ca02f6406c56c41dd4df0263c1b9c1a103ec315a7e4bb5b5c0c079fc64fad2f8
+- SHA-256 rematérialisé : ca02f6406c56c41dd4df0263c1b9c1a103ec315a7e4bb5b5c0c079fc64fad2f8
+- identité binaire : OK
+- extraction + verify_build.py : OK (5103 références, 35/35 suites, 1666 fichiers contrôlés, errors=[])
+
+Snapshot catalogue ZIP :
+- SHA-256 original : 44ef3b5f6e26b5e74b1444ed7bf25735887e42fdfee1d65ef2c9b4483fa5dc87
+- SHA-256 rematérialisé : 44ef3b5f6e26b5e74b1444ed7bf25735887e42fdfee1d65ef2c9b4483fa5dc87
+- identité binaire : OK
+- extraction + verify_snapshot.py : OK (5103 références / 5103 uniques, 10 chunks identiques à R40=True, 22 fichiers contrôlés, errors=[])
+
+===== R65_DEFECT_PROBE_R66.json =====
+{
+  "milestone": "R65 defect probe for R66",
+  "scenario": "start OCR A then OCR B on unchanged photos; B completes before A",
+  "checks": {
+    "r65_guard_was_photo_epoch_only": true,
+    "same_photos_meant_same_identification_epoch": true,
+    "older_request_could_publish_after_newer_request": true,
+    "main_and_head_ocr_shared_no_request_order_token": true
+  },
+  "defect_reproduced": true
+}
