@@ -1,0 +1,118 @@
+===== CHECKPOINT_R68.txt =====
+BRES CLÉS — CHECKPOINT V2.28 TEST R68
+
+Objet : empêcher qu’un fichier JSON mal structuré mais syntaxiquement valide remplace la base locale d’étalons puis provoque des erreurs de comparaison.
+
+Défaut reproduit en R67 :
+- l’import vérifiait seulement que le JSON racine était un objet ;
+- une entrée telle que {"TE8D":{"samples":"oops"}} était donc acceptée et écrite dans localStorage ;
+- la comparaison locale pouvait ensuite itérer une valeur incompatible et échouer sur une signature non exploitable.
+
+Correctif R68 :
+- validation de chaque enregistrement avant toute écriture ;
+- samples doit être un tableau de signatures géométriques valides ;
+- chaque signature exige width_mm, height_mm, area, top et bot valides ;
+- texture/colFill et bladeFill/headFill sont contrôlés lorsqu’ils sont présents ;
+- les bases historiques utilisant un champ sig unique restent compatibles ;
+- les références sont normalisées et les collisions après normalisation sont refusées ;
+- une épaisseur présente doit être numérique et strictement positive ;
+- un import comportant plus de 5 prises conserve les 5 plus récentes ;
+- la base active n’est remplacée qu’après validation complète.
+
+Test ajouté : LOCAL_DB_IMPORT_SCHEMA_GUARD_TEST_R68.
+Catalogue : 5 103 références uniques attendues ; les 10 morceaux de données catalogue restent strictement inchangés par rapport à R40/R67.
+Sécurité : V2.27 reste stable sur main. R68 reste uniquement une version de test sur la branche v2.28-test-r1.
+
+===== PATCH_R68.txt =====
+BRES CLÉS V2.28 TEST R68 — PATCH CIBLÉ R67 → R68
+
+index.html
+- ajout de validImportedTemplateSignature() ;
+- ajout de normalizeImportedTemplateDB() ;
+- l’import valide et normalise la base avant setDB() ;
+- rejet des samples non-tableaux, signatures incomplètes, épaisseurs invalides et collisions de références normalisées ;
+- compatibilité maintenue avec les anciennes bases utilisant rec.sig ;
+- rotation importée limitée aux 5 prises les plus récentes.
+
+Tests
+- nouveau local_db_import_schema_guard_test.py ;
+- reproduction du défaut R67 ;
+- exécution directe des helpers R68 sous Node sur cas valides et invalides.
+
+Catalogue
+- registre R68 séparé avec local_db_import_schema_validation_required=true ;
+- aucune donnée des 10 morceaux catalogue n’est modifiée.
+
+===== LOCAL_DB_IMPORT_SCHEMA_GUARD_TEST_R68.txt =====
+BRES CLÉS V2.28 TEST R68 — VALIDATION SCHÉMA IMPORT BASE ÉTALON
+
+OK  défaut R67 reproduit : un objet JSON mal structuré pouvait franchir la validation d’import
+OK  R68 valide chaque signature avant toute écriture dans localStorage
+OK  samples doit être un tableau de signatures exploitables
+OK  les bases héritées avec sig unique restent compatibles
+OK  les collisions de références après normalisation sont refusées
+OK  une épaisseur invalide est refusée
+OK  un import de plus de 5 prises conserve uniquement les 5 plus récentes
+OK  aucune base invalide n’est écrite avant la fin de la validation
+
+SELFTEST OK
+
+===== BUILD_MANIFEST_SUMMARY_R68.json =====
+{
+  "ok": true,
+  "version": "V2.28 TEST R68",
+  "catalog_count": 5103,
+  "unique_refs": 5103,
+  "catalogue_chunks_identical_to_r40": true,
+  "tests_ok": 37,
+  "tests_total": 37,
+  "files_hashed": 1809,
+  "errors": []
+}
+
+===== CATALOGUE_SOURCE_CONTINUITY_R68.txt =====
+BRES CLÉS V2.28 TEST R68 — CONTINUITÉ SOURCE CATALOGUE
+
+OK  catalog-01.js  e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b
+OK  catalog-02.js  955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75
+OK  catalog-03.js  9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210
+OK  catalog-04.js  14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942
+OK  catalog-05.js  5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b
+OK  catalog-06.js  b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac
+OK  catalog-07.js  b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1
+OK  catalog-08.js  3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814
+OK  catalog-09.js  4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f
+OK  catalog-10.js  f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4
+
+10/10 morceaux identiques à R67/R40 : OUI
+Références attendues : 5 103 uniques.
+Aucune donnée catalogue modifiée par R68.
+
+===== CATALOGUE_EVIDENCE_R68.txt =====
+BRES CLÉS V2.28 TEST R68 — PREUVE CATALOGUE SÉPARÉE
+
+Objet du jalon application : validation de schéma avant import de la base locale d’étalons.
+Données catalogue : aucune modification des 10 chunks catalog-01.js à catalog-10.js.
+Registre de sécurité R68 : local_db_import_schema_validation_required=true.
+Le snapshot catalogue est construit et vérifié séparément de l’application.
+
+===== SOURCE_HASHES_R68.txt =====
+BRES CLES V2.28 TEST R68 — SOURCE HASHES
+
+20103114ad3640ef2908e67a37fc60fb6a2a4d7bf3d098b6dc17a1d3a7dcfa8f  index.html
+94728726f3d8c6e1724265d416d7545fcc5e85f5d306e58c2692ec626e03ea7a  v228-catalogue.js
+b6990fc25343a03044e55dd7a6589f8e5b98c86afc46d7447b5917fe419bc5ca  LISEZ-MOI.txt
+ab8f3e0f3259fc47af02efec71f4d19c2ba431bb8946817cb31d6b193326c4c1  verify_build.py
+bcd99fba9aa859231fe324cb1958131f2638a25433272c112777f36843844e33  version_consistency_test.py
+5538437212a360f764ad13f791dff16d836f3c03f3bd1e5eb07eb0f57f20c85c  catalogue_namespace_registry_test.py
+8496f6c411b94d4c0cc7bed6b159cb5785f6997ae8d5ea24c92d17417c01ca89  ronis_code_series_guard_test.py
+028ed90776c0a51b2ce70df81cfd0335e46e72fab8f8c0e27c3a0b2ba4fb800d  local_db_import_schema_guard_test.py
+15ce9a109a5a55d4f715795192ff8b058ceafcc26f5e30001aade9911e54ff8b  local_template_duplicate_guard_test.py
+cb0ffca5d3fcf8d49691895f039b559a40a9c75512168fd0d216852428266199  import_async_guard_test.py
+1c6cc4d4dc30ef4702165110a3a47fdc0555981a5434fb894c109c0fc7d7e904  local_db_import_invalidation_test.py
+ca2867b6ad64f8536ab042bc8a1bf83c1fee2203fa69cab83803fedf48257d  ocr_request_order_guard_test.py
+193336d4d35cca429a9882603558769828431812178e900775ca41ff63118610  catalogue/evidence/cross_reference_registry_r68.json
+
+===== RELEASE_SHA256_R68.txt =====
+ce8c9ed7231fc39c503ed034958e0b3c2abae30a76558ac470c7d8bf4184e19d  BRES_Cles_Mobile_V2_28_TEST_R68.zip
+c9bb84b19b2accca5d839e67cd5b0cdb898d12173386d3dfb0328a7e251e2aac  BRES_Cles_Catalogue_Snapshot_R68.zip
