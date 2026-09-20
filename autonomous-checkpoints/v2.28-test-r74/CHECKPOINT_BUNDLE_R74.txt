@@ -1,0 +1,120 @@
+===== CHECKPOINT_R74.txt =====
+BRES CLÉS — CHECKPOINT V2.28 TEST R74
+
+Objet : empêcher toute publication tardive d’une analyse commencée avant une modification de la base locale d’étalons.
+
+Défaut reproduit en R73 :
+- un changement/import/enregistrement de la base locale effaçait bien les résultats déjà affichés ;
+- mais invalidateLocalTemplateDependentResults() ne changeait pas identificationEpoch ;
+- une analyse géométrique, une lecture OCR ou un apprentissage déjà en attente pouvait donc encore considérer son jeton comme courant et republier après l’invalidation.
+
+Correctif R74 :
+- toute invalidation liée à la base locale avance désormais identificationEpoch avant de modifier l’interface ;
+- les garde-fous asynchrones existants d’analyse, OCR et apprentissage voient immédiatement leur ancien jeton comme périmé ;
+- currentSig peut rester disponible car les photos n’ont pas changé, mais aucun travail démarré avec l’état précédent ne peut publier sans nouvelle action utilisateur ;
+- import local, écriture d’un étalon et événement storage externe passent tous par la même protection.
+
+Test ajouté : LOCAL_TEMPLATE_ASYNC_INVALIDATION_GUARD_TEST_R74.
+Catalogue : 5 103 références uniques attendues ; les 10 morceaux catalogue doivent rester bit-identiques à R40/R73.
+Sécurité : V2.27 reste stable sur main. R74 reste uniquement une version de test sur la branche v2.28-test-r1.
+
+===== PATCH_R74.txt =====
+BRES CLÉS V2.28 TEST R74 — PATCH CIBLÉ R73 → R74
+
+index.html
+- invalidateLocalTemplateDependentResults() avance désormais identificationEpoch avant toute invalidation visible.
+- une analyse/OCR/apprentissage démarré avant une modification de la base locale devient immédiatement obsolète.
+- la géométrie déjà calculée reste conservée quand les photos n’ont pas changé ; seule la publication tardive d’un travail ancien est interdite.
+
+Tests
+- nouveau local_template_async_invalidation_guard_test.py : couvre changement externe, import et écriture locale pendant un travail asynchrone.
+- toutes les suites existantes restent actives.
+
+Catalogue
+- registre R74 séparé ; aucune modification des 10 morceaux catalog-01.js à catalog-10.js.
+
+===== LOCAL_TEMPLATE_ASYNC_INVALIDATION_GUARD_TEST_R74.txt =====
+BRES CLÉS V2.28 TEST R74 — INVALIDATION ASYNCHRONE APRÈS MODIFICATION BASE ÉTALON
+
+OK  toute modification de la base étalon avance l’époque d’identification
+OK  une analyse géométrique lancée avant le changement ne peut plus publier ensuite
+OK  une lecture OCR lancée avant le changement ne peut plus publier ensuite
+OK  un apprentissage asynchrone lancé avant le changement est annulé proprement
+OK  import, écriture locale et changement externe passent par la même invalidation
+
+SELFTEST OK
+
+===== BUILD_MANIFEST_SUMMARY_R74.json =====
+{
+  "ok": true,
+  "version": "V2.28 TEST R74",
+  "catalog_count": 5103,
+  "unique_refs": 5103,
+  "catalogue_chunks_identical_to_r40": true,
+  "files_hashed": 2261,
+  "errors": [],
+  "tests_ok": 41,
+  "tests_total": 41
+}
+
+===== CATALOGUE_SOURCE_CONTINUITY_R74.txt =====
+BRES CLÉS V2.28 TEST R74 — CONTINUITÉ SOURCE CATALOGUE
+
+OK  catalog-01.js  e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b
+OK  catalog-02.js  955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75
+OK  catalog-03.js  9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210
+OK  catalog-04.js  14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942
+OK  catalog-05.js  5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b
+OK  catalog-06.js  b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac
+OK  catalog-07.js  b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1
+OK  catalog-08.js  3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814
+OK  catalog-09.js  4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f
+OK  catalog-10.js  f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4
+
+10/10 morceaux identiques à R73/R40 : OUI
+Références attendues : 5 103 uniques.
+Aucune donnée catalogue modifiée par R74.
+
+===== CATALOGUE_EVIDENCE_R74.txt =====
+BRES CLÉS V2.28 TEST R74 — PREUVE CATALOGUE SÉPARÉE
+
+Objet du jalon application : annulation des travaux asynchrones déjà lancés lorsqu’une base étalon locale est modifiée, importée ou changée dans un autre onglet.
+Données catalogue : aucune modification des 10 chunks catalog-01.js à catalog-10.js.
+Registre de sécurité R74 : local_template_change_cancels_inflight_identification_required=true.
+Le snapshot catalogue est construit et vérifié séparément de l’application.
+
+===== SOURCE_HASHES_R74.txt =====
+BRES CLES V2.28 TEST R74 — SOURCE HASHES
+
+9727daab181dbb82b8ac915cb8ee4f34d824c6cf97b28b6c147c8a38fb2acae3  index.html
+4c5ca10048b2303518f2e7ace1121cd0131208968f6dcaaad2bf7573aed5b799  v228-catalogue.js
+ad122214c707b2895b619bec9957a05a62b8ec7fa127b5bee566776131b537bb  LISEZ-MOI.txt
+3dafa2a1ce70302ea22d9e42c99b6f682eb5f0976200a9e74f4cf51be1cf4143  verify_build.py
+e04eda112fcc89d56e7b899be486416c58e3d6159baf225ddc73907ac0ed139c  version_consistency_test.py
+230a0396fb1ff03991bdedfe973255c37323a99a77e783b1740481fecc5aa6f6  catalogue_namespace_registry_test.py
+4e253f29d5b3741085ee7c8d411eba030cfe6d2c99c1f7c317ede7f9d947c5e8  local_db_import_schema_guard_test.py
+8f7c3d570a1bd3740279960030851a9e54e65440dde9bc1e7554686f8f4cdb31  local_storage_availability_guard_test.py
+c6018c8e3f7736d26f3345106fb0cc050c73780acbd9e68344798888c8e19411  local_storage_external_change_guard_test.py
+438585f06c2d08d0c9b1dbf6f06f14d5ed966a2614f8433dbb1dec03e73f53de  local_template_async_invalidation_guard_test.py
+fd9b40ef9df7154a42b75b5fb820f11f0361313566bf3a9e148012e549316603  catalogue/evidence/cross_reference_registry_r74.json
+25c80ca4ab9540ea85b6b3d9739e1a23c32099315989ec12706caf2bea0caf34  CATALOGUE_SOURCE_CONTINUITY_R74.txt
+e199a88ec87f527fdaf4cb84407c4d28e2f636ef21ff107414f01fd880154b52  CATALOGUE_EVIDENCE_R74.txt
+
+===== RELEASE_SHA256_R74.txt =====
+34f64e1faac24766c7eeb5c6931316bfdb642bf0a3c60c9284c778e23e7bf3e0  BRES_Cles_Catalogue_Snapshot_R74.zip
+a416cf9694bec4e00a1179ec831448b68d83d61358da722a02836d806c990b53  BRES_Cles_Mobile_V2_28_TEST_R74.zip
+
+===== LOCAL_AND_LIBRARY_VERIFICATION_R74.txt =====
+BRES CLÉS V2.28 TEST R74 — VÉRIFICATION ARCHIVES ET LIBRARY
+
+Archive application locale : OK — 41/41 suites, 5103/5103 références, 2261 fichiers contrôlés, 0 erreur.
+Archive catalogue séparée : OK — 5103/5103 références, 10 chunks identiques à R40/R73, 0 erreur.
+
+Aller-retour Library /BRES Cles/Sauvegardes :
+- BRES_Cles_Mobile_V2_28_TEST_R74.zip : SHA local = SHA Library = a416cf9694bec4e00a1179ec831448b68d83d61358da722a02836d806c990b53
+- BRES_Cles_Catalogue_Snapshot_R74.zip : SHA local = SHA Library = 34f64e1faac24766c7eeb5c6931316bfdb642bf0a3c60c9284c778e23e7bf3e0
+- réextraction des deux copies Library : OK
+- nouveau verify_build.py sur copie Library : 41/41, 0 erreur
+- nouveau verify_snapshot.py sur copie Library : 5103/5103, chunks R40 identiques=True, 0 erreur
+
+Résultat : OK — les deux sauvegardes Library sont bit à bit identiques aux archives locales et repassent leurs vérifications après réextraction.
