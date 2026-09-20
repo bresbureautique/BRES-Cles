@@ -1,0 +1,30 @@
+BRES CLÉS — CHECKPOINT V2.28 TEST R81
+
+Objet : sécuriser le cycle export → réimport de la base étalon sans modifier le catalogue.
+
+Défaut reproduit en R80 :
+- les neuf mesures connues d’une signature étaient correctement validées ;
+- mais une signature JSON pouvait contenir en plus des propriétés arbitraires non utilisées par l’algorithme ;
+- ces propriétés étaient conservées par import, stockage, export puis réimport ;
+- un champ volumineux pouvait donc gonfler inutilement localStorage et contourner l’intention des limites appliquées aux tableaux connus.
+
+Correctif R81 :
+- allowlist stricte des neuf champs de signature réellement utilisés : width_mm, height_mm, area, top, bot, texture, colFill, bladeFill, headFill ;
+- tout champ de signature inconnu fait échouer l’import avant setDB ;
+- les bases canoniques restent stables sur plusieurs cycles normalisation → export JSON → réimport ;
+- l’ancien format avec un seul champ sig reste compatible et se normalise vers samples ;
+- l’épaisseur facultative et la date ISO restent conservées ;
+- aucun changement des 10 morceaux catalogue.
+
+Vérification application : OK — 47/47 suites, 5 103/5 103 références uniques, 2 860 fichiers contrôlés, 0 erreur.
+Vérification catalogue séparé : OK — 5 103/5 103 références, 10/10 chunks bit-identiques à R40/R80, 0 erreur.
+Vérification Library : les deux ZIP ont été rematérialisés, comparés bit à bit aux originaux, réextraits et retestés avec succès.
+
+SHA-256 archive application : 162cd0cae8b4b57f848d43087770727b3bb99574ac2fefc15a8b474cfa516d52
+SHA-256 snapshot catalogue : a64fc8e9e9bb195a93f08713b599ee29ff1a25055358967bb230b8377e0ef32b
+
+Registre R81 :
+- local_template_signature_known_fields_only_required=true
+- local_db_roundtrip_guard_required=true
+
+Sécurité : V2.27 reste stable sur main ; R81 reste uniquement sur v2.28-test-r1.
