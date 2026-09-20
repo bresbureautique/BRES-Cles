@@ -1,0 +1,215 @@
+===== CHECKPOINT_R63.txt =====
+BRES CLÉS — CHECKPOINT V2.28 TEST R63
+
+Objet : empêcher qu’un ancien import asynchrone de la base locale d’étalons remplace un fichier plus récent lorsque les lectures de fichiers se terminent dans le désordre.
+
+Défaut reproduit en R62 :
+- l’action d’import lisait directement le fichier courant puis attendait file.text() ;
+- aucune session/époque d’import n’était figée avant cette attente ;
+- si un fichier A lent était choisi puis un fichier B plus récent, B pouvait finir et être enregistré en premier ;
+- lorsque A finissait ensuite, R62 exécutait quand même setDB(A) et remplaçait la base B pourtant sélectionnée plus récemment ;
+- une erreur provenant de A pouvait aussi republier « Import impossible » après la réussite de B.
+
+Correctif R63 :
+- ajout de importFileEpoch dédié ;
+- chaque changement du sélecteur d’import incrémente cette époque et fige l’objet File sélectionné ;
+- après la lecture asynchrone et juste avant setDB(), R63 exige que l’époque et l’objet File soient toujours ceux de la sélection active ;
+- le chemin d’erreur applique la même garde, donc un ancien import ne peut plus écraser le statut d’un import plus récent ;
+- validation minimale du JSON : la racine doit être un objet et non un tableau ;
+- ajout du test dédié IMPORT_ASYNC_GUARD_TEST_R63 avec reproduction simulée de la course R62 puis validation de la garde R63.
+
+Catalogue : 5 103 références uniques attendues ; les 10 morceaux de données catalogue restent strictement inchangés par rapport à R40/R62.
+Sécurité : V2.27 reste stable sur main. R63 reste uniquement une version de test sur la branche v2.28-test-r1.
+
+===== CODE_CHANGE_R63.txt =====
+BRES CLÉS V2.28 TEST R63 — CHANGEMENT CODE
+
+Zone modifiée : import de la base locale d’étalons dans index.html.
+
+Avant R63 :
+  await fichier.text(); JSON.parse(...); setDB(...)
+aucune vérification ne liait le retour asynchrone au fichier encore sélectionné.
+
+R63 :
+  const epoch=++importFileEpoch, input=..., file=input.files[0];
+  await file.text();
+  if(epoch!==importFileEpoch || input.files[0]!==file) return;
+  JSON.parse(...);
+  if(epoch!==importFileEpoch || input.files[0]!==file) return;
+  setDB(...);
+
+Le catch applique la même garde. Une ancienne lecture ne peut donc plus remplacer la base issue d’une sélection plus récente ni afficher un statut obsolète.
+
+===== PATCH_R63.txt =====
+BRES CLÉS V2.28 TEST R63 — PATCH CIBLÉ R62 → R63
+
+index.html
+- Version active et cache-busting : R62/r62 → R63/r63.
+- État global : ajout de importFileEpoch=0.
+- Import base locale :
+  - fige input + File + époque avant await file.text() ;
+  - vérifie l’époque et l’identité du File après lecture ;
+  - vérifie de nouveau juste avant setDB() ;
+  - protège aussi le chemin catch contre un ancien statut d’erreur ;
+  - refuse une racine JSON vide, non objet ou tableau.
+
+Tests
+- nouveau import_async_guard_test.py ;
+- reproduction simulée du défaut R62 : B finit avant A, puis A écrase B ;
+- simulation R63 : seule la sélection la plus récente B est écrite ;
+- total attendu : 32 suites.
+
+verify_build.py / version_consistency_test.py
+- passage du jalon actif à R63 ;
+- ajout du test et de l’audit IMPORT_ASYNC_GUARD_TEST_R63 ;
+- contrôles de syntaxe et de cohérence de version maintenus.
+
+v228-catalogue.js / registre catalogue
+- étiquettes actives et cache-busting alignés sur R63 ;
+- politique documentaire local_base_import_async_guard_required=true ;
+- aucune donnée des 10 morceaux catalogue n’est modifiée.
+
+===== DEFECT_REPRO_R62_TO_R63.txt =====
+BRES CLÉS — REPRODUCTION DÉFAUT R62 → CORRECTION R63
+
+Scénario reproduit :
+1. sélectionner « ancienne-base-A.json », dont la lecture prend 35 ms ;
+2. 1 ms plus tard, sélectionner « nouvelle-base-B.json », dont la lecture prend 5 ms ;
+3. B finit en premier et est enregistrée ;
+4. A finit ensuite.
+
+Comportement R62 simulé :
+- ordre des écritures : nouvelle-base-B, puis ancienne-base-A ;
+- état final incorrect : ancienne-base-A.
+
+Comportement R63 simulé :
+- la sélection B incrémente importFileEpoch ;
+- le retour tardif de A constate une époque/identité de fichier obsolète et s’arrête ;
+- ordre des écritures : nouvelle-base-B uniquement ;
+- état final correct : nouvelle-base-B.
+
+Preuve exécutable : import_async_guard_test.py et IMPORT_ASYNC_GUARD_TEST_R63.json/.txt.
+
+===== IMPORT_ASYNC_GUARD_TEST_R63.txt =====
+BRES CLÉS V2.28 TEST R63 — GARDE ASYNCHRONE IMPORT BASE LOCALE
+
+OK  course R62 reproduite : B finit puis A finit plus tard et écrase B
+OK  époque dédiée incrémentée à chaque nouvelle sélection
+OK  le fichier sélectionné est figé avant la lecture asynchrone
+OK  garde après lecture et avant JSON.parse
+OK  seconde garde juste avant setDB : aucune ancienne base ne peut écraser la plus récente
+OK  une erreur provenant d’un ancien import ne remplace pas le statut du nouveau
+OK  simulation R63 : seule la nouvelle base B est écrite
+
+SELFTEST OK
+
+===== TEST_SUMMARY_R63.txt =====
+BRES CLÉS V2.28 TEST R63 — RÉSUMÉ DES TESTS
+
+Version : V2.28 TEST R63
+Catalogue : 5103 références / 5103 uniques
+Suites réussies : 32/32
+Fichiers contrôlés : 1458
+Catalogue 10 morceaux identique à R40 : True
+Garde import asynchrone : True
+Erreurs : 0
+
+SELFTEST OK
+
+===== CATALOGUE_SOURCE_CONTINUITY_R63.txt =====
+BRES CLÉS V2.28 TEST R63 — CONTINUITÉ SOURCE CATALOGUE
+
+OK  catalog-01.js  e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b
+OK  catalog-02.js  955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75
+OK  catalog-03.js  9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210
+OK  catalog-04.js  14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942
+OK  catalog-05.js  5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b
+OK  catalog-06.js  b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac
+OK  catalog-07.js  b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1
+OK  catalog-08.js  3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814
+OK  catalog-09.js  4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f
+OK  catalog-10.js  f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4
+
+10/10 morceaux identiques à R62/R40 : OUI
+Références attendues : 5 103 uniques.
+Aucune donnée catalogue modifiée par R63.
+
+===== SOURCE_HASHES_R63.txt =====
+BRES CLES V2.28 TEST R63 — SOURCE HASHES
+
+c7ab7ca01e54c25f5cd5a7b29e9d03c99eba70a11eef3cf8c3abe9a5644204d4  index.html
+33d7d0b6cd6c32f0bad5f0920d995dab91db6abe141998993e46ecb6b0ec64a2  v228-catalogue.js
+40be6a691921882b3973697358014f2da2683116bd37af4f0da6a0f42c95d3c5  LISEZ-MOI.txt
+f68a3045929f0aec512b62e12c5543cbc0ae056c0cec8a344fdef9a5262223bb  verify_build.py
+94403893ff907e81e5a8b64be2c057e23820ee5fbcf01939a8679c92108a9bf7  version_consistency_test.py
+77804976986f1af7ea9ff47a05d02e10c4f46258135c9591f222854af7e5e86a  catalogue_namespace_registry_test.py
+6a419e3a59e26a14a3a5fea79f72afb20caaaf6a502c71368adfbfdfc940b26e  import_async_guard_test.py
+96c917e9cdb63b9e0a9a925927368c6e645a0689112f905d1fed7ed5ccc2260b  teach_reference_async_guard_test.py
+24914d5ef04af47f991e559f353849945d0d0443ef41445357ce3d720dd82709  profile_main_photo_epoch_guard_test.py
+d078d7094da3bfbd34f492d8b5f63b6ab8dd8a004e523f3f829cf87cb24bc745  CHECKPOINT.txt
+da22fb2b600972a8ffab9de096706fbbaaea8e2724c48add0eacd328417d4b7f  PATCH_R63.txt
+eb50f9d7f3dc55334e8d8a4d7b01559f141440fe3a2ddee2193c8ab73663c9a9  CODE_CHANGE_R63.txt
+3a6b6c8df5fb8085583d1270317410f096d92eab19a93af1c013e1c6824b426b  DEFECT_REPRO_R62_TO_R63.txt
+c5743cae1519f94ebad3249bd9c66da8a070a6d32a997b70f759b3071994ecc5  CATALOGUE_SOURCE_CONTINUITY_R63.txt
+5aa0954e051940d5d45454b2c7a99ef02a2e0651d9aa88e73cc75f5247c56c48  CATALOGUE_EVIDENCE_R63.txt
+ff3cc8e6eeed41515ef802642d35775113310753285d180d6b368d748ebafb52  catalogue/evidence/cross_reference_registry_r63.json
+
+===== BUILD_MANIFEST_SUMMARY_R63.json =====
+{
+  "ok": true,
+  "version": "V2.28 TEST R63",
+  "catalog_count": 5103,
+  "unique_refs": 5103,
+  "catalogue_chunks_identical_to_r40": true,
+  "import_async_guard_ok": true,
+  "files_hashed": 1458,
+  "errors": [],
+  "tests_ok": 32,
+  "tests_total": 32
+}
+
+===== CATALOGUE_SNAPSHOT_VERIFICATION.txt =====
+{
+  "ok": true,
+  "version": "V2.28 TEST R63 catalogue snapshot",
+  "catalog_count": 5103,
+  "unique_refs": 5103,
+  "chunks_identical_to_r40": true,
+  "chunk_hashes": {
+    "catalog-01.js": "e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b",
+    "catalog-02.js": "955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75",
+    "catalog-03.js": "9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210",
+    "catalog-04.js": "14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942",
+    "catalog-05.js": "5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b",
+    "catalog-06.js": "b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac",
+    "catalog-07.js": "b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1",
+    "catalog-08.js": "3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814",
+    "catalog-09.js": "4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f",
+    "catalog-10.js": "f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4"
+  },
+  "files_hashed": 22,
+  "errors": []
+}
+
+===== RELEASE_SHA256_R63.txt =====
+5fa9293c10a839a5f09ca1a9a6996c2aaec2353c5325c7991bec056d147fbee5  /mnt/data/bres_r63_work/release/BRES_Cles_Catalogue_Snapshot_R63.zip
+5342b6ea4b9abd9bca52c15525a25503be334c7bbd15fac6b88993f897f229d0  /mnt/data/bres_r63_work/release/BRES_Cles_Mobile_V2_28_TEST_R63.zip
+
+===== LIBRARY_ROUNDTRIP_VERIFICATION_R63.txt =====
+BRES CLÉS V2.28 TEST R63 — VÉRIFICATION ALLER-RETOUR LIBRARY
+
+Dossier : /BRES Cles/Sauvegardes
+
+Application ZIP :
+- SHA-256 original : 5342b6ea4b9abd9bca52c15525a25503be334c7bbd15fac6b88993f897f229d0
+- SHA-256 rematérialisé : 5342b6ea4b9abd9bca52c15525a25503be334c7bbd15fac6b88993f897f229d0
+- identité binaire : OK
+- extraction + verify_build.py : OK (5103 références, 32/32 suites, 1460 fichiers contrôlés)
+
+Snapshot catalogue ZIP :
+- SHA-256 original : 5fa9293c10a839a5f09ca1a9a6996c2aaec2353c5325c7991bec056d147fbee5
+- SHA-256 rematérialisé : 5fa9293c10a839a5f09ca1a9a6996c2aaec2353c5325c7991bec056d147fbee5
+- identité binaire : OK
+- extraction + verify_snapshot.py : OK (5103 références, 5103 uniques, morceaux R40 identiques=True)
+
+VERIFICATION ALLER-RETOUR : OK
