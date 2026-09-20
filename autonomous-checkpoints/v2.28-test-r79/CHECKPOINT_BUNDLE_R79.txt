@@ -91,7 +91,7 @@ OK  catalog-08.js  3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a
 OK  catalog-09.js  4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f
 OK  catalog-10.js  f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4
 
-10/10 morceaux identiques à R77/R40 : OUI
+10/10 morceaux identiques à R78/R40 : OUI
 Références attendues : 5 103 uniques.
 Aucune donnée catalogue modifiée par R79.
 
@@ -100,26 +100,24 @@ R79 : aucune donnée catalogue modifiée ; durcissement limité au schéma de la
 ===== CATALOGUE_EVIDENCE_R79.txt =====
 BRES CLÉS V2.28 TEST R79 — PREUVE CATALOGUE SÉPARÉE
 
-Objet du jalon application : empêcher une annulation/sélection vide du sélecteur d’import de perturber un import local déjà en cours.
+Objet du jalon application : durcir la validation de thickness_mm dans les bases étalons locales importées.
 Données catalogue : aucune modification des 10 chunks catalog-01.js à catalog-10.js.
-Registre de sécurité R79 : local_base_import_picker_cancel_preserves_active_import_required=true.
+Registre de sécurité R79 : local_template_thickness_real_number_required=true et local_template_thickness_max_mm=20.
 Le snapshot catalogue est construit et vérifié séparément de l’application.
-
-R79 : aucune donnée catalogue modifiée ; durcissement limité au schéma de la base étalon locale (thickness_mm).
 
 ===== SOURCE_HASHES_R79.txt =====
 BRES CLÉS V2.28 TEST R79 — SHA256 SOURCES ACTIVES
 
-bd08a31b36471bd1612915db74110a578449148188727f2fba7e7bb9b2625b1f  index.html
-f68f3d27c9a7ba6c0b0c59158f230ba8e50d452083f07d6d6d24d8cdfe3d4ec6  v228-catalogue.js
-53a3899341201f410b38fd83cfe69d8923cf54e780c7c1cfd95117ec904601bb  local_db_import_schema_guard_test.py
-f1329442689f8daf4b38f69e80a442b257ae81111c83fe76df7f88b3d2e8fa22  version_consistency_test.py
-c4e5dcbb3f93825256421ea2f3627d2c398725176b7e98f11c4c05c74fe9ea58  verify_build.py
-11923e90dc95978341e3a99ddb620f1dd8be1bd0fd2a7344717897862d1292b5  catalogue/evidence/cross_reference_registry_r79.json
+48a6fbc0e12767e9cf7c3a3d2faf5ffc741f712899a5a668022721ebf6bd2026  index.html
+04b1b28bca93cc4ea70a4c03af38e58a7f6d24f91aa8da5d1de640e1698c4e21  v228-catalogue.js
+55f43c413420c8c54ee87767904d9e225682cab2fe678c678443839126bfb686  local_db_import_schema_guard_test.py
+f9fce97105a293670bf76e2ca2e56449a5b37a6c3175e36e012b83ce45de330d  version_consistency_test.py
+27191caa9e9cd8bd4c5cfa9e11a2ce934c25a7819f3c476fd2acdd18addf597f  verify_build.py
+526e95443ed1f29373e2292afc40f36716439201ad3b55a6e6c38de3a1057779  catalogue/evidence/cross_reference_registry_r79.json
 
 ===== RELEASE_SHA256_R79.txt =====
-055cc635cc9b777e7360b78c6a547460fa879e4e63b546e42acf7cabfa45ddf9  BRES_Cles_Mobile_V2_28_TEST_R79.zip
-a53fe90f270bb70028bdf9668db096533674a49999b577bbd699f9da9874f76a  BRES_Cles_Catalogue_Snapshot_R79.zip
+d600dd68f4dafdf8023a71e0ba21e7927843dd4c8fb5197b127b2902010dfa14  BRES_Cles_Mobile_V2_28_TEST_R79.zip
+e5f7c71dc0660206559fa33589410f702464446a08c0dd8240d5dc70beadac67  BRES_Cles_Catalogue_Snapshot_R79.zip
 
 ===== LOCAL_RELEASE_VERIFICATION_R79.txt =====
 BRES CLÉS V2.28 TEST R79 — VÉRIFICATION ARCHIVES LOCALES
@@ -127,7 +125,7 @@ BRES CLÉS V2.28 TEST R79 — VÉRIFICATION ARCHIVES LOCALES
 Archive application : OK — 45/45 suites, 5103/5103 références, 0 erreur(s).
 Archive catalogue : OK — 5103/5103 références, chunks R40 identiques=True, 0 erreur(s).
 
-SHA-256 application : 055cc635cc9b777e7360b78c6a547460fa879e4e63b546e42acf7cabfa45ddf9
-SHA-256 catalogue : a53fe90f270bb70028bdf9668db096533674a49999b577bbd699f9da9874f76a
+SHA-256 application : d600dd68f4dafdf8023a71e0ba21e7927843dd4c8fb5197b127b2902010dfa14
+SHA-256 catalogue : e5f7c71dc0660206559fa33589410f702464446a08c0dd8240d5dc70beadac67
 
 Intégrité ZIP : OK. Réextraction et revérification : OK.
