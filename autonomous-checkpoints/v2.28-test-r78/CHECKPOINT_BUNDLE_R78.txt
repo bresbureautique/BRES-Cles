@@ -1,0 +1,118 @@
+===== CHECKPOINT_R78.txt =====
+BRES CLÉS — CHECKPOINT V2.28 TEST R78
+
+Objet : empêcher une annulation du sélecteur de fichier ou une sélection vide d’invalider silencieusement un import de base étalon déjà en cours.
+
+Défaut reproduit en R77 :
+- le gestionnaire onchange incrémentait importFileEpoch avant de vérifier qu’un fichier existait réellement ;
+- si un environnement remontait un changement avec files vide, l’import actif devenait obsolète puis quittait par stopStaleImport ;
+- aucun nouvel import ne prenait le relais et le statut « Import de … en cours… » pouvait rester affiché alors qu’aucune opération ne pouvait encore aboutir.
+
+Correctif R78 :
+- la présence réelle de input.files[0] est vérifiée avant toute incrémentation de importFileEpoch ;
+- une sélection vide devient un no-op et n’annule pas l’import actif ;
+- l’événement cancel du sélecteur est traité explicitement comme un no-op, conformément au comportement attendu des navigateurs modernes ;
+- les gardes R75/R76/R77 restent inchangées pour les vrais nouveaux fichiers, les écritures concurrentes, les erreurs et le réessai immédiat ;
+- aucun changement des 10 morceaux catalogue.
+
+Test ajouté : LOCAL_DB_IMPORT_PICKER_CANCEL_GUARD_TEST_R78.
+Catalogue : 5 103 références uniques attendues ; les 10 morceaux doivent rester bit-identiques à R40/R77.
+Sécurité : V2.27 reste stable sur main. R78 reste uniquement une version de test sur v2.28-test-r1.
+
+===== PATCH_R78.txt =====
+BRES CLÉS V2.28 TEST R78 — PATCH CIBLÉ R77 → R78
+
+index.html
+- contrôle de la présence du fichier avant ++importFileEpoch ;
+- sélection vide = no-op ;
+- ajout d’un gestionnaire oncancel volontairement sans mutation ;
+- conservation intégrale des gardes stopStaleImport, localTemplateEpoch et remise à zéro propriétaire.
+
+Tests
+- nouveau local_db_import_picker_cancel_guard_test.py ;
+- toutes les suites de régression précédentes restent actives.
+
+Catalogue
+- registre R78 séparé avec local_base_import_picker_cancel_preserves_active_import_required=true ;
+- aucune modification des 10 morceaux catalog-01.js à catalog-10.js.
+
+===== LOCAL_DB_IMPORT_PICKER_CANCEL_GUARD_TEST_R78.txt =====
+BRES CLÉS V2.28 TEST R78 — ANNULATION / SÉLECTION VIDE DU SÉLECTEUR D’IMPORT
+
+OK  défaut R77 reproduit : une sélection vide pouvait avancer l’époque et rendre l’import actif obsolète
+OK  R78 vérifie le fichier avant de modifier importFileEpoch
+OK  fermer/annuler le sélecteur est un no-op et ne remplace pas le statut de l’import actif
+OK  un vrai nouveau fichier continue d’avancer l’époque et de bénéficier des gardes anti-concurrence
+OK  la remise à zéro propriétaire R76 et les diagnostics R77 restent présents
+
+SELFTEST OK
+
+===== BUILD_MANIFEST_SUMMARY_R78.json =====
+{
+  "ok": true,
+  "version": "V2.28 TEST R78",
+  "catalog_count": 5103,
+  "unique_refs": 5103,
+  "catalogue_chunks_identical_to_r40": true,
+  "files_hashed": 2591,
+  "errors": [],
+  "tests_ok": 45,
+  "tests_total": 45,
+  "local_db_import_picker_cancel_guard_ok": true
+}
+
+===== CATALOGUE_SOURCE_CONTINUITY_R78.txt =====
+BRES CLÉS V2.28 TEST R78 — CONTINUITÉ SOURCE CATALOGUE
+
+OK  catalog-01.js  e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b
+OK  catalog-02.js  955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75
+OK  catalog-03.js  9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210
+OK  catalog-04.js  14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942
+OK  catalog-05.js  5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b
+OK  catalog-06.js  b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac
+OK  catalog-07.js  b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1
+OK  catalog-08.js  3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814
+OK  catalog-09.js  4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f
+OK  catalog-10.js  f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4
+
+10/10 morceaux identiques à R77/R40 : OUI
+Références attendues : 5 103 uniques.
+Aucune donnée catalogue modifiée par R78.
+
+===== CATALOGUE_EVIDENCE_R78.txt =====
+BRES CLÉS V2.28 TEST R78 — PREUVE CATALOGUE SÉPARÉE
+
+Objet du jalon application : empêcher une annulation/sélection vide du sélecteur d’import de perturber un import local déjà en cours.
+Données catalogue : aucune modification des 10 chunks catalog-01.js à catalog-10.js.
+Registre de sécurité R78 : local_base_import_picker_cancel_preserves_active_import_required=true.
+Le snapshot catalogue est construit et vérifié séparément de l’application.
+
+===== SOURCE_HASHES_R78.txt =====
+BRES CLES V2.28 TEST R78 — SOURCE HASHES
+4ed4960bab5287a20f62e62a068585da6c547c221db1a389faaafed3f01c8c9d  index.html
+d89d912f659e4ce58d088c352b0ccb518e45c9b8ccc027e68df4f335e5f0b32b  v228-catalogue.js
+eb4c32a0fc36b736208444892883d3fcd231f7c457e58218ed813aec1e0e4b09  LISEZ-MOI.txt
+3125c870dc9617427ef680324692698b2500ea49ec57a123b8913efaeb9a9de1  verify_build.py
+c302abcb7221b6562d43eaf359dd274c9db830fd6c6d82ba288172d9722e12c2  version_consistency_test.py
+808eadab3ee2ba51f6414aeb363e94f7e4c47815f46b102f3e713299ce036bdc  import_async_guard_test.py
+f3a30c58dd99382ca914ec2d88b15003d16ecfdb39aa5b99c81dda950c599836  local_db_import_picker_cancel_guard_test.py
+24212d8b0a3794e986177a105a908788e25e85aa328e8befb6d6e81cdda1cc2a  catalogue/evidence/cross_reference_registry_r78.json
+0f89564600e1487e3cfedbaeb5c2f24e696fc2922e66f9a942af2e45f092232b  CATALOGUE_SOURCE_CONTINUITY_R78.txt
+8c09f1b2cc18c8af909d77e2e2d755f8eaf8a8256a8e498ebc4a01bb323a0ac3  CATALOGUE_EVIDENCE_R78.txt
+7be05279a70740df7cd063449f26150ce558543ba41644e959f858f5c735b094  CHECKPOINT_R78.txt
+6c9dcf0fc1a00a72dd8688c2803bacd5c141453fdbb0f1f9746a30db21480d5f  PATCH_R78.txt
+
+===== RELEASE_SHA256_R78.txt =====
+3144c4ac48370d23caf979233afbf2197d59e49619bf5a2ce4d6707f3ad60295  BRES_Cles_Mobile_V2_28_TEST_R78.zip
+6aedf31235ce6e9f627b3a1fa697caa83269573722087dd5cb2d55969a027248  BRES_Cles_Catalogue_Snapshot_R78.zip
+
+===== LOCAL_RELEASE_VERIFICATION_R78.txt =====
+BRES CLÉS V2.28 TEST R78 — VÉRIFICATION ARCHIVES LOCALES
+
+Archive application : OK — 45/45 suites, 5103/5103 références, 0 erreur(s).
+Archive catalogue : OK — 5103/5103 références, chunks R40 identiques=True, 0 erreur(s).
+
+SHA-256 application : 3144c4ac48370d23caf979233afbf2197d59e49619bf5a2ce4d6707f3ad60295
+SHA-256 catalogue : 6aedf31235ce6e9f627b3a1fa697caa83269573722087dd5cb2d55969a027248
+
+Intégrité ZIP : OK. Réextraction et revérification : OK.
