@@ -1,0 +1,162 @@
+===== CHECKPOINT_R64.txt =====
+BRES CLÉS — CHECKPOINT V2.28 TEST R64
+
+Objet : invalider immédiatement les résultats d’identification qui dépendent de la base locale lorsqu’une nouvelle base étalon JSON est importée.
+
+Défaut reproduit en R63 :
+- un résultat géométrique pouvait être affiché avec un candidat issu de la base locale A ;
+- l’utilisateur pouvait ensuite importer une base locale B ;
+- R63 remplaçait correctement les données dans localStorage, mais la liste de candidats, la décision finale et les preuves affichées restaient celles calculées avec A ;
+- un candidat supprimé de B pouvait donc rester visible jusqu’à la prochaine comparaison.
+
+Correctif R64 :
+- ajout de invalidateLocalTemplateDependentResults();
+- après setDB(o), l’import efface les candidats locaux affichés et remet décision/visuel/équivalences en attente ;
+- currentSig est conservée car les photos n’ont pas changé ;
+- une référence manuelle est conservée mais marquée à revérifier ;
+- le message de succès demande explicitement de relancer la comparaison avant utilisation ;
+- ajout du test LOCAL_DB_IMPORT_INVALIDATION_TEST_R64 avec reproduction du comportement R63 puis preuve de la règle R64.
+
+Catalogue : 5 103 références uniques attendues ; les 10 morceaux de données catalogue restent strictement inchangés par rapport à R40/R63.
+Sécurité : V2.27 reste stable sur main. R64 reste uniquement une version de test sur la branche v2.28-test-r1.
+
+===== PATCH_R64.txt =====
+BRES CLÉS V2.28 TEST R64 — PATCH CIBLÉ R63 → R64
+
+index.html
+- Version active et cache-busting : R63/r63 → R64/r64.
+- Ajout invalidateLocalTemplateDependentResults(reason).
+- Après import JSON réussi : la nouvelle base est écrite, puis les candidats/decisions dépendant de l’ancienne base sont invalidés.
+- La géométrie currentSig n’est pas supprimée : une nouvelle comparaison peut être relancée sans refaire les photos.
+- La saisie manuelle est conservée mais explicitement à revérifier.
+
+Tests
+- nouveau local_db_import_invalidation_test.py ;
+- reproduction du défaut R63 : candidat TE8D visible alors que la nouvelle base ne contient plus TE8D ;
+- validation R64 : résultat local effacé et message de recomparaison obligatoire ;
+- total attendu : 33 suites.
+
+Catalogue
+- registre R64 séparé avec politique local_base_import_result_invalidation_required=true ;
+- aucune donnée des 10 morceaux catalogue n’est modifiée.
+
+===== DEFECT_REPRO_R63_TO_R64.txt =====
+BRES CLÉS — REPRODUCTION DÉFAUT R63 → CORRECTION R64
+
+Scénario reproduit :
+1. avec la base A, une comparaison affiche « TE8D — 92 % » ;
+2. importer une base B qui ne contient plus TE8D ;
+3. sans relancer l’analyse, observer l’écran.
+
+R63 :
+- localStorage contient bien B ;
+- l’ancien candidat TE8D reste pourtant affiché ;
+- l’écran peut donc montrer une conclusion qui ne correspond plus à la base active.
+
+R64 :
+- B est écrite ;
+- les candidats calculés avec A sont immédiatement retirés ;
+- décision finale, visuel et équivalences sont remis en attente ;
+- currentSig est conservée et il suffit de relancer la comparaison.
+
+Preuve exécutable : local_db_import_invalidation_test.py et LOCAL_DB_IMPORT_INVALIDATION_TEST_R64.json/.txt.
+
+===== LOCAL_DB_IMPORT_INVALIDATION_TEST_R64.txt =====
+BRES CLÉS V2.28 TEST R64 — INVALIDATION APRÈS IMPORT BASE ÉTALON
+
+OK  défaut R63 reproduit : une ancienne correspondance locale pouvait rester affichée après remplacement de la base
+OK  R64 efface immédiatement les candidats calculés avec l’ancienne base
+OK  décision finale, visuel catalogue et équivalences sont remis en attente de revérification
+OK  la géométrie courante reste disponible : seules les conclusions dépendantes de la base sont invalidées
+OK  une référence manuelle est conservée mais explicitement marquée à revérifier
+OK  le message de succès exige une nouvelle comparaison avant utilisation
+
+SELFTEST OK
+
+===== BUILD_MANIFEST_SUMMARY_R64.json =====
+{
+  "ok": true,
+  "version": "V2.28 TEST R64",
+  "catalog_count": 5103,
+  "unique_refs": 5103,
+  "catalogue_chunks_identical_to_r40": true,
+  "local_db_import_invalidation_ok": true,
+  "tests_ok": 33,
+  "tests_total": 33,
+  "files_hashed": 1523,
+  "errors": []
+}
+
+===== CATALOGUE_SOURCE_CONTINUITY_R64.txt =====
+BRES CLÉS V2.28 TEST R64 — CONTINUITÉ SOURCE CATALOGUE
+
+OK  catalog-01.js  e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b
+OK  catalog-02.js  955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75
+OK  catalog-03.js  9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210
+OK  catalog-04.js  14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942
+OK  catalog-05.js  5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b
+OK  catalog-06.js  b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac
+OK  catalog-07.js  b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1
+OK  catalog-08.js  3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814
+OK  catalog-09.js  4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f
+OK  catalog-10.js  f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4
+
+10/10 morceaux identiques à R63/R40 : OUI
+Références attendues : 5 103 uniques.
+Aucune donnée catalogue modifiée par R64.
+
+===== SOURCE_HASHES_R64.txt =====
+BRES CLES V2.28 TEST R64 — SOURCE HASHES
+
+566fafcdb62420bd765a053b6c87c2921d2b63c8bb35f73edc9f809f317cd085  index.html
+5e47bf7297ff7d19aede64f006b95fa8bb72af3578ecb71a003267bc4c744be6  v228-catalogue.js
+dae7cc4774473dbd541b4f801630bb661e647ad55a254373054f1257ad671853  LISEZ-MOI.txt
+e6e2df30ba9ef67cf8c1ba6962377879939ebfd81d94d416dc04bd0cefba788f  verify_build.py
+0120b5f675a33e05db8357431332df2fb2a19aa3c2855be2ee2521c9b11f64e0  version_consistency_test.py
+ac68f9188072934822411ebbfa92820b8ae2b262aa43eda39b516e796baf237e  catalogue_namespace_registry_test.py
+1c6bf8c5264911be15a77ad880009d68aada2dcf62da4748ef638deae8ade623  import_async_guard_test.py
+2ffc01707f29912ec91d94d7b26d83a7e09c8d9d4306a781cd7c199046ae0518  local_db_import_invalidation_test.py
+e9ecad66cf3950302fd25afc5e9903a7174a1390e67435c228c333cc4e84660e  teach_reference_async_guard_test.py
+f290b434b82b0ec59021218355b707d032672c7f944b1650aa7f1b3ae7a066f7  CHECKPOINT.txt
+9bc03a6647e5f282268367667fc9993b3e77ad7082fbe2f594e55f17f1f4c50e  PATCH_R64.txt
+0d719b6f2c016579a39b93bff36c6f9b22610d4196c5398c1a02691083aae7d4  CODE_CHANGE_R64.txt
+f4c4739943e1c2af6098b9b59527a587e66d8d87b107afb70748da8d2cdafa84  DEFECT_REPRO_R63_TO_R64.txt
+d4bb498e640fca914a7dabe814fe4a601b6209fea4a070fb67aed89b0b53e6ce  CATALOGUE_SOURCE_CONTINUITY_R64.txt
+3a7d10f35f85cc78442988cba1716344aff0da7a7cc6b29acf21f2ecbe3f4145  CATALOGUE_EVIDENCE_R64.txt
+57c35f6250dd3fc9bbd9cab636108c9068f60a61c128b9c364ab0866243db44d  catalogue/evidence/cross_reference_registry_r64.json
+
+===== RELEASE_SHA256_R64.txt =====
+95a17a2cbebf5947c1d6f4b0f78d99b1260334eab26b321eaaa93ac250759bcd  BRES_Cles_Mobile_V2_28_TEST_R64.zip
+9fcd0611bb67eae19c36ad75ef58c3eb7a0e3006a1789d85aa7bdba64a1c2930  BRES_Cles_Catalogue_Snapshot_R64.zip
+
+===== LIBRARY_ROUNDTRIP_VERIFICATION_R64.txt =====
+BRES CLÉS V2.28 TEST R64 — VÉRIFICATION ALLER-RETOUR LIBRARY
+
+Dossier : /BRES Cles/Sauvegardes
+
+Application ZIP :
+- SHA-256 original : 95a17a2cbebf5947c1d6f4b0f78d99b1260334eab26b321eaaa93ac250759bcd
+- SHA-256 rematérialisé : 95a17a2cbebf5947c1d6f4b0f78d99b1260334eab26b321eaaa93ac250759bcd
+- identité binaire : OK
+- extraction + verify_build.py : OK (5 103 références, 33/33 suites, 1523 fichiers contrôlés)
+
+Snapshot catalogue ZIP :
+- SHA-256 original : 9fcd0611bb67eae19c36ad75ef58c3eb7a0e3006a1789d85aa7bdba64a1c2930
+- SHA-256 rematérialisé : 9fcd0611bb67eae19c36ad75ef58c3eb7a0e3006a1789d85aa7bdba64a1c2930
+- identité binaire : OK
+- extraction + verify_snapshot.py : OK (5 103 références uniques, 10 chunks identiques à R40, 22 fichiers contrôlés)
+
+===== R63_DEFECT_PROBE.json =====
+{
+  "milestone": "R63 defect probe",
+  "checks": {
+    "import_writes_db": true,
+    "import_invalidates_local_match_results": false,
+    "results_clear_present": false
+  },
+  "stale_visible_after_import": "TE8D — 92%",
+  "new_db_keys": [
+    "TE8I"
+  ],
+  "defect_reproduced": true
+}
