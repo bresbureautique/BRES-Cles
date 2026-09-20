@@ -1,0 +1,132 @@
+===== CHECKPOINT_R72.txt =====
+BRES CLÉS — CHECKPOINT V2.28 TEST R72
+
+Objet : rétablir un état visible correct lorsque la base étalon partagée, précédemment corrompue, redevient valide ou est effacée depuis un autre onglet.
+
+Défaut reproduit en R71 :
+- R71 invalidait correctement les correspondances lorsqu’un autre onglet modifiait la base locale ;
+- si cette base externe devenait corrompue, le statut rouge signalait correctement le problème ;
+- si l’autre onglet réparait ensuite la base avec un JSON valide, le contrôle d’intégrité réussissait mais ne remettait pas à jour teachStatus ;
+- le téléphone pouvait donc continuer à afficher « base endommagée » alors que la base réellement persistée était redevenue valide ;
+- même défaut de statut après un effacement volontaire puis retour à une base valide.
+
+Correctif R72 :
+- checkStoredTemplateDBIntegrity() renvoie maintenant explicitement empty / valid / invalid ;
+- lors d’un événement storage externe, le contrôle est exécuté en mode reportHealthy ;
+- une base redevenue valide efface l’ancien message de corruption et affiche un état OK ;
+- un stockage volontairement vidé affiche un état « base vide » explicite ;
+- une vraie corruption ou une indisponibilité du stockage reste en erreur ;
+- les correspondances dépendantes de la base restent invalidées : une nouvelle comparaison est toujours obligatoire.
+
+Test renforcé : LOCAL_STORAGE_EXTERNAL_CHANGE_GUARD_TEST_R72.
+Catalogue : 5 103 références uniques attendues ; les 10 morceaux catalogue doivent rester bit-identiques à R40/R71.
+Sécurité : V2.27 reste stable sur main. R72 reste uniquement une version de test sur la branche v2.28-test-r1.
+
+===== PATCH_R72.txt =====
+BRES CLÉS V2.28 TEST R72 — PATCH CIBLÉ R71 → R72
+
+index.html
+- checkStoredTemplateDBIntegrity(reportHealthy=false) renvoie désormais empty / valid / invalid ;
+- lors d’un changement externe, le statut de la base est rafraîchi après le recontrôle ;
+- une réparation externe efface un ancien message rouge devenu faux ;
+- un effacement externe affiche explicitement que la base est vide ;
+- aucune correspondance ancienne n’est réutilisée : la comparaison doit toujours être relancée.
+
+Tests
+- local_storage_external_change_guard_test.py renforcé avec séquence corruption → réparation → clear → base valide ;
+- vérification que les erreurs réelles de stockage restent des erreurs ;
+- vérification que les clés sans rapport restent ignorées.
+
+Catalogue
+- registre R72 séparé ;
+- aucune modification des 10 morceaux de données catalogue.
+
+===== LOCAL_STORAGE_EXTERNAL_CHANGE_GUARD_TEST_R72.txt =====
+BRES CLÉS V2.28 TEST R72 — GARDE CHANGEMENT / RÉCUPÉRATION STOCKAGE EXTERNE
+
+OK  une base externe corrompue est signalée sans être utilisée
+OK  lorsqu’un autre onglet répare la base, l’ancien message de corruption est effacé et remplacé par un état valide
+OK  localStorage.clear() remplace aussi l’ancien message d’erreur par un état base vide explicite
+OK  un retour ultérieur à une base valide repasse l’état local en OK
+OK  les autres clés localStorage restent ignorées
+OK  une vraie indisponibilité du stockage reste signalée comme erreur
+
+SELFTEST OK
+
+===== BUILD_MANIFEST_SUMMARY_R72.json =====
+{
+  "ok": true,
+  "version": "V2.28 TEST R72",
+  "catalog_count": 5103,
+  "unique_refs": 5103,
+  "catalogue_chunks_identical_to_r40": true,
+  "files_hashed": 2110,
+  "errors": [],
+  "tests_ok": 40,
+  "tests_total": 40
+}
+
+===== CATALOGUE_SOURCE_CONTINUITY_R72.txt =====
+BRES CLÉS V2.28 TEST R72 — CONTINUITÉ SOURCE CATALOGUE
+
+OK  catalog-01.js  e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b
+OK  catalog-02.js  955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75
+OK  catalog-03.js  9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210
+OK  catalog-04.js  14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942
+OK  catalog-05.js  5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b
+OK  catalog-06.js  b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac
+OK  catalog-07.js  b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1
+OK  catalog-08.js  3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814
+OK  catalog-09.js  4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f
+OK  catalog-10.js  f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4
+
+10/10 morceaux identiques à R71/R40 : OUI
+Références attendues : 5 103 uniques.
+Aucune donnée catalogue modifiée par R72.
+
+===== CATALOGUE_EVIDENCE_R72.txt =====
+BRES CLÉS V2.28 TEST R72 — PREUVE CATALOGUE SÉPARÉE
+
+Objet du jalon application : rafraîchissement du statut d’intégrité lorsque la base locale partagée est réparée ou effacée depuis un autre onglet.
+Données catalogue : aucune modification des 10 chunks catalog-01.js à catalog-10.js.
+Registre de sécurité R72 : external_local_storage_recovery_status_refresh_required=true ; external_local_storage_valid_state_clears_prior_integrity_error=true ; external_local_storage_empty_state_clears_prior_integrity_error=true.
+Le snapshot catalogue est construit et vérifié séparément de l’application.
+
+===== SOURCE_HASHES_R72.txt =====
+BRES CLES V2.28 TEST R72 — SOURCE HASHES
+
+496c18f192e729e9d809695cc2090d29e0c1c19eb9236a33a48b341f77539195  index.html
+fa5dd07ecdec7c63fd504e99312b85ba0ded1d8d8efdfe3f33842eb9e01fa34e  v228-catalogue.js
+c897b6d23e381ddd4780d56fc91477f273aa712e2080178fe2972a2090a928ed  LISEZ-MOI.txt
+b6928941b256ff57101c57eb5bd9bb61eda145135ea5f8e9cd550c54e9135dba  verify_build.py
+486c178d55c9d7250cc3f53aabd30b54a0b1d2c96a93e661596353be59a3afa9  version_consistency_test.py
+ead16a256e87406685e7fc00fc1c4e827a39c82ed99b1bc77e0f0efbaa836c1c  catalogue_namespace_registry_test.py
+2ce3492c57e4e5d8c7ecd8e1cdcb4c4b9e3b2891c46540f851f19860abc2d7a0  local_storage_availability_guard_test.py
+72e7e711b2bdd4e16c5b7fc32ac049519a059fa35c242e14b069fb3796938f44  local_storage_external_change_guard_test.py
+8ef0405700994d5f680ea936dd03f88e322c1ad10afb1b401d4ac9a371d62a5d  catalogue/evidence/cross_reference_registry_r72.json
+
+===== RELEASE_SHA256_R72.txt =====
+bce32c4b2dde4c6a339495b038dab7deb1a9685ca65fcfcd391c6b09151555bc  BRES_Cles_Catalogue_Snapshot_R72.zip
+e64b5f2d213ee21a85bad64380db911a11d0d7fa3d020499dc2c5b0d7b92ac11  BRES_Cles_Mobile_V2_28_TEST_R72.zip
+
+===== ROUNDTRIP_VERIFICATION_R72.txt =====
+BRES CLÉS V2.28 TEST R72 — VÉRIFICATION DES ARCHIVES AVANT SAUVEGARDE LIBRARY
+
+Application : OK
+- archive ZIP : structure valide (unzip -t)
+- réextraction dans un dossier propre : OK
+- version : V2.28 TEST R72
+- catalogue : 5 103 références / 5 103 uniques
+- suites : 40/40 réussies
+- erreurs : 0
+
+Catalogue séparé : OK
+- archive ZIP : structure valide (unzip -t)
+- réextraction dans un dossier propre : OK
+- catalogue : 5 103 références / 5 103 uniques
+- 10 morceaux catalogue identiques à R40/R71 : OUI
+- erreurs : 0
+
+SHA-256 des archives :
+bce32c4b2dde4c6a339495b038dab7deb1a9685ca65fcfcd391c6b09151555bc  BRES_Cles_Catalogue_Snapshot_R72.zip
+e64b5f2d213ee21a85bad64380db911a11d0d7fa3d020499dc2c5b0d7b92ac11  BRES_Cles_Mobile_V2_28_TEST_R72.zip
