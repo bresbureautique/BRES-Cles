@@ -1,0 +1,28 @@
+BRES CLÉS — CHECKPOINT V2.28 TEST R82
+
+Objet : borner et normaliser la métadonnée facultative updated de la base étalon locale, sans modifier le catalogue.
+
+Défaut reproduit en R81 :
+- normalizeImportedTemplateDB conservait toute chaîne présente dans le champ updated ;
+- une date impossible, une chaîne arbitraire ou une chaîne de 200 000 caractères survivait aux cycles import → stockage → export → réimport ;
+- cette donnée n’est pas utilisée par l’algorithme de reconnaissance et pouvait gonfler inutilement localStorage et les sauvegardes.
+
+Correctif R82 :
+- la métadonnée updated n’est conservée que si elle est une date ISO UTC canonique de 24 caractères exactement, identique à new Date(value).toISOString() ;
+- les dates impossibles, formes non canoniques, chaînes énormes et valeurs non textuelles sont ignorées sans rejeter les mesures valides de l’étalon ;
+- plusieurs cycles import → export → réimport restent stables et bornés ;
+- aucun changement des 10 morceaux catalogue.
+
+Vérification application : OK — 48/48 suites, 5 103/5 103 références uniques, 2 954 fichiers contrôlés au contrôle final de la source, 0 erreur.
+Vérification archive application réextraite : OK — 48/48 suites, 5 103/5 103 références uniques, 0 erreur.
+Vérification catalogue séparé : OK — 5 103/5 103 références, 10/10 chunks bit-identiques à R40/R81, 0 erreur.
+Vérification Library : les deux ZIP ont été rematérialisés, comparés bit à bit aux originaux, réextraits et retestés avec succès.
+
+SHA-256 archive application : 36339e5d2c00272191439cf9556871a9791260ccf8d478d676e48c4fa011f33c
+SHA-256 snapshot catalogue : fb181d50a10c6fc00e0b6512d3be1cfc650e199279ecf7aaad8fdbe35efa0bbe
+
+Registre R82 :
+- local_template_updated_metadata_canonical_iso_required=true
+- local_template_updated_metadata_max_chars=24
+
+Sécurité : V2.27 reste stable sur main ; R82 reste uniquement sur v2.28-test-r1.
