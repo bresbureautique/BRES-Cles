@@ -1,0 +1,130 @@
+===== CHECKPOINT_R75.txt =====
+BRES CLÉS — CHECKPOINT V2.28 TEST R75
+
+Objet : empêcher un import de base étalon déjà en lecture d’écraser une modification plus récente de la base locale.
+
+Défaut reproduit en R74 :
+- l’import figeait bien le fichier choisi et utilisait importFileEpoch pour départager deux imports successifs ;
+- en revanche, une modification de la base survenue pendant file.text() ne changeait pas cet importFileEpoch ;
+- un événement storage provenant d’un autre onglet, ou un nouvel étalon enregistré dans le même onglet, pouvait donc être plus récent puis être écrasé par la fin tardive de l’ancien import.
+
+Correctif R75 :
+- une époque dédiée localTemplateEpoch représente désormais chaque mutation réussie de la base locale ;
+- setDB() avance cette époque uniquement après une écriture localStorage réussie ;
+- un événement storage externe sur la base, y compris localStorage.clear(), avance aussi cette époque ;
+- l’import capture l’époque au démarrage et la revérifie après la lecture, après le parse, avant setDB() et dans le chemin d’erreur ;
+- si la base a changé entre-temps, l’import ancien s’arrête sans écriture et sans remplacer le statut de l’action plus récente.
+
+Test ajouté : LOCAL_DB_IMPORT_TEMPLATE_EPOCH_GUARD_TEST_R75.
+Catalogue : 5 103 références uniques attendues ; les 10 morceaux catalogue doivent rester bit-identiques à R40/R74.
+Sécurité : V2.27 reste stable sur main. R75 reste uniquement une version de test sur la branche v2.28-test-r1.
+
+===== PATCH_R75.txt =====
+BRES CLÉS V2.28 TEST R75 — PATCH CIBLÉ R74 → R75
+
+index.html
+- ajout de localTemplateEpoch pour numéroter l’état courant de la base locale d’étalons ;
+- setDB() avance cette époque après une écriture réussie ;
+- handleExternalTemplateStorageChange() avance la même époque avant d’invalider l’interface ;
+- l’import JSON capture templateEpoch et refuse de publier/écrire si la base a été modifiée pendant sa lecture asynchrone ;
+- les gardes sont vérifiées après file.text(), après JSON.parse(), avant setDB() et avant d’afficher une erreur.
+
+Tests
+- nouveau local_db_import_template_epoch_guard_test.py : reproduit l’écrasement R74 puis vérifie qu’une modification externe ou un nouvel étalon local plus récent reste gagnant ;
+- import_async_guard_test.py est renforcé pour reconnaître la garde combinée importFileEpoch + localTemplateEpoch ;
+- les simulations de persistance/stockage externe incluent la nouvelle époque et restent vertes ;
+- toutes les suites existantes restent actives.
+
+Catalogue
+- registre R75 séparé avec local_base_import_template_epoch_guard_required=true ;
+- aucune modification des 10 morceaux catalog-01.js à catalog-10.js.
+
+===== LOCAL_DB_IMPORT_TEMPLATE_EPOCH_GUARD_TEST_R75.txt =====
+BRES CLÉS V2.28 TEST R75 — GARDE IMPORT CONTRE MODIFICATION PLUS RÉCENTE DE LA BASE
+
+OK  course R74 reproduite : un import lent pouvait écraser une base modifiée plus récemment
+OK  chaque écriture locale réussie avance désormais l’époque de la base étalon
+OK  un événement storage externe avance la même époque avant toute invalidation visible
+OK  l’import mémorise l’époque de départ et la revérifie à chaque reprise asynchrone
+OK  une modification externe plus récente reste gagnante face à la fin tardive de l’import
+OK  un étalon enregistré dans le même onglet reste aussi gagnant face à l’ancien import
+
+SELFTEST OK
+
+===== BUILD_MANIFEST_SUMMARY_R75.json =====
+{
+  "ok": true,
+  "version": "V2.28 TEST R75",
+  "catalog_count": 5103,
+  "unique_refs": 5103,
+  "catalogue_chunks_identical_to_r40": true,
+  "files_hashed": 2341,
+  "errors": [],
+  "tests_ok": 42,
+  "tests_total": 42
+}
+
+===== CATALOGUE_SOURCE_CONTINUITY_R75.txt =====
+BRES CLÉS V2.28 TEST R75 — CONTINUITÉ SOURCE CATALOGUE
+
+OK  catalog-01.js  e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b
+OK  catalog-02.js  955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75
+OK  catalog-03.js  9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210
+OK  catalog-04.js  14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942
+OK  catalog-05.js  5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b
+OK  catalog-06.js  b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac
+OK  catalog-07.js  b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1
+OK  catalog-08.js  3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814
+OK  catalog-09.js  4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f
+OK  catalog-10.js  f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4
+
+10/10 morceaux identiques à R74/R40 : OUI
+Références attendues : 5 103 uniques.
+Aucune donnée catalogue modifiée par R75.
+
+===== CATALOGUE_EVIDENCE_R75.txt =====
+BRES CLÉS V2.28 TEST R75 — PREUVE CATALOGUE SÉPARÉE
+
+Objet du jalon application : empêcher un import de base étalon lancé avant une modification plus récente de localStorage de l’écraser lorsqu’il se termine tardivement.
+Données catalogue : aucune modification des 10 chunks catalog-01.js à catalog-10.js.
+Registre de sécurité R75 : local_base_import_template_epoch_guard_required=true.
+Le snapshot catalogue est construit et vérifié séparément de l’application.
+
+===== SOURCE_HASHES_R75.txt =====
+BRES CLES V2.28 TEST R75 — SOURCE HASHES
+
+f3e2bd41916e0bd5e11ff13f686bb5d3bc2b0b4ff73ceced5f84bb25b422afa3  index.html
+9fb3a82b6a61a53a01bf57431b72aa4e5f6c641554a6eb53082e83c026fea3fd  v228-catalogue.js
+963ce055ce8fad118a68e4cc0433dc5fe8f7ed0e2f590d70785a308d9d411d2d  LISEZ-MOI.txt
+b39dd3ce821dc3a2cdfff88a65b37696aec7d0adc1bad7e3be7f02766990fc9d  verify_build.py
+c9ea5484df3788bfa6d9e2177db52d170b798d159e662e887c3a649fc0b123ad  version_consistency_test.py
+701c9d2fa432bbf88cd3df571209d94ed68279c79d42bce64ff8db772e1a7327  catalogue_namespace_registry_test.py
+ab67faf043bed1bee4d16bda69f2151c586e3671f7abbb49e475a8fde0b42c6f  import_async_guard_test.py
+e26ac97baf268d88f47480d03b6888bdba5b70aca2ccd1aa1c7e9899d46b98e9  local_db_import_template_epoch_guard_test.py
+f91bea1a5846a526b6b9db5f2da88cf45768cbdcc430adceac0b34db492d0781  local_db_persistence_guard_test.py
+1f29751d6f3b24dcde04fda15574e1d7db368dcdaab3b0e40a721da669a8a44f  local_storage_availability_guard_test.py
+37cde3fb93fbf0cc6955af7c176bc36e69f4492abbfd416cc0a2bbd3010f5f6c  local_storage_external_change_guard_test.py
+d33ec340020964e527522c3d3022b27d99c35d5f99281562f49df9302691bc82  local_template_async_invalidation_guard_test.py
+46e06e685bab2aaf4ea5d71a8f8d0c978b88c291ec52ac0cb89b6f363ad4d534  catalogue/evidence/cross_reference_registry_r75.json
+59ae913882159e1787fe8b544fb7cb7aa48f79b45c4a3f3dad4aac9c67276e8c  CATALOGUE_SOURCE_CONTINUITY_R75.txt
+651a15eed1e423958c0a4170cf748432fd34f9660e9ede1d3366f057a06236f7  CATALOGUE_EVIDENCE_R75.txt
+
+===== RELEASE_SHA256_R75.txt =====
+3b89a7a147ec052695ca3dfaf543f78178eaf176021f3b5b2715c0db41298e37  BRES_Cles_Catalogue_Snapshot_R75.zip
+f271d8380cd35077f71dcc7f7eb3cf3ed87ed32b17e9db2c0ab49365d2ec2a10  BRES_Cles_Mobile_V2_28_TEST_R75.zip
+
+===== LOCAL_AND_LIBRARY_VERIFICATION_R75.txt =====
+BRES CLÉS V2.28 TEST R75 — VÉRIFICATION ARCHIVES ET LIBRARY
+
+Archive application locale : OK — 42/42 suites, 5103/5103 références, archive réextraite et verify_build.py repassé sans erreur.
+Archive catalogue séparée : OK — 5103/5103 références, 10 chunks identiques à R40/R74, archive réextraite et verify_snapshot.py repassé sans erreur.
+
+Aller-retour Library /BRES Cles/Sauvegardes :
+- BRES_Cles_Mobile_V2_28_TEST_R75.zip : SHA local = SHA Library = f271d8380cd35077f71dcc7f7eb3cf3ed87ed32b17e9db2c0ab49365d2ec2a10
+- BRES_Cles_Catalogue_Snapshot_R75.zip : SHA local = SHA Library = 3b89a7a147ec052695ca3dfaf543f78178eaf176021f3b5b2715c0db41298e37
+- test d’intégrité ZIP des deux copies Library : OK
+- réextraction des deux copies Library : OK
+- nouveau verify_build.py sur copie Library : 42/42, 0 erreur
+- nouveau verify_snapshot.py sur copie Library : 5103/5103, chunks R40 identiques=True, 0 erreur
+
+Résultat : OK — les deux sauvegardes Library sont bit à bit identiques aux archives locales et repassent leurs vérifications après réextraction.
