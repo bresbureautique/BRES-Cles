@@ -1,0 +1,30 @@
+BRES CLÉS — CHECKPOINT V2.28 TEST R80
+
+Objet : aligner strictement la saisie manuelle d’épaisseur, l’apprentissage local et le schéma de la base étalon.
+
+Défaut reproduit en R79 :
+- l’import/persistance refusait correctement toute thickness_mm hors de 0 < valeur <= 20 mm ;
+- l’apprentissage utilisait encore parseFloat(...), donc une saisie partiellement numérique comme « 2abc » pouvait être interprétée comme 2 ;
+- une valeur supérieure à 20 pouvait franchir la première lecture puis être rejetée plus tard par setDB ;
+- affichage catalogue et vérification manuelle utilisaient des conversions différentes.
+
+Correctif R80 :
+- parseManualThickness(raw) partagé ;
+- conversion stricte Number(...) après normalisation de la virgule décimale ;
+- domaine unique 0 < épaisseur <= 20 mm ;
+- apprentissage refuse la valeur invalide avant setDB avec message explicite ;
+- 2,45 / 2.45 / 20 valides ; 20.01, 0, -1 et 2abc refusés ;
+- aucun changement des 10 morceaux catalogue.
+
+Vérification application : OK — 46/46 suites, 5 103/5 103 références, 0 erreur.
+Vérification catalogue séparé : OK — 5 103/5 103 références, 10/10 chunks bit-identiques à R40/R79, 0 erreur.
+
+SHA-256 archive application : 98d1c8b45f3f3afb501e02d0b7cbb329a79202ba6ebf6738e535b19c7c22b9fe
+SHA-256 snapshot catalogue : ba81a99f3ed3d1696508ad0864d2941fe692ee459ce5cd3d0f2d70988c0537b9
+
+Registre R80 :
+- local_template_manual_thickness_same_domain_required=true
+- local_template_manual_thickness_strict_parse_required=true
+- local_template_thickness_max_mm=20
+
+Sécurité : V2.27 reste stable sur main ; R80 reste uniquement sur v2.28-test-r1.
