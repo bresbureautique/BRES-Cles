@@ -1,0 +1,127 @@
+===== CHECKPOINT_R77.txt =====
+BRES CLÉS — CHECKPOINT V2.28 TEST R77
+
+Objet : conserver un diagnostic d’import exploitable quand le fichier JSON est invalide ou que le stockage local refuse l’écriture, sans affaiblir les gardes de concurrence R75/R76.
+
+Défaut reproduit en R76 :
+- toutes les erreurs d’import encore courantes aboutissaient au même message « Import impossible. » ;
+- un JSON illisible, une base au mauvais schéma, un stockage local saturé et un stockage local indisponible devenaient donc indiscernables ;
+- les protections étaient non destructives, mais l’utilisateur ne savait pas s’il devait corriger le fichier ou libérer/autoriser le stockage.
+
+Correctif R77 :
+- ajout d’un formateur d’erreur d’import dédié ;
+- JSON syntaxiquement invalide → message clair « fichier JSON illisible ou invalide » ;
+- schéma de base étalon invalide → message « format de base étalon attendu » ;
+- erreurs de quota ou d’accès localStorage → conservation du diagnostic non destructif précis déjà produit par la couche de stockage ;
+- les détails bruts inattendus restent masqués derrière un message de repli sûr ;
+- la garde stopStaleImport reste prioritaire afin qu’une ancienne erreur ne puisse jamais remplacer le statut d’un import plus récent ;
+- la remise à zéro sûre du sélecteur R76 reste active après erreur.
+
+Test ajouté : LOCAL_DB_IMPORT_ERROR_MESSAGE_GUARD_TEST_R77.
+Catalogue : 5 103 références uniques attendues ; les 10 morceaux catalogue doivent rester bit-identiques à R40/R76.
+Sécurité : V2.27 reste stable sur main. R77 reste uniquement une version de test sur la branche v2.28-test-r1.
+
+===== PATCH_R77.txt =====
+BRES CLÉS V2.28 TEST R77 — PATCH CIBLÉ R76 → R77
+
+index.html
+- ajout de importTemplateErrorMessage(error) ;
+- conservation des diagnostics « Stockage local saturé » et « Stockage local indisponible » ;
+- distinction entre JSON illisible et schéma de base étalon non conforme ;
+- message de repli sans exposition d’un détail interne inattendu ;
+- le catch d’import appelle d’abord stopStaleImport, puis publie uniquement l’erreur de l’import encore courant ;
+- resetImportSelectionIfOwned reste appliqué après erreur pour permettre un nouvel essai immédiat.
+
+Tests
+- nouveau local_db_import_error_message_guard_test.py ;
+- toutes les protections d’import, de persistance, de concurrence, d’invalidation, OCR et géométrie précédentes restent actives.
+
+Catalogue
+- registre R77 séparé avec local_base_import_error_diagnostic_required=true ;
+- aucune modification des 10 morceaux catalog-01.js à catalog-10.js.
+
+===== LOCAL_DB_IMPORT_ERROR_MESSAGE_GUARD_TEST_R77.txt =====
+BRES CLÉS V2.28 TEST R77 — DIAGNOSTIC D’ERREUR IMPORT BASE ÉTALON
+
+OK  défaut R76 reproduit : JSON invalide et stockage saturé affichaient tous deux « Import impossible. »
+OK  R77 distingue un fichier JSON illisible d’un schéma de base étalon non conforme
+OK  R77 conserve les diagnostics non destructifs « stockage saturé » et « stockage indisponible »
+OK  le détail brut inattendu du parseur ou d’une erreur interne n’est pas exposé dans le message de repli
+OK  la garde d’import obsolète reste prioritaire : un ancien échec ne peut pas remplacer le statut d’un import plus récent
+OK  la sélection possédée est toujours remise à zéro pour permettre un nouvel essai
+
+SELFTEST OK
+
+===== BUILD_MANIFEST_SUMMARY_R77.json =====
+{
+  "ok": true,
+  "version": "V2.28 TEST R77",
+  "catalog_count": 5103,
+  "unique_refs": 5103,
+  "catalogue_chunks_identical_to_r40": true,
+  "files_hashed": 2506,
+  "errors": [],
+  "tests_ok": 44,
+  "tests_total": 44
+}
+
+===== CATALOGUE_SOURCE_CONTINUITY_R77.txt =====
+BRES CLÉS V2.28 TEST R77 — CONTINUITÉ SOURCE CATALOGUE
+
+OK  catalog-01.js  e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b
+OK  catalog-02.js  955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75
+OK  catalog-03.js  9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210
+OK  catalog-04.js  14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942
+OK  catalog-05.js  5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b
+OK  catalog-06.js  b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac
+OK  catalog-07.js  b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1
+OK  catalog-08.js  3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814
+OK  catalog-09.js  4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f
+OK  catalog-10.js  f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4
+
+10/10 morceaux identiques à R76/R40 : OUI
+Références attendues : 5 103 uniques.
+Aucune donnée catalogue modifiée par R77.
+
+===== CATALOGUE_EVIDENCE_R77.txt =====
+BRES CLÉS V2.28 TEST R77 — PREUVE CATALOGUE SÉPARÉE
+
+Objet du jalon application : améliorer les diagnostics d’erreur d’import de la base locale sans changer les règles de reconnaissance catalogue.
+Données catalogue : aucune modification des 10 chunks catalog-01.js à catalog-10.js.
+Registre de sécurité R77 : local_base_import_error_diagnostic_required=true.
+Le snapshot catalogue est construit et vérifié séparément de l’application.
+
+===== SOURCE_HASHES_R77.txt =====
+BRES CLES V2.28 TEST R77 — SOURCE HASHES
+50ae87e46e7997598c6c80efbeb32074305d0a72ac4a42702efd114c8d597201  index.html
+45d23ac32f0e9c77163b8ba44b820da3234c740c4b2d983805c7a421d858bd71  v228-catalogue.js
+5b7f28fd5e990008c9b64ab3e578cca6c23cd9f48296ae4ae6b20ebf35553244  LISEZ-MOI.txt
+015ba468eacf4a24f1f1cbcbc692278ef41caeb6d4db42bc46748af3c42f82cb  verify_build.py
+3206b690265a8899dc78e36223980f95e8cb2eddc6dd5e67adf8f9ac554471e3  version_consistency_test.py
+12e931857fad5788ee7f13fe481f23c428f2ad2fe194e879b028cf073932fa3d  catalogue_namespace_registry_test.py
+20a451be182aed483db62a179ba982ef09b5dda7a4598ce282ea88d9d5dc40ea  import_async_guard_test.py
+1637fa479b23fc665faec132df309d6cb8d6042fdb52cd3808b2cbf164f06a9a  local_db_import_template_epoch_guard_test.py
+e487381a9273996d25b3183990bbc04c0b412f4bf2a2ef325dc0c525086baf4d  local_db_import_retry_guard_test.py
+93d464d59786b26f1ae3153fd401533aee32c14370ad2918aecb528d838f532f  local_db_import_error_message_guard_test.py
+d4dc660329c92f2825109d0e404839c3d8e5c5773f722b906ed733c82b2679c3  local_db_import_schema_guard_test.py
+f70c6289a88b20a34af1276c7cc20a2dce8aa90517534086d7aa790bbbf70110  local_storage_availability_guard_test.py
+1b7a5a0755a0c295a46eab5ac4f7579341eb86cd6495b033d0fc83a176850c85  local_storage_external_change_guard_test.py
+7b2afb80bd3c96a4742d212b7877d55e8e848f91ee2a9aff372e7b5dd2fa7d2d  local_template_async_invalidation_guard_test.py
+210e7f02b424f5683c211be8f19c01cdd4fccdbcf098bc2babff92d7a0d5f1d7  catalogue/evidence/cross_reference_registry_r77.json
+b84b53a02b0cd5999cefce5a0f3f317998a7d6193539b823c06c722d9176bc61  CATALOGUE_SOURCE_CONTINUITY_R77.txt
+9298eff115fc94d938c51d813fb87763bde57e53af2674969c25a8b49e47212d  CATALOGUE_EVIDENCE_R77.txt
+
+===== RELEASE_SHA256_R77.txt =====
+705d07f9f2387f0230b4143c6c9aba3b54e3d318b025ad0b38205a7b816372be  /mnt/data/bres_r77_work/release/BRES_Cles_Catalogue_Snapshot_R77.zip
+404849120882431d5f67cf605d61fc3ea7ab84bce5740e4d41e28f5f1eaed224  /mnt/data/bres_r77_work/release/BRES_Cles_Mobile_V2_28_TEST_R77.zip
+
+===== LOCAL_RELEASE_VERIFICATION_R77.txt =====
+BRES CLÉS V2.28 TEST R77 — VÉRIFICATION ARCHIVES LOCALES
+
+Archive application : OK — 44/44 suites, 5103/5103 références, 0 erreur(s).
+Archive catalogue : OK — 5103/5103 références, chunks R40 identiques=True, 0 erreur(s).
+
+SHA-256 application : 404849120882431d5f67cf605d61fc3ea7ab84bce5740e4d41e28f5f1eaed224
+SHA-256 catalogue : 705d07f9f2387f0230b4143c6c9aba3b54e3d318b025ad0b38205a7b816372be
+
+Intégrité ZIP : OK. Réextraction et revérification : OK.
