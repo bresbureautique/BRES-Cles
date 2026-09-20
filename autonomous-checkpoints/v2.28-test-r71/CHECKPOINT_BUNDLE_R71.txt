@@ -1,0 +1,108 @@
+===== CHECKPOINT_R71.txt =====
+BRES CLÉS — CHECKPOINT V2.28 TEST R71
+
+Objet : invalider immédiatement les résultats locaux lorsqu’un autre onglet ou une autre fenêtre modifie la base étalon partagée.
+
+Défaut reproduit en R70 :
+- localStorage est partagé entre les onglets/fenêtres de même origine ;
+- les écritures faites dans l’onglet courant invalidaient correctement les correspondances ;
+- une modification ou un effacement de la base depuis un autre onglet déclenchait un événement storage, mais R70 ne l’écoutait pas ;
+- une correspondance et une décision déjà affichées pouvaient donc rester visibles alors qu’elles avaient été calculées avec l’ancienne base.
+
+Correctif R71 :
+- écoute dédiée de l’événement navigateur storage ;
+- changement de la clé de base étalon : invalidation immédiate des correspondances et décisions dépendantes de la base locale ;
+- localStorage.clear() reçu depuis un autre contexte : même invalidation ;
+- les autres clés de stockage sont ignorées ;
+- l’intégrité de la base persistée est recontrôlée après le changement externe ;
+- la géométrie des photos reste disponible : l’utilisateur doit seulement relancer la comparaison.
+
+Test ajouté : LOCAL_STORAGE_EXTERNAL_CHANGE_GUARD_TEST_R71.
+Catalogue : 5 103 références uniques attendues ; les 10 morceaux catalogue doivent rester bit-identiques à R40/R70.
+Sécurité : V2.27 reste stable sur main. R71 reste uniquement une version de test sur la branche v2.28-test-r1.
+
+===== PATCH_R71.txt =====
+BRES CLÉS V2.28 TEST R71 — PATCH CIBLÉ R70 → R71
+
+index.html
+- ajout de handleExternalTemplateStorageChange(event) ;
+- écoute window.storage pour la clé bres_v221_templates et pour localStorage.clear() ;
+- invalidation des résultats locaux déjà affichés lorsqu’un autre contexte modifie la base ;
+- recontrôle non destructif de l’intégrité de la base après le changement externe ;
+- aucune réaction aux autres clés localStorage.
+
+Tests
+- nouveau local_storage_external_change_guard_test.py ;
+- cas clé sans rapport, changement de base, effacement global et événement absent ;
+- vérification qu’une modification externe déclenche exactement une invalidation et un recontrôle.
+
+Catalogue
+- registre R71 séparé ;
+- aucune modification des 10 morceaux de données catalogue.
+
+===== LOCAL_STORAGE_EXTERNAL_CHANGE_GUARD_TEST_R71.txt =====
+BRES CLÉS V2.28 TEST R71 — GARDE CHANGEMENT STOCKAGE EXTERNE
+
+OK  un changement de la base étalon dans un autre onglet invalide les correspondances déjà affichées
+OK  localStorage.clear() reçu depuis un autre contexte invalide aussi les résultats
+OK  les autres clés localStorage sont ignorées
+OK  après invalidation, l’intégrité de la base persistée est recontrôlée
+OK  aucun changement externe ne peut conserver silencieusement une décision basée sur l’ancienne base
+
+SELFTEST OK
+
+===== BUILD_MANIFEST_SUMMARY_R71.json =====
+{
+  "ok": true,
+  "version": "V2.28 TEST R71",
+  "catalog_count": 5103,
+  "unique_refs": 5103,
+  "catalogue_chunks_identical_to_r40": true,
+  "files_hashed": 2035,
+  "errors": [],
+  "tests_ok": 40,
+  "tests_total": 40
+}
+
+===== CATALOGUE_SOURCE_CONTINUITY_R71.txt =====
+BRES CLÉS V2.28 TEST R71 — CONTINUITÉ SOURCE CATALOGUE
+
+OK  catalog-01.js  e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b
+OK  catalog-02.js  955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75
+OK  catalog-03.js  9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210
+OK  catalog-04.js  14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942
+OK  catalog-05.js  5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b
+OK  catalog-06.js  b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac
+OK  catalog-07.js  b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1
+OK  catalog-08.js  3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814
+OK  catalog-09.js  4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f
+OK  catalog-10.js  f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4
+
+10/10 morceaux identiques à R70/R40 : OUI
+Références attendues : 5 103 uniques.
+Aucune donnée catalogue modifiée par R71.
+
+===== CATALOGUE_EVIDENCE_R71.txt =====
+BRES CLÉS V2.28 TEST R71 — PREUVE CATALOGUE SÉPARÉE
+
+Objet du jalon application : invalidation des résultats lorsque la base locale partagée change depuis un autre onglet ou une autre fenêtre.
+Données catalogue : aucune modification des 10 chunks catalog-01.js à catalog-10.js.
+Registre de sécurité R71 : external_local_storage_change_invalidates_results=true ; external_local_storage_clear_invalidates_results=true.
+Le snapshot catalogue est construit et vérifié séparément de l’application.
+
+===== SOURCE_HASHES_R71.txt =====
+BRES CLES V2.28 TEST R71 — SOURCE HASHES
+
+2e63e207f8b1008d03882a8ed82e71448789799302c84844db0879ef17a0295a  index.html
+726127d8b58dbb30f26947e1644bc784abaf6a75c02d11bc4b7637913a84bf2a  v228-catalogue.js
+2758daf63a0238519089d14dc115ab4507f100f32f34510a359de173fa3ea8d2  LISEZ-MOI.txt
+cd18c39ba2d6d611c77906f3201a25cfeef57f188f797767877032714153bfe3  verify_build.py
+8ff071dcb3510188009036eb829354784d08d22ea5cb7d920911ed6235c51141  version_consistency_test.py
+d6f1d71da48d2a897cbf506d85543463e04c7371971479034f82c02ef3bedf23  catalogue_namespace_registry_test.py
+3afe1544f4072308767633929447530598437bc47a68ab23a9cd4f11d898c240  local_storage_availability_guard_test.py
+b8884b4896c609cb3797bdff0cca1a5fd161971336661d4eca64d0e0bf6155e  local_storage_external_change_guard_test.py
+f5f478111978565819aed1f3bb5cb1e892f9f4b21e16ea376308f58a8b5c2933  catalogue/evidence/cross_reference_registry_r71.json
+
+===== RELEASE_SHA256_R71.txt =====
+681b51bbfb608e52de5702539b2480708d25bbc76e13fbe9b9585e4390377ec4  BRES_Cles_Catalogue_Snapshot_R71.zip
+a2945700c483a4ec02401ca473108107e711c81ba1eabd4a4b2397b28f2535a2  BRES_Cles_Mobile_V2_28_TEST_R71.zip
