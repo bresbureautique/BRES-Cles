@@ -1,0 +1,133 @@
+===== CHECKPOINT_R79.txt =====
+BRES CLÉS — CHECKPOINT V2.28 TEST R79
+
+Objet : durcir la validation de l’épaisseur dans les bases étalons importées.
+
+Défaut reproduit en R78 :
+- normalizeImportedTemplateDB convertissait encore thickness_mm avec Number(...);
+- une chaîne JSON comme "2.45" était donc acceptée alors que les mesures de signature exigent de vrais nombres JSON ;
+- une valeur physiquement absurde comme 999999 mm était également acceptée tant qu’elle restait finie et positive.
+
+Correctif R79 :
+- thickness_mm doit être de type number, fini, strictement positif et <= 20 mm ;
+- la borne maximale correspond au champ d’épaisseur visible de l’application ;
+- 20 mm reste accepté ; chaînes numériques, valeurs négatives/nulles et valeurs >20 mm sont refusées avant toute écriture ;
+- aucun changement des 10 morceaux catalogue.
+
+Test renforcé : LOCAL_DB_IMPORT_SCHEMA_GUARD_TEST_R79.
+Catalogue : 5 103 références uniques attendues ; les 10 morceaux doivent rester bit-identiques à R40/R78.
+Sécurité : V2.27 reste stable sur main. R79 reste uniquement une version de test sur v2.28-test-r1.
+
+===== PATCH_R79.txt =====
+BRES CLÉS V2.28 TEST R79 — PATCH CIBLÉ R78 → R79
+
+index.html
+- thickness_mm importé : suppression de la coercition Number(...);
+- vrai nombre JSON obligatoire ;
+- plage 0 < épaisseur <= 20 mm ;
+- validation effectuée avant setDB, donc import invalide non destructif.
+
+Tests
+- local_db_import_schema_guard_test.py renforcé avec chaîne numérique, valeur énorme et borne 20 mm valide ;
+- toutes les suites de régression précédentes restent actives.
+
+Catalogue
+- registre R79 séparé avec local_template_thickness_real_number_required=true et local_template_thickness_max_mm=20 ;
+- aucune modification des 10 morceaux catalog-01.js à catalog-10.js.
+
+===== DEFECT_REPRO_R78_TO_R79.txt =====
+BRES CLÉS — REPRODUCTION DÉFAUT R78 → R79
+
+R78 / normalizeImportedTemplateDB :
+- thickness_mm = "2.45" (chaîne JSON) : ACCEPTÉ, converti en 2.45 ;
+- thickness_mm = 999999 : ACCEPTÉ ;
+- thickness_mm = 2.45 : ACCEPTÉ.
+
+Conclusion : R78 ne faisait pas respecter la contrainte « vrais nombres JSON / domaine physique » pour l’épaisseur, contrairement aux signatures.
+R79 corrige cette incohérence.
+
+===== LOCAL_DB_IMPORT_SCHEMA_GUARD_TEST_R79.txt =====
+BRES CLÉS V2.28 TEST R79 — VALIDATION SCHÉMA IMPORT BASE ÉTALON
+
+OK  défaut R67 reproduit : un objet JSON mal structuré pouvait franchir la validation d’import
+OK  R79 valide chaque signature avant toute écriture dans localStorage
+OK  samples doit être un tableau de signatures exploitables
+OK  les bases héritées avec sig unique restent compatibles
+OK  les collisions de références après normalisation sont refusées
+OK  épaisseur importée : vrai nombre JSON requis, 0 < valeur <= 20 mm
+OK  un import de plus de 5 prises conserve uniquement les 5 plus récentes
+OK  dimensions négatives, nulles ou physiquement absurdes refusées
+OK  contours/profils hors domaine [0,1] et tableaux surdimensionnés refusés
+OK  chaînes numériques refusées : les mesures doivent rester de vrais nombres JSON
+OK  aucune base invalide n’est écrite avant la fin de la validation
+
+SELFTEST OK
+
+===== BUILD_MANIFEST_SUMMARY_R79.json =====
+{
+  "ok": true,
+  "version": "V2.28 TEST R79",
+  "catalog_count": 5103,
+  "unique_refs": 5103,
+  "catalogue_chunks_identical_to_r40": true,
+  "files_hashed": 2680,
+  "errors": [],
+  "tests_ok": 45,
+  "tests_total": 45,
+  "local_db_import_schema_guard_ok": true
+}
+
+===== CATALOGUE_SOURCE_CONTINUITY_R79.txt =====
+BRES CLÉS V2.28 TEST R79 — CONTINUITÉ SOURCE CATALOGUE
+
+OK  catalog-01.js  e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b
+OK  catalog-02.js  955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75
+OK  catalog-03.js  9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210
+OK  catalog-04.js  14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942
+OK  catalog-05.js  5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b
+OK  catalog-06.js  b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac
+OK  catalog-07.js  b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1
+OK  catalog-08.js  3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814
+OK  catalog-09.js  4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f
+OK  catalog-10.js  f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4
+
+10/10 morceaux identiques à R77/R40 : OUI
+Références attendues : 5 103 uniques.
+Aucune donnée catalogue modifiée par R79.
+
+R79 : aucune donnée catalogue modifiée ; durcissement limité au schéma de la base étalon locale (thickness_mm).
+
+===== CATALOGUE_EVIDENCE_R79.txt =====
+BRES CLÉS V2.28 TEST R79 — PREUVE CATALOGUE SÉPARÉE
+
+Objet du jalon application : empêcher une annulation/sélection vide du sélecteur d’import de perturber un import local déjà en cours.
+Données catalogue : aucune modification des 10 chunks catalog-01.js à catalog-10.js.
+Registre de sécurité R79 : local_base_import_picker_cancel_preserves_active_import_required=true.
+Le snapshot catalogue est construit et vérifié séparément de l’application.
+
+R79 : aucune donnée catalogue modifiée ; durcissement limité au schéma de la base étalon locale (thickness_mm).
+
+===== SOURCE_HASHES_R79.txt =====
+BRES CLÉS V2.28 TEST R79 — SHA256 SOURCES ACTIVES
+
+bd08a31b36471bd1612915db74110a578449148188727f2fba7e7bb9b2625b1f  index.html
+f68f3d27c9a7ba6c0b0c59158f230ba8e50d452083f07d6d6d24d8cdfe3d4ec6  v228-catalogue.js
+53a3899341201f410b38fd83cfe69d8923cf54e780c7c1cfd95117ec904601bb  local_db_import_schema_guard_test.py
+f1329442689f8daf4b38f69e80a442b257ae81111c83fe76df7f88b3d2e8fa22  version_consistency_test.py
+c4e5dcbb3f93825256421ea2f3627d2c398725176b7e98f11c4c05c74fe9ea58  verify_build.py
+11923e90dc95978341e3a99ddb620f1dd8be1bd0fd2a7344717897862d1292b5  catalogue/evidence/cross_reference_registry_r79.json
+
+===== RELEASE_SHA256_R79.txt =====
+055cc635cc9b777e7360b78c6a547460fa879e4e63b546e42acf7cabfa45ddf9  BRES_Cles_Mobile_V2_28_TEST_R79.zip
+a53fe90f270bb70028bdf9668db096533674a49999b577bbd699f9da9874f76a  BRES_Cles_Catalogue_Snapshot_R79.zip
+
+===== LOCAL_RELEASE_VERIFICATION_R79.txt =====
+BRES CLÉS V2.28 TEST R79 — VÉRIFICATION ARCHIVES LOCALES
+
+Archive application : OK — 45/45 suites, 5103/5103 références, 0 erreur(s).
+Archive catalogue : OK — 5103/5103 références, chunks R40 identiques=True, 0 erreur(s).
+
+SHA-256 application : 055cc635cc9b777e7360b78c6a547460fa879e4e63b546e42acf7cabfa45ddf9
+SHA-256 catalogue : a53fe90f270bb70028bdf9668db096533674a49999b577bbd699f9da9874f76a
+
+Intégrité ZIP : OK. Réextraction et revérification : OK.
