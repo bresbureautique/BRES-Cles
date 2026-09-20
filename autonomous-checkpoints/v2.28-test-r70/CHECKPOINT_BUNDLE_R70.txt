@@ -1,0 +1,106 @@
+===== CHECKPOINT_R70.txt =====
+BRES CLÉS — CHECKPOINT V2.28 TEST R70
+
+Objet : rendre la base locale d’étalons tolérante à un stockage navigateur momentanément indisponible, interdit ou saturé.
+
+Défaut reproduit en R69 :
+- localStorage.getItem() appelé au démarrage pouvait lever SecurityError avant le bloc de protection et interrompre l’initialisation ;
+- une lecture refusée remontait l’exception brute du navigateur ;
+- localStorage.setItem() pouvait lever QuotaExceededError sans message explicite sur la conservation de la base précédente ;
+- l’export de récupération pouvait à son tour échouer si localStorage lui-même était inaccessible.
+
+Correctif R70 :
+- lecture et écriture de la base étalon passent par deux passerelles contrôlées ;
+- le contrôle de démarrage intercepte désormais aussi les refus d’accès au stockage ;
+- quota dépassé et stockage inaccessible produisent des messages utilisateur distincts ;
+- aucune écriture n’est considérée réussie si localStorage.setItem() échoue ;
+- la base déjà stockée est préservée lors des erreurs simulées ;
+- l’export brut reste disponible pour une base corrompue lisible, et un diagnostic est exporté si le stockage est illisible.
+
+Test ajouté : LOCAL_STORAGE_AVAILABILITY_GUARD_TEST_R70.
+Catalogue : 5 103 références uniques attendues ; les 10 morceaux catalogue doivent rester bit-identiques à R40/R69.
+Sécurité : V2.27 reste stable sur main. R70 reste uniquement une version de test sur la branche v2.28-test-r1.
+
+===== PATCH_R70.txt =====
+BRES CLÉS V2.28 TEST R70 — PATCH CIBLÉ R69 → R70
+
+index.html
+- centralisation des lectures localStorage de la base étalon dans readLocalTemplateRaw() ;
+- centralisation des écritures dans writeLocalTemplateRaw() ;
+- SecurityError de lecture convertie en erreur contrôlée sans plantage du démarrage ;
+- QuotaExceededError distinguée comme stockage saturé et aucun faux succès d'enregistrement ;
+- échec d’écriture non destructif : la base déjà stockée reste inchangée ;
+- export de récupération conservé si la base est corrompue et export diagnostic si le stockage est lui-même inaccessible.
+
+Tests
+- nouveau local_storage_availability_guard_test.py ;
+- cas lecture refusée, quota dépassé, écriture refusée et retour à un stockage disponible ;
+- non-régression du garde de persistance R69.
+
+Catalogue
+- registre R70 séparé ;
+- aucune modification des 10 morceaux de données catalogue.
+
+===== LOCAL_STORAGE_AVAILABILITY_GUARD_TEST_R70.txt =====
+BRES CLÉS V2.28 TEST R70 — GARDE DISPONIBILITÉ STOCKAGE LOCAL
+
+OK  un refus de lecture localStorage ne fait plus planter le contrôle de démarrage
+OK  les erreurs SecurityError sont converties en message utilisateur contrôlé
+OK  QuotaExceededError est signalé comme stockage saturé sans faux succès
+OK  un refus d’écriture conserve bit-identique la base déjà stockée
+OK  lecture et écriture reprennent normalement lorsque le stockage redevient disponible
+
+SELFTEST OK
+
+===== BUILD_MANIFEST_SUMMARY_R70.json =====
+{
+  "ok": true,
+  "version": "V2.28 TEST R70",
+  "catalog_count": 5103,
+  "unique_refs": 5103,
+  "catalogue_chunks_identical_to_r40": true,
+  "files_hashed": 1955,
+  "errors": [],
+  "tests_ok": 39,
+  "tests_total": 39
+}
+
+===== CATALOGUE_SOURCE_CONTINUITY_R70.txt =====
+BRES CLÉS V2.28 TEST R70 — CONTINUITÉ SOURCE CATALOGUE
+
+OK  catalog-01.js  e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b
+OK  catalog-02.js  955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75
+OK  catalog-03.js  9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210
+OK  catalog-04.js  14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942
+OK  catalog-05.js  5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b
+OK  catalog-06.js  b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac
+OK  catalog-07.js  b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1
+OK  catalog-08.js  3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814
+OK  catalog-09.js  4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f
+OK  catalog-10.js  f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4
+
+10/10 morceaux identiques à R69/R40 : OUI
+Références attendues : 5 103 uniques.
+Aucune donnée catalogue modifiée par R70.
+
+===== CATALOGUE_EVIDENCE_R70.txt =====
+BRES CLÉS V2.28 TEST R70 — PREUVE CATALOGUE SÉPARÉE
+
+Objet du jalon application : tolérance aux erreurs d’accès et de quota du stockage local navigateur.
+Données catalogue : aucune modification des 10 chunks catalog-01.js à catalog-10.js.
+Registre de sécurité R70 : local_storage_access_failure_is_non_destructive=true ; local_storage_quota_failure_is_non_destructive=true.
+Le snapshot catalogue est construit et vérifié séparément de l’application.
+
+===== SOURCE_HASHES_R70.txt =====
+81c547631b0876c9314458d5aa1602cce2f38be56509126a091f82b84e8025bd  index.html
+5ab32a0277d5e5d7b2923dc663518fc2d782243c23481d7648d1ff0b1c21135a  v228-catalogue.js
+179ddcd0747ba14a01d074e06d0011df65bc92f68c20c8e17e9b2bf374d3127b  LISEZ-MOI.txt
+d74a712095489c359df18dc3f640e30f3881ee3cb6c721e7cb30d3fdb1577d61  verify_build.py
+1e39d007bcddeb3cbdd305510e79ea3170c5c698672eebcbc8f11859042055d1  local_db_persistence_guard_test.py
+6eb4faca0bca116c20850c827dba66777e4f921782187cb318cfb4e286614dcf  local_storage_availability_guard_test.py
+bfa685f669ed6887bcdca9196c8e9cd21631f846954d73e7de2304ee406fc781  version_consistency_test.py
+c22f1365f27581d6adf8123fa31da13959928541098a11bf8a424c8ee854e1b8  catalogue/evidence/cross_reference_registry_r70.json
+
+===== RELEASE_SHA256_R70.txt =====
+7f8b24faa5ee55439a58198c47dc79c94c1adce3686c79b62950f34deb3796d4  release/BRES_Cles_Catalogue_Snapshot_R70.zip
+e71bc976c496ae299244f6b2f269460446da7da9a6b084522048df601500833a  release/BRES_Cles_Mobile_V2_28_TEST_R70.zip
