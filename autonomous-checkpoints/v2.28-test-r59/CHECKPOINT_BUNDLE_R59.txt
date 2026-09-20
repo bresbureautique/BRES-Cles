@@ -1,0 +1,161 @@
+===== CHECKPOINT_R59.txt =====
+BRES CLÉS — CHECKPOINT V2.28 TEST R59
+
+Objet : empêcher les retours asynchrones obsolètes de la caméra guidée du profil (section de clé).
+
+Défaut reproduit en R58 :
+- startProfileCamera() attendait getUserMedia() puis video.play() sans identifiant de session ;
+- stopProfileCamera() arrêtait seulement le flux déjà publié, sans invalider une ouverture encore en attente ;
+- après arrêt, remise à zéro ou nouvelle ouverture, une ancienne promesse getUserMedia/play pouvait donc republier son flux ;
+- captureProfileCamera() écrivait directement capturedProfileBlob après toBlob(), sans vérifier que la caméra et la session étaient encore les mêmes ;
+- une ancienne capture pouvait donc remplacer la photo de profil courante après un changement de session.
+
+Correctif R59 :
+- ajout de profileCameraEpoch, bumpProfileCameraEpoch() et profileCameraIsCurrent() ;
+- stopProfileCamera() invalide désormais toutes les opérations caméra profil encore en attente ;
+- chaque startProfileCamera() fige une session et arrête tout flux devenu obsolète ;
+- captureProfileCamera() fige session, flux et dimensions avant toBlob(), puis refuse toute publication si la session a changé ;
+- test dédié PROFILE_CAMERA_SESSION_GUARD_TEST_R59 verrouillant les trois protections.
+
+Catalogue : 5 103 références uniques attendues ; les 10 morceaux de données catalogue restent strictement inchangés par rapport à R40/R58.
+Sécurité : V2.27 reste stable sur main. R59 reste uniquement une version de test sur la branche v2.28-test-r1.
+
+===== CODE_CHANGE_R59.txt =====
+BRES CLÉS V2.28 TEST R59 — RÉSUMÉ DU CORRECTIF
+
+- Correction ciblée de la caméra guidée du profil dans v228-catalogue.js.
+- Ajout d'une garde de session indépendante pour getUserMedia(), video.play() et toBlob().
+- Arrêt/remise à zéro invalide les opérations précédentes au lieu de seulement fermer le flux courant.
+- Une ancienne ouverture ne peut plus réafficher la caméra après fermeture ou nouvelle ouverture.
+- Une capture obsolète ne peut plus remplacer capturedProfileBlob ni profileCaptureMeta.
+- Les 10 fichiers catalogue/v3/catalog-01.js ... catalog-10.js sont inchangés.
+- La V2.27 stable n'est pas modifiée.
+
+===== DEFECT_REPRO_R58_TO_R59.txt =====
+BRES CLÉS V2.28 TEST R59 — REPRODUCTION DU DÉFAUT R58
+
+Inspection reproductible de v228-catalogue.js R58 :
+1. aucun profileCameraEpoch / identifiant de session n'existait ;
+2. stopProfileCamera() n'invalidait aucune promesse getUserMedia/play encore en attente ;
+3. startProfileCamera() exécutait directement `profileStream=await navigator.mediaDevices.getUserMedia(...)`, puis publiait ce flux sans vérifier qu'une fermeture ou une nouvelle ouverture avait eu lieu entre-temps ;
+4. captureProfileCamera() exécutait directement `capturedProfileBlob=await new Promise(...toBlob...)` puis publiait profileCaptureMeta sans garde de session.
+
+Reproduction statique sur R58 :
+- profileCameraEpoch présent : NON
+- stop invalide les opérations en attente : NON
+- ouverture protégée par session : NON
+- capture protégée après toBlob : NON
+- publication directe `capturedProfileBlob=await ...` : OUI
+
+Conséquence possible : après fermeture/remise à zéro/nouvelle ouverture, un ancien flux ou une ancienne capture pouvait reprendre la main et contaminer la session de profil suivante.
+
+===== PROFILE_CAMERA_SESSION_GUARD_TEST_R59.txt =====
+BRES CLÉS V2.28 TEST R59 — GARDE DE SESSION CAMÉRA PROFIL
+
+OK  arrêt/remise à zéro invalide les opérations caméra profil en attente
+OK  un ancien getUserMedia/play ne peut plus reprendre la main après arrêt ou nouvelle ouverture
+OK  une capture toBlob obsolète ne peut plus remplacer la photo de profil courante
+
+SELFTEST OK
+
+===== TEST_SUMMARY_R59.txt =====
+BRES CLÉS V2.28 TEST R59 — RÉSUMÉ DE VÉRIFICATION
+
+Application : OK
+- version : V2.28 TEST R59
+- catalogue : 5 103 références / 5 103 uniques
+- suites de tests : 28/28 réussies
+- fichiers contrôlés par verify_build.py : 1 223
+- erreurs : []
+- nouvelle garde de session caméra profil : OK
+- garde session caméra principale : OK
+- bouton refocus caméra principale : OK
+
+Catalogue séparé : OK
+- version : V2.28 TEST R59 catalogue snapshot
+- catalogue : 5 103 références / 5 103 uniques
+- 10 morceaux catalogue identiques à R58/R40 : OUI
+- fichiers contrôlés par verify_snapshot.py : 24
+- erreurs : []
+
+Continuité :
+- aucune donnée catalogue modifiée
+- V2.27 reste stable sur main
+- R59 reste sur la branche de test v2.28-test-r1
+
+===== CATALOGUE_SOURCE_CONTINUITY_R59.txt =====
+BRES CLÉS V2.28 TEST R59 — CONTINUITÉ SOURCE CATALOGUE
+
+OK  catalog-01.js  e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b
+OK  catalog-02.js  955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75
+OK  catalog-03.js  9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210
+OK  catalog-04.js  14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942
+OK  catalog-05.js  5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b
+OK  catalog-06.js  b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac
+OK  catalog-07.js  b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1
+OK  catalog-08.js  3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814
+OK  catalog-09.js  4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f
+OK  catalog-10.js  f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4
+
+10/10 morceaux identiques à R58/R40 : OUI
+Références attendues : 5 103 uniques.
+Aucune donnée catalogue modifiée par R59.
+
+===== CATALOGUE_EVIDENCE_R59.txt =====
+BRES CLÉS V2.28 TEST R59 — PREUVE CATALOGUE
+
+- Base catalogue de données conservée séparément de l'application.
+- 5 103 références uniques attendues.
+- 10 morceaux catalogue v3 strictement identiques à R58/R40 (contrôlés SHA-256).
+- R59 ne modifie que la garde de session de la caméra guidée du profil dans l'interface ; aucune ligne des morceaux catalogue n'est modifiée.
+- Registre actif : catalogue/evidence/cross_reference_registry_r59.json.
+
+===== SOURCE_HASHES_R59.txt =====
+BRES CLÉS V2.28 TEST R59 — SHA-256 DES SOURCES ACTIVES
+
+10439871fbbecf0562cc138223af434152b3a9f84d9d66a70604c4e495e17d4d  index.html
+28f01e0a558384337b1d81f81b633c02776858be0973b19b60e08175259ee0d5  v228-catalogue.js
+02e1120f9f5f7d405339e9b478da538b6053c70ab5ead5e2af93edc119bd53cb  verify_build.py
+17a4a019f0070788724abc72af96b1fc3c8ce2c6ac068d8d66a0e79cc1a37e24  CHECKPOINT.txt
+17a4a019f0070788724abc72af96b1fc3c8ce2c6ac068d8d66a0e79cc1a37e24  CHECKPOINT_R59.txt
+0b8acf7725e30f6b5a674a4cc23a78c36a748aed2cd51748e289df123b8d86d5  PATCH_R59.txt
+7b3560f343a5858ea00d3a832fa8dbcb6b5ed6cf058ec60b79c0dcff96fc3c87  CODE_CHANGE_R59.txt
+9144d28a71ed9fa60db783159f34d7d21b5222c8ce8b7ce713092b84a9e41a48  DEFECT_REPRO_R58_TO_R59.txt
+0df56a77e8ccb20b733fc172b5ee95c0ad0d83a0964ef6623aebc203a8ad05da  profile_camera_session_guard_test.py
+647d91dfd0d39f81d6d95076370583fa4bad666a60a9e5ae13ef4f7af0dcb9f4  guided_camera_session_guard_test.py
+f1f1b9907cbfb0a4c4a694b42a8a8d110849a07bd07aa40067d774063f9ee3ea  guided_camera_refocus_binding_test.py
+23dddf25ae2fb7a900f5c05f709abda4b0c5a14951ce4e0c44a37c85c8600918  version_consistency_test.py
+73054211d36cf4993b731099b3c95a1ef2a56de7d0a50db7c43458862ab26921  catalogue/evidence/cross_reference_registry_r59.json
+e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b  catalogue/v3/catalog-01.js
+955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75  catalogue/v3/catalog-02.js
+9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210  catalogue/v3/catalog-03.js
+14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942  catalogue/v3/catalog-04.js
+5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b  catalogue/v3/catalog-05.js
+b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac  catalogue/v3/catalog-06.js
+b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1  catalogue/v3/catalog-07.js
+3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814  catalogue/v3/catalog-08.js
+4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f  catalogue/v3/catalog-09.js
+f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4  catalogue/v3/catalog-10.js
+
+===== RELEASE_SHA256_R59.txt =====
+8a9fb3d2bf3aafed73b475f3749f5bd39e57eca4072c4016483683afb840fbdb  /mnt/data/bres_r59_work/release/BRES_Cles_Mobile_V2_28_TEST_R59.zip
+a825296b2daf2427048e43b21ddfdb29a9c94222e5070097d126dfee53d86d1b  /mnt/data/bres_r59_work/release/BRES_Cles_Catalogue_Snapshot_R59.zip
+
+===== LIBRARY_ROUNDTRIP_VERIFICATION_R59.txt =====
+BRES CLÉS V2.28 TEST R59 — VÉRIFICATION ALLER-RETOUR LIBRARY
+
+Dossier : /BRES Cles/Sauvegardes
+
+Application ZIP :
+- SHA-256 original : 8a9fb3d2bf3aafed73b475f3749f5bd39e57eca4072c4016483683afb840fbdb
+- SHA-256 rematérialisé : 8a9fb3d2bf3aafed73b475f3749f5bd39e57eca4072c4016483683afb840fbdb
+- identité binaire : OK
+- extraction + verify_build.py : OK (5 103 références, 28/28 suites, 1 223 fichiers contrôlés, errors=[])
+
+Catalogue ZIP :
+- SHA-256 original : a825296b2daf2427048e43b21ddfdb29a9c94222e5070097d126dfee53d86d1b
+- SHA-256 rematérialisé : a825296b2daf2427048e43b21ddfdb29a9c94222e5070097d126dfee53d86d1b
+- identité binaire : OK
+- extraction + verify_snapshot.py : OK (5 103 références, 24 fichiers contrôlés, errors=[])
+
+Verdict : les deux sauvegardes Library sont bit-identiques aux ZIP de release et restent vérifiables après rematérialisation.
