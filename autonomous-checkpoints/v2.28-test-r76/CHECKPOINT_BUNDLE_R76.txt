@@ -1,0 +1,121 @@
+===== CHECKPOINT_R76.txt =====
+BRES CLÉS — CHECKPOINT V2.28 TEST R76
+
+Objet : permettre un réessai immédiat du même fichier JSON après un import terminé, échoué ou annulé sans affaiblir les gardes de concurrence.
+
+Défaut reproduit en R75 :
+- le champ <input type=file> conservait le fichier choisi après la fin de l’import ;
+- les navigateurs ne redéclenchent généralement pas l’événement change quand l’utilisateur choisit exactement le même fichier déjà sélectionné ;
+- après un échec JSON, une erreur de stockage ou une annulation rendue obsolète par une modification plus récente, l’utilisateur pouvait donc être obligé de choisir un autre fichier avant de pouvoir réessayer le bon.
+
+Correctif R76 :
+- ajout d’une notion de propriété de la sélection d’import ;
+- après succès, erreur ou annulation devenue obsolète, la sélection est vidée uniquement si elle appartient encore à l’import concerné ;
+- un ancien import ne peut jamais vider un fichier plus récent choisi pendant sa lecture ;
+- les gardes importFileEpoch + localTemplateEpoch de R75 restent inchangées avant toute écriture.
+
+Test ajouté : LOCAL_DB_IMPORT_RETRY_GUARD_TEST_R76.
+Catalogue : 5 103 références uniques attendues ; les 10 morceaux catalogue doivent rester bit-identiques à R40/R75.
+Sécurité : V2.27 reste stable sur main. R76 reste uniquement une version de test sur la branche v2.28-test-r1.
+
+===== PATCH_R76.txt =====
+BRES CLÉS V2.28 TEST R76 — PATCH CIBLÉ R75 → R76
+
+index.html
+- ajout de importSelectionOwned() pour vérifier qu’un import possède encore la sélection de fichier visible ;
+- ajout de resetImportSelectionIfOwned() pour vider le champ fichier sans jamais toucher à une sélection plus récente ;
+- ajout de stopStaleImport() qui combine les gardes importFileEpoch + localTemplateEpoch et libère le même fichier lorsqu’une annulation appartient encore à l’import courant ;
+- remise à zéro sûre du sélecteur après succès et après erreur, afin d’autoriser un réessai immédiat du même JSON.
+
+Tests
+- nouveau local_db_import_retry_guard_test.py : reproduit le défaut de réessai du même fichier et vérifie qu’un ancien import ne peut pas vider une sélection plus récente ;
+- toutes les protections d’import, de persistance, de concurrence et d’invalidation précédentes restent actives.
+
+Catalogue
+- registre R76 séparé avec local_base_import_same_file_retry_required=true ;
+- aucune modification des 10 morceaux catalog-01.js à catalog-10.js.
+
+===== LOCAL_DB_IMPORT_RETRY_GUARD_TEST_R76.txt =====
+BRES CLÉS V2.28 TEST R76 — RÉESSAI IMPORT DU MÊME FICHIER
+
+OK  défaut R75 reproduit : le même fichier pouvait rester sélectionné après succès, erreur ou annulation et ne pas redéclencher change
+OK  R76 vide la sélection de fichier après un import terminé ou annulé devenu obsolète
+OK  le même fichier peut donc être choisi immédiatement une seconde fois
+OK  la remise à zéro est conditionnée à la propriété de la sélection : un ancien import ne vide jamais un fichier plus récent
+OK  les gardes importFileEpoch + localTemplateEpoch restent actives avant toute écriture
+
+SELFTEST OK
+
+===== BUILD_MANIFEST_SUMMARY_R76.json =====
+{
+  "ok": true,
+  "version": "V2.28 TEST R76",
+  "catalog_count": 5103,
+  "unique_refs": 5103,
+  "catalogue_chunks_identical_to_r40": true,
+  "files_hashed": 2423,
+  "errors": [],
+  "tests_ok": 43,
+  "tests_total": 43
+}
+
+===== CATALOGUE_SOURCE_CONTINUITY_R76.txt =====
+BRES CLÉS V2.28 TEST R76 — CONTINUITÉ SOURCE CATALOGUE
+
+OK  catalog-01.js  e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b
+OK  catalog-02.js  955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75
+OK  catalog-03.js  9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210
+OK  catalog-04.js  14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942
+OK  catalog-05.js  5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b
+OK  catalog-06.js  b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac
+OK  catalog-07.js  b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1
+OK  catalog-08.js  3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814
+OK  catalog-09.js  4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f
+OK  catalog-10.js  f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4
+
+10/10 morceaux identiques à R75/R40 : OUI
+Références attendues : 5 103 uniques.
+Aucune donnée catalogue modifiée par R76.
+
+===== CATALOGUE_EVIDENCE_R76.txt =====
+BRES CLÉS V2.28 TEST R76 — PREUVE CATALOGUE SÉPARÉE
+
+Objet du jalon application : permettre de réimporter immédiatement le même fichier JSON après succès, erreur ou annulation obsolète sans qu’un ancien import puisse effacer une sélection plus récente.
+Données catalogue : aucune modification des 10 chunks catalog-01.js à catalog-10.js.
+Registre de sécurité R76 : local_base_import_same_file_retry_required=true.
+Le snapshot catalogue est construit et vérifié séparément de l’application.
+
+===== SOURCE_HASHES_R76.txt =====
+BRES CLES V2.28 TEST R76 — SOURCE HASHES
+
+5787219a27a174583400807d99b857df4e63e85385c2608cf3bde89dd1563285  index.html
+2c690bcf07e112d4eb152679b58cd67ab37c304ad691603cd0eeab346c15951a  v228-catalogue.js
+238dca844b595d7325df01d32d7f8b73c922bc2ebff31733f85eecfd284c2e8b  LISEZ-MOI.txt
+ad4e59c14783cc1cda4c8e64781889ad410b36b45e85bc8e0779b6cf761010b0  verify_build.py
+d3e9cec785f55b791eb2ee3e75981d97695fe4c3a903e56731194cb3e5dcef1a  version_consistency_test.py
+0f1cd60d99a1eae7408f274096674c046354591a73b3dd0883b9b555533ed474  catalogue_namespace_registry_test.py
+43e1a3fb4fc7df9800b97943e0feba77c5fcc20bfad60fc1ab77148bd9469f32  import_async_guard_test.py
+345530e028d582d1a0541105ed17623fc538202ff25172a75866e15def8375ce  local_db_import_template_epoch_guard_test.py
+07ae731e2bc909a0a3fb5a7b0806fd6ffbd202529badfe473c59c3197c5f75c0  local_db_import_retry_guard_test.py
+27cbbe6fbf57e66fb69aed9222699fe713652700001b007fe52b5c5c23ba2bf8  local_db_persistence_guard_test.py
+7239d6e6b07254ee0a72981a8b3dd0c9e9f767c26df1988208f040f50feb1d3e  local_storage_availability_guard_test.py
+9a624d4e06696f62e07a361d77f1d2bd3f815cc3e422039d764cb126cd85fb34  local_storage_external_change_guard_test.py
+d8e4f69d27fa456b2e6cfdd31e1253b963f7c36fca457217883a3a6410c07d18  local_template_async_invalidation_guard_test.py
+6f1eab31b6cdd63688968545307458b4c4f2752f05fa99a180bfb3c0b579e2de  catalogue/evidence/cross_reference_registry_r76.json
+00a9fd5951b6b2242a433774c978c118a1c0dc75b65cd3642e41fca266928fe7  CATALOGUE_SOURCE_CONTINUITY_R76.txt
+a9433ca41e8ba5dc0d91162a0390d6f5e8854d22154dbd234d18151fe84e5845  CATALOGUE_EVIDENCE_R76.txt
+
+===== RELEASE_SHA256_R76.txt =====
+7f16e50285f4d45de450f3ff76886a863704c32d7128c8a7ecd466e3207e0784  /mnt/data/bres_r76_work/release/BRES_Cles_Catalogue_Snapshot_R76.zip
+fd2ac638073e9ee3b481fc6197551fe15f1e3559b9a5c072daa80f4db56c9767  /mnt/data/bres_r76_work/release/BRES_Cles_Mobile_V2_28_TEST_R76.zip
+
+===== LOCAL_RELEASE_VERIFICATION_R76.txt =====
+BRES CLÉS V2.28 TEST R76 — VÉRIFICATION ARCHIVES LOCALES
+
+Archive application : OK — 43/43 suites, 5103/5103 références, 0 erreur.
+Archive catalogue : OK — 5103/5103 références, chunks R40 identiques=True, 0 erreur.
+
+SHA-256 application : fd2ac638073e9ee3b481fc6197551fe15f1e3559b9a5c072daa80f4db56c9767
+SHA-256 catalogue : 7f16e50285f4d45de450f3ff76886a863704c32d7128c8a7ecd466e3207e0784
+
+Intégrité ZIP : OK. Réextraction et revérification : OK.
