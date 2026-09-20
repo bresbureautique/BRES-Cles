@@ -1,0 +1,134 @@
+===== CHECKPOINT_R61.txt =====
+BRES CLÉS — CHECKPOINT V2.28 TEST R61
+
+Objet : séparer l’identité physique des photos principales des autres changements d’interface afin de ne pas jeter à tort une session de profil valide.
+
+Défaut reproduit en R60 :
+- R60 liait la session profil à identificationEpoch ;
+- identificationEpoch avance non seulement quand les photos recto/verso changent, mais aussi quand l’utilisateur modifie la référence, la marque ou les photos de tête ;
+- une simple correction de texte ou une nouvelle photo de tête pouvait donc être interprétée comme « nouvelle clé » par compareProfilePhoto() ;
+- la session profil et/ou sa capture pouvaient être écartées alors que les photos principales représentaient toujours la même clé.
+
+Correctif R61 :
+- ajout d’un mainPhotoEpoch dédié dans index.html ;
+- mainPhotoEpoch avance uniquement dans photoRefresh(), donc lors d’un vrai changement des photos recto/verso ou d’une capture guidée principale ;
+- la garde asynchrone générale identificationEpoch est conservée pour OCR, saisie manuelle et photos de tête ;
+- v228-catalogue.js lie désormais les captures et sessions profil à mainPhotoEpoch ;
+- repli compatible sur identificationEpoch si le wrapper R61 était exceptionnellement chargé dans un ancien shell ;
+- test dédié PROFILE_MAIN_PHOTO_EPOCH_GUARD_TEST_R61.
+
+Catalogue : 5 103 références uniques attendues ; les 10 morceaux de données catalogue restent strictement inchangés par rapport à R40/R60.
+Sécurité : V2.27 reste stable sur main. R61 reste uniquement une version de test sur la branche v2.28-test-r1.
+
+===== CODE_CHANGE_R61.txt =====
+BRES CLÉS V2.28 TEST R61 — RÉSUMÉ DU CORRECTIF
+
+- Ajout d’une époque dédiée mainPhotoEpoch dans le shell principal.
+- Les changements de référence/marque et de photos de tête continuent d’invalider leurs calculs asynchrones via identificationEpoch, mais ne sont plus assimilés à un changement physique de clé pour le profil.
+- Les captures/session profil utilisent mainPhotoEpoch pour détecter le vrai remplacement des photos recto/verso.
+- Les données catalogue restent inchangées.
+- La V2.27 stable n’est pas modifiée.
+
+===== DEFECT_REPRO_R60_TO_R61.txt =====
+BRES CLÉS V2.28 TEST R61 — REPRODUCTION DU DÉFAUT R60
+
+1. En R60, currentMainIdentificationEpoch() lisait identificationEpoch.
+2. identificationEpoch est incrémenté par photoRefresh(), mais aussi par les champs manualRef/manualBrand et invalidateHeadPhotoDerivedIdentification().
+3. compareProfilePhoto() comparait cette valeur avec profileSessionMainEpoch/profileCaptureMainEpoch.
+4. Une correction de texte ou une photo de tête pouvait donc déclencher la branche « Nouvelle clé détectée » sans changement recto/verso.
+
+R61 introduit mainPhotoEpoch, avancé uniquement par photoRefresh(), et la chaîne profil se lie à cette époque dédiée.
+
+===== PROFILE_MAIN_PHOTO_EPOCH_GUARD_TEST_R61.txt =====
+BRES CLÉS V2.28 TEST R61 — ISOLEMENT ÉPOQUE PHOTOS PRINCIPALES
+
+OK  mainPhotoEpoch avance uniquement lors d’un vrai changement recto/verso
+OK  une modification de référence/marque manuelle conserve la session profil de la même clé
+OK  une photo de tête optionnelle ne simule plus une nouvelle clé pour le profil
+OK  captures et session profil sont liées à mainPhotoEpoch, avec repli de compatibilité ancien shell
+
+SELFTEST OK
+
+===== TEST_SUMMARY_R61.txt =====
+BRES CLÉS V2.28 TEST R61 — RÉSUMÉ DE VÉRIFICATION
+
+Application : OK
+- version : V2.28 TEST R61
+- catalogue : 5103 références / 5103 uniques
+- suites de tests : 30/30 réussies
+- fichiers contrôlés : 1337
+- erreurs : []
+- garde mainPhotoEpoch profil : OK
+- données catalogue inchangées R40 : OUI
+
+
+===== CATALOGUE_SOURCE_CONTINUITY_R61.txt =====
+BRES CLÉS V2.28 TEST R61 — CONTINUITÉ SOURCE CATALOGUE
+
+OK  catalog-01.js  e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b
+OK  catalog-02.js  955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75
+OK  catalog-03.js  9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210
+OK  catalog-04.js  14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942
+OK  catalog-05.js  5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b
+OK  catalog-06.js  b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac
+OK  catalog-07.js  b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1
+OK  catalog-08.js  3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814
+OK  catalog-09.js  4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f
+OK  catalog-10.js  f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4
+
+10/10 morceaux identiques à R60/R40 : OUI
+Références attendues : 5 103 uniques.
+Aucune donnée catalogue modifiée par R61.
+
+===== SOURCE_HASHES_R61.txt =====
+BRES CLÉS V2.28 TEST R61 — SHA-256 DES SOURCES ACTIVES
+
+d42b2b52d977529585a4c7691910c603de8e12b4222113b2dcd7a34afdc2f034  index.html
+b80079fc6acb7e19b379a1020a7451469f039a8f03499eca63a8bf1009caafc4  v228-catalogue.js
+92e94c2c186843633b0f2a700ecac6d00846ac5feb068416d3c06232f1893747  verify_build.py
+855e3d74175df7cef17619a9a46fdd363efff3ea36014d4e20c7e904a69c45cc  version_consistency_test.py
+14a9b86c95e0e4179d4c60986095f80c3109bf22f5c88ad602934425fb5f6472  async_state_epoch_guard_test.py
+d9f36f1ed1fb856a80ec3310487ab6842d921d3f0ccdd685a902e2a331d85d11  profile_analysis_epoch_guard_test.py
+04364ea94fb8526c351ac106ed6f4d6be682fedbb7ccc9745cd18bcea87dd85c  profile_main_photo_epoch_guard_test.py
+a5964c20a8f6371fc3657c7769f7d790542ac02abe6df8999ac400c840228b69  CHECKPOINT.txt
+a5964c20a8f6371fc3657c7769f7d790542ac02abe6df8999ac400c840228b69  CHECKPOINT_R61.txt
+1dbd5e52f13906ce1052b0cf732e1e85a2140c6d40c41f6d9d21be5a87adf107  PATCH_R61.txt
+3b01f7a14134f3a3e162d6488324009ecc4a410e4affe6cb2208617915736bb3  CODE_CHANGE_R61.txt
+2775c5730eab00e3b8d03d9da25f6545c637053ef2161e4b4af75e7ffc0bbc40  DEFECT_REPRO_R60_TO_R61.txt
+64bf29b59fa975546cd56a4dbeef02f2c64f8f6a938f66e5dc324e4fb9aa0f6e  CATALOGUE_SOURCE_CONTINUITY_R61.txt
+c2de786bb42e2e1d96b346b6b7a68cfbfc474e666a0d954eb5b39bd857c273a3  CATALOGUE_EVIDENCE_R61.txt
+291ccfbd133363c6d01c31140ba019a41f3c10773fb561430983b96cabf4bf8e  catalogue/evidence/cross_reference_registry_r61.json
+e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b  catalogue/v3/catalog-01.js
+955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75  catalogue/v3/catalog-02.js
+9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210  catalogue/v3/catalog-03.js
+14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942  catalogue/v3/catalog-04.js
+5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b  catalogue/v3/catalog-05.js
+b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac  catalogue/v3/catalog-06.js
+b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1  catalogue/v3/catalog-07.js
+3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814  catalogue/v3/catalog-08.js
+4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f  catalogue/v3/catalog-09.js
+f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4  catalogue/v3/catalog-10.js
+
+===== RELEASE_SHA256_R61.txt =====
+04fd80fae389bbc035ec48d5fd86bd42523b37bfa51681fe0426ad51d31f5526  BRES_Cles_Mobile_V2_28_TEST_R61.zip
+ecafdb1cf90757e26fb686afb40642b27819e7981d39f8fb7dc74a2d9c004c3e  BRES_Cles_Catalogue_Snapshot_R61.zip
+
+
+===== LIBRARY_ROUNDTRIP_VERIFICATION_R61.txt =====
+BRES CLÉS V2.28 TEST R61 — VÉRIFICATION ALLER-RETOUR LIBRARY
+
+Dossier : /BRES Cles/Sauvegardes
+
+Application ZIP :
+- SHA-256 original : 04fd80fae389bbc035ec48d5fd86bd42523b37bfa51681fe0426ad51d31f5526
+- SHA-256 rematérialisé : 04fd80fae389bbc035ec48d5fd86bd42523b37bfa51681fe0426ad51d31f5526
+- identité binaire : OK
+- extraction + verify_build.py : OK (5103 références, 30/30 suites lancées, 1337 fichiers contrôlés, errors=[])
+
+Catalogue ZIP :
+- SHA-256 original : ecafdb1cf90757e26fb686afb40642b27819e7981d39f8fb7dc74a2d9c004c3e
+- SHA-256 rematérialisé : ecafdb1cf90757e26fb686afb40642b27819e7981d39f8fb7dc74a2d9c004c3e
+- identité binaire : OK
+- extraction + verify_snapshot.py : OK (5103 références, 24 fichiers contrôlés, errors=[])
+
+Verdict : les deux sauvegardes Library sont bit-identiques aux ZIP de release et restent vérifiables après rematérialisation.
