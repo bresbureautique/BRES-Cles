@@ -1,0 +1,111 @@
+===== CHECKPOINT_R69.txt =====
+BRES CLÉS — CHECKPOINT V2.28 TEST R69
+
+Objet : sécuriser une base locale d’étalons déjà présente dans le téléphone lorsqu’elle est corrompue ou devenue incompatible.
+
+Défaut reproduit en R68 :
+- getDB() protégeait seulement l’erreur de syntaxe JSON en retournant une base vide ;
+- une base JSON syntaxiquement valide mais de schéma corrompu pouvait encore atteindre match() et provoquer une erreur pendant la comparaison ;
+- après une lecture corrompue, une nouvelle écriture pouvait repartir d’une base vide et remplacer silencieusement la valeur d’origine ;
+- l’export normal ne préservait pas forcément la valeur brute nécessaire à une récupération.
+
+Correctif R69 :
+- toute base persistée est revalidée avec le même normaliseur que l’import avant d’être utilisée ;
+- JSON illisible ou schéma invalide : erreur contrôlée, aucune écriture automatique et aucune modification de localStorage ;
+- setDB() valide lui aussi la structure avant toute écriture ;
+- un contrôle au démarrage affiche l’état corrompu sans faire planter l’application ;
+- l’export crée BRES_base_etalons_RECUPERATION_R69.txt avec la valeur brute lorsqu’une base corrompue est détectée ;
+- les bases historiques valides utilisant sig restent compatibles ;
+- les données catalogue restent inchangées.
+
+Test ajouté : LOCAL_DB_PERSISTENCE_GUARD_TEST_R69.
+Catalogue : 5 103 références uniques attendues ; les 10 morceaux catalogue doivent rester bit-identiques à R40/R68.
+Sécurité : V2.27 reste stable sur main. R69 reste uniquement une version de test sur la branche v2.28-test-r1.
+
+===== PATCH_R69.txt =====
+BRES CLÉS V2.28 TEST R69 — PATCH CIBLÉ R68 → R69
+
+index.html
+- getDB() revalide la base persistée avant utilisation et ne masque plus une corruption par une base vide ;
+- setDB() normalise et valide avant localStorage.setItem() ;
+- contrôle de démarrage non destructif de la base locale ;
+- export de récupération brute si la base stockée est illisible ou invalide ;
+- aucun écrasement automatique d’une base corrompue.
+
+Tests
+- nouveau local_db_persistence_guard_test.py ;
+- cas JSON invalide, schéma invalide, ancienne base sig valide, écriture invalide et écriture valide ;
+- vérification que la valeur stockée reste bit-identique après chaque rejet.
+
+Catalogue
+- registre R69 séparé avec politique de protection de la base locale persistée ;
+- aucune modification des 10 morceaux de données catalogue.
+
+===== LOCAL_DB_PERSISTENCE_GUARD_TEST_R69.txt =====
+BRES CLÉS V2.28 TEST R69 — GARDE BASE LOCALE PERSISTÉE
+
+OK  une base JSON syntaxiquement corrompue est refusée sans modifier la valeur stockée
+OK  une base syntaxiquement valide mais de schéma corrompu est refusée sans écrasement
+OK  les anciennes bases valides avec sig unique restent lisibles et normalisées en mémoire
+OK  setDB valide le schéma avant toute écriture et préserve une base valide si la nouvelle valeur est invalide
+OK  le contrôle de démarrage intercepte une base locale endommagée au lieu de faire planter l’application
+OK  l’export de secours conserve la valeur brute dans BRES_base_etalons_RECUPERATION_R69.txt
+
+SELFTEST OK
+
+===== BUILD_MANIFEST_SUMMARY_R69.json =====
+{
+  "ok": true,
+  "version": "V2.28 TEST R69",
+  "catalog_count": 5103,
+  "unique_refs": 5103,
+  "catalogue_chunks_identical_to_r40": true,
+  "tests_ok": 38,
+  "tests_total": 38,
+  "files_hashed": 1881,
+  "errors": []
+}
+
+===== CATALOGUE_SOURCE_CONTINUITY_R69.txt =====
+BRES CLÉS V2.28 TEST R69 — CONTINUITÉ SOURCE CATALOGUE
+
+OK  catalog-01.js  e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b
+OK  catalog-02.js  955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75
+OK  catalog-03.js  9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210
+OK  catalog-04.js  14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942
+OK  catalog-05.js  5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b
+OK  catalog-06.js  b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac
+OK  catalog-07.js  b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1
+OK  catalog-08.js  3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814
+OK  catalog-09.js  4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f
+OK  catalog-10.js  f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4
+
+10/10 morceaux identiques à R68/R40 : OUI
+Références attendues : 5 103 uniques.
+Aucune donnée catalogue modifiée par R69.
+
+===== CATALOGUE_EVIDENCE_R69.txt =====
+BRES CLÉS V2.28 TEST R69 — PREUVE CATALOGUE SÉPARÉE
+
+Objet du jalon application : protection d’une base locale persistée corrompue et export brut de récupération.
+Données catalogue : aucune modification des 10 chunks catalog-01.js à catalog-10.js.
+Registre de sécurité R69 : persisted_local_db_schema_validation_required=true ; corrupt_local_db_must_not_be_overwritten=true ; corrupt_local_db_raw_recovery_export_required=true.
+Le snapshot catalogue est construit et vérifié séparément de l’application.
+
+===== SOURCE_HASHES_R69.txt =====
+BRES CLES V2.28 TEST R69 — SOURCE HASHES
+
+33a4ba656e1faf61c8cb5e3993e47aeb4300cda25fad071a52638dc9d6a6988c  index.html
+1c174f3e45742a5d4a9ef5afaea3c3cd93eaeaf0ac4dba2bb3820d88af1be31c  v228-catalogue.js
+82e336b79c217a4af6894b77456d62e0a081edbbeae34b6a3768ac3fc00ae25c  LISEZ-MOI.txt
+e8d31b127b83dedf8433473197264d32d8dc2c11a61d1e5342321cddaa731351  verify_build.py
+bd448ba14fe099040742d0ef5337e10af258520ce001dfbd3becc9525403fb4e  version_consistency_test.py
+aae5bb18b528b8b3ba95e9d10c20974b77b7788fe02c9e38d69b0a066df4a856  catalogue_namespace_registry_test.py
+c7e9cfbe1bd92e8890d28c3f0aac37d446d408f13a245a963f454be83c6c9679  ronis_code_series_guard_test.py
+f4ec8a85d0425bb84bb13156950a88478d356158a74a09c11bbae629ab48a1ff  local_db_import_schema_guard_test.py
+5912c65e7288d808d9ad0a0f4b109d5b8f14c39ae5e35cd723c67cc4a3c694bc  local_db_persistence_guard_test.py
+d51142bfe0e08da5a16b9c487071963d076496b5e19b36b6838a47420c341fcf  catalogue/evidence/cross_reference_registry_r69.json
+
+===== RELEASE_SHA256_R69.txt =====
+0fb83530d07088d9dfe1a62714c2bd540ef222662469519c28a2bd195ea2ada3  release/BRES_Cles_Catalogue_Snapshot_R69.zip
+4b7d675c4094e2b3baa8ccfea866eda1c33cc1982697405d6477826147320520  release/BRES_Cles_Mobile_V2_28_TEST_R69.zip
