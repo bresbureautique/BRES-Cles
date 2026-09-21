@@ -1,0 +1,8 @@
+BRES CLÉS — V2.28 TEST R92
+
+Base : candidat aperçu validé sur V2.28 TEST R91.
+Objet : aperçu direct recto/verso + reprise séparée d’une face avant analyse.
+V2.27 stable : ne doit pas être remplacée par ce build de test.
+Catalogue : inchangé ; 10/10 blocs catalog-01..10 strictement identiques au candidat R91 vérifié.
+Algorithmes forme/OCR/catalogue : aucun changement dans ce jalon.
+Validation : release_guard_r92.py SELFTEST OK ; JavaScript index + v228-catalogue syntaxe OK ; archive ZIP testée séparément après construction.
