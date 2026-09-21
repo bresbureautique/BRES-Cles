@@ -1,0 +1,13 @@
+BRES CLÉS — V2.28 TEST R99 — DIAGNOSTIC OCR PAR PASSE
+
+Base : V2.28 TEST R98.
+Stable : V2.27 / branche main NON MODIFIÉE.
+
+Changements :
+- aucune modification de la logique de décision OCR/catalogue ;
+- mémorisation locale, pour chaque passe OCR, du mode, de la confiance, des fabricants vus et du meilleur code candidat ;
+- ajout d’un résumé diagnostic visible après lecture des photos de tête ;
+- le diagnostic est strictement non décisionnel : il ne remplit aucun champ et ne change aucun score ;
+- conservation du consensus fabricant R98 et du garde-fou TE8D / TE8I ;
+- budget inchangé : 25 s/action, 7 s/passe, 4 passes rapides + 4 renforcées maximum ;
+- aucune modification des 10 chunks du catalogue massif.
