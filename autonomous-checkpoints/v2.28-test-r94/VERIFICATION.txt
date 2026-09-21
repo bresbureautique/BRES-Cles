@@ -1,0 +1,25 @@
+BRES CLÉS — V2.28 TEST R94 — VÉRIFICATION
+
+Application :
+- verify_build.py : OK
+- tests : 58/58
+- erreurs : 0
+- garde retour visuel boutons : OK
+- JavaScript : syntaxe valide
+- catalogue embarqué : 5103/5103 références uniques
+- chunks catalogue : 10/10 identiques à la baseline
+
+Catalogue séparé :
+- verify_snapshot.py : OK
+- références : 5103/5103 uniques
+- chunks : 10
+- baseline registre : V2.28 TEST R91
+- erreurs : 0
+
+Round-trip exact ZIPs :
+- unzip -t : OK pour les deux archives
+- réextraction propre : OK
+- verify_build.py sur ZIP réextrait : OK, 58/58
+- verify_snapshot.py sur snapshot réextrait : OK
+
+V2.27 stable / main : non remplacée par R94.
