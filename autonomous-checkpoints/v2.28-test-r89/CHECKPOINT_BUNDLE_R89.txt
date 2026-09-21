@@ -1,0 +1,61 @@
+BRES CLÉS — CHECKPOINT GITHUB V2.28 TEST R89
+
+Parent R88 attendu : cb570b97d06c8ef30616c0caaef2d331021528f6
+Branche : v2.28-test-r1
+V2.27 stable : main @ 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8 — ne pas remplacer.
+
+DÉFAUT REPRODUIT EN R88
+setDBIfRawUnchanged() comparait le snapshot brut puis appelait setDB(). setDB() normalisait et sérialisait encore toute la base avant localStorage.setItem(). Une écriture provenant d'un ancien onglet non participant aux Web Locks pendant JSON.stringify() pouvait donc survenir après le dernier contrôle et être écrasée. Reproduction ciblée : injection de {"LEGACY":9} pendant JSON.stringify(), R88 terminait sans conflit et perdait cette écriture.
+
+CORRECTIF R89
+- prepareLocalTemplateDBWrite(db) effectue normalizeImportedTemplateDB + JSON.stringify AVANT le dernier contrôle du snapshot.
+- setDBIfRawUnchanged() prépare les octets, relit le snapshot brut, puis enchaîne directement writeLocalTemplateRaw(prepared.raw) et bumpLocalTemplateEpoch().
+- setDB() réutilise le même préparateur.
+- Web Locks + file Promise restent actifs pour les onglets R89 participants.
+- Limite explicitement documentée : localStorage ne fournit pas de compare-and-swap atomique. R89 supprime tout travail coûteux de la fenêtre finale et la réduit au minimum synchrone getItem -> setItem contre un ancien onglet non coopératif.
+
+TEST CIBLÉ R89
+LOCAL_TEMPLATE_PRECOMMIT_SERIALIZATION_GUARD_TEST_R89 : OK
+- injection legacy pendant JSON.stringify détectée au contrôle final ;
+- erreur local_template_conflict ;
+- valeur externe conservée ;
+- epoch inchangée en cas de conflit ;
+- écriture normale toujours fonctionnelle.
+
+VALIDATION COMPLÈTE + NON-RÉGRESSION
+- verify_build.py : OK
+- suites : 55/55
+- catalogue : 5103/5103 références uniques
+- fichiers hachés : 3663
+- erreurs : 0
+- OCR : toutes les suites de garde/reconstruction/sélection conservées et OK
+- 10/10 morceaux catalogue bit-identiques à R40/R88
+- ZIP application : unzip -t OK, réextraction puis verify_build.py OK
+- snapshot catalogue : unzip -t OK, réextraction puis verify_snapshot.py OK
+
+SHA-256 SOURCES R89
+d7f825a385720cdaee13825115e33978ec58e2bef303625f02d96cf0ef5b4cbb  index.html
+1dc42f65ecb6129fd662f1c523507c45a10c0392ab35df43521498bb0abf0a71  v228-catalogue.js
+7006573db93471787a5d5c7266c092fcb8664d75d438f458980d1830711b006f  LISEZ-MOI.txt
+6e4c93a754d1bfacca569bcce64e7e8eacbe194770e890c2c2ce90a4217b699a  catalogue/evidence/cross_reference_registry_r89.json
+2d1d50f8e8779ca047bc2ba6eb91e162a9793a09d02981fb47ed772ba3607bd4  local_template_precommit_serialization_guard_test.py
+7ed08952f7ed3fd894f9d88af51637708e84b08adf7b8632213aeb86722655f7  verify_build.py
+930446b9a56aa9abe85c28e796db82b65e14a84842c390a46bb06b0f2974638b  version_consistency_test.py
+
+SHA-256 ARCHIVES R89
+527067585770e3e0ba8e3c960adaf49609072cd411310132bdef9f2436877977  BRES_Cles_Mobile_V2_28_TEST_R89.zip
+96608ee69072b44d9441078276fae9d23041abf1c72a285220ff263531fca2fb  BRES_Cles_Catalogue_Snapshot_R89.zip
+
+SHA-256 CATALOGUE (INCHANGÉS)
+01 e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b
+02 955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75
+03 9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210
+04 14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942
+05 5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b
+06 b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac
+07 b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1
+08 3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814
+09 4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f
+10 f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4
+
+Ce checkpoint est un jalon de reconstruction/validation. Les archives complètes sont conservées séparément dans Library /BRES Cles/Sauvegardes. R89 reste une version de test et V2.27 reste la version stable.
