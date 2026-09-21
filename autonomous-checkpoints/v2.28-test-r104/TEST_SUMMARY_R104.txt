@@ -1,0 +1,12 @@
+BRES CLÉS — TEST SUMMARY R104
+
+Version: V2.28 TEST R104
+Build OK: True
+Tests: 68/68 réussis
+Catalogue: 5103 lignes / 5103 références uniques
+Catalogue 10 blocs identiques au baseline: True
+Garde R104 récupération après timeout: OK
+Garde R103 budget double-vue: conservée
+V2.27 stable: non modifiée
+
+Changement R104: après le timeout d’une passe OCR, une autre orientation peut encore être tentée si le budget de la vue laisse au moins 900 ms ; seuils de décision inchangés.

@@ -1,0 +1,9 @@
+BRES CLÉS — PATCH R104
+
+- Un timeout d'une passe OCR n'abandonne plus automatiquement toute la face.
+- Si au moins 900 ms restent dans le budget de la vue, l'orientation suivante est tentée.
+- Budget global inchangé : 25 000 ms ; timeout par passe inchangé : 7 000 ms.
+- Répartition équitable recto/verso de R103 conservée.
+- Seuils OCR 0,70 / 0,88 et garde-fou TE8D / TE8I inchangés.
+- Diagnostic : timeout toujours exporté, plus marge de récupération timeoutRecoveryMinMs.
+- Catalogue massif séparé : 5 103 références uniques / 10 blocs inchangés.

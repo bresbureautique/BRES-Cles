@@ -1,0 +1,13 @@
+BRES CLÉS — LIBRARY ROUNDTRIP VERIFICATION R104
+
+Upload Library : OK
+Relecture ZIP application : OK
+Relecture ZIP catalogue : OK
+SHA-256 application : 32003d23179246b6b4e786b857de4b1147e02773ade1e2daf6b76741bd0bdc0a
+SHA-256 catalogue : 7990e4bbb1919a83af3d69d540dbbd964c6c259314a4d49a2289199d1774f64d
+Décompression application : OK
+Décompression catalogue : OK
+Régression après relecture Library : 68/68 tests OK
+Catalogue après relecture Library : 5103 lignes / 5103 références uniques
+Blocs catalogue : 10/10 identiques au baseline
+V2.27 stable main : 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8 (non modifiée)

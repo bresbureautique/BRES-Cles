@@ -1,0 +1,8 @@
+BRES CLÉS — V2.28 TEST R104
+Jalon : récupération après timeout OCR d’une passe, sans changement de seuil ni de décision.
+V2.27 stable : non modifiée.
+Catalogue : séparé, 5103 références uniques, 10 blocs inchangés.
+Décision OCR : seuils et garde-fous TE8D / TE8I inchangés par rapport à R103.
+Correction : un timeout Tesseract ne stoppe plus automatiquement toute la face ; si au moins 900 ms restent, l’orientation suivante est tentée dans le même budget.
+Validation : régression complète + garde timeout R104 + garde double-vue + syntaxes + catalogue.
+Prochaine étape : continuer les tests logiciels ; un test physique Samsung TE8D ne sera demandé que pour mesurer le gain réel de R104.
