@@ -1,0 +1,67 @@
+BRES CLÉS — CHECKPOINT GITHUB V2.28 TEST R91
+
+Parent R90 attendu : d1de93369b75ee37eac8e2a45dca9c1fb3732993
+Branche : v2.28-test-r1
+V2.27 stable : main @ 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8 — ne pas remplacer.
+
+DÉFAUT REPRODUCTIBLE APRÈS R90
+R90 conserve la récupération externe la plus récente en mémoire lorsque sessionStorage.setItem échoue, mais peut laisser une récupération plus ancienne dans sessionStorage. Après rechargement de la page, cette ancienne valeur pouvait être relue et présentée comme si elle était la dernière copie disponible.
+
+REPRODUCTION R90
+- EXT1 persistée avec succès ;
+- EXT2 reçue ensuite ;
+- échec simulé de sessionStorage.setItem pour EXT2 ;
+- mémoire R90 avant rechargement : EXT2 ;
+- sessionStorage restée à EXT1 ;
+- après rechargement simulé : R90 recharge EXT1.
+
+CORRECTIF R91
+- suppression best effort de l'ancienne récupération sessionStorage avant une nouvelle persistance ;
+- si setItem échoue, nouvelle tentative best effort de suppression de l'ancienne valeur persistée ;
+- la copie la plus récente reste disponible en mémoire pour la page courante ;
+- une persistance réussie survit toujours au rechargement ;
+- une persistance plus récente échouée ne doit plus laisser réapparaître une ancienne copie comme « dernière récupération » ;
+- aucune écriture dans la base étalon active ; aucune réimportation automatique.
+
+TEST CIBLÉ R91
+LOCAL_TEMPLATE_EXTERNAL_RECOVERY_GUARD_TEST_R91 : OK
+- événement storage retardé conservé ;
+- rechargement après persistance réussie : copie retrouvée ;
+- conflits successifs EXT1 puis EXT2 + échec sessionStorage : EXT2 en mémoire, ancienne EXT1 retirée best effort ;
+- rechargement après échec de la copie plus récente : aucune ancienne récupération présentée ;
+- sessionStorage indisponible : repli mémoire de la page courante ;
+- base active inchangée.
+
+VALIDATION COMPLÈTE + NON-RÉGRESSION
+- verify_build.py : OK
+- suites : 56/56
+- catalogue : 5103/5103 références uniques
+- fichiers hachés : 3878
+- erreurs : 0
+- 10/10 morceaux catalogue bit-identiques à R40/R90
+- ZIP application : unzip -t OK, réextraction puis verify_build.py OK
+- snapshot catalogue : unzip -t OK, réextraction puis verify_snapshot.py OK
+
+SHA-256 ARCHIVES R91
+f6bd913cd18311fb836d9175a23d0b804d3ad88db922e86fd8b37ec118bf3431  BRES_Cles_Mobile_V2_28_TEST_R91.zip
+695533601e968e80e366c059f14a60557f8b9edbb29d745434f2badd8666d331  BRES_Cles_Catalogue_Snapshot_R91.zip
+
+SHA-256 SOURCES R91
+ec3ece97cf1fad25cf85215b0c324e430ddad578dd5383e11108b3db7493efa1  index.html
+36f5005e15f690ec8eb6aa935dee1c6a543736fd0d2dcc496cf370302682bb9f  v228-catalogue.js
+07bc83fc9c25bbd43fd4d0fd8e82150f718092a893eeaf59aad220d1314a1076  catalogue/evidence/cross_reference_registry_r91.json
+9bc5d366b4b45f890e511e3aeabf27d588b27c11a1cad24cb371a34d30b3ccf1  local_template_external_recovery_guard_test.py
+
+SHA-256 CATALOGUE (INCHANGÉS)
+e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b  catalog-01.js
+955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75  catalog-02.js
+9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210  catalog-03.js
+14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942  catalog-04.js
+5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b  catalog-05.js
+b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac  catalog-06.js
+b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1  catalog-07.js
+3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814  catalog-08.js
+4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f  catalog-09.js
+f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4  catalog-10.js
+
+Ce checkpoint est un jalon de reconstruction/validation. Les archives complètes sont conservées séparément dans Library /BRES Cles/Sauvegardes. R91 reste une version de test et V2.27 reste la version stable.
