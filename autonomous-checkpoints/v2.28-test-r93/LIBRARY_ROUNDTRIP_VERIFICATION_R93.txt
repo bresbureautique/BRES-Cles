@@ -1,0 +1,25 @@
+BRES CLÉS — VÉRIFICATION ALLER-RETOUR LIBRARY R93
+Date : 2026-09-21
+
+Archives rematérialisées depuis /BRES Cles/Sauvegardes puis vérifiées après extraction propre.
+
+Application V2.28 TEST R93
+SHA-256 Library : 3b79ed0f804df98686602cbe93b7cb60673e450653cbe96222da4a6c0ba5c138
+unzip -t : OK
+verify_build.py : OK
+Tests : 57/57
+Catalogue embarqué : 5103/5103 références uniques
+10/10 chunks catalogue identiques à la baseline
+Erreurs : 0
+
+Catalogue séparé R93
+SHA-256 Library : bdd3f1a907d3e8f0f520b52a46032110401cbebc69841aff03444eab4ec3c09f
+unzip -t : OK
+verify_snapshot.py : OK
+Références : 5103/5103 uniques
+Chunks : 10
+Baseline registre : V2.28 TEST R91
+Erreurs : 0
+
+Conclusion : les deux archives R93 stockées dans Library correspondent exactement aux empreintes attendues et restent vérifiables après rematérialisation et réextraction.
+V2.27 stable / main : non modifiée.
