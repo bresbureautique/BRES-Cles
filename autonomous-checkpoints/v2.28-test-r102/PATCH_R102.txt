@@ -1,0 +1,8 @@
+BRES CLÉS — V2.28 TEST R102 — PATCH REPRODUCTIBLE
+
+Le patch unifié R101_to_R102.patch décrit les changements de code, tests et documentation actifs entre R101 et R102.
+Objet : enregistrer explicitement dans le diagnostic OCR les passes interrompues par le délai Tesseract, sans modifier la décision OCR.
+La base catalogue (10 blocs / 5103 références uniques) n’est pas modifiée.
+V2.27 reste stable sur main.
+
+SHA-256 patch : 5e4115030c5befa22c0b720d85607ffa587b5b7205408757302fa7d6ba65ed6c
