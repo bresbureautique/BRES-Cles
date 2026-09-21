@@ -1,0 +1,7 @@
+BRES CLÉS — V2.28 TEST R97 — JALON OCR GRAVURE CENTRALE
+
+Base application : R96. Stable : V2.27 / main non modifiée.
+Application : recadrage tête R96 conservé + recadrage gravure centrale ; passes renforcées inv/PSM7 et soft/PSM11 ; récupération conservatrice TESA/ILCO sur lettres espacées ou confusions OCR ; garde TE8D/TE8I maintenue.
+Latence : budget inchangé 25 s/action, 7 s/passe, 4 primaires + 4 renforcées max.
+Catalogue : 5103 références uniques, 10 chunks strictement inchangés.
+Vérification : 62 tests application, 0 échec ; ZIP application et snapshot catalogue décompressés puis revérifiés avec succès.
