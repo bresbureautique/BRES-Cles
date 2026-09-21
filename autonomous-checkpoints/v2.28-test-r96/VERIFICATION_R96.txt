@@ -1,0 +1,30 @@
+BRES CLÉS — VÉRIFICATION JALON R96
+
+APPLICATION
+ok=true
+version=V2.28 TEST R96
+catalog_count=5103
+unique_refs=5103
+catalogue_chunks_identical_to_r40=true
+ocr_latency_guard_ok=true
+head_focus_roi_guard_ok=true
+tesa_ambiguity_guard_ok=true
+verify_build errors=[]
+clean_unzip_verify=PASS
+
+CATALOGUE SÉPARÉ
+ok=true
+milestone=CATALOGUE SNAPSHOT R96
+refs=5103
+unique=5103
+chunks=10
+baseline_registry=V2.28 TEST R91
+errors=[]
+clean_unzip_verify=PASS
+
+SHA-256
+ea689eaa0f99bf54aa394e094ca98cf6ccfa16a62ec2dbe72a09de424c80babe  BRES_Cles_Mobile_V2_28_TEST_R96.zip
+0b9271ca576dd2d9ebda7a1c8288a581fa4dc099efdcad02d877f1ae6cd2c745  BRES_Cles_Catalogue_Snapshot_R96.zip
+
+SÉCURITÉ VERSION
+La branche main doit rester sur 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8 (V2.27). R96 reste exclusivement sur v2.28-test-r1.
