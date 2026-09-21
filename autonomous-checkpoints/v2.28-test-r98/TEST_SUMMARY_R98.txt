@@ -1,0 +1,9 @@
+BRES CLÉS R98 — TEST SUMMARY
+version=V2.28 TEST R98
+tests=63
+passed=63
+errors=0
+catalogue_refs=5103
+unique_refs=5103
+chunks_identical_to_r40=True
+ocr_maker_consensus_guard_ok=True

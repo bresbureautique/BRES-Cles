@@ -1,0 +1,20 @@
+BRES CLÉS — PATCH R98 (descriptif vérifiable)
+Base : R97
+Stable V2.27 : non modifiée
+
+Changement fonctionnel :
+- consensus fabricant entre passes OCR ;
+- consensus accepté seulement si une seule marque est observée sur au moins 2 passes ;
+- conflit de marques => aucun consensus ;
+- consensus marque uniquement : aucune référence candidate n’est créée ;
+- garde-fou TE8D/TE8I et budget 25 s / 7 s / 4+4 inchangés.
+
+SHA-256 des fichiers R98 concernés :
+a654337506eb640dae23c68a8f97543c8db0ffe12219d2dd6e78a2197a4e8518  index.html
+96c6f57500b6e41ada8bb1bc510cc20cbc9fd2b678446bffc3e6cff7e67add0b  v228-catalogue.js
+aa04172cea1199926afa20818842c6bcf7ceeacc63ccc7c4ccc0c2c1f339e22a  verify_build.py
+2588a7c99ce62e420dc057ff9505b69af82aacfadb5c7e5f0a8014706356da99  ocr_maker_consensus_guard_test.py
+060bedc4ee0743f1404be4371a07d4605893b31992e7715e783f9dcdf1547ef2  ocr_latency_guard_test.py
+5d3f9515863f25710a44cd31fe0cbbc839e81369fcd79fc0e0bb41ac2bc96df2  ocr_head_engraving_guard_test.py
+424e2ac1555692895b268a8cbac2554afdaf4a83bb2d08599caddf3e89ed17dd  tesa_ambiguity_guard_test.py
+a9c5ad2030c8bdc78b61b99bcb81302eac6bba06708e550e0515c6d5e78c9f03  version_consistency_test.py

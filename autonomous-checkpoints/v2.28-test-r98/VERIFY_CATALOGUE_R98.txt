@@ -1,0 +1,9 @@
+{
+  "ok": true,
+  "milestone": "CATALOGUE SNAPSHOT R98",
+  "refs": 5103,
+  "unique": 5103,
+  "chunks": 10,
+  "baseline_registry": "V2.28 TEST R91",
+  "errors": []
+}

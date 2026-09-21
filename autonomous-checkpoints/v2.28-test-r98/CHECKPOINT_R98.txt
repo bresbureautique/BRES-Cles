@@ -1,0 +1,13 @@
+BRES CLÉS — V2.28 TEST R98 — CONSENSUS FABRICANT MULTI-PASSES
+
+Base : V2.28 TEST R97.
+Stable : V2.27 / branche main NON MODIFIÉE.
+
+Changements :
+- conservation de tous les garde-fous et du budget OCR R97 ;
+- mémorisation séparée des marques lues pendant chaque passe OCR d'une photo ;
+- si le meilleur texte final perd la marque mais qu'une seule marque a été lue sur au moins 2 passes, cette marque est conservée comme consensus ;
+- le consensus multi-passes ne crée jamais de référence et ne contourne jamais les garde-fous TE8D / TE8I ;
+- en cas de plusieurs marques observées, aucun consensus de secours n'est publié ;
+- budget inchangé : 25 s/action, 7 s/passe, 4 passes rapides + 4 renforcées maximum ;
+- aucune modification des 10 chunks du catalogue massif.
