@@ -1,0 +1,17 @@
+{
+  "milestone": "V2.28 TEST R97",
+  "stable": "V2.27 main unchanged by release process",
+  "app_ok": true,
+  "tests_total": 62,
+  "tests_failed": [],
+  "catalog_count": 5103,
+  "unique_refs": 5103,
+  "catalogue_chunks_identical_to_r40": true,
+  "catalogue_snapshot_ok": true,
+  "catalogue_snapshot_chunks": 10,
+  "sha256": {
+    "BRES_Cles_Mobile_V2_28_TEST_R97.zip": "7c4aef2d5f2861f123f893773289df2c7ef31221f38ad0aa1217b28c519f8d5b",
+    "BRES_Cles_Catalogue_Snapshot_R97.zip": "4f4a8a1d20962f55500bb505a8173a911001721c9ab3c68b3f87886a3a5bb626"
+  },
+  "errors": []
+}
