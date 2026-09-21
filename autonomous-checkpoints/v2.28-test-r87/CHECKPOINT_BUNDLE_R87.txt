@@ -1,0 +1,40 @@
+BRES CLÉS — CHECKPOINT GITHUB R87
+
+Objet : empêcher une écriture locale obsolète d’écraser une modification concurrente de la base étalon entre sa dernière lecture et setDB(), sans toucher au catalogue ni à V2.27.
+
+Défaut reproduit en R86 :
+- R86 relisait la base après la confirmation de suppression, mais une fenêtre restait entre cette lecture et setDB() ;
+- un autre onglet pouvait modifier localStorage dans cette fenêtre ;
+- une suppression, un apprentissage ou un import pouvait alors persister un état préparé depuis un snapshot devenu ancien et perdre la modification concurrente.
+
+Correctif R87 :
+- les mutations lecture → modification → écriture utilisent un Web Lock exclusif nommé lorsqu’il est disponible, ce qui sérialise les onglets R87 participants ;
+- une file Promise sérialise au minimum les mutations du même document si l’API Web Locks n’est pas disponible ;
+- setDBIfRawUnchanged() compare immédiatement avant écriture les octets localStorage au snapshot utilisé pour préparer la mutation et refuse toute écriture devenue obsolète ;
+- apprentissage, suppression et import utilisent cette garde ;
+- l’apprentissage revérifie l’époque d’identification, l’époque de référence et la référence visible après attente du verrou ;
+- l’import fige le snapshot brut de départ et refuse le remplacement complet si la base change pendant la lecture du fichier ;
+- un conflit local_template_conflict est non destructif et produit un diagnostic explicite.
+
+Vérification release :
+- BUILD_MANIFEST ok=true ;
+- 53 suites, 53 réussies, 0 erreur ;
+- nouveau local_template_cross_tab_write_guard_test.py : SELFTEST OK ;
+- 5 103 références catalogue / 5 103 uniques ;
+- 3 465 fichiers contrôlés ;
+- 10 chunks catalogue strictement identiques à R86/R40 ;
+- snapshot catalogue manifest_ok=true ;
+- archive application réextraite puis verify_build.py repassé avec succès ;
+- snapshot catalogue réextrait puis verify_snapshot.py repassé avec succès.
+
+Archives :
+- BRES_Cles_Mobile_V2_28_TEST_R87.zip SHA-256 e7553046d07db5bd3d596496d9a9dac02c4fa936050d9f2a767ffd6f895a6f1e
+- BRES_Cles_Catalogue_Snapshot_R87.zip SHA-256 6c4a32f0a3b53cb2d57f642dc3996b7d4355293c84076f25db7b1bc9771f48cc
+
+Empreintes sources principales :
+- index.html 704085777fa19b3bcaa444371d48a326a9d3e4debd9c407103e0f4a564ff98c1
+- v228-catalogue.js (version vérifiée avant packaging) : R87 ; données catalog-01.js à catalog-10.js inchangées.
+
+Parent attendu : R86 e3a69dd8937b78298f284966110e23ee5e44ced2
+Branche : v2.28-test-r1
+V2.27 stable doit rester sur main : 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8
