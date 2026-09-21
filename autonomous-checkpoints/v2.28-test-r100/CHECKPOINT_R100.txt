@@ -1,0 +1,6 @@
+BRES CLÉS — V2.28 TEST R100
+Jalon : diagnostic OCR temps + texte par passe, non décisionnel.
+V2.27 stable : non modifiée.
+Catalogue : séparé, 5103 références uniques, 10 blocs inchangés.
+Validation : 64/64 régression + garde R100 + syntaxes + catalogue OK.
+Prochaine étape : test physique Samsung avec TE8D, sans saisie manuelle.

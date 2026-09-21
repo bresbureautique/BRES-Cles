@@ -1,0 +1,8 @@
+BRES CLÉS V2.28 TEST R100 — VÉRIFICATION RETOUR LIBRARY
+Application attendue : d79165de1fc129667243238ebd37d83e2df998f6b4dec26342efba4fe2e07941
+Application relue    : d79165de1fc129667243238ebd37d83e2df998f6b4dec26342efba4fe2e07941
+Catalogue attendu    : 41849faf2c0bd8577991e4be1a40d0f42d57e75ff75e3e3f70d19add3238709f
+Catalogue relu       : 41849faf2c0bd8577991e4be1a40d0f42d57e75ff75e3e3f70d19add3238709f
+ZIP application : intégrité OK
+ZIP catalogue   : intégrité OK
+SELFTEST OK

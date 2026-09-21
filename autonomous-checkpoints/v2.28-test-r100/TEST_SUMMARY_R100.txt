@@ -1,0 +1,12 @@
+BRES CLÉS V2.28 TEST R100 — SYNTHÈSE TESTS
+
+- Régression historique du vérificateur : 64/64 OK (exécution par lots).
+- Nouveau garde diagnostic R100 : OK.
+- Syntaxe JavaScript index.html : OK.
+- Syntaxe JavaScript v228-catalogue.js : OK.
+- Catalogue : 10 blocs inchangés, 5103 lignes, 5103 références uniques.
+- Limites OCR inchangées : 25 s/action, 7 s/passe, 4 passes rapides + 4 renforcées max.
+- Seuils de décision OCR inchangés et garde TE8D/TE8I conservé.
+
+R100 modifie uniquement l'observabilité du test réel : temps par face/passe, confiance et textes OCR utiles affichés de façon échappée.
+SELFTEST OK

@@ -1,0 +1,14 @@
+BRES CLÉS V2.28 TEST R100 — MODIFICATIONS REPRODUCTIBLES DEPUIS R99
+
+1. Version active de test : R99 -> R100 dans index.html, v228-catalogue.js, LISEZ-MOI.txt et garde-fous de version. Aucun changement de main/V2.27.
+2. bestOCR() mémorise ocrViewStartedAt=Date.now() au début de chaque face.
+3. runTest() mémorise passStartedAt=Date.now() avant chaque recognizeOCRPass(), puis ajoute elapsedMs à passEvidence.
+4. Toutes les sorties bestOCR exposent elapsedMs: Date.now()-ocrViewStartedAt.
+5. compactOCREvidenceSummary() affiche désormais : nombre de passes, temps total par face, votes fabricant, meilleur code éventuel, et jusqu'à deux textes OCR utiles réellement lus.
+6. Les textes OCR affichés passent par escapeOCRDiagnosticText() afin d'échapper &, <, >, guillemets et apostrophes avant innerHTML.
+7. compactOCRPassTiming() affiche pour chaque passe : durée en ms et confiance OCR. La ligne « Temps par passe » est ajoutée sous « Diagnostic OCR R100 ».
+8. Aucun elapsedMs/passEvidence n'est fourni à interpretOCRViews(), combinedDecision() ou setOCRField(). Les seuils OCR restent 0,70/0,88 ; budgets 25 s/action et 7 s/passe ; maxima 4+4 passes ; garde TE8D/TE8I inchangé.
+9. Garde spécifique ocr_diagnostic_detail_guard_test.py ajouté. Régression historique 64/64 + garde R100 OK. Syntaxes JS OK.
+10. Catalogue : 10 blocs inchangés, 5103 références uniques ; hashes consignés dans CATALOGUE_CHUNK_COMPARISON_R100.txt.
+
+Les ZIP binaires complets sont sauvegardés séparément dans Library /BRES Cles/Sauvegardes ; leurs SHA-256 et la vérification de retour Library sont consignés dans ce checkpoint GitHub.
