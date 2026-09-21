@@ -1,0 +1,35 @@
+BRES CLÉS — V2.28 TEST R96 — JALON OCR TÊTE AUTO-FOCALISÉ + GARDE TE8D/TE8I
+
+Base : V2.28 TEST R95.
+Stable : V2.27 / branche main NON MODIFIÉE (commit attendu 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8).
+Branche de test : v2.28-test-r1.
+
+Changements :
+- recadrage OCR automatique de la tête avant Tesseract afin de réduire la règle et la lame dans la zone lue ;
+- conservation du budget R95 : 25 s/action, 7 s/passe, 4 passes rapides + 4 renforcées maximum ;
+- détection explicite de la marque quand elle est lisible ;
+- garde-fou TE8D/TE8I : la silhouette pilote TE2/TE2R étant identique dans la base visuelle actuelle, une marque TESA + silhouette seule ne peut jamais choisir automatiquement entre TE8D et TE8I ;
+- si TESA est lue mais la référence ne l'est pas, l'interface affiche les candidats compatibles et garde un état ambigu ;
+- une saisie manuelle certaine reste prioritaire, mais l'interface précise lorsque la silhouette ne départage pas une référence voisine ;
+- aucune modification des 10 chunks du catalogue massif.
+
+Vérifications application :
+- version V2.28 TEST R96 ;
+- catalogue : 5 103 références / 5 103 uniques ;
+- 10 chunks catalogue identiques à la base contrôlée ;
+- suite complète verify_build.py : ok=true, errors=[] ;
+- nouveaux garde-fous head_focus_roi_guard_test.py et tesa_ambiguity_guard_test.py : PASS ;
+- vérification après décompression propre du ZIP : PASS.
+
+Vérifications catalogue séparé :
+- CATALOGUE SNAPSHOT R96 ;
+- 5 103 références / 5 103 uniques ;
+- 10 chunks ;
+- errors=[] ;
+- vérification après décompression propre : PASS.
+
+SHA-256 release :
+- ea689eaa0f99bf54aa394e094ca98cf6ccfa16a62ec2dbe72a09de424c80babe  BRES_Cles_Mobile_V2_28_TEST_R96.zip
+- 0b9271ca576dd2d9ebda7a1c8288a581fa4dc099efdcad02d877f1ae6cd2c745  BRES_Cles_Catalogue_Snapshot_R96.zip
+
+Les deux patches R95 -> R96 sont stockés dans ce même checkpoint GitHub. Le ZIP application et le snapshot catalogue sont archivés séparément dans Library /BRES Cles/Sauvegardes.
