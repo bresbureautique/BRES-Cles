@@ -1,0 +1,15 @@
+BRES CLÉS — V2.28 TEST R102 — RÉSUMÉ DE TESTS
+
+Jalon : diagnostic OCR complet des passes interrompues par timeout.
+Régression : 67/67 suites OK.
+Garde spécifique R102 : OCR_TIMEOUT_EVIDENCE_GUARD_TEST_R102 — OK.
+JavaScript index.html : syntaxe OK.
+JavaScript v228-catalogue.js : syntaxe OK.
+Catalogue embarqué application : 5103 références / 5103 uniques / 10 blocs identiques à R40 et R101.
+Décision OCR : inchangée par rapport à R101 ; une passe en timeout arrête toujours la lecture de la vue comme avant.
+Diagnostic : les passes interrompues sont maintenant enregistrées avec durée, mode, timedOut=true et timeoutKind=pass-timeout.
+Export diagnostic : schéma v2, sans image, non décisionnel.
+Budget OCR : 25 s/action, 7 s/passe, 4 passes rapides + 4 renforcées maximum.
+Erreurs verify_build.py : aucune.
+
+SELFTEST OK
