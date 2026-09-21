@@ -1,0 +1,82 @@
+BRES CLÉS — CHECKPOINT GITHUB V2.28 TEST R88
+
+Parent R87 attendu : e0f3e211aaadb2f73c0674a35fe781b7a7f7443a
+Tree R87 : 6b983928c97a023102deb51982c0608b22ff6396
+Branche : v2.28-test-r1
+V2.27 stable : main, ne pas remplacer.
+
+DÉFAUT REPRODUIT EN R87
+navigator.locks.request est présent mais rejette la demande avant d’exécuter le callback (SecurityError simulée). R87 propage l’erreur et le callback métier est exécuté 0 fois : le repli Promise n’est pas utilisé. Aucune donnée n’est écrasée, mais apprentissage/suppression/import peuvent devenir indisponibles.
+
+CORRECTIF R88
+La file Promise locale enveloppe toujours les mutations du document. Le Web Lock exclusif reste utilisé entre onglets participants lorsqu’il fonctionne. Si l’acquisition échoue avant entrée dans le callback, l’action se replie vers la file locale et reste protégée par setDBIfRawUnchanged(). Si le callback a déjà commencé puis échoue, l’erreur est propagée sans retry afin d’éviter toute double mutation.
+
+Implémentation centrale R88 :
+async function withLocalTemplateMutationQueue(task){
+ const previous=localTemplateMutationQueue;
+ let release;
+ localTemplateMutationQueue=new Promise(resolve=>{release=resolve;});
+ await previous;
+ try{return await task();}
+ finally{release();}
+}
+async function withLocalTemplateMutationLock(task){
+ return withLocalTemplateMutationQueue(async()=>{
+  const locks=(typeof navigator!=="undefined"&&navigator.locks&&typeof navigator.locks.request==="function")?navigator.locks:null;
+  if(!locks)return task();
+  let entered=false;
+  try{
+   return await locks.request(LOCAL_TEMPLATE_LOCK_NAME,{mode:"exclusive"},async()=>{
+    entered=true;
+    return await task();
+   });
+  }catch(e){
+   if(entered)throw e;
+   return task();
+  }
+ });
+}
+
+VALIDATION LOCALE + ROUNDTRIP ZIP
+- verify_build.py : OK
+- suites : 54/54
+- catalogue : 5103/5103 références uniques
+- fichiers hachés : 3557
+- erreurs : 0
+- 10/10 morceaux catalogue bit-identiques à R40/R87
+- test ciblé acquisition refusée : callback exécuté exactement 1 fois
+- test ciblé erreur après entrée callback : callback exécuté exactement 1 fois, erreur propagée, aucun retry
+- ZIP application réextrait puis verify_build.py relancé : OK
+- snapshot catalogue réextrait puis verify_snapshot.py relancé : OK
+
+SHA-256 SOURCES R88
+index.html 1913497eb2dc97dbfbec77c2bd0a87eb58a7b459b5b1143637162ad78fc3d467
+v228-catalogue.js 0292046cd93e979818c6fac24792795127be265f18708621ea74df1582a45ce7
+BUILD_MANIFEST.json 1543c938d09ecec2f20ab1eb0a4e0b35c7835ece4a48a163c9e55f7a6ead0a7c
+VERIFICATION.txt 6d596ed68afe391e93893507b62be1bff24c414946542865755e0a857a7fefcc
+
+SHA-256 BASE R87 POUR RECONSTRUCTION
+index.html 704085777fa19b3bcaa444371d48a326a9d3e4debd9c407103e0f4a564ff98c1
+v228-catalogue.js f1bb72b582cdcbe514b853acf9fdea4683f73fd1fdf8bf900d61cfc0c7394545
+
+SHA-256 ARCHIVES R88
+BRES_Cles_Mobile_V2_28_TEST_R88.zip f0e7a431ef15a821df778455ec3fafda159399ef2dad4271ab2120f6bf93c86e
+BRES_Cles_Catalogue_Snapshot_R88.zip 6e2b6928ce463e23ce74676847c228ae4dab77bd566cb1391cee84ce84c98857
+
+LIBRARY
+Les deux archives sont déposées dans /BRES Cles/Sauvegardes. Elles ont été rematérialisées, comparées bit à bit aux archives sources, réextraites et retestées avec succès.
+
+CATALOGUE
+Aucune donnée catalogue modifiée. Les 10 SHA-256 restent :
+01 e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b
+02 955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75
+03 9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210
+04 14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942
+05 5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b
+06 b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac
+07 b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1
+08 3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814
+09 4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f
+10 f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4
+
+Ce checkpoint GitHub est un jalon de reconstruction/validation. Les archives Library contiennent le snapshot complet R88 vérifié. R88 reste une version de test et V2.27 reste la version stable.
