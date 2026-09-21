@@ -1,0 +1,8 @@
+BRES CLÉS V2.28 TEST R99 — RÉSUMÉ TESTS
+- Vérification complète verify_build.py : OK
+- Tests : 64/64 réussis ; 0 échec
+- Nouveau garde ocr_pass_evidence_guard_test.py : OK
+- Budget OCR inchangé : 25 s/action, 7 s/passe
+- Garde TE8D/TE8I conservé ; diagnostic R99 non décisionnel
+- Catalogue séparé : 10 chunks, 5103 références uniques, données inchangées par rapport à R98/R40
+- ZIP application et snapshot catalogue décompressés puis revérifiés : OK
