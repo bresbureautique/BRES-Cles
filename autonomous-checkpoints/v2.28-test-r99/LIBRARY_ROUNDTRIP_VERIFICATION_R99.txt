@@ -1,0 +1,9 @@
+BRES CLÉS V2.28 TEST R99 — LIBRARY ROUNDTRIP
+Dossier : BRES Cles/Sauvegardes
+Application : BRES_Cles_Mobile_V2_28_TEST_R99.zip
+SHA-256 attendu = f4236195dc9ec57c8952aa38b46c602e710436c45859f3f1e1fd341c3b848447
+SHA-256 relu Library = f4236195dc9ec57c8952aa38b46c602e710436c45859f3f1e1fd341c3b848447
+Catalogue : BRES_Cles_Catalogue_Snapshot_R99.zip
+SHA-256 attendu = fb131cda326a761a0b68105240538a0ab938f16a840324d46463d4d8aec5ad20
+SHA-256 relu Library = fb131cda326a761a0b68105240538a0ab938f16a840324d46463d4d8aec5ad20
+Résultat : OK, correspondance exacte des deux ZIP après relecture Library.
