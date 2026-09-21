@@ -1,0 +1,26 @@
+BRES CLÉS — CHECKPOINT GITHUB R84
+
+Objet : sécuriser l'apprentissage local à la limite de 2 000 références sans toucher au catalogue ni à V2.27.
+
+Correctif R84 :
+- 1 999 références + nouvelle référence => 2 000 autorisé ;
+- à 2 000 références, une référence existante reste modifiable ;
+- une 2 001e référence est refusée avant mutation et avant setDB() ;
+- message utilisateur explicite au lieu du code interne too_many_refs ;
+- base persistée inchangée en cas de refus.
+
+Vérification release :
+- BUILD_MANIFEST ok=true ;
+- 50 suites, 0 test en erreur ;
+- 5 103 références catalogue / 5 103 uniques ;
+- 10 chunks catalogue inchangés selon le manifest ;
+- test ciblé local_template_capacity_learning_guard_test.py : SELFTEST OK ;
+- seule exception de hash interne : verify_r84_console.txt, auto-généré après le calcul du manifest ; tous les autres fichiers référencés correspondent.
+
+Archives :
+- BRES_Cles_Mobile_V2_28_TEST_R84.zip SHA-256 b8e381ad360f4fa3beffb055e018ae6b4cb42702d48962e3c834cc9417429169
+- BRES_Cles_Catalogue_Snapshot_R84.zip SHA-256 19a49ad28a343b5db5ea6633de8e6a7abba1af000dea78bdc660d7c9ae61debe
+
+Parent attendu : R83 1964fd2e7f1c799f472294a5c5ea6a7af6a60ace
+Branche : v2.28-test-r1
+V2.27 stable reste sur main : 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8
