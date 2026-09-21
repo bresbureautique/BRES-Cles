@@ -1,0 +1,14 @@
+BRES CLÉS — CHANGESET R94
+
+Base de reconstruction : commit R93 9e86c76078904d3db96551abbf0f504c7fbd4b1b sur v2.28-test-r1.
+
+Changement fonctionnel principal dans index.html :
+1. CSS global button/.btn : transition + état :active/.bres-action-pressed avec déplacement/assombrissement/ombre interne ; focus clavier visible ; état disabled atténué ; classe .bres-action-busy avec spinner.
+2. installGlobalButtonFeedback() : écoute pointerdown et clavier Enter/Espace, applique brièvement .bres-action-pressed à tout button ou .btn.
+3. setButtonBusy(button,busy,busyLabel) : mémorise le libellé, désactive le bouton, affiche l’état occupé, puis restaure le bouton.
+4. analyseBtn : au clic, affiche « ⏳ Analyse en cours… », désactive le bouton pendant analyseCurrent(), puis restaure systématiquement le bouton dans finally.
+5. Libellés actifs/cache/exports passés de R93 à R94 ; aucune logique de reconnaissance modifiée.
+
+Test ajouté : button_feedback_guard_test.py. Il vérifie le feedback tactile global, le feedback clavier, le helper busy, le libellé d’analyse, la restauration finally et la bannière stable conservée.
+
+Les empreintes exactes des sources R94 sont dans SOURCE_HASHES_R94.txt. Les ZIP exacts sont identifiés dans ZIP_SHA256.txt et stockés dans Library BRES Cles/Sauvegardes.
