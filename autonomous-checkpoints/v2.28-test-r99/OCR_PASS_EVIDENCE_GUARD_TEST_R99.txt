@@ -1,0 +1,14 @@
+BRES CLÉS V2.28 TEST R99 — DIAGNOSTIC OCR PAR PASSE
+
+OK  r99_version
+OK  pass_evidence_array
+OK  records_each_pass
+OK  returned_on_early_exit
+OK  returned_on_normal_exit
+OK  visible_summary
+OK  summary_helper
+OK  budget_unchanged
+OK  decision_threshold_unchanged
+OK  tesa_guard_kept
+
+SELFTEST OK
