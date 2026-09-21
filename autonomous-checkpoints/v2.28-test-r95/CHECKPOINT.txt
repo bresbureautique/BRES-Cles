@@ -1,0 +1,19 @@
+BRES CLÉS — V2.28 TEST R95 — JALON OCR MOBILE BORNÉ
+
+Base : V2.28 TEST R94.
+Stable : V2.27 / branche main NON MODIFIÉE.
+
+Constat terrain R94 reproduit dans le code : 40 passes primaires puis jusqu’à 48 passes renforcées par face.
+
+R95 :
+- 4 orientations rapides maximum par face ;
+- 4 renforcements ciblés maximum par face ;
+- worker Tesseract réutilisé quand disponible ;
+- budget global de 25 secondes par action OCR ;
+- timeout de 7 secondes maximum par passe ;
+- arrêt anticipé sur correspondance forte ;
+- progression lisible et conservation du meilleur résultat partiel.
+
+Validation locale : verify_build.py OK — 59 tests, 0 erreur.
+Catalogue séparé : 5103/5103 références uniques ; 10/10 chunks strictement inchangés.
+Le jalon nécessite encore un test physique Samsung avant toute promotion.
