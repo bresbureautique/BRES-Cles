@@ -1,0 +1,133 @@
+--- index.html R95
++++ index.html R96
+@@ version/UI @@
+-<title>BRES Clés V2.28 TEST R95</title>
++<title>BRES Clés V2.28 TEST R96</title>
+@@ OCR head focus @@
++function headFocusBoundsFromGray(gray,w,h){
++  // R96 : cherche l'objet qui occupe une grande hauteur dans plusieurs colonnes.
++  // Une règle horizontale produit beaucoup de pixels sombres mais une faible hauteur par colonne ;
++  // la tête de clé produit au contraire un grand intervalle vertical et doit donc gagner.
++  if(!gray||w<8||h<8||gray.length<w*h)return {x:0,y:0,w,h,confidence:0};
++  const span=new Array(w).fill(0), darkThreshold=118, maxVerticalGap=Math.max(1,Math.round(h*.018));
++  for(let x=0;x<w;x++){
++    let bestRun=0,runStart=-1,lastDark=-999;
++    for(let y=0;y<h;y++){
++      if(gray[y*w+x]<darkThreshold){
++        if(runStart<0 || y-lastDark>maxVerticalGap+1)runStart=y;
++        lastDark=y;bestRun=Math.max(bestRun,lastDark-runStart+1);
++      }
++    }
++    span[x]=bestRun;
++  }
++  const radius=Math.max(1,Math.round(w*.018)), smooth=new Array(w).fill(0);
++  for(let x=0;x<w;x++){
++    let sum=0,n=0;
++    for(let j=Math.max(0,x-radius);j<=Math.min(w-1,x+radius);j++){sum+=span[j];n++;}
++    smooth[x]=n?sum/n:0;
++  }
++  const maxSpan=Math.max(...smooth), threshold=Math.max(h*.28,maxSpan*.56);
++  const maxGap=Math.max(2,Math.round(w*.34));
++  let runs=[],start=-1,lastActive=-1;
++  for(let x=0;x<w;x++){
++    if(smooth[x]>=threshold){if(start<0)start=x;lastActive=x;}
++    else if(start>=0 && x-lastActive>maxGap){runs.push([start,lastActive]);start=-1;lastActive=-1;}
++  }
++  if(start>=0)runs.push([start,lastActive]);
++  if(!runs.length)return {x:Math.round(w*.10),y:Math.round(h*.02),w:Math.round(w*.80),h:Math.round(h*.96),confidence:0};
++  let best=null;
++  for(const [a,b] of runs){
++    let energy=0;for(let x=a;x<=b;x++)energy+=smooth[x];
++    const width=b-a+1,score=energy*(1+Math.min(.8,width/Math.max(1,w)*1.6));
++    if(!best||score>best.score)best={a,b,width,score};
++  }
++  const padX=Math.round(w*.075);
++  let x0=Math.max(0,best.a-padX),x1=Math.min(w-1,best.b+padX);
++  const ys=[];
++  for(let x=x0;x<=x1;x++)for(let y=0;y<h;y++)if(gray[y*w+x]<darkThreshold)ys.push(y);
++  ys.sort((a,b)=>a-b);
++  let y0=Math.round(h*.03),y1=Math.round(h*.97);
++  if(ys.length){
++    y0=ys[Math.floor(ys.length*.02)]??y0;y1=ys[Math.floor(ys.length*.98)]??y1;
++    const padY=Math.round(h*.055);y0=Math.max(0,y0-padY);y1=Math.min(h-1,y1+padY);
++  }
++  const outW=Math.max(1,x1-x0+1),outH=Math.max(1,y1-y0+1);
++  const confidence=Math.max(0,Math.min(1,(maxSpan/Math.max(1,h))*(best.width/Math.max(1,w))/.20));
++  return {x:x0,y:y0,w:outW,h:outH,confidence};
++}
++function autoFocusHeadCanvas(src){
++  try{
++    const w=src.width,h=src.height,ctx=src.getContext("2d"),im=ctx.getImageData(0,0,w,h),d=im.data;
++    const gray=new Uint8Array(w*h);
++    for(let i=0,j=0;i<d.length;i+=4,j++)gray[j]=Math.round(.299*d[i]+.587*d[i+1]+.114*d[i+2]);
++    const b=headFocusBoundsFromGray(gray,w,h);
++    return cropCanvas(src,b.x,b.y,b.w,b.h,b.confidence>=.18?3.1:2.7);
++  }catch(e){
++    return cropCanvas(src,src.width*.12,src.height*.03,src.width*.84,src.height*.92,2.7);
++  }
++}
+ function headSubregions(src){
+-  // Plusieurs zones ciblées : l'OCR doit lire la gravure, pas la règle ni la lame.
++  // R96 : la première zone est auto-focalisée sur la tête afin d'exclure autant que possible
++  // la règle du gabarit et la lame. Les anciens cadrages restent disponibles comme repli.
+   let w=src.width,h=src.height;
+   return [
+-    {name:"tête entière",c:cropCanvas(src,w*.12,h*.03,w*.84,h*.92,2.7)},
++    {name:"tête auto",c:autoFocusHeadCanvas(src)},
+     {name:"centre tête",c:cropCanvas(src,w*.30,h*.08,w*.65,h*.78,3.4)},
++    {name:"tête entière secours",c:cropCanvas(src,w*.12,h*.03,w*.84,h*.92,2.7)},
+@@ safety TE8D/TE8I @@
++function catalogVisualFingerprint(cat){
++  if(!cat)return "";
++  const c=cat.sig||cat;
++  return JSON.stringify({width_mm:c.width_mm,height_mm:c.height_mm,area:c.area,bladeFill:c.bladeFill,top:c.top,bot:c.bot});
++}
++function catalogueVisualAmbiguityGroup(canon){
++  const base=catalogVisualEntry(canon); if(!base)return [];
++  const fp=catalogVisualFingerprint(base),maker=String(XREF[canon]?.Pour||"").toUpperCase();
++  return Object.keys(XREF).filter(ref=>{
++    if(String(XREF[ref]?.Pour||"").toUpperCase()!==maker)return false;
++    const cat=catalogVisualEntry(ref);
++    return cat&&catalogVisualFingerprint(cat)===fp;
++  });
++}
++function brandVisualCandidates(info){
++  if(!currentSig||!info||info.crossViewConflict)return [];
++  const maker=resolvedOCRBrand(info); if(!maker)return [];
++  const upper=maker.toUpperCase(),out=[];
++  for(const canon of Object.keys(XREF)){
++    const pour=String(XREF[canon]?.Pour||"").toUpperCase();
++    if(pour!==upper)continue;
++    const cat=catalogVisualEntry(canon); if(!cat)continue;
++    const check=catalogVisualScore(currentSig,cat);
++    out.push({canon,score:check.score,silca:cat.silca,ambiguity:catalogueVisualAmbiguityGroup(canon)});
++  }
++  out.sort((a,b)=>b.score-a.score||a.canon.localeCompare(b.canon));
++  return out;
++}
+@@ manual validation @@
+-      el("finalDecision").innerHTML=`<b>VALIDÉ : ${r.canon}</b><br>Votre référence + catalogue + forme photographiée concordent (${vis.check.score} %).`;
++      const ambiguity=catalogueVisualAmbiguityGroup(r.canon);
++      el("finalDecision").innerHTML=ambiguity.length>1
++        ? `<b>RÉFÉRENCE MANUELLE CONFIRMÉE : ${r.canon}</b><br>La forme est compatible (${vis.check.score} %), mais cette silhouette est aussi partagée par ${ambiguity.filter(x=>x!==r.canon).join(" / ")}. La saisie manuelle reste donc l’élément qui tranche.`
++        : `<b>VALIDÉ : ${r.canon}</b><br>Votre référence + catalogue + forme photographiée concordent (${vis.check.score} %).`;
+@@ automatic OCR fallback @@
++      const brandCandidates=brandVisualCandidates(info);
++      const strongBrand=brandCandidates.filter(c=>c.score>=68);
++      const sharedStrong=strongBrand.length>1 && new Set(strongBrand.map(c=>catalogVisualFingerprint(catalogVisualEntry(c.canon)))).size===1;
++      // Si la marque est lisible mais que TE8D/TE8I restent indiscernables par silhouette,
++      // R96 affiche les candidats et interdit toute validation automatique.
++      if(!info.crossViewConflict && strongBrand.length){
++        const maker=resolvedOCRBrand(info)||"marque lue";
++        el("catalogResult").className="status warn";
++        el("catalogResult").innerHTML=`<b>Candidats filtrés par marque + forme :</b> ${strongBrand.map(c=>`${c.canon} → ${c.silca}`).join(" ; ")}.`;
++        el("finalDecision").className="status warn";
++        el("finalDecision").innerHTML=sharedStrong
++          ? `<b>MARQUE RECONNUE — PROFIL ENCORE AMBIGU</b><br>${strongBrand.map(c=>c.canon).join(" / ")} : aucune validation automatique.`
++          : "<b>AUCUNE IDENTIFICATION FIABLE PAR LES PHOTOS DE TÊTE</b>";
++      }
+@@ cache/version @@
+-<script src="v228-catalogue.js?v=228r95"></script>
++<script src="v228-catalogue.js?v=228r96"></script>
+
+NOTE: ce patch de checkpoint est une réduction lisible du diff intégral R95->R96. L'intégrité du build complet est assurée par les SHA-256 du ZIP de release et le rapport verify_build.py stockés avec le jalon.
