@@ -1,0 +1,8 @@
+BRES CLÉS V2.28 TEST R99 — DELTA R98 -> R99
+1. bestOCR mémorise désormais chaque passe dans passEvidence : mode, confidence, rawText court, cleanText court, fabricants détectés, candidats, meilleur canon et similarité.
+2. passEvidence est renvoyé aussi bien sur sortie rapide que sur sortie normale.
+3. compactOCREvidenceSummary(reads) produit un diagnostic compact recto/verso visible après lecture des photos de tête.
+4. Le diagnostic est strictement non décisionnel : passEvidence n'est utilisé ni par interpretOCR, ni combinedDecision, ni setOCRField.
+5. Aucun seuil de décision, budget OCR ou garde TE8D/TE8I n'a été modifié.
+6. Ajout de ocr_pass_evidence_guard_test.py et adaptation des libellés de tests actifs à R99.
+7. Données catalogue massives : aucune modification des 10 chunks.
