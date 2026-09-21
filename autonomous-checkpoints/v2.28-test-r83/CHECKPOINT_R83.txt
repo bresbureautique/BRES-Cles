@@ -1,0 +1,33 @@
+BRES CLÉS — CHECKPOINT V2.28 TEST R83
+
+Objet : borner la capacité de la base étalon locale et la taille d’un import avant lecture, sans modifier le catalogue.
+
+Défaut reproduit en R82 :
+- une référence importée pouvait être arbitrairement longue tant que sa structure restait valide ;
+- un JSON pouvait demander un nombre excessif d’étalons et gonfler mémoire/localStorage ;
+- le navigateur lisait entièrement le fichier avant toute limite de taille.
+
+Correctif R83 :
+- référence normalisée limitée à 64 caractères ;
+- référence brute limitée à 128 caractères ;
+- base locale limitée à 2 000 références ;
+- fichier d’import limité à 8 Mio, contrôlé avant file.text() ;
+- diagnostics distincts et saisie d’apprentissage alignée sur les mêmes bornes ;
+- aucun changement des 10 morceaux catalogue.
+
+Vérification application : OK — 49/49 suites, 5 103/5 103 références uniques, 3 048 fichiers contrôlés, 0 erreur.
+Vérification archive application réextraite : OK — 49/49 suites, 5 103/5 103 références uniques, 0 erreur.
+Vérification catalogue séparé : OK — 5 103/5 103 références, 10/10 chunks bit-identiques à R40/R82, 0 erreur.
+Vérification Library : les deux ZIP ont été rematérialisés, comparés bit à bit aux originaux, réextraits et retestés avec succès.
+
+SHA-256 archive application : 995bb84d63c5876fdedc3a80834763061ffc3c4d0dcc3f8209f9078362aa53ee
+SHA-256 snapshot catalogue : b542335b5e5b1a9f85f1983283758c279c9b711f325d45cd97cd2b01ed0f727f
+
+Registre R83 :
+- local_template_reference_max_normalized_chars=64
+- local_template_reference_max_raw_chars=128
+- local_template_max_refs=2000
+- local_template_import_max_bytes=8388608
+- local_template_import_size_guard_before_read_required=true
+
+Sécurité : V2.27 reste stable sur main au commit 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8 ; R83 reste uniquement sur v2.28-test-r1.
