@@ -1,0 +1,9 @@
+BRES CLÉS — V2.28 TEST R92 — VÉRIFICATION FINALE
+
+Release guard auto-contenu : SELFTEST OK après extraction isolée.
+JavaScript actif : syntaxe OK (index + v228-catalogue).
+Catalogue : 10/10 blocs identiques au candidat R91 vérifié ; aucun changement algorithme forme/OCR/catalogue.
+ZIP local : unzip -t OK.
+SHA-256 ZIP : 5e9a358d292dedd8c4f87e4f4c90a67b0e7e3ba4b512fd81cea73c35288f6418
+Library : ZIP réimporté après upload, SHA-256 identique, unzip -t OK.
+V2.27 : non remplacée ; R92 reste une version de test séparée.
