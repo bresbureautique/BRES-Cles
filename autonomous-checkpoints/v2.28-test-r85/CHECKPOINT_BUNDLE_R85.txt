@@ -1,0 +1,32 @@
+BRES CLÉS — CHECKPOINT GITHUB R85
+
+Objet : ajouter une suppression sûre d’un étalon local lorsque la base atteint 2 000 références, sans toucher au catalogue ni à V2.27.
+
+Correctif R85 :
+- bouton dédié « Supprimer cet étalon de la base » ;
+- référence obligatoire et normalisée avant suppression ;
+- référence inexistante => aucune écriture ;
+- confirmation utilisateur avant toute suppression ;
+- préparation sur une copie de la base avant setDB(), donc aucun objet représentant la dernière base persistée n’est muté avant succès ;
+- échec localStorage => base persistée précédente conservée ;
+- succès => invalidation des résultats dépendant de la base locale + avancée d’époque via setDB() ;
+- à 2 000 références, supprimer une entrée ramène à 1 999 et permet ensuite l’ajout d’une nouvelle référence.
+
+Vérification release :
+- BUILD_MANIFEST ok=true ;
+- 51 suites, 51 réussies, 0 erreur ;
+- 5 103 références catalogue / 5 103 uniques ;
+- 3 246 fichiers contrôlés ;
+- 10 chunks catalogue strictement identiques à R84 ;
+- snapshot catalogue manifest_ok=true ;
+- test ciblé local_template_delete_guard_test.py : SELFTEST OK ;
+- archive application réextraite puis verify_build.py repassé avec succès ;
+- snapshot catalogue réextrait puis verify_snapshot.py repassé avec succès.
+
+Archives :
+- BRES_Cles_Mobile_V2_28_TEST_R85.zip SHA-256 681188b0a10c85b07856d6c76db22cc98659b2d0bc094a1ab2685ef143e88929
+- BRES_Cles_Catalogue_Snapshot_R85.zip SHA-256 a8e6fedeafeafcde5a02f0143d08d05a00f55799cc684304ef8e23e929e24692
+
+Parent attendu : R84 e5f1ba7609e912f65fe2a357f6902e5dea1e9ac5
+Branche : v2.28-test-r1
+V2.27 stable reste sur main : 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8
