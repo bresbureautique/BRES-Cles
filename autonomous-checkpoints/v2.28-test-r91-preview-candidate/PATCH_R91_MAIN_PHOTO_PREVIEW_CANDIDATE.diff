@@ -1,0 +1,71 @@
+--- /mnt/data/bres_r91/app/index.html	2026-09-21 08:47:20.000000000 +0000
++++ /mnt/data/bres_r92_candidate/index.html	2026-09-21 10:49:33.858919392 +0000
+@@ -21,6 +21,7 @@
+ .score{font-weight:700;font-size:18px}
+ 
+ .smallbtn{padding:9px;font-size:13px}
++.photo-preview-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:8px 0}.photo-preview-card{border:1px solid #d7dee5;border-radius:11px;padding:8px;background:#fafbfc}.photo-preview-card h3{margin:0 0 6px;font-size:14px}.main-photo-preview{display:none;width:100%;height:auto;max-height:240px;object-fit:contain;border:1px solid #ccd3da;border-radius:9px;background:#fff}.photo-preview-empty{font-size:12px;color:#66717b;padding:18px 6px;text-align:center}.photo-preview-card button{margin-top:7px;padding:9px;font-size:13px}
+ .app-version-badge{background:#ff8a00;color:#fff;font-weight:900;text-align:center;padding:9px 8px;font-size:15px;letter-spacing:.3px}
+ .camera-modal{position:fixed;inset:0;background:#000;z-index:9999;display:flex;flex-direction:column}.camera-modal.hidden{display:none}.cam-top{color:#fff;padding:8px 12px;font-size:15px;font-weight:700;text-align:center}.cam-stage{position:relative;flex:1;overflow:hidden;background:#111}.cam-stage video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+ .cam-guide{position:absolute;left:50%;top:50%;width:88%;aspect-ratio:1.92/1;max-height:48%;transform:translate(-50%,-50%);border:4px solid #f2f4f7;border-radius:16px;pointer-events:none;box-shadow:0 0 0 1px #0007}
+@@ -66,6 +67,20 @@
+ <input id="recto" type="file" accept="image/*" capture="environment">
+ <input id="verso" type="file" accept="image/*" capture="environment">
+ <div id="photoStatus" class="status">0 / 2 photo(s).</div>
++<div class="photo-preview-grid" id="mainPhotoPreviewGrid">
++  <div class="photo-preview-card">
++    <h3>Recto — aperçu</h3>
++    <img id="mainPhotoPreviewRecto" class="main-photo-preview" alt="Aperçu photo recto">
++    <div id="mainPhotoPreviewRectoEmpty" class="photo-preview-empty">Aucune photo recto chargée.</div>
++    <button id="retakeRecto" type="button" class="alt">↺ Refaire le recto</button>
++  </div>
++  <div class="photo-preview-card">
++    <h3>Verso — aperçu</h3>
++    <img id="mainPhotoPreviewVerso" class="main-photo-preview" alt="Aperçu photo verso">
++    <div id="mainPhotoPreviewVersoEmpty" class="photo-preview-empty">Aucune photo verso chargée.</div>
++    <button id="retakeVerso" type="button" class="alt">↺ Refaire le verso</button>
++  </div>
++</div>
+ <button id="analyseBtn">Analyser la forme et les mesures</button>
+ <div class="small">Utilisez de préférence la caméra guidée. Cadrez le <b>petit gabarit compact</b> dans le rectangle horizontal, avec A-B-C-D si possible. La feuille peut être légèrement tournée : l'application la redresse ensuite. Après recto + verso, appuyez sur <b>Analyser la forme et les mesures</b>, puis testez la lecture de marque/référence.</div>
+ <div id="analysis" class="status">En attente des deux photos.</div>
+@@ -283,8 +298,22 @@
+  return Number.isFinite(value)&&value>0&&value<=20?value:NaN;
+ }
+ const guidedCapture={recto:null,verso:null};
++const mainPhotoPreviewUrls={recto:null,verso:null};
+ function getMainPhoto(side){return guidedCapture[side] || (el(side).files&&el(side).files[0]) || null;}
+ function el(id){return document.getElementById(id)}
++function refreshMainPhotoPreview(side){
++ const cap=side==='recto'?'Recto':'Verso';
++ const img=el(`mainPhotoPreview${cap}`), empty=el(`mainPhotoPreview${cap}Empty`);
++ if(!img||!empty)return;
++ if(mainPhotoPreviewUrls[side]){try{URL.revokeObjectURL(mainPhotoPreviewUrls[side]);}catch(e){} mainPhotoPreviewUrls[side]=null;}
++ const file=getMainPhoto(side);
++ if(!file){img.removeAttribute('src');img.style.display='none';empty.style.display='block';empty.textContent=`Aucune photo ${side} chargée.`;return;}
++ try{
++  const url=URL.createObjectURL(file);mainPhotoPreviewUrls[side]=url;img.src=url;img.style.display='block';empty.style.display='none';
++  img.onerror=()=>{if(mainPhotoPreviewUrls[side]===url){try{URL.revokeObjectURL(url);}catch(e){} mainPhotoPreviewUrls[side]=null;}img.removeAttribute('src');img.style.display='none';empty.style.display='block';empty.textContent=`Aperçu ${side} indisponible — vous pouvez refaire cette face.`;};
++ }catch(e){img.removeAttribute('src');img.style.display='none';empty.style.display='block';empty.textContent=`Aperçu ${side} indisponible — vous pouvez refaire cette face.`;}
++}
++function refreshMainPhotoPreviews(){refreshMainPhotoPreview('recto');refreshMainPhotoPreview('verso');}
+ 
+ function loadImage(file){
+  return new Promise((res,rej)=>{
+@@ -1032,6 +1061,7 @@
+  bumpIdentificationEpoch();
+  let n=(getMainPhoto("recto")?1:0)+(getMainPhoto("verso")?1:0);
+  el("photoStatus").textContent=n+" / 2 photo(s).";
++ refreshMainPhotoPreviews();
+  currentSig=null;currentAnalyses=null;
+  // R55: l’ancienne géométrie ne doit plus rester visible après remplacement d’une photo.
+  el("analysis").className="status";el("analysis").textContent="Photos modifiées : relancez l’analyse des deux faces.";
+@@ -1120,6 +1150,8 @@
+   el('analysis').className='status';el('analysis').textContent=`Photo ${side} capturée en V2.28 TEST R91. Prenez l’autre face puis lancez l’analyse.`;
+ }
+ document.querySelectorAll('.guidedCamBtn').forEach(b=>b.addEventListener('click',()=>openGuidedCamera(b.dataset.side)));
++el('retakeRecto').onclick=()=>openGuidedCamera('recto');
++el('retakeVerso').onclick=()=>openGuidedCamera('verso');
+ el('camClose').onclick=closeGuidedCamera;el('camCapture').onclick=captureGuided;
+ el('camRefocus').onclick=()=>requestCamAutofocus();
+ el('camRotateKey').onclick=()=>{camKeyRotation=(camKeyRotation+90)%360;el('keyGuideWrap').style.transform=`translate(-50%,-50%) rotate(${camKeyRotation}deg)`;};
