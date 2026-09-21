@@ -1,0 +1,13 @@
+BRES CLÉS — PATCH R103
+Base : V2.28 TEST R102
+Cible : V2.28 TEST R103
+
+Changement fonctionnel :
+- ajout de ocrViewDeadline(actionDeadline, viewsRemaining) ;
+- avec 2 vues, la première reçoit au plus la moitié du temps global restant ;
+- le temps non consommé reste disponible pour la seconde ;
+- avec 1 vue, le budget global complet reste disponible ;
+- appliqué à l'OCR principal recto/verso et aux photos rapprochées de tête ;
+- aucun changement des seuils OCR, du timeout 7 s/passe, des garde-fous TE8D/TE8I ni du catalogue.
+
+Validation : 68/68 tests OK + garde OCR double-vue R103 + vérification ZIP/Library.

@@ -1,0 +1,12 @@
+BRES CLÉS V2.28 TEST R103 — VÉRIFICATION ALLER-RETOUR LIBRARY
+
+application: SHA original=55ebca72129d5c4aebb5dff374048c6bff8f1960360880aff73398a327c37728
+application: SHA Library =55ebca72129d5c4aebb5dff374048c6bff8f1960360880aff73398a327c37728
+application: identique=True
+catalogue: SHA original=f9685b16ca3824d7b26916c3961b6b8ff7b5b6e31b6a37659eac0c42e86aae1b
+catalogue: SHA Library =f9685b16ca3824d7b26916c3961b6b8ff7b5b6e31b6a37659eac0c42e86aae1b
+catalogue: identique=True
+
+Build manifest embarqué: ok=True version=V2.28 TEST R103 catalogue=5103/5103 tests=68
+Réexécution verify_build depuis ZIP Library: OK
+RESULTAT: OK

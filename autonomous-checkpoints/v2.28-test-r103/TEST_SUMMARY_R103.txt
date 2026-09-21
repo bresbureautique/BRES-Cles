@@ -1,0 +1,11 @@
+BRES CLÉS — TEST SUMMARY R103
+
+Version: V2.28 TEST R103
+Build OK: True
+Tests: 68/68 réussis
+Catalogue: 5103 lignes / 5103 références uniques
+Catalogue 10 blocs identiques au baseline: True
+Garde R103 budget double-vue: OK
+V2.27 stable: non modifiée
+
+Changement R103: partage équitable du budget OCR entre recto et verso ; seuils de décision inchangés.

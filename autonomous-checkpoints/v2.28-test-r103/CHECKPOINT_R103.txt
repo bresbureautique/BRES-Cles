@@ -1,0 +1,8 @@
+BRES CLÉS — V2.28 TEST R103
+Jalon : répartition équitable du budget OCR entre recto et verso, sans changement de seuil ni de décision.
+V2.27 stable : non modifiée.
+Catalogue : séparé, 5103 références uniques, 10 blocs inchangés.
+Décision OCR : seuils et garde-fous TE8D / TE8I inchangés par rapport à R102.
+Correction : avec deux vues, la première ne peut plus consommer les 25 s et priver la seconde ; le temps non utilisé reste disponible pour la vue suivante.
+Validation : régression complète + garde budget double-vue R103 + syntaxes + catalogue.
+Prochaine étape : test physique Samsung avec TE8D ; le diagnostic R103 permettra de vérifier que recto ET verso ont réellement été tentés.
