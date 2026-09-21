@@ -1,0 +1,19 @@
+--- v228-catalogue.js R95
++++ v228-catalogue.js R96
+@@
+-/* BRES Clés V2.28 TEST R95 — preuves manuelles résiduelles séparées + garde-fous anti-validation */
++/* BRES Clés V2.28 TEST R96 — preuves manuelles résiduelles séparées + garde-fous anti-validation */
+@@
+-const CHUNKS=Array.from({length:10},(_,i)=>`catalogue/v3/catalog-${String(i+1).padStart(2,'0')}.js?v=228r95`);
++const CHUNKS=Array.from({length:10},(_,i)=>`catalogue/v3/catalog-${String(i+1).padStart(2,'0')}.js?v=228r96`);
+@@
+-versions/export names/cache labels R95
++versions/export names/cache labels R96
+@@
+-document.title='BRES Clés V2.28 TEST R95';
++document.title='BRES Clés V2.28 TEST R96';
+
+Aucun des 10 chunks catalogue v3 n'a été modifié entre R95 et R96. La logique de profil expérimental est conservée ; ce jalon ne fabrique pas de donnée de profil TE2/TE2R et ne force pas de départage TE8D/TE8I.
+
+Snapshot catalogue séparé vérifié : 5 103 références, 5 103 uniques, 10 chunks, errors=[].
+SHA-256 snapshot : 0b9271ca576dd2d9ebda7a1c8288a581fa4dc099efdcad02d877f1ae6cd2c745  BRES_Cles_Catalogue_Snapshot_R96.zip
