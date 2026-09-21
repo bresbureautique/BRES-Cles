@@ -1,0 +1,21 @@
+BRES CLÉS — CHANGESET R95 DEPUIS R94
+
+Objet : corriger la latence OCR observée sur Samsung sans toucher à V2.27 stable ni aux données catalogue.
+
+Source runtime modifiée : index.html
+- Ajout OCR_ACTION_BUDGET_MS=25000.
+- Ajout OCR_PASS_TIMEOUT_MS=7000.
+- OCR_PRIMARY_MAX_PASSES=4.
+- OCR_REINFORCED_MAX_PASSES=4.
+- Réutilisation d’un worker Tesseract via createWorker quand disponible.
+- Un même deadline est partagé par recto/verso pour une action OCR.
+- Chemin primaire : 0°, 90°, 180°, 270° sur zone tête.
+- Renforcement : au plus 4 passes ciblées sur les deux meilleures orientations.
+- Arrêt anticipé si similarité catalogue >= .92 et confiance OCR >= 45.
+- En cas de budget/timeout : meilleur résultat partiel conservé, aucun résultat inventé.
+- Progression utilisateur remplacée par un compteur court + temps maximum restant.
+
+Wrapper catalogue : étiquette/cache R95 uniquement. Les 10 chunks catalogue v3 sont strictement inchangés.
+
+Tests ajoutés/adaptés : garde de latence OCR + compatibilité des gardes rawText, ordre de requête et publication asynchrone.
+Validation : 59/59 tests OK, syntaxe JavaScript OK, 5103/5103 références uniques, 10/10 chunks identiques à la baseline.
