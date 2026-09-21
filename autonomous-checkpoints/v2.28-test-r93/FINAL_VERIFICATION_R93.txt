@@ -1,0 +1,7 @@
+BRES CLÉS — V2.28 TEST R93 — VÉRIFICATION FINALE
+
+verify_build.py : OK — 57/57 tests.
+Catalogue : 5103/5103 références, 10/10 chunks identiques à la baseline.
+Aperçu recto/verso : garde intégrée à verify_build.py.
+R93 corrige l’infrastructure de vérification restée sur R91 dans le paquet R92 ; aucun changement des algorithmes forme/OCR/catalogue.
+V2.27 stable : non remplacée.
