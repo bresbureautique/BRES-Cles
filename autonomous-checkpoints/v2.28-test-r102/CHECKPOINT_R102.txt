@@ -1,0 +1,7 @@
+BRES CLÉS — V2.28 TEST R102
+Jalon : diagnostic OCR complet des passes interrompues (timeout), sans changement de décision.
+V2.27 stable : non modifiée.
+Catalogue : séparé, 5103 références uniques, 10 blocs inchangés.
+Décision OCR : strictement inchangée par rapport à R101.
+Validation : 67/67 régression + garde R102 + syntaxes + catalogue OK.
+Prochaine étape : test physique Samsung avec TE8D ; joindre idéalement le JSON diagnostic R102.
