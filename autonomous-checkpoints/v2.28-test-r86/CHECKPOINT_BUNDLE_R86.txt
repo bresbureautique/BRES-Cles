@@ -1,0 +1,36 @@
+BRES CLÉS — CHECKPOINT GITHUB R86
+
+Objet : empêcher qu’une suppression d’étalon local confirmée avec retard écrase une modification plus récente de la base locale réalisée dans un autre onglet, sans toucher au catalogue ni à V2.27.
+
+Défaut reproduit en R85 :
+- la copie de base à supprimer était préparée avant window.confirm() ;
+- pendant cette confirmation, un autre onglet de même origine pouvait modifier localStorage ;
+- au retour de confirmation, setDB() pouvait réécrire la copie ancienne et perdre la modification externe.
+
+Correctif R86 :
+- existence de la référence vérifiée avant confirmation pour éviter les confirmations inutiles ;
+- après confirmation, nouvelle lecture getDB() de la base persistée ;
+- suppression recalculée sur cette base la plus récente ;
+- les références ajoutées/modifiées ailleurs pendant la confirmation sont préservées ;
+- si la référence ciblée a déjà été supprimée ailleurs, aucune écriture n’est effectuée ;
+- ce changement externe avance l’époque locale et invalide les résultats dépendants ;
+- les protections R85 de confirmation, capacité et non-destruction sur erreur de stockage restent conservées.
+
+Vérification release :
+- BUILD_MANIFEST ok=true ;
+- 52 suites, 52 réussies, 0 erreur ;
+- nouveau local_template_delete_race_guard_test.py : SELFTEST OK ;
+- 5 103 références catalogue / 5 103 uniques ;
+- 3 347 fichiers contrôlés ;
+- 10 chunks catalogue strictement identiques à R85 ;
+- snapshot catalogue manifest_ok=true ;
+- archive application réextraite puis verify_build.py repassé avec succès ;
+- snapshot catalogue réextrait puis verify_snapshot.py repassé avec succès.
+
+Archives :
+- BRES_Cles_Mobile_V2_28_TEST_R86.zip SHA-256 e95622f177a7e96861b59d258846ab638db5c9ecdb38c69a80c1d6367b2b9b81
+- BRES_Cles_Catalogue_Snapshot_R86.zip SHA-256 f93e791cd5ba3a9fa5bd1a1b5f372260e87c5dbb23adb22b8b8ba99a0cd3755e
+
+Parent attendu : R85 eb3ee5e83090b606a2de26723ce362131ca9e35e
+Branche : v2.28-test-r1
+V2.27 stable reste sur main : 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8
