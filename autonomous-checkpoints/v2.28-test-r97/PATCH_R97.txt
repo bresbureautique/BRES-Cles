@@ -1,0 +1,23 @@
+BRES CLÉS V2.28 TEST R97 — PATCH REPRODUCTIBLE DEPUIS R96
+
+1. index.html
+- version active/cache : R96 -> R97, v=228r96 -> v=228r97.
+- recognizeOCRPass(canvas,progressSink,timeoutMs,psm=6) transmet String(psm) à tessedit_pageseg_mode.
+- ajout headEngravingCoreCanvas(focused) : crop central x=12 %, y=10 %, largeur=76 %, hauteur=80 %, échelle=1,25.
+- ajout recoverOCRMakerCandidates(raw) : fabricants complets uniquement ; confusions 0/O, 1/I, 5/S, 8/B ; reconstruction de lettres espacées avec petits séparateurs ; frontières Unicode conservées pour éviter les sous-chaînes fabriquées.
+- ocrScoreText utilise recoverOCRMakerCandidates pour le bonus fabricant.
+- interpretOCR fusionne détection stricte et fabricants récupérés.
+- bestOCR conserve 4 passes primaires puis au plus 4 renforcées ; les renforcées utilisent la gravure centrale : inversion PSM 7 puis contraste doux PSM 11 sur les deux meilleures orientations.
+- le budget reste OCR_ACTION_BUDGET_MS=25000 et OCR_PASS_TIMEOUT_MS=7000.
+- le garde-fou TE8D/TE8I R96 reste actif : TESA seule ne peut pas sélectionner automatiquement une des deux références.
+
+2. v228-catalogue.js
+- version/cache uniquement : R96 -> R97 et r96 -> r97.
+- aucun des 10 chunks catalogue/v3/catalog-01.js ... catalog-10.js n’est modifié.
+
+3. Tests
+- ajout ocr_head_engraving_guard_test.py.
+- cas validés : TESA, « T E S A », TE5A -> TESA ; ILC0 -> ILCO ; CONTESA, TE5A123, ΩTESA, TESAЖ ne doivent pas fabriquer un fabricant.
+- suite complète R97 : 62 tests, 0 échec.
+
+Empreintes release : voir SHA256_R97.txt. Ces empreintes permettent de vérifier bit-à-bit les ZIP archivés dans Library /BRES Cles/Sauvegardes.
