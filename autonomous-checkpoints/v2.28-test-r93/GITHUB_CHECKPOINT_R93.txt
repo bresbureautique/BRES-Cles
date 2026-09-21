@@ -1,0 +1,14 @@
+BRES CLÉS — GITHUB CHECKPOINT R93
+
+Base GitHub : commit R92 31b1cdd2a48c03f800e86fa8d6ed3a88d964dc31 sur branche v2.28-test-r1.
+R93 : correctif de l’infrastructure de vérification + intégration permanente du guard aperçu recto/verso.
+V2.27 stable / main : NON MODIFIÉE.
+
+Verification application : 57/57 tests, errors=[].
+Catalogue : 5103/5103 références ; 10/10 chunks inchangés.
+
+SHA-256 releases :
+3b79ed0f804df98686602cbe93b7cb60673e450653cbe96222da4a6c0ba5c138  BRES_Cles_Mobile_V2_28_TEST_R93.zip
+bdd3f1a907d3e8f0f520b52a46032110401cbebc69841aff03444eab4ec3c09f  BRES_Cles_Catalogue_Snapshot_R93.zip
+
+La reconstruction depuis R92 est archivée dans R93_SOURCE_PATCH.diff.gz.b64 et a été testée séparément avant commit.
