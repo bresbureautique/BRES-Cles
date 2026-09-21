@@ -1,0 +1,21 @@
+BRES CLÉS — VÉRIFICATION LIBRARY R96
+
+Dossier: /BRES Cles/Sauvegardes
+
+Application ZIP matérialisé depuis Library:
+- SHA-256: ea689eaa0f99bf54aa394e094ca98cf6ccfa16a62ec2dbe72a09de424c80babe
+- verify_build.py: ok=true
+- version: V2.28 TEST R96
+- catalogue: 5103 références / 5103 uniques
+- files_hashed: 3928
+- errors=[]
+
+Catalogue ZIP matérialisé depuis Library:
+- SHA-256: 0b9271ca576dd2d9ebda7a1c8288a581fa4dc099efdcad02d877f1ae6cd2c745
+- verify_snapshot.py: ok=true
+- milestone: CATALOGUE SNAPSHOT R96
+- catalogue: 5103 références / 5103 uniques
+- chunks: 10
+- errors=[]
+
+Conclusion: les deux ZIP relus depuis Library sont bit-à-bit conformes aux empreintes de release et restent valides après décompression et nouvelle exécution des vérifications.
