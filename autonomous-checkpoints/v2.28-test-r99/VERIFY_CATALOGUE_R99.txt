@@ -1,0 +1,9 @@
+BRES CLÉS — BASE CATALOGUE R99 (SÉPARÉE)
+{
+  "milestone": "V2.28 TEST R99",
+  "catalogue_data_revision": "unchanged from R98/R40",
+  "chunk_count": 10,
+  "row_count": 5103,
+  "unique_refs": 5103
+}
+10/10 chunks vérifiés par SHA-256 ; aucune modification des données catalogue.
