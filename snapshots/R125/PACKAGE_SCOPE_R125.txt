@@ -1,0 +1,8 @@
+BRES CLES — PACKAGE CATALOGUE R125
+
+Ce ZIP est le paquet catalogue autonome R125.
+- Il conserve les 10 blocs catalogue canoniques et la traçabilité R123-R124 nécessaire.
+- Il ajoute le paquet de collecte R125, les instructions, le validateur et deux garde-fous.
+- Il ne contient pas index.html ni v228-catalogue.js : le runtime reste dans le ZIP application séparé.
+- Aucun paquet R125 ne possède d'autorité de décision et aucun seuil d'acceptation n'est autorisé.
+- Un dossier incomplet, une capture/photo réutilisée ou une calibration non documentée est rejeté avant revue.
