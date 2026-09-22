@@ -1,0 +1,55 @@
+BRES CLES — JALON CATALOGUE/OCR R123
+
+- V2.27 reste la version stable et ne doit pas être remplacée par ce jalon.
+- Runtime test: V2.28 TEST R116, bit-identique à R122.
+- R123 définit un contrat de preuve live séparé pour deux discriminants futurs: butée/épaulement et géométrie recto/verso.
+- Le contrat stocke provenance, calibration, valeur mesurée, incertitude, identifiants de captures recto/verso et contrôles qualité.
+- R123 n'autorise aucun seuil d'acceptation et n'accorde aucune autorité de décision à la présence de ces preuves.
+- Statut par défaut des 17 paires critiques: A_CONFIRMER.
+- Activation future interdite sans validation physique, répétabilité, caractérisation d'incertitude, garde de non-régression et changement de politique séparé.
+- Régression fraîche: 95/95 scripts Python réussis, 0 échec.
+- Catalogue canonique: 5103 références, 5103 uniques, 10 blocs bit-identiques à R122.
+
+Prochain travail: R124 peut préparer un protocole de collecte répétable sur captures physiques, sans modifier les seuils ni la décision R116.
+
+BRES CLES — TEST SUMMARY R123
+
+TOTAL=95
+OK=95
+FAIL=0
+
+Nouveaux gardes R123:
+- catalogue_live_discriminant_evidence_contract_test.py : OK
+- catalogue_live_discriminant_runtime_boundary_guard_test.py : OK
+
+Contrat R123:
+- preuve butée/épaulement : format défini, non activé
+- preuve recto/verso : format défini, non activé
+- seuil automatique : aucun autorisé
+- autorité de décision : NONE
+- paires critiques : A_CONFIRMER
+
+Runtime V2.28 TEST R116 : bit-identique à R122.
+Catalogue : 5103/5103 uniques, 10/10 blocs bit-identiques.
+
+RELEASES
+f5c4e47a47b719e904e78b4b8ea4794807efb940cf9c742a8061017f7b05fd60  release_r123/BRES_Cles_Catalogue_Audit_R123.zip
+4fcd38e5fb2241d0368aa544bfb46c8455d7303a95a4d1fc8fcc6a9be4c7682d  release_r123/BRES_Cles_Mobile_V2_28_TEST_R116_AUDIT_R123.zip
+
+BRES CLÉS — LIBRARY ROUNDTRIP R123
+
+Dossier: /BRES Cles/Sauvegardes
+
+BRES_Cles_Catalogue_Audit_R123.zip
+- SHA-256 local:   f5c4e47a47b719e904e78b4b8ea4794807efb940cf9c742a8061017f7b05fd60
+- SHA-256 Library: f5c4e47a47b719e904e78b4b8ea4794807efb940cf9c742a8061017f7b05fd60
+- Extraction: OK
+- catalogue_live_discriminant_evidence_contract_test.py: SELFTEST OK
+
+BRES_Cles_Mobile_V2_28_TEST_R116_AUDIT_R123.zip
+- SHA-256 local:   4fcd38e5fb2241d0368aa544bfb46c8455d7303a95a4d1fc8fcc6a9be4c7682d
+- SHA-256 Library: 4fcd38e5fb2241d0368aa544bfb46c8455d7303a95a4d1fc8fcc6a9be4c7682d
+- Extraction: OK
+- catalogue_live_discriminant_runtime_boundary_guard_test.py: SELFTEST OK
+
+Round-trip vérifié: OUI.
