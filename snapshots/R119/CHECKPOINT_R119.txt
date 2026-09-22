@@ -1,0 +1,11 @@
+BRES CLÉS — JALON CATALOGUE/OCR R119
+
+- V2.27 reste la version stable : aucun fichier de la branche main n'est modifié par ce jalon.
+- Le runtime de test reste V2.28 TEST R116 : index.html et v228-catalogue.js sont bit-identiques à R118.
+- R119 classe les 556 références à triple risque OCR par fabricant et famille de référence.
+- 555 cas cumulent substitution + insertion/suppression + transposition ; BK34 est le cas spécial substitution + insertion/suppression + collision de séparateur.
+- Principaux fabricants exposés : ABUS 34, sans fabricant 26, ABLOY 16, VACHETTE 15, YALE 15.
+- Principales familles exposées : YA 42, AB 39, VAC 20, CS 17, AY 16.
+- Garde-fou R119 : le texte OCR seul peut proposer/préremplir un candidat, mais le statut final VALIDÉ/confirmed exige une géométrie indépendante concordante ; une géométrie absente, faible ou contradictoire ne valide pas.
+- Régression complète : 86/86 tests réussis, 0 erreur.
+- Catalogue canonique : 5103 références, 5103 uniques, 10/10 blocs bit-identiques.
