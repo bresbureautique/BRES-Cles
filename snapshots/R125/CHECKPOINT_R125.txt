@@ -1,0 +1,12 @@
+BRES CLES — JALON CATALOGUE/OCR R125
+
+- V2.27 reste la version stable et ne doit pas être remplacée par ce jalon.
+- Runtime test: V2.28 TEST R116, bit-identique à R124.
+- R125 fournit un paquet de collecte physique prêt à remplir pour une clé avec 3 sessions S1/S2/S3, RECTO et VERSO séparés.
+- Le paquet exige la traçabilité du gabarit, les contrôles d'échelle 50/100 mm, la source de calibration, les identifiants et SHA-256 des photos.
+- Le validateur R125 rejette un paquet incomplet, les identifiants de capture réutilisés, les fichiers photo réutilisés entre faces/sessions et une calibration non documentée.
+- Les mesures restent MEASURED_UNVALIDATED, sans seuil d'acceptation et sans autorité de décision; la politique reste A_CONFIRMER.
+- Régression fraîche: 99/99 scripts Python réussis, 0 échec.
+- Catalogue canonique: 5103 références, 5103 uniques, 10 blocs bit-identiques à R124.
+
+Prochain travail: R126 peut préparer l'ingestion contrôlée d'un paquet rempli en mode diagnostic uniquement, sans connecter les mesures à la décision R116.
