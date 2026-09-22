@@ -1,0 +1,8 @@
+BRES Clés V2.28 TEST R111 — résumé du patch R110 → R111
+- Aucun changement des décisions OCR, seuils 0,70 / 0,88, budget 25 s, timeout 7 s ou garde-fou TE8D / TE8I.
+- Ajout d’un garde autonome du contrat/confidentialité de l’export diagnostic OCR.
+- Ajout d’un audit autonome du schéma des 5103 lignes du catalogue massif.
+- Le nouvel audit documente les 4 profils catalogue absents connus (CH9T, CH17T, HCT1R, BIL1T), chacun avec confiance profil 0.
+- Aucun des 10 blocs catalogue canoniques n’est modifié.
+- Version/cache-busting/exports actifs alignés sur R111.
+- R111 peut donc servir au prochain test Samsung tout en conservant la même logique de reconnaissance que R110.
