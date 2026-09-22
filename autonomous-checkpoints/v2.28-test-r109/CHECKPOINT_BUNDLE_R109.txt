@@ -1,0 +1,42 @@
+BRES CLÉS V2.28 TEST R109 — CHECKPOINT GITHUB
+
+Dépôt : bresbureautique/BRES-Cles
+Branche de test : v2.28-test-r1
+Parent attendu : 742bc3d8f10c4355061fb7a6a648ae9fc5b0cd61 (R108)
+Branche stable main attendue : 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8 (V2.27)
+
+Jalon R109
+- Diagnostic qualité d'image ajouté à chaque passe OCR réellement envoyée à Tesseract.
+- Mesures : luminance moyenne, contraste (écart-type), pourcentage de pixels très sombres et très clairs.
+- Échantillon réduit à 96 px maximum par côté afin de limiter le coût sur Samsung.
+- Export diagnostic : schéma bres-ocr-diagnostic-export-v7, inputQualityTracked=true.
+- Affichage : qualité image visible dans le détail de chaque passe.
+- Télémétrie strictement non décisionnelle : seuils 0,70 / 0,88 inchangés ; garde-fou TE8D / TE8I inchangé.
+- Budget global 25 s et timeout par passe 7 s inchangés.
+
+Validation locale et release
+- Régression exécutée par lots bornés : 73/73 tests réussis, erreurs 0.
+- Syntaxe JavaScript : OK.
+- Catalogue : 5103 références / 5103 uniques.
+- 10/10 blocs catalogue inchangés/canoniques.
+- ZIP application SHA-256 : 2ae866d34f533804ba0198ff2535743245e8b75f043b30c9ced10b574a5f8fc1
+- ZIP catalogue SHA-256 : 534a20b8fee27ffc70720b023b46bc69e789fe4248d4c67c507f7761e1bad722
+
+Vérification Library
+- Upload dans /BRES Cles/Sauvegardes : OK.
+- Rematérialisation des deux ZIP : OK.
+- Empreintes après aller-retour : identiques.
+- ZIP application après Library : décompression OK, verify_release_r109.py OK, 73/73 tests consignés, catalogue 5103/5103, erreurs 0.
+- ZIP catalogue après Library : décompression OK, 10/10 blocs conformes, 5103/5103 références.
+
+Fichiers de preuve prévus dans ce checkpoint GitHub
+- CHECKPOINT_BUNDLE_R109.txt
+- TEST_SUMMARY_R109.txt
+- RELEASE_HASHES_R109.txt
+- SOURCE_HASHES_R109.txt
+- LIBRARY_ROUNDTRIP_VERIFICATION_R109.txt
+- PATCH_R109.txt
+
+Règle de stabilité
+- Ce checkpoint doit être écrit uniquement sur v2.28-test-r1.
+- main / V2.27 ne doit pas être modifiée.

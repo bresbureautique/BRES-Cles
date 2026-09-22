@@ -1,0 +1,9 @@
+BRES Clés V2.28 TEST R109 — résumé du patch R108 → R109
+- Diagnostic qualité d'image par passe OCR (moyenne luminance, contraste, noir %, blanc %).
+- Échantillonnage <=96 px par côté pour limiter le coût mobile.
+- Export diagnostic schema v7, inputQualityTracked=true.
+- Télémétrie strictement non décisionnelle.
+- Nouveau garde ocr_input_quality_guard_test.py.
+- Harness ocr_best_selection adapté à la nouvelle dépendance diagnostique.
+- Runner de vérification borné par groupes pour éviter les collisions de preuves sur disque.
+- Catalogue massif inchangé, 5103 références / 10 blocs.

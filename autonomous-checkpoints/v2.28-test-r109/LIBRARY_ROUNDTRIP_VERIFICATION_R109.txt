@@ -1,0 +1,7 @@
+BRES Clés R109 — vérification aller-retour Library
+Application ZIP SHA-256: 2ae866d34f533804ba0198ff2535743245e8b75f043b30c9ced10b574a5f8fc1
+Catalogue ZIP SHA-256: 534a20b8fee27ffc70720b023b46bc69e789fe4248d4c67c507f7761e1bad722
+Empreintes après rematérialisation: IDENTIQUES
+Application après relecture Library: V2.28 TEST R109, 73/73 tests consignés, vérificateur release OK, catalogue 5103/5103, 0 erreur
+Catalogue après relecture Library: 10/10 blocs canoniques, 5103/5103 références
+Résultat: OK
