@@ -15,12 +15,26 @@
     "no_acceptance_threshold_authorized": true
   },
   "physical_key_id": null,
-  "candidate_pair": {"a": null, "b": null},
+  "candidate_pair": {
+    "a": null,
+    "b": null
+  },
   "gabarit": {
     "id": null,
     "version": null,
     "zero_mode": "UNKNOWN",
-    "scale_checks": [{"target_mm": 50, "measured_mm": null, "notes": null},{"target_mm": 100, "measured_mm": null, "notes": null}],
+    "scale_checks": [
+      {
+        "target_mm": 50,
+        "measured_mm": null,
+        "notes": null
+      },
+      {
+        "target_mm": 100,
+        "measured_mm": null,
+        "notes": null
+      }
+    ],
     "mm_per_px": null,
     "calibration_source": null,
     "calibration_documented": false,
@@ -28,9 +42,135 @@
   },
   "collection_sessions": [],
   "session_slots": [
-    {"capture_session_id":"S1","captured_at":null,"device_model":null,"lighting_notes":null,"alignment_notes":null,"focus_notes":null,"captures":{"recto":{"side":"RECTO","capture_id":null,"source_file_sha256":null,"geometry_signature":null},"verso":{"side":"VERSO","capture_id":null,"source_file_sha256":null,"geometry_signature":null}},"stop_or_shoulder":{"status":"MEASURED_UNVALIDATED","position_mm":null,"uncertainty_mm":null,"measurement_method":null},"dual_face":{"status":"MEASURED_UNVALIDATED","independent_capture_ids":true,"measurement_method":null},"quality":{"focus_ok":null,"alignment_ok":null,"calibration_ok":null,"occlusion_ok":null,"notes":null},"decision_authority":"NONE","policy_status":"A_CONFIRMER","slot_status":"EMPTY"},
-    {"capture_session_id":"S2","captured_at":null,"device_model":null,"lighting_notes":null,"alignment_notes":null,"focus_notes":null,"captures":{"recto":{"side":"RECTO","capture_id":null,"source_file_sha256":null,"geometry_signature":null},"verso":{"side":"VERSO","capture_id":null,"source_file_sha256":null,"geometry_signature":null}},"stop_or_shoulder":{"status":"MEASURED_UNVALIDATED","position_mm":null,"uncertainty_mm":null,"measurement_method":null},"dual_face":{"status":"MEASURED_UNVALIDATED","independent_capture_ids":true,"measurement_method":null},"quality":{"focus_ok":null,"alignment_ok":null,"calibration_ok":null,"occlusion_ok":null,"notes":null},"decision_authority":"NONE","policy_status":"A_CONFIRMER","slot_status":"EMPTY"},
-    {"capture_session_id":"S3","captured_at":null,"device_model":null,"lighting_notes":null,"alignment_notes":null,"focus_notes":null,"captures":{"recto":{"side":"RECTO","capture_id":null,"source_file_sha256":null,"geometry_signature":null},"verso":{"side":"VERSO","capture_id":null,"source_file_sha256":null,"geometry_signature":null}},"stop_or_shoulder":{"status":"MEASURED_UNVALIDATED","position_mm":null,"uncertainty_mm":null,"measurement_method":null},"dual_face":{"status":"MEASURED_UNVALIDATED","independent_capture_ids":true,"measurement_method":null},"quality":{"focus_ok":null,"alignment_ok":null,"calibration_ok":null,"occlusion_ok":null,"notes":null},"decision_authority":"NONE","policy_status":"A_CONFIRMER","slot_status":"EMPTY"}
+    {
+      "capture_session_id": "S1",
+      "captured_at": null,
+      "device_model": null,
+      "lighting_notes": null,
+      "alignment_notes": null,
+      "focus_notes": null,
+      "captures": {
+        "recto": {
+          "side": "RECTO",
+          "capture_id": null,
+          "source_file_sha256": null,
+          "geometry_signature": null
+        },
+        "verso": {
+          "side": "VERSO",
+          "capture_id": null,
+          "source_file_sha256": null,
+          "geometry_signature": null
+        }
+      },
+      "stop_or_shoulder": {
+        "status": "MEASURED_UNVALIDATED",
+        "position_mm": null,
+        "uncertainty_mm": null,
+        "measurement_method": null
+      },
+      "dual_face": {
+        "status": "MEASURED_UNVALIDATED",
+        "independent_capture_ids": true,
+        "measurement_method": null
+      },
+      "quality": {
+        "focus_ok": null,
+        "alignment_ok": null,
+        "calibration_ok": null,
+        "occlusion_ok": null,
+        "notes": null
+      },
+      "decision_authority": "NONE",
+      "policy_status": "A_CONFIRMER",
+      "slot_status": "EMPTY"
+    },
+    {
+      "capture_session_id": "S2",
+      "captured_at": null,
+      "device_model": null,
+      "lighting_notes": null,
+      "alignment_notes": null,
+      "focus_notes": null,
+      "captures": {
+        "recto": {
+          "side": "RECTO",
+          "capture_id": null,
+          "source_file_sha256": null,
+          "geometry_signature": null
+        },
+        "verso": {
+          "side": "VERSO",
+          "capture_id": null,
+          "source_file_sha256": null,
+          "geometry_signature": null
+        }
+      },
+      "stop_or_shoulder": {
+        "status": "MEASURED_UNVALIDATED",
+        "position_mm": null,
+        "uncertainty_mm": null,
+        "measurement_method": null
+      },
+      "dual_face": {
+        "status": "MEASURED_UNVALIDATED",
+        "independent_capture_ids": true,
+        "measurement_method": null
+      },
+      "quality": {
+        "focus_ok": null,
+        "alignment_ok": null,
+        "calibration_ok": null,
+        "occlusion_ok": null,
+        "notes": null
+      },
+      "decision_authority": "NONE",
+      "policy_status": "A_CONFIRMER",
+      "slot_status": "EMPTY"
+    },
+    {
+      "capture_session_id": "S3",
+      "captured_at": null,
+      "device_model": null,
+      "lighting_notes": null,
+      "alignment_notes": null,
+      "focus_notes": null,
+      "captures": {
+        "recto": {
+          "side": "RECTO",
+          "capture_id": null,
+          "source_file_sha256": null,
+          "geometry_signature": null
+        },
+        "verso": {
+          "side": "VERSO",
+          "capture_id": null,
+          "source_file_sha256": null,
+          "geometry_signature": null
+        }
+      },
+      "stop_or_shoulder": {
+        "status": "MEASURED_UNVALIDATED",
+        "position_mm": null,
+        "uncertainty_mm": null,
+        "measurement_method": null
+      },
+      "dual_face": {
+        "status": "MEASURED_UNVALIDATED",
+        "independent_capture_ids": true,
+        "measurement_method": null
+      },
+      "quality": {
+        "focus_ok": null,
+        "alignment_ok": null,
+        "calibration_ok": null,
+        "occlusion_ok": null,
+        "notes": null
+      },
+      "decision_authority": "NONE",
+      "policy_status": "A_CONFIRMER",
+      "slot_status": "EMPTY"
+    }
   ],
   "collection_summary": {
     "required_sessions": 3,
