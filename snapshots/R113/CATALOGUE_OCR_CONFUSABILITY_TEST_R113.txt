@@ -1,0 +1,15 @@
+BRES CLÉS V2.28 TEST R113 — BASELINE CONFUSABILITÉ OCR CATALOGUE
+
+OK  catalogue_5103_unique
+OK  chunks_bit_identical
+OK  eligible_refs_5059
+OK  hamming1_pairs_19676
+OK  same_maker_pairs_8843
+OK  other_or_blank_pairs_10833
+OK  glyph_collision_groups_64
+OK  glyph_collision_refs_129
+OK  glyph_max_group_3
+OK  pilot_te2_not_mass_catalogue
+
+Mesures: 5059 refs OCR-like; 19676 paires Hamming-1; 64 groupes glyphes / 129 refs.
+SELFTEST OK
