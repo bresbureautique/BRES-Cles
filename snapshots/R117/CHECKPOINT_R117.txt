@@ -1,0 +1,8 @@
+BRES CLÉS — JALON CATALOGUE/OCR R117
+
+- V2.27 reste la version stable, inchangée.
+- Le runtime de test reste V2.28 TEST R116 : aucun changement de caméra, OCR, seuil, budget ou timeout dans ce jalon catalogue.
+- R117 ajoute une baseline de collisions créées par la suppression des séparateurs et de la ponctuation lors de la normalisation OCR.
+- Le catalogue contient une collision canonique de ce type : BK3-4 et BK34, toutes deux fabricant BKS, se normalisent en BK34.
+- Politique de sécurité : une référence normalisée ambiguë ne doit jamais être auto-validée sans correspondance brute exacte ou preuve indépendante.
+- Les 10 blocs catalogue canoniques restent bit-identiques.
