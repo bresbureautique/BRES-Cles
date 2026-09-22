@@ -1,0 +1,8 @@
+BRES CLÉS — LIBRARY/ZIP ROUNDTRIP R116
+
+Application ZIP SHA-256: 9096a2222797ba600b3c8eb8853cd0bee3e8f15dfa2049bd593261c57161a6b0
+Catalogue ZIP SHA-256: be2647429d07eb44acd0b02d8ed2a33880779cf94fac0ffcf703fcf25f22c00f
+Application extraite: vérification 82/82, erreurs 0
+Catalogue extrait: 10/10 blocs canoniques bit-identiques
+Catalogue: 5103 références / 5103 uniques
+V2.27 stable: non modifiée

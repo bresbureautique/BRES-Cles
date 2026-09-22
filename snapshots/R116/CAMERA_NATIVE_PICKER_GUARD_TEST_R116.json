@@ -1,0 +1,21 @@
+{
+  "schema": "bres-camera-native-picker-guard-v1",
+  "milestone": "V2.28 TEST R116",
+  "checks": {
+    "explicit_import_buttons": true,
+    "explicit_head_buttons": true,
+    "capture_inputs": true,
+    "native_context_detection": true,
+    "showpicker_then_click_fallback": true,
+    "same_file_reselect": true,
+    "guided_sync_native_entry": true,
+    "guided_buttons_use_router": true,
+    "import_buttons_direct_native": true,
+    "head_buttons_direct_native": true,
+    "profile_native_button": true,
+    "no_async_picker_after_failure": true,
+    "native_before_async": true
+  },
+  "errors": [],
+  "ok": true
+}

@@ -1,0 +1,11 @@
+BRES CLÉS — TEST SUMMARY R116
+
+Runtime de test actif: V2.28 TEST R116
+Stable: V2.27 inchangée
+Régression: 82/82 tests réussis
+Erreurs: 0
+Garde caméra Android/local: OK
+Catalogue: 5103 références / 5103 uniques
+Blocs catalogue: 10/10 bit-identiques à R115
+OCR: logique, seuils 0,70 / 0,88, budget 25 s et timeout 7 s inchangés
+Dernier audit catalogue: R115, inchangé par R116

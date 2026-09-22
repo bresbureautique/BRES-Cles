@@ -1,0 +1,8 @@
+BRES CLÉS V2.28 TEST R116 — CHECKPOINT ACTIF
+
+V2.27 reste la version stable et ne doit jamais être remplacée par ce test.
+R116 corrige le lancement photo sur Android/Samsung en ouverture locale content:// ou file://.
+Le repli vers input[type=file][capture=environment] est désormais décidé avant tout await afin de conserver l'activation utilisateur exigée par le navigateur.
+Les boutons Importer recto/verso et les photos de tête utilisent des boutons explicites reliés au picker natif ; le profil bénéficie du même repli.
+La logique OCR, les seuils 0,70 / 0,88, le budget 25 s, le timeout 7 s et le garde-fou d'ambiguïté R113 ne sont pas modifiés.
+La base catalogue reste séparée et ses 10 blocs canoniques sont inchangés ; le dernier audit catalogue reste R115.

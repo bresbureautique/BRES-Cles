@@ -1,0 +1,17 @@
+BRES CLÉS V2.28 TEST R116 — GARDE OUVERTURE CAMÉRA/FICHIERS ANDROID
+
+OK  explicit_import_buttons
+OK  explicit_head_buttons
+OK  capture_inputs
+OK  native_context_detection
+OK  showpicker_then_click_fallback
+OK  same_file_reselect
+OK  guided_sync_native_entry
+OK  guided_buttons_use_router
+OK  import_buttons_direct_native
+OK  head_buttons_direct_native
+OK  profile_native_button
+OK  no_async_picker_after_failure
+OK  native_before_async
+
+SELFTEST OK
