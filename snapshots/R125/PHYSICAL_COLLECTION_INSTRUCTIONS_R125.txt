@@ -1,0 +1,24 @@
+BRES CLES — PAQUET DE COLLECTE PHYSIQUE R125
+
+But: préparer une collecte réelle d’une clé sans donner d’autorité de décision aux mesures.
+
+Avant la collecte
+1. Renseigner physical_key_id et, si connue, la paire candidate a/b.
+2. Renseigner l’identifiant et la version du gabarit.
+3. Mesurer les repères 50 mm et 100 mm et documenter calibration_source.
+4. Choisir le mode de zéro observé: POINTE_ZERO, BUTEE_ZERO ou UNKNOWN.
+
+Pour chacune des 3 sessions S1, S2 et S3
+- Faire une nouvelle capture RECTO et une nouvelle capture VERSO.
+- Ne réutiliser ni capture_id ni fichier photo entre faces ou sessions.
+- Conserver le SHA-256 de chaque fichier photo.
+- Renseigner date/heure, appareil, éclairage, alignement et mise au point.
+- Renseigner la position butée/épaulement, son incertitude et la méthode si la mesure est possible.
+- Conserver les signatures recto et verso séparées.
+
+Règles de sécurité
+- Un dossier incomplet reste A_CONFIRMER.
+- Une photo réutilisée (même capture_id ou même SHA-256) rend le paquet non exploitable pour revue.
+- Une calibration non documentée rend le paquet non exploitable pour revue.
+- R125 n’autorise aucun seuil d’acceptation et ne peut jamais produire VALIDÉ automatiquement.
+- V2.27 reste la version stable; le runtime test reste V2.28 TEST R116.
