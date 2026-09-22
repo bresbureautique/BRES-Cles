@@ -1,0 +1,20 @@
+{
+  "schema": "bres-live-diagnostic-repeatability-test-r128-v1",
+  "milestone": "BRES Cles catalogue audit R128",
+  "checks": {
+    "registry_not_mutated": true,
+    "pair_order_canonicalized": true,
+    "same_physical_key_multiple_entries_grouped": true,
+    "session_observations_counted_descriptively": true,
+    "within_key_span_is_observation_not_verdict": true,
+    "different_physical_keys_remain_distinct": true,
+    "inter_key_span_is_descriptive_only": true,
+    "no_candidate_or_validation_output": true,
+    "no_runtime_or_catalogue_authority": true,
+    "single_key_does_not_fake_inter_key_evidence": true,
+    "empty_pair_is_non_authoritative": true,
+    "tampered_entry_authority_rejected": true
+  },
+  "errors": [],
+  "ok": true
+}
