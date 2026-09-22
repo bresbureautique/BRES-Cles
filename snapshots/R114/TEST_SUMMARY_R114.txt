@@ -1,0 +1,11 @@
+BRES CLÉS — TEST SUMMARY R114
+
+Runtime de test actif: V2.28 TEST R113 (inchangé)
+Jalon d'audit: catalogue R114
+Régression: 80/80 tests réussis
+Erreurs: 0
+Catalogue: 5103 références / 5103 uniques
+Blocs catalogue: 10/10 bit-identiques
+Nouvelle baseline R114: 4302 paires insertion/suppression, 2522 même fabricant, 3883 références concernées.
+Décision OCR: inchangée par R114.
+V2.27 stable: non modifiée.
