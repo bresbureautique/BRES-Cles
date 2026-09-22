@@ -1,0 +1,16 @@
+BRES CLÉS V2.28 TEST R113 — GARDE-FOU AMBIGUÏTÉ RÉFÉRENCE OCR
+
+OK  exact_te8d
+OK  exact_te8i
+OK  te8b_near_tie_blocked
+OK  te8l_near_tie_blocked
+OK  silca_exact_te2
+OK  silca_exact_te2r
+OK  silca_near_tie_blocked
+OK  single_ambiguous_view_no_prefill
+OK  exact_view_can_win_without_conflict
+OK  near_tie_delta_002
+OK  visible_warning
+OK  diagnostic_schema_v9
+
+SELFTEST OK
