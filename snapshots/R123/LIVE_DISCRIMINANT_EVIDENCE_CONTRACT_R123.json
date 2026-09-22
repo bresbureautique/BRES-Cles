@@ -1,0 +1,78 @@
+{
+  "schema": "bres-live-discriminant-evidence-contract-r123-v1",
+  "milestone": "BRES Cles catalogue audit R123",
+  "active_test_runtime": "V2.28 TEST R116",
+  "purpose": "Define a future live evidence envelope for stop/shoulder and independent recto-verso measurements without granting automatic decision authority.",
+  "policy": {
+    "catalogue_remains_canonical_and_unchanged": true,
+    "runtime_r116_remains_unchanged": true,
+    "presence_of_evidence_never_implies_validation": true,
+    "no_threshold_is_authorized_by_r123": true,
+    "critical_pairs_default_status": "A_CONFIRMER",
+    "future_activation_requires_physical_validation_and_explicit_guard": true
+  },
+  "enums": {
+    "evidence_status": ["MISSING", "MEASURED_UNVALIDATED", "VALIDATED_FOR_COMPARISON"],
+    "zero_mode": ["POINTE_ZERO", "BUTEE_ZERO", "UNKNOWN"],
+    "side": ["RECTO", "VERSO"],
+    "policy_status": ["A_CONFIRMER"]
+  },
+  "record_template": {
+    "evidence_id": null,
+    "capture_session_id": null,
+    "captured_at": null,
+    "gabarit": {
+      "id": null,
+      "version": null,
+      "calibration_ok": false,
+      "mm_per_px": null,
+      "calibration_source": null
+    },
+    "candidate_pair": {
+      "a": null,
+      "b": null
+    },
+    "stop_or_shoulder": {
+      "status": "MISSING",
+      "zero_mode": "UNKNOWN",
+      "position_mm": null,
+      "uncertainty_mm": null,
+      "source_capture_ids": [],
+      "measurement_method": null
+    },
+    "dual_face": {
+      "status": "MISSING",
+      "recto_capture_id": null,
+      "verso_capture_id": null,
+      "independent_capture_ids": false,
+      "recto_geometry_signature": null,
+      "verso_geometry_signature": null,
+      "measurement_method": null
+    },
+    "quality": {
+      "focus_ok": null,
+      "alignment_ok": null,
+      "calibration_ok": null,
+      "occlusion_ok": null,
+      "notes": null
+    },
+    "decision_authority": "NONE",
+    "policy_status": "A_CONFIRMER"
+  },
+  "required_provenance_fields": [
+    "evidence_id",
+    "capture_session_id",
+    "gabarit.id",
+    "gabarit.version",
+    "gabarit.calibration_ok",
+    "candidate_pair.a",
+    "candidate_pair.b"
+  ],
+  "activation_preconditions": [
+    "physical_capture_validation",
+    "repeatability_evidence",
+    "uncertainty_characterization",
+    "explicit_non_regression_guard",
+    "separate_policy_change"
+  ]
+}
