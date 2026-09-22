@@ -42,7 +42,8 @@ def validate_packet(packet: Dict[str, Any]) -> Dict[str, Any]:
             cid=c.get('capture_id'); sha=c.get('source_file_sha256')
             if not _nonnull(cid): errors.append(prefix+'_'+face+'_capture_id_missing')
             else: capture_ids.append(cid); local_ids.append(cid)
-            if not isinstance(sha,str) or len(sha)!=64 or any(ch not in '0123456789abcdefABCDEF' for ch in sha): errors.append(prefix+'_'+face+'_sha256_invalid')
+            if not isinstance(sha,str) or len(sha)!=64 or any(ch not in '0123456789abcdefABCDEF' for ch in sha):
+                errors.append(prefix+'_'+face+'_sha256_invalid')
             else: capture_hashes.append(sha.lower())
         if len(local_ids)==2 and local_ids[0]==local_ids[1]: errors.append(prefix+'_face_capture_id_reused')
         stop=s.get('stop_or_shoulder',{})
@@ -57,4 +58,12 @@ def validate_packet(packet: Dict[str, Any]) -> Dict[str, Any]:
     if len(session_ids)!=len(set(session_ids)): errors.append('session_id_reused')
     if len(capture_ids)!=len(set(capture_ids)): errors.append('capture_id_reused_across_packet')
     if len(capture_hashes)!=len(set(capture_hashes)): errors.append('photo_file_reused_across_packet')
-    return {'schema':'bres-live-discriminant-collection-packet-validation-r125-v1','ok':not errors,'errors':errors,'warnings':warnings,'decision_authority':'NONE','policy_status':'A_CONFIRMER','complete_sessions':len(sessions) if len(sessions)==3 else 0}
+    return {
+        'schema':'bres-live-discriminant-collection-packet-validation-r125-v1',
+        'ok':not errors,
+        'errors':errors,
+        'warnings':warnings,
+        'decision_authority':'NONE',
+        'policy_status':'A_CONFIRMER',
+        'complete_sessions':len(sessions) if len(sessions)==3 else 0
+    }
