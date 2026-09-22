@@ -1,0 +1,16 @@
+BRES CLÉS — AUDIT CATALOGUE/OCR R114 (runtime V2.28 TEST R113 inchangé)
+
+OK  catalogue_5103_unique
+OK  chunks_bit_identical
+OK  eligible_raw_5059
+OK  normalized_unique_5058
+OK  indel_distance1_pairs_4302
+OK  same_maker_indel_pairs_2522
+OK  other_or_blank_indel_pairs_1780
+OK  prefix_relation_pairs_1871
+OK  suffix_relation_pairs_365
+OK  indel_involved_refs_3883
+OK  stable_examples_present
+
+Mesures: 4302 paires insertion/suppression; 2522 même fabricant; 3883 références concernées.
+SELFTEST OK
