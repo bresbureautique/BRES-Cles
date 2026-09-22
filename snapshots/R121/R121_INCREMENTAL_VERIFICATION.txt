@@ -1,0 +1,9 @@
+BRES CLÉS — VÉRIFICATION INCRÉMENTALE R121
+
+REGRESSION_R121.json: OK=True
+Runtime identique R120: True
+Catalogue 10/10 identique: True
+Registre critique R121: True
+Garde non-validation R121: True
+Tests ciblés frais: 9/9
+Suite logique cumulée: 90 gardes
