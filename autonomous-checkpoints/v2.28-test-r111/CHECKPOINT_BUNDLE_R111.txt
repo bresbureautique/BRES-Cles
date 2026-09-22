@@ -1,0 +1,11 @@
+BRES Clés — checkpoint vérifiable R111
+Version test : V2.28 TEST R111
+Branche de test : v2.28-test-r1
+Version stable : V2.27 sur main — commit 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8 — inchangée
+Tests : 76/76 réussis, 0 erreur, syntaxe JavaScript OK
+Catalogue séparé : 5103 références uniques / 10 blocs canoniques inchangés
+App ZIP SHA-256 : bd120577f7eab52471502b39acdff6ec0075d56f914b69ccb508d5e675da7239
+Catalogue ZIP SHA-256 : d5a351cee1ae73bc03b80e81d962a25587841cc3686e814a856e2eac594841f1
+Library : ZIP app et catalogue relus bit-identiques, décompressés et retestés OK
+R111 : durcissement de validation uniquement — garde confidentialité/contrat diagnostic OCR et garde d'intégrité du schéma catalogue; aucune modification de décision OCR, seuils, budget, timeout ou garde-fou TE8D/TE8I.
+Statut : jalon local + Library terminé et vérifié; checkpoint GitHub à enregistrer.
