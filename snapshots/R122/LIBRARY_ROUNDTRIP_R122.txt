@@ -1,0 +1,17 @@
+BRES CLÉS — LIBRARY ROUNDTRIP R122
+
+Dossier: /BRES Cles/Sauvegardes
+
+BRES_Cles_Catalogue_Audit_R122.zip
+- SHA-256 local:   6c211e02da99232151c96e6b14c5d1c9da6881230835b3097f2d0de140027d2b
+- SHA-256 Library: 6c211e02da99232151c96e6b14c5d1c9da6881230835b3097f2d0de140027d2b
+- Extraction: OK
+- catalogue_critical_pair_discriminant_matrix_test.py: SELFTEST OK
+
+BRES_Cles_Mobile_V2_28_TEST_R116_AUDIT_R122.zip
+- SHA-256 local:   bad2dd4126f7c39ff67a46a181ccb13090af01786c23d64ca6f04302c5d4723f
+- SHA-256 Library: bad2dd4126f7c39ff67a46a181ccb13090af01786c23d64ca6f04302c5d4723f
+- Extraction: OK
+- catalogue_critical_pair_confirmation_policy_guard_test.py: SELFTEST OK
+
+Round-trip vérifié: OUI.
