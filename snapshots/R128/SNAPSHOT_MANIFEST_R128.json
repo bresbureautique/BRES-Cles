@@ -1,0 +1,21 @@
+{
+  "schema": "bres-snapshot-manifest-r128-v1",
+  "milestone": "BRES Cles R128",
+  "package_kind": "application",
+  "active_test_runtime": "V2.28 TEST R116",
+  "stable_version_policy": "V2.27 remains stable and is not replaced by R128",
+  "files": [
+    {"path":"CHECKPOINT_R128.txt","sha256":"ad158b588fcb5b48f1cbc5457f3e04be262119bd4f4a358cfc200d8b8a1a32a1","size":1170},
+    {"path":"TEST_SUMMARY_R128.txt","sha256":"7cba8592c71cb76efd9bbc446b23481345740cace8665727e01fa211422aec71","size":675},
+    {"path":"REGRESSION_R128.json","sha256":"059ee15a07692388020686e6437fc8da84351957465a266c56c756e75c73f6d8","size":3145},
+    {"path":"SOURCE_HASHES_R128.txt","sha256":"9bf1dcd218db7d3390b4b06b79eb7bd2432bf1734eccca305e0eaa291ad47778","size":1747},
+    {"path":"ALL_TESTS_R128.txt","sha256":"925e10c0b17a1acdeb98608f21e3d277d052915cfc3959668f40f60bef0a5cd2","size":1363},
+    {"path":"R128_TARGETED_REGRESSION.txt","sha256":"51572244f8f5f0fc4248ccf4e110437d134d88ba4ac5156512b5b93f34171004","size":799},
+    {"path":"repeatability_analyzer_r128.py","sha256":"f42bf58c2b8764399b8785b98779b006002fd30a3266da68f7f9bd6314a96630","size":8335},
+    {"path":"catalogue_live_diagnostic_repeatability_test.py","sha256":"68a63fd4acff0273508ea0e5c4d64f3b2edca3dd241b156422d5d0ed162c8b41","size":5416},
+    {"path":"catalogue_live_diagnostic_repeatability_boundary_guard_test.py","sha256":"7faa2e00c6a64fda7a064b15cd6715c234cdec45203733a20eb8c4ff9c7dc356","size":3034},
+    {"path":"CATALOGUE_LIVE_DIAGNOSTIC_REPEATABILITY_R128.json","sha256":"dc47239944ea2be78a18c16443cd177df4ecdafc08ea3ce954cf5ba9a70cfc40","size":747},
+    {"path":"CATALOGUE_LIVE_DIAGNOSTIC_REPEATABILITY_BOUNDARY_GUARD_R128.json","sha256":"49bf7b93b6d44e7db0d5246816ea78949e0e09cc785bc816b50228e0993decd3","size":1017},
+    {"path":"catalogue/evidence/live_diagnostic_repeatability_contract_r128.json","sha256":"df8ca97591378e18dc0a27ea772439648a297c70c87fae5ec93ab45dc9b1b5ef","size":1635}
+  ]
+}
