@@ -1,0 +1,13 @@
+BRES CLES — JALON CATALOGUE/OCR R127
+
+- V2.27 reste la version stable et ne doit pas être remplacée par ce jalon.
+- Runtime test: V2.28 TEST R116, bit-identique à R126.
+- R127 ajoute un registre de résultats diagnostiques par paire critique et par clé physique, alimenté uniquement par des sorties R126 acceptées.
+- Une sortie R126 rejetée, une paire hors registre critique R121 ou une escalade d'autorité sont refusées.
+- Plusieurs clés physiques pour une même paire restent séparées; un doublon strict est idempotent.
+- Les agrégats restent descriptifs et ne peuvent ni choisir un candidat, ni créer un seuil physique, ni produire une référence validée.
+- Toute sortie R127 conserve decision_authority=NONE, policy_status=A_CONFIRMER et evidence_status=MEASURED_UNVALIDATED.
+- Régression fraîche: 103/103 scripts Python réussis, 0 échec.
+- Catalogue canonique: 5103 références, 5103 uniques, 10 blocs bit-identiques à R126.
+
+Prochain travail: R128 peut préparer des contrôles de répétabilité inter-clés et inter-sessions par paire sur données synthétiques, sans transformer les observations en seuil d'acceptation.

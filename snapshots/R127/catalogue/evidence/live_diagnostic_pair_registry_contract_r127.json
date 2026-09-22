@@ -1,0 +1,47 @@
+{
+  "schema": "bres-live-diagnostic-pair-registry-contract-r127-v1",
+  "milestone": "BRES Cles catalogue audit R127",
+  "active_test_runtime": "V2.28 TEST R116",
+  "source_ingestion_schema": "bres-live-discriminant-diagnostic-ingestion-r126-v1",
+  "critical_pair_source": "catalogue_ocr_critical_pair_registry_r121.json",
+  "purpose": "Store accepted R126 diagnostic outputs by critical pair and physical key without granting any decision authority.",
+  "admission": {
+    "accepted_r126_only": true,
+    "critical_pair_must_exist_in_r121_registry": true,
+    "physical_key_id_required": true,
+    "rejected_r126_forbidden": true,
+    "authority_escalation_forbidden": true
+  },
+  "separation": {
+    "different_physical_keys_same_pair_remain_distinct": true,
+    "pair_order_is_canonicalized": true,
+    "duplicate_same_result_is_idempotent": true
+  },
+  "permitted_aggregates": [
+    "diagnostic_entries",
+    "distinct_physical_keys",
+    "physical_key_ids",
+    "observed_stop_mean_min_mm",
+    "observed_stop_mean_max_mm",
+    "observed_stop_spread_max_mm"
+  ],
+  "policy": {
+    "registry_status": "DIAGNOSTIC_ONLY",
+    "decision_authority": "NONE",
+    "policy_status": "A_CONFIRMER",
+    "evidence_status": "MEASURED_UNVALIDATED",
+    "automatic_validation_allowed": false,
+    "canonical_catalogue_write_allowed": false,
+    "runtime_mutation_allowed": false,
+    "acceptance_threshold_authorized": false,
+    "candidate_selection_allowed": false
+  },
+  "forbidden_outputs_or_effects": [
+    "VALIDATED status",
+    "candidate winner",
+    "automatic candidate selection",
+    "physical acceptance threshold",
+    "catalogue mutation",
+    "runtime mutation"
+  ]
+}

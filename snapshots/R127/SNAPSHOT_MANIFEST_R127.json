@@ -1,0 +1,28 @@
+{
+  "schema": "bres-github-snapshot-manifest-r127-v1",
+  "milestone": "BRES Cles R127",
+  "branch": "v2.28-test-r1",
+  "parent_commit": "c514ae643d9fae9ce4f76e16b132be024869853a",
+  "stable_main_commit": "9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8",
+  "stable_policy": "V2.27 remains stable on main and is not modified by R127",
+  "runtime": "V2.28 TEST R116",
+  "fresh_regression": "103/103",
+  "files": {
+    "CHECKPOINT_R127.txt": "f0e1dd19c68086404fec0e650013a98545e60eebabf0eee11baf8167d78b3827",
+    "TEST_SUMMARY_R127.txt": "e41aa5a2734a399c4f3b183824aad10bb1e8f1970ca0b49e24644772ebf77b30",
+    "REGRESSION_R127.json": "06e45d62b81c13c658b045eff56f091fb07cbbffe74e9c3f374eb4e90460767b",
+    "SOURCE_HASHES_R127.txt": "6e5c8742fe1eb0ca8917c9a67549a50eb857b10d709e4575f312d851e6de5bed",
+    "CATALOGUE_CHUNK_COMPARISON_R127.txt": "ea01a1323120c1afd4b1813c5d4891495f70cb882182afbdcd20524e623e1bdf",
+    "CATALOGUE_LIVE_DIAGNOSTIC_PAIR_REGISTRY_R127.json": "4d0bf135a8f85860de6a8122473b6f1af949642cd744bf79a33566026c46b12a",
+    "CATALOGUE_LIVE_DIAGNOSTIC_REGISTRY_BOUNDARY_GUARD_R127.json": "305baa5f923063ad9f5158cf749d63309d886d1954302bca77c07355209c2ac2",
+    "R126_TO_R127_COMPARISON.txt": "94aa310cfa5114a69750355c718043f48c71e6870fb244aef3d9fa8c8ad80b1c",
+    "diagnostic_pair_registry_r127.py": "ee8dddfff6e33ae4d4b34b322574f3f26ba244db0d9e4e28db27ee26156bac81",
+    "catalogue_live_diagnostic_pair_registry_test.py": "874991a8223b683cd91a8822c51b0a658b9b9ebe51bddd062597f8a6ec26d7da",
+    "catalogue_live_diagnostic_registry_boundary_guard_test.py": "5462c713f1ba9299119a49bd3d15f3358e226d9e1b12fa07ecaac24b29f40e18",
+    "catalogue/evidence/live_diagnostic_pair_registry_contract_r127.json": "b09d0cc3cd5af18489411d54d4951edfcee3519dbd4163f0cb112bfb88c20dc9"
+  },
+  "release_zip_sha256": {
+    "BRES_Cles_Catalogue_Audit_R127.zip": "5f71cc86d17f85a91ae80a84f4f2b0e1425f1739a272f5fc89b22f0edd6374cf",
+    "BRES_Cles_Mobile_V2_28_TEST_R116_AUDIT_R127.zip": "a53385b6a9d17cc50c928db6ef7807252c7733ff02e00f098aa5719ddae12c9c"
+  }
+}
