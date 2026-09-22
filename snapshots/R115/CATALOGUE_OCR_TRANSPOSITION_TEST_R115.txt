@@ -1,0 +1,16 @@
+BRES CLÉS — AUDIT CATALOGUE/OCR R115 (runtime V2.28 TEST R113 inchangé)
+
+OK  catalogue_5103_unique
+OK  chunks_bit_identical
+OK  eligible_raw_5059
+OK  normalized_unique_5058
+OK  adjacent_transposition_pairs_329
+OK  same_maker_transposition_pairs_90
+OK  other_or_blank_transposition_pairs_239
+OK  transposition_involved_refs_643
+OK  same_first_char_pairs_156
+OK  same_last_char_pairs_213
+OK  stable_examples_present
+
+Mesures: 329 paires par transposition adjacente; 90 même fabricant; 643 références concernées.
+SELFTEST OK

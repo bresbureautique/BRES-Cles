@@ -1,0 +1,33 @@
+{
+  "schema": "bres-catalogue-ocr-transposition-baseline-v1",
+  "milestone": "BRES Clés catalogue audit R115",
+  "active_test_runtime": "V2.28 TEST R113",
+  "policy": "Audit only: an adjacent-character transposition neighbour must never become an automatic OCR validation without independent evidence.",
+  "metrics": {
+    "rows": 5103,
+    "unique_refs": 5103,
+    "eligible_raw": 5059,
+    "normalized_unique": 5058,
+    "adjacent_transposition_pairs": 329,
+    "same_maker_transposition_pairs": 90,
+    "other_or_blank_transposition_pairs": 239,
+    "transposition_involved_refs": 643,
+    "same_first_char_pairs": 156,
+    "same_last_char_pairs": 213
+  },
+  "checks": {
+    "catalogue_5103_unique": true,
+    "chunks_bit_identical": true,
+    "eligible_raw_5059": true,
+    "normalized_unique_5058": true,
+    "adjacent_transposition_pairs_329": true,
+    "same_maker_transposition_pairs_90": true,
+    "other_or_blank_transposition_pairs_239": true,
+    "transposition_involved_refs_643": true,
+    "same_first_char_pairs_156": true,
+    "same_last_char_pairs_213": true,
+    "stable_examples_present": true
+  },
+  "errors": [],
+  "ok": true
+}

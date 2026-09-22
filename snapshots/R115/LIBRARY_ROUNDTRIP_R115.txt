@@ -1,0 +1,17 @@
+BRES CLÉS — LIBRARY ROUNDTRIP R115
+
+Library: /BRES Cles/Sauvegardes
+Application ZIP SHA-256: 29c3c0c97a784b13ee83ca48a3c183ca9680b65c582302c085346bcb496c4abb
+Catalogue ZIP SHA-256: e82e9deef930526de8a6ab462b24a8ffb8a20e455802a034dff31aa430dd168b
+
+Relecture après upload Library:
+- empreinte application: identique
+- empreinte catalogue: identique
+- décompression application: OK
+- verify_build.py depuis le ZIP Library: 81/81 tests, 0 erreur
+- décompression catalogue: OK
+- audit transposition depuis le ZIP Library: OK, 329 paires / 90 même fabricant / 643 références concernées
+- 10/10 blocs catalogue canoniques bit-identiques
+
+V2.27 stable: non modifiée.
+RESULTAT: OK

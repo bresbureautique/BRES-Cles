@@ -1,0 +1,11 @@
+BRES CLÉS — TEST SUMMARY R115
+
+Runtime de test actif: V2.28 TEST R113 (inchangé)
+Jalon d'audit: catalogue/OCR R115
+Régression: 81/81 tests réussis
+Erreurs: 0
+Catalogue: 5103 références / 5103 uniques
+Blocs catalogue: 10/10 bit-identiques
+Nouvelle baseline R115: 329 paires devenant une autre référence valide par inversion de deux caractères adjacents; 90 même fabricant; 643 références concernées.
+Décision OCR: inchangée par R115.
+V2.27 stable: non modifiée.

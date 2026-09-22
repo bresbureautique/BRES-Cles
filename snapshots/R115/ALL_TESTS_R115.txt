@@ -1,0 +1,89 @@
+BRES CLÉS — ALL TESTS R115
+
+Runtime actif: V2.28 TEST R113 (inchangé)
+Jalon audit: catalogue/OCR R115
+Tests: 81/81 réussis
+
+OK  async_state_epoch_guard_test.py
+OK  async_ui_publication_guard_test.py
+OK  button_feedback_guard_test.py
+OK  catalogue_collision_baseline_test.py
+OK  catalogue_namespace_registry_test.py
+OK  catalogue_ocr_confusability_baseline_test.py
+OK  catalogue_ocr_edit_distance_baseline_test.py
+OK  catalogue_ocr_transposition_baseline_test.py
+OK  catalogue_ref_identity_test.py
+OK  catalogue_schema_integrity_test.py
+OK  guided_camera_refocus_binding_test.py
+OK  guided_camera_session_guard_test.py
+OK  head_focus_roi_guard_test.py
+OK  head_photo_state_invalidation_test.py
+OK  identification_state_invalidation_test.py
+OK  import_async_guard_test.py
+OK  local_db_capacity_guard_test.py
+OK  local_db_import_error_message_guard_test.py
+OK  local_db_import_invalidation_test.py
+OK  local_db_import_picker_cancel_guard_test.py
+OK  local_db_import_retry_guard_test.py
+OK  local_db_import_schema_guard_test.py
+OK  local_db_import_template_epoch_guard_test.py
+OK  local_db_persistence_guard_test.py
+OK  local_db_roundtrip_guard_test.py
+OK  local_storage_availability_guard_test.py
+OK  local_storage_external_change_guard_test.py
+OK  local_template_async_invalidation_guard_test.py
+OK  local_template_capacity_learning_guard_test.py
+OK  local_template_cross_tab_write_guard_test.py
+OK  local_template_delete_guard_test.py
+OK  local_template_delete_race_guard_test.py
+OK  local_template_duplicate_guard_test.py
+OK  local_template_external_recovery_guard_test.py
+OK  local_template_lock_fallback_guard_test.py
+OK  local_template_maker_guard_test.py
+OK  local_template_metadata_guard_test.py
+OK  local_template_precommit_serialization_guard_test.py
+OK  local_template_thickness_write_guard_test.py
+OK  local_template_write_invalidation_test.py
+OK  main_photo_geometry_invalidation_test.py
+OK  main_photo_preview_guard_test.py
+OK  manual_ambiguity_resolution_test.py
+OK  manual_priority_state_guard_test.py
+OK  manual_reference_maker_guard_test.py
+OK  manual_reference_metadata_guard_test.py
+OK  ocr_best_selection_test.py
+OK  ocr_brand_state_guard_test.py
+OK  ocr_budget_geometry_guard_test.py
+OK  ocr_candidate_reconstruction_test.py
+OK  ocr_diagnostic_contract_guard_test.py
+OK  ocr_diagnostic_detail_guard_test.py
+OK  ocr_diagnostic_export_guard_test.py
+OK  ocr_dual_view_budget_guard_test.py
+OK  ocr_head_engraving_guard_test.py
+OK  ocr_input_quality_guard_test.py
+OK  ocr_latency_guard_test.py
+OK  ocr_live_pipeline_boundary_test.py
+OK  ocr_maker_alias_guard_test.py
+OK  ocr_maker_consensus_guard_test.py
+OK  ocr_pass_evidence_guard_test.py
+OK  ocr_phase_timing_guard_test.py
+OK  ocr_reference_ambiguity_guard_test.py
+OK  ocr_request_order_guard_test.py
+OK  ocr_runtime_context_guard_test.py
+OK  ocr_timeout_evidence_guard_test.py
+OK  ocr_timeout_phase_guard_test.py
+OK  ocr_view_consensus_guard_test.py
+OK  ocr_worker_setup_budget_guard_test.py
+OK  profile_ambiguity_cluster_test.py
+OK  profile_analysis_epoch_guard_test.py
+OK  profile_camera_session_guard_test.py
+OK  profile_dual_capture_test.py
+OK  profile_main_photo_epoch_guard_test.py
+OK  profile_session_consensus_test.py
+OK  profile_session_integrity_test.py
+OK  profile_session_majority_test.py
+OK  ronis_code_series_guard_test.py
+OK  teach_reference_async_guard_test.py
+OK  tesa_ambiguity_guard_test.py
+OK  version_consistency_test.py
+
+RESULTAT: 81/81 tests réussis

@@ -1,0 +1,7 @@
+BRES CLÉS — JALON CATALOGUE/OCR R115
+
+- V2.27 reste la version stable, inchangée.
+- Le runtime de test V2.28 reste R113 : aucun seuil, budget, timeout ni choix OCR n'est modifié par R115.
+- R115 ajoute une baseline catalogue des références qui deviennent une autre référence valide après inversion de deux caractères adjacents.
+- Objectif : empêcher qu'une future évolution OCR valide automatiquement une référence lorsqu'elle a simplement inversé deux caractères sans preuve indépendante.
+- Les 10 blocs catalogue canoniques restent bit-identiques.
