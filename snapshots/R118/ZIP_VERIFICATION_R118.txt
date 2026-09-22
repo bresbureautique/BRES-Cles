@@ -1,0 +1,6 @@
+BRES CLÉS — ZIP VERIFICATION R118
+
+Catalogue ZIP: No errors detected in compressed data of BRES_Cles_Catalogue_Audit_R118.zip.
+Application ZIP: No errors detected in compressed data of BRES_Cles_Mobile_V2_28_TEST_R116_AUDIT_R118.zip.
+Round-trip application: OK — REGRESSION_R118 84/84, catalogue 5103/5103, runtime R116 hashes inchangés.
+V2.27 stable: non incluse / non modifiée.
