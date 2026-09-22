@@ -1,0 +1,29 @@
+BRES CLES — VALIDATION LEDGER R128
+
+R127_BASELINE_TESTS=103
+R127_BASELINE_RESULT=103/103 OK (inherited verified baseline)
+R127_TEST_SCRIPTS_BYTE_IDENTICAL=103/103
+R128_NEW_TESTS_FRESH=2/2 OK
+R128_TARGETED_FRESH=15/15 OK
+REGISTERED_TEST_SCRIPTS_R128=105
+FULL_FRESH_105_RUN=NO
+REASON=La suite R127 de 103 scripts est réutilisée comme base vérifiée car les 103 scripts, le runtime R116 et les 10 blocs catalogue sont bit-identiques; R128 ajoute 2 tests frais et exécute une régression ciblée fraîche de 15 tests.
+FAIL=0 sur les contrôles frais exécutés
+
+OK version_consistency_test.py
+OK catalogue_schema_integrity_test.py
+OK catalogue_ref_identity_test.py
+OK catalogue_live_discriminant_evidence_contract_test.py
+OK catalogue_live_collection_protocol_guard_test.py
+OK catalogue_live_collection_packet_validator_test.py
+OK catalogue_live_collection_packet_ingestion_test.py
+OK catalogue_live_collection_diagnostic_boundary_guard_test.py
+OK catalogue_live_diagnostic_pair_registry_test.py
+OK catalogue_live_diagnostic_registry_boundary_guard_test.py
+OK catalogue_live_diagnostic_repeatability_test.py
+OK catalogue_live_diagnostic_repeatability_boundary_guard_test.py
+OK catalogue_critical_pair_confirmation_policy_guard_test.py
+OK catalogue_critical_pair_nonvalidation_guard_test.py
+OK catalogue_ocr_critical_pair_registry_test.py
+
+TOTAL=15 OK=15 FAIL=0
