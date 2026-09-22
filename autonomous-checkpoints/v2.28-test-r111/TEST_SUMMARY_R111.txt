@@ -1,0 +1,6 @@
+BRES Clés V2.28 TEST R111 — synthèse tests
+Tests: 76/76 réussis, 0 erreur
+Syntaxe JavaScript: OK
+Catalogue: 5103 références uniques / 10 blocs canoniques inchangés
+Nouveaux gardes R111: contrat diagnostic OCR + intégrité schéma catalogue: OK
+Décision OCR: inchangée (seuils 0,70 / 0,88; budget 25 s; timeout 7 s; garde-fou TE8D/TE8I)
