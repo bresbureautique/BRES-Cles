@@ -1,0 +1,13 @@
+BRES CLES — JALON CATALOGUE/OCR R128
+
+- V2.27 reste la version stable et ne doit pas être remplacée par ce jalon.
+- Runtime test: V2.28 TEST R116, bit-identique à R127.
+- R128 ajoute une analyse de répétabilité strictement descriptive sur le registre R127.
+- Les variations inter-sessions d'une même clé et inter-clés d'une même paire restent séparées et observables.
+- R128 ne produit aucun verdict de répétabilité, aucun seuil/tolérance d'acceptation, aucun gagnant et aucune référence validée.
+- Toute sortie R128 conserve decision_authority=NONE, policy_status=A_CONFIRMER et evidence_status=MEASURED_UNVALIDATED.
+- Validation fraîche R128: 2/2 nouveaux tests + 15/15 régression ciblée, 0 échec.
+- Base R127 conservée: 103/103 scripts de test bit-identiques; résultat R127 103/103 déjà vérifié.
+- Catalogue canonique: 5103 références, 5103 uniques, 10 blocs bit-identiques à R127.
+
+Prochain travail: R129 peut préparer une matrice de suffisance des observations (quantité/provenance seulement) pour signaler les dossiers encore trop pauvres, sans définir de seuil de conformité physique ni autoriser une validation automatique.
