@@ -1,0 +1,11 @@
+BRES CLÉS — TEST SUMMARY R117
+
+Runtime de test actif: V2.28 TEST R116 (inchangé)
+Stable: V2.27 inchangée
+Jalon catalogue: R117
+Régression: 83/83 tests réussis
+Erreurs: 0
+Catalogue: 5103 références / 5103 uniques
+Blocs catalogue: 10/10 bit-identiques
+Nouvelle baseline R117: 1 collision de normalisation par suppression des séparateurs, 2 références concernées, même fabricant BKS: BK3-4 / BK34 -> BK34.
+Décision OCR: inchangée par R117.
