@@ -1,0 +1,8 @@
+BRES Clés R105 — vérification aller-retour Library
+Statut: OK
+Application SHA-256: bd28532a1a3f4bea29c5d48642510afbaf8efbfee06676cdd54994923f3f0342
+Catalogue SHA-256: bdb91b90a8e41dbad23671098bd725ea06432f2826ec20901732f9ccbb327517
+Empreintes après matérialisation Library: IDENTIQUES
+ZIP application: décompression OK; verify_build.py OK; 68/68 tests; catalogue 5103/5103; erreurs 0
+ZIP catalogue: décompression OK; 10/10 blocs conformes aux empreintes de référence
+Conclusion: les snapshots Library R105 sont vérifiables et conformes aux fichiers locaux de release.

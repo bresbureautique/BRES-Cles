@@ -1,0 +1,8 @@
+BRES CLÉS — V2.28 TEST R105
+Jalon : budget OCR réellement borné, y compris pendant l'initialisation/recréation du worker Tesseract.
+V2.27 stable : non modifiée.
+Catalogue : séparé, 5103 références uniques, 10 blocs inchangés.
+Décision OCR : seuils 0,70 / 0,88 et garde-fous TE8D / TE8I inchangés par rapport à R104.
+Correction : le timeout de 7 s couvre maintenant l'acquisition du worker + la reconnaissance ; après timeout, l'ancien worker est invalidé immédiatement et terminé en arrière-plan afin de ne pas consommer le budget de la vue suivante.
+Validation : build OK, 68/68 tests, garde R105 worker/budget OK, catalogue 5103/5103 et 10/10 blocs conformes, ZIP application et catalogue vérifiés après aller-retour Library.
+Prochaine étape : mesurer le gain réel sur Samsung TE8D, puis cibler le traitement d'image ou le départage TE8D / TE8I selon le diagnostic.

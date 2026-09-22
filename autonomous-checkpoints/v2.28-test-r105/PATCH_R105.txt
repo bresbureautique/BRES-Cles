@@ -1,0 +1,8 @@
+BRES Clés R105 — changement ciblé
+- Le délai OCR par passe couvre désormais aussi l'initialisation/réinitialisation du worker Tesseract.
+- En cas de timeout, l'ancien worker est invalidé immédiatement et sa terminaison se fait en arrière-plan.
+- Une fin tardive d'initialisation ne peut plus lancer une reconnaissance après expiration.
+- Diagnostic OCR passe au schéma v3 et expose cette politique de budget.
+- Aucun seuil de décision OCR n'est modifié (0,70 / 0,88).
+- Le garde TE8D / TE8I reste inchangé.
+- Les 10 blocs catalogue restent bit-à-bit identiques.

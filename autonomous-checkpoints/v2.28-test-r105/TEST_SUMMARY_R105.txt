@@ -1,0 +1,8 @@
+BRES Clés V2.28 TEST R105 — résumé tests
+Build global: OK
+Tests exécutés: 68
+Tests réussis: 68
+Erreurs: 0
+Catalogue: 5103 références / 5103 uniques
+Garde OCR worker setup: True
+Garde ambiguïté TESA: True
