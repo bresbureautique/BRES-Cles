@@ -1,0 +1,7 @@
+BRES CLÉS V2.28 TEST R113 — CHECKPOINT ACTIF
+
+V2.27 reste la version stable et ne doit jamais être remplacée par ce test.
+R113 corrige un biais de sélection OCR : lorsque plusieurs références canoniques atteignent un score quasi identique au-dessus du seuil de préremplissage, aucune référence n'est désormais choisie selon l'ordre du catalogue. Exemple pilote : TE8B reste ambigu entre TE8D et TE8I.
+Le seuil de préremplissage 0,70, le seuil de décision 0,88, le budget OCR 25 s et le timeout 7 s restent inchangés.
+Le diagnostic passe au schéma v9 et expose uniquement l'ambiguïté de référence ; cette télémétrie n'influence aucune décision.
+La base catalogue reste séparée : ses 10 blocs canoniques sont inchangés. Un audit R113 mesure les voisins OCR proches afin d'interdire toute extension future qui validerait arbitrairement une référence visuellement confusable.
