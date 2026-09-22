@@ -1,0 +1,19 @@
+BRES CLÉS V2.28 TEST R112 — CHECKPOINT VÉRIFIABLE
+
+Objet : avancer sans donnée physique en renforçant la sûreté du catalogue massif et le lien entre ambiguïtés structurelles et garde-fous applicatifs.
+
+Application :
+- aucune modification de la logique OCR ou de validation ;
+- seuils OCR 0,70 / 0,88, budget 25 s, timeout 7 s et garde-fou TE8D/TE8I inchangés ;
+- les contrôles manuels RO4/RO45 et VAC151/VAC151SM restent non validants.
+
+Catalogue séparé :
+- 5103 références / 3712 groupes de silhouettes ;
+- 1053 groupes de silhouettes identiques / 2444 références concernées ;
+- distribution collisions : 2×864, 3×72, 4×98, 5×8, 6×10, 8×1 ;
+- profils : 1051 groupes entièrement séparés, 1 partiellement, 1 non séparé ;
+- ambiguïtés résiduelles après profil : RO4/RO45 et VAC151/VAC151SM uniquement ;
+- les 10 blocs catalogue restent bit-identiques à R111.
+
+Validation : 77/77 tests, 0 erreur.
+V2.27 stable : main doit rester sur 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8.

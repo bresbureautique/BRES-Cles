@@ -1,0 +1,10 @@
+BRES CLÉS V2.28 TEST R112 — BASELINE COLLISIONS CATALOGUE
+
+OK  5103 références / 3712 groupes de silhouettes
+OK  1053 groupes de silhouettes identiques / 2444 références
+OK  distribution collisions {2: 864, 3: 72, 4: 98, 5: 8, 6: 10, 8: 1}
+OK  profils: 1051 entièrement séparés / 1 partiel / 1 non séparé
+OK  ambiguïtés résiduelles: RO4/RO45, VAC151/VAC151SM
+OK  guidages manuels non validants présents pour les 2 cas résiduels
+
+SELFTEST OK

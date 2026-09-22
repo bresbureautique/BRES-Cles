@@ -1,0 +1,6 @@
+BRES Clés V2.28 TEST R112 — synthèse tests
+Tests: 77/77 réussis, 0 erreur
+Syntaxe JavaScript: OK
+Catalogue: 5103 références uniques / 10 blocs canoniques inchangés
+Nouveau garde R112: baseline collisions catalogue + couverture des 2 ambiguïtés résiduelles: OK
+Décision OCR: inchangée (seuils 0,70 / 0,88; budget 25 s; timeout 7 s; garde-fou TE8D/TE8I)

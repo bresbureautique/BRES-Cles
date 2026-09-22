@@ -1,0 +1,6 @@
+BRES Clés R112 — vérification aller-retour Library
+APP ZIP SHA-256 local = Library: 1fb4264d4455c1025d50dab8a5f65fc10204a313a627b8623e01a4453c81aea7
+CATALOGUE ZIP SHA-256 local = Library: 63a12776619b2d9519b12163532f77dba846527adb2ffeb2d664af576bc8787a
+unzip -t APP: OK
+unzip -t CATALOGUE: OK
+APP rematérialisée depuis Library puis extraite: verify_build.py OK, 77/77 tests, 0 erreur, 5103 références uniques, collision baseline OK.
