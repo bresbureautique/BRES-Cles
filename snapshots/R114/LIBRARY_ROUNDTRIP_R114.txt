@@ -1,0 +1,13 @@
+BRES CLÉS — LIBRARY ROUNDTRIP R114
+
+Dossier: /BRES Cles/Sauvegardes
+APP ZIP SHA256: 60007205cbd2ffccbfcf1be3d93b09591aed851546798db2d6ac8be9f5f58841
+CATALOGUE ZIP SHA256: 31a301932a1a92e96e9f96d97cb5adb85f081ccb7891e68dd82ee48d853ff667
+
+Après upload Library puis rematérialisation :
+- les deux SHA-256 sont identiques aux fichiers locaux ;
+- le ZIP application est décompressé puis verify_build.py repasse 80/80 tests ;
+- le ZIP catalogue est décompressé puis la baseline R114 repasse OK ;
+- catalogue: 5 103 références / 5 103 uniques ; 10/10 blocs canoniques inchangés.
+
+RESULTAT: ROUNDTRIP LIBRARY OK
