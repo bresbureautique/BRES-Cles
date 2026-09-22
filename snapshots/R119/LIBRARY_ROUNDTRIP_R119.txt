@@ -1,0 +1,18 @@
+BRES CLÉS — LIBRARY ROUND-TRIP R119
+
+Source Library: /BRES Cles/Sauvegardes
+Catalogue ZIP: BRES_Cles_Catalogue_Audit_R119.zip
+SHA-256 attendu: f610e747095ac5c6e1297b2b295ae44f9adb86d36993839d95cba9fdf2409fb4
+SHA-256 rematérialisé: f610e747095ac5c6e1297b2b295ae44f9adb86d36993839d95cba9fdf2409fb4
+unzip -t: OK
+Test catalogue R119: SELFTEST OK
+
+Application ZIP: BRES_Cles_Mobile_V2_28_TEST_R116_AUDIT_R119.zip
+SHA-256 attendu: ffafa96190a8244b33f94486f771ff228bb60b45b7cf344e3215c99b2a9b7096
+SHA-256 rematérialisé: ffafa96190a8244b33f94486f771ff228bb60b45b7cf344e3215c99b2a9b7096
+unzip -t: OK
+Régression après rematérialisation: 86/86 tests réussis, 0 erreur
+Runtime: V2.28 TEST R116 inchangé
+Catalogue: 5103 références / 5103 uniques; 10/10 blocs bit-identiques
+
+ROUND-TRIP LIBRARY R119: OK
