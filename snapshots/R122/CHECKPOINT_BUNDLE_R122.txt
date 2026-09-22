@@ -1,0 +1,25 @@
+BRES CLÉS — JALON CATALOGUE/OCR R122
+
+- V2.27 reste la version stable et ne doit pas être remplacée par ce jalon.
+- Runtime test: V2.28 TEST R116, inchangé.
+- R122 inventorie les discriminants disponibles/manquants pour les 17 paires critiques R121.
+- 11/17 paires ont une géométrie canonique strictement identique ; 6/17 ont une géométrie canonique différente.
+- 1/17 paire est inter-fabricants (CM1R/CM2R).
+- Les 17 paires ont un profil binaire différent, mais toutes restent fortement proches (registre R121 >= 0,90).
+- Le schéma catalogue courant ne contient pas de métadonnée explicite de butée ni de géométrie recto/verso séparée : 17/17 manquent ces deux discriminants.
+- Politique R122: disponibilité d'un discriminant catalogue != autorité de validation. Les 17 paires restent À CONFIRMER tant qu'un discriminant live indépendant n'est pas mesuré et protégé par un garde explicite.
+- Régression fraîche: 93/93 scripts Python réussis, 0 échec.
+- Vérification ZIP locale: application 93/93, catalogue SELFTEST OK.
+- Catalogue: 5103 références, 5103 uniques, 10 blocs.
+
+Hashes runtime inchangés:
+efff3d5f7a1478ffffcc783e6a990c468df45b1630ed63aa497656e505afbd6e  index.html
+c6ae1f7fc075c1d50193a9e418661d34ff2275fbec160bea3dff6e2cfd5c2471  v228-catalogue.js
+
+Hashes release R122:
+6c211e02da99232151c96e6b14c5d1c9da6881230835b3097f2d0de140027d2b  BRES_Cles_Catalogue_Audit_R122.zip
+bad2dd4126f7c39ff67a46a181ccb13090af01786c23d64ca6f04302c5d4723f  BRES_Cles_Mobile_V2_28_TEST_R116_AUDIT_R122.zip
+
+Library round-trip: les deux ZIP ont été rematérialisés depuis /BRES Cles/Sauvegardes ; les SHA-256 sont identiques aux releases locales ; le SELFTEST catalogue et le garde application repassent OK.
+
+Prochain travail: définir un format de preuve live pour butée + recto/verso, sans modifier les seuils de décision R116 avant validation sur captures physiques.
