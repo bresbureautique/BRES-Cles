@@ -31,7 +31,16 @@
     "automatic_tolerance_or_pass_fail_rule": null
   },
   "capture_provenance": {
-    "required_fields": ["capture_session_id", "captured_at", "device_model", "side", "capture_id", "source_file_sha256", "gabarit.id", "gabarit.version"],
+    "required_fields": [
+      "capture_session_id",
+      "captured_at",
+      "device_model",
+      "side",
+      "capture_id",
+      "source_file_sha256",
+      "gabarit.id",
+      "gabarit.version"
+    ],
     "permitted_sides": ["RECTO", "VERSO"],
     "record_lighting_notes": true,
     "record_alignment_notes": true,
@@ -52,5 +61,11 @@
       "status_after_collection": "MEASURED_UNVALIDATED"
     }
   },
-  "review_before_any_future_activation": ["physical_capture_validation", "repeatability_evidence", "uncertainty_characterization", "explicit_non_regression_guard", "separate_policy_change"]
+  "review_before_any_future_activation": [
+    "physical_capture_validation",
+    "repeatability_evidence",
+    "uncertainty_characterization",
+    "explicit_non_regression_guard",
+    "separate_policy_change"
+  ]
 }
