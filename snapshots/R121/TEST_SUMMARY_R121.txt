@@ -1,0 +1,13 @@
+BRES CLÉS — TEST SUMMARY R121
+
+Runtime de test actif: V2.28 TEST R116 (bit-identique à R120)
+Stable: V2.27 inchangée
+Jalon catalogue: R121
+Validation héritée: R120 suite logique 88 gardes sur les mêmes octets runtime/catalogue
+Nouveaux gardes R121: 2/2 réussis
+Régression ciblée fraîche: 9/9 réussie
+Suite logique: 90 gardes (88 hérités inchangés + 2 nouveaux)
+Catalogue: 5103 références / 5103 uniques
+Blocs catalogue: 10/10 bit-identiques
+R121: 17 paires critiques / 30 références; 11 silhouettes exactes; 18 références triple risque.
+Garde-fou: les 30 références critiques restent hors XREF pilote ; le catalogue massif/profil reste consultatif et ne peut pas écrire finalDecision.
