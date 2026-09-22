@@ -1,0 +1,19 @@
+BRES CLES — TEST SUMMARY R123
+
+TOTAL=95
+OK=95
+FAIL=0
+
+Nouveaux gardes R123:
+- catalogue_live_discriminant_evidence_contract_test.py : OK
+- catalogue_live_discriminant_runtime_boundary_guard_test.py : OK
+
+Contrat R123:
+- preuve butée/épaulement : format défini, non activé
+- preuve recto/verso : format défini, non activé
+- seuil automatique : aucun autorisé
+- autorité de décision : NONE
+- paires critiques : A_CONFIRMER
+
+Runtime V2.28 TEST R116 : bit-identique à R122.
+Catalogue : 5103/5103 uniques, 10/10 blocs bit-identiques.
