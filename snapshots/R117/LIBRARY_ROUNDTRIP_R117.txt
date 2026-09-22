@@ -1,0 +1,11 @@
+BRES CLÉS — LIBRARY ROUNDTRIP R117
+
+Application ZIP SHA-256 original: 4246163d4b1fcf4a2116c7afd3ba637d0ce543c684e452f9dc4849eacdfc408a
+Application ZIP SHA-256 Library : 4246163d4b1fcf4a2116c7afd3ba637d0ce543c684e452f9dc4849eacdfc408a
+Catalogue ZIP SHA-256 original: cfe2eb8f7e22eb7e6f065d19bc665bc2a74af95ae4274f29906b0426bbf71042
+Catalogue ZIP SHA-256 Library : cfe2eb8f7e22eb7e6f065d19bc665bc2a74af95ae4274f29906b0426bbf71042
+
+Résultat: SHA-256 identiques pour les 2 ZIP.
+Application rematérialisée depuis Library: extraction OK, 83/83 tests, 0 erreur.
+Catalogue rematérialisé depuis Library: SELFTEST R117 OK.
+V2.27 stable inchangée; runtime V2.28 TEST R116 inchangé par l'audit catalogue R117.
