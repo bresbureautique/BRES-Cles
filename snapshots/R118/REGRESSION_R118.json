@@ -1,0 +1,38 @@
+{
+  "schema": "bres-regression-r118-v1",
+  "ok": true,
+  "runtime": "V2.28 TEST R116",
+  "audit_milestone": "R118",
+  "tests_total": 84,
+  "tests_passed": 84,
+  "tests_failed": [],
+  "missing_tests": [],
+  "execution": "84 guards executed in 7 bounded batches; each guard uses the same script as verify_build.py and returned code 0.",
+  "runtime_hashes": {
+    "index.html": "efff3d5f7a1478ffffcc783e6a990c468df45b1630ed63aa497656e505afbd6e",
+    "v228-catalogue.js": "c6ae1f7fc075c1d50193a9e418661d34ff2275fbec160bea3dff6e2cfd5c2471"
+  },
+  "runtime_unchanged_from_r117": true,
+  "catalogue_rows": 5103,
+  "catalogue_unique_refs": 5103,
+  "catalogue_chunks_bit_identical": true,
+  "r118_evidence_ok": true,
+  "r118_metrics": {
+    "rows": 5103,
+    "unique_refs": 5103,
+    "eligible_raw": 5059,
+    "normalized_unique": 5058,
+    "substitution_pairs": 19676,
+    "substitution_refs": 4794,
+    "indel_pairs": 4302,
+    "indel_refs": 3883,
+    "transposition_pairs": 329,
+    "transposition_refs": 643,
+    "separator_collision_normalized_refs": 1,
+    "refs_at_least_one_risk": 4946,
+    "refs_at_least_two_risks": 3819,
+    "refs_at_least_three_risks": 556,
+    "refs_at_least_four_risks": 0,
+    "risk_count_distribution": {"0":112,"1":1127,"2":3263,"3":556,"4":0}
+  }
+}
