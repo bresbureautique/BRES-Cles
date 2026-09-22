@@ -1,0 +1,46 @@
+{
+  "schema": "bres-regression-r125-v1",
+  "milestone": "BRES Cles R125",
+  "active_test_runtime": "V2.28 TEST R116",
+  "stable_policy": "V2.27 remains stable on main; R125 must not replace it",
+  "test_scripts_total": 99,
+  "test_scripts_ok": 99,
+  "test_scripts_failed": 0,
+  "runtime_sha256": {
+    "index.html": "efff3d5f7a1478ffffcc783e6a990c468df45b1630ed63aa497656e505afbd6e",
+    "v228-catalogue.js": "c6ae1f7fc075c1d50193a9e418661d34ff2275fbec160bea3dff6e2cfd5c2471"
+  },
+  "runtime_matches_r124": {"index.html": true, "v228-catalogue.js": true},
+  "catalogue_rows": 5103,
+  "catalogue_unique_refs": 5103,
+  "catalogue_chunk_matches_r124": {
+    "catalog-01.js": true, "catalog-02.js": true, "catalog-03.js": true, "catalog-04.js": true, "catalog-05.js": true,
+    "catalog-06.js": true, "catalog-07.js": true, "catalog-08.js": true, "catalog-09.js": true, "catalog-10.js": true
+  },
+  "r125_collection_packet": {
+    "schema": "bres-live-discriminant-collection-packet-r125-v1",
+    "required_sessions": 3,
+    "required_sides_per_session": ["RECTO", "VERSO"],
+    "required_scale_checks_mm": [50, 100],
+    "default_measurement_status": "MEASURED_UNVALIDATED",
+    "decision_authority": "NONE",
+    "policy_status": "A_CONFIRMER",
+    "acceptance_threshold_authorized": false,
+    "duplicate_capture_ids_rejected": true,
+    "duplicate_photo_hashes_rejected": true,
+    "undocumented_calibration_rejected": true
+  },
+  "checks": {
+    "all_99_test_scripts_pass": true,
+    "r125_packet_guard_ok": true,
+    "r125_validator_guard_ok": true,
+    "runtime_r116_bit_identical_to_r124": true,
+    "catalogue_5103_unique": true,
+    "catalogue_10_chunks_bit_identical_to_r124": true,
+    "collection_packet_non_authoritative": true,
+    "incomplete_packet_rejected": true,
+    "reused_capture_or_photo_rejected": true,
+    "undocumented_calibration_rejected": true
+  },
+  "ok": true
+}
