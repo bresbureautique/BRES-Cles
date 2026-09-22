@@ -1,0 +1,10 @@
+BRES Clés V2.28 TEST R110 — vérification aller-retour Library
+App SHA original: 143ccedeb952e98f05715dd1f2afbdaccbed32c7da8a132304b678c83da98515
+App SHA Library:  143ccedeb952e98f05715dd1f2afbdaccbed32c7da8a132304b678c83da98515
+App bit-identique: True
+Catalogue SHA original: 32a1a657dfb7cc79e527c4436709a5ab2d102298de3bc47c3a5308406a48268e
+Catalogue SHA Library:  32a1a657dfb7cc79e527c4436709a5ab2d102298de3bc47c3a5308406a48268e
+Catalogue bit-identique: True
+App réextraite et verify_build.py: OK
+Catalogue réextrait: OK (5103 uniques / 10 blocs)
+Résultat global: OK
