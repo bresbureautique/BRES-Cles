@@ -1,0 +1,47 @@
+{
+  "schema": "bres-live-diagnostic-repeatability-contract-r128-v1",
+  "milestone": "BRES Cles catalogue audit R128",
+  "active_test_runtime": "V2.28 TEST R116",
+  "source_registry_schema": "bres-live-diagnostic-pair-registry-r127-v1",
+  "purpose": "Observe within-key and between-key diagnostic variation without converting observations into an acceptance rule or candidate decision.",
+  "analysis": {
+    "within_key": [
+      "session stop min/max/span",
+      "entry mean min/max/span",
+      "maximum within-entry spread",
+      "recto/verso signature record counts"
+    ],
+    "between_keys": [
+      "distinct physical key count",
+      "observed key mean min/max/span",
+      "maximum observed within-entry spread"
+    ],
+    "descriptive_only": true,
+    "synthetic_data_first": true
+  },
+  "separation": {
+    "physical_keys_remain_distinct": true,
+    "session_observations_are_not_collapsed_into_a_candidate": true,
+    "pair_order_is_canonicalized": true
+  },
+  "policy": {
+    "analysis_status": "DESCRIPTIVE_ONLY",
+    "decision_authority": "NONE",
+    "policy_status": "A_CONFIRMER",
+    "evidence_status": "MEASURED_UNVALIDATED",
+    "automatic_validation_allowed": false,
+    "canonical_catalogue_write_allowed": false,
+    "runtime_mutation_allowed": false,
+    "acceptance_threshold_authorized": false,
+    "candidate_selection_allowed": false,
+    "repeatability_assessment_allowed": false
+  },
+  "forbidden_outputs_or_effects": [
+    "pass/fail repeatability verdict",
+    "acceptance tolerance or threshold",
+    "candidate winner",
+    "VALIDATED status",
+    "catalogue mutation",
+    "runtime mutation"
+  ]
+}
