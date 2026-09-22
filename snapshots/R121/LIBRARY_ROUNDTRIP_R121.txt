@@ -1,0 +1,10 @@
+BRES CLÉS — VÉRIFICATION ALLER-RETOUR LIBRARY R121
+Statut: OK
+Catalogue ZIP SHA-256: f8e8daafc24f8c4444918ade2495c8b17a51c02111ba508523f5215cd07ee28e
+Application ZIP SHA-256: 7526c81d113afcb3cf10012ce40445297675ad1e360a369b715894ddf983fbbe
+Empreintes après matérialisation Library: IDENTIQUES
+Décompression catalogue: OK
+Décompression application: OK
+Application rematérialisée: registre critique R121 OK; garde non-validation R121 OK; garde caméra R116 OK; intégrité catalogue 5103/5103 OK.
+Catalogue rematérialisé: registre critique R121 OK.
+Conclusion: les deux ZIP R121 sauvegardés dans Library sont vérifiables et conformes aux fichiers de release.
