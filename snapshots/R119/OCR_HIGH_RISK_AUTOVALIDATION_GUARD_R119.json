@@ -1,0 +1,18 @@
+{
+  "schema": "bres-ocr-high-risk-autovalidation-guard-r119-v1",
+  "milestone": "V2.28 TEST R116 / audit R119",
+  "policy": "Exact or fuzzy OCR text may prefill/propose a catalogue candidate, but final automatic VALIDÉ/confirmed state requires matching independent geometry; OCR-only and weak/conflicting geometry remain candidate/confirm/check states.",
+  "checks": {
+    "runtime_r116_unchanged_label": true,
+    "combined_requires_matching_geometry": true,
+    "combined_ocr_only_not_confirmed": true,
+    "combined_conflicting_geometry_blocks": true,
+    "head_requires_current_geometry": true,
+    "head_without_geometry_candidate_only": true,
+    "head_weak_geometry_needs_confirmation": true,
+    "ocr_ambiguity_still_blocks_autoselection": true
+  },
+  "triple_risk_refs": 556,
+  "errors": [],
+  "ok": true
+}
