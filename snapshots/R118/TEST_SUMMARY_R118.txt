@@ -1,0 +1,11 @@
+BRES CLÉS — TEST SUMMARY R118
+
+Runtime de test actif: V2.28 TEST R116 (inchangé)
+Stable: V2.27 inchangée
+Jalon catalogue: R118
+Régression: 84/84 tests réussis
+Erreurs: 0
+Catalogue: 5103 références / 5103 uniques
+Blocs catalogue: 10/10 bit-identiques
+R118: 4946 refs >=1 risque; 3819 >=2; 556 >=3; 0 >=4.
+Décision OCR: inchangée par R118.
