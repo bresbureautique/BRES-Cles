@@ -1,0 +1,42 @@
+BRES CLÉS V2.28 TEST R108 — CHECKPOINT GITHUB
+
+Dépôt : bresbureautique/BRES-Cles
+Branche de test : v2.28-test-r1
+Parent attendu : 558700d6e54f84c1a88664eb80ca46faefebf098 (R107)
+Branche stable main attendue : 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8 (V2.27)
+
+Jalon R108
+- Le diagnostic OCR enregistre désormais le budget réellement attribué à chaque vue.
+- Chaque passe enregistre le budget restant avant/après, les dimensions exactes du canvas envoyé à Tesseract et le PSM utilisé.
+- L'affichage montre le budget par vue et les données budget/géométrie par passe.
+- Export diagnostic : schéma bres-ocr-diagnostic-export-v6, budgetTelemetryTracked=true, inputGeometryTracked=true.
+- Télémétrie strictement non décisionnelle : seuils 0,70 / 0,88 inchangés ; garde-fou TE8D / TE8I inchangé.
+- Budget global 25 s et timeout par passe 7 s inchangés.
+
+Validation locale et release
+- Build global : OK.
+- Tests : 72/72, erreurs 0.
+- Catalogue : 5103 références / 5103 uniques.
+- 10/10 blocs catalogue inchangés.
+- ZIP application SHA-256 : f531129d80603f91d8c0d8b00e49703cee3abae784962d942346962b4be9875f
+- ZIP catalogue SHA-256 : ed6f06e4f5790809fcac6b80596c27f98ca5e0d17e7088ed7659cdceaabf01c3
+- Patch reproductible R107→R108 SHA-256 : 01771ea6e6b40598f59b592e2f417995d4bf4ce25f9e0e39b83ed1e39c1bff35
+
+Vérification Library
+- Upload dans /BRES Cles/Sauvegardes : OK.
+- Rematérialisation des deux ZIP : OK.
+- Empreintes après aller-retour : identiques.
+- ZIP application après Library : décompression OK, verify_build.py OK, 72/72 tests, catalogue 5103/5103, erreurs 0.
+- ZIP catalogue après Library : décompression OK, 10/10 blocs conformes, 5103/5103 références.
+
+Fichiers de preuve inclus dans ce checkpoint GitHub
+- CHECKPOINT_BUNDLE_R108.txt
+- TEST_SUMMARY_R108.txt
+- RELEASE_HASHES_R108.txt
+- SOURCE_HASHES_R108.txt
+- LIBRARY_ROUNDTRIP_VERIFICATION_R108.txt
+- PATCH_R108.txt
+
+Règle de stabilité
+- Ce checkpoint doit être écrit uniquement sur v2.28-test-r1.
+- main / V2.27 ne doit pas être modifiée.

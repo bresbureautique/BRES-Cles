@@ -1,0 +1,6 @@
+BRES Clés V2.28 TEST R108 — synthèse tests
+Tests exécutés : 72
+Tests réussis : 72
+Erreurs : 0
+Catalogue : 5103 références uniques / 10 blocs inchangés
+Résultat : OK

@@ -1,0 +1,8 @@
+BRES Clés V2.28 TEST R108 — résumé modification
+- Diagnostic OCR enrichi du budget réellement attribué à chaque vue.
+- Chaque passe exporte le budget restant avant/après, les dimensions OCR et le PSM utilisé.
+- Affichage visible du budget par vue et du budget par passe.
+- Export diagnostic JSON schéma v6 avec budgetTelemetryTracked=true et inputGeometryTracked=true.
+- Télémétrie strictement non décisionnelle.
+- Seuils 0,70 / 0,88, budget global 25 s, timeout 7 s et garde-fou TE8D / TE8I inchangés.
+- Catalogue inchangé : 5103 références uniques / 10 blocs.

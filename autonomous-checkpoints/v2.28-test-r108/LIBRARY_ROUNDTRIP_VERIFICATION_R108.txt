@@ -1,0 +1,7 @@
+BRES Clés R108 — vérification aller-retour Library
+Application ZIP SHA-256: f531129d80603f91d8c0d8b00e49703cee3abae784962d942346962b4be9875f
+Catalogue ZIP SHA-256: ed6f06e4f5790809fcac6b80596c27f98ca5e0d17e7088ed7659cdceaabf01c3
+Empreintes après rematérialisation: IDENTIQUES
+Application après relecture Library: V2.28 TEST R108, 72/72 tests OK, 0 erreur, 5103 références uniques
+Catalogue après relecture Library: 10/10 blocs SHA-256 identiques aux blocs canoniques, 5103/5103 références
+Résultat: OK
