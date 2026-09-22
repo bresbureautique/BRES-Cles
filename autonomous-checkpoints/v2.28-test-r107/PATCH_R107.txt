@@ -1,0 +1,8 @@
+BRES Clés V2.28 TEST R107 — résumé modification
+- Chronométrage séparé des phases OCR réussies et expirées.
+- Chaque passe expose setupMs (initialisation/reprise Tesseract), recognitionMs (lecture texte) et workerReused (worker déjà présent ou non).
+- Affichage par passe : total, init, OCR et worker chaud/froid.
+- Export diagnostic JSON schéma v5 avec phaseTimingTracked=true.
+- Aucun changement des seuils 0,70 / 0,88, du budget 25 s, du timeout 7 s ou du garde-fou TE8D / TE8I.
+- Catalogue inchangé : 5103 références uniques / 10 blocs.
+- Patch complet R106→R107 sauvegardé dans Library, SHA-256 90b5ef38ee7ba98564a8ba8728c13526dc59a0f90881586e7b5c576e1eb36c2d.

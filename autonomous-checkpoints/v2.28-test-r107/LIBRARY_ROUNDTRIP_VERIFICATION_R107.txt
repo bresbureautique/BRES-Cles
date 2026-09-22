@@ -1,0 +1,7 @@
+BRES Clés R107 — vérification aller-retour Library
+Application ZIP SHA-256: 10861c38d0b2ebdad4f6c297b9b61b035863230b3853d021f2c0e458f42ad3a9
+Catalogue ZIP SHA-256: 06ac40b91996b6358953f0be6c5b7d9a63eda99f2028bd81ca8d89707c6bc620
+Empreintes après rematérialisation: IDENTIQUES
+Application après relecture Library: V2.28 TEST R107, 71/71 tests OK, 0 erreur, 5103 références uniques
+Catalogue après relecture Library: 10/10 blocs SHA-256 identiques aux blocs de référence R107
+Résultat: OK

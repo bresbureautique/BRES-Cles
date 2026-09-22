@@ -1,0 +1,42 @@
+BRES CLÉS V2.28 TEST R107 — CHECKPOINT GITHUB
+
+Dépôt : bresbureautique/BRES-Cles
+Branche de test : v2.28-test-r1
+Parent attendu : fcb83e4fd15e5f01b1c91f34f158e5e424cf80e3 (R106)
+Branche stable main attendue : 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8 (V2.27)
+
+Jalon R107
+- Diagnostic OCR chronométré séparément par phase.
+- Chaque passe expose setupMs (initialisation/reprise Tesseract), recognitionMs (lecture texte) et workerReused (moteur déjà présent ou non), y compris lors d'un timeout.
+- L'affichage détaille total + init + OCR et indique worker chaud/froid.
+- Export diagnostic : schéma bres-ocr-diagnostic-export-v5, phaseTimingTracked=true.
+- Télémétrie strictement non décisionnelle : seuils 0,70 / 0,88 inchangés ; garde-fou TE8D / TE8I inchangé.
+- Budget global 25 s et timeout par passe 7 s inchangés.
+
+Validation locale et release
+- Build global : OK.
+- Tests : 71/71, erreurs 0.
+- Catalogue : 5103 références / 5103 uniques.
+- 10/10 blocs catalogue inchangés.
+- ZIP application SHA-256 : 10861c38d0b2ebdad4f6c297b9b61b035863230b3853d021f2c0e458f42ad3a9
+- ZIP catalogue SHA-256 : 06ac40b91996b6358953f0be6c5b7d9a63eda99f2028bd81ca8d89707c6bc620
+- Patch reproductible R106→R107 SHA-256 : 90b5ef38ee7ba98564a8ba8728c13526dc59a0f90881586e7b5c576e1eb36c2d
+
+Vérification Library
+- Upload dans /BRES Cles/Sauvegardes : OK.
+- Rematérialisation des deux ZIP : OK.
+- Empreintes après aller-retour : identiques.
+- ZIP application après Library : décompression OK, verify_build.py OK, 71/71 tests, catalogue 5103/5103, erreurs 0.
+- ZIP catalogue après Library : décompression OK, 10/10 blocs conformes.
+
+Fichiers de preuve inclus dans ce checkpoint GitHub
+- CHECKPOINT_BUNDLE_R107.txt
+- TEST_SUMMARY_R107.txt
+- RELEASE_HASHES_R107.txt
+- SOURCE_HASHES_R107.txt
+- LIBRARY_ROUNDTRIP_VERIFICATION_R107.txt
+- PATCH_R107.txt
+
+Règle de stabilité
+- Ce checkpoint doit être écrit uniquement sur v2.28-test-r1.
+- main / V2.27 ne doit pas être modifiée.
