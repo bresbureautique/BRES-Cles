@@ -1,0 +1,81 @@
+BRES CLÉS — JALON CATALOGUE/OCR R121
+
+- V2.27 reste la version stable : aucun fichier de main n'est remplacé par ce jalon.
+- Le runtime de test reste V2.28 TEST R116 : index.html et v228-catalogue.js sont bit-identiques à R120.
+- R121 transforme les 17 paires les plus ambiguës de R120 en registre explicite de non-auto-résolution.
+- Registre: 17 paires / 30 références; 11 paires ont une silhouette canonique strictement identique; 18 références appartiennent au triple risque OCR R119.
+- Les 17 paires sont toutes reliées par une substitution OCR directe; VAC104/VAC105 reste le cas le plus proche du registre.
+- Garde-fou R121: aucune des 30 références critiques n'est actuellement promue dans XREF pilote; le moteur OCR de décision ne lit pas directement le catalogue massif et ses rendus silhouette/profil n'écrivent pas finalDecision.
+- Validation incrémentale: R120 logique 88 gardes applicable aux octets runtime/catalogue inchangés + 2/2 nouveaux gardes R121 + 9/9 contrôles ciblés frais.
+- Catalogue canonique: 5103 références, 5103 uniques, 10/10 blocs bit-identiques.
+
+==============================
+
+BRES CLÉS — TEST SUMMARY R121
+
+Runtime de test actif: V2.28 TEST R116 (bit-identique à R120)
+Stable: V2.27 inchangée
+Jalon catalogue: R121
+Validation héritée: R120 suite logique 88 gardes sur les mêmes octets runtime/catalogue
+Nouveaux gardes R121: 2/2 réussis
+Régression ciblée fraîche: 9/9 réussie
+Suite logique: 90 gardes (88 hérités inchangés + 2 nouveaux)
+Catalogue: 5103 références / 5103 uniques
+Blocs catalogue: 10/10 bit-identiques
+R121: 17 paires critiques / 30 références; 11 silhouettes exactes; 18 références triple risque.
+Garde-fou: les 30 références critiques restent hors XREF pilote ; le catalogue massif/profil reste consultatif et ne peut pas écrire finalDecision.
+
+==============================
+
+BRES CLÉS — VÉRIFICATION INCRÉMENTALE R121
+
+REGRESSION_R121.json: OK=True
+Runtime identique R120: True
+Catalogue 10/10 identique: True
+Registre critique R121: True
+Garde non-validation R121: True
+Tests ciblés frais: 9/9
+Suite logique cumulée: 90 gardes
+
+==============================
+
+BRES CLÉS — SOURCE HASHES R121
+
+efff3d5f7a1478ffffcc783e6a990c468df45b1630ed63aa497656e505afbd6e  index.html
+c6ae1f7fc075c1d50193a9e418661d34ff2275fbec160bea3dff6e2cfd5c2471  v228-catalogue.js
+d295e4671ded801fc2614e709fa0f133fd1a7d8713b87d95534d9ff52b89b949  catalogue_ocr_critical_pair_registry_test.py
+37dedac8994569c343b08d6d255da5022925798afdd57b096fe950176078533f  catalogue_critical_pair_nonvalidation_guard_test.py
+08247a6fdd9d52c81b759cc7d58e9f72f52141a985519beda962e21af137840e  catalogue/evidence/catalogue_ocr_critical_pair_registry_r121.json
+e5d4058585af927c5c755688172827b7abc776ea0a826070c89070414bb5e67a  CATALOGUE_CRITICAL_PAIR_NONVALIDATION_GUARD_R121.json
+cf135be07af8cd7e6a0409e51273a3e9b0d2f939625e7e5c223d6f77e0265dd1  REGRESSION_R121.json
+
+==============================
+
+BRES CLÉS — RELEASE HASHES R121
+
+f8e8daafc24f8c4444918ade2495c8b17a51c02111ba508523f5215cd07ee28e  BRES_Cles_Catalogue_Audit_R121.zip
+7526c81d113afcb3cf10012ce40445297675ad1e360a369b715894ddf983fbbe  BRES_Cles_Mobile_V2_28_TEST_R116_AUDIT_R121.zip
+
+==============================
+
+BRES CLÉS — REGISTRE CRITIQUE R121
+
+VAC104 | VAC105 | VACHETTE / VACHETTE | géométrie 99 | profil 0.970588 | silhouette_exacte=True
+GV1 | GV3 | GTV / GTV | géométrie 99 | profil 0.957447 | silhouette_exacte=True
+CIS2 | CIS4 | CAS-CISMA / CAS-CISMA | géométrie 99 | profil 0.956522 | silhouette_exacte=True
+CIS2R | CIS4R | CAS-CISMA / CAS-CISMA | géométrie 99 | profil 0.956522 | silhouette_exacte=True
+CIS1 | CIS3 | CAS-CISMA / CAS-CISMA | géométrie 99 | profil 0.955556 | silhouette_exacte=True
+MER34R | MER35R | MERONI / MERONI | géométrie 99 | profil 0.954545 | silhouette_exacte=True
+GL11R | GL12R | GLOBE / GLOBE | géométrie 99 | profil 0.950000 | silhouette_exacte=True
+YA50 | YA51 | YALE (IT) / YALE (IT) | géométrie 99 | profil 0.931034 | silhouette_exacte=True
+ET1 | ET2 | ETNA / ETNA | géométrie 99 | profil 0.928571 | silhouette_exacte=True
+YT1 | YT3 | YETI / YETI | géométrie 99 | profil 0.928571 | silhouette_exacte=True
+TL2 | TL5 | TRI-CIRCLE / TRI-CIRCLE | géométrie 99 | profil 0.926829 | silhouette_exacte=False
+EZ3 | EZ4 | EZCURRA / EZCURRA | géométrie 99 | profil 0.910714 | silhouette_exacte=False
+ET1R | ET2R | ETNA / ETNA | géométrie 99 | profil 0.909091 | silhouette_exacte=True
+EZ3 | EZ6 | EZCURRA / EZCURRA | géométrie 98 | profil 0.946429 | silhouette_exacte=False
+EZ4 | EZ6 | EZCURRA / EZCURRA | géométrie 98 | profil 0.925926 | silhouette_exacte=False
+CM1R | CM2R | CEMA / GIOBERT | géométrie 98 | profil 0.921053 | silhouette_exacte=False
+VAC105 | VAC155 | VACHETTE / VACHETTE | géométrie 97 | profil 0.970588 | silhouette_exacte=False
+
+Registry SHA-256: 8933afd602bbf53dbaf5aaba9b4d157cf098120eb33c3844328d2d211e8aed09
