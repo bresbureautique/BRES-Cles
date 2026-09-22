@@ -1,0 +1,10 @@
+BRES CLÉS — JALON CATALOGUE/OCR R120
+
+- V2.27 reste la version stable : aucun fichier de la branche main n'est remplacé par ce jalon.
+- Le runtime de test reste V2.28 TEST R116 : index.html et v228-catalogue.js sont bit-identiques à R119.
+- R120 croise le graphe de confusions OCR R119 avec la proximité géométrique canonique du catalogue.
+- 7362 paires OCR touchent une référence à triple risque ; 319 paires sont prioritaires (score géométrique canonique >=95 et même fabricant ou même famille).
+- Ces paires prioritaires couvrent 482 références, dont 285 à triple risque ; 269 ont une silhouette catalogue strictement identique et 17 ont aussi un profil statique très proche (Jaccard >=0,90).
+- Garde-fou R120 : le rendu catalogue massif et le consensus profil restent consultatifs ; ils ne touchent pas finalDecision et ne produisent pas VALIDÉ.
+- Validation incrémentale : régression R119 86/86 applicable aux octets runtime/catalogue inchangés + 2/2 nouveaux gardes R120 + 7/7 contrôles ciblés frais.
+- Catalogue canonique : 5103 références, 5103 uniques, 10/10 blocs bit-identiques.

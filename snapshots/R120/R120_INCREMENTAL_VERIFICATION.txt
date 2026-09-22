@@ -1,0 +1,15 @@
+BRES CLÉS — VÉRIFICATION INCRÉMENTALE R120
+
+OK  index.html bit-identique R119/R116
+OK  v228-catalogue.js bit-identique R119/R116
+OK  10/10 blocs catalogue bit-identiques
+OK  catalogue_ocr_geometry_priority_guard_test.py
+OK  catalogue_massive_nonvalidation_guard_test.py
+OK  catalogue_ocr_high_risk_family_guard_test.py
+OK  ocr_high_risk_autovalidation_guard_test.py
+OK  catalogue_schema_integrity_test.py
+OK  camera_native_picker_guard_test.py
+OK  version_consistency_test.py
+OK  py_compile des nouveaux tests et verify_build.py
+
+La régression complète R119 (86/86) reste la base héritée car les octets runtime/catalogue sont inchangés. Les 2 nouveaux gardes R120 ont été exécutés frais.

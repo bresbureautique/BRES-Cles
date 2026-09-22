@@ -1,0 +1,15 @@
+BRES CLÉS — LIBRARY ROUNDTRIP R120
+
+Catalogue ZIP original SHA-256: 6a502475d21b134f3b2b2dcc8f8a82744209343b71b2403898ef1e1eb5327ed5
+Catalogue ZIP Library SHA-256:  6a502475d21b134f3b2b2dcc8f8a82744209343b71b2403898ef1e1eb5327ed5
+Catalogue identique: OUI
+
+Application ZIP original SHA-256: ad6355ac9284db29c943548137cdae3cbfd29a196bc4db34b66949dad3fcc9a7
+Application ZIP Library SHA-256:  ad6355ac9284db29c943548137cdae3cbfd29a196bc4db34b66949dad3fcc9a7
+Application identique: OUI
+
+Réouverture du ZIP application rematérialisé:
+- catalogue_ocr_geometry_priority_guard_test.py: SELFTEST OK
+- catalogue_massive_nonvalidation_guard_test.py: SELFTEST OK
+
+Roundtrip Library: OK

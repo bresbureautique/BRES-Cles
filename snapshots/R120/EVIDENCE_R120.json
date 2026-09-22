@@ -1,0 +1,24 @@
+{
+  "schema": "bres-evidence-r120-v1",
+  "ok": true,
+  "runtime": "V2.28 TEST R116",
+  "runtime_bit_identical_to_r119": true,
+  "runtime_sha256": {
+    "index.html": "efff3d5f7a1478ffffcc783e6a990c468df45b1630ed63aa497656e505afbd6e",
+    "v228-catalogue.js": "c6ae1f7fc075c1d50193a9e418661d34ff2275fbec160bea3dff6e2cfd5c2471"
+  },
+  "catalogue_rows": 5103,
+  "catalogue_unique_refs": 5103,
+  "catalogue_chunks_bit_identical": true,
+  "r119_inherited_full_regression": "86/86",
+  "r120_new_guards": "2/2",
+  "fresh_targeted_checks": "7/7",
+  "neighbor_edges_touching_triple": 7362,
+  "priority_edges": 319,
+  "priority_unique_refs": 482,
+  "priority_triple_refs": 285,
+  "priority_exact_silhouette": 269,
+  "priority_profile_jaccard_ge_090": 17,
+  "catalogue_massive_nonvalidation_guard": true,
+  "library_roundtrip": true
+}

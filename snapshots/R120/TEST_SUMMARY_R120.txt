@@ -1,0 +1,14 @@
+BRES CLÉS — TEST SUMMARY R120
+
+Runtime de test actif: V2.28 TEST R116 (bit-identique à R119)
+Stable: V2.27 inchangée
+Jalon catalogue: R120
+Validation héritée: R119 86/86 tests réussis sur les mêmes octets runtime/catalogue
+Nouveaux gardes R120: 2/2 réussis
+Régression ciblée fraîche: 7/7 réussie
+Suite logique: 88 gardes (86 hérités inchangés + 2 nouveaux)
+Catalogue: 5103 références / 5103 uniques
+Blocs catalogue: 10/10 bit-identiques
+R120: 7362 voisinages OCR touchant le triple risque; 319 paires prioritaires OCR+géométrie; 482 références concernées; 285 références triple risque dans ces paires.
+Silhouettes exactes parmi les paires prioritaires: 269; profil Jaccard >=0,90: 17.
+Garde-fou: le catalogue massif reste consultatif et ne peut pas écrire la décision finale VALIDÉ.
