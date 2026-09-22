@@ -1,0 +1,9 @@
+BRES Clés V2.28 TEST R110 — résumé du patch R109 → R110
+- Diagnostic Samsung enrichi par un contexte d’exécution borné : user-agent, plateforme, langue, fenêtre, écran, DPR, cœurs logiques et mémoire déclarée.
+- Géométrie source conservée : dimensions photo originales, réduction, recadrage, taille fichier et type MIME.
+- Aucune géolocalisation, IP, nom de fichier, chemin, identifiant persistant ou image ajouté à l’export.
+- Export diagnostic schema v8 avec runtimeContextTracked=true et sourceFileGeometryTracked=true.
+- Affichage compact de l’environnement et de la géométrie photo.
+- Nouveau garde ocr_runtime_context_guard_test.py.
+- Aucun changement de décision OCR, de seuils, de budget ou du garde-fou TE8D / TE8I.
+- Catalogue massif inchangé : 5103 références / 10 blocs canoniques.
