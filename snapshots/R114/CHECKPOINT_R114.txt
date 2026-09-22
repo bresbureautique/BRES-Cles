@@ -1,0 +1,7 @@
+BRES CLÉS — JALON CATALOGUE/OCR R114
+
+- V2.27 reste la version stable, inchangée.
+- Le runtime de test V2.28 reste R113 : aucun seuil, budget, timeout ni choix OCR n'est modifié par R114.
+- R114 ajoute une baseline catalogue des voisins à distance d'édition 1 par insertion/suppression d'un caractère après normalisation OCR.
+- Objectif : empêcher qu'une future évolution valide automatiquement une référence lorsqu'un caractère OCR a été perdu ou ajouté sans preuve indépendante.
+- Les 10 blocs catalogue canoniques restent bit-identiques.
