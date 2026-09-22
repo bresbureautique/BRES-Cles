@@ -1,0 +1,14 @@
+{
+  "schema": "bres-r119-evidence-v1",
+  "runtime": "V2.28 TEST R116",
+  "stable": "V2.27",
+  "tests": {"passed": 86, "total": 86, "errors": 0},
+  "catalogue": {"rows": 5103, "unique_refs": 5103, "chunks_bit_identical": "10/10"},
+  "triple_risk": {"refs": 556, "classic_sub_indel_trans": 555, "separator_special": 1, "manufacturers": 184, "families": 169, "ordered_ref_list_sha256": "dc147c39d10f1f84fceeb7b989a0416feaff408700a56f156b0d801c7a5b802f"},
+  "top_manufacturers": {"ABUS":34,"(SANS FABRICANT)":26,"ABLOY":16,"VACHETTE":15,"YALE":15},
+  "top_families": {"YA":42,"AB":39,"VAC":20,"CS":17,"AY":16},
+  "runtime_hashes": {"index.html":"efff3d5f7a1478ffffcc783e6a990c468df45b1630ed63aa497656e505afbd6e","v228-catalogue.js":"c6ae1f7fc075c1d50193a9e418661d34ff2275fbec160bea3dff6e2cfd5c2471"},
+  "zip_sha256": {"BRES_Cles_Catalogue_Audit_R119.zip":"f610e747095ac5c6e1297b2b295ae44f9adb86d36993839d95cba9fdf2409fb4","BRES_Cles_Mobile_V2_28_TEST_R116_AUDIT_R119.zip":"ffafa96190a8244b33f94486f771ff228bb60b45b7cf344e3215c99b2a9b7096"},
+  "library_roundtrip": true,
+  "policy_guard": "OCR text alone cannot produce final VALIDÉ/confirmed; matching independent geometry remains required."
+}
