@@ -1,0 +1,10 @@
+BRES CLÉS — JALON CATALOGUE/OCR R121
+
+- V2.27 reste la version stable : aucun fichier de main n'est remplacé par ce jalon.
+- Le runtime de test reste V2.28 TEST R116 : index.html et v228-catalogue.js sont bit-identiques à R120.
+- R121 transforme les 17 paires les plus ambiguës de R120 en registre explicite de non-auto-résolution.
+- Registre: 17 paires / 30 références; 11 paires ont une silhouette canonique strictement identique; 18 références appartiennent au triple risque OCR R119.
+- Les 17 paires sont toutes reliées par une substitution OCR directe; VAC104/VAC105 reste le cas le plus proche du registre.
+- Garde-fou R121: aucune des 30 références critiques n'est actuellement promue dans XREF pilote; le moteur OCR de décision ne lit pas directement le catalogue massif et ses rendus silhouette/profil n'écrivent pas finalDecision.
+- Validation incrémentale: R120 logique 88 gardes applicable aux octets runtime/catalogue inchangés + 2/2 nouveaux gardes R121 + 9/9 contrôles ciblés frais.
+- Catalogue canonique: 5103 références, 5103 uniques, 10/10 blocs bit-identiques.
