@@ -1,0 +1,16 @@
+{
+  "schema": "bres-live-collection-packet-validator-test-r125-v1",
+  "milestone": "BRES Cles catalogue audit R125",
+  "checks": {
+    "valid_complete_fixture_passes": true,
+    "incomplete_packet_rejected": true,
+    "reused_capture_id_rejected": true,
+    "reused_photo_hash_rejected": true,
+    "undocumented_calibration_rejected": true,
+    "measured_stop_without_uncertainty_rejected": true,
+    "session_decision_authority_escalation_rejected": true,
+    "packet_decision_authority_escalation_rejected": true
+  },
+  "errors": [],
+  "ok": true
+}
