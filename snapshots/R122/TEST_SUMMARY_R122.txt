@@ -1,0 +1,17 @@
+BRES CLÉS — TEST SUMMARY R122
+
+Runtime de test actif: V2.28 TEST R116 (inchangé)
+Stable: V2.27 reste sur main
+Jalon catalogue: R122
+Régression fraîche: 93/93 scripts de test réussis, 0 échec
+Catalogue: 5103 références / 5103 uniques / 10 blocs
+Paires critiques R121 analysées: 17
+- géométrie canonique identique: 11
+- géométrie canonique différente: 6
+- fabricant différent: 1
+- delta de dimensions disponible: 6
+- delta de profil disponible: 17
+- métadonnée butée explicite absente: 17
+- géométrie recto/verso explicite absente: 17
+
+Politique: les 17 paires restent À CONFIRMER. Le catalogue peut expliquer/ranger les candidats mais ne peut pas produire VALIDÉ sans discriminant live indépendant et gardé.
