@@ -1,0 +1,6 @@
+BRES Clés V2.28 TEST R106 — résumé modification
+- Diagnostic timeout OCR séparé entre initialisation Tesseract et reconnaissance.
+- Export diagnostic JSON schéma v4 avec timeoutPhaseTracked=true.
+- Affichage /timeout-init et /timeout-ocr par passe.
+- Aucun changement des seuils 0,70 / 0,88, du budget 25 s, du timeout 7 s ou du garde-fou TE8D / TE8I.
+- Catalogue inchangé: 5103 références uniques / 10 blocs.

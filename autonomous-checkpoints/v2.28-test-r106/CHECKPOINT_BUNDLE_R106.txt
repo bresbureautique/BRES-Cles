@@ -1,0 +1,42 @@
+BRES CLÉS V2.28 TEST R106 — CHECKPOINT GITHUB
+
+Dépôt : bresbureautique/BRES-Cles
+Branche de test : v2.28-test-r1
+Parent attendu : fd7598a3b6d7913ca39e7fc96191cf0dde6ffe74 (R105)
+Branche stable main attendue : 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8 (V2.27)
+
+Jalon R106
+- Diagnostic OCR des timeouts séparé entre initialisation Tesseract et reconnaissance du texte.
+- worker-setup-timeout : le moteur OCR n'a pas été prêt dans le délai.
+- recognition-timeout : moteur prêt, reconnaissance trop longue.
+- UI diagnostic : /timeout-init ou /timeout-ocr.
+- Export diagnostic : schéma bres-ocr-diagnostic-export-v4, timeoutPhaseTracked=true.
+- Télémétrie non décisionnelle : seuils 0,70 / 0,88 inchangés ; garde-fou TE8D / TE8I inchangé.
+- Budget global 25 s et timeout par passe 7 s inchangés.
+
+Validation locale et release
+- Build global : OK.
+- Tests : 70/70, erreurs 0.
+- Catalogue : 5103 références / 5103 uniques.
+- 10/10 blocs catalogue inchangés.
+- ZIP application SHA-256 : 82f0ccd9d84333e7e7bc3945cecd04979e8addcfa265f888eab60563bb43ddeb
+- ZIP catalogue SHA-256 : 268b1152cdd382c1817e072a7eb791682459d12ef87c1384888e6196f2307981
+
+Vérification Library
+- Upload dans /BRES Cles/Sauvegardes : OK.
+- Rematérialisation des deux ZIP : OK.
+- Empreintes après aller-retour : identiques.
+- ZIP application après Library : décompression OK, verify_build.py OK, 70/70 tests, catalogue 5103/5103, erreurs 0.
+- ZIP catalogue après Library : décompression OK, 10/10 blocs conformes.
+
+Fichiers de preuve inclus dans ce checkpoint GitHub
+- CHECKPOINT_BUNDLE_R106.txt
+- TEST_SUMMARY_R106.txt
+- RELEASE_HASHES_R106.txt
+- SOURCE_HASHES_R106.txt
+- LIBRARY_ROUNDTRIP_VERIFICATION_R106.txt
+- PATCH_R106.txt
+
+Règle de stabilité
+- Ce checkpoint doit être écrit uniquement sur v2.28-test-r1.
+- main / V2.27 ne doit pas être modifiée.

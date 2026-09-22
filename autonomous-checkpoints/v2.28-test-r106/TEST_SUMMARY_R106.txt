@@ -1,0 +1,9 @@
+BRES Clés V2.28 TEST R106 — résumé tests
+Build global: OK
+Tests exécutés: 70
+Tests réussis: 70
+Erreurs: 0
+Catalogue: 5103 références / 5103 uniques
+Garde OCR worker setup: True
+Garde phase timeout OCR: True
+Garde ambiguïté TESA: True
