@@ -4,7 +4,10 @@
   "protocol": "bres-live-discriminant-collection-protocol-r124-v1",
   "active_test_runtime": "V2.28 TEST R116",
   "physical_key_id": null,
-  "candidate_pair": {"a": null, "b": null},
+  "candidate_pair": {
+    "a": null,
+    "b": null
+  },
   "gabarit": {
     "id": null,
     "version": null,
@@ -26,12 +29,37 @@
     "alignment_notes": null,
     "focus_notes": null,
     "captures": {
-      "recto": {"side": "RECTO", "capture_id": null, "source_file_sha256": null, "geometry_signature": null},
-      "verso": {"side": "VERSO", "capture_id": null, "source_file_sha256": null, "geometry_signature": null}
+      "recto": {
+        "side": "RECTO",
+        "capture_id": null,
+        "source_file_sha256": null,
+        "geometry_signature": null
+      },
+      "verso": {
+        "side": "VERSO",
+        "capture_id": null,
+        "source_file_sha256": null,
+        "geometry_signature": null
+      }
     },
-    "stop_or_shoulder": {"status": "MEASURED_UNVALIDATED", "position_mm": null, "uncertainty_mm": null, "measurement_method": null},
-    "dual_face": {"status": "MEASURED_UNVALIDATED", "independent_capture_ids": true, "measurement_method": null},
-    "quality": {"focus_ok": null, "alignment_ok": null, "calibration_ok": null, "occlusion_ok": null, "notes": null},
+    "stop_or_shoulder": {
+      "status": "MEASURED_UNVALIDATED",
+      "position_mm": null,
+      "uncertainty_mm": null,
+      "measurement_method": null
+    },
+    "dual_face": {
+      "status": "MEASURED_UNVALIDATED",
+      "independent_capture_ids": true,
+      "measurement_method": null
+    },
+    "quality": {
+      "focus_ok": null,
+      "alignment_ok": null,
+      "calibration_ok": null,
+      "occlusion_ok": null,
+      "notes": null
+    },
     "decision_authority": "NONE",
     "policy_status": "A_CONFIRMER"
   },
