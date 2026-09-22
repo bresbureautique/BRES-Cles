@@ -1,0 +1,24 @@
+{
+  "schema": "bres-live-collection-packet-guard-r125-v1",
+  "milestone": "BRES Cles catalogue audit R125",
+  "checks": {
+    "schema_exact": true,
+    "links_r124_protocol": true,
+    "links_r124_template": true,
+    "runtime_r116_declared": true,
+    "non_authoritative": true,
+    "no_auto_validation": true,
+    "no_threshold_authorized": true,
+    "three_preallocated_slots": true,
+    "all_slots_empty": true,
+    "recto_verso_separate": true,
+    "capture_ids_not_prefilled": true,
+    "photo_hashes_not_prefilled": true,
+    "calibration_not_preapproved": true,
+    "scale_slots_50_100": true,
+    "collection_starts_empty": true,
+    "summary_not_ready": true
+  },
+  "errors": [],
+  "ok": true
+}
