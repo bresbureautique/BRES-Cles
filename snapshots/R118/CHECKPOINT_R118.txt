@@ -1,0 +1,8 @@
+BRES CLÉS — JALON CATALOGUE/OCR R118
+
+- V2.27 reste la version stable, inchangée.
+- Le runtime de test reste V2.28 TEST R116 : aucun changement de caméra, OCR, seuil, budget ou timeout dans ce jalon catalogue.
+- R118 croise quatre familles de risques OCR catalogue : substitution d’un caractère, insertion/suppression d’un caractère, transposition de deux caractères voisins et collision après suppression des séparateurs.
+- 4 946 références normalisées sont exposées à au moins un risque ; 3 819 à au moins deux risques ; 556 à au moins trois risques ; aucune aux quatre simultanément.
+- Politique de sécurité : une référence cumulant plusieurs risques OCR ne doit jamais être auto-validée à partir du seul texte normalisé ; une preuve indépendante image/marque/profil est requise.
+- Les 10 blocs catalogue canoniques restent bit-identiques.
