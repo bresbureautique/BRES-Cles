@@ -1,0 +1,12 @@
+BRES Clés R118 — contrôle de relecture Library
+
+BRES_Cles_Catalogue_Audit_R118.zip
+SHA-256 Library: 60aa8f4c4e60f670b2f6caf5aa366d20ab3ba3a89ec26334f095aaeed8274ac0
+ZIP: intégrité OK.
+
+BRES_Cles_Mobile_V2_28_TEST_R116_AUDIT_R118.zip
+SHA-256 Library: 3855f1b2bd2470746986015762143a0d52e05298222dfc490c3fc8cc20ac36be
+ZIP: intégrité OK.
+Round-trip: REGRESSION_R118 = 84/84 ; index.html et v228-catalogue.js identiques au runtime R116 vérifié.
+
+Conclusion: les deux ZIP R118 relus depuis Library correspondent exactement aux ZIP locaux vérifiés.
