@@ -1,0 +1,49 @@
+{
+  "schema": "bres-live-discriminant-ingestion-contract-r126-v1",
+  "milestone": "BRES Cles catalogue audit R126",
+  "active_test_runtime": "V2.28 TEST R116",
+  "source_packet_schema": "bres-live-discriminant-collection-packet-r125-v1",
+  "purpose": "Allow a physically filled R125 packet to be ingested for descriptive diagnostic analysis only, without granting catalogue or runtime decision authority.",
+  "policy": {
+    "runtime_r116_remains_unchanged": true,
+    "catalogue_remains_canonical_and_unchanged": true,
+    "source_packet_must_pass_r125_validator": true,
+    "accepted_for_diagnostics_never_means_validated": true,
+    "decision_authority": "NONE",
+    "policy_status": "A_CONFIRMER",
+    "evidence_status": "MEASURED_UNVALIDATED",
+    "canonical_catalogue_write_allowed": false,
+    "runtime_mutation_allowed": false,
+    "automatic_validation_allowed": false,
+    "acceptance_threshold_authorized": false
+  },
+  "diagnostic_admission_requirements": {
+    "candidate_pair_complete_and_distinct": true,
+    "documented_zero_mode_required": true,
+    "permitted_zero_modes": ["POINTE_ZERO", "BUTEE_ZERO"],
+    "three_sessions_required": true,
+    "all_session_slots_filled": true,
+    "all_quality_flags_true": ["focus_ok", "alignment_ok", "calibration_ok", "occlusion_ok"],
+    "stop_position_uncertainty_and_method_required": true,
+    "recto_verso_geometry_signatures_required": true,
+    "dual_face_measurement_method_required": true,
+    "source_summary_must_not_escalate_authority": true
+  },
+  "permitted_outputs": [
+    "source_validation_result",
+    "descriptive_scale_deltas_mm",
+    "descriptive_stop_positions_mm",
+    "descriptive_stop_mean_mm",
+    "descriptive_stop_spread_mm",
+    "declared_uncertainties_mm",
+    "recto_verso_geometry_signatures",
+    "warnings"
+  ],
+  "forbidden_outputs_or_effects": [
+    "VALIDATED status",
+    "automatic candidate selection",
+    "catalogue mutation",
+    "runtime threshold change",
+    "accept/reject decision based on a new physical tolerance"
+  ]
+}

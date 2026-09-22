@@ -1,0 +1,21 @@
+{
+  "schema": "bres-live-collection-diagnostic-boundary-guard-r126-v1",
+  "milestone": "BRES Cles catalogue audit R126",
+  "checks": {
+    "contract_schema_exact": true,
+    "runtime_r116_declared": true,
+    "r125_packet_is_only_source_schema": true,
+    "decision_authority_none": true,
+    "policy_a_confirmer": true,
+    "evidence_stays_unvalidated": true,
+    "canonical_write_forbidden": true,
+    "runtime_mutation_forbidden": true,
+    "automatic_validation_forbidden": true,
+    "acceptance_threshold_forbidden": true,
+    "ingestor_returns_no_validated_reference": true,
+    "ingestor_keeps_physical_tolerance_decision_null": true,
+    "ingestor_has_no_file_write_side_effect": true
+  },
+  "errors": [],
+  "ok": true
+}

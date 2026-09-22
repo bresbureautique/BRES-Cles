@@ -1,0 +1,20 @@
+{
+  "schema": "bres-live-collection-packet-ingestion-test-r126-v1",
+  "milestone": "BRES Cles catalogue audit R126",
+  "checks": {
+    "complete_documented_packet_accepted_for_diagnostics": true,
+    "source_packet_not_mutated": true,
+    "accepted_packet_stays_a_confirmer": true,
+    "no_threshold_or_runtime_or_catalogue_authority": true,
+    "descriptive_repeatability_only": true,
+    "incomplete_packet_rejected": true,
+    "contradictory_bad_quality_rejected": true,
+    "summary_authority_escalation_rejected": true,
+    "missing_geometry_signature_rejected": true,
+    "identical_candidate_pair_rejected": true,
+    "unknown_zero_mode_rejected_for_diagnostics": true,
+    "contradictory_complete_session_summary_rejected": true
+  },
+  "errors": [],
+  "ok": true
+}

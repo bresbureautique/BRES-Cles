@@ -1,0 +1,13 @@
+BRES CLES — JALON CATALOGUE/OCR R126
+
+- V2.27 reste la version stable et ne doit pas être remplacée par ce jalon.
+- Runtime test: V2.28 TEST R116, bit-identique à R125.
+- R126 ajoute une ingestion contrôlée des paquets physiques R125 en mode diagnostic uniquement.
+- Un paquet complet et correctement documenté peut être accepté pour analyse descriptive sans devenir une preuve validée.
+- Les paquets incomplets, les qualités explicitement défaillantes, les signatures géométriques manquantes, le mode zéro non documenté et toute escalade d'autorité sont rejetés.
+- Les statistiques de répétabilité (moyenne, étendue, incertitudes déclarées) restent descriptives; aucun seuil physique d'acceptation n'est créé.
+- Toute sortie R126 conserve decision_authority=NONE, policy_status=A_CONFIRMER et evidence_status=MEASURED_UNVALIDATED.
+- Régression fraîche: 101/101 scripts Python réussis, 0 échec.
+- Catalogue canonique: 5103 références, 5103 uniques, 10 blocs bit-identiques à R125.
+
+Prochain travail: R127 peut préparer un registre de résultats diagnostiques anonymisés/synthétiques et les contrôles de répétabilité par paire, toujours sans seuil de décision ni écriture catalogue.
