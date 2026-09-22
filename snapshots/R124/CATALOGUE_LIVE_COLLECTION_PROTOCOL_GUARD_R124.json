@@ -1,0 +1,33 @@
+{
+  "schema": "bres-live-collection-protocol-guard-r124-v1",
+  "milestone": "BRES Cles catalogue audit R124",
+  "active_test_runtime": "V2.28 TEST R116",
+  "protocol_sha256": "0aa95b941073a5e46d4c7ce602a4d2b85ddd0732962feacb0ade27beb3ccaa42",
+  "contract_sha256": "80ed6a60e771f7e1f38744ee976f964cf6f38782cd1f41d28a5920eb7233abb5",
+  "checks": {
+    "schema_id_exact": true,
+    "inherits_r123_contract": true,
+    "runtime_r116_declared": true,
+    "runtime_unchanged_policy": true,
+    "catalogue_unchanged_policy": true,
+    "collection_non_authoritative": true,
+    "collection_status_unvalidated": true,
+    "collection_policy_confirmation": true,
+    "no_acceptance_threshold_authorized": true,
+    "repeatability_requires_three_sessions": true,
+    "recto_verso_each_session": true,
+    "session_ids_distinct": true,
+    "face_capture_ids_distinct": true,
+    "scale_checks_50_100": true,
+    "zero_modes_match_contract": true,
+    "provenance_fields_complete": true,
+    "sides_recto_verso": true,
+    "stop_records_uncertainty": true,
+    "dual_face_records_both_signatures": true,
+    "activation_preconditions_preserved": true,
+    "no_final_validation_literal": true,
+    "no_numeric_acceptance_threshold_fields": true
+  },
+  "errors": [],
+  "ok": true
+}

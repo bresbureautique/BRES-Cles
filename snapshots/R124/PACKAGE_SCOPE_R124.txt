@@ -1,0 +1,8 @@
+BRES CLES — PACKAGE CATALOGUE R124
+
+Ce ZIP est le paquet catalogue autonome R124.
+- Il conserve les 10 blocs catalogue canoniques et les jalons R121-R123 nécessaires à la traçabilité.
+- Il ajoute le protocole de collecte physique R124, son gabarit vide et deux garde-fous autonomes.
+- Il ne contient pas index.html ni v228-catalogue.js : le runtime reste dans le ZIP application séparé.
+- Aucune mesure R124 ne possède d’autorité de décision et aucun seuil d’acceptation n’est autorisé.
+- Les mesures restent MEASURED_UNVALIDATED et A_CONFIRMER jusqu’à validation physique, répétabilité, incertitude et changement de politique séparé.

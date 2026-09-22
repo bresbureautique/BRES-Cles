@@ -1,0 +1,30 @@
+{
+  "schema": "bres-live-collection-coherence-guard-r124-v1",
+  "milestone": "BRES Cles catalogue audit R124",
+  "active_test_runtime": "V2.28 TEST R116",
+  "template_sha256": "ad59bfe6e37c54486ea1e64e4594bdbdbcfcaebb2c09af8c378269606f38bad5",
+  "checks": {
+    "template_schema_exact": true,
+    "template_links_protocol": true,
+    "runtime_r116_declared": true,
+    "blank_sessions_start_empty": true,
+    "gabarit_scale_slots_exact": true,
+    "calibration_pass_fail_unset": true,
+    "recto_slot_named": true,
+    "verso_slot_named": true,
+    "face_capture_ids_blank": true,
+    "stop_status_unvalidated": true,
+    "dual_face_status_unvalidated": true,
+    "independent_face_ids_required": true,
+    "session_decision_authority_none": true,
+    "session_policy_confirmation": true,
+    "summary_decision_authority_none": true,
+    "summary_policy_confirmation": true,
+    "summary_repeatability_not_preapproved": true,
+    "summary_uncertainty_not_preapproved": true,
+    "valid_three_session_fixture_passes": true,
+    "duplicate_face_capture_fixture_rejected": true
+  },
+  "errors": [],
+  "ok": true
+}

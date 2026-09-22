@@ -1,0 +1,13 @@
+BRES CLES — JALON CATALOGUE/OCR R124
+
+- V2.27 reste la version stable et ne doit pas être remplacée par ce jalon.
+- Runtime test: V2.28 TEST R116, bit-identique à R123.
+- R124 définit un protocole répétable de collecte physique pour les futurs discriminants butée/épaulement et géométrie recto/verso.
+- Chaque clé physique doit être observée sur au moins 3 sessions indépendantes, avec une capture RECTO et une capture VERSO distinctes par session.
+- Le protocole enregistre la provenance des captures, le gabarit, les contrôles d’échelle 50 mm / 100 mm, le mode de zéro, l’incertitude de mesure et les contrôles qualité.
+- Les mesures restent MEASURED_UNVALIDATED, sans seuil d’acceptation et sans autorité de décision; la politique reste A_CONFIRMER.
+- Les garde-fous R124 vérifient aussi qu’un identifiant de capture ne peut pas être réutilisé pour les deux faces.
+- Régression fraîche: 97/97 scripts Python réussis, 0 échec.
+- Catalogue canonique: 5103 références, 5103 uniques, 10 blocs bit-identiques à R123.
+
+Prochain travail: R125 peut préparer un paquet de collecte physique prêt à remplir, sans connecter ces mesures à la décision R116.
