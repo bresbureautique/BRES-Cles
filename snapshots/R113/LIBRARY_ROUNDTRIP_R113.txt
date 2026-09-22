@@ -1,0 +1,7 @@
+BRES Clés R113 — vérification aller-retour Library
+APP ZIP SHA-256 local = Library: b597ecc9ec7dade6e5c26eac8911125da59b64e4a87cf64ea5b397e55b708082
+CATALOGUE ZIP SHA-256 local = Library: 9025c95eb043d7730f556e26807ca4c9d59825fbb0dd782c5c6d5905a8d7e431
+unzip -t APP: OK
+unzip -t CATALOGUE: OK
+APP rematérialisée depuis Library puis extraite: verify_build.py OK, 79/79 tests, 0 erreur, 5103 références uniques.
+CATALOGUE rematérialisé depuis Library: schéma/collisions/confusabilité SELFTEST OK, 10/10 blocs canoniques inchangés.
