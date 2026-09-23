@@ -1,0 +1,13 @@
+BRES CLES — PACKAGE SCOPE R144
+
+Scope: catalogue / checkpoint documentaire compact et reprise exacte uniquement.
+Runtime applicatif actif: V2.28 TEST R116, non modifie.
+Version stable: V2.27, non modifiee.
+
+Nouveaux composants:
+- collection_checkpoint_r144.py
+- catalogue/evidence/live_critical_pair_collection_checkpoint_contract_r144.json
+- catalogue_live_critical_pair_collection_checkpoint_test.py
+- catalogue_live_critical_pair_collection_checkpoint_boundary_guard_test.py
+
+R144 exporte l'etat mutable des 1462 actions R140 avec historique et empreintes d'integrite. L'import reconstruit exactement l'etat R141/R142 et verifie les projections R142/R143, sans accorder de preuve physique ni modifier le runtime ou le catalogue canonique.
