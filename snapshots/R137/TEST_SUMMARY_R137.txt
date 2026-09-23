@@ -1,0 +1,14 @@
+BRES CLES — TEST SUMMARY R137
+
+Scope: catalogue / preparation de collecte uniquement
+Runtime de test actif: V2.28 TEST R116, inchangé
+Stable: V2.27 sur main, inchangée
+Nouveaux tests R137: 2/2 PASS
+Régression catalogue autonome: 27/27 PASS, 0 erreur
+Catalogue canonique: 5103 références / 5103 uniques
+Blocs catalogue canoniques: 10/10 SHA-256 inchangés depuis R135
+Espaces préparés: 17 paires, 34 emplacements de clés, 102 séances, 204 captures recto/verso
+Tous les identifiants physiques, chemins, capture_id et SHA-256 source restent vides dans le gabarit préparatoire
+Crédit de preuve des emplacements préparés: 0
+Décision / validation / seuil: interdits, statut A_CONFIRMER / autorité NONE
+Application: aucun changement; test physique Samsung R136 toujours requis pour les 4 déclencheurs photo
