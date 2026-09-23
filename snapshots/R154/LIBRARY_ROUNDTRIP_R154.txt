@@ -1,0 +1,10 @@
+BRES CLES — LIBRARY ROUNDTRIP R154
+
+Original: BRES_Cles_Mobile_V2_28_TEST_R154.zip
+Library: /BRES Cles/Sauvegardes/BRES_Cles_Mobile_V2_28_TEST_R154.zip
+SHA-256 original: 68357f050a8b4a7aa907a254b18db584aa01b30cad40f3d206b22c8bd1e0260e
+SHA-256 rematerialise: 68357f050a8b4a7aa907a254b18db584aa01b30cad40f3d206b22c8bd1e0260e
+Octets identiques: OUI
+Integrite ZIP rematerialisee: PASS
+Nombre de fichiers: 4443
+RESULTAT: PASS
