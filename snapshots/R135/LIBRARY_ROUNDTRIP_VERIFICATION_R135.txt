@@ -1,0 +1,22 @@
+BRES CLES — LIBRARY ROUNDTRIP VERIFICATION R135
+
+Library destination: /BRES Cles/Sauvegardes
+
+Application:
+- Library file id: file_00000000e2c482079447bbaeff6b0b8d
+- Library file: BRES_Cles_Mobile_V2_28_TEST_R116_AUDIT_R135.zip
+- Local SHA-256: 0695547933428b177993fe21f698d965619467c7abacd76bedd7fd405a4aa4b7
+- Materialized SHA-256: 0695547933428b177993fe21f698d965619467c7abacd76bedd7fd405a4aa4b7
+- Byte-identical roundtrip: PASS
+- ZIP integrity after materialization: PASS
+
+Catalogue:
+- Library file id: file_00000000225881f586c7000042d8cb89
+- Library file: BRES_Cles_Catalogue_Audit_R135.zip
+- Local SHA-256: 3345b2d91e02a9a10756d53758c7ee6d5f25578971c15fcb5a690012b62645e6
+- Materialized SHA-256: 3345b2d91e02a9a10756d53758c7ee6d5f25578971c15fcb5a690012b62645e6
+- Byte-identical roundtrip: PASS
+- ZIP integrity after materialization: PASS
+- Full autonomous catalogue regression replayed from materialized ZIP: 25/25 PASS
+
+Result: Library R135 backup verified.
