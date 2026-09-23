@@ -1,0 +1,9 @@
+BRES CLES — LIBRARY ROUNDTRIP R152
+
+Destination: /BRES Cles/Sauvegardes/BRES_Cles_Mobile_V2_28_TEST_R152.zip
+SHA-256 original: 532e309933fa019443b3d8e79362812f2d454d7ac8a6066bd36ad0237fb603b9
+SHA-256 rematerialise: 532e309933fa019443b3d8e79362812f2d454d7ac8a6066bd36ad0237fb603b9
+Comparaison octet par octet: IDENTIQUE
+Integrite ZIP: PASS
+Entrees ZIP: 4423
+Resultat: PASS
