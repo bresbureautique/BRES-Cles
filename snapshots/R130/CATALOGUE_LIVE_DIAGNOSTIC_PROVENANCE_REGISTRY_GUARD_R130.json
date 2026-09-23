@@ -1,0 +1,19 @@
+{
+  "schema": "bres-live-diagnostic-provenance-registry-guard-r130-v1",
+  "milestone": "BRES Cles catalogue audit R130",
+  "checks": {
+    "accepted_r130_enters_parallel_registry": true,
+    "source_not_mutated": true,
+    "capture_ids_and_hashes_survive_registry": true,
+    "packet_and_provenance_digests_survive_registry": true,
+    "two_keys_keep_twelve_unique_source_captures": true,
+    "registry_remains_non_authoritative": true,
+    "source_hash_reuse_across_registry_rejected": true,
+    "capture_id_reuse_across_registry_rejected": true,
+    "validated_reference_escalation_rejected": true,
+    "incomplete_provenance_cannot_enter_registry": true,
+    "registry_never_authorizes_mutation_or_threshold": true
+  },
+  "errors": [],
+  "ok": true
+}
