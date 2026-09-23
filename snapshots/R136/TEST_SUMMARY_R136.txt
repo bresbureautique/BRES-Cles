@@ -1,0 +1,14 @@
+BRES CLES — TEST SUMMARY R136
+
+Runtime: V2.28 TEST R116, inchangé
+Stable: V2.27 sur main, inchangée
+Application verify_build: 88/88 PASS, 0 erreur
+Tests caméra ciblés: 5/5 scripts PASS
+Garde statique des 4 déclencheurs: PASS
+Garde picker natif Android/local: PASS
+Catalogue R135: 5103 références / 5103 uniques
+Catalogue autonome R135: 25/25 PASS (preuve R135 vérifiée)
+Blocs catalogue canoniques: 10/10 inchangés
+ZIP R135 application et catalogue: intégrité PASS
+Statut: PRET POUR TEST PHYSIQUE SAMSUNG
+Intervention requise: tester Recto guidé, Verso guidé, Importer recto, Importer verso sur le Samsung réel.
