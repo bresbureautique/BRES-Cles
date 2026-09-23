@@ -1,0 +1,16 @@
+{
+  "milestone": "R146",
+  "scope": "application_physical_validation",
+  "date": "2026-09-23",
+  "device_family": "Samsung Android",
+  "runtime": "V2.28 TEST R116",
+  "source": "physical test reported by the user in ChatGPT",
+  "checks": [
+    {"control": "Recto guide", "result": "PASS"},
+    {"control": "Verso guide", "result": "PASS"},
+    {"control": "Importer recto", "result": "PASS"},
+    {"control": "Importer verso", "result": "PASS"}
+  ],
+  "overall": "PASS",
+  "notes": "Les quatre commandes ouvrent correctement leur flux photo/import sur le Samsung reel. Ce jalon ne remplace pas V2.27 stable et ne modifie pas le catalogue."
+}
