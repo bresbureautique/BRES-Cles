@@ -1,0 +1,27 @@
+{
+  "schema": "bres-r136-camera-readiness-snapshot-v1",
+  "runtime": "V2.28 TEST R116",
+  "stable": "V2.27",
+  "files": {
+    "CHECKPOINT_R136.txt": {
+      "sha256": "8c0c6157e69c24848f130064aad77adf916776313f882e9da71ad5e1e13d0ded",
+      "size_bytes": 1315
+    },
+    "TEST_SUMMARY_R136.txt": {
+      "sha256": "0703fb25ac7c8412db50ce2b1911fe88a890b67cae08239dd8e019a0a9fe233d",
+      "size_bytes": 628
+    },
+    "SOURCE_HASHES_R136.txt": {
+      "sha256": "e0a4a1c7b4d14cb108d921c1d73e618afc5e93a3cae94c245b5b5aa8cf340c60",
+      "size_bytes": 215
+    },
+    "LIBRARY_ROUNDTRIP_VERIFICATION_R136.txt": {
+      "sha256": "bb46860b2b94c820ef3fd938ff0b983ee6688a0a5b316e961a98da60a176637b",
+      "size_bytes": 682
+    },
+    "BRES_Cles_Camera_Readiness_R136.zip": {
+      "sha256": "4d913e72c8bff48b824d6e864c1d1aac456a2369588152732704077800e4db28",
+      "size_bytes": 216925
+    }
+  }
+}
