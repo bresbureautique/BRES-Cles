@@ -1,0 +1,17 @@
+BRES CLÉS V2.28 TEST R154 — GARDE DE SESSION MULTI-PRISES OCR
+
+OK  request_captures_series_id
+OK  same_series_accepts
+OK  small_geometry_drift_allowed
+OK  old_series_result_rejected
+OK  different_key_geometry_rejected
+OK  rejected_cycles_do_not_pollute_history
+OK  first_cycle_can_create_anchor
+OK  diagnostic_only
+OK  export_contains_session_guard
+OK  ocr_calls_bind_request
+OK  visible_rejection_messages
+OK  thresholds_unchanged
+OK  active_version_r154
+
+SELFTEST OK
