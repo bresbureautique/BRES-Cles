@@ -1,0 +1,23 @@
+BRES CLES — PATCH PARTS R150
+
+Le patch de reconstruction R149 -> R150 est stocke en 5 parties Base64 texte pour une sauvegarde GitHub verifiable.
+
+Ordre strict, sans separateur ajoute:
+1. R149_TO_R150_SOURCE_PATCH.diff.gz.b64.part00 (8000 octets)
+2. R149_TO_R150_SOURCE_PATCH.diff.gz.b64.part01 (8000 octets)
+3. R149_TO_R150_SOURCE_PATCH.diff.gz.b64.part02 (8000 octets)
+4. R149_TO_R150_SOURCE_PATCH.diff.gz.b64.part03 (8000 octets)
+5. R149_TO_R150_SOURCE_PATCH.diff.gz.b64.part04 (2348 octets)
+
+Longueur totale Base64 attendue: 34348 octets.
+SHA-256 Base64 concatene: 59289a52dc7c20df3d0189ed9e47aeff10b72523f2a2e5fbeaf0b32640503198
+SHA-256 du .diff.gz decode: 9a9ce394a659c2f03374ebf91b3b00928458febf9673b49501db902e00d2adb9
+SHA-256 du diff decompresse: 88a9948ce761cfeaea0e506c5530e4398d4d31c0ca8ba4b22fac14757a36260d
+
+Reconstruction:
+cat part00 part01 part02 part03 part04 > R149_TO_R150_SOURCE_PATCH.diff.gz.b64
+base64 -d R149_TO_R150_SOURCE_PATCH.diff.gz.b64 > R149_TO_R150_SOURCE_PATCH.diff.gz
+gunzip -c R149_TO_R150_SOURCE_PATCH.diff.gz > R149_TO_R150_SOURCE_PATCH.diff
+patch -p1 < R149_TO_R150_SOURCE_PATCH.diff
+
+Appliquer uniquement sur les sources V2.28 TEST R149, jamais sur main/V2.27.
