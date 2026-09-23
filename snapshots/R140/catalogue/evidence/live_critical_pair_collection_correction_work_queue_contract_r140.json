@@ -1,0 +1,31 @@
+{
+  "schema": "bres-live-critical-pair-collection-correction-work-queue-contract-r140-v1",
+  "milestone": "R140",
+  "source_correction_schema": "bres-live-critical-pair-collection-correction-sheet-r139-v1",
+  "active_test_runtime": "V2.28 TEST R116",
+  "purpose": "Order R139 documentary correction actions into a deterministic resumable work queue without granting recognition or validation authority.",
+  "requirements": {
+    "critical_pair_count": 17,
+    "deterministic_order": true,
+    "resumable_work_item_ids": true,
+    "identity_before_capture": true,
+    "capture_before_verification": true,
+    "verification_before_finalisation": true,
+    "unknown_actions_go_to_manual_control": true,
+    "queue_completion_requires_real_correction": true,
+    "queue_completion_counts_as_real_physical_evidence": false,
+    "evidence_credit": 0,
+    "measurements_used_for_priority": false,
+    "recognition_score_used_for_priority": false
+  },
+  "policy": {
+    "decision_authority": "NONE",
+    "policy_status": "A_CONFIRMER",
+    "canonical_catalogue_write_allowed": false,
+    "runtime_mutation_allowed": false,
+    "automatic_validation_allowed": false,
+    "acceptance_threshold_authorized": false,
+    "candidate_selection_allowed": false,
+    "validated_reference": null
+  }
+}

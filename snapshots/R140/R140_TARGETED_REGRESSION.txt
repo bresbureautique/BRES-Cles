@@ -1,0 +1,10 @@
+PASS catalogue_live_critical_pair_collection_workspace_test.py (0.606s)
+PASS catalogue_live_critical_pair_collection_workspace_boundary_guard_test.py (0.568s)
+PASS catalogue_live_critical_pair_collection_completeness_test.py (0.589s)
+PASS catalogue_live_critical_pair_collection_completeness_boundary_guard_test.py (0.612s)
+PASS catalogue_live_critical_pair_collection_correction_sheet_test.py (0.702s)
+PASS catalogue_live_critical_pair_collection_correction_sheet_boundary_guard_test.py (0.579s)
+PASS catalogue_live_critical_pair_collection_correction_work_queue_test.py (0.675s)
+PASS catalogue_live_critical_pair_collection_correction_work_queue_boundary_guard_test.py (0.619s)
+
+TOTAL 8 PASS 8 FAIL 0
