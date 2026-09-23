@@ -1,0 +1,21 @@
+BRES CLES — CHECKPOINT R138 — COMPLETUDE DES ESPACES DE COLLECTE
+Date: 2026-09-23
+
+Fait:
+- Analyseur séparé de complétude appliqué aux espaces R137 des 17 paires critiques.
+- Vérifie chaque clé préparée: identité physique confirmée, 3 séances S1/S2/S3, RECTO/VERSO, capture_id, source_path et SHA-256 64 hex.
+- Vérifie les flags de capture/validation documentaire et détecte les capture_id/SHA-256 réutilisés.
+- Le gabarit R137 vide reste correctement incomplet: 34/34 emplacements ne sont pas présentés comme prêts.
+- Les fixtures synthétiques servent uniquement aux tests et conservent evidence_credit=0.
+
+Vérifications:
+- Nouveaux tests R138: 2/2 PASS.
+- Régression catalogue complète: 29/29 PASS.
+- Catalogue: 5103 références / 5103 uniques.
+- 10/10 blocs catalogue: SHA-256 inchangés depuis R137.
+- Runtime: V2.28 TEST R116 inchangé.
+- Stable: V2.27 non modifiée.
+
+Blocage application restant:
+- Le comportement réel des 4 déclencheurs photo exige toujours un test physique Samsung.
+- R138 ne modifie ni runtime, ni OCR, ni catalogue canonique.

@@ -1,0 +1,30 @@
+{
+  "schema": "bres-snapshot-manifest-r138-v1",
+  "milestone": "R138",
+  "scope": "catalogue_collection_completeness_only",
+  "active_test_runtime": "V2.28 TEST R116",
+  "stable_version": "V2.27",
+  "stable_branch": "main",
+  "test_branch": "v2.28-test-r1",
+  "source_workspace": "R137",
+  "camera_readiness_checkpoint": "R136",
+  "physical_samsung_test_required": true,
+  "catalogue_rows": 5103,
+  "catalogue_unique_refs": 5103,
+  "catalogue_chunks_unchanged": "10/10",
+  "prepared_collection_workspace": {"critical_pairs":17,"physical_key_slots":34,"sessions":102,"face_capture_slots":204,"evidence_credit":0},
+  "completeness_checker": {"requires_key_identity":true,"requires_three_sessions":true,"requires_recto_verso":true,"requires_capture_id":true,"requires_source_path":true,"requires_sha256_64_hex":true,"detects_duplicate_capture_id":true,"detects_duplicate_sha256":true,"empty_r137_slots_incomplete":"34/34","completeness_counts_as_evidence":false,"evidence_credit":0},
+  "new_tests": "2/2",
+  "catalogue_regression": "29/29",
+  "runtime_mutation": false,
+  "canonical_catalogue_mutation": false,
+  "policy": {"decision_authority":"NONE","policy_status":"A_CONFIRMER","automatic_validation_allowed":false,"acceptance_threshold_authorized":false,"candidate_selection_allowed":false},
+  "files": {
+    "critical_pair_collection_completeness_r138.py": {"sha256":"1cedf6b0a3d3c408cf800cc8fa05cc4480783e376149b916bb506d97c615c930","size_bytes":11635},
+    "catalogue/evidence/live_critical_pair_collection_completeness_contract_r138.json": {"sha256":"6602cf8d228c2a51bbd98e5c9242a50d295e0cdbd889b9f41a88034b1eb2d023","size_bytes":1425},
+    "catalogue_live_critical_pair_collection_completeness_test.py": {"sha256":"e3e51339e5990e211e148f9ba02f1b42b329242c144a2c07e5c558326611d0c9","size_bytes":5985},
+    "catalogue_live_critical_pair_collection_completeness_boundary_guard_test.py": {"sha256":"18cc7c03b6d769742101076b4c32617d757724670dc11e84d2f49041e92045a3","size_bytes":3987},
+    "ALL_TESTS_R138.txt": {"sha256":"64d26852a5fd5c420b90a63ecc1245e1a39f153359a268ae5c8bab0104648ff1","size_bytes":2130},
+    "CATALOGUE_CHUNK_COMPARISON_R138.json": {"sha256":"cd9cb3e7ac5508f86bc9e099e668bc1c494ec1e55667790cf373c8b793666247","size_bytes":1948}
+  }
+}

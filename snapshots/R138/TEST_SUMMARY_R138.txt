@@ -1,0 +1,10 @@
+BRES CLES — TEST SUMMARY R138
+
+Nouveaux tests: 2/2 PASS
+Régression complète catalogue: 29/29 PASS
+Catalogue: 5103 lignes / 5103 références uniques
+Blocs canoniques: 10/10 SHA-256 inchangés depuis R137
+Runtime: V2.28 TEST R116 inchangé
+Stable: V2.27 inchangée
+Statut application: test physique Samsung toujours requis
+Autorité décisionnelle: NONE / A_CONFIRMER
