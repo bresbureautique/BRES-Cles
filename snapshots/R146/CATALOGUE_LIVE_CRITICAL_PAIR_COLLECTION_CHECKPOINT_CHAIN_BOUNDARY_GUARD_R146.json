@@ -1,0 +1,24 @@
+{
+  "schema": "bres-live-critical-pair-collection-checkpoint-chain-boundary-guard-r146-v1",
+  "milestone": "BRES Cles catalogue audit R146",
+  "checks": {
+    "contract_schema_is_r146": true,
+    "r144_input_and_r145_delta_are_pinned": true,
+    "work_item_and_pair_counts_are_pinned": true,
+    "r140_queue_and_order_must_be_constant": true,
+    "history_and_counters_must_be_monotonic": true,
+    "checkpoint_hash_validation_required": true,
+    "adjacent_deltas_and_unique_changes_reported": true,
+    "history_events_and_next_actions_reported": true,
+    "integrity_fingerprint_required": true,
+    "runtime_pinned_to_r116": true,
+    "stable_pinned_to_v227": true,
+    "documentary_only_and_no_evidence": true,
+    "measurements_and_scores_unused": true,
+    "no_decision_authority": true,
+    "canonical_and_runtime_writes_forbidden": true,
+    "module_has_no_file_write_side_effect": true
+  },
+  "errors": [],
+  "ok": true
+}
