@@ -1,0 +1,8 @@
+PASS catalogue_live_critical_pair_collection_workspace_test.py (0.597s)
+PASS catalogue_live_critical_pair_collection_workspace_boundary_guard_test.py (0.613s)
+PASS catalogue_live_critical_pair_collection_completeness_test.py (0.654s)
+PASS catalogue_live_critical_pair_collection_completeness_boundary_guard_test.py (0.587s)
+PASS catalogue_live_critical_pair_collection_correction_sheet_test.py (0.593s)
+PASS catalogue_live_critical_pair_collection_correction_sheet_boundary_guard_test.py (0.626s)
+
+TOTAL 6 PASS 6 FAIL 0
