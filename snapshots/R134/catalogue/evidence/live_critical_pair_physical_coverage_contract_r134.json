@@ -1,0 +1,22 @@
+{
+  "schema": "bres-live-critical-pair-physical-coverage-contract-r134-v1",
+  "milestone": "BRES Cles catalogue audit R134",
+  "active_test_runtime": "V2.28 TEST R116",
+  "source_batch_schema": "bres-live-physical-collection-batch-ingestion-r133-v1",
+  "critical_pair_registry_schema": "bres-catalogue-ocr-critical-pair-registry-r121-v1",
+  "critical_pair_count_expected": 17,
+  "purpose": "Build a documentary coverage matrix for every R121 critical pair, including no-data pairs, accepted physical keys, rejected or incomplete dossiers and their reasons, without using physical measurement values for any decision.",
+  "no_data_pairs_must_be_listed": true,
+  "rejected_dossier_reasons_must_be_preserved": true,
+  "accepted_physical_key_identity_must_be_preserved": true,
+  "measurement_values_used_for_coverage": false,
+  "evidence_status": "MEASURED_UNVALIDATED",
+  "decision_authority": "NONE",
+  "policy_status": "A_CONFIRMER",
+  "automatic_validation_allowed": false,
+  "canonical_catalogue_write_allowed": false,
+  "runtime_mutation_allowed": false,
+  "acceptance_threshold_authorized": false,
+  "candidate_selection_allowed": false,
+  "validated_reference": null
+}
