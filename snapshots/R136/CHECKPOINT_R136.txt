@@ -1,0 +1,27 @@
+BRES CLES — CHECKPOINT R136 — CAMERA SAMSUNG TEST READINESS
+Date: 2026-09-23
+
+Scope:
+- Audit de préparation au test physique Samsung des quatre déclencheurs photo.
+- Aucun changement de runtime, OCR ou catalogue canonique.
+- Runtime actif conservé: V2.28 TEST R116.
+- Stable conservée: V2.27 sur main, non modifiée.
+
+Vérifications rejouées depuis le ZIP Library R135 matérialisé:
+- camera_native_picker_guard_test.py: PASS
+- guided_camera_four_trigger_static_guard_r132.py: PASS
+- guided_camera_session_guard_test.py: PASS
+- guided_camera_refocus_binding_test.py: PASS
+- profile_camera_session_guard_test.py: PASS
+- verify_build.py: PASS, 88/88 tests, 0 erreur
+- ZIP application: intégrité PASS
+- ZIP catalogue: intégrité PASS
+
+Hashes des packages R135 utilisés:
+- Application: 0695547933428b177993fe21f698d965619467c7abacd76bedd7fd405a4aa4b7
+- Catalogue: 3345b2d91e02a9a10756d53758c7ee6d5f25578971c15fcb5a690012b62645e6
+
+Conclusion:
+- Les protections logicielles confirment le routage des quatre commandes photo et le fallback Android local avant toute opération asynchrone.
+- Le comportement réel du sélecteur/caméra Samsung ne peut pas être validé par simulation: un test physique est désormais nécessaire.
+- Ne pas modifier les seuils OCR ni le catalogue à partir de ce test caméra.
