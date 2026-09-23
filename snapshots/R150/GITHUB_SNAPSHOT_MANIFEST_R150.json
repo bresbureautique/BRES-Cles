@@ -1,0 +1,24 @@
+{
+  "milestone": "V2.28 TEST R150",
+  "scope": "application",
+  "base": "V2.28 TEST R149",
+  "stable_main_commit": "9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8",
+  "tests": {"passed": 85, "total": 85, "errors": 0},
+  "catalogue": {"references": 5103, "unique": 5103, "canonical_blocks": 10, "canonical_unchanged": true},
+  "ocr_thresholds": {"low": 0.70, "high": 0.88, "changed": false},
+  "feature": "OCR repeatability diagnostic across successive analyses, max 5 samples, scoped by identificationEpoch, no decision influence",
+  "package": {
+    "name": "BRES_Cles_Mobile_V2_28_TEST_R150.zip",
+    "sha256": "02b44c23e7bc8c83694749d55490f8b047ba02ce316054f18fc784940e4d9ed9",
+    "entries": 4387,
+    "zip_integrity": "PASS"
+  },
+  "source_patch": {
+    "parts": 5,
+    "base64_length": 34348,
+    "base64_sha256": "59289a52dc7c20df3d0189ed9e47aeff10b72523f2a2e5fbeaf0b32640503198",
+    "gzip_sha256": "9a9ce394a659c2f03374ebf91b3b00928458febf9673b49501db902e00d2adb9",
+    "diff_sha256": "88a9948ce761cfeaea0e506c5530e4398d4d31c0ca8ba4b22fac14757a36260d"
+  },
+  "decision_influence": false
+}
