@@ -1,0 +1,10 @@
+BRES CLES V2.28 TEST R148 — LIBRARY ROUNDTRIP
+
+Library path: /BRES Cles/Sauvegardes/BRES_Cles_Mobile_V2_28_TEST_R148.zip
+Original SHA-256: 3742fd5aae57056b5bee57bc53bb98545c1a0c3cc850ec5079deebc64adc86ed
+Rematerialized SHA-256: 3742fd5aae57056b5bee57bc53bb98545c1a0c3cc850ec5079deebc64adc86ed
+Byte-for-byte comparison: IDENTICAL
+ZIP integrity after Library roundtrip: PASS
+ZIP entries: 4367
+Roundtrip targeted guard: PASS
+Full build regression from extracted package: 83/83 PASS, 0 error
