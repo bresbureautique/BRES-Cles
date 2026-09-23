@@ -1,0 +1,18 @@
+BRES CLES — VERIFICATION ALLER-RETOUR LIBRARY R132
+
+BRES_Cles_Catalogue_Audit_R132.zip
+- SHA-256 release: f157d0b64a05b0c18672cc07997137728319f377d7220348fd426d3e6398f63d
+- SHA-256 rematérialisé Library: f157d0b64a05b0c18672cc07997137728319f377d7220348fd426d3e6398f63d
+- cmp octet par octet: OK
+- unzip -t: OK
+- 2 nouveaux tests R132 rejoués depuis l'archive Library: OK
+
+BRES_Cles_Mobile_V2_28_TEST_R116_AUDIT_R132.zip
+- SHA-256 release: 99d27d4decf2348dfad6cadcced57047daf6761b1c09893c53c28fd6fb8cd5f4
+- SHA-256 rematérialisé Library: 99d27d4decf2348dfad6cadcced57047daf6761b1c09893c53c28fd6fb8cd5f4
+- cmp octet par octet: OK
+- unzip -t: OK
+- garde statique 4 déclencheurs photo R132: OK
+- garde caméra native R116: OK
+
+Conclusion: aller-retour Library R132 vérifié.
