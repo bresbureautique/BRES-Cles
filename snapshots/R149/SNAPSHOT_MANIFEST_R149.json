@@ -1,0 +1,28 @@
+{
+  "milestone": "R149",
+  "version": "V2.28 TEST R149",
+  "scope": "application",
+  "base": "V2.28 TEST R148",
+  "verify_build_ok": true,
+  "tests": {"passed": 84, "total": 84},
+  "catalogue": {
+    "count": 5103,
+    "unique": 5103,
+    "canonical_chunks_unchanged": true,
+    "separate_from_application": true
+  },
+  "recognition_contract": {
+    "diagnostic_only": true,
+    "decision_logic_changed": false,
+    "threshold_low": 0.70,
+    "threshold_high": 0.88
+  },
+  "hashes": {
+    "index_html_sha256": "1fd7d6e27f6415be2bf9bce53201395c53b4a56b2d815001e109dd745152a353",
+    "catalogue_wrapper_sha256": "76e843b9976014eb6446342f90e6bcb10b16b007a3f9948a0fb79fd30993b9c4",
+    "r149_guard_sha256": "7c76067d101b24880d061947c1aa29b25865fbdc204aad6ef2353217f42f7c7e",
+    "package_sha256": "6dd4b9cd6d079f7a1bc2e7c5bfcb96674eeea71a7da9426d636439ba556c9795"
+  },
+  "library_package": "BRES_Cles_Mobile_V2_28_TEST_R149.zip",
+  "stable_policy": "V2.27 remains stable on main and is not replaced by this test milestone"
+}
