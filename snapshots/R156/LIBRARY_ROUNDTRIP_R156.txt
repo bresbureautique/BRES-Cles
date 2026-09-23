@@ -1,0 +1,11 @@
+BRES CLES V2.28 TEST R156 — LIBRARY ROUNDTRIP
+
+Library path: /BRES Cles/Sauvegardes/BRES_Cles_Mobile_V2_28_TEST_R156.zip
+Original SHA-256: 00895e67a53d70a7f0e5f20c1883a95d8e5376183fafec6dda64777a37fc2539
+Library SHA-256: 00895e67a53d70a7f0e5f20c1883a95d8e5376183fafec6dda64777a37fc2539
+Byte-for-byte identical: PASS
+ZIP integrity after Library rematerialization: PASS
+Size original: 5810972 bytes
+Size Library: 5810972 bytes
+
+RESULT: PASS
