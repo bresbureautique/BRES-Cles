@@ -1,0 +1,22 @@
+{
+  "schema": "bres-r153-candidate-manifest-v1",
+  "milestone": "V2.28 TEST R153 CANDIDATE",
+  "scope": "application",
+  "promoted": false,
+  "targeted_tests": {"pass": 22, "total": 22},
+  "full_legacy_suite": "not_completed_execution_window",
+  "catalogue": {"references": 5103, "unique": 5103, "canonical_chunks_unchanged": true},
+  "ocr_thresholds": {"prefill": 0.7, "decision": 0.88},
+  "decision_influence": false,
+  "camera_physical_validation_baseline": "R116",
+  "stable_main_expected": "9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8",
+  "feature": {
+    "recommendations": ["collect-more", "repeatable", "ocr-instability-review", "physical-check-required"],
+    "max_cycles": 5
+  },
+  "library_package": {
+    "name": "BRES_Cles_Mobile_V2_28_TEST_R153_CANDIDATE.zip",
+    "sha256": "a66949aab1c0ba7d341790394344ffee7f5acf0e228fff92a6d3a82a8a2c307a",
+    "zip_entries": 4524
+  }
+}
