@@ -1,0 +1,13 @@
+BRES CLES — TEST SUMMARY R154
+
+RESULTAT: PASS
+Regression complete: 89/89 PASS
+Garde de session multi-prises OCR: 13/13 PASS
+Catalogue: 5103 references / 5103 uniques
+Blocs canoniques: 10/10 inchanges
+Seuils OCR: 0,70 / 0,88 inchanges
+Influence du nouveau diagnostic sur la decision: NON
+Version stable V2.27: conservee, aucune promotion de R154 sur main.
+Jalon camera physique: R116 conserve.
+
+R154 empeche deux contaminations de la serie multi-prises: une reponse asynchrone issue d'une ancienne serie et une nouvelle cle manifestement differente de l'ancre geometrique.
