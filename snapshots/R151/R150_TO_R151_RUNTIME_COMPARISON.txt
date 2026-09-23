@@ -1,0 +1,19 @@
+BRES CLES — R150 TO R151 RUNTIME COMPARISON
+
+Base: V2.28 TEST R150
+Cible: V2.28 TEST R151
+
+Fichiers source actifs/modifies ou ajoutes:
+- CHECKPOINT.txt
+- LISEZ-MOI.txt
+- OCR_REPEATABILITY_TOLERANCE_GUARD_TEST_R151.json
+- OCR_REPEATABILITY_TOLERANCE_GUARD_TEST_R151.txt
+- index.html
+- ocr_repeatability_guard_test.py
+- ocr_repeatability_tolerance_guard_test.py
+- v228-catalogue.js
+- verify_build.py
+
+Catalogue v3 canonique: 10/10 blocs identiques.
+Seuils OCR 0,70 / 0,88: inchanges.
+Decision automatique: inchangee ; ajout diagnostique uniquement.
