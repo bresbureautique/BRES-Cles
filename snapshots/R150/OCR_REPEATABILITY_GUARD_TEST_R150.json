@@ -1,0 +1,25 @@
+{
+  "schema": "bres-ocr-repeatability-guard-v1",
+  "milestone": "V2.28 TEST R150",
+  "checks": {
+    "stable_detected": true,
+    "variable_detected": true,
+    "variable_canons_visible": true,
+    "first_sample_waits": true,
+    "history_bounded_to_five": true,
+    "decision_influence_false": true,
+    "epoch_scoped_recording": true,
+    "visible_repeatability_label": true,
+    "export_contains_repeatability": true,
+    "thresholds_unchanged": true,
+    "schema_v12": true
+  },
+  "cases": {
+    "stable": {"sampleCount": 2, "status": "stable", "stable": true, "variable": false, "observedStatuses": ["agreement"], "observedDecisiveCanons": ["TE8D"], "sideCanons": {"recto": ["TE8D"], "verso": ["TE8D"]}, "fingerprintsUnique": 1, "decisionInfluence": false},
+    "variable": {"sampleCount": 2, "status": "variable", "stable": false, "variable": true, "observedStatuses": ["agreement", "conflict"], "observedDecisiveCanons": ["TE8D"], "sideCanons": {"recto": ["TE8D"], "verso": ["TE8D", "TE8I"]}, "fingerprintsUnique": 2, "decisionInfluence": false},
+    "first": {"sampleCount": 1, "status": "first-sample", "stable": false, "variable": false, "observedStatuses": ["agreement"], "observedDecisiveCanons": ["TE8D"], "sideCanons": {"recto": ["TE8D"], "verso": ["TE8D"]}, "fingerprintsUnique": 1, "decisionInfluence": false},
+    "limited": {"sampleCount": 5, "status": "stable", "stable": true, "variable": false, "observedStatuses": ["agreement"], "observedDecisiveCanons": ["TE8D"], "sideCanons": {"recto": ["TE8D"], "verso": ["TE8D"]}, "fingerprintsUnique": 1, "decisionInfluence": false}
+  },
+  "errors": [],
+  "ok": true
+}
