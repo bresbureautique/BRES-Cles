@@ -1,0 +1,12 @@
+BRES CLES V2.28 TEST R155 — CHECKPOINT
+
+- V2.27 reste la version stable séparée et n'est pas remplacée.
+- R155 ajoute un diagnostic ciblé TESA TE8D / TE8I.
+- TE8B est traité comme jeton OCR-pont non canonique : il ne valide jamais une référence.
+- Une nouvelle prise est demandée avant tout contrôle physique.
+- Un contrôle physique n'est recommandé qu'après ambiguïté persistante sur plusieurs cycles de la même clé.
+- Le diagnostic est strictement non décisionnel (decisionInfluence=false).
+- Seuils OCR inchangés : 0,70 / 0,88.
+- Régression complète : 90/90 PASS.
+- Catalogue : 5 103 / 5 103 références uniques, 10/10 blocs canoniques identiques à R154.
+- R116 reste le jalon caméra physiquement validé sur Samsung.
