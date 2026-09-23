@@ -1,0 +1,29 @@
+BRES CLES — CHECKPOINT R142 — DEPENDANCES DE FINALISATION DOCUMENTAIRE
+Date: 2026-09-23
+
+Fait:
+- Ajout d'un graphe de dependances deterministe sur les 1462 identifiants R140-WORK-xxxxx, sans les renumeroter.
+- Controle de 272 actions FINALISER/VERIFIER: 102 finalisations de seance, 102 verifications de seance, 34 finalisations de dossier cle et 34 verifications de dossier cle.
+- FINALISER_SEANCE exige identite de cle + actions de la meme seance de rang inferieur REALISEE.
+- VERIFIER_SEANCE exige en plus la finalisation de seance REALISEE.
+- FINALISER_DOSSIER_CLE exige toutes les actions de rang inferieur de la cle, y compris ses trois seances, REALISEE.
+- VERIFIER_DOSSIER_CLE exige en plus la finalisation du dossier REALISEE.
+- Une regression de dependance rouvre automatiquement les parents completes en A_REFAIRE et journalise l'evenement.
+- Une mise a jour en lot peut realiser prerequis puis parent dans le meme lot selon l'ordre R140; un echec ne modifie pas l'etat d'entree.
+
+Verifications:
+- Nouveaux tests R142: 2/2 PASS.
+- Regression ciblee R137-R142: 12/12 PASS.
+- Regression catalogue complete: 37/37 PASS.
+- Catalogue: 5103 references / 5103 uniques.
+- 10/10 blocs catalogue: SHA-256 inchanges depuis R141.
+- Runtime: V2.28 TEST R116 inchange.
+- Stable: V2.27 non modifiee.
+
+Frontiere de securite fonctionnelle:
+- Dependances documentaires uniquement.
+- Aucun seuil physique, score de reconnaissance, candidat gagnant ou validation automatique.
+- evidence_credit reste a 0; canonical_catalogue_write_allowed et runtime_mutation_allowed restent false.
+
+Blocage application restant:
+- Le comportement reel des 4 declencheurs photo exige toujours un test physique Samsung.
