@@ -1,0 +1,32 @@
+BRES CLES — CHECKPOINT R135
+
+Objectif atteint:
+- les 17 paires critiques disposent maintenant d'une file de collecte exploitable
+- chaque paire exige 2 clés physiques indépendantes
+- chaque clé créditée exige 3 séances recto/verso documentées et traçables
+- les dossiers rejetés ou incomplets ne reçoivent aucun crédit
+- les données synthétiques de test ne comptent jamais comme preuve physique réelle
+- la file indique exactement le nombre de clés physiques et de séances encore manquantes
+
+État physique réel au jalon R135:
+- 17 paires critiques suivies
+- 34 clés physiques indépendantes requises au total
+- 102 séances documentées requises au total
+- 0 clé physique réelle traçable actuellement créditée
+- 0 séance physique réelle actuellement créditée
+- reste à collecter: 34 clés et 102 séances
+
+Séparation des responsabilités:
+- V2.28 TEST R116 runtime: inchangé
+- catalogue canonique: inchangé
+- R135: planification documentaire de collecte séparée
+- V2.27 stable: ne doit pas être modifiée
+
+Tests:
+- nouveaux R135: 2/2 OK
+- régression catalogue: 25/25 OK
+- garde statique 4 déclencheurs photo: OK
+- garde caméra native R116: OK
+
+Limite connue:
+- le comportement réel des quatre boutons photo sur Samsung nécessite toujours un test physique.
