@@ -1,0 +1,54 @@
+{
+  "schema": "bres-live-diagnostic-observation-sufficiency-contract-r129-v1",
+  "milestone": "BRES Cles catalogue audit R129",
+  "active_test_runtime": "V2.28 TEST R116",
+  "source_registry_schema": "bres-live-diagnostic-pair-registry-r127-v1",
+  "source_repeatability_schema": "bres-live-diagnostic-repeatability-report-r128-v1",
+  "purpose": "Classify documentation coverage for diagnostic review using only observation counts and provenance structure. This contract does not judge physical measurements, define tolerances, select a candidate, or validate a reference.",
+  "documentation_requirements": {
+    "within_key_distinct_capture_sessions": 3,
+    "pair_distinct_physical_keys_for_inter_key_review": 2,
+    "required_registry_provenance_fields": [
+      "result_id",
+      "physical_key_id",
+      "source_schema",
+      "ingestion_status",
+      "recto_verso_geometry_signatures.capture_session_id"
+    ],
+    "recto_verso_signature_record_required_per_session": true,
+    "measurement_values_are_ignored": true
+  },
+  "provenance_limit": {
+    "r127_preserves_result_id": true,
+    "r127_preserves_capture_session_ids": true,
+    "r127_preserves_source_capture_sha256": false,
+    "r129_must_not_claim_full_source_file_provenance": true
+  },
+  "allowed_documentation_statuses": [
+    "NO_DATA",
+    "WITHIN_KEY_DOCUMENTATION_INCOMPLETE",
+    "READY_FOR_WITHIN_KEY_DESCRIPTIVE_REVIEW",
+    "READY_FOR_PAIR_DESCRIPTIVE_REVIEW"
+  ],
+  "policy": {
+    "analysis_status": "DOCUMENTATION_ONLY",
+    "decision_authority": "NONE",
+    "policy_status": "A_CONFIRMER",
+    "evidence_status": "MEASURED_UNVALIDATED",
+    "automatic_validation_allowed": false,
+    "canonical_catalogue_write_allowed": false,
+    "runtime_mutation_allowed": false,
+    "acceptance_threshold_authorized": false,
+    "candidate_selection_allowed": false,
+    "physical_measurement_assessment_allowed": false
+  },
+  "forbidden_outputs_or_effects": [
+    "measurement pass/fail verdict",
+    "physical tolerance or threshold",
+    "candidate winner",
+    "VALIDATED status",
+    "catalogue mutation",
+    "runtime mutation",
+    "claim that R127 preserves original capture file hashes"
+  ]
+}
