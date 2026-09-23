@@ -1,0 +1,9 @@
+BRES CLES — LIBRARY ROUNDTRIP R151
+
+Original SHA-256: 9587a0e7ba8d779fd0b5b378848ccc4bb07e0fc5bfac88ddca34fc7107e8acd4
+Library SHA-256:  9587a0e7ba8d779fd0b5b378848ccc4bb07e0fc5bfac88ddca34fc7107e8acd4
+Byte-identical: TRUE
+ZIP integrity after Library materialization: PASS
+Entries: 4406
+Expected test summary present: TRUE
+Expected R151 guard present: TRUE
