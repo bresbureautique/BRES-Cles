@@ -1,0 +1,15 @@
+BRES CLES — TEST SUMMARY R150
+
+Version: V2.28 TEST R150
+Scope: application uniquement ; catalogue separe.
+
+Verification generale: PASS
+Tests: 85/85 PASS
+Erreurs verify_build: 0
+Garde-fou repetition OCR R150: PASS
+Catalogue: 5103 references / 5103 uniques
+10 blocs canoniques: inchanges (comparaison R40 = TRUE)
+Seuils OCR: 0,70 / 0,88 inchanges
+Decision de reconnaissance: non modifiee par le diagnostic de repetition
+Camera Samsung: logique physiquement validee R116 preservee
+Version stable: V2.27 reste sur main ; aucune promotion de R150 vers main.
