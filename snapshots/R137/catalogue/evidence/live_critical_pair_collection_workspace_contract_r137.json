@@ -1,0 +1,29 @@
+{
+  "schema": "bres-live-critical-pair-collection-workspace-contract-r137-v1",
+  "source_plan_schema": "bres-live-critical-pair-collection-plan-r135-v1",
+  "active_test_runtime": "V2.28 TEST R116",
+  "purpose": "Prepare empty capture workspaces for missing real physical keys without creating evidence or decisions.",
+  "requirements": {
+    "critical_pair_count": 17,
+    "sessions_per_missing_key": 3,
+    "faces_per_session": ["RECTO", "VERSO"],
+    "physical_key_id_initial": null,
+    "real_session_id_initial": null,
+    "capture_id_initial": null,
+    "source_path_initial": null,
+    "source_file_sha256_initial": null,
+    "evidence_credit_initial": 0,
+    "prepared_workspace_counts_as_real_physical_evidence": false
+  },
+  "policy": {
+    "decision_authority": "NONE",
+    "policy_status": "A_CONFIRMER",
+    "canonical_catalogue_write_allowed": false,
+    "runtime_mutation_allowed": false,
+    "automatic_validation_allowed": false,
+    "acceptance_threshold_authorized": false,
+    "candidate_selection_allowed": false,
+    "validated_reference": null,
+    "measurements_used_for_workspace": false
+  }
+}
