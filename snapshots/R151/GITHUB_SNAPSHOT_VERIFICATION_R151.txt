@@ -1,0 +1,26 @@
+BRES CLES — GITHUB SNAPSHOT VERIFICATION R151
+
+Snapshot content verified on branch: v2.28-test-r1
+Anchor commit before this verification record: 29133d991a3b1f29015092675ddcbb051d844e13
+
+Verified present in snapshots/R151:
+- CHECKPOINT_R151.txt
+- TEST_SUMMARY_R151.txt
+- OCR_REPEATABILITY_TOLERANCE_GUARD_TEST_R151.json
+- ocr_repeatability_tolerance_guard_test.py
+- CATALOGUE_CHUNK_COMPARISON_R151.txt
+- R150_TO_R151_RUNTIME_COMPARISON.txt
+- SNAPSHOT_MANIFEST_R151.json
+- PACKAGE_VERIFICATION_R151.txt
+- LIBRARY_ROUNDTRIP_R151.txt
+- SOURCE_HASHES_R151.txt
+- PATCH_RECOVERY_R151.txt
+- PATCH_PARTS_R151.txt
+- R150_TO_R151_SOURCE_PATCH.diff.gz.b64.part00
+- R150_TO_R151_SOURCE_PATCH.diff.gz.b64.part01
+- R150_TO_R151_SOURCE_PATCH.diff.gz.b64.part02
+
+Package verification: 86/86 PASS; ZIP integrity PASS.
+Library roundtrip: byte-identical TRUE; SHA-256 9587a0e7ba8d779fd0b5b378848ccc4bb07e0fc5bfac88ddca34fc7107e8acd4.
+Catalogue canonical chunks: 10/10 unchanged; 5103 references unique.
+Stable branch main verified unchanged at 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8.
