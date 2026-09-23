@@ -1,0 +1,35 @@
+{
+  "schema": "bres-live-critical-pair-collection-progress-hierarchy-contract-r143-v1",
+  "milestone": "BRES Cles catalogue audit R143",
+  "requirements": {
+    "preserve_r140_work_item_ids": true,
+    "hierarchy_order": ["PAIR", "KEY", "SESSION", "FACE"],
+    "critical_pair_count": 17,
+    "key_slot_count": 34,
+    "session_slot_count": 102,
+    "face_slot_count": 204,
+    "next_action_uses_r140_order": true,
+    "finalisation_next_action_respects_r142_dependencies": true,
+    "ready_requires_all_scoped_work_items_realisee": true,
+    "blocked_is_visible": true,
+    "a_refaire_is_visible": true,
+    "hierarchy_is_read_only": true
+  },
+  "policy": {
+    "active_test_runtime": "V2.28 TEST R116",
+    "stable_version": "V2.27",
+    "progress_is_documentary_only": true,
+    "counts_as_real_physical_evidence": false,
+    "evidence_credit": 0,
+    "measurements_used_for_progress": false,
+    "recognition_score_used_for_progress": false,
+    "decision_authority": "NONE",
+    "policy_status": "A_CONFIRMER",
+    "canonical_catalogue_write_allowed": false,
+    "runtime_mutation_allowed": false,
+    "automatic_validation_allowed": false,
+    "acceptance_threshold_authorized": false,
+    "candidate_selection_allowed": false,
+    "validated_reference": null
+  }
+}
