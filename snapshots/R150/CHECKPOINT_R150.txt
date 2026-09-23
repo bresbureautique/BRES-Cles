@@ -1,0 +1,21 @@
+BRES CLES — CHECKPOINT R150
+
+Type: jalon application, separe du catalogue.
+Base: V2.28 TEST R149.
+Version produite: V2.28 TEST R150.
+
+Ajout principal:
+- suivi de répétabilité sur les analyses OCR successives du même cycle photo ;
+- historique borné aux 5 dernières analyses et isolé par identificationEpoch ;
+- comparaison du statut, des meilleurs/seconds candidats, scores et marges par face ;
+- états: première analyse, stable, variable ;
+- candidats observés par face affichés lorsqu’une variation apparaît ;
+- répétabilité incluse dans l’export JSON diagnostic v12.
+
+Garde-fous:
+- diagnostic uniquement, decisionInfluence=false ;
+- aucune écriture de marque/référence ;
+- seuils 0,70 / 0,88 inchangés ;
+- logique caméra physiquement validée R116 conservée ;
+- catalogue canonique non modifié ;
+- V2.27 reste stable sur main.
