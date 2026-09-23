@@ -1,0 +1,31 @@
+{
+  "schema": "bres-live-critical-pair-collection-correction-dependency-contract-r142-v1",
+  "milestone": "R142",
+  "scope": "documentary_dependency_guard_only",
+  "requirements": {
+    "preserve_r140_work_item_ids": true,
+    "finalise_session_only_after_key_identity_and_same_session_lower_phase_items_realisee": true,
+    "verify_session_only_after_session_finalisation_and_lower_phase_items_realisee": true,
+    "finalise_key_only_after_all_lower_phase_items_for_key_realisee": true,
+    "verify_key_only_after_key_finalisation_and_lower_phase_items_realisee": true,
+    "dependency_regression_reopens_completed_parent": true,
+    "batch_update_is_externally_atomic": true
+  },
+  "policy": {
+    "active_test_runtime": "V2.28 TEST R116",
+    "critical_pair_count": 17,
+    "dependency_order_is_documentary_only": true,
+    "counts_as_real_physical_evidence": false,
+    "evidence_credit": 0,
+    "measurements_used_for_dependency": false,
+    "recognition_score_used_for_dependency": false,
+    "decision_authority": "NONE",
+    "policy_status": "A_CONFIRMER",
+    "canonical_catalogue_write_allowed": false,
+    "runtime_mutation_allowed": false,
+    "automatic_validation_allowed": false,
+    "acceptance_threshold_authorized": false,
+    "candidate_selection_allowed": false,
+    "validated_reference": null
+  }
+}
