@@ -1,0 +1,11 @@
+BRES CLES V2.28 TEST R156 — CHECKPOINT
+
+- V2.27 reste la version stable séparée et n'est pas remplacée.
+- R156 ajoute une synthèse simple du protocole multi-prises : RÉSULTAT RÉPÉTABLE, REFAIRE UNE PRISE ou CONTRÔLE PHYSIQUE NÉCESSAIRE.
+- Les preuves OCR ayant conduit à la recommandation sont conservées dans l'export JSON : texte/confiance par face, candidats, ambiguïtés, conflits, cycles, récurrences et famille critique.
+- TE8B reste un jeton OCR-pont non canonique ; TE8D / TE8I restent les canons suivis.
+- La synthèse est strictement non décisionnelle (decisionInfluence=false).
+- Seuils OCR inchangés : 0,70 / 0,88.
+- Régression complète : 91/91 PASS.
+- Catalogue : 5103 / 5103 références uniques, 10/10 blocs canoniques identiques à R155.
+- R116 reste le jalon caméra physiquement validé sur Samsung.
