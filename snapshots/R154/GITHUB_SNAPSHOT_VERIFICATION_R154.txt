@@ -1,0 +1,20 @@
+BRES CLES — GITHUB SNAPSHOT VERIFICATION R154
+
+Branche: v2.28-test-r1
+Commit vérifié avant ajout de ce rapport: a292e221172e41c642d6aa00431b5548fcc65bed
+Dossier: snapshots/R154
+Fichiers vérifiés présents: 10
+- ALL_TESTS_R154.txt
+- CATALOGUE_CHUNK_COMPARISON_R154.txt
+- CHECKPOINT_R154.txt
+- FEATURE_SESSION_GUARD_CORE_R154.js
+- LIBRARY_ROUNDTRIP_R154.txt
+- OCR_CAPTURE_SESSION_GUARD_TEST_R154.txt
+- PACKAGE_VERIFICATION_R154.txt
+- SOURCE_HASHES_R154.txt
+- TEST_SUMMARY_R154.txt
+- ocr_capture_session_guard_test.py
+
+Branche stable main observée séparément: 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8 (V2.27).
+Aucune écriture sur main pendant R154.
+RESULTAT: PASS
