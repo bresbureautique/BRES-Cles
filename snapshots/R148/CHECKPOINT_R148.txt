@@ -1,0 +1,8 @@
+BRES CLÉS V2.28 TEST R148 — CHECKPOINT ACTIF
+
+V2.27 reste la version stable et ne doit jamais être remplacée par ce test.
+R116 reste le jalon caméra physiquement validé sur Samsung : Recto guidé, Verso guidé, Importer recto et Importer verso fonctionnent.
+R148 part de R147 et ajoute un diagnostic OCR lisible à l’écran après une lecture recto + verso : texte par face, confiance, fabricant détecté, candidats proches, meilleur candidat et motifs précis bloquant une validation automatique.
+Ce diagnostic est strictement non décisionnel : il n’écrit ni marque ni référence, ne change aucun seuil et n’altère pas la décision finale.
+Les seuils 0,70 / 0,88, le budget 25 s, le timeout 7 s et le garde-fou d’ambiguïté restent inchangés.
+La base catalogue reste séparée et les 10 blocs canoniques ne sont pas modifiés.
