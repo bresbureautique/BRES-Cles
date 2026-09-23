@@ -5,6 +5,7 @@ import sys
 ROOT = Path(__file__).resolve().parent
 module = (ROOT / "physical_collection_batch_ingestor_r133.py").read_text(encoding="utf-8")
 contract = json.loads((ROOT / "catalogue/evidence/live_physical_collection_batch_ingestion_contract_r133.json").read_text(encoding="utf-8"))
+
 checks = {
     "contract_schema_exact": contract.get("schema") == "bres-live-physical-collection-batch-ingestion-contract-r133-v1",
     "runtime_r116_declared": contract.get("active_test_runtime") == "V2.28 TEST R116",
@@ -32,4 +33,18 @@ checks = {
     "module_no_catalogue_write_api": "write_catalogue" not in module and "save_catalogue" not in module,
     "module_keeps_validated_reference_null": '"validated_reference": None' in module,
 }
-errors=[k for k,v in checks.items() if not v]; out={"schema":"bres-live-physical-collection-batch-boundary-guard-r133-v1","milestone":"BRES Cles catalogue audit R133","checks":checks,"errors":errors,"ok":not errors}; print(json.dumps(out,ensure_ascii=False,indent=2)); sys.exit(1 if errors else 0)
+errors = [k for k, v in checks.items() if not v]
+out = {
+    "schema": "bres-live-physical-collection-batch-boundary-guard-r133-v1",
+    "milestone": "BRES Cles catalogue audit R133",
+    "checks": checks,
+    "errors": errors,
+    "ok": not errors,
+}
+(ROOT / "CATALOGUE_LIVE_PHYSICAL_COLLECTION_BATCH_BOUNDARY_GUARD_R133.json").write_text(json.dumps(out, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+(ROOT / "CATALOGUE_LIVE_PHYSICAL_COLLECTION_BATCH_BOUNDARY_GUARD_R133.txt").write_text(
+    "\n".join(["BRES CLES — GARDE-FEU MULTI-DOSSIERS R133", ""] + [("OK  " + k if v else "ECHEC  " + k) for k, v in checks.items()] + ["", "SELFTEST OK" if not errors else "SELFTEST ECHEC"]) + "\n",
+    encoding="utf-8",
+)
+print(json.dumps(out, ensure_ascii=False, indent=2))
+sys.exit(1 if errors else 0)
