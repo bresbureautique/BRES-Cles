@@ -1,0 +1,34 @@
+BRES CLES — R149 -> R150 RUNTIME COMPARISON
+
+Base: V2.28 TEST R149
+Cible: V2.28 TEST R150
+
+index.html:
+  R149 1fd7d6e27f6415be2bf9bce53201395c53b4a56b2d815001e109dd745152a353
+  R150 3e87d5512347523fdb0b7aa14de31b81b0d369009c090f0146e7f9df9340ca5c
+  status: CHANGED
+v228-catalogue.js:
+  R149 76e843b9976014eb6446342f90e6bcb10b16b007a3f9948a0fb79fd30993b9c4
+  R150 c437d7ab0088de7b9072156ce3d024f0f833f89733854bb616de3839528355e5
+  status: CHANGED
+CHECKPOINT.txt:
+  R149 29137e149708706dc9abc9327db15ea996a084c45e67782988bb670e35e78cac
+  R150 7443a3777f7266f5fda5ebe12887aa37b45ba766a56845f9824fd579a63dda88
+  status: CHANGED
+LISEZ-MOI.txt:
+  R149 606cd9107020fbf5030ebed967a3fdebcdfd0b296d2a63ac038ab6f2e39ebcbc
+  R150 42c90e0443010ee26e10fe0c5ebe532f9d0f809701abf94e808cddbba74774b3
+  status: CHANGED
+verify_build.py:
+  R149 043e68e2bf8d65f00644567d3e6b6d7c878fc65f8fec62af583776924ff56209
+  R150 e093f4f3a628b72b2745c43c2687a56f2ef8dc189adba1bacba28188b1919140
+  status: CHANGED
+version_consistency_test.py:
+  R149 394d8f2e7fb6532810d8563e5a67976affa0aa74875f45833b98f77155bf1de3
+  R150 5378857eb5275f1f95a7737f817fbfa2549b3db0783d486bf93a7dc82904acaf
+  status: CHANGED
+
+Catalogue canonique: donnees non modifiees ; changements de v228-catalogue.js limites aux marqueurs de version/cache.
+Nouveau fichier: ocr_repeatability_guard_test.py.
+Ajout fonctionnel: diagnostic de repetabilite OCR, borne a 5 analyses et scope par identificationEpoch.
+Aucune influence sur la decision finale (decisionInfluence=false).
