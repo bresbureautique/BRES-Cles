@@ -1,0 +1,10 @@
+BRES CLES — PACKAGE VERIFICATION R151
+
+ZIP: BRES_Cles_Mobile_V2_28_TEST_R151.zip
+SHA-256: 9587a0e7ba8d779fd0b5b378848ccc4bb07e0fc5bfac88ddca34fc7107e8acd4
+Size: 5854572 bytes
+Entries: 4406
+ZIP integrity: PASS
+Required files: PASS
+Build tests: 86/86 PASS
+Catalogue: 5103 references uniques ; 10/10 blocs canoniques inchanges
