@@ -1,0 +1,49 @@
+{
+  "schema": "bres-snapshot-manifest-r139-v1",
+  "milestone": "R139",
+  "scope": "catalogue_collection_correction_sheet_only",
+  "active_test_runtime": "V2.28 TEST R116",
+  "stable_version": "V2.27",
+  "stable_branch": "main",
+  "test_branch": "v2.28-test-r1",
+  "source_completeness": "R138",
+  "source_workspace": "R137",
+  "camera_readiness_checkpoint": "R136",
+  "physical_samsung_test_required": true,
+  "catalogue_rows": 5103,
+  "catalogue_unique_refs": 5103,
+  "catalogue_chunks_unchanged": "10/10",
+  "correction_sheet": {
+    "critical_pairs": 17,
+    "key_level_actions": true,
+    "session_level_actions": true,
+    "face_level_actions": true,
+    "duplicate_provenance_requires_independent_recapture": true,
+    "unknown_reason_kept_for_manual_control": true,
+    "correction_counts_as_evidence": false,
+    "evidence_credit": 0
+  },
+  "new_tests": "2/2",
+  "targeted_regression": "6/6",
+  "catalogue_regression": "31/31",
+  "runtime_mutation": false,
+  "canonical_catalogue_mutation": false,
+  "policy": {
+    "decision_authority": "NONE",
+    "policy_status": "A_CONFIRMER",
+    "automatic_validation_allowed": false,
+    "acceptance_threshold_authorized": false,
+    "candidate_selection_allowed": false
+  },
+  "files": {
+    "correction_sheet_r139.py": {"sha256": "060b188d0ce48524c12a8c89dd08b9c7f0578694b90ed8dd2e7287f9019e0779", "size_bytes": 11070},
+    "catalogue/evidence/live_critical_pair_collection_correction_sheet_contract_r139.json": {"sha256": "b869012acbd2458f9fe062d033f7da8efe5cb42dde4eea2c9d33115a55a68835", "size_bytes": 1331},
+    "catalogue_live_critical_pair_collection_correction_sheet_test.py": {"sha256": "1f7f688b9b684cc09d087dd89dd18649cec31307e0a6cbc48b2b8fe29c13ba2d", "size_bytes": 5747},
+    "catalogue_live_critical_pair_collection_correction_sheet_boundary_guard_test.py": {"sha256": "79f61a275acf6a72c1385e2a712b2ee85f7737ecf32b0445b2e6a3b58922aaf3", "size_bytes": 3974},
+    "R139_TARGETED_REGRESSION.txt": {"sha256": "09c3071e0dfaca8c77d55e7b741d7f54afbbf4a0ce8ba43836c8f223bf48d290", "size_bytes": 520},
+    "ALL_TESTS_R139.txt": {"sha256": "c3c1a70a3cef36a5e2400122f0396c6df368b515890780e83b2bf3b26515bb8d", "size_bytes": 2309},
+    "CATALOGUE_CHUNK_COMPARISON_R139.json": {"sha256": "9cf04b31f867b9fb558a16906dc3427e5ee205dd1b5caa82891dc51dbbba5366", "size_bytes": 2820},
+    "TEST_SUMMARY_R139.txt": {"sha256": "50026202f678cb408a33e2dc0d5db61c0bef2887ee7ff3d99fcb9bb575d47b9f", "size_bytes": 324},
+    "CHECKPOINT_R139.txt": {"sha256": "9d0cd340dacc62fe45a032ef54778ccfa92788864abc144bb40ba04f6d44742c", "size_bytes": 1377}
+  }
+}

@@ -1,0 +1,26 @@
+BRES CLES — CHECKPOINT R139 — FICHE DE CORRECTION DE COLLECTE
+Date: 2026-09-23
+
+Fait:
+- Conversion des motifs techniques de completude R138 en actions explicites par cle, seance et face.
+- Les absences d'identite, d'ID de seance, de recto/verso, de provenance et de SHA-256 produisent des actions de correction dediees.
+- Les reutilisations d'identifiant de capture ou de SHA-256 produisent une action explicite REFAIRE_CAPTURE_INDEPENDANTE.
+- Tout motif futur non connu reste visible via CONTROLER_MANUELLEMENT au lieu d'etre ignore.
+- Le gabarit vide R137 produit une fiche de travail pour les 34 emplacements de cles sans leur attribuer de preuve.
+
+Verifications:
+- Nouveaux tests R139: 2/2 PASS.
+- Regression ciblee R137-R139: 6/6 PASS.
+- Regression catalogue complete: 31/31 PASS.
+- Catalogue: 5103 references / 5103 uniques.
+- 10/10 blocs catalogue: SHA-256 inchanges depuis R138.
+- Runtime: V2.28 TEST R116 inchange.
+- Stable: V2.27 non modifiee.
+
+Frontiere de securite fonctionnelle:
+- La fiche R139 est descriptive uniquement.
+- Aucun seuil physique, aucun score de reconnaissance, aucun candidat gagnant et aucune validation automatique.
+- evidence_credit reste a 0; canonical_catalogue_write_allowed et runtime_mutation_allowed restent false.
+
+Blocage application restant:
+- Le comportement reel des 4 declencheurs photo exige toujours un test physique Samsung.

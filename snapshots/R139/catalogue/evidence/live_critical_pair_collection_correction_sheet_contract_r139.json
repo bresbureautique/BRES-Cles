@@ -1,0 +1,33 @@
+{
+  "schema": "bres-live-critical-pair-collection-correction-sheet-contract-r139-v1",
+  "milestone": "R139",
+  "source_completeness_schema": "bres-live-critical-pair-collection-completeness-r138-v1",
+  "active_test_runtime": "V2.28 TEST R116",
+  "purpose": "Convert R138 documentary completeness reasons into explicit collection correction actions without any recognition or validation authority.",
+  "requirements": {
+    "critical_pair_count": 17,
+    "key_level_actions": true,
+    "session_level_actions": true,
+    "face_level_actions": true,
+    "missing_identity_action": true,
+    "missing_session_action": true,
+    "missing_recto_verso_action": true,
+    "missing_provenance_action": true,
+    "invalid_sha256_action": true,
+    "duplicate_capture_action_requires_independent_recapture": true,
+    "unknown_reason_requires_manual_control": true,
+    "correction_counts_as_real_physical_evidence": false,
+    "evidence_credit": 0,
+    "measurements_used_for_correction": false
+  },
+  "policy": {
+    "decision_authority": "NONE",
+    "policy_status": "A_CONFIRMER",
+    "canonical_catalogue_write_allowed": false,
+    "runtime_mutation_allowed": false,
+    "automatic_validation_allowed": false,
+    "acceptance_threshold_authorized": false,
+    "candidate_selection_allowed": false,
+    "validated_reference": null
+  }
+}
