@@ -1,0 +1,24 @@
+BRES CLES V2.28 TEST R148 — TEST SUMMARY
+
+Application runtime: V2.28 TEST R148
+Base camera: R116 physiquement validee sur Samsung le 2026-09-23.
+Evolution R148: diagnostic OCR lisible a l'ecran + humanSummary dans l'export JSON.
+
+Tests cibles:
+- ocr_human_diagnostic_summary_guard_test.py: PASS
+- camera_native_picker_guard_test.py: PASS
+- version_consistency_test.py: PASS
+- ocr_reference_ambiguity_guard_test.py: PASS
+
+Regression build complete:
+- verify_build.py: PASS
+- 83/83 tests du build
+- 0 erreur
+- catalogue: 5103 references uniques
+- 10/10 blocs canoniques inchanges
+- seuils OCR 0,70 / 0,88 inchanges
+- budget 25 s et timeout 7 s inchanges
+
+Decision:
+R148 est un jalon de test applicatif. V2.27 reste la version stable.
+Le catalogue canonique reste separe et n'est pas modifie par R148.
