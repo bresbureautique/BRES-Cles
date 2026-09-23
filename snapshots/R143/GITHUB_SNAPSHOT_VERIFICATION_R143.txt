@@ -1,0 +1,17 @@
+BRES CLES — GITHUB SNAPSHOT VERIFICATION R143
+Date: 2026-09-23
+Branch: v2.28-test-r1
+Path: snapshots/R143
+
+Exact Git blob matches local files:
+- progress_hierarchy_r143.py: e0e892c8a5acb35bd4148dee25bcbececc9b7e91
+- catalogue/evidence/live_critical_pair_collection_progress_hierarchy_contract_r143.json: 66c0ded74bc06ff7ed617fecc3cfac011cb6a112
+- catalogue_live_critical_pair_collection_progress_hierarchy_test.py: 853c7981fd9e1925363d488a33662d57aa51cce4
+- catalogue_live_critical_pair_collection_progress_hierarchy_boundary_guard_test.py: 770fbf4885e4b18c4e3792cb07a42d84cc4744d2
+- ALL_TESTS_R143.txt: db6671374a65b8539bd090f16df02f52068c91a4
+- CHECKPOINT_R143.txt: 0b2bf445f0415ae29b3693657147f1962c7dd890
+- TEST_SUMMARY_R143.txt: 578a8280cde46bd60f1975e94795d9a76f6a7501
+- SOURCE_HASHES_R143.txt: e1a6c39ba76ec50d8295ec4d7dc0fd8bd21910b1
+
+Verification method: local `git hash-object` equals GitHub Contents API blob SHA.
+Core R143 source, contract, tests, regression record and checkpoints are therefore byte-identical to their local verified copies.
