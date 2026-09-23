@@ -1,0 +1,21 @@
+BRES CLES — TEST SUMMARY R149
+
+Scope: V2.28 application uniquement. Catalogue canonique non modifie.
+Version: V2.28 TEST R149
+Verification complete: PASS
+Regression: 84/84 PASS
+Nouveau garde-fou: ocr_close_reference_diagnostic_guard_test.py PASS
+Catalogue: 5103 references / 5103 uniques
+10 blocs canoniques identiques au baseline: OUI
+Erreurs verify_build: 0
+Fichiers hashes par verify_build: 4370
+
+Cas R149 verifies:
+- TE8D + TE8D => agreement ;
+- TE8D + TE8I => conflict ;
+- TE8B + TE8B => ambiguous avec concurrents ;
+- TE8D + TE8B => ambiguous ;
+- TE8D + face vide => single-support ;
+- marge exacte positive / quasi-egalite nulle ;
+- aucune influence du diagnostic sur la decision finale ;
+- seuils 0,70 / 0,88 inchanges.
