@@ -1,0 +1,20 @@
+BRES CLÉS V2.28 TEST R156 — SYNTHÈSE MULTI-PRISES ET PREUVES OCR
+
+OK  waiting_needs_more
+OK  single_cycle_retake
+OK  repeatable_simple_label
+OK  physical_simple_label
+OK  rejected_series_cannot_be_repeatable
+OK  evidence_keeps_view_text
+OK  evidence_keeps_confidence
+OK  evidence_keeps_rank_context
+OK  evidence_keeps_multi_cycle_sequence
+OK  critical_family_preserved
+OK  diagnostic_only
+OK  visible_status_panel
+OK  export_contains_readiness
+OK  render_called
+OK  thresholds_unchanged
+OK  active_r156
+
+SELFTEST OK
