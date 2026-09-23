@@ -1,0 +1,9 @@
+BRES CLÉS V2.28 TEST R152 — CHECKPOINT ACTIF
+
+V2.27 reste la version stable et n'est pas remplacée.
+R152 ajoute une série multi-prises volontaire, séparée du suivi de répétabilité du même cycle photo.
+La série est inactive par défaut ; elle doit être démarrée explicitement pour éviter de comparer deux clés différentes.
+Une seule observation est conservée par cycle de photos. Le diagnostic classe la série en résultat stable, OCR instable ou ambiguïté physique persistante suspectée.
+Aucun de ces états ne modifie la décision de reconnaissance. Les seuils OCR 0,70 / 0,88 restent inchangés.
+Le chemin caméra Samsung validé physiquement en R116 est conservé.
+La base catalogue canonique reste séparée : 5 103 références et 10 blocs inchangés.
