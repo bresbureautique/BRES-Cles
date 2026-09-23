@@ -1,0 +1,35 @@
+{
+  "schema": "bres-live-critical-pair-collection-checkpoint-delta-contract-r145-v1",
+  "milestone": "BRES Cles catalogue audit R145",
+  "requirements": {
+    "inputs_are_integrity_valid_r144_checkpoints": true,
+    "same_r140_queue_required": true,
+    "same_work_item_order_required": true,
+    "correction_sheet_drift_is_reported_not_silently_ignored": true,
+    "history_must_be_append_only": true,
+    "event_sequence_must_not_regress": true,
+    "status_change_count_must_not_regress": true,
+    "changed_work_items_are_reported_deterministically": true,
+    "transition_counts_are_reported": true,
+    "added_history_events_are_reported": true,
+    "report_has_sha256_integrity_fingerprint": true,
+    "comparison_is_read_only": true
+  },
+  "policy": {
+    "active_test_runtime": "V2.28 TEST R116",
+    "stable_version": "V2.27",
+    "checkpoint_delta_is_documentary_only": true,
+    "counts_as_real_physical_evidence": false,
+    "evidence_credit": 0,
+    "measurements_used_for_delta": false,
+    "recognition_score_used_for_delta": false,
+    "decision_authority": "NONE",
+    "policy_status": "A_CONFIRMER",
+    "canonical_catalogue_write_allowed": false,
+    "runtime_mutation_allowed": false,
+    "automatic_validation_allowed": false,
+    "acceptance_threshold_authorized": false,
+    "candidate_selection_allowed": false,
+    "validated_reference": null
+  }
+}
