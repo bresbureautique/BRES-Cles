@@ -1,0 +1,5 @@
+BRES CLES — COMPARAISON BLOCS CATALOGUE R141
+
+Catalogue: 5103 references / 5103 uniques.
+Blocs inchanges depuis R140: 10/10.
+RESULTAT OK

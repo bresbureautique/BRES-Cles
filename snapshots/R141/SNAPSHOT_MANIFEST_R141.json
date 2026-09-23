@@ -1,0 +1,46 @@
+{
+  "schema": "bres-snapshot-manifest-r141-v1",
+  "milestone": "R141",
+  "scope": "catalogue_collection_correction_state_tracking_only",
+  "active_test_runtime": "V2.28 TEST R116",
+  "stable_version": "V2.27",
+  "stable_branch": "main",
+  "test_branch": "v2.28-test-r1",
+  "source_work_queue": "R140",
+  "source_correction_sheet": "R139",
+  "source_completeness": "R138",
+  "source_workspace": "R137",
+  "camera_readiness_checkpoint": "R136",
+  "physical_samsung_test_required": true,
+  "catalogue_rows": 5103,
+  "catalogue_unique_refs": 5103,
+  "catalogue_chunks_unchanged": "10/10",
+  "correction_state": {
+    "work_items": 1462,
+    "allowed_statuses": ["A_FAIRE", "REALISEE", "A_REFAIRE", "BLOQUEE"],
+    "initial_status_counts": {"A_FAIRE": 1462, "A_REFAIRE": 0, "BLOQUEE": 0, "REALISEE": 0},
+    "preserve_r140_work_item_ids": true,
+    "completion_requires_current_issue_absent": true,
+    "automatic_reopen_to_redo_when_issue_reappears": true,
+    "source_queue_drift_rejected": true,
+    "evidence_credit": 0
+  },
+  "new_tests": "2/2",
+  "targeted_regression": "10/10",
+  "catalogue_regression": "35/35",
+  "runtime_mutation": false,
+  "canonical_catalogue_mutation": false,
+  "policy": {
+    "decision_authority": "NONE",
+    "policy_status": "A_CONFIRMER",
+    "automatic_validation_allowed": false,
+    "acceptance_threshold_authorized": false,
+    "candidate_selection_allowed": false
+  },
+  "large_generated_state": {
+    "file": "CATALOGUE_LIVE_CRITICAL_PAIR_COLLECTION_CORRECTION_STATE_EMPTY_R141.json",
+    "sha256": "eb9438e280b7e2a49a22c63fc89326084fa35b21f41654338e90bcbf6b561579",
+    "size_bytes": 1524659,
+    "included_in_library_zip": true
+  }
+}

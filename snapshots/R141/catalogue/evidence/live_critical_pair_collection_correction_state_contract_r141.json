@@ -1,0 +1,37 @@
+{
+  "schema": "bres-live-critical-pair-collection-correction-state-contract-r141-v1",
+  "milestone": "R141",
+  "source_queue_schema": "bres-live-critical-pair-collection-correction-work-queue-r140-v1",
+  "source_correction_schema": "bres-live-critical-pair-collection-correction-sheet-r139-v1",
+  "active_test_runtime": "V2.28 TEST R116",
+  "purpose": "Persist and safely resume R140 work item states while requiring the corresponding current R139 issue to be resolved before any item can be marked REALISEE.",
+  "requirements": {
+    "critical_pair_count": 17,
+    "preserve_r140_work_item_ids": true,
+    "allowed_statuses": ["A_FAIRE", "REALISEE", "A_REFAIRE", "BLOQUEE"],
+    "completion_requires_current_issue_absent": true,
+    "automatic_reopen_to_redo_when_issue_reappears": true,
+    "duplicate_update_in_same_batch_rejected": true,
+    "duplicate_source_work_item_ids_rejected": true,
+    "duplicate_semantic_actions_rejected": true,
+    "invalid_state_transitions_rejected": true,
+    "blocked_status_requires_reason": true,
+    "source_queue_drift_rejected": true,
+    "source_item_provenance_hashes_verified": true,
+    "atomic_update_batch": true,
+    "completion_counts_as_real_physical_evidence": false,
+    "evidence_credit": 0,
+    "measurements_used_for_state": false,
+    "recognition_score_used_for_state": false
+  },
+  "policy": {
+    "decision_authority": "NONE",
+    "policy_status": "A_CONFIRMER",
+    "canonical_catalogue_write_allowed": false,
+    "runtime_mutation_allowed": false,
+    "automatic_validation_allowed": false,
+    "acceptance_threshold_authorized": false,
+    "candidate_selection_allowed": false,
+    "validated_reference": null
+  }
+}

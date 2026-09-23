@@ -1,0 +1,25 @@
+BRES CLES — COMPARAISON R140 -> R141
+Date: 2026-09-23
+
+R140 fournissait une file de correction deterministe avec des identifiants R140-WORK-xxxxx.
+R141 ajoute un suivi d'etat persistant et reprenable sans regenerer ces identifiants.
+
+Ajouts R141:
+- quatre etats documentaires explicites: A_FAIRE, REALISEE, A_REFAIRE, BLOQUEE;
+- une action ne peut devenir REALISEE que si l'anomalie R139 correspondante a reellement disparu de la fiche courante;
+- une anomalie qui reapparait rouvre automatiquement l'action REALISEE en A_REFAIRE;
+- une action BLOQUEE exige un motif explicite;
+- les doublons de mise a jour, identifiants source dupliques, actions semantiques dupliquees et transitions invalides sont refuses;
+- reprise apres serialisation JSON sans perte des R140-WORK-xxxxx, des statuts ni de l'historique;
+- empreinte SHA-256 de la file source R140 et de chaque item pour detecter une derive de provenance;
+- journal d'evenements R141-EVENT-xxxxxx, sans credit de preuve.
+
+Invariants:
+- aucun score de reconnaissance;
+- aucune mesure physique utilisee pour le suivi d'etat;
+- aucun seuil d'acceptation;
+- aucune selection de candidat;
+- aucune validation automatique;
+- aucun credit de preuve;
+- aucune mutation du runtime V2.28 TEST R116;
+- aucun changement des 10 blocs canoniques du catalogue.

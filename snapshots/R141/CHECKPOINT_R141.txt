@@ -1,0 +1,28 @@
+BRES CLES — CHECKPOINT R141 — SUIVI D'ETAT DES CORRECTIONS
+Date: 2026-09-23
+
+Fait:
+- Conservation stricte des 1462 identifiants R140-WORK-xxxxx de la file source.
+- Ajout des statuts A_FAIRE / REALISEE / A_REFAIRE / BLOQUEE avec journal R141-EVENT-xxxxxx.
+- REALISEE est refuse si l'anomalie R139 correspondante existe encore dans la fiche courante.
+- Une anomalie reapparue rouvre automatiquement une action REALISEE en A_REFAIRE.
+- BLOQUEE exige un motif; doublons de mise a jour et transitions invalides sont refuses.
+- Empreinte SHA-256 de la file R140 et de chaque item source pour controler la provenance et refuser une derive.
+- Reprise apres serialisation JSON verifiee sans perte des identifiants, statuts ni historique.
+
+Verifications:
+- Nouveaux tests R141: 2/2 PASS.
+- Regression ciblee R137-R141: 10/10 PASS.
+- Regression catalogue complete: 35/35 PASS.
+- Catalogue: 5103 references / 5103 uniques.
+- 10/10 blocs catalogue: SHA-256 inchanges depuis R140.
+- Runtime: V2.28 TEST R116 inchange.
+- Stable: V2.27 non modifiee.
+
+Frontiere de securite fonctionnelle:
+- Le statut R141 reste documentaire et ne constitue pas une preuve physique.
+- Aucun seuil physique, score de reconnaissance, candidat gagnant ou validation automatique.
+- evidence_credit reste a 0; canonical_catalogue_write_allowed et runtime_mutation_allowed restent false.
+
+Blocage application restant:
+- Le comportement reel des 4 declencheurs photo exige toujours un test physique Samsung.

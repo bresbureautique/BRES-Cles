@@ -1,0 +1,13 @@
+BRES CLES — PACKAGE SCOPE R141
+
+Scope: catalogue / suivi documentaire de collecte uniquement.
+Runtime applicatif actif: V2.28 TEST R116, non modifie.
+Version stable: V2.27, non modifiee.
+
+Nouveaux composants:
+- correction_state_tracker_r141.py
+- catalogue/evidence/live_critical_pair_collection_correction_state_contract_r141.json
+- catalogue_live_critical_pair_collection_correction_state_test.py
+- catalogue_live_critical_pair_collection_correction_state_boundary_guard_test.py
+
+R141 conserve les identifiants de travail R140 et gere uniquement leur etat documentaire. Il ne reconnait pas une cle, ne selectionne pas un candidat et ne valide aucune reference catalogue.
