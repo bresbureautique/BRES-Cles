@@ -1,0 +1,24 @@
+BRES CLES V2.28 TEST R147 — TEST SUMMARY
+
+Application runtime: V2.28 TEST R147
+Base camera: R116 physiquement validee sur Samsung le 2026-09-23.
+Evolution R147: export du diagnostic OCR apres l'analyse principale recto + verso.
+
+Tests cibles:
+- main_ocr_diagnostic_export_guard_test.py: PASS (4/4)
+- camera_native_picker_guard_test.py: PASS
+- version_consistency_test.py: PASS
+- ocr_maker_consensus_guard_test.py: PASS
+
+Regression build complete:
+- verify_build.py: PASS
+- 82/82 tests du build
+- 0 erreur
+- catalogue: 5103 references uniques
+- 10/10 blocs canoniques inchanges
+- seuils OCR 0,70 / 0,88 inchanges
+- budget 25 s et timeout 7 s inchanges
+
+Decision:
+R147 est un jalon de test applicatif. V2.27 reste la version stable.
+Le catalogue R145 reste separe et n'est pas modifie par R147.
