@@ -125,6 +125,9 @@ def _executable_ids(reconciled_items: List[Dict[str, Any]], dependency_report: D
         action = _text(item.get("action")).upper()
         if action in _FINAL_ACTIONS and not dependency_ready.get(item.get("work_item_id"), False):
             continue
+        # An issue must still be active before documentary work is presented as actionable.
+        # Final actions may become actionable because their dependency chain is ready even
+        # when their own issue flag is represented indirectly by R139/R141.
         if item.get("issue_active") is False and action not in _FINAL_ACTIONS:
             continue
         executable.add(item["work_item_id"])
@@ -132,7 +135,12 @@ def _executable_ids(reconciled_items: List[Dict[str, Any]], dependency_report: D
 
 
 def build_progress_hierarchy(state: Dict[str, Any], work_queue: Dict[str, Any], current_correction_sheet: Dict[str, Any]) -> Dict[str, Any]:
-    """Build a read-only pair -> key -> session -> face progress view."""
+    """Build a read-only pair -> key -> session -> face progress view.
+
+    R143 does not create or complete work. It reconciles R141/R142 state, projects
+    it into a deterministic hierarchy, and points to the next documentary action
+    that is actually executable under the existing R142 dependency guard.
+    """
     _policy_guard(work_queue)
     reconciled = r142.reconcile_dependency_state(state, work_queue, current_correction_sheet)
     items = reconciled.get("items", [])
@@ -145,6 +153,7 @@ def build_progress_hierarchy(state: Dict[str, Any], work_queue: Dict[str, Any], 
     if set(queue_by_id) != {item.get("work_item_id") for item in items}:
         raise ValueError("r143_work_item_id_set_mismatch")
 
+    # Merge immutable R140 ordering/instruction fields with current R141/R142 status.
     merged_items: List[Dict[str, Any]] = []
     state_by_id = {item["work_item_id"]: item for item in items}
     for source in work_queue["items"]:
