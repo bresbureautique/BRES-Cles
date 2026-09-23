@@ -1,0 +1,14 @@
+BRES CLES — LIBRARY ROUNDTRIP VERIFICATION R136
+
+Library destination: /BRES Cles/Sauvegardes
+Snapshot: BRES_Cles_Camera_Readiness_R136.zip
+Library file id: file_000000006c64820ca57572524589de9a
+Local SHA-256: 4d913e72c8bff48b824d6e864c1d1aac456a2369588152732704077800e4db28
+Materialized SHA-256: 4d913e72c8bff48b824d6e864c1d1aac456a2369588152732704077800e4db28
+Byte-identical roundtrip: PASS
+ZIP integrity after materialization: PASS
+
+Source application R135 SHA-256: 0695547933428b177993fe21f698d965619467c7abacd76bedd7fd405a4aa4b7
+Source catalogue R135 SHA-256: 3345b2d91e02a9a10756d53758c7ee6d5f25578971c15fcb5a690012b62645e6
+
+Result: Library R136 readiness snapshot verified.
