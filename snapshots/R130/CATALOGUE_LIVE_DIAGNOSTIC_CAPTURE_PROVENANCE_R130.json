@@ -1,0 +1,18 @@
+{
+  "schema": "bres-live-diagnostic-capture-provenance-test-r130-v1",
+  "milestone": "BRES Cles catalogue audit R130",
+  "checks": {
+    "accepted_packet_promoted_with_provenance": true,
+    "source_packet_not_mutated": true,
+    "exactly_six_capture_records_preserved": true,
+    "capture_ids_preserved": true,
+    "source_hashes_preserved_lowercase": true,
+    "packet_and_provenance_digests_present": true,
+    "no_decision_authority_added": true,
+    "no_runtime_catalogue_or_threshold_authority": true,
+    "reused_source_file_rejected": true,
+    "invalid_source_hash_rejected": true
+  },
+  "errors": [],
+  "ok": true
+}
