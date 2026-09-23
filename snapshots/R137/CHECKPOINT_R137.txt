@@ -1,0 +1,22 @@
+BRES CLES — CHECKPOINT R137 — ESPACES DE COLLECTE PHYSIQUE
+Date: 2026-09-23
+
+Fait:
+- Générateur séparé de gabarits de collecte pour les 17 paires critiques à partir de la file R135.
+- Pour l'état actuel vide de preuves physiques: 34 emplacements de clés, 102 séances, 204 emplacements photo RECTO/VERSO.
+- Les emplacements restent non probants: physical_key_id, real_session_id, capture_id, source_path et source_file_sha256 sont NULL.
+- Aucun emplacement préparé ne reçoit de crédit de preuve.
+- Les données synthétiques ne peuvent pas alimenter un espace de collecte réelle.
+- Une paire déjà suffisamment documentée ne reçoit pas de nouvel emplacement artificiel.
+
+Vérifications:
+- Nouveaux tests: 2/2 PASS.
+- Régression catalogue: 27/27 PASS.
+- Catalogue: 5103 références / 5103 uniques.
+- 10/10 blocs catalogue: SHA-256 inchangés depuis R135.
+- Runtime: V2.28 TEST R116 inchangé.
+- Stable: V2.27 non modifiée.
+
+Blocage application restant:
+- R136 a confirmé la préparation logicielle; le comportement réel des 4 déclencheurs photo exige maintenant un test physique Samsung.
+- R137 n'essaie pas de contourner ce test et n'altère ni runtime, ni OCR, ni catalogue canonique.
