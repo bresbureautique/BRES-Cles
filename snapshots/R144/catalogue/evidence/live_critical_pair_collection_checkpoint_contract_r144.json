@@ -1,0 +1,35 @@
+{
+  "schema": "bres-live-critical-pair-collection-checkpoint-contract-r144-v1",
+  "milestone": "BRES Cles catalogue audit R144",
+  "requirements": {
+    "preserve_r140_work_item_ids": true,
+    "compact_export_omits_immutable_r140_item_payload": true,
+    "export_records_mutable_status_block_reason_and_change_count": true,
+    "export_records_history_and_next_event_sequence": true,
+    "checkpoint_payload_has_sha256_integrity_guard": true,
+    "resume_requires_same_r140_queue": true,
+    "resume_requires_same_r139_correction_sheet": true,
+    "reconstructed_r141_r142_state_must_match_export_sha256": true,
+    "dependency_projection_must_match_export_sha256": true,
+    "r143_hierarchy_projection_must_match_export_sha256": true,
+    "next_executable_work_item_id_must_match": true,
+    "resume_is_read_only_with_respect_to_runtime_and_catalogue": true
+  },
+  "policy": {
+    "active_test_runtime": "V2.28 TEST R116",
+    "stable_version": "V2.27",
+    "checkpoint_is_documentary_only": true,
+    "counts_as_real_physical_evidence": false,
+    "evidence_credit": 0,
+    "measurements_used_for_checkpoint": false,
+    "recognition_score_used_for_checkpoint": false,
+    "decision_authority": "NONE",
+    "policy_status": "A_CONFIRMER",
+    "canonical_catalogue_write_allowed": false,
+    "runtime_mutation_allowed": false,
+    "automatic_validation_allowed": false,
+    "acceptance_threshold_authorized": false,
+    "candidate_selection_allowed": false,
+    "validated_reference": null
+  }
+}
