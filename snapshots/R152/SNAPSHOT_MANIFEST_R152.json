@@ -1,0 +1,33 @@
+{
+  "schema": "bres-r152-snapshot-manifest-v1",
+  "milestone": "V2.28 TEST R152",
+  "scope": "application",
+  "tests": {"pass": 87, "total": 87},
+  "catalogue": {"references": 5103, "unique": 5103, "canonical_chunks_unchanged": true},
+  "ocr_thresholds": {"prefill": 0.7, "decision": 0.88},
+  "stable_main_commit": "9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8",
+  "camera_physical_validation_baseline": "R116",
+  "feature": {
+    "capture_series_default_active": false,
+    "max_cycles": 5,
+    "one_observation_per_cycle": true,
+    "decision_influence": false,
+    "states": ["stable", "ocr-unstable", "physical-ambiguity-suspected"]
+  },
+  "library_package": {
+    "name": "BRES_Cles_Mobile_V2_28_TEST_R152.zip",
+    "sha256": "532e309933fa019443b3d8e79362812f2d454d7ac8a6066bd36ad0237fb603b9",
+    "zip_entries": 4423,
+    "roundtrip_verified": true
+  },
+  "critical_sha256": {
+    "index.html": "8970eee66a85883c130559166240a15269f81b27470aa8e24a98935b79474bf7",
+    "v228-catalogue.js": "739b7f544269bc7c32e5dd662c0732610f9b154a20ef272515e5ce14fc818262",
+    "LISEZ-MOI.txt": "b253f3c61ee04db260c156c70dd431401d2cb4f03d062ad10ad7b48b8b7e09e6",
+    "CHECKPOINT.txt": "d25daa55bf6466c900bdd329057f12fa0914b44032884268b008335a80308d71",
+    "verify_build.py": "69392643fb929ef073488654fdb5aabf45ca6aa47d006ce8eb92d50442f8b5e5",
+    "version_consistency_test.py": "7813bbe796771cf92ae777f90663055e99b8ac6e8501d70476f350ef7c4fde31",
+    "ocr_capture_series_guard_test.py": "3566ab292804b4341d22ea9558116d519e9955a699f3298343c6cc910a0d9535",
+    "OCR_CAPTURE_SERIES_GUARD_TEST_R152.json": "afee65733b8519d4bd0efd02e05ed50a26c05515b29d389463d96b79306103d0"
+  }
+}
