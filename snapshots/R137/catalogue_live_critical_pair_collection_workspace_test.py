@@ -37,6 +37,7 @@ checks = {
     "runtime_is_r116_and_workspace_is_non_authoritative": out["active_test_runtime"] == "V2.28 TEST R116" and out["decision_authority"] == "NONE" and out["policy_status"] == "A_CONFIRMER" and out["validated_reference"] is None and out["canonical_catalogue_write_allowed"] is False and out["runtime_mutation_allowed"] is False and out["automatic_validation_allowed"] is False and out["acceptance_threshold_authorized"] is False and out["candidate_selection_allowed"] is False,
 }
 
+# A row already satisfied by documented real keys must not get a fake new slot.
 partial = copy.deepcopy(plan)
 row = partial["collection_queue"][0]
 row["missing_independent_physical_keys"] = 0
@@ -45,6 +46,7 @@ row["collection_action"] = "NO_ADDITIONAL_COLLECTION_REQUIRED_FOR_DESCRIPTIVE_RE
 partial_out = mod.build_collection_workspace(partial)
 checks["satisfied_pair_gets_no_empty_slot"] = len(partial_out["workspaces"][0]["prepared_key_slots"]) == 0 and partial_out["prepared_missing_key_slots"] == 32
 
+# Prepared workspaces may only originate from a REAL_PHYSICAL collection plan.
 bad_origin = copy.deepcopy(plan)
 bad_origin["evidence_origin"] = "SYNTHETIC_TEST"
 try:
@@ -53,6 +55,7 @@ try:
 except ValueError as exc:
     checks["synthetic_plan_is_rejected_for_real_capture_workspace"] = "real_physical" in str(exc)
 
+# Spoofed authority is rejected before any workspace is created.
 bad_authority = copy.deepcopy(plan)
 bad_authority["collection_queue"][0]["validated_reference"] = bad_authority["collection_queue"][0]["candidate_pair"]["a"]
 try:
