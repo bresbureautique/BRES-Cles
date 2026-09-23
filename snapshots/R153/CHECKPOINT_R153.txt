@@ -1,0 +1,11 @@
+BRES CLES V2.28 TEST R153 — CHECKPOINT FINAL
+
+Scope: application only. Canonical catalogue data remains separate and unchanged.
+Feature: multi-cycle OCR diagnostic protocol for recurrence, candidate/status changes and persistent ambiguity.
+Safety: diagnostic only; decisionInfluence=false; OCR thresholds 0.70 / 0.88 unchanged.
+Regression: 88/88 PASS, including the new R153 protocol guard and all 87 R152 legacy tests.
+Catalogue separation: 5103 rows, 5103 unique references, 10/10 canonical chunks unchanged.
+Physical camera baseline: R116 remains the Samsung-validated camera baseline.
+Stable version protection: V2.27 remains untouched on main.
+
+Decision: R153 is promoted from CANDIDATE to a completed application test milestone.
