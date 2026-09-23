@@ -1,0 +1,18 @@
+BRES CLES V2.28 TEST R155 — GITHUB SNAPSHOT VERIFICATION
+
+Branch: v2.28-test-r1
+Snapshot commit before this verification record: 6dc5fa24ab3b47b25fc3916eae50261b73fa0fc0
+
+Verified snapshot files:
+- snapshots/R155/CHECKPOINT_R155.txt
+- snapshots/R155/TEST_SUMMARY_R155.txt
+- snapshots/R155/OCR_CRITICAL_FAMILY_PROTOCOL_GUARD_TEST_R155.txt
+- snapshots/R155/CATALOGUE_CHUNK_COMPARISON_R155.txt
+- snapshots/R155/SOURCE_HASHES_R155.txt
+- snapshots/R155/LIBRARY_ROUNDTRIP_R155.txt
+- snapshots/R155/PACKAGE_VERIFICATION_R155.txt
+
+Package SHA-256: ee724cbb739503a48b4b66e957fcba295d1cfcd42a51b0d53e89278928d5119c
+Regression: 90/90 PASS
+Catalogue: 5103/5103, 10/10 canonical chunks unchanged
+Stable main V2.27 intentionally untouched.
