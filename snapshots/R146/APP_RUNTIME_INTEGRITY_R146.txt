@@ -1,0 +1,21 @@
+BRES CLES — APP RUNTIME INTEGRITY R146
+
+Scope: application uniquement.
+
+Runtime physique valide: V2.28 TEST R116.
+Commit R116 de reference: 37b816753a4e...
+Blob Git index.html au jalon R116:
+3f339215135531f9b52b174e4c641fd944896b05
+
+Blob Git index.html sur v2.28-test-r1 avant enregistrement R146:
+3f339215135531f9b52b174e4c641fd944896b05
+
+Comparaison: IDENTIQUE.
+Conclusion: le runtime teste physiquement sur Samsung est le meme index.html que celui actuellement porte par la branche de test.
+
+V2.27 stable:
+main = 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8
+Aucune modification de main.
+
+Catalogue:
+aucune modification dans ce jalon application.
