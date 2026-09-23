@@ -1,0 +1,114 @@
+{
+  "schema": "bres-snapshot-manifest-r144-v1",
+  "milestone": "R144",
+  "scope": "catalogue_collection_checkpoint_resume_only",
+  "active_test_runtime": "V2.28 TEST R116",
+  "stable_version": "V2.27",
+  "stable_branch": "main",
+  "test_branch": "v2.28-test-r1",
+  "source_hierarchy": "R143",
+  "source_dependency": "R142",
+  "source_state": "R141",
+  "source_work_queue": "R140",
+  "source_correction_sheet": "R139",
+  "source_completeness": "R138",
+  "source_workspace": "R137",
+  "physical_samsung_test_required": true,
+  "catalogue_rows": 5103,
+  "catalogue_unique_refs": 5103,
+  "catalogue_chunks_unchanged": "10/10",
+  "checkpoint": {
+    "tracked_work_items": 1462,
+    "payload_sha256_guard": true,
+    "same_r140_queue_required": true,
+    "same_r139_correction_sheet_required": true,
+    "exact_r141_r142_state_reconstruction": true,
+    "dependency_projection_verified": true,
+    "r143_hierarchy_projection_verified": true,
+    "empty_checkpoint_bytes_canonical": 157347,
+    "full_r141_state_bytes_canonical": 1299410,
+    "evidence_credit": 0
+  },
+  "new_tests": "2/2",
+  "targeted_regression": "16/16",
+  "catalogue_regression": "41/41",
+  "runtime_mutation": false,
+  "canonical_catalogue_mutation": false,
+  "policy": {
+    "decision_authority": "NONE",
+    "policy_status": "A_CONFIRMER",
+    "automatic_validation_allowed": false,
+    "acceptance_threshold_authorized": false,
+    "candidate_selection_allowed": false
+  },
+  "files": {
+    "collection_checkpoint_r144.py": {
+      "sha256": "7cfdf521465b2fc7a2cbd5c809ada05cf4c08c79df5bfa87e867e5610727c812",
+      "size_bytes": 12324
+    },
+    "catalogue/evidence/live_critical_pair_collection_checkpoint_contract_r144.json": {
+      "sha256": "448f6885032a1e784e6317c24e904cd543a7fd1352ed48b62089befa2ab27229",
+      "size_bytes": 1498
+    },
+    "catalogue_live_critical_pair_collection_checkpoint_test.py": {
+      "sha256": "71c1f777b7ee8a63189c1859a993a857b0d32eed0027b2045c78562366a71e6e",
+      "size_bytes": 9127
+    },
+    "catalogue_live_critical_pair_collection_checkpoint_boundary_guard_test.py": {
+      "sha256": "94305bcb84db5650209b721c6b4876f53b304b49698c976e5b43e8508860069a",
+      "size_bytes": 4556
+    },
+    "CATALOGUE_LIVE_CRITICAL_PAIR_COLLECTION_CHECKPOINT_R144.json": {
+      "sha256": "cb42650a14e5bc4533acdc1f275da3d312c6c2c1729c3eb3482baf7a3029a165",
+      "size_bytes": 1323
+    },
+    "CATALOGUE_LIVE_CRITICAL_PAIR_COLLECTION_CHECKPOINT_BOUNDARY_GUARD_R144.json": {
+      "sha256": "fa17c69b724fca7441661cc33c466d7c0cd54b1cca9d792eeb1711c6ca0fdf6c",
+      "size_bytes": 1148
+    },
+    "CATALOGUE_LIVE_CRITICAL_PAIR_COLLECTION_CHECKPOINT_EMPTY_R144.json": {
+      "sha256": "6c7a06466c1f92eecabe62365eb88f73e3b3e2053273ecb2b3a246f3c92a5e73",
+      "size_bytes": 207176
+    },
+    "R144_TARGETED_REGRESSION.txt": {
+      "sha256": "96508f126cfa231de642d2d1936bae6152f48b364fae4baa86167ed420a6a3ac",
+      "size_bytes": 1294
+    },
+    "ALL_TESTS_R144.txt": {
+      "sha256": "548dcb5e1345a7ec6b18e85ae10fa476908a98475a061f2952e6ffacd6933a75",
+      "size_bytes": 2867
+    },
+    "REGRESSION_R144.json": {
+      "sha256": "e0203f7117bc9ec642a6e3dc3ed8bde9ae744903706d52f7621038be0b95e311",
+      "size_bytes": 18316
+    },
+    "CATALOGUE_CHUNK_COMPARISON_R144.json": {
+      "sha256": "436e815be35aa7fd06f670c51c3cb59f9c198c63fcb9c51de6039474e737ffc8",
+      "size_bytes": 2820
+    },
+    "CATALOGUE_CHUNK_COMPARISON_R144.txt": {
+      "sha256": "31183fddb58c81815a61014175afe0d8167c2a32615ba314f62e2ce0f0a98975",
+      "size_bytes": 1070
+    },
+    "TEST_SUMMARY_R144.txt": {
+      "sha256": "c80d3677ad1dd327e7d06a3762d7cf42e6b360f3cd79b1bc98061e51c1156f9c",
+      "size_bytes": 540
+    },
+    "CHECKPOINT_R144.txt": {
+      "sha256": "ab842e17f6e2db30e5b0a85ff523cf252b7985d53e214c651468d47fe17ceaac",
+      "size_bytes": 1573
+    },
+    "R143_TO_R144_COMPARISON.txt": {
+      "sha256": "403b18b755fb0bf97071a7cfff308f5a6c1019421aad6073ab150b7761f89444",
+      "size_bytes": 727
+    },
+    "PACKAGE_SCOPE_R144.txt": {
+      "sha256": "a0e0a363fbbb14691862be278830645c3401326134c33d3f63d17881d17bf6e0",
+      "size_bytes": 744
+    },
+    "SOURCE_HASHES_R144.txt": {
+      "sha256": "4008f31659ab53565bb23c16cb388ced60c1d8d01bf26a73e46a19694e107c16",
+      "size_bytes": 1963
+    }
+  }
+}
