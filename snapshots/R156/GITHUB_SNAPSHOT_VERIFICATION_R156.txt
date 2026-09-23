@@ -1,0 +1,22 @@
+BRES CLES V2.28 TEST R156 — GITHUB SNAPSHOT VERIFICATION
+
+Branch: v2.28-test-r1
+Snapshot verified through commit before this verification record: 18d204ab50a7152df7af212ef3cbdb2e2363bebd
+Stable branch main remains: 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8
+
+Verified snapshot files present:
+- CHECKPOINT_R156.txt
+- TEST_SUMMARY_R156.txt
+- PACKAGE_VERIFICATION_R156.txt
+- SOURCE_HASHES_R156.txt
+- CATALOGUE_CHUNK_COMPARISON_R156.txt
+- OCR_PHYSICAL_READINESS_GUARD_TEST_R156.txt
+- SNAPSHOT_MANIFEST_R156.json
+- LIBRARY_ROUNDTRIP_R156.txt
+
+Package SHA-256: 00895e67a53d70a7f0e5f20c1883a95d8e5376183fafec6dda64777a37fc2539
+Library roundtrip: PASS, byte-for-byte identical, ZIP integrity PASS.
+Regression: 91/91 PASS.
+Catalogue: 5103/5103 unique, 10/10 canonical blocks unchanged.
+
+RESULT: PASS
