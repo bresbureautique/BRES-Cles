@@ -1,0 +1,29 @@
+BRES CLES — GITHUB CHECKPOINT R129
+
+Repository: bresbureautique/BRES-Cles
+Branche de test: v2.28-test-r1
+Parent attendu R128: 350621ef3ef283c0a23d3b9a2066b907022fb37d
+Snapshot: snapshots/R129
+Stable main / V2.27 vérifiée inchangée: 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8
+
+Jalon R129:
+- matrice de suffisance documentaire uniquement;
+- 3 sessions distinctes requises pour déclarer la documentation d'une clé prête à une revue descriptive intra-clé;
+- 2 clés physiques documentées requises pour déclarer la paire prête à une revue descriptive inter-clés;
+- les valeurs numériques de mesure ne sont pas utilisées pour ces statuts;
+- aucune tolérance, aucun seuil physique, aucun gagnant, aucune référence validée;
+- limite de provenance explicitée: R127 ne conserve pas les SHA-256 des fichiers photo source.
+
+Validation locale:
+- nouveaux tests R129: 2/2 OK;
+- régression ciblée fraîche: 17/17 OK;
+- 105/105 scripts R128 bit-identiques;
+- runtime V2.28 TEST R116 bit-identique;
+- catalogue 5103/5103, 10/10 blocs bit-identiques à R128.
+
+Release R129:
+- application SHA-256: bc5360f5d8987abb80bf78dbc17d125fc3dc6f37fd20b7fff65bea167e56974a
+- catalogue SHA-256: e5516a1d47c868b9694f3118227d2be2ab2a342ba7ec6f2b5d5ab341465f9305
+- Library /BRES Cles/Sauvegardes: upload OK, rematérialisation OK, empreintes identiques, archives et nouveaux tests revérifiés OK.
+
+Règle de stabilité: ce snapshot doit être ajouté uniquement à v2.28-test-r1. main / V2.27 ne doit pas être modifiée.
