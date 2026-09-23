@@ -1,0 +1,19 @@
+BRES CLES — GITHUB SNAPSHOT VERIFICATION R152
+
+Branche: v2.28-test-r1
+Snapshot: snapshots/R152
+Verification effectuee apres commit paquet/preuves: 274f0bb12dcef437699b943b5b27dd61150f00f1
+
+Relu depuis GitHub:
+- SNAPSHOT_MANIFEST_R152.json: PRESENT, schema bres-r152-snapshot-manifest-v1
+- OCR_CAPTURE_SERIES_GUARD_TEST_R152.json: PRESENT, ok=true, 12 garde-fous vrais
+- TEST_SUMMARY_R152.txt: 87/87 PASS
+- CATALOGUE_CHUNK_COMPARISON_R152.txt: 10/10 blocs inchanges, 5103/5103
+- PACKAGE_VERIFICATION_R152.txt: ZIP PASS
+- LIBRARY_ROUNDTRIP_R152.txt: octets identiques, SHA-256 identique
+
+Package Library SHA-256:
+532e309933fa019443b3d8e79362812f2d454d7ac8a6066bd36ad0237fb603b9
+
+V2.27 stable reste sur main 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8.
+R152 n'est pas promue sur main.
