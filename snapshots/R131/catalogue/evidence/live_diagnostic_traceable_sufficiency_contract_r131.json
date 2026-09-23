@@ -1,0 +1,49 @@
+{
+  "schema": "bres-live-diagnostic-traceable-sufficiency-contract-r131-v1",
+  "milestone": "BRES Cles catalogue audit R131",
+  "active_test_runtime": "V2.28 TEST R116",
+  "source_registry_schema": "bres-live-diagnostic-pair-registry-r130-v1",
+  "purpose": "Declare diagnostic documentation ready for descriptive review only when R130 preserves complete, coherent and non-reused source capture provenance. The contract remains non-decision-making and does not assess physical measurements.",
+  "documentation_requirements": {
+    "within_key_distinct_capture_sessions": 3,
+    "faces_per_session": ["RECTO", "VERSO"],
+    "source_capture_records_per_entry": 6,
+    "capture_id_required": true,
+    "source_file_sha256_required": true,
+    "source_file_sha256_format": "lowercase hex SHA-256",
+    "source_packet_sha256_required": true,
+    "provenance_digest_sha256_required": true,
+    "capture_ids_unique_within_entry": true,
+    "source_hashes_unique_within_entry": true,
+    "capture_ids_unique_across_pair_registry": true,
+    "source_hashes_unique_across_pair_registry": true,
+    "pair_distinct_physical_keys_for_inter_key_review": 2,
+    "measurement_values_are_ignored": true
+  },
+  "allowed_documentation_statuses": [
+    "NO_DATA",
+    "SOURCE_TRACEABILITY_INCOMPLETE",
+    "READY_FOR_WITHIN_KEY_TRACEABLE_DESCRIPTIVE_REVIEW",
+    "READY_FOR_PAIR_TRACEABLE_DESCRIPTIVE_REVIEW"
+  ],
+  "policy": {
+    "analysis_status": "DOCUMENTATION_AND_PROVENANCE_ONLY",
+    "decision_authority": "NONE",
+    "policy_status": "A_CONFIRMER",
+    "evidence_status": "MEASURED_UNVALIDATED",
+    "automatic_validation_allowed": false,
+    "canonical_catalogue_write_allowed": false,
+    "runtime_mutation_allowed": false,
+    "acceptance_threshold_authorized": false,
+    "candidate_selection_allowed": false,
+    "physical_measurement_assessment_allowed": false
+  },
+  "forbidden_outputs_or_effects": [
+    "measurement pass/fail verdict",
+    "physical tolerance or threshold",
+    "candidate winner",
+    "VALIDATED status",
+    "catalogue mutation",
+    "runtime mutation"
+  ]
+}

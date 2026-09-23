@@ -1,0 +1,24 @@
+{
+  "schema": "bres-live-diagnostic-traceable-sufficiency-test-r131-v1",
+  "milestone": "BRES Cles catalogue audit R131",
+  "checks": {
+    "empty_pair_is_no_data": true,
+    "registry_not_mutated": true,
+    "pair_order_canonicalized": true,
+    "one_key_ready_for_traceable_within_key_review_only": true,
+    "six_sources_three_dual_face_sessions_required": true,
+    "six_sources_have_valid_unique_ids_and_hashes": true,
+    "r130_source_hash_provenance_declared": true,
+    "two_keys_ready_for_pair_traceable_review": true,
+    "global_non_reuse_confirmed": true,
+    "measurement_values_do_not_change_traceability_status": true,
+    "missing_capture_blocks_readiness": true,
+    "invalid_hash_blocks_readiness": true,
+    "missing_recto_verso_pairing_blocks_readiness": true,
+    "cross_entry_hash_reuse_blocks_pair_readiness": true,
+    "no_candidate_threshold_validation_or_mutation_authority": true,
+    "policy_escalation_rejected": true
+  },
+  "errors": [],
+  "ok": true
+}

@@ -1,0 +1,12 @@
+BRES CLES — TEST SUMMARY R131
+
+Runtime de test actif: V2.28 TEST R116, inchangé
+Stable: V2.27 inchangée
+Nouveaux tests R131: 2/2 réussis
+Régression catalogue autonome: 17/17 réussis
+Erreurs: 0
+Garde caméra R116 relancée séparément: OK
+Catalogue: 5103 références / 5103 uniques
+Blocs catalogue: 10/10 bit-identiques à R130
+Autorité décisionnelle R131: NONE
+Statut politique: A_CONFIRMER

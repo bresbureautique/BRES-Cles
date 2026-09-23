@@ -1,0 +1,16 @@
+BRES CLES — VERIFICATION ALLER-RETOUR LIBRARY R131
+
+BRES_Cles_Catalogue_Audit_R131.zip
+- SHA-256 release: c3d037a30a39aa0df4ea313b76dba3e340680de195d1934f7901643b0ec874fb
+- SHA-256 rematérialisé Library: c3d037a30a39aa0df4ea313b76dba3e340680de195d1934f7901643b0ec874fb
+- cmp octet par octet: OK
+- unzip -t: OK
+- 2 nouveaux tests R131 rejoués depuis l'archive Library: OK
+
+BRES_Cles_Mobile_V2_28_TEST_R116_AUDIT_R131.zip
+- SHA-256 release: e02088e47ab13f3e3065f32bba757d767981471c048842cf96d46501e7f6d62d
+- SHA-256 rematérialisé Library: e02088e47ab13f3e3065f32bba757d767981471c048842cf96d46501e7f6d62d
+- cmp octet par octet: OK
+- unzip -t: OK
+- garde caméra R116 rejouée depuis l'archive Library: OK
+- 2 nouveaux tests R131 rejoués depuis l'archive Library: OK

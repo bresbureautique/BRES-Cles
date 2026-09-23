@@ -1,0 +1,15 @@
+BRES CLES — REGRESSION CIBLEE R131
+
+Nouveaux garde-fous R131:
+- catalogue_live_diagnostic_traceable_sufficiency_test.py: OK
+- catalogue_live_diagnostic_traceable_sufficiency_boundary_guard_test.py: OK
+
+Régression catalogue complète du paquet autonome:
+- 17/17 scripts de test passent
+- 0 échec
+
+Contrôle runtime séparé:
+- camera_native_picker_guard_test.py sur V2.28 TEST R116: OK
+- index.html et v228-catalogue.js bit-identiques à R130
+
+R131 ne modifie ni les décisions R116, ni les seuils, ni le catalogue canonique.

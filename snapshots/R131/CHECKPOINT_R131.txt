@@ -1,0 +1,16 @@
+BRES CLES — JALON CATALOGUE/OCR R131
+
+- V2.27 reste la version stable et ne doit pas être remplacée par ce jalon.
+- Runtime test: V2.28 TEST R116, bit-identique à R130.
+- R131 relie la provenance forte R130 à la suffisance documentaire: un dossier n'est prêt à revue descriptive que si 3 sessions distinctes contiennent chacune un RECTO et un VERSO traçables.
+- Chaque entrée doit conserver exactement 6 captures, des capture_id uniques, des SHA-256 source valides et uniques, ainsi que source_packet_sha256 et provenance_digest_sha256 valides.
+- La non-réutilisation des capture_id et SHA-256 est contrôlée sur l'ensemble du bucket de paire critique.
+- Une clé complète peut être prête à revue descriptive intra-clé; deux clés physiques distinctes complètes sont nécessaires pour la revue descriptive de paire.
+- Les valeurs physiques sont ignorées pour ce statut et aucune tolérance n'est créée.
+- Politique maintenue: policy_status=A_CONFIRMER, decision_authority=NONE, validated_reference=null.
+- Validation fraîche R131: 2/2 nouveaux tests + 17/17 régression catalogue autonome, 0 échec.
+- Garde caméra R116 relancée séparément: OK.
+- Base R130 conservée: 146/146 fichiers hérités bit-identiques avant ajout R131; runtime R116 bit-identique.
+- Catalogue canonique: 5103 références, 5103 uniques, 10/10 blocs bit-identiques à R130.
+
+Prochain travail: R132 peut exploiter cette couche pour préparer une fiche de collecte réelle lisible par l'application, puis revenir sur un contrôle fonctionnel des quatre déclencheurs photo R116 sans toucher à V2.27.

@@ -1,0 +1,14 @@
+BRES CLES — VERIFICATION ZIP R131
+
+BRES_Cles_Catalogue_Audit_R131.zip
+- unzip -t: OK
+- 5103 références / 5103 uniques
+- 10/10 blocs catalogue inchangés
+- 17/17 tests catalogue avant empaquetage: OK
+
+BRES_Cles_Mobile_V2_28_TEST_R116_AUDIT_R131.zip
+- unzip -t: OK
+- index.html SHA-256 R116 inchangé
+- v228-catalogue.js SHA-256 R116 inchangé
+- garde caméra R116: OK
+- nouveaux tests R131: 2/2 OK
