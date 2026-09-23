@@ -4,7 +4,7 @@ import re
 import sys
 
 ROOT = Path(__file__).resolve().parent
-contract = json.loads((ROOT / "live_critical_pair_collection_workspace_contract_r137.json").read_text(encoding="utf-8"))
+contract = json.loads((ROOT / "catalogue/evidence/live_critical_pair_collection_workspace_contract_r137.json").read_text(encoding="utf-8"))
 source = (ROOT / "critical_pair_collection_workspace_r137.py").read_text(encoding="utf-8")
 
 checks = {
