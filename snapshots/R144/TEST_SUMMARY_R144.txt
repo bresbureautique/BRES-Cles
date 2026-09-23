@@ -1,0 +1,11 @@
+BRES CLES — TEST SUMMARY R144
+
+Nouveaux tests R144: 2/2 PASS
+Regression ciblee R137-R144: 16/16 PASS
+Regression catalogue complete: 41/41 PASS
+Catalogue: 5103 references / 5103 uniques
+Blocs catalogue: 10/10 SHA-256 inchanges depuis R143
+Runtime: V2.28 TEST R116 inchange
+Stable: V2.27 non modifiee
+
+R144 fournit un checkpoint documentaire compact, protege par SHA-256, qui reconstruit exactement l'etat R141/R142 ainsi que les projections de dependances R142 et d'avancement R143 lorsque la file R140 et la feuille R139 sont identiques.
