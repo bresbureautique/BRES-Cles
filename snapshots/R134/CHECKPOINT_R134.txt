@@ -1,0 +1,28 @@
+BRES CLES — CHECKPOINT R134
+
+Objectif atteint:
+- les 17 paires critiques R121 apparaissent désormais dans une matrice de couverture physique, même sans donnée
+- la matrice compte séparément dossiers acceptés, clés physiques distinctes et dossiers rejetés/incomplets avec leurs raisons
+- une paire avec une seule clé traçable reste explicitement insuffisante pour la revue descriptive de paire
+- deux clés distinctes peuvent être marquées prêtes uniquement pour revue descriptive traçable, jamais pour validation automatique
+- les données synthétiques servent uniquement aux tests et sont exclues de la matrice de couverture physique réelle
+
+Séparation des responsabilités:
+- V2.28 TEST R116 runtime: inchangé
+- catalogue canonique: inchangé
+- R134: matrice diagnostique documentaire séparée
+- V2.27 stable: ne doit pas être modifiée
+
+Tests:
+- nouveaux R134: 2/2 OK
+- régression catalogue: 23/23 OK
+- garde statique 4 déclencheurs photo: OK
+- garde caméra native R116: OK
+
+État de couverture physique réelle:
+- 17 paires critiques suivies
+- 0 dossier physique R132 traçable actuellement ingéré
+- 0 paire prête pour revue descriptive traçable à partir de données réelles
+
+Limite connue:
+- le comportement réel des quatre boutons photo sur Samsung nécessite toujours un test physique.
