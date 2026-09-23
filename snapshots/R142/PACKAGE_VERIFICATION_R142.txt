@@ -1,0 +1,13 @@
+BRES CLES — VERIFICATION PACKAGE R142
+
+ZIP: BRES_Cles_Catalogue_Audit_R142.zip
+SHA-256: d8c5497a4c6d883f30034111f43dccf17027fec16bc0dbefc806ad8d49043bfe
+Taille: 1069549 octets
+Integrite ZIP: OK (360 entrees, testzip sans erreur)
+Manifest interne: 16/16 fichiers controles, SHA-256 et tailles conformes
+Nouveaux tests rejoues depuis extraction propre: 2/2 PASS
+Regression catalogue rejouee depuis extraction propre: 37/37 PASS
+Catalogue: 5103 references / 5103 uniques
+10/10 blocs catalogue inchanges depuis R141
+Runtime: V2.28 TEST R116 inchange
+V2.27 stable: non modifiee
