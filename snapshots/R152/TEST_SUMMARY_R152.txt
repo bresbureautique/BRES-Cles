@@ -1,0 +1,16 @@
+BRES CLES — TEST SUMMARY R152
+
+Version: V2.28 TEST R152
+Scope: application uniquement ; catalogue separe.
+
+Regression complete: 87/87 PASS
+Nouveau garde-fou serie multi-prises R152: PASS
+Syntaxe JavaScript index + wrapper: PASS
+Catalogue: 5103 references / 5103 uniques
+10 blocs canoniques: inchanges (10/10)
+Seuils OCR: 0,70 / 0,88 inchanges
+Decision de reconnaissance: non modifiee par la serie multi-prises
+Serie multi-prises: inactive par defaut, demarrage explicite, une observation par cycle photo
+Etats diagnostiques: stable / OCR instable / ambiguite physique persistante suspectee
+Camera Samsung: logique physiquement validee R116 preservee
+Version stable: V2.27 reste sur main ; aucune promotion de R152 vers main.
