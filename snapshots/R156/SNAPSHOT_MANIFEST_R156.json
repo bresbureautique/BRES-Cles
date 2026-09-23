@@ -1,0 +1,20 @@
+{
+  "schema": "bres-r156-snapshot-manifest-v1",
+  "milestone": "V2.28 TEST R156",
+  "tests": {"passed": 91, "total": 91},
+  "catalogue": {"count": 5103, "unique": 5103, "canonicalChunksUnchanged": true},
+  "stableVersion": "V2.27",
+  "physicalCameraMilestone": "R116",
+  "package": {
+    "name": "BRES_Cles_Mobile_V2_28_TEST_R156.zip",
+    "sha256": "00895e67a53d70a7f0e5f20c1883a95d8e5376183fafec6dda64777a37fc2539",
+    "integrity": "PASS"
+  },
+  "sourceHashes": {
+    "index.html": "ff719432fdc2116821c0a8be3cae022c26b4f7c6b54497648f1a33f1698bf553",
+    "v228-catalogue.js": "bfb35b8345a2d88fc3e38e50f8038ba09c9fc72ebfa935eb94de86b7b17bfc15",
+    "ocr_physical_readiness_guard_test.py": "4d314c67caab483bfdc8c7a0685be1546771d75631bff5f2e8684746745da8cb",
+    "OCR_PHYSICAL_READINESS_GUARD_TEST_R156.json": "7aaf3bd23fe80929ca481b1bb3fbf69029cd74d7d4b7b62a043e4bb96d0d42bb"
+  },
+  "decisionInfluence": false
+}
