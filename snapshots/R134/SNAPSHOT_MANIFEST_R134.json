@@ -9,9 +9,7 @@
     "physical_pair_coverage_matrix_r134.py",
     "catalogue/evidence/live_critical_pair_physical_coverage_contract_r134.json",
     "catalogue_live_critical_pair_physical_coverage_test.py",
-    "catalogue_live_critical_pair_physical_coverage_boundary_guard_test.py",
-    "CATALOGUE_LIVE_CRITICAL_PAIR_PHYSICAL_COVERAGE_MATRIX_R134.json",
-    "CATALOGUE_LIVE_CRITICAL_PAIR_PHYSICAL_COVERAGE_MATRIX_R134.txt"
+    "catalogue_live_critical_pair_physical_coverage_boundary_guard_test.py"
   ],
   "runtime_sha256": {
     "index.html": "efff3d5f7a1478ffffcc783e6a990c468df45b1630ed63aa497656e505afbd6e",
@@ -45,5 +43,13 @@
     "automatic_validation_allowed": false,
     "acceptance_threshold_authorized": false,
     "candidate_selection_allowed": false
-  }
+  },
+  "zip_only_artifacts": [
+    "CATALOGUE_LIVE_CRITICAL_PAIR_PHYSICAL_COVERAGE_MATRIX_R134.json",
+    "CATALOGUE_LIVE_CRITICAL_PAIR_PHYSICAL_COVERAGE_MATRIX_R134.txt",
+    "CATALOGUE_LIVE_CRITICAL_PAIR_PHYSICAL_COVERAGE_R134.json",
+    "CATALOGUE_LIVE_CRITICAL_PAIR_PHYSICAL_COVERAGE_R134.txt",
+    "CATALOGUE_LIVE_CRITICAL_PAIR_PHYSICAL_COVERAGE_BOUNDARY_GUARD_R134.json",
+    "CATALOGUE_LIVE_CRITICAL_PAIR_PHYSICAL_COVERAGE_BOUNDARY_GUARD_R134.txt"
+  ]
 }
