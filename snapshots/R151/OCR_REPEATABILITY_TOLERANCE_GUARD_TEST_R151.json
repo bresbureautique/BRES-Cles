@@ -1,0 +1,22 @@
+{
+  "schema": "bres-ocr-repeatability-tolerance-guard-v1",
+  "milestone": "V2.28 TEST R151",
+  "checks": {
+    "tolerance_is_three_points": true,
+    "small_score_drift_stable": true,
+    "small_drift_measured": true,
+    "large_score_drift_variable": true,
+    "candidate_change_variable": true,
+    "diagnostic_only": true,
+    "visible_variation_kind": true,
+    "schema_v13": true,
+    "thresholds_unchanged": true
+  },
+  "cases": {
+    "small": {"sampleCount":2,"status":"stable","stable":true,"variable":false,"variationKind":"none","candidateIdentityStable":true,"maxScoreDrift":0.016,"scoreTolerance":0.03,"scoreWithinTolerance":true,"observedStatuses":["agreement"],"observedDecisiveCanons":["TE8D"],"sideCanons":{"recto":["TE8D"],"verso":["TE8D"]},"fingerprintsUnique":2,"decisionInfluence":false},
+    "large": {"sampleCount":2,"status":"variable","stable":false,"variable":true,"variationKind":"score-drift","candidateIdentityStable":true,"maxScoreDrift":0.06,"scoreTolerance":0.03,"scoreWithinTolerance":false,"observedStatuses":["agreement"],"observedDecisiveCanons":["TE8D"],"sideCanons":{"recto":["TE8D"],"verso":["TE8D"]},"fingerprintsUnique":2,"decisionInfluence":false},
+    "changed": {"sampleCount":2,"status":"variable","stable":false,"variable":true,"variationKind":"candidate-drift","candidateIdentityStable":false,"maxScoreDrift":0.05,"scoreTolerance":0.03,"scoreWithinTolerance":false,"observedStatuses":["agreement","conflict"],"observedDecisiveCanons":["TE8D"],"sideCanons":{"recto":["TE8D"],"verso":["TE8D","TE8I"]},"fingerprintsUnique":2,"decisionInfluence":false}
+  },
+  "errors": [],
+  "ok": true
+}
