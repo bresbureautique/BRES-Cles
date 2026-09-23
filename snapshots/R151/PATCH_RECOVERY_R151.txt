@@ -1,0 +1,9 @@
+BRES CLES — PATCH RECOVERY R151
+
+Les fichiers R150_TO_R151_SOURCE_PATCH.diff.gz.b64.partXX sont a concatener dans l'ordre.
+Puis :
+1. decoder le Base64 ;
+2. decompresser gzip ;
+3. appliquer le diff unifie sur une copie de V2.28 TEST R150.
+
+Ce patch documente les changements source R151 ; il ne remplace pas le ZIP complet Library.
