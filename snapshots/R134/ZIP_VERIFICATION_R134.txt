@@ -1,0 +1,19 @@
+BRES CLES — ZIP VERIFICATION R134
+
+Application ZIP: BRES_Cles_Mobile_V2_28_TEST_R116_AUDIT_R134.zip
+- unzip -t: PASS
+- SHA-256: be779d025eafd14dce638d12a56d591a446c430eb6e11346ea9b75e80d1d01bb
+- R134 core files extracted byte-identical to source: PASS
+- R134 coverage test replay: PASS
+- R134 boundary guard replay: PASS
+- R116 4-trigger static camera guard replay: PASS (physical Samsung behavior not tested here)
+- R116 native camera picker guard replay: PASS
+
+Catalogue ZIP: BRES_Cles_Catalogue_Audit_R134.zip
+- unzip -t: PASS
+- SHA-256: 4b4e4d104599c2bc4e9b03c6427f96298fd8d8a8a2e4331897cc6c725682f582
+- R134 core files extracted byte-identical to source: PASS
+- R134 coverage test replay: PASS
+- R134 boundary guard replay: PASS
+
+Milestone decision: package verification PASS.
