@@ -1,0 +1,18 @@
+BRES CLES V2.28 TEST R153 — TEST SUMMARY
+
+FULL_REGRESSION=88/88 PASS
+CATALOGUE_ROWS=5103
+CATALOGUE_UNIQUE=5103
+CATALOGUE_10_CHUNKS_UNCHANGED=True
+OCR_THRESHOLDS=0.70 / 0.88 unchanged
+DECISION_INFLUENCE=false for R153 protocol
+PHYSICAL_CAMERA_BASELINE=R116 validated on Samsung
+STABLE_VERSION=V2.27 on main unchanged
+
+R153 adds a diagnostic-only multi-cycle OCR protocol summary:
+- recurrent candidates across capture cycles
+- candidate and status change counts
+- maximum consecutive ambiguity streak
+- recommendations: collect-more / repeatable / ocr-instability-review / physical-check-required
+- one observation per capture cycle
+- no automatic reference validation is introduced
