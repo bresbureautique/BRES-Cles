@@ -1,0 +1,15 @@
+BRES CLES — TEST SUMMARY R151
+
+Version: V2.28 TEST R151
+Scope: application uniquement ; catalogue separe.
+
+Verification generale: PASS
+Tests: 86/86 PASS
+Erreurs verify_build: 0
+Garde-fou tolerance repetition OCR R151: PASS
+Catalogue: 5103 references / 5103 uniques
+10 blocs canoniques: inchanges (comparaison R40 = TRUE)
+Seuils OCR: 0,70 / 0,88 inchanges
+Decision de reconnaissance: non modifiee par la tolerance diagnostique
+Camera Samsung: logique physiquement validee R116 preservee
+Version stable: V2.27 reste sur main ; aucune promotion de R151 vers main.
