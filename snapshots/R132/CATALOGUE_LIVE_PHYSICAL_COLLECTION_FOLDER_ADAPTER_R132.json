@@ -1,0 +1,20 @@
+{
+  "schema": "bres-live-physical-collection-folder-adapter-test-r132-v1",
+  "milestone": "BRES Cles catalogue audit R132",
+  "checks": {
+    "complete_folder_is_accepted": true,
+    "three_sessions_six_files_verified": true,
+    "actual_source_sha256_preserved": true,
+    "folder_digest_present": true,
+    "handoff_reaches_r130_provenance": true,
+    "adapter_remains_non_authoritative": true,
+    "manifest_uses_relative_paths_only": true,
+    "missing_photo_is_rejected": true,
+    "reused_photo_bytes_are_rejected": true,
+    "wrong_recto_verso_metadata_is_rejected": true,
+    "declared_sha256_mismatch_is_rejected": true,
+    "path_traversal_is_rejected": true
+  },
+  "errors": [],
+  "ok": true
+}
