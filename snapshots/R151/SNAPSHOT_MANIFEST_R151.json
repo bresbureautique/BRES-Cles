@@ -1,0 +1,25 @@
+{
+  "schema": "bres-snapshot-manifest-v1",
+  "milestone": "R151",
+  "version": "V2.28 TEST R151",
+  "scope": "application",
+  "verify_ok": true,
+  "tests_passed": 86,
+  "tests_total": 86,
+  "catalog_count": 5103,
+  "unique_refs": 5103,
+  "catalogue_chunks_identical_to_r40": true,
+  "decision_influence": false,
+  "ocr_thresholds": [0.7, 0.88],
+  "repeatability_score_tolerance": 0.03,
+  "files": {
+    "index.html": "73d87011a0b43fd1e32c29760638065946c4e4ffc391255284be63b7eead5a39",
+    "v228-catalogue.js": "f0a0c66f4cb7d2035fb0fd968c826c254cdf31f4017aa6c32bf2bb42b32b381c",
+    "verify_build.py": "d0137ca50914118f8addd460fd97ca29e3268dcbfb6e8aba604cdf29cc0ba8af",
+    "ocr_repeatability_guard_test.py": "e20d767ad99e6c173bcdbb81e9905233fe081b163bfec46e5052c5b65a4604cf",
+    "ocr_repeatability_tolerance_guard_test.py": "0d6a7fbadcc92008247ba36ace6746ff0d6eeefa00df78a982b4cba559664b66",
+    "CHECKPOINT.txt": "b22f1225a546fc33e4e325ea81f310b2839d5d2742568c935a718d5b1fabfc35",
+    "LISEZ-MOI.txt": "33212c30a697a5452298048e37921c378bf5d52051d3e2454dd076a76314e758",
+    "TEST_SUMMARY_R151.txt": "e81a02e9e043a6ae42441d893bae402d8705db3cf20d40a89cd309b594f14caf"
+  }
+}
