@@ -1,0 +1,15 @@
+BRES CLES — COMPARAISON R143 -> R144
+
+R143: vue hierarchique lecture seule paire -> cle -> seance -> face, avec prochaine action executable.
+R144: checkpoint compact protege par SHA-256 permettant d'exporter puis reconstruire exactement la progression documentaire.
+
+Invariants conserves:
+- 1462 identifiants R140-WORK-xxxxx inchanges.
+- 17 paires / 34 cles / 102 seances / 204 faces.
+- Etats et historique R141/R142 conserves exactement a l'aller-retour.
+- Projection de dependances R142 et hierarchie R143 verifiees par SHA-256.
+- Runtime V2.28 TEST R116 inchange.
+- Stable V2.27 non modifiee.
+- Aucun seuil, score, selection de candidat ou validation automatique.
+- evidence_credit = 0.
+- Catalogue canonique non modifie.
