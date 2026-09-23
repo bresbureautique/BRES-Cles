@@ -1,0 +1,52 @@
+{
+  "schema": "bres-live-physical-collection-folder-adapter-contract-r132-v1",
+  "milestone": "BRES Cles catalogue audit R132",
+  "active_test_runtime": "V2.28 TEST R116",
+  "source_packet_schema": "bres-live-discriminant-collection-packet-r125-v1",
+  "downstream_provenance_schema": "bres-live-discriminant-provenance-ingestion-r130-v1",
+  "purpose": "Import a real physical-key collection folder only after verifying the packet, the three recto-verso sessions and the SHA-256 of each source file, then pass the packet to the existing non-authoritative R130 diagnostic provenance layer.",
+  "folder_requirements": {
+    "packet_filename": "packet.json",
+    "collection_sessions": 3,
+    "faces_per_session": ["RECTO", "VERSO"],
+    "source_files": 6,
+    "source_file_path_field": "source_file_relpath",
+    "source_paths_must_be_relative": true,
+    "source_paths_must_stay_inside_collection_folder": true,
+    "source_paths_unique": true,
+    "capture_ids_unique": true,
+    "source_file_sha256_must_match_actual_file_bytes": true,
+    "source_file_sha256_unique": true,
+    "empty_source_files_forbidden": true
+  },
+  "verified_output": {
+    "source_folder_manifest_preserves": [
+      "capture_session_id",
+      "side",
+      "capture_id",
+      "source_file_relpath",
+      "source_file_sha256",
+      "size_bytes"
+    ],
+    "source_folder_digest_sha256": true,
+    "downstream_only_if_folder_checks_pass": true
+  },
+  "policy": {
+    "analysis_status": "SOURCE_FILE_VERIFICATION_AND_DIAGNOSTIC_HANDOFF_ONLY",
+    "decision_authority": "NONE",
+    "policy_status": "A_CONFIRMER",
+    "evidence_status": "MEASURED_UNVALIDATED",
+    "automatic_validation_allowed": false,
+    "canonical_catalogue_write_allowed": false,
+    "runtime_mutation_allowed": false,
+    "acceptance_threshold_authorized": false,
+    "candidate_selection_allowed": false
+  },
+  "forbidden_outputs_or_effects": [
+    "candidate winner",
+    "VALIDATED status",
+    "physical tolerance or threshold",
+    "catalogue mutation",
+    "runtime mutation"
+  ]
+}
