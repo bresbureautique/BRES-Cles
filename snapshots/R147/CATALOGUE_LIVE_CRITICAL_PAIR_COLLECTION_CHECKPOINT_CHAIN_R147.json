@@ -1,0 +1,30 @@
+{
+  "schema": "bres-live-critical-pair-collection-checkpoint-chain-test-r147-v1",
+  "milestone": "BRES Cles catalogue audit R147",
+  "checkpoint_count": 3,
+  "transition_count": 2,
+  "unique_changed_work_item_count": 15,
+  "total_history_events_added": 15,
+  "correction_sheet_change_count": 2,
+  "checks": {
+    "three_checkpoint_chain_has_two_deltas": true,
+    "single_checkpoint_chain_is_valid": true,
+    "all_1462_work_items_remain_tracked": true,
+    "r140_queue_is_constant": true,
+    "history_is_append_only": true,
+    "documentary_progress_is_accumulated": true,
+    "each_transition_records_checkpoint_hashes": true,
+    "correction_sheet_changes_are_counted": true,
+    "first_and_last_next_actions_are_preserved": true,
+    "chain_has_integrity_fingerprint": true,
+    "tampered_middle_checkpoint_is_rejected": true,
+    "reordered_chain_is_rejected": true,
+    "queue_drift_in_chain_is_rejected": true,
+    "empty_chain_is_rejected": true,
+    "chain_never_grants_evidence": true,
+    "runtime_stable_and_catalogue_remain_read_only": true,
+    "no_reference_decision_is_created": true
+  },
+  "errors": [],
+  "ok": true
+}
