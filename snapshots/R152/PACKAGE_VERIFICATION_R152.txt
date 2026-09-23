@@ -1,0 +1,11 @@
+BRES CLES — PACKAGE VERIFICATION R152
+
+Fichier: BRES_Cles_Mobile_V2_28_TEST_R152.zip
+SHA-256: 532e309933fa019443b3d8e79362812f2d454d7ac8a6066bd36ad0237fb603b9
+Taille: 5718904 octets
+Entrees ZIP: 4423
+Integrite ZIP: PASS
+Fichiers requis: PASS
+Regression: 87/87 PASS
+Catalogue canonique: 10/10 blocs inchanges, 5103/5103 references uniques
+Decision: paquet R152 verifie.
