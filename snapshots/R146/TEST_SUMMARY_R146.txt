@@ -1,0 +1,11 @@
+BRES CLES — TEST SUMMARY R146
+
+Nouveaux tests R146: 2/2 PASS
+Regression ciblee R137-R146: 20/20 PASS
+Regression catalogue complete: 45/45 PASS
+Catalogue: 5103 references / 5103 uniques
+Blocs catalogue: 10/10 SHA-256 inchanges depuis R145
+Runtime: V2.28 TEST R116 inchange
+Stable: V2.27 non modifiee
+
+R146 ajoute un audit documentaire d'une chaine chronologique de checkpoints R144 en reutilisant les deltas R145: continuite de file, historique append-only, compteurs monotones et resume cumulatif sont controles sans mutation ni preuve physique.
