@@ -1,0 +1,23 @@
+BRES CLES — CHECKPOINT R132
+
+Objectif atteint:
+- un dossier réel peut être importé par packet.json + 6 fichiers source relatifs
+- 3 sessions et 6 faces sont vérifiées
+- chaque fichier réel est haché en SHA-256 et comparé à la valeur déclarée
+- fichier manquant, doublon de contenu, mauvais recto/verso, hash incohérent et traversée de chemin sont refusés
+- un dossier conforme est transmis à l’ingestion provenance R130, en diagnostic uniquement
+
+Séparation des responsabilités:
+- V2.28 TEST R116 runtime: inchangé
+- catalogue canonique: inchangé
+- adaptateur R132: outil diagnostique séparé
+- V2.27 stable: ne doit pas être modifiée
+
+Tests:
+- nouveaux R132: 2/2 OK
+- régression catalogue: 19/19 OK
+- garde statique 4 déclencheurs photo: OK
+- garde caméra native R116: OK
+
+Limite connue:
+- le comportement réel des quatre boutons photo sur Samsung ne peut pas être validé par un test statique ; le test physique reste requis.
