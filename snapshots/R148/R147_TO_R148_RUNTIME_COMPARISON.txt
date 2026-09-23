@@ -1,0 +1,7 @@
+BRES CLES — R147 TO R148 RUNTIME COMPARISON
+
+openMainPhotoCapture: IDENTIQUE hors libelle de revision
+openGuidedCamera: IDENTIQUE hors libelle de revision
+
+Modification fonctionnelle volontaire: panneau de diagnostic OCR lisible + synthese humanSummary exportee.
+Aucun seuil OCR ni donnees canoniques catalogue modifies.
