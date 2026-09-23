@@ -1,0 +1,17 @@
+BRES CLÉS V2.28 TEST R155 — GARDE FAMILLE CRITIQUE TE8D / TE8I
+
+OK  unrelated_not_involved
+OK  clear_single_support
+OK  te8b_bridge_is_ambiguity_not_canon
+OK  cross_view_conflict
+OK  multi_cycle_unstable
+OK  multi_cycle_repeatable
+OK  persistent_ambiguity_physical_check
+OK  diagnostic_only
+OK  export_contains_critical_family
+OK  human_summary_visible
+OK  te8b_not_added_to_xref
+OK  thresholds_unchanged
+OK  active_r155
+
+SELFTEST OK
