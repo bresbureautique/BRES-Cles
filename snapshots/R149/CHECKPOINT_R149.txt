@@ -1,0 +1,29 @@
+BRES CLES — CHECKPOINT R149
+
+Type: jalon application V2.28, separe du catalogue.
+Base: V2.28 TEST R148.
+Version produite et testee: V2.28 TEST R149.
+
+Ajout principal:
+- diagnostic reproductible des references proches par face ;
+- meilleur candidat, second candidat et marge de score recto/verso ;
+- etats globaux agreement, conflict, ambiguous, single-support, insufficient ;
+- affichage lisible et export JSON schema bres-ocr-diagnostic-export-v11.
+
+Garde-fous:
+- diagnostic uniquement, sans influence sur la decision de reconnaissance ;
+- seuils 0,70 / 0,88 inchanges ;
+- camera Samsung R116 conservee ;
+- catalogue canonique non modifie ;
+- V2.27 reste la version stable sur main.
+
+Verification finale locale apres correction du dernier libelle R148 residue:
+- verify_build: PASS ;
+- regression complete: 84/84 PASS ;
+- catalogue: 5103 references / 5103 uniques ;
+- 10/10 blocs canoniques inchanges ;
+- erreurs: 0 ;
+- index.html R149 SHA-256: 1fd7d6e27f6415be2bf9bce53201395c53b4a56b2d815001e109dd745152a353 ;
+- ZIP R149 SHA-256: 6dd4b9cd6d079f7a1bc2e7c5bfcb96674eeea71a7da9426d636439ba556c9795.
+
+Le code complet est conserve dans le ZIP Library R149 ; ce snapshot GitHub enregistre les preuves, hashes et garde-fous du jalon sans remplacer V2.27 stable.
