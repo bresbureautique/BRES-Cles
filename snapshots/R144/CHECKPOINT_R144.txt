@@ -1,0 +1,29 @@
+BRES CLES — CHECKPOINT R144 — EXPORT / REPRISE EXACTE DE COLLECTE
+Date: 2026-09-23
+
+Fait:
+- Ajout d'un checkpoint compact et reprenable pour les 1462 actions R140.
+- Le checkpoint conserve uniquement l'etat mutable necessaire: statut, motif de blocage, compteur de changements, historique et sequence d'evenements.
+- Les donnees immuables des actions R140 ne sont pas dupliquees.
+- Protection d'integrite SHA-256 du checkpoint complet.
+- La reprise exige exactement la meme file R140 et la meme feuille de correction R139.
+- Apres import, l'etat R141/R142, le rapport de dependances R142, la hierarchie R143 et la prochaine action sont verifies par SHA-256.
+- Le test de reprise couvre un etat vide et un etat partiel contenant des actions REALISEE et BLOQUEE.
+- Taille canonique mesuree du checkpoint vide: 157347 octets contre 1299410 octets pour l'etat R141 complet.
+
+Verifications:
+- Nouveaux tests R144: 2/2 PASS.
+- Regression ciblee R137-R144: 16/16 PASS.
+- Regression catalogue complete: 41/41 PASS.
+- Catalogue: 5103 references / 5103 uniques.
+- 10/10 blocs catalogue: SHA-256 inchanges depuis R143.
+- Runtime: V2.28 TEST R116 inchange.
+- Stable: V2.27 non modifiee.
+
+Frontiere de securite fonctionnelle:
+- Checkpoint documentaire uniquement.
+- Aucun seuil physique, score de reconnaissance, candidat gagnant ou validation automatique.
+- evidence_credit reste a 0; canonical_catalogue_write_allowed et runtime_mutation_allowed restent false.
+
+Blocage application restant:
+- Le comportement reel des 4 declencheurs photo exige toujours un test physique Samsung.
