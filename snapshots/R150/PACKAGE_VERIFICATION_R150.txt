@@ -1,0 +1,9 @@
+BRES CLES — PACKAGE VERIFICATION R150
+
+Package: BRES_Cles_Mobile_V2_28_TEST_R150.zip
+SHA-256: 02b44c23e7bc8c83694749d55490f8b047ba02ce316054f18fc784940e4d9ed9
+ZIP entries: 4387
+ZIP integrity: PASS
+Build regression: 85/85 PASS
+Catalogue: 5103 references uniques ; 10 blocs canoniques inchanges
+Scope: V2.28 TEST R150 application ; V2.27 stable non remplacee
