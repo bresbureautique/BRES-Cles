@@ -1,0 +1,14 @@
+BRES CLES — JALON CATALOGUE/OCR R130
+
+- V2.27 reste la version stable et ne doit pas être remplacée par ce jalon.
+- Runtime test: V2.28 TEST R116, bit-identique à R129.
+- R130 comble la limite de provenance signalée en R129: les 6 captures source d'un paquet (3 sessions × recto/verso) conservent désormais capture_session_id, side, capture_id et source_file_sha256 dans une couche diagnostique parallèle.
+- Un SHA-256 du paquet source et un SHA-256 du bloc de provenance sont également conservés.
+- Le registre R130 rejette la réutilisation d'un capture_id ou d'un SHA-256 de photo source déjà enregistré.
+- Cette provenance reste strictement non décisionnelle: policy_status=A_CONFIRMER, decision_authority=NONE, validated_reference=null.
+- Validation fraîche R130: 2/2 nouveaux tests + 19/19 régression ciblée, 0 échec.
+- Base R129 conservée: 107/107 scripts de test bit-identiques; runtime R116 bit-identique.
+- Catalogue canonique: 5103 références, 5103 uniques, 10/10 blocs bit-identiques à R129.
+- Une tentative de suite complète des 109 tests a dépassé la fenêtre d'exécution; elle n'est pas comptée comme preuve.
+
+Prochain travail: R131 peut relier cette provenance forte à la matrice de suffisance documentaire, pour qu'un dossier ne soit déclaré prêt à revue descriptive que si ses 6 fichiers source sont traçables et non réutilisés, toujours sans modifier les décisions R116.
