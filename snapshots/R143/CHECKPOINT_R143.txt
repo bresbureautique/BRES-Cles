@@ -1,0 +1,27 @@
+BRES CLES — CHECKPOINT R143 — VUE D'AVANCEMENT HIERARCHIQUE
+Date: 2026-09-23
+
+Fait:
+- Ajout d'une vue lecture seule paire -> cle -> seance -> face sur les 1462 actions R140.
+- Couverture structurelle: 17 paires, 34 cles, 102 seances, 204 faces.
+- Chaque niveau expose PRET / BLOQUE / A_REFAIRE / EN_COURS / A_FAIRE, les compteurs d'etat et la prochaine action executable.
+- La prochaine action respecte l'ordre R140 et, pour FINALISER/VERIFIER, les dependances R142.
+- Une regression d'une capture deja finalisee ressort visiblement en A_REFAIRE.
+- Les identifiants R140-WORK-xxxxx sont preserves.
+
+Verifications:
+- Nouveaux tests R143: 2/2 PASS.
+- Regression ciblee R137-R143: 14/14 PASS.
+- Regression catalogue complete: 39/39 PASS.
+- Catalogue: 5103 references / 5103 uniques.
+- 10/10 blocs catalogue: SHA-256 inchanges depuis R142.
+- Runtime: V2.28 TEST R116 inchange.
+- Stable: V2.27 non modifiee.
+
+Frontiere de securite fonctionnelle:
+- Vue documentaire uniquement et sans effet de bord.
+- Aucun seuil physique, score de reconnaissance, candidat gagnant ou validation automatique.
+- evidence_credit reste a 0; canonical_catalogue_write_allowed et runtime_mutation_allowed restent false.
+
+Blocage application restant:
+- Le comportement reel des 4 declencheurs photo exige toujours un test physique Samsung.
