@@ -1,0 +1,99 @@
+{
+  "schema": "bres-snapshot-manifest-r137-v1",
+  "milestone": "R137",
+  "scope": "catalogue_collection_workspace_only",
+  "active_test_runtime": "V2.28 TEST R116",
+  "stable_version": "V2.27",
+  "stable_branch": "main",
+  "test_branch": "v2.28-test-r1",
+  "source_plan": "R135",
+  "camera_readiness_checkpoint": "R136",
+  "physical_samsung_test_required": true,
+  "catalogue_rows": 5103,
+  "catalogue_unique_refs": 5103,
+  "catalogue_chunks_unchanged": "10/10",
+  "prepared_collection_workspace": {
+    "critical_pairs": 17,
+    "physical_key_slots": 34,
+    "sessions": 102,
+    "face_capture_slots": 204,
+    "evidence_credit": 0
+  },
+  "new_tests": "2/2",
+  "catalogue_regression": "27/27",
+  "runtime_mutation": false,
+  "canonical_catalogue_mutation": false,
+  "policy": {
+    "decision_authority": "NONE",
+    "policy_status": "A_CONFIRMER",
+    "automatic_validation_allowed": false,
+    "acceptance_threshold_authorized": false,
+    "candidate_selection_allowed": false
+  },
+  "files": {
+    "critical_pair_collection_workspace_r137.py": {
+      "sha256": "5b3ef2d2c4912d530099978492bb273af7c7e3775a16e59550629227d99ba794",
+      "size_bytes": 7968
+    },
+    "catalogue/evidence/live_critical_pair_collection_workspace_contract_r137.json": {
+      "sha256": "98150f29ec1d20ad2340206af0526feadd42fbc5313de02f00421d44b19650a8",
+      "size_bytes": 1118
+    },
+    "catalogue_live_critical_pair_collection_workspace_test.py": {
+      "sha256": "c664422c26f1e50f1366162f9bb3da8ff91ca50f3b0a1191110503d4e17a6b0a",
+      "size_bytes": 5425
+    },
+    "catalogue_live_critical_pair_collection_workspace_boundary_guard_test.py": {
+      "sha256": "c2078a008686875bb6998ef85bdff2c8563f502cdc3a13e8997c17c3c1538343",
+      "size_bytes": 3413
+    },
+    "CATALOGUE_LIVE_CRITICAL_PAIR_COLLECTION_WORKSPACE_R137.json": {
+      "sha256": "41112f42bb8a88a06aa61b73d76272d2fddc915f1d05accbafb5629591c6ec48",
+      "size_bytes": 1080
+    },
+    "CATALOGUE_LIVE_CRITICAL_PAIR_COLLECTION_WORKSPACE_R137.txt": {
+      "sha256": "118fa9bff71668b7835c7845360d0239de0d520abbe7f6ae48d1303d1976eea3",
+      "size_bytes": 807
+    },
+    "CATALOGUE_LIVE_CRITICAL_PAIR_COLLECTION_WORKSPACE_BOUNDARY_GUARD_R137.json": {
+      "sha256": "4be8fc25b593d65e9def1dfc43fd3fa5146d10793cc9ffd81b08a8ac840abe38",
+      "size_bytes": 1017
+    },
+    "CATALOGUE_LIVE_CRITICAL_PAIR_COLLECTION_WORKSPACE_BOUNDARY_GUARD_R137.txt": {
+      "sha256": "d25784a3357971cbab5447cf6f00a86210aadb2689fb045c6514ec89494a7d4a",
+      "size_bytes": 723
+    },
+    "CATALOGUE_LIVE_CRITICAL_PAIR_COLLECTION_WORKSPACE_TEMPLATE_R137.json": {
+      "sha256": "9cc7404843fcafdd31a43daa5f3bb7fa5e85d49977ead37bf64bdaed7c14413a",
+      "size_bytes": 127394
+    },
+    "ALL_TESTS_R137.txt": {
+      "sha256": "aa59937d148ecb9e82e60322690bee7af84b831eb27aec9b96fae4f149db7002",
+      "size_bytes": 1974
+    },
+    "REGRESSION_R137.json": {
+      "sha256": "3d44e6f8a3f244152c997062626f28f2d0a3065786457205fe675059ee531272",
+      "size_bytes": 31599
+    },
+    "CATALOGUE_CHUNK_COMPARISON_R137.json": {
+      "sha256": "4b7c650cfc4ba0dcfeefad9cd9f3f377045691503bd6c713825076e812e2bd6d",
+      "size_bytes": 1948
+    },
+    "CATALOGUE_CHUNK_COMPARISON_R137.txt": {
+      "sha256": "0c750aac4d6340478edc001dd893dc048e143f6d5fb092e0bc6fe581a716cb70",
+      "size_bytes": 104
+    },
+    "SOURCE_HASHES_R137.txt": {
+      "sha256": "5af6732d2e69b1ff6719e80ebccd5f28bbb036dabcf7b7305d14d67603e71e7b",
+      "size_bytes": 651
+    },
+    "TEST_SUMMARY_R137.txt": {
+      "sha256": "a6319fdf9bbcb4dccc628c8c0c03e999f136fcee605df982cacdcb98cddc328e",
+      "size_bytes": 818
+    },
+    "CHECKPOINT_R137.txt": {
+      "sha256": "b8433c5f0c4222b54592db8fba3e9d3711b68e12526da1d3b1592f201057fec5",
+      "size_bytes": 1211
+    }
+  }
+}
