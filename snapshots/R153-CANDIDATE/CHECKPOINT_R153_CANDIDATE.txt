@@ -1,0 +1,10 @@
+BRES CLES V2.28 TEST R153 CANDIDATE — CHECKPOINT
+
+Scope: application only. Catalogue canonical data unchanged.
+Feature: protocole multi-cycle OCR (recurrence, candidate/status changes, max ambiguity streak, recommendation).
+Recommendations: collect-more / repeatable / ocr-instability-review / physical-check-required.
+Safety: diagnostic only; decisionInfluence=false; OCR thresholds 0.70 / 0.88 unchanged.
+Stable version: V2.27 on main must remain untouched.
+Physical camera baseline: R116 remains valid.
+Verification this run: 22/22 targeted regression scripts PASS; catalogue 5103/5103 and 10 chunks unchanged.
+Full legacy suite was started but exceeded this execution window, so R153 remains CANDIDATE and is not promoted as a completed milestone.
