@@ -1,0 +1,13 @@
+BRES CLES — CONTROLE ALLER-RETOUR LIBRARY R142
+Date: 2026-09-23
+
+Destination Library: /BRES Cles/Sauvegardes/BRES_Cles_Catalogue_Audit_R142.zip
+Original SHA-256: d8c5497a4c6d883f30034111f43dccf17027fec16bc0dbefc806ad8d49043bfe
+Library rematerialise SHA-256: d8c5497a4c6d883f30034111f43dccf17027fec16bc0dbefc806ad8d49043bfe
+Comparaison octet par octet: IDENTIQUE
+Taille: 1069549 octets
+Integrite ZIP: OK (360 entrees, testzip sans erreur)
+Nouveaux tests R142 rejoues depuis la copie Library: 2/2 PASS
+Regression catalogue rejouee depuis la copie Library: 37/37 PASS
+
+Conclusion: sauvegarde Library R142 verifiee.
