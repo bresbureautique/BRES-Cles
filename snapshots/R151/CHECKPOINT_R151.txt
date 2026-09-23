@@ -1,0 +1,18 @@
+BRES CLÉS V2.28 TEST R151 — CHECKPOINT ACTIF
+
+V2.27 reste la version stable et ne doit jamais être remplacée par cette version de test.
+R151 améliore uniquement le diagnostic de répétabilité OCR introduit en R150.
+
+Ajout principal :
+- les répétitions OCR portant les mêmes candidats et le même statut tolèrent désormais une petite dérive de score jusqu'à 0,03 (3 points) ;
+- une variation est classée « score-drift » si seuls les scores dépassent cette tolérance ;
+- une variation est classée « candidate-drift » si le candidat, le statut ou l'ambiguïté change ;
+- la dérive maximale, la tolérance et le type de variation sont affichés dans le diagnostic et exportés en JSON schema v13.
+
+Garde-fous :
+- diagnostic uniquement : decisionInfluence=false ;
+- seuils de reconnaissance 0,70 / 0,88 inchangés ;
+- aucune validation automatique ajoutée ;
+- logique caméra Samsung physiquement validée en R116 conservée ;
+- catalogue canonique inchangé : 5 103 références uniques et 10 blocs identiques au jalon R40 ;
+- catalogue et application restent développés/testés séparément.
