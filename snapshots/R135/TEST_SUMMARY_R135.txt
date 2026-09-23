@@ -1,0 +1,16 @@
+BRES CLES — TEST SUMMARY R135
+
+Runtime de test actif: V2.28 TEST R116, inchangé
+Stable: V2.27 à conserver sur main, non modifiée par R135
+Nouveaux tests catalogue R135: 2/2 réussis
+Régression catalogue autonome: 25/25 réussis
+Garde statique 4 déclencheurs photo: OK
+Garde caméra native R116: OK
+Erreurs: 0
+Catalogue: 5103 références / 5103 uniques
+Blocs catalogue: 10/10 bit-identiques à R134
+Fichiers hérités application R134: 4642/4642 bit-identiques avant ajout R135
+File de collecte réelle R135: 17 paires critiques; 34 clés physiques indépendantes et 102 séances documentées encore à collecter (aucun dossier réel traçable ingéré à ce jalon)
+Autorité décisionnelle R135: NONE
+Statut politique: A_CONFIRMER
+Test physique Samsung: encore requis
