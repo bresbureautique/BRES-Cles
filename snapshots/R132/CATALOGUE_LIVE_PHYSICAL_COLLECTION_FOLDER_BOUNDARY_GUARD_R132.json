@@ -1,0 +1,31 @@
+{
+  "schema": "bres-live-physical-collection-folder-boundary-guard-r132-v1",
+  "milestone": "BRES Cles catalogue audit R132",
+  "checks": {
+    "contract_schema_exact": true,
+    "runtime_r116_declared": true,
+    "source_packet_is_r125": true,
+    "downstream_is_r130_provenance": true,
+    "three_sessions_required": true,
+    "six_source_files_required": true,
+    "recto_verso_required": true,
+    "relative_contained_paths_required": true,
+    "actual_file_sha_verification_required": true,
+    "source_non_reuse_required": true,
+    "verified_manifest_required": true,
+    "decision_authority_none": true,
+    "policy_a_confirmer": true,
+    "automatic_validation_forbidden": true,
+    "catalogue_write_forbidden": true,
+    "runtime_mutation_forbidden": true,
+    "threshold_forbidden": true,
+    "candidate_selection_forbidden": true,
+    "module_handoff_calls_r130": true,
+    "module_hashes_actual_files": true,
+    "module_rejects_path_escape": true,
+    "module_no_catalogue_write_api": true,
+    "module_keeps_validated_reference_null": true
+  },
+  "errors": [],
+  "ok": true
+}
