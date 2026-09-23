@@ -1,0 +1,23 @@
+BRES CLES — CHECKPOINT R154
+
+Type: jalon application V2.28, catalogue canonique séparé.
+
+Evolution R154:
+- chaque requête OCR mémorise l'identifiant de série multi-prises actif ;
+- une réponse provenant d'une ancienne série est rejetée et n'alimente pas l'historique ;
+- une géométrie manifestement différente de l'ancre de série est rejetée comme changement de clé suspecté ;
+- les petites variations géométriques restent acceptées ;
+- les rejets restent diagnostiques et n'influencent jamais la décision d'identification.
+
+Invariants:
+- seuil OCR de préremplissage 0,70 inchangé ;
+- seuil OCR de décision 0,88 inchangé ;
+- V2.27 reste la version stable et n'est pas remplacée ;
+- R116 reste le jalon caméra validé physiquement sur Samsung ;
+- catalogue canonique: 5 103 références uniques, 10 blocs inchangés.
+
+Validation logicielle:
+- régression complète: 89/89 PASS ;
+- garde de session R154: 13/13 PASS ;
+- BUILD_MANIFEST ok=true ;
+- catalogue_chunks_identical_to_r40=true.
