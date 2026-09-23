@@ -1,0 +1,10 @@
+BRES CLES — PACKAGE VERIFICATION R147
+
+Archive: BRES_Cles_Mobile_V2_28_TEST_R147.zip
+SHA-256: e6c104d298ff388393efc88f2432c298f7ca5a112443a468ca4d5f32e1ca772e
+ZIP integrity: PASS
+Build regression: 82/82 PASS, 0 error
+Targeted diagnostic guard: PASS 4/4
+Camera software guard: PASS
+Catalogue canonical data: unchanged, 5103 unique refs, 10/10 chunks unchanged
+V2.27 stable: untouched
