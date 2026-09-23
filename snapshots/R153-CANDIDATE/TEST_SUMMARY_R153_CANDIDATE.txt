@@ -1,0 +1,33 @@
+BRES CLES V2.28 TEST R153 CANDIDATE — TEST SUMMARY
+
+TARGETED_REGRESSION=22/22 PASS
+FULL_LEGACY_SUITE=NOT_COMPLETED_THIS_RUN (batch runtime exceeded execution window; candidate not promoted)
+CATALOGUE_ROWS=5103
+CATALOGUE_UNIQUE=5103
+CATALOGUE_10_CHUNKS_UNCHANGED=True
+OCR_THRESHOLDS=0.70 / 0.88 unchanged
+DECISION_INFLUENCE=false for R153 protocol
+
+PASSED:
+PASS ocr_capture_cycle_protocol_guard_test.py
+PASS ocr_capture_series_guard_test.py
+PASS ocr_repeatability_guard_test.py
+PASS ocr_repeatability_tolerance_guard_test.py
+PASS ocr_close_reference_diagnostic_guard_test.py
+PASS ocr_human_diagnostic_summary_guard_test.py
+PASS ocr_diagnostic_export_guard_test.py
+PASS ocr_reference_ambiguity_guard_test.py
+PASS version_consistency_test.py
+PASS catalogue_schema_integrity_test.py
+PASS catalogue_ref_identity_test.py
+PASS catalogue_ocr_confusability_baseline_test.py
+PASS catalogue_ocr_edit_distance_baseline_test.py
+PASS catalogue_ocr_transposition_baseline_test.py
+PASS ocr_diagnostic_contract_guard_test.py
+PASS ocr_view_consensus_guard_test.py
+PASS ocr_maker_consensus_guard_test.py
+PASS tesa_ambiguity_guard_test.py
+PASS camera_native_picker_guard_test.py
+PASS guided_camera_session_guard_test.py
+PASS profile_session_majority_test.py
+PASS profile_session_integrity_test.py
