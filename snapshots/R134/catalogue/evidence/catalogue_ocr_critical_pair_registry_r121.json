@@ -1,0 +1,53 @@
+{
+  "schema": "bres-catalogue-ocr-critical-pair-registry-r121-v1",
+  "milestone": "BRES Clés catalogue audit R121",
+  "active_test_runtime": "V2.28 TEST R116",
+  "policy": "These 17 catalogue pairs combine direct OCR substitution risk, canonical geometry >=95, same maker/family context and profile Jaccard >=0.90. They are a do-not-auto-resolve registry: catalogue/OCR evidence alone must remain À CONFIRMER until an independent discriminating criterion exists.",
+  "definition": "R120 priority pair with profile_jaccard >= 0.90",
+  "metrics": {
+    "rows": 5103,
+    "unique_refs": 5103,
+    "critical_pairs": 17,
+    "critical_unique_refs": 30,
+    "critical_triple_refs": 18,
+    "critical_exact_silhouette": 11,
+    "critical_nonexact_silhouette": 6,
+    "critical_cross_maker_same_family": 1
+  },
+  "critical_pairs": [
+    {"a":"VAC104","b":"VAC105","raw_a":"VAC104","raw_b":"VAC105","maker_a":"VACHETTE","maker_b":"VACHETTE","family_a":"VAC","family_b":"VAC","edge_types":["substitution"],"geometry_score":99,"same_maker":true,"same_family":true,"exact_silhouette":true,"profile_jaccard":0.9705882352941176,"triple_risk_a":false,"triple_risk_b":true},
+    {"a":"GV1","b":"GV3","raw_a":"GV1","raw_b":"GV3","maker_a":"GTV","maker_b":"GTV","family_a":"GV","family_b":"GV","edge_types":["substitution"],"geometry_score":99,"same_maker":true,"same_family":true,"exact_silhouette":true,"profile_jaccard":0.9574468085106383,"triple_risk_a":true,"triple_risk_b":false},
+    {"a":"CIS2","b":"CIS4","raw_a":"CIS2","raw_b":"CIS4","maker_a":"CAS-CISMA","maker_b":"CAS-CISMA","family_a":"CIS","family_b":"CIS","edge_types":["substitution"],"geometry_score":99,"same_maker":true,"same_family":true,"exact_silhouette":true,"profile_jaccard":0.9565217391304348,"triple_risk_a":true,"triple_risk_b":false},
+    {"a":"CIS2R","b":"CIS4R","raw_a":"CIS2R","raw_b":"CIS4R","maker_a":"CAS-CISMA","maker_b":"CAS-CISMA","family_a":"CIS","family_b":"CIS","edge_types":["substitution"],"geometry_score":99,"same_maker":true,"same_family":true,"exact_silhouette":true,"profile_jaccard":0.9565217391304348,"triple_risk_a":true,"triple_risk_b":false},
+    {"a":"CIS1","b":"CIS3","raw_a":"CIS1","raw_b":"CIS3","maker_a":"CAS-CISMA","maker_b":"CAS-CISMA","family_a":"CIS","family_b":"CIS","edge_types":["substitution"],"geometry_score":99,"same_maker":true,"same_family":true,"exact_silhouette":true,"profile_jaccard":0.9555555555555556,"triple_risk_a":true,"triple_risk_b":true},
+    {"a":"MER34R","b":"MER35R","raw_a":"MER34R","raw_b":"MER35R","maker_a":"MERONI","maker_b":"MERONI","family_a":"MER","family_b":"MER","edge_types":["substitution"],"geometry_score":99,"same_maker":true,"same_family":true,"exact_silhouette":true,"profile_jaccard":0.9545454545454546,"triple_risk_a":true,"triple_risk_b":false},
+    {"a":"GL11R","b":"GL12R","raw_a":"GL11R","raw_b":"GL12R","maker_a":"GLOBE","maker_b":"GLOBE","family_a":"GL","family_b":"GL","edge_types":["substitution"],"geometry_score":99,"same_maker":true,"same_family":true,"exact_silhouette":true,"profile_jaccard":0.95,"triple_risk_a":false,"triple_risk_b":true},
+    {"a":"YA50","b":"YA51","raw_a":"YA50","raw_b":"YA51","maker_a":"YALE (IT)","maker_b":"YALE (IT)","family_a":"YA","family_b":"YA","edge_types":["substitution"],"geometry_score":99,"same_maker":true,"same_family":true,"exact_silhouette":true,"profile_jaccard":0.9310344827586207,"triple_risk_a":false,"triple_risk_b":true},
+    {"a":"ET1","b":"ET2","raw_a":"ET1","raw_b":"ET2","maker_a":"ETNA","maker_b":"ETNA","family_a":"ET","family_b":"ET","edge_types":["substitution"],"geometry_score":99,"same_maker":true,"same_family":true,"exact_silhouette":true,"profile_jaccard":0.9285714285714286,"triple_risk_a":true,"triple_risk_b":false},
+    {"a":"YT1","b":"YT3","raw_a":"YT1","raw_b":"YT3","maker_a":"YETI","maker_b":"YETI","family_a":"YT","family_b":"YT","edge_types":["substitution"],"geometry_score":99,"same_maker":true,"same_family":true,"exact_silhouette":true,"profile_jaccard":0.9285714285714286,"triple_risk_a":true,"triple_risk_b":false},
+    {"a":"TL2","b":"TL5","raw_a":"TL2","raw_b":"TL5","maker_a":"TRI-CIRCLE","maker_b":"TRI-CIRCLE","family_a":"TL","family_b":"TL","edge_types":["substitution"],"geometry_score":99,"same_maker":true,"same_family":true,"exact_silhouette":false,"profile_jaccard":0.926829268292683,"triple_risk_a":true,"triple_risk_b":true},
+    {"a":"EZ3","b":"EZ4","raw_a":"EZ3","raw_b":"EZ4","maker_a":"EZCURRA","maker_b":"EZCURRA","family_a":"EZ","family_b":"EZ","edge_types":["substitution"],"geometry_score":99,"same_maker":true,"same_family":true,"exact_silhouette":false,"profile_jaccard":0.9107142857142857,"triple_risk_a":true,"triple_risk_b":true},
+    {"a":"ET1R","b":"ET2R","raw_a":"ET1R","raw_b":"ET2R","maker_a":"ETNA","maker_b":"ETNA","family_a":"ET","family_b":"ET","edge_types":["substitution"],"geometry_score":99,"same_maker":true,"same_family":true,"exact_silhouette":true,"profile_jaccard":0.9090909090909091,"triple_risk_a":true,"triple_risk_b":false},
+    {"a":"EZ3","b":"EZ6","raw_a":"EZ3","raw_b":"EZ6","maker_a":"EZCURRA","maker_b":"EZCURRA","family_a":"EZ","family_b":"EZ","edge_types":["substitution"],"geometry_score":98,"same_maker":true,"same_family":true,"exact_silhouette":false,"profile_jaccard":0.9464285714285714,"triple_risk_a":true,"triple_risk_b":false},
+    {"a":"EZ4","b":"EZ6","raw_a":"EZ4","raw_b":"EZ6","maker_a":"EZCURRA","maker_b":"EZCURRA","family_a":"EZ","family_b":"EZ","edge_types":["substitution"],"geometry_score":98,"same_maker":true,"same_family":true,"exact_silhouette":false,"profile_jaccard":0.9259259259259259,"triple_risk_a":true,"triple_risk_b":false},
+    {"a":"CM1R","b":"CM2R","raw_a":"CM1R","raw_b":"CM2R","maker_a":"CEMA","maker_b":"GIOBERT","family_a":"CM","family_b":"CM","edge_types":["substitution"],"geometry_score":98,"same_maker":false,"same_family":true,"exact_silhouette":false,"profile_jaccard":0.9210526315789473,"triple_risk_a":true,"triple_risk_b":true},
+    {"a":"VAC105","b":"VAC155","raw_a":"VAC105","raw_b":"VAC155","maker_a":"VACHETTE","maker_b":"VACHETTE","family_a":"VAC","family_b":"VAC","edge_types":["substitution"],"geometry_score":97,"same_maker":true,"same_family":true,"exact_silhouette":false,"profile_jaccard":0.9705882352941176,"triple_risk_a":true,"triple_risk_b":false}
+  ],
+  "critical_refs": ["CIS1","CIS2","CIS2R","CIS3","CIS4","CIS4R","CM1R","CM2R","ET1","ET1R","ET2","ET2R","EZ3","EZ4","EZ6","GL11R","GL12R","GV1","GV3","MER34R","MER35R","TL2","TL5","VAC104","VAC105","VAC155","YA50","YA51","YT1","YT3"],
+  "registry_sha256": "8933afd602bbf53dbaf5aaba9b4d157cf098120eb33c3844328d2d211e8aed09",
+  "chunk_sha256": {
+    "catalog-01.js":"e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b",
+    "catalog-02.js":"955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75",
+    "catalog-03.js":"9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210",
+    "catalog-04.js":"14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942",
+    "catalog-05.js":"5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b",
+    "catalog-06.js":"b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac",
+    "catalog-07.js":"b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1",
+    "catalog-08.js":"3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814",
+    "catalog-09.js":"4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f",
+    "catalog-10.js":"f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4"
+  },
+  "checks": {"catalogue_5103_unique":true,"chunks_bit_identical":true,"critical_pairs_17":true,"critical_refs_30":true,"critical_triple_refs_18":true,"critical_exact_silhouette_11":true,"critical_all_substitution_edges":true,"critical_pair_registry_exact":true,"known_vac104_vac105_top_case":true,"cross_maker_cm_pair_retained":true},
+  "errors": [],
+  "ok": true
+}
