@@ -39,16 +39,7 @@ report = {
     "errors": errors,
     "ok": not errors,
 }
-(ROOT / "CATAOGUE_LIVE_CRITICAL_PAIR_COLLECTION_COMPLETENESS_BOUNDARY_GUARD_R138œÛÛˆŠKÜš]WÝ^
-œÛÛ‹™[\Ê™\Ü[œÝ\™WØ\ØÚZOQ˜[ÙK[™[LŠH
-È—ˆ‹[˜ÛÙ[™ÏH]‹NŠBŠ“ÓÕÈÐUSÑÕQWÓU‘WÐÔ’UPÐSÔRT—ÐÓÓPÕSÓ—ÐÓÓTUS‘TÔ×Ð“ÕS‘T–WÑÕPT‘ÔŒLÎŠKÜš]WÝ^
-—ˆ‹š›Ú[ŠÈ”‘TÈÓTÈ8 %ÐT‘H”“Ó•QT‘HÓÓTUQHŒLÎ‹ˆ—H
-ÈÊ“ÒÈˆ
-ÈÈYˆˆ[ÙH‘PÒPÈˆ
-ÈÊH›ÜˆËˆ[ˆÚXÚÜËš][\Ê
-WH
-ÈÈˆ‹”ÑS•TÕÒÈˆYˆ›Ý\œ›ÜœÈ[ÙH”ÑS•TÕPÒPÈ—JH
-È—ˆ‹[˜ÛÙ[™ÏH]‹NŠBœš[
-œÛÛ‹™[\Ê™\Ü[œÝ\™WØ\ØÚZOQ˜[ÙK[™[LŠJBœÞ\Ë™^]
-HYˆ\œ›ÜœÈ[ÙH
-B
+(ROOT / "CATALOGUE_LIVE_CRITICAL_PAIR_COLLECTION_COMPLETENESS_BOUNDARY_GUARD_R138.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+(ROOT / "CATALOGUE_LIVE_CRITICAL_PAIR_COLLECTION_COMPLETENESS_BOUNDARY_GUARD_R138.txt").write_text("\n".join(["BRES CLES â€” GARDE FRONTIERE COMPLETUDE R138", ""] + [("OK  " + k if v else "ECHEC  " + k) for k, v in checks.items()] + ["", "SELFTEST OK" if not errors else "SELFTEST ECHEC"]) + "\n", encoding="utf-8")
+print(json.dumps(report, ensure_ascii=False, indent=2))
+sys.exit(1 if errors else 0)
