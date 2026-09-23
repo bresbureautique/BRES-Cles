@@ -1,0 +1,26 @@
+{
+  "schema": "bres-ocr-capture-series-guard-v1",
+  "milestone": "V2.28 TEST R152",
+  "checks": {
+    "series_inactive_by_default": true,
+    "explicit_start_button": true,
+    "separate_capture_epoch": true,
+    "stable_multi_capture": true,
+    "ocr_instability_detected": true,
+    "persistent_physical_ambiguity": true,
+    "one_observation_per_cycle": true,
+    "diagnostic_only": true,
+    "export_contains_series": true,
+    "visible_three_states": true,
+    "thresholds_unchanged": true,
+    "active_version_r152": true
+  },
+  "cases": {
+    "stable": {"active":true,"seriesId":7,"cycleCount":2,"status":"stable","stable":true,"ocrUnstable":false,"physicalAmbiguitySuspected":false,"persistentAmbiguity":false,"ambiguousCycleCount":0,"observedStatuses":["agreement"],"observedDecisiveCanons":["TE8D"],"competingCanons":["TE8D","TE8I"],"maxScoreDrift":0.01,"scoreTolerance":0.03,"decisionInfluence":false},
+    "unstable": {"active":true,"seriesId":7,"cycleCount":2,"status":"ocr-unstable","stable":false,"ocrUnstable":true,"physicalAmbiguitySuspected":false,"persistentAmbiguity":false,"ambiguousCycleCount":0,"observedStatuses":["agreement"],"observedDecisiveCanons":["TE8D","TE8I"],"competingCanons":["TE8D","TE8I"],"maxScoreDrift":0.03,"scoreTolerance":0.03,"decisionInfluence":false},
+    "ambiguous": {"active":true,"seriesId":7,"cycleCount":2,"status":"physical-ambiguity-suspected","stable":false,"ocrUnstable":false,"physicalAmbiguitySuspected":true,"persistentAmbiguity":true,"ambiguousCycleCount":2,"observedStatuses":["conflict","ambiguous"],"observedDecisiveCanons":[],"competingCanons":["TE8D","TE8I"],"maxScoreDrift":0.01,"scoreTolerance":0.03,"decisionInfluence":false},
+    "duplicate": {"active":true,"seriesId":7,"cycleCount":1,"status":"waiting","stable":false,"ocrUnstable":false,"physicalAmbiguitySuspected":false,"persistentAmbiguity":false,"ambiguousCycleCount":0,"observedStatuses":["agreement"],"observedDecisiveCanons":["TE8I"],"competingCanons":["TE8D","TE8I"],"maxScoreDrift":0,"scoreTolerance":0.03,"decisionInfluence":false}
+  },
+  "errors": [],
+  "ok": true
+}
