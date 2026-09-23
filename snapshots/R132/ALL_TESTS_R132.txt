@@ -1,0 +1,24 @@
+BRES CLES — REGRESSION CATALOGUE R132
+
+OK  catalogue_live_collection_coherence_guard_test.py
+OK  catalogue_live_collection_diagnostic_boundary_guard_test.py
+OK  catalogue_live_collection_packet_guard_test.py
+OK  catalogue_live_collection_packet_ingestion_test.py
+OK  catalogue_live_collection_packet_validator_test.py
+OK  catalogue_live_collection_protocol_guard_test.py
+OK  catalogue_live_diagnostic_capture_provenance_test.py
+OK  catalogue_live_diagnostic_observation_sufficiency_boundary_guard_test.py
+OK  catalogue_live_diagnostic_observation_sufficiency_test.py
+OK  catalogue_live_diagnostic_pair_registry_test.py
+OK  catalogue_live_diagnostic_provenance_registry_guard_test.py
+OK  catalogue_live_diagnostic_registry_boundary_guard_test.py
+OK  catalogue_live_diagnostic_repeatability_boundary_guard_test.py
+OK  catalogue_live_diagnostic_repeatability_test.py
+OK  catalogue_live_diagnostic_traceable_sufficiency_boundary_guard_test.py
+OK  catalogue_live_diagnostic_traceable_sufficiency_test.py
+OK  catalogue_live_discriminant_evidence_contract_test.py
+OK  catalogue_live_physical_collection_folder_adapter_test.py
+OK  catalogue_live_physical_collection_folder_boundary_guard_test.py
+
+TOTAL: 19/19 tests passes
+ECHECS: 0
