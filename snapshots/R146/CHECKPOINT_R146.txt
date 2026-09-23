@@ -1,0 +1,27 @@
+BRES CLES — CHECKPOINT R146
+
+Type: jalon application, separe du catalogue.
+
+Validation physique:
+- Samsung Android reel
+- V2.28 TEST R116
+- Recto guide: PASS
+- Verso guide: PASS
+- Importer recto: PASS
+- Importer verso: PASS
+
+Integrite runtime:
+- index.html R116 et index.html courant: meme blob Git
+- blob: 3f339215135531f9b52b174e4c641fd944896b05
+- aucune modification du runtime dans R146
+
+Protection version stable:
+- V2.27 reste la version stable
+- main reste sur 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8
+
+Catalogue:
+- aucune mutation dans R146
+- dernier travail catalogue present sur la branche avant R146: R145
+
+Decision:
+Le blocage camera R116 est leve. La suite application peut maintenant porter sur le diagnostic recto/verso et OCR, sans toucher a V2.27 ni forcer une validation de reference.
