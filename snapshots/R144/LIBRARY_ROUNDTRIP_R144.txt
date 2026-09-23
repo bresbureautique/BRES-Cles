@@ -1,0 +1,19 @@
+BRES CLES — LIBRARY ROUNDTRIP R144
+Date: 2026-09-23
+Library destination: /BRES Cles/Sauvegardes/BRES_Cles_Catalogue_Audit_R144.zip
+ZIP SHA256: 5dabef4cf2ffff50f3793656721735939304a6bfbcf433680787b1ac5bbd4d46
+ZIP size: 1187166 bytes
+ZIP entries: 403
+
+Library rematerialization:
+- size identical: PASS
+- SHA256 identical: PASS
+- byte-for-byte comparison: PASS
+- ZIP integrity: PASS
+- full catalogue regression replayed from Library ZIP: 41/41 PASS
+- R144 manifest verification after extraction: 17/17 PASS
+
+Catalogue: 5103 / 5103 unique references
+Canonical chunks: 10/10 unchanged
+Runtime: V2.28 TEST R116 unchanged
+Stable V2.27: unchanged
