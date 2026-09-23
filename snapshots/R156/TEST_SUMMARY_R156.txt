@@ -1,0 +1,13 @@
+BRES CLES V2.28 TEST R156 — TEST SUMMARY
+
+PASS
+Regression : 91/91
+Nouveau garde-fou synthèse multi-prises : PASS
+Preuves OCR conservées dans l'export : PASS
+Synthèse simple : RÉSULTAT RÉPÉTABLE / REFAIRE UNE PRISE / CONTRÔLE PHYSIQUE NÉCESSAIRE
+Diagnostic sans influence décisionnelle : PASS
+Seuils OCR : 0,70 / 0,88 inchangés
+Catalogue : 5103 / 5103 références uniques
+Blocs catalogue : 10/10 identiques au package R155
+V2.27 stable : conservée séparément
+R116 caméra Samsung : conservé comme jalon physique validé
