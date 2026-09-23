@@ -1,0 +1,44 @@
+{
+  "schema": "bres-regression-r132-v1",
+  "milestone": "R132",
+  "active_test_runtime": "V2.28 TEST R116",
+  "stable_version": "V2.27",
+  "new_catalogue_tests": {
+    "passed": 2,
+    "total": 2,
+    "failed": 0
+  },
+  "catalogue_regression": {
+    "passed": 19,
+    "total": 19,
+    "failed": 0
+  },
+  "runtime_static_camera_guards": {
+    "guided_camera_four_trigger_static_guard_r132": true,
+    "camera_native_picker_guard_r116": true
+  },
+  "runtime_sha256": {
+    "index.html": "efff3d5f7a1478ffffcc783e6a990c468df45b1630ed63aa497656e505afbd6e",
+    "v228-catalogue.js": "c6ae1f7fc075c1d50193a9e418661d34ff2275fbec160bea3dff6e2cfd5c2471"
+  },
+  "catalogue": {
+    "references": 5103,
+    "unique_refs": 5103,
+    "chunks_bit_identical_to_r131": 10,
+    "chunks_total": 10
+  },
+  "r131_catalogue_inherited_files": {
+    "same": 164,
+    "total": 164
+  },
+  "policy": {
+    "decision_authority": "NONE",
+    "policy_status": "A_CONFIRMER",
+    "runtime_mutation_allowed": false,
+    "canonical_catalogue_write_allowed": false,
+    "automatic_validation_allowed": false,
+    "acceptance_threshold_authorized": false,
+    "candidate_selection_allowed": false
+  },
+  "ok": true
+}
