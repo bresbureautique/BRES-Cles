@@ -1,0 +1,8 @@
+BRES CLÉS V2.28 TEST R147 — CHECKPOINT ACTIF
+
+V2.27 reste la version stable et ne doit jamais être remplacée par ce test.
+R116 est le jalon caméra physiquement validé sur Samsung : Recto guidé, Verso guidé, Importer recto et Importer verso fonctionnent.
+R147 conserve exactement le chemin caméra R116 et ajoute l’export du diagnostic OCR après l’analyse principale recto + verso.
+Le diagnostic recto/verso est non décisionnel : il expose les lectures, passes, temps, qualité et ambiguïtés, mais ne modifie ni les seuils OCR ni la décision finale.
+Les seuils 0,70 / 0,88, le budget 25 s, le timeout 7 s et le garde-fou d’ambiguïté restent inchangés.
+La base catalogue reste séparée ; le dernier jalon catalogue présent sur la branche avant R147 est R145.
