@@ -1,0 +1,15 @@
+BRES CLES — TEST SUMMARY R133
+
+Runtime de test actif: V2.28 TEST R116, inchangé
+Stable: V2.27 inchangée
+Nouveaux tests catalogue R133: 2/2 réussis
+Régression catalogue autonome: 21/21 réussis
+Garde statique 4 déclencheurs photo: OK
+Garde caméra native R116: OK
+Erreurs: 0
+Catalogue: 5103 références / 5103 uniques
+Blocs catalogue: 10/10 bit-identiques à R132
+Fichiers catalogue hérités R132: 192/192 bit-identiques
+Autorité décisionnelle R133: NONE
+Statut politique: A_CONFIRMER
+Test physique Samsung: encore requis

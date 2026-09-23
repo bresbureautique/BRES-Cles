@@ -1,0 +1,27 @@
+{
+  "schema": "bres-snapshot-manifest-r133-v1",
+  "milestone": "R133",
+  "active_test_runtime": "V2.28 TEST R116",
+  "stable_version": "V2.27",
+  "stable_branch": "main",
+  "test_branch": "v2.28-test-r1",
+  "runtime_sha256": {
+    "index.html": "efff3d5f7a1478ffffcc783e6a990c468df45b1630ed63aa497656e505afbd6e",
+    "v228-catalogue.js": "c6ae1f7fc075c1d50193a9e418661d34ff2275fbec160bea3dff6e2cfd5c2471"
+  },
+  "catalogue_rows": 5103,
+  "catalogue_unique_refs": 5103,
+  "new_tests": "2/2",
+  "catalogue_regression": "21/21",
+  "inherited_r132_catalogue_files": "192/192 byte-identical",
+  "fresh_runtime_camera_guards": "PASS (static only; physical Samsung test still required)",
+  "policy": {
+    "decision_authority": "NONE",
+    "policy_status": "A_CONFIRMER",
+    "runtime_mutation_allowed": false,
+    "canonical_catalogue_write_allowed": false,
+    "automatic_validation_allowed": false,
+    "acceptance_threshold_authorized": false,
+    "candidate_selection_allowed": false
+  }
+}

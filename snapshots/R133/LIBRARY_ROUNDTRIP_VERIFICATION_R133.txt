@@ -1,0 +1,19 @@
+BRES CLES — VERIFICATION ALLER-RETOUR LIBRARY R133
+
+BRES_Cles_Catalogue_Audit_R133.zip
+- SHA-256 release: ea07dae288581ec91caf35391f8ea6cd87faeabfcefaa613dc9ea75cdcd37b17
+- SHA-256 rematérialisé Library: ea07dae288581ec91caf35391f8ea6cd87faeabfcefaa613dc9ea75cdcd37b17
+- identité octet par octet: OK
+- unzip -t: OK
+- 2 nouveaux tests R133 rejoués depuis l'archive Library: OK
+
+BRES_Cles_Mobile_V2_28_TEST_R116_AUDIT_R133.zip
+- SHA-256 release: d0ee5db21357fba1cd38c408d56c4196a820afc13692016fba426fc652ac0b64
+- SHA-256 rematérialisé Library: d0ee5db21357fba1cd38c408d56c4196a820afc13692016fba426fc652ac0b64
+- identité octet par octet: OK
+- unzip -t: OK
+- garde statique 4 déclencheurs photo: OK
+- garde caméra native R116: OK
+- index.html et v228-catalogue.js: empreintes R116 inchangées
+
+Conclusion: aller-retour Library R133 vérifié.

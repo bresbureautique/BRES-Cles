@@ -1,0 +1,23 @@
+BRES CLES — CHECKPOINT R133
+
+Objectif atteint:
+- plusieurs dossiers R132 peuvent être ingérés sans mélange des clés physiques
+- les identifiants de capture et SHA-256 source sont contrôlés globalement entre dossiers
+- une même clé physique ne peut pas être associée à deux paires candidates différentes dans le même lot
+- les dossiers rejetés par R132 ne sont jamais transmis au registre diagnostique
+- les paires restent séparées et la disponibilité d'une revue descriptive traçable est calculée via R131
+
+Séparation des responsabilités:
+- V2.28 TEST R116 runtime: inchangé
+- catalogue canonique: inchangé
+- R133: diagnostic multi-dossiers séparé
+- V2.27 stable: ne doit pas être modifiée
+
+Tests:
+- nouveaux R133: 2/2 OK
+- régression catalogue: 21/21 OK
+- garde statique 4 déclencheurs photo: OK
+- garde caméra native R116: OK
+
+Limite connue:
+- le comportement réel des quatre boutons photo sur Samsung nécessite toujours un test physique.

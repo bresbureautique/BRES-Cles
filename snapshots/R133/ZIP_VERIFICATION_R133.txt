@@ -1,0 +1,17 @@
+BRES CLES — ZIP VERIFICATION R133
+
+BRES_Cles_Catalogue_Audit_R133.zip
+- unzip -t: OK
+- nouveaux tests R133 inclus
+- régression catalogue 21/21 incluse
+- 10 blocs catalogue inchangés
+
+BRES_Cles_Mobile_V2_28_TEST_R116_AUDIT_R133.zip
+- unzip -t: OK
+- runtime V2.28 TEST R116 inchangé
+- index.html SHA-256: efff3d5f7a1478ffffcc783e6a990c468df45b1630ed63aa497656e505afbd6e
+- v228-catalogue.js SHA-256: c6ae1f7fc075c1d50193a9e418661d34ff2275fbec160bea3dff6e2cfd5c2471
+- garde statique 4 déclencheurs: OK
+- garde caméra native R116: OK
+
+V2.27 stable non modifiée.
