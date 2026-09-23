@@ -1,0 +1,45 @@
+{
+  "schema": "bres-live-diagnostic-capture-provenance-contract-r130-v1",
+  "milestone": "BRES Cles catalogue audit R130",
+  "active_test_runtime": "V2.28 TEST R116",
+  "purpose": "Preserve each physical source capture identifier and source-file SHA-256 from an accepted R125 collection packet into a parallel non-authoritative diagnostic registry.",
+  "source_requirements": {
+    "collection_sessions": 3,
+    "faces_per_session": ["RECTO", "VERSO"],
+    "source_capture_records": 6,
+    "capture_id_required": true,
+    "source_file_sha256_required": true,
+    "source_file_sha256_format": "lowercase hex SHA-256",
+    "capture_ids_unique_within_packet": true,
+    "source_hashes_unique_within_packet": true,
+    "capture_ids_unique_across_registry": true,
+    "source_hashes_unique_across_registry": true
+  },
+  "preserved_fields": [
+    "capture_session_id",
+    "side",
+    "capture_id",
+    "source_file_sha256",
+    "source_packet_sha256",
+    "provenance_digest_sha256",
+    "physical_key_id",
+    "candidate_pair"
+  ],
+  "policy": {
+    "decision_authority": "NONE",
+    "policy_status": "A_CONFIRMER",
+    "evidence_status": "MEASURED_UNVALIDATED",
+    "automatic_validation_allowed": false,
+    "canonical_catalogue_write_allowed": false,
+    "runtime_mutation_allowed": false,
+    "acceptance_threshold_authorized": false,
+    "candidate_selection_allowed": false
+  },
+  "forbidden_outputs_or_effects": [
+    "candidate winner",
+    "VALIDATED status",
+    "physical acceptance threshold",
+    "canonical catalogue mutation",
+    "runtime R116 mutation"
+  ]
+}
