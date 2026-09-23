@@ -93,4 +93,6 @@ function enableOCRDiagnosticExport(reads,info,seriesContext=null){
   lastOCRDiagnosticExport.captureSeries=captureSeries;
   lastOCRDiagnosticExport.captureProtocol=captureProtocol;
   lastOCRDiagnosticExport.captureSeriesGuard=captureSeries.sessionGuard||null;
-  const btn=
+  const btn=el("ocrDiagnosticExportBtn");
+  if(btn)btn.disabled=false;
+}
