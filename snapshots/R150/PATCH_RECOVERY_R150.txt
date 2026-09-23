@@ -1,0 +1,15 @@
+BRES CLES — RECOVERY SOURCE R150
+
+Base GitHub requise: snapshot/runtime R149.
+Fichier de reconstruction: R149_TO_R150_SOURCE_PATCH.diff.gz.b64
+
+Procedure de verification/reconstruction:
+1. decoder le fichier Base64 vers R149_TO_R150_SOURCE_PATCH.diff.gz ;
+2. verifier SHA-256 du .gz = 9a9ce394a659c2f03374ebf91b3b00928458febf9673b49501db902e00d2adb9 ;
+3. decomprimer vers R149_TO_R150_SOURCE_PATCH.diff ;
+4. verifier SHA-256 du diff = 88a9948ce761cfeaea0e506c5530e4398d4d31c0ca8ba4b22fac14757a36260d ;
+5. appliquer le diff sur les sources R149 avec patch -p1 ;
+6. verifier les hashes de SOURCE_HASHES_R150.txt ;
+7. lancer verify_build.py : resultat attendu 85/85 PASS.
+
+Le patch couvre 27 fichiers source/test modifies entre R149 et R150. Il ne modifie pas les donnees canoniques du catalogue et ne doit jamais etre applique a la branche stable main/V2.27.
