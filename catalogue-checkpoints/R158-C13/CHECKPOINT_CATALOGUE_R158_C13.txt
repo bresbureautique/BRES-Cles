@@ -1,0 +1,16 @@
+BRES CLÉS — CHECKPOINT CATALOGUE R158-C13
+
+Volet: catalogue uniquement.
+Base: R158-C12.
+Application V2.28: non modifiée.
+Stable V2.27: non modifiée.
+
+Travail effectué:
+- lot externe de 11 références validées ;
+- fabricants renseignés: AB1X=ABUS, AB35=ABUS, FB64RX=FAB, VAC78=VACHETTE, VAC86=VACHETTE, VAC89=VACHETTE, VI10=VIRO, VI2=VIRO, WK68R=WILKA, WK69=WILKA, WK91R=WILKA ;
+- fabricants vides: 105 -> 94 ;
+- seules ces 11 lignes ont changé, uniquement dans le champ fabricant ;
+- blocs modifiés: catalog-01.js, catalog-05.js, catalog-06.js, catalog-07.js, catalog-08.js, catalog-09.js, catalog-10.js ;
+- GE34 et AGB2 restent volontairement non modifiés.
+
+Résultat: R158-C13 prêt pour GitHub et sauvegarde Library après vérification.

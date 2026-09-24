@@ -1,0 +1,44 @@
+BRES CLÉS — CATALOGUE R158-C13 — EXTERNAL VALIDATED BATCH 05
+
+Objet: lot externe prudent de fabricants avec référence exacte ou compatibilité catalogue explicite.
+
+Corrections fabricant appliquées:
+- AB1X -> ABUS (groupe 6, catalog-09.js)
+  source: Nauta — https://www.nauta.com/nl/7501000011-pcs-au5dl-abu41d-abu1-a-ab1x-l017
+  source: SMW Holland — https://webshop.smwholland.nl/nl/catalogus/sleutels/sl00010/pg00200/silca-cilinder-auto--fiets-sleutels-a.html
+- AB35 -> ABUS (groupe 7, catalog-09.js)
+  source: Nauta — https://www.nauta.com/nl/7501000119-pcs-au81-abu54d-ab35-l721
+  source: SMW Holland — https://webshop.smwholland.nl/nl/catalogus/sleutels/sl00010/pg00200/silca-cilinder-auto--fiets-sleutels-a.html
+- FB64RX -> FAB (groupe 97, catalog-01.js)
+  source: Silca News 2010 — https://a.storyblok.com/f/241607/x/4c9d86e534/silca-news-collection-2010-en.pdf
+  source: Silca catalogue mirror — https://expres.pl/files/0000/296.pdf
+- VAC78 -> VACHETTE (groupe 235, catalog-07.js)
+  source: Trade Keys VAC48 sheet — https://www.trade-keys.co.uk/vac48-silca-key-blank
+  source: Silca catalogue mirror — https://expres.pl/files/0000/296.pdf
+- VAC86 -> VACHETTE (groupe 235, catalog-07.js)
+  source: Trade Keys VAC48 sheet — https://www.trade-keys.co.uk/vac48-silca-key-blank
+  source: Silca catalogue mirror — https://expres.pl/files/0000/296.pdf
+- VAC89 -> VACHETTE (groupe 235, catalog-09.js)
+  source: Silca catalogue mirror — https://expres.pl/files/0000/296.pdf
+- VI10 -> VIRO (groupe 240, catalog-10.js)
+  source: Silca 110 catalogue — https://www.centralkey.com/images/Products/Silca%20110%20catalogue.pdf
+  source: Ilco Ultracode Card Guide — https://manuals.plus/m/420982fd59726e46ed1e38c01d18f5c4c9d1b703aa06af3c6c8646cb3925a8d6.pdf
+- VI2 -> VIRO (groupe 240, catalog-07.js)
+  source: Malfatti & Tacchini — https://www.malfattitacchinigroup.it/viro
+  source: Silca 110 catalogue — https://www.centralkey.com/images/Products/Silca%20110%20catalogue.pdf
+- WK68R -> WILKA (groupe 245, catalog-05.js)
+  source: Silca 110 catalogue — https://steenhauer.nl/media/20251/file/files2025/110_catalogue.pdf
+  source: TopKey/JMA cross-reference — https://topkey.ro/ro/pret-chei-brute-plane%28clasice%29/chei-brute-plane%28clasice%29/3586-chei-plane/3
+- WK69 -> WILKA (groupe 245, catalog-06.js)
+  source: Silca 110 catalogue — https://steenhauer.nl/media/20251/file/files2025/110_catalogue.pdf
+  source: A-Key GmbH — https://a-key-gmbh.com/WK69-Silca-WI98-WIL-19-1566-Anlage-schluessel
+- WK91R -> WILKA (groupe 245, catalog-08.js)
+  source: Silca 110 catalogue — https://steenhauer.nl/media/20251/file/files2025/110_catalogue.pdf
+  source: Silca News 05/2016 mirror — https://esdocs.com/doc/2020872/silca-news-05-2016---dar-mar
+
+Contrôles:
+- 11 références modifiées ;
+- uniquement le champ fabricant ;
+- fabricants vides: 105 -> 94 ;
+- GE34 et AGB2 restent non modifiés ;
+- V2.27 et V2.28 ne font pas partie de ce snapshot.

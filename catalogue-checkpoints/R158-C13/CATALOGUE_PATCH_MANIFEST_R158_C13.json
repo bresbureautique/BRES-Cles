@@ -1,0 +1,143 @@
+{
+  "milestone": "CATALOGUE R158-C13",
+  "base": "BRES_Cles_Catalogue_V3_R158_C12",
+  "policy": "External-evidence batch; manufacturer-only fills; V2.27 and V2.28 excluded.",
+  "target_count": 11,
+  "blank_manufacturers_before": 105,
+  "blank_manufacturers_after": 94,
+  "changed_chunks": [
+    "catalog-01.js",
+    "catalog-05.js",
+    "catalog-06.js",
+    "catalog-07.js",
+    "catalog-08.js",
+    "catalog-09.js",
+    "catalog-10.js"
+  ],
+  "targets": [
+    {
+      "reference": "AB1X",
+      "before_manufacturer": "",
+      "after_manufacturer": "ABUS",
+      "group": "6",
+      "chunk": "catalog-09.js",
+      "evidence_sources": [
+        {"name": "Nauta", "url": "https://www.nauta.com/nl/7501000011-pcs-au5dl-abu41d-abu1-a-ab1x-l017"},
+        {"name": "SMW Holland", "url": "https://webshop.smwholland.nl/nl/catalogus/sleutels/sl00010/pg00200/silca-cilinder-auto--fiets-sleutels-a.html"}
+      ]
+    },
+    {
+      "reference": "AB35",
+      "before_manufacturer": "",
+      "after_manufacturer": "ABUS",
+      "group": "7",
+      "chunk": "catalog-09.js",
+      "evidence_sources": [
+        {"name": "Nauta", "url": "https://www.nauta.com/nl/7501000119-pcs-au81-abu54d-ab35-l721"},
+        {"name": "SMW Holland", "url": "https://webshop.smwholland.nl/nl/catalogus/sleutels/sl00010/pg00200/silca-cilinder-auto--fiets-sleutels-a.html"}
+      ]
+    },
+    {
+      "reference": "FB64RX",
+      "before_manufacturer": "",
+      "after_manufacturer": "FAB",
+      "group": "97",
+      "chunk": "catalog-01.js",
+      "evidence_sources": [
+        {"name": "Silca News 2010", "url": "https://a.storyblok.com/f/241607/x/4c9d86e534/silca-news-collection-2010-en.pdf"},
+        {"name": "Silca catalogue mirror", "url": "https://expres.pl/files/0000/296.pdf"}
+      ]
+    },
+    {
+      "reference": "VAC78",
+      "before_manufacturer": "",
+      "after_manufacturer": "VACHETTE",
+      "group": "235",
+      "chunk": "catalog-07.js",
+      "evidence_sources": [
+        {"name": "Trade Keys VAC48 sheet", "url": "https://www.trade-keys.co.uk/vac48-silca-key-blank"},
+        {"name": "Silca catalogue mirror", "url": "https://expres.pl/files/0000/296.pdf"}
+      ]
+    },
+    {
+      "reference": "VAC86",
+      "before_manufacturer": "",
+      "after_manufacturer": "VACHETTE",
+      "group": "235",
+      "chunk": "catalog-07.js",
+      "evidence_sources": [
+        {"name": "Trade Keys VAC48 sheet", "url": "https://www.trade-keys.co.uk/vac48-silca-key-blank"},
+        {"name": "Silca catalogue mirror", "url": "https://expres.pl/files/0000/296.pdf"}
+      ]
+    },
+    {
+      "reference": "VAC89",
+      "before_manufacturer": "",
+      "after_manufacturer": "VACHETTE",
+      "group": "235",
+      "chunk": "catalog-09.js",
+      "evidence_sources": [
+        {"name": "Silca catalogue mirror", "url": "https://expres.pl/files/0000/296.pdf"}
+      ]
+    },
+    {
+      "reference": "VI10",
+      "before_manufacturer": "",
+      "after_manufacturer": "VIRO",
+      "group": "240",
+      "chunk": "catalog-10.js",
+      "evidence_sources": [
+        {"name": "Silca 110 catalogue", "url": "https://www.centralkey.com/images/Products/Silca%20110%20catalogue.pdf"},
+        {"name": "Ilco Ultracode Card Guide", "url": "https://manuals.plus/m/420982fd59726e46ed1e38c01d18f5c4c9d1b703aa06af3c6c8646cb3925a8d6.pdf"}
+      ]
+    },
+    {
+      "reference": "VI2",
+      "before_manufacturer": "",
+      "after_manufacturer": "VIRO",
+      "group": "240",
+      "chunk": "catalog-07.js",
+      "evidence_sources": [
+        {"name": "Malfatti & Tacchini", "url": "https://www.malfattitacchinigroup.it/viro"},
+        {"name": "Silca 110 catalogue", "url": "https://www.centralkey.com/images/Products/Silca%20110%20catalogue.pdf"}
+      ]
+    },
+    {
+      "reference": "WK68R",
+      "before_manufacturer": "",
+      "after_manufacturer": "WILKA",
+      "group": "245",
+      "chunk": "catalog-05.js",
+      "evidence_sources": [
+        {"name": "Silca 110 catalogue", "url": "https://steenhauer.nl/media/20251/file/files2025/110_catalogue.pdf"},
+        {"name": "TopKey/JMA cross-reference", "url": "https://topkey.ro/ro/pret-chei-brute-plane%28clasice%29/chei-brute-plane%28clasice%29/3586-chei-plane/3"}
+      ]
+    },
+    {
+      "reference": "WK69",
+      "before_manufacturer": "",
+      "after_manufacturer": "WILKA",
+      "group": "245",
+      "chunk": "catalog-06.js",
+      "evidence_sources": [
+        {"name": "Silca 110 catalogue", "url": "https://steenhauer.nl/media/20251/file/files2025/110_catalogue.pdf"},
+        {"name": "A-Key GmbH", "url": "https://a-key-gmbh.com/WK69-Silca-WI98-WIL-19-1566-Anlage-schluessel"}
+      ]
+    },
+    {
+      "reference": "WK91R",
+      "before_manufacturer": "",
+      "after_manufacturer": "WILKA",
+      "group": "245",
+      "chunk": "catalog-08.js",
+      "evidence_sources": [
+        {"name": "Silca 110 catalogue", "url": "https://steenhauer.nl/media/20251/file/files2025/110_catalogue.pdf"},
+        {"name": "Silca News 05/2016 mirror", "url": "https://esdocs.com/doc/2020872/silca-news-05-2016---dar-mar"}
+      ]
+    }
+  ],
+  "deferred_cases": [
+    {"reference": "GE34", "reason": "conflicting taxonomy evidence; unchanged"},
+    {"reference": "AGB2", "reason": "insufficiently consistent external evidence; unchanged"}
+  ]
+}
