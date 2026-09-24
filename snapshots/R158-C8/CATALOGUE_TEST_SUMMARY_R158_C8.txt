@@ -1,0 +1,14 @@
+BRES CLÉS — CATALOGUE R158-C8 — TEST SUMMARY
+
+5103_references: PASS
+5103_unique: PASS
+145_blanks_before: PASS
+144_blanks_after: PASS
+AX5RP_exact_fill_to_AXA: PASS
+AX5RP_group_30_unchanged: PASS
+only_catalog_10_changed: PASS
+nonmanufacturer_fields_unchanged: PASS
+all_other_references_unchanged: PASS
+
+TOTAL: 9/9 PASS
+Selftest final hashes: 16/16 PASS
