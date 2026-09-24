@@ -1,0 +1,14 @@
+BRES CLÉS — CATALOGUE R158-C16 SELFTEST REPRODUCTIBLE
+5103_references: PASS
+5103_unique: PASS
+55_blank_manufacturers: PASS
+all_17_targets_present: PASS
+all_17_targets_exact: PASS
+GE34_blank: PASS
+AGB2_blank: PASS
+RO7_blank: PASS
+CE130_35_blank: PASS
+manifest_17_targets: PASS
+manifest_blank_counts: PASS
+manifest_changed_chunks: PASS
+TOTAL: 12/12 PASS
