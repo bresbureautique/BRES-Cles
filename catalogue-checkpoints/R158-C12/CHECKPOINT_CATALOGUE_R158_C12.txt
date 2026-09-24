@@ -1,0 +1,16 @@
+BRES CLÉS — CHECKPOINT CATALOGUE R158-C12
+
+Volet: catalogue uniquement.
+Base: R158-C11.
+Application V2.28: non modifiée (R157 conservée).
+Stable V2.27: non modifiée.
+
+Travail effectué:
+- quatrième lot externe de 12 références validées ;
+- fabricants renseignés: AB56=ABUS, AB74=ABUS, ALP4=ALPHA, BK53=BKS, CE3=CES, CE6=CES, CS162=CISA, IE26=ISEO, KE13=KESO, UNI11AP=UNION, VAC45=VACHETTE, VI11=VIRO ;
+- fabricants vides: 117 -> 105 ;
+- seules ces 12 lignes ont changé, uniquement dans le champ fabricant ;
+- blocs modifiés: catalog-04.js, catalog-05.js, catalog-06.js, catalog-08.js ;
+- GE34 et AGB2 restent volontairement non modifiés.
+
+Résultat: jalon catalogue R158-C12 vérifié localement et prêt pour sauvegardes GitHub/Library.
