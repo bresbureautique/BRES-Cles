@@ -1,0 +1,15 @@
+{
+  "milestone": "CATALOGUE R158-C8",
+  "base": "BRES_Cles_Catalogue_V3_R158_C7",
+  "policy": "One externally verified manufacturer fill only; application excluded.",
+  "reference": "AX5RP",
+  "before_manufacturer": "",
+  "after_manufacturer": "AXA",
+  "group": "30",
+  "chunk": "catalog-10.js",
+  "blank_manufacturers_before": 145,
+  "blank_manufacturers_after": 144,
+  "changed_chunks": ["catalog-10.js"],
+  "catalog_10_base_sha256": "f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4",
+  "catalog_10_final_sha256": "644ca6bc0977f719a9a4601bf5d052ad2959e50e761a55941e87d6fe0fc79958"
+}
