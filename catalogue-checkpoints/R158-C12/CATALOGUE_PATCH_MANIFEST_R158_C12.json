@@ -1,0 +1,35 @@
+{
+  "milestone": "CATALOGUE R158-C12",
+  "base": "BRES_Cles_Catalogue_V3_R158_C11",
+  "policy": "External-evidence batch; manufacturer-only fills; application excluded.",
+  "targets": [
+    {"reference":"AB56","after_manufacturer":"ABUS","group":"8","chunk":"catalog-04.js"},
+    {"reference":"AB74","after_manufacturer":"ABUS","group":"9","chunk":"catalog-05.js"},
+    {"reference":"ALP4","after_manufacturer":"ALPHA","group":"16","chunk":"catalog-05.js"},
+    {"reference":"BK53","after_manufacturer":"BKS","group":"41","chunk":"catalog-04.js"},
+    {"reference":"CE3","after_manufacturer":"CES","group":"55","chunk":"catalog-05.js"},
+    {"reference":"CE6","after_manufacturer":"CES","group":"55","chunk":"catalog-08.js"},
+    {"reference":"CS162","after_manufacturer":"CISA","group":"64","chunk":"catalog-08.js"},
+    {"reference":"IE26","after_manufacturer":"ISEO","group":"130","chunk":"catalog-05.js"},
+    {"reference":"KE13","after_manufacturer":"KESO","group":"284","chunk":"catalog-06.js"},
+    {"reference":"UNI11AP","after_manufacturer":"UNION","group":"227","chunk":"catalog-04.js"},
+    {"reference":"VAC45","after_manufacturer":"VACHETTE","group":"235","chunk":"catalog-08.js"},
+    {"reference":"VI11","after_manufacturer":"VIRO","group":"240","chunk":"catalog-05.js"}
+  ],
+  "blank_manufacturers_before":117,
+  "blank_manufacturers_after":105,
+  "changed_chunks":["catalog-04.js","catalog-05.js","catalog-06.js","catalog-08.js"],
+  "chunk_sha256_before":{
+    "catalog-04.js":"3b27da84d1ada2e34bac0048ed0e93ef92fd19a8e26e80252b8ee34c01c9f85c",
+    "catalog-05.js":"1222a4e404620ef491821b4a8432d5a489010ba48253821c75b27e847406a2df",
+    "catalog-06.js":"c074f787794037ed0ce33dd117d81f486231a4fadab7d1c601aa53a078e528ad",
+    "catalog-08.js":"9fd24fecfd9ca0733a6fc54dc3c26e80a9db95477d8518ae9ed7c0f4f24f08d8"
+  },
+  "chunk_sha256_after":{
+    "catalog-04.js":"b5016c25afe8809dafde1b1902f49d9390baa24c9b7823fa381de02e457ade5f",
+    "catalog-05.js":"0bc6aaad55c4ef96aab8f689b849707a96c9c795078c659ebe017892c9cb8729",
+    "catalog-06.js":"8c7bdfadfcc43b6d907c9b4a5f429e781d5093c12d4611957e3b73a8b1141803",
+    "catalog-08.js":"664bc84446a3eb6d1a45d3e4c39a43f1484881c7967f773c9926f452a5bc0f14"
+  },
+  "deferred_cases":["GE34","AGB2"]
+}
