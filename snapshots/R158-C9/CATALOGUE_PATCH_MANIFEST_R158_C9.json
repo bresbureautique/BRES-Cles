@@ -1,0 +1,22 @@
+{
+  "milestone": "CATALOGUE R158-C9",
+  "base": "BRES_Cles_Catalogue_V3_R158_C8",
+  "policy": "External-evidence batch; manufacturer-only fills; application excluded.",
+  "targets": [
+    {"reference":"TRF1","before_manufacturer":"","after_manufacturer":"3F","group":"2","chunk":"catalog-01.js"},
+    {"reference":"BE1R","before_manufacturer":"","after_manufacturer":"BETA","group":"39","chunk":"catalog-01.js"},
+    {"reference":"CS22","before_manufacturer":"","after_manufacturer":"CISA","group":"68","chunk":"catalog-01.js"},
+    {"reference":"DM27","before_manufacturer":"","after_manufacturer":"DOM","group":"86","chunk":"catalog-01.js"},
+    {"reference":"EV103X-1","before_manufacturer":"","after_manufacturer":"EVVA","group":"95","chunk":"catalog-01.js"},
+    {"reference":"FM3R","before_manufacturer":"","after_manufacturer":"FASEM","group":"101","chunk":"catalog-01.js"},
+    {"reference":"LC5R","before_manufacturer":"","after_manufacturer":"LINCE","group":"147","chunk":"catalog-01.js"},
+    {"reference":"OC1R","before_manufacturer":"","after_manufacturer":"OMEC","group":"176","chunk":"catalog-01.js"},
+    {"reference":"VI7","before_manufacturer":"","after_manufacturer":"VIRO","group":"241","chunk":"catalog-01.js"}
+  ],
+  "blank_manufacturers_before": 144,
+  "blank_manufacturers_after": 135,
+  "changed_chunks": ["catalog-01.js"],
+  "chunk_sha256_before": {"catalog-01.js":"9fd12564aa987387a06e2d8e28d13ce1021ec5bb694ebae4f41ce827dcfe8ef0"},
+  "chunk_sha256_after": {"catalog-01.js":"d1df760e21548a07a1990d98e8e5ec44171000bdae5cc8b3544f26f53a0ed490"},
+  "deferred_case": {"reference":"GE34","reason":"External source says Grundmann; internal prefix heuristic suggested GEGE. Requires separate taxonomy audit."}
+}
