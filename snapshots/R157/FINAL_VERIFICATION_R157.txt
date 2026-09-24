@@ -1,0 +1,13 @@
+BRES CLES V2.28 — FINAL VERIFICATION R157
+
+PASS protocole physique TE8D / TE8I intégré au paquet de test.
+PASS 94/94 tests locaux étendus.
+PASS verify_build.py : aucune erreur.
+PASS JavaScript inline et wrapper : syntaxe valide.
+PASS TE8D répétable / TE8I répétable / instabilité / ambiguïté persistante testés.
+PASS TE8B reste non canonique.
+PASS decisionInfluence=false.
+PASS seuils OCR 0,70 / 0,88 inchangés.
+PASS catalogue : 5103 références / 5103 uniques / 10 blocs inchangés.
+PASS runtime visible conservé sur V2.28 TEST R156 pour préserver la cohérence des garde-fous existants ; R157 est le jalon protocole séparé.
+PASS V2.27 n'est pas modifiée par ce paquet ; contrôle GitHub main effectué séparément.
