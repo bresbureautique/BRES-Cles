@@ -1,0 +1,16 @@
+BRES CLÉS — CHECKPOINT CATALOGUE R158-C14
+
+Volet: catalogue uniquement.
+Base: R158-C13.
+Application V2.28: non modifiée (R157 conservée).
+Stable V2.27: non modifiée.
+
+Travail effectué:
+- sixième lot externe de 11 références validées ;
+- fabricants renseignés: BE202=BETA, BK49R=BKS, BK8=BKS, CE22-35=CES, CS172=CISA, DM7=DOM, FB65R=FAB, IE8=ISEO, UNI19=UNION, UNI61=UNION, UNI61R=UNION ;
+- fabricants vides: 94 -> 83 ;
+- seules ces 11 lignes ont changé, uniquement dans le champ fabricant ;
+- blocs modifiés: catalog-02.js, catalog-04.js, catalog-05.js, catalog-06.js, catalog-07.js, catalog-08.js, catalog-09.js, catalog-10.js ;
+- GE34, AGB2 et RO7 restent volontairement non modifiés.
+
+Résultat: jalon catalogue R158-C14 prêt pour paquet, GitHub et roundtrip Library.

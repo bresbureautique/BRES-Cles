@@ -1,0 +1,42 @@
+BRES CLÉS — CATALOGUE R158-C14 — EXTERNAL VALIDATED BATCH 06
+
+Objet: sixième lot de fabricants validés par références externes exactes ou équivalences explicites.
+
+Corrections fabricant appliquées:
+- BE202 -> BETA (groupe 39, catalog-04.js)
+  source: Ferramenta CLIK — https://www.ferramentaclik.it/catalogo/chiavi-silca/profilo-acciaio/be202-silca-chiave-profilo-acciaio-detail.html
+  source: Nauta — https://www.nauta.com/nl/7501000086-pcs-b5d-be5d-be5d-be202-l060
+- BK49R -> BKS (groupe 40, catalog-06.js)
+  source: BASI — https://shop.basi.eu/de/bk-23/item-1-2007403.html
+  source: A-Key GmbH — https://a-key-gmbh.com/BK49R-Silca-1731-46-BK49S-Zylinderschluessel
+- BK8 -> BKS (groupe 40, catalog-06.js)
+  source: Allegro locksmith listing — https://allegro.pl/produkt/klucz-do-zamka-expres-bk8-bks-jma-bk-5d-silca-ks4x-mosiezny-yale-drzwiowe-b66fcce6-e199-4d07-ade6-9f5182abddc2
+- CE22-35 -> CES (groupe 57, catalog-09.js)
+  source: Ogele — https://ogele.de/Silca-CE22-35-Anlagenschluessel-fuer-CES
+- CS172 -> CISA (groupe 270, catalog-05.js)
+  source: ePRICE — https://www.eprice.it/SILCA-Chiave-Punzonata-Cisa-Cs172-Silca-Ottone-Nichelato-X-5-Pz-VX8598364K/d-65322528
+  source: Ferramenta CLIK adjacent CISA series — https://www.ferramentaclik.it/catalogo/chiavi-silca/punzonate/cs171-silca-chiave-punzonata-detail.html
+- DM7 -> DOM (groupe 82, catalog-10.js)
+  source: JMA UK — https://jma-uk.co.uk/dom-14d-jma-cylinder-key-blank-dom-14d-for-domr
+  source: EDRON — https://www.edron.nl/woo/product/dom-sleutel-5/
+- FB65R -> FAB (groupe 97, catalog-04.js)
+  source: Motokey — https://www.motokey.pl/fab-8
+- IE8 -> ISEO (groupe 129, catalog-07.js)
+  source: Motokey — https://motokey.pl/iseo
+- UNI19 -> UNION (groupe 227, catalog-06.js)
+  source: Trade Keys — https://www.trade-keys.co.uk/uni19-silca-key-blank
+  source: Office Specialties — https://www.oskeys.co.uk/silca-uni19-key-blank-n16kb
+- UNI61 -> UNION (groupe 228, catalog-08.js)
+  source: JMA UK — https://jma-uk.co.uk/un-9d-jma-un-9d-cylinder-key-blank-for-unionr
+  source: BumpKeys4U — https://bumpkeys4u.com/product/union-cabinet-cylinder-key-blank-silca-uni61/
+- UNI61R -> UNION (groupe 228, catalog-02.js)
+  source: JMA UK — https://jma-uk.co.uk/un-9i-jma-un-9i-cylinder-key-blank-for-unionr
+
+Contrôles de prudence:
+- seuls les champs fabricant des 11 références ci-dessus ont été modifiés ;
+- GE34 et AGB2 restent vides ;
+- RO7 reste vide car les résultats externes sont contradictoires selon le marché ;
+- application V2.28 exclue du snapshot ;
+- V2.27 stable exclue du snapshot ;
+
+Fabricants vides: 94 -> 83.
