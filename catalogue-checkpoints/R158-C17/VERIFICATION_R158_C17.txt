@@ -1,0 +1,1 @@
+R158-C17 catalogue-only milestone. 5103 references, 38 blank manufacturers, 17 manufacturer-only fills. Local tests 8/8 PASS; reproducible self-test 11/11 PASS; Library roundtrip byte-identical PASS. ZIP SHA-256: 9fd3556ce07c8f20b9ae3e5b8d819145fe6755e879fff5a40f5659f979e8afe8. V2.27 stable unchanged. V2.28 R157 unchanged.
