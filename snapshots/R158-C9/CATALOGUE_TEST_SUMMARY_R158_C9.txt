@@ -1,0 +1,14 @@
+BRES CLÉS — CATALOGUE R158-C9 — TEST SUMMARY
+
+5103_references: PASS
+5103_unique: PASS
+144_blanks_before: PASS
+135_blanks_after: PASS
+9_exact_manufacturer_fills: PASS
+GE34_still_blank: PASS
+only_9_rows_changed: PASS
+nonmanufacturer_fields_unchanged: PASS
+changed_chunks_match: PASS
+reproducible_selftest: PASS
+
+TOTAL: 10/10 PASS
