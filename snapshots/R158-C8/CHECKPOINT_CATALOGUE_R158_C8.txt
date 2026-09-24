@@ -1,0 +1,16 @@
+BRES CLÉS — CHECKPOINT CATALOGUE R158-C8
+
+Volet: catalogue uniquement.
+Base: R158-C7.
+Application V2.28: non modifiée (R157 conservée).
+Stable V2.27: non modifiée.
+
+Travail effectué:
+- audit séparé du conflit AX5RP / groupe interne 30 ;
+- validation externe AX5RP = AXA ;
+- remplissage du seul champ fabricant de AX5RP ;
+- fabricants vides: 145 -> 144 ;
+- contrôle strict: aucune géométrie, aucune référence et aucun autre champ modifiés ;
+- seul catalog-10.js change.
+
+Résultat: jalon catalogue R158-C8 vérifié séparément de l'application.
