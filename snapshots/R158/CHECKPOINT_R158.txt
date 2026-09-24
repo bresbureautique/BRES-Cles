@@ -1,0 +1,23 @@
+BRES CLÉS V2.28 TEST — CHECKPOINT R158 (GARDE COLLISIONS CATALOGUE QA2)
+
+V2.27 reste la version stable et n'est jamais remplacée par ce paquet de test.
+R158 est développé séparément du catalogue canonique R158-QA2 : aucun des 10 blocs catalogue/v3/catalog-*.js n'est modifié.
+
+OBJECTIF R158
+Empêcher qu'une correspondance géométrique seule soit présentée comme suffisamment fiable lorsqu'elle appartient à une collision détectée par l'audit catalogue R158-QA2.
+
+GARDE AJOUTÉE
+- 6 paires critiques : blocage systématique de la géométrie seule, même avec un score élevé.
+- 5 paires proches supplémentaires : le partenaire catalogue doit être réellement présent dans les candidats et séparé d'au moins 8 points avant qu'un candidat géométrique unique puisse rester affichable.
+- Un OCR fort concordant peut lever une collision critique car il apporte le signal indépendant demandé par QA2.
+- Un OCR fort contradictoire conserve le statut conflit.
+- Une référence saisie manuellement reste prioritaire ; si elle appartient à une collision QA2, l'interface explique explicitement que la saisie/référence est le signal qui tranche.
+
+Paires critiques QA2 : AB2R/CS6R ; AAA1/UL050 ; LF6R/LF4 ; CS204/CC3 ; STA9R/DAL2R ; MEG1R/HOK1R.
+Paires proches supplémentaires QA2 : FM2/PC20 ; SOP10/AB46 ; YT15/FI6 ; WA6R/KLE5RX ; DAL2R/STA4R.
+
+CONSERVATION
+- Runtime visible R156 conservé, conformément à l'architecture du paquet R157 où R157 est un protocole séparé et decisionInfluence=false.
+- Protocole physique TE8D/TE8I R157 conservé.
+- Seuils OCR 0,70 / 0,88 inchangés.
+- Garde générique premier/deuxième candidat à 8 points conservée.
