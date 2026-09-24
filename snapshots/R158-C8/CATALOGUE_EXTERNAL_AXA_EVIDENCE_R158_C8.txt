@@ -1,0 +1,18 @@
+BRES CLÉS — CATALOGUE R158-C8 — VALIDATION EXTERNE AX5RP / AXA
+
+Objet
+Résoudre la dernière anomalie explicitement isolée en R158-C7 : AX5RP avait un fabricant vide alors que son groupe interne 30 contient aussi deux références AVOCET. Le groupe seul ne devait donc pas être utilisé comme preuve.
+
+Preuves externes retenues (consultées le 24/09/2026)
+1) Silca Catalogue 110 (édition 2024), page 30 : la mise en page distingue la famille AVOCET (AVC1/AVC2/AVC3RP-*) de la section AXA (NL), sous laquelle apparaissent AX1P, AX1RP, AX4RP et AX5RP.
+2) Steenhauer, Silca Selected Partner : fiche produit AX5RP, équivalence Keyline AXA5SP.
+3) Motokey : la fiche AX5RP indique Original producer / Producent oryginalny: AXA.
+
+Décision R158-C8
+- AX5RP : fabricant vide -> AXA.
+- Groupe 30 inchangé.
+- Géométrie, profils, empreinte, dimensions et score inchangés.
+- Toutes les autres références et tous les autres champs restent bit-identiques à R158-C7.
+- Fabricants vides : 145 -> 144.
+
+R158-C8 est un jalon catalogue séparé. Il ne modifie ni V2.27 stable ni V2.28 test.
