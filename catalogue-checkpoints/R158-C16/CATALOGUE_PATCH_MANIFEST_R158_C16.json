@@ -1,0 +1,28 @@
+{
+  "milestone": "CATALOGUE R158-C16",
+  "base": "BRES_Cles_Catalogue_V3_R158_C15",
+  "policy": "External validated batch 08; manufacturer-only fills; application excluded.",
+  "blank_manufacturers_before": 72,
+  "blank_manufacturers_after": 55,
+  "targets": [
+    {"reference":"BK13","after_manufacturer":"BKS","chunk":"catalog-02.js"},
+    {"reference":"CS47","after_manufacturer":"CISA","chunk":"catalog-09.js"},
+    {"reference":"CS8","after_manufacturer":"CISA","chunk":"catalog-09.js"},
+    {"reference":"FAC13","after_manufacturer":"FAC","chunk":"catalog-07.js"},
+    {"reference":"FAC6R","after_manufacturer":"FAC","chunk":"catalog-10.js"},
+    {"reference":"FAC7","after_manufacturer":"FAC","chunk":"catalog-09.js"},
+    {"reference":"GE16","after_manufacturer":"GEGE","chunk":"catalog-10.js"},
+    {"reference":"GE17","after_manufacturer":"GEGE","chunk":"catalog-10.js"},
+    {"reference":"LS10","after_manufacturer":"LAS","chunk":"catalog-03.js"},
+    {"reference":"LS16R","after_manufacturer":"LAS","chunk":"catalog-10.js"},
+    {"reference":"LS3","after_manufacturer":"LAS","chunk":"catalog-04.js"},
+    {"reference":"LS8R","after_manufacturer":"LAS","chunk":"catalog-08.js"},
+    {"reference":"TE24","after_manufacturer":"TESA","chunk":"catalog-10.js"},
+    {"reference":"UNI43","after_manufacturer":"UNION","chunk":"catalog-10.js"},
+    {"reference":"YT12","after_manufacturer":"YETI","chunk":"catalog-09.js"},
+    {"reference":"YT1R","after_manufacturer":"YETI","chunk":"catalog-07.js"},
+    {"reference":"YT3R","after_manufacturer":"YETI","chunk":"catalog-10.js"}
+  ],
+  "changed_chunks": ["catalog-02.js","catalog-03.js","catalog-04.js","catalog-07.js","catalog-08.js","catalog-09.js","catalog-10.js"],
+  "deferred_cases": ["GE34","AGB2","RO7","CE130-35"]
+}
