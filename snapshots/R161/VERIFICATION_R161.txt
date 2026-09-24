@@ -1,0 +1,19 @@
+BRES CLÉS V2.28 TEST — VÉRIFICATION R161
+
+Statut : checkpoint testé ciblé, non promu stable.
+
+JavaScript inline syntax : PASS
+Nouveau test QA2 resolution trace : 10/10 PASS
+Garde QA2 R158 : 13/13 PASS
+Présentation ambiguïté R159 : 8/8 PASS
+Diagnostic QA2 R160 : 8/8 PASS
+manual_ambiguity_resolution_test.py : PASS / SELFTEST OK
+ocr_reference_ambiguity_guard_test.py : PASS / SELFTEST OK
+Catalogue : 5 103 références / 5 103 uniques
+10 blocs catalogue : SHA-256 identiques à R160
+ZIP intégrité : PASS
+ZIP roundtrip local + nouveau test : PASS
+ZIP SHA-256 : e4330258e04b00ea77862f8e16441f36100d6a7c3c0c33c1b76f10408e78dd1a
+
+Régression historique complète verify_build.py : tentée mais non terminée avant le plafond d'exécution ; aucun résultat 91/91 R161 n'est revendiqué.
+V2.27 stable : non modifiée.
