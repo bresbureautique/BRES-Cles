@@ -1,0 +1,206 @@
+{
+  "milestone": "CATALOGUE R158-C11",
+  "base": "BRES_Cles_Catalogue_V3_R158_C10",
+  "policy": "External-evidence batch; manufacturer-only fills; application excluded.",
+  "targets": [
+    {
+      "reference": "AB125RCP",
+      "before_manufacturer": "",
+      "after_manufacturer": "ABUS",
+      "group": "10",
+      "chunk": "catalog-02.js",
+      "evidence_sources": [
+        {
+          "name": "Aldridge Security",
+          "url": "https://www.aldridgesecurity.co.uk/silca-4119-silca-ab125rcp-cylinder-key-blank-to-suit-abus.html"
+        },
+        {
+          "name": "Expres",
+          "url": "https://b2b.expres.pl/en/numbered/21900-ab125rcp-8052782029887.html"
+        }
+      ]
+    },
+    {
+      "reference": "AB13",
+      "before_manufacturer": "",
+      "after_manufacturer": "ABUS",
+      "group": "7",
+      "chunk": "catalog-04.js",
+      "evidence_sources": [
+        {
+          "name": "CLK Supplies",
+          "url": "https://clksupplies.com/collections/all/products/ab13-abus-padlock-key-blank"
+        },
+        {
+          "name": "LSC Security Supplies",
+          "url": "https://www.lsc.co.nz/silca-blank-ab-13-pkt-10-ab13"
+        }
+      ]
+    },
+    {
+      "reference": "DM4",
+      "before_manufacturer": "",
+      "after_manufacturer": "DOM",
+      "group": "80",
+      "chunk": "catalog-03.js",
+      "evidence_sources": [
+        {
+          "name": "LSC Security Supplies",
+          "url": "https://www.lsc.com.au/silca-blank-dm-4-pkt-10"
+        },
+        {
+          "name": "OS Keys",
+          "url": "https://www.oskeys.co.uk/silca-dm4-key-blank-v9kb"
+        }
+      ]
+    },
+    {
+      "reference": "DM61",
+      "before_manufacturer": "",
+      "after_manufacturer": "DOM",
+      "group": "80",
+      "chunk": "catalog-02.js",
+      "evidence_sources": [
+        {
+          "name": "BumpKeys4U",
+          "url": "https://bumpkeys4u.com/product/dom-cylinder-key-blank-errebi-dm6/"
+        }
+      ]
+    },
+    {
+      "reference": "DM10R",
+      "before_manufacturer": "",
+      "after_manufacturer": "DOM",
+      "group": "80",
+      "chunk": "catalog-06.js",
+      "evidence_sources": [
+        {
+          "name": "Nauta",
+          "url": "https://www.nauta.com/nl/7501000395-pcs-dm10r-dom6i-do3s-dm4r-l190"
+        }
+      ]
+    },
+    {
+      "reference": "BK4",
+      "before_manufacturer": "",
+      "after_manufacturer": "BKS",
+      "group": "40",
+      "chunk": "catalog-04.js",
+      "evidence_sources": [
+        {
+          "name": "LSC Security Supplies",
+          "url": "https://www.lsc.com.au/silca-blank-bk-4"
+        }
+      ]
+    },
+    {
+      "reference": "BK22R",
+      "before_manufacturer": "",
+      "after_manufacturer": "BKS",
+      "group": "40",
+      "chunk": "catalog-04.js",
+      "evidence_sources": [
+        {
+          "name": "BASI",
+          "url": "https://shop.basi.eu/en/bk-28/item-1-2014329.html"
+        }
+      ]
+    },
+    {
+      "reference": "BK23R",
+      "before_manufacturer": "",
+      "after_manufacturer": "BKS",
+      "group": "40",
+      "chunk": "catalog-05.js",
+      "evidence_sources": [
+        {
+          "name": "BASI",
+          "url": "https://shop.basi.eu/de/zylinder-schluesselrohling/item-1-1111100.html"
+        }
+      ]
+    },
+    {
+      "reference": "VAC87",
+      "before_manufacturer": "",
+      "after_manufacturer": "VACHETTE",
+      "group": "235",
+      "chunk": "catalog-03.js",
+      "evidence_sources": [
+        {
+          "name": "JMA eCatalog",
+          "url": "https://ecatalogo.jma.es/es/va-54/13371/"
+        },
+        {
+          "name": "Asel AG",
+          "url": "https://asel-shop.ch/products/kopie-von-abu10-silca-ab8jma-abu-1d-10-stuck-10-pieces-4"
+        }
+      ]
+    },
+    {
+      "reference": "VAC84",
+      "before_manufacturer": "",
+      "after_manufacturer": "VACHETTE",
+      "group": "235",
+      "chunk": "catalog-03.js",
+      "evidence_sources": [
+        {
+          "name": "Korund",
+          "url": "https://korund42-shop.ru/catalog/angliyskie_klyuchi/vc52_va_48_vac84_va129/"
+        },
+        {
+          "name": "Trade Keys",
+          "url": "https://www.trade-keys.co.uk/vac48-silca-key-blank"
+        }
+      ]
+    },
+    {
+      "reference": "VI9R",
+      "before_manufacturer": "",
+      "after_manufacturer": "VIRO",
+      "group": "240",
+      "chunk": "catalog-01.js",
+      "evidence_sources": [
+        {
+          "name": "Keytrader",
+          "url": "https://www.keytrader.co.uk/Cylinder-Keys/VIRO.html"
+        }
+      ]
+    }
+  ],
+  "blank_manufacturers_before": 128,
+  "blank_manufacturers_after": 117,
+  "changed_chunks": [
+    "catalog-01.js",
+    "catalog-02.js",
+    "catalog-03.js",
+    "catalog-04.js",
+    "catalog-05.js",
+    "catalog-06.js"
+  ],
+  "chunk_sha256_before": {
+    "catalog-01.js": "a1b1ed8eb8a9e111d561ad9c01de6084ddaa121156329a151d6dacd47effc75c",
+    "catalog-02.js": "15b79a67a8a54ef166355e16146a25b1ed7812be5896752f4d4d0bcb59a3e118",
+    "catalog-03.js": "a269f353c92baf9a19c3f8c0cad07cee4241edbab61a797b7010fda5296eadd1",
+    "catalog-04.js": "c6b3b3a333692dcf279583b9fd362b6e7ca41b615e34b402bf52d9c63a98c9f2",
+    "catalog-05.js": "f2ce81a5a58f7556fd03f753b5ba223da3bcbe61e1aa57e8a7813bac73551d74",
+    "catalog-06.js": "cdfe8dbb821f95dd29c0356d220cb1ab7f91ccc691f2d2061cc62021a9b0bbf5"
+  },
+  "chunk_sha256_after": {
+    "catalog-01.js": "f29f7c5e11d14760ddd2c5347cc4597dc00abcbe9a59877855f797cbeff1e0b7",
+    "catalog-02.js": "aecf7fd4c38ce90c69dda0940373c8011b051e6cd3f10bb7c7ba3e37293ba3f1",
+    "catalog-03.js": "0b819739fe5c3f6f7855682cb2839ac5f690d0bbd79e469e18339978d78f4e1f",
+    "catalog-04.js": "3b27da84d1ada2e34bac0048ed0e93ef92fd19a8e26e80252b8ee34c01c9f85c",
+    "catalog-05.js": "1222a4e404620ef491821b4a8432d5a489010ba48253821c75b27e847406a2df",
+    "catalog-06.js": "c074f787794037ed0ce33dd117d81f486231a4fadab7d1c601aa53a078e528ad"
+  },
+  "deferred_cases": [
+    {
+      "reference": "GE34",
+      "reason": "Taxonomy conflict remains unresolved; not changed."
+    },
+    {
+      "reference": "AGB2",
+      "reason": "External sources remain insufficiently consistent; not changed."
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+BRES CLÉS — CATALOGUE R158-C11 — EXTERNAL VALIDATED BATCH 03
+
+Objet: troisième lot externe de fabricants, appliqué uniquement lorsque la référence exacte ou une équivalence explicite est documentée.
+
+Corrections fabricant appliquées:
+- AB125RCP -> ABUS (groupe 10, catalog-02.js)
+  source: Aldridge Security — https://www.aldridgesecurity.co.uk/silca-4119-silca-ab125rcp-cylinder-key-blank-to-suit-abus.html
+  source: Expres — https://b2b.expres.pl/en/numbered/21900-ab125rcp-8052782029887.html
+- AB13 -> ABUS (groupe 7, catalog-04.js)
+  source: CLK Supplies — https://clksupplies.com/collections/all/products/ab13-abus-padlock-key-blank
+  source: LSC Security Supplies — https://www.lsc.co.nz/silca-blank-ab-13-pkt-10-ab13
+- DM4 -> DOM (groupe 80, catalog-03.js)
+  source: LSC Security Supplies — https://www.lsc.com.au/silca-blank-dm-4-pkt-10
+  source: OS Keys — https://www.oskeys.co.uk/silca-dm4-key-blank-v9kb
+- DM61 -> DOM (groupe 80, catalog-02.js)
+  source: BumpKeys4U — https://bumpkeys4u.com/product/dom-cylinder-key-blank-errebi-dm6/
+- DM10R -> DOM (groupe 80, catalog-06.js)
+  source: Nauta — https://www.nauta.com/nl/7501000395-pcs-dm10r-dom6i-do3s-dm4r-l190
+- BK4 -> BKS (groupe 40, catalog-04.js)
+  source: LSC Security Supplies — https://www.lsc.com.au/silca-blank-bk-4
+- BK22R -> BKS (groupe 40, catalog-04.js)
+  source: BASI — https://shop.basi.eu/en/bk-28/item-1-2014329.html
+- BK23R -> BKS (groupe 40, catalog-05.js)
+  source: BASI — https://shop.basi.eu/de/zylinder-schluesselrohling/item-1-1111100.html
+- VAC87 -> VACHETTE (groupe 235, catalog-03.js)
+  source: JMA eCatalog — https://ecatalogo.jma.es/es/va-54/13371/
+  source: Asel AG — https://asel-shop.ch/products/kopie-von-abu10-silca-ab8jma-abu-1d-10-stuck-10-pieces-4
+- VAC84 -> VACHETTE (groupe 235, catalog-03.js)
+  source: Korund — https://korund42-shop.ru/catalog/angliyskie_klyuchi/vc52_va_48_vac84_va129/
+  source: Trade Keys — https://www.trade-keys.co.uk/vac48-silca-key-blank
+- VI9R -> VIRO (groupe 240, catalog-01.js)
+  source: Keytrader — https://www.keytrader.co.uk/Cylinder-Keys/VIRO.html
+
+Contrôles de prudence:
+- seuls les champs fabricant des 11 références ci-dessus ont été modifiés ;
+- GE34 et AGB2 restent volontairement vides ;
+- application V2.28 exclue du snapshot ;
+- V2.27 stable exclue du snapshot ;
+- aucune déduction de fabricant par préfixe seule n'est utilisée comme preuve externe.
+
+Fabricants vides: 128 -> 117.
