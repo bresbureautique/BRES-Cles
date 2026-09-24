@@ -1,0 +1,7 @@
+BRES CLÉS V2.28 TEST — CHECKPOINT R159
+
+Objectif : afficher clairement les deux références à départager lorsqu'une garde catalogue QA2 bloque la géométrie seule.
+
+Conservation : V2.27 reste stable ; V2.28 reste sur sa branche de test ; catalogue canonique inchangé ; garde R158 conservée (6 paires critiques, 5 paires proches, marge 8 points).
+
+R159 ajoute une carte « À DÉPARTAGER : REF A / REF B », les scores quand disponibles, la mention « non comparé dans les étalons locaux » pour un partenaire absent, et une consigne pour trancher par marquage OCR, saisie certaine ou contrôle physique.
