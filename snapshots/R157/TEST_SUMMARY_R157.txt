@@ -1,0 +1,9 @@
+BRES CLES V2.28 TEST R157 — TEST SUMMARY
+
+PASS regression: 92/92
+PASS garde TE8D/TE8I: 15/15
+PASS syntax JavaScript
+PASS catalogue canonique: 5103 références / 5103 uniques / 10 blocs inchangés
+PASS V2.27 stable non modifiée (contrôle GitHub séparé requis)
+PASS decisionInfluence=false pour le protocole TE8D/TE8I
+PASS TE8B reste non canonique
