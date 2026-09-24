@@ -1,0 +1,31 @@
+{
+  "milestone": "V2.28 TEST R157",
+  "checks": {
+    "te8d_repeatable": true,
+    "te8i_repeatable": true,
+    "unstable_detected": true,
+    "persistent_ambiguity_physical": true,
+    "bridge_never_canon": true,
+    "outside_family_retake": true,
+    "inactive_safe": true,
+    "decision_influence_false": true,
+    "ui_button": true,
+    "ui_numbered_cycles": true,
+    "export_payload": true,
+    "generic_series_deactivates_specialized": true,
+    "te8b_noncanonical": true,
+    "thresholds_unchanged": true,
+    "active_r157": true
+  },
+  "cases": {
+    "d": {"status":"repeatable","stableCanon":"TE8D","cycleCount":3,"decisiveSequence":["TE8D","TE8D","TE8D"],"decisionInfluence":false},
+    "i": {"status":"repeatable","stableCanon":"TE8I","cycleCount":3,"decisiveSequence":["TE8I","TE8I","TE8I"],"decisionInfluence":false},
+    "unstable": {"status":"unstable","cycleCount":2,"decisiveSequence":["TE8D","TE8I"],"decisionInfluence":false},
+    "physical": {"status":"physical-check-required","cycleCount":3,"bridgeTokenCount":3,"ambiguousCycleCount":3,"distinctDecisiveCanons":[],"nonCanonicalBridgeTokens":["TE8B"],"decisionInfluence":false},
+    "outside": {"status":"outside-family","cycleCount":1,"acceptedCycleCount":0,"rejectedCycleCount":1,"decisionInfluence":false},
+    "inactive": {"status":"inactive","cycleCount":0,"decisionInfluence":false}
+  },
+  "errors": [],
+  "ok": true,
+  "result": "PASS"
+}
