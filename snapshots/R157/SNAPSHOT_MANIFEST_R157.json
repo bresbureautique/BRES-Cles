@@ -1,0 +1,25 @@
+{
+  "schema": "bres-r157-build-verification-v1",
+  "version": "V2.28 TEST R157",
+  "ok": true,
+  "tests": {"passed": 92, "total": 92, "failed": [], "missing": []},
+  "targetedGuard": {"passed": 15, "total": 15},
+  "catalogue": {"count": 5103, "unique": 5103, "canonicalChunksUnchanged": true},
+  "javascriptSyntax": {"v228-catalogue.js": true, "index-inline": true},
+  "stableVersion": "V2.27",
+  "physicalCameraMilestone": "R116",
+  "decisionInfluence": false,
+  "criticalFamily": {"canonicalReferences": ["TE8D", "TE8I"], "nonCanonicalBridgeTokens": ["TE8B"]},
+  "errors": [],
+  "sourceHashes": {
+    "index.html": "7a2bb1bcce59371b62fd591fd02ba1f9716798b387bbde91fcbcdb4f5d63e6d5",
+    "v228-catalogue.js": "86eba9d941019e600ae6b42e73814805b0dd41ff3de1b616a7c8f14260525c6f",
+    "ocr_tesa_te8_physical_protocol_guard_test.py": "ae84c044b7d06ae9fe5d962f270e1dde3a3a84ea2a16faecc4f1dccdc38bfcaa"
+  },
+  "package": {
+    "name": "BRES_Cles_Mobile_V2_28_TEST_R157.zip",
+    "sha256": "a28679bb433893b7380789bd5fb1385de8c3f55f536ef8cae56fbae579956d63",
+    "integrity": "PASS",
+    "requiredFiles": "PASS"
+  }
+}
