@@ -1,0 +1,59 @@
+BRES CLÉS — CATALOGUE R158-C3 — TROISIÈME PREUVE INTERNE
+
+Objet: réduire les 58 candidats forts R158-C2 sans modifier le catalogue canonique.
+
+Catalogue: 5103 références / 5103 uniques
+Fabricants vides: 164
+Candidats forts R158-C2: 58
+Troisième preuve géométrique exacte: 35
+Preuves texte fortes sans jumeau géométrique exact: 23
+Conflits géométriques exacts parmi les 58: 0
+
+Règle R158-C3:
+- La troisième preuve exige une égalité exacte de toute la signature géométrique interne
+  (largeur, hauteur, aire, profils haut/bas et remplissage colonne).
+- Tous les jumeaux exacts renseignés doivent porter le fabricant proposé.
+- Aucune proximité approximative n'est suffisante pour promouvoir un candidat.
+- Aucune donnée fabricant n'est écrite automatiquement.
+
+35 candidats à triple preuve interne:
+- ALP9 | ALPHA | A_DUAL_EXACT | jumeau(x): ALP9R (ALPHA)
+- DM123-10 | DOM | A_DUAL_EXACT | jumeau(x): DM123-2 (DOM), DM123-1 (DOM)
+- FB64RX | FAB | A_DUAL_EXACT | jumeau(x): FB64X (FAB)
+- VI9R | VIRO | A_DUAL_EXACT | jumeau(x): VI9 (VIRO)
+- DM123-9 | DOM | A_DUAL_EXACT | jumeau(x): DM123-2 (DOM), DM123-1 (DOM)
+- FF1 | F.F. | A_DUAL_EXACT | jumeau(x): FF1R (F.F.)
+- RO7 | RONIS | B_PREFIX_DOMINANT | jumeau(x): RO7R (RONIS)
+- AB17 | ABUS | B_PREFIX_DOMINANT | jumeau(x): AB17R (ABUS), AB13R (ABUS)
+- AB50 | ABUS | B_PREFIX_DOMINANT | jumeau(x): AB50R (ABUS)
+- DM5R | DOM | A_DUAL_EXACT | jumeau(x): DM5 (DOM)
+- DM123-8 | DOM | A_DUAL_EXACT | jumeau(x): DM123-2 (DOM), DM123-1 (DOM)
+- AB13 | ABUS | B_PREFIX_DOMINANT | jumeau(x): AB17R (ABUS), AB13R (ABUS)
+- AB56 | ABUS | B_PREFIX_DOMINANT | jumeau(x): AB56R (ABUS)
+- DM123-7 | DOM | A_DUAL_EXACT | jumeau(x): DM123-2 (DOM), DM123-1 (DOM)
+- FB26 | FAB | A_DUAL_EXACT | jumeau(x): FB26R (FAB)
+- FF8 | F.F. | A_DUAL_EXACT | jumeau(x): FF8R (F.F.), FF7R (F.F.)
+- UNI11AP | UNION | B_PREFIX_DOMINANT | jumeau(x): UNI11BP (UNION)
+- AB74 | ABUS | B_PREFIX_DOMINANT | jumeau(x): AB77 (ABUS)
+- ALP4 | ALPHA | A_DUAL_EXACT | jumeau(x): ALP4R (ALPHA)
+- CE3 | CES | A_DUAL_EXACT | jumeau(x): CE3R (CES)
+- FF7 | F.F. | A_DUAL_EXACT | jumeau(x): FF8R (F.F.), FF7R (F.F.)
+- WK68R | WILKA | B_PREFIX_DOMINANT | jumeau(x): WK55 (WILKA)
+- FH1R | FTH | A_DUAL_EXACT | jumeau(x): FH1 (FTH)
+- UNI19 | UNION | B_PREFIX_DOMINANT | jumeau(x): UNI19R (UNION)
+- VI2 | VIRO | A_DUAL_EXACT | jumeau(x): VI2R (VIRO), VI10R (VIRO)
+- CE6 | CES | A_DUAL_EXACT | jumeau(x): CE6R (CES)
+- AB1X | ABUS | B_PREFIX_DOMINANT | jumeau(x): AB1RX (ABUS)
+- AB35 | ABUS | B_PREFIX_DOMINANT | jumeau(x): AB35R (ABUS)
+- CE22-35 | CES | A_DUAL_EXACT | jumeau(x): CE22-15 (CES)
+- CE18R | CES | A_DUAL_EXACT | jumeau(x): CE18 (CES)
+- DM7 | DOM | A_DUAL_EXACT | jumeau(x): DM35R (DOM)
+- DM105R | DOM | A_DUAL_EXACT | jumeau(x): DM3 (DOM)
+- PF8R | PREFER | A_DUAL_EXACT | jumeau(x): PF8 (PREFER)
+- UNI43 | UNION | B_PREFIX_DOMINANT | jumeau(x): UNI11BP (UNION)
+- VI10 | VIRO | A_DUAL_EXACT | jumeau(x): VI2R (VIRO), VI10R (VIRO)
+
+23 candidats restant à preuve texte forte seulement:
+VAC48, FF6, VAC87, VAC84, BK53, FB65R, FF6R, CS172, DM123-6, IE26, VI11, DM70R, KE13, WK69, DM22TV6, DM74R, VAC86, VAC78, DM22TV7, VAC45, WK91R, DM60R, VAC89
+
+AUCUNE MODIFICATION DES 5103 DONNÉES CATALOGUE.
