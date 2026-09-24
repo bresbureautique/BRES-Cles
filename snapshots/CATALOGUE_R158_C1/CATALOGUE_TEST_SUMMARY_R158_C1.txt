@@ -1,0 +1,16 @@
+BRES CLÉS — CATALOGUE R158-C1 — TEST SUMMARY
+
+9/9 scripts de contrôle PASS
+OK    catalogue_alias_namespace_test.py
+OK    catalogue_collision_baseline_test.py
+OK    catalogue_namespace_registry_test.py
+OK    catalogue_ocr_confusability_baseline_test.py
+OK    catalogue_ocr_edit_distance_baseline_test.py
+OK    catalogue_ocr_transposition_baseline_test.py
+OK    catalogue_ref_identity_test.py
+OK    catalogue_schema_integrity_test.py
+OK    catalogue_canonical_snapshot_test_r158.py
+
+Catalogue data mutation: NO
+Application runtime mutation: NO
+V2.27 stable mutation: NO
