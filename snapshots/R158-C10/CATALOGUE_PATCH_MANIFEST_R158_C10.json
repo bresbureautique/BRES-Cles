@@ -1,0 +1,26 @@
+{
+  "milestone": "CATALOGUE R158-C10",
+  "base": "BRES_Cles_Catalogue_V3_R158_C9",
+  "policy": "External-evidence batch; manufacturer-only fills; application excluded.",
+  "targets": [
+    {"reference":"ALP9","before_manufacturer":"","after_manufacturer":"ALPHA","group":"16","chunk":"catalog-01.js"},
+    {"reference":"VAC48","before_manufacturer":"","after_manufacturer":"VACHETTE","group":"235","chunk":"catalog-01.js"},
+    {"reference":"FF1","before_manufacturer":"","after_manufacturer":"F.F.","group":"103","chunk":"catalog-02.js"},
+    {"reference":"DM5R","before_manufacturer":"","after_manufacturer":"DOM","group":"81","chunk":"catalog-03.js"},
+    {"reference":"AB17","before_manufacturer":"","after_manufacturer":"ABUS","group":"7","chunk":"catalog-03.js"},
+    {"reference":"AB50","before_manufacturer":"","after_manufacturer":"ABUS","group":"8","chunk":"catalog-03.js"},
+    {"reference":"BK21R","before_manufacturer":"","after_manufacturer":"BKS","group":"40","chunk":"catalog-03.js"}
+  ],
+  "blank_manufacturers_before": 135,
+  "blank_manufacturers_after": 128,
+  "changed_chunks": ["catalog-01.js","catalog-02.js","catalog-03.js"],
+  "chunk_sha256_after": {
+    "catalog-01.js": "a1b1ed8eb8a9e111d561ad9c01de6084ddaa121156329a151d6dacd47effc75c",
+    "catalog-02.js": "15b79a67a8a54ef166355e16146a25b1ed7812be5896752f4d4d0bcb59a3e118",
+    "catalog-03.js": "a269f353c92baf9a19c3f8c0cad07cee4241edbab61a797b7010fda5296eadd1"
+  },
+  "deferred_cases": [
+    {"reference":"GE34","reason":"Taxonomy conflict: external Grundmann vs internal GEGE heuristic."},
+    {"reference":"AGB2","reason":"External sources are not taxonomically consistent enough for an automatic fill."}
+  ]
+}
