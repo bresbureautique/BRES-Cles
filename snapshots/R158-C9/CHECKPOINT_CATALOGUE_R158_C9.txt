@@ -1,0 +1,17 @@
+BRES CLÉS — CHECKPOINT CATALOGUE R158-C9
+
+Volet: catalogue uniquement.
+Base: R158-C8.
+Application V2.28: non modifiée (R157 conservée).
+Stable V2.27: non modifiée.
+
+Travail effectué:
+- premier lot externe de 9 références auparavant classées groupe ambigu ;
+- fabricants validés: TRF1=3F, BE1R=BETA, CS22=CISA, DM27=DOM,
+  EV103X-1=EVVA, FM3R=FASEM, LC5R=LINCE, OC1R=OMEC, VI7=VIRO ;
+- fabricants vides: 144 -> 135 ;
+- aucune autre colonne modifiée sur ces 9 lignes ;
+- toutes les autres références restent inchangées ;
+- GE34 volontairement isolée: source externe Grundmann, heuristique interne GEGE.
+
+Résultat: jalon catalogue R158-C9 prêt pour paquet, GitHub et roundtrip Library.
