@@ -1,0 +1,9 @@
+BRES CLÉS V2.28 TEST — CHECKPOINT R160
+
+Objectif : rendre la garde catalogue QA2 directement exploitable pendant un contrôle réel, sans modifier les seuils ni la décision de R158/R159.
+
+Conservation : V2.27 reste la version stable ; V2.28 reste sur sa branche de test ; le catalogue canonique reste séparé et inchangé.
+
+R160 ajoute une trace structurée de la garde QA2 : origine R158-QA2, niveau de collision, références concernées, scores/rangs, écart en points quand calculable, état « concurrent non comparé », blocage de validation automatique, besoin d'un signal indépendant et prochaine action recommandée.
+
+Cette trace est affichée dans la carte « À DÉPARTAGER », intégrée au diagnostic OCR lisible et ajoutée à l'export JSON de diagnostic. Aucun seuil de décision, aucune paire QA2 et aucune donnée catalogue n'ont été changés.
