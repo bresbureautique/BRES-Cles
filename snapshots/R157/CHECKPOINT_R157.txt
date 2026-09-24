@@ -1,0 +1,10 @@
+BRES CLÉS V2.28 TEST R157 — CHECKPOINT ACTIF
+
+V2.27 reste la version stable et ne doit jamais être remplacée par ce test.
+R157 ajoute un protocole physique dédié à la famille TESA TE8D / TE8I, séparé de la décision automatique.
+Chaque cycle est numéroté et conserve le candidat TE8D/TE8I, les marges par face, les ambiguïtés et les jetons OCR intermédiaires.
+TE8B reste explicitement un jeton OCR non canonique : il ne peut jamais devenir une référence validée.
+Après au moins trois cycles acceptés, le protocole peut conclure résultat répétable, lecture instable ou contrôle physique nécessaire.
+Les seuils OCR 0,70 / 0,88 sont inchangés et decisionInfluence reste false.
+La garde de session R154, la synthèse R156 et tous les contrôles existants restent actifs.
+Le catalogue canonique reste séparé : 5 103 références uniques et 10 blocs canoniques attendus inchangés.
