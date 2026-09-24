@@ -1,0 +1,15 @@
+BRES CLÉS — LIBRARY ROUNDTRIP CATALOGUE R158-C2
+
+Library destination: /BRES Cles/Sauvegardes/BRES_Cles_Catalogue_V3_R158_C2.zip
+ZIP SHA-256 local:   32495163de05877521331d23bd43e60c9922958a5b955faf58e96bd9e38855b8
+ZIP SHA-256 Library: 32495163de05877521331d23bd43e60c9922958a5b955faf58e96bd9e38855b8
+Size local / Library: 637060 / 637060 bytes
+Byte-for-byte comparison: PASS
+ZIP integrity after Library round-trip: PASS
+ZIP entries: 17
+
+GitHub catalogue branch checkpoint before roundtrip evidence: abd2750d21db13469f1455b942ca439e16148169
+Stable V2.27 main: 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8 — unchanged
+V2.28 test branch: da1eabf5c582ec8f99acfc447f7dd15d04a4557c — unchanged (R157)
+
+RESULT: PASS
