@@ -1,0 +1,16 @@
+BRES CLÉS — CHECKPOINT CATALOGUE R158-QA1
+
+Volet: catalogue uniquement.
+Base: R158-C19, catalogue inchangé.
+
+Audit qualité:
+- 5103 références / 5103 uniques / 0 fabricant vide.
+- 11/11 contrôles reproductibles PASS.
+- 4 empreintes silhouette absentes: CH9T, CH17T, HCT1R, BIL1T.
+- Les 4 lignes ont score10=0 et leurs vecteurs de profil restent présents.
+- 391 groupes d’empreintes non vides identiques (992 références), dont 172 multi-fabricants.
+- 10 groupes partagent empreinte + longueur + largeur exactes, dont 3 multi-fabricants.
+- 333 (TRE1/TRE2/TRE3), 606 (SEI10) et la graphie Silca "aaa" (AAA1/AAA1R) ont été revérifiés; aucune correction n’est appliquée.
+- Aucun R158-C20 n’est créé: les 4 empreintes manquantes doivent être récupérées depuis une source fiable ou une nouvelle acquisition, pas reconstruites par supposition.
+
+V2.27 stable et V2.28 sont exclus de ce jalon catalogue.
