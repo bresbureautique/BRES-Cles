@@ -1,0 +1,14 @@
+BRES CLÉS — CHECKPOINT CATALOGUE R158-C17
+
+Volet: catalogue uniquement.
+Base: R158-C16.
+Application V2.28: non modifiée (R157 conservée).
+Stable V2.27: non modifiée.
+
+Travail effectué:
+- lot externe de 17 références validées ;
+- fabricants renseignés: AGE1R=AGE, FI065=FIAM, FI234=FIAM, HN1=HEKNA, LP10R=LIPS, LP17R=LIPS, LP18R=LIPS, LP19R=LIPS, LP59R=LIPS, MC2R=MCM, MC4=MCM, NME1R=NEMEF, OJ4=OJMAR, PF8R=PREFER, TN20=TITAN, UC1=UCEM, ZD5=ZADI ;
+- fabricants vides: 55 -> 38 ;
+- seules ces 17 lignes ont changé, uniquement dans le champ fabricant ;
+- blocs modifiés: catalog-02.js, catalog-03.js, catalog-04.js, catalog-06.js, catalog-07.js, catalog-08.js, catalog-10.js ;
+- GE34, AGB2, RO7 et CE130-35 restent volontairement non modifiés.
