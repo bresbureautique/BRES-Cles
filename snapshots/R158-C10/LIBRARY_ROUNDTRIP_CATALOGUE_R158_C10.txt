@@ -1,0 +1,11 @@
+BRES CLÉS — LIBRARY ROUNDTRIP CATALOGUE R158-C10
+
+Library path: /BRES Cles/Sauvegardes/BRES_Cles_Catalogue_V3_R158_C10.zip
+Expected SHA-256: d11da596b1116dd0c81d59cf42f82abfd796392b0027e54759debae17ad7c75e
+Materialized SHA-256: d11da596b1116dd0c81d59cf42f82abfd796392b0027e54759debae17ad7c75e
+Byte-identical: PASS
+ZIP extraction: PASS
+R158-C10 selftest after Library materialization: PASS
+Catalogue: 5103 references / 5103 unique
+Blank manufacturers: 128
+Result: PASS
