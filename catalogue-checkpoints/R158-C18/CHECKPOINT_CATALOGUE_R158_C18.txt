@@ -1,0 +1,14 @@
+BRES CLÉS — CHECKPOINT CATALOGUE R158-C18
+
+Volet: catalogue uniquement.
+Base: R158-C17.
+Application V2.28: non modifiée (R157 conservée).
+Stable V2.27: non modifiée.
+
+Travail effectué:
+- lot externe de 22 références validées ;
+- fabricants renseignés: AGB2=AGB, AGE4R=AGE, BUR10R=BURG, BUR3R=BURG, DM105R=DOM, DM123-10=DOM, DM123-6=DOM, DM123-7=DOM, DM123-8=DOM, DM123-9=DOM, FH1R=FTH, HN4=HEKNA, IM5R=IMSA, JS2=JIS, LC7R=LINCE, MO3RP=MOIA, RDC1=RELIANCE, REN6R=RENZ, STA2=STAR, STA4=STAR, UC2=UCEM, ZD4=ZADI ;
+- fabricants vides: 38 -> 16 ;
+- seules ces 22 lignes ont changé, uniquement dans le champ fabricant ;
+- blocs modifiés: catalog-01.js, catalog-02.js, catalog-03.js, catalog-04.js, catalog-05.js, catalog-06.js, catalog-07.js, catalog-08.js, catalog-09.js, catalog-10.js ;
+- références encore vides: GE34, TRE1, RO7, TRE2, ASS62, SO4, TRE3, CA5, SEI10, CE130-35, GAD4, JW4, JW5, BAB30R-1, BAB25R, BAB30R-2.
