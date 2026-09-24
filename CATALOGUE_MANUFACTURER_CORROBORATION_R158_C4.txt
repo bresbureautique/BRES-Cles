@@ -1,0 +1,21 @@
+BRES CLÉS — CATALOGUE R158-C4 — CORROBORATION INTERNE ÉLARGIE
+
+Objet: poursuivre l'audit des 58 candidats forts sans modifier les données canoniques.
+
+Catalogue: 5103 références / 5103 uniques
+Candidats forts R158-C2: 58
+Preuve géométrique complète exacte: 35
+Preuve alternative par hash de profil exact: 2
+Total avec trois signaux internes concordants: 37
+Restant à preuve texte forte seulement: 21
+Conflits détectés dans cette corroboration: 0
+
+Les 2 nouveaux cas corroborés par profil exact:
+- VI11 | VIRO | profil exact: VI12 (VIRO)
+- KE13 | KESO | profil exact: KE3 (KESO), KE9 (KESO), KE11 (KESO)
+
+21 cas restant à preuve groupe+préfixe uniquement:
+VAC48, FF6, VAC87, VAC84, BK53, FB65R, FF6R, CS172, DM123-6, IE26, DM70R, WK69, DM22TV6, DM74R, VAC86, VAC78, DM22TV7, VAC45, WK91R, DM60R, VAC89
+
+POLITIQUE: audit seulement. Aucune écriture automatique dans le fabricant.
+AUCUNE MODIFICATION DES 5103 DONNÉES CATALOGUE.
