@@ -1,0 +1,21 @@
+BRES CLÉS — CATALOGUE R158-C12 — EXTERNAL VALIDATED BATCH 04
+
+Corrections fabricant appliquées avec références externes explicites:
+- AB56 -> ABUS — LSC https://www.lsc.com.au/silca-blank-ab-56-pkt-10 ; JMA https://jma-uk.co.uk/abu-19d-jma-abu-19d-cylinder-key-blank-for-abusr
+- AB74 -> ABUS — Motokey https://motokey.pl/klucz-silca-ab74 ; Monsieur Clé https://www.monsieurcle.fr/produit/ebauches/ebauche-de-cle-silca-ab74/
+- ALP4 -> ALPHA — LSC https://lsc.com.au/silca-blank-alp-4-pkt-10 ; Keytrader https://www.keytrader.co.uk/Cylinder-Keys/ALPHA.html
+- BK53 -> BKS — JMA https://ecatalogo.jma.es/en/bk-2116/1661/ ; BASI https://shop.basi.eu/de/bk21-16/item-1-2007391.html
+- CE3 -> CES — Trade Keys https://www.trade-keys.co.uk/ce3-silca-key-blank
+- CE6 -> CES — Morlands https://www.morlandslocks.co.uk/gb/key-blanks/1270-ces-silca-ce6-key-blank.html ; JMA https://jma-uk.co.uk/ce-3d-jma-ce-3d-cylinder-key-blank-for-cesr
+- CS162 -> CISA — JMA https://jma-uk.co.uk/ci-11d-jma-ci-11d-cylinder-key-blank-for-cisar
+- IE26 -> ISEO — Trade Keys https://www.trade-keys.co.uk/ie26-silca-key-blank ; JMA https://jma-uk.co.uk/is-10-jma-is-10-dimple-key-blank-for-iseor
+- KE13 -> KESO — Monsieur Clé https://www.monsieurcle.fr/produit/ebauches/ebauche-de-cle-silca-ke13/ ; Nauta https://www.nauta.com/nl/7510000015-pcs-kc4-ke5-ks13-ke13
+- UNI11AP -> UNION — LSC https://www.lsc.com.au/silca-blank-uni-11ap
+- VAC45 -> VACHETTE — Morlands https://www.morlandslocks.co.uk/gb/jma-silca-errebi/1675-silca-vac45-vachette-key-blank.html ; Trade Keys https://www.trade-keys.co.uk/vac48-silca-key-blank
+- VI11 -> VIRO — Keytrader https://www.keytrader.co.uk/Cylinder-Keys/VIRO.html ; ManoMano https://www.manomano.it/p/chiave-piatta-viro-vi11-silca-acciaio-nichelato-x-20-pz-49129360
+
+Contrôles de prudence:
+- seuls les champs fabricant de ces 12 références ont été modifiés ;
+- GE34 et AGB2 restent volontairement vides ;
+- application V2.28 et stable V2.27 exclues du snapshot catalogue ;
+- fabricants vides: 117 -> 105.
