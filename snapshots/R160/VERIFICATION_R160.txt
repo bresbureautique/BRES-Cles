@@ -1,0 +1,8 @@
+BRES CLÉS V2.28 TEST — VÉRIFICATION R160
+
+Nouveau test diagnostic QA2 : 8/8 PASS
+Régression verify_build.py : 91/91 PASS
+Catalogue : 5 103 références / 5 103 uniques
+10 blocs catalogue : identiques à R159
+V2.27 stable : non modifiée
+ZIP SHA-256 : 787fe348be7b26480bb0ea1220906195dbd79ec96a4a22f4a09605ffb28225fd
