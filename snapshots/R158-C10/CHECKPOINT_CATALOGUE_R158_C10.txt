@@ -1,0 +1,17 @@
+BRES CLÉS — CHECKPOINT CATALOGUE R158-C10
+
+Volet: catalogue uniquement.
+Base: R158-C9.
+Application V2.28: non modifiée (R157 conservée).
+Stable V2.27: non modifiée.
+
+Travail effectué:
+- second lot externe de 7 références validées ;
+- fabricants renseignés: ALP9=ALPHA, VAC48=VACHETTE, FF1=F.F.,
+  DM5R=DOM, AB17=ABUS, AB50=ABUS, BK21R=BKS ;
+- fabricants vides: 135 -> 128 ;
+- seules ces 7 lignes ont changé, uniquement dans le champ fabricant ;
+- blocs modifiés: catalog-01.js, catalog-02.js, catalog-03.js ;
+- GE34 et AGB2 restent volontairement non modifiés car leurs preuves sont conflictuelles.
+
+Résultat: jalon catalogue R158-C10 prêt pour paquet, GitHub et roundtrip Library.
