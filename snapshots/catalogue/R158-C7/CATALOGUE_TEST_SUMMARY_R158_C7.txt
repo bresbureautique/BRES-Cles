@@ -1,0 +1,13 @@
+BRES CLÉS — CATALOGUE R158-C7 — TEST SUMMARY
+
+5103_references: PASS
+5103_unique: PASS
+159_blanks_before: PASS
+145_blanks_after: PASS
+14_exact_manufacturer_fills: PASS
+all_targets_are_YALE: PASS
+AX5RP_still_blank: PASS
+only_expected_chunks_changed: PASS
+nonmanufacturer_fields_unchanged: PASS
+
+TOTAL: 9/9 PASS

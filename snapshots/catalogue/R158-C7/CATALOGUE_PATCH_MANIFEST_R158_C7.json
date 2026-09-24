@@ -1,0 +1,26 @@
+{
+  "milestone": "CATALOGUE R158-C7",
+  "base": "BRES_Cles_Catalogue_V3_R158_C6",
+  "policy": "Fourteen externally verified Yale manufacturer fills only; application excluded; AX5RP deliberately left unchanged for separate conflict review.",
+  "references": [
+    {"reference":"YA109","before_manufacturer":"","after_manufacturer":"YALE","group":"251","chunk":"catalog-05.js","evidence":"Silca Catalogue 110 (2024), YALE section, page 251; catalogue group already contains YALE only."},
+    {"reference":"YA16L","before_manufacturer":"","after_manufacturer":"YALE","group":"249","chunk":"catalog-08.js","evidence":"Silca Catalogue 110 (2024), YALE section, page 249; catalogue group already contains YALE only."},
+    {"reference":"YA17","before_manufacturer":"","after_manufacturer":"YALE","group":"249","chunk":"catalog-03.js","evidence":"Silca Catalogue 110 (2024), YALE section, page 249; catalogue group already contains YALE only."},
+    {"reference":"YA18R","before_manufacturer":"","after_manufacturer":"YALE","group":"249","chunk":"catalog-01.js","evidence":"Silca Catalogue 110 (2024), YALE section, page 249; catalogue group already contains YALE only."},
+    {"reference":"YA20","before_manufacturer":"","after_manufacturer":"YALE","group":"249","chunk":"catalog-04.js","evidence":"Silca Catalogue 110 (2024), YALE section, page 249; catalogue group already contains YALE only."},
+    {"reference":"YA32","before_manufacturer":"","after_manufacturer":"YALE","group":"249","chunk":"catalog-06.js","evidence":"Silca Catalogue 110 (2024), YALE section, page 249; catalogue group already contains YALE only."},
+    {"reference":"YA34","before_manufacturer":"","after_manufacturer":"YALE","group":"248","chunk":"catalog-04.js","evidence":"Silca Catalogue 110 (2024), YALE section, page 248; catalogue group already contains YALE only."},
+    {"reference":"YA4R","before_manufacturer":"","after_manufacturer":"YALE","group":"249","chunk":"catalog-03.js","evidence":"Silca Catalogue 110 (2024), YALE section, page 249; catalogue group already contains YALE only."},
+    {"reference":"YA64R","before_manufacturer":"","after_manufacturer":"YALE","group":"248","chunk":"catalog-06.js","evidence":"Silca Catalogue 110 (2024), YALE section, page 248; catalogue group already contains YALE only."},
+    {"reference":"YA68R","before_manufacturer":"","after_manufacturer":"YALE","group":"249","chunk":"catalog-07.js","evidence":"Silca Catalogue 110 (2024), YALE section, page 249; catalogue group already contains YALE only."},
+    {"reference":"YA69R","before_manufacturer":"","after_manufacturer":"YALE","group":"249","chunk":"catalog-06.js","evidence":"Silca Catalogue 110 (2024), YALE section, page 249; catalogue group already contains YALE only."},
+    {"reference":"YA85R","before_manufacturer":"","after_manufacturer":"YALE","group":"248","chunk":"catalog-01.js","evidence":"Silca Catalogue 110 (2024), YALE section, page 248; catalogue group already contains YALE only."},
+    {"reference":"YA86R","before_manufacturer":"","after_manufacturer":"YALE","group":"248","chunk":"catalog-02.js","evidence":"Silca Catalogue 110 (2024), YALE section, page 248; catalogue group already contains YALE only."},
+    {"reference":"YA90","before_manufacturer":"","after_manufacturer":"YALE","group":"251","chunk":"catalog-08.js","evidence":"Silca Catalogue 110 (2024), YALE section, page 251; catalogue group already contains YALE only."}
+  ],
+  "changed_references": ["YA109","YA16L","YA17","YA18R","YA20","YA32","YA34","YA4R","YA64R","YA68R","YA69R","YA85R","YA86R","YA90"],
+  "changed_chunks": ["catalog-01.js","catalog-02.js","catalog-03.js","catalog-04.js","catalog-05.js","catalog-06.js","catalog-07.js","catalog-08.js"],
+  "blank_manufacturers_before": 159,
+  "blank_manufacturers_after": 145,
+  "ax5rp_status": "UNCHANGED_PENDING_SEPARATE_CONFLICT_REVIEW"
+}

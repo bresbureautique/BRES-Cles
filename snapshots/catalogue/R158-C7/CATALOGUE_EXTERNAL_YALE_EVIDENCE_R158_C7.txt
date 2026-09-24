@@ -1,0 +1,38 @@
+BRES CLÉS — CATALOGUE R158-C7 — VALIDATION EXTERNE YALE
+
+Objet
+Résoudre les 14 références Yale restées classées « préfixe mixte » après R158-C6,
+sans toucher à l’application V2.28 et sans modifier d’autres données catalogue.
+
+Références validées
+- Page Silca 110 / 248 : YA85R, YA86R, YA34, YA64R -> YALE
+- Page Silca 110 / 249 : YA18R, YA17, YA4R, YA20, YA32, YA69R, YA68R, YA16L -> YALE
+- Page Silca 110 / 251 : YA109, YA90 -> YALE
+
+Pourquoi le préfixe YA était ambigu en interne
+Le préfixe YA apparaît aussi dans le catalogue sous YALE (IT), YALE (DE) (GB), RABBIT,
+CHICAGO et XIEHE. Le préfixe seul n'était donc pas une preuve suffisante.
+
+Preuves externes retenues
+1) Silca Catalogue 110 (édition 2024), page 248 : la section YALE montre explicitement
+   YA85R, YA86R, YA34 et YA64R.
+2) Silca Catalogue 110 (édition 2024), page 249 : la section YALE contient la famille
+   YA20/YA17/YA68/YA69/YA18/YA4 ainsi que YA16L et YA32 ; le Catalogue 109 (2018)
+   fournit la même attribution sous YALE.
+3) Silca Catalogue 110 (édition 2024), page 251 : la section YALE montre explicitement
+   YA90 et YA109.
+4) Silca News 05/2021 liste YA109 sous YALE, ce qui constitue une confirmation indépendante.
+
+Sources consultées le 24/09/2026
+- Silca Catalogue 110 (2024), miroirs Steenhauer / Aldridge Security / Central Key.
+- Silca Catalogue 109 (2018), miroir Silca.
+- Silca News 05/2021.
+
+Décision R158-C7
+Les 14 champs fabricant auparavant vides sont renseignés à YALE.
+Aucune autre colonne et aucune autre référence ne sont modifiées.
+AX5RP reste volontairement inchangée dans ce jalon et fera l'objet d'un contrôle séparé,
+car son groupe interne AVOCET est en contradiction avec plusieurs preuves AXA.
+
+IMPORTANT
+R158-C7 est un jalon catalogue séparé. Il ne modifie ni V2.27 stable ni V2.28 test.

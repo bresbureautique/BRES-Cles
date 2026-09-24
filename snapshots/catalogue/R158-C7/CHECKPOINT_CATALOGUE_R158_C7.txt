@@ -1,0 +1,15 @@
+BRES CLÉS — CHECKPOINT CATALOGUE R158-C7
+
+Volet: catalogue uniquement.
+Base: R158-C6.
+Application V2.28: non modifiée.
+Stable V2.27: non modifiée.
+
+Travail effectué:
+- validation externe des 14 références Yale restées à préfixe mixte ;
+- remplissage fabricant YALE sur ces 14 références uniquement ;
+- fabricants vides: 159 -> 145 ;
+- AX5RP volontairement laissée inchangée pour un audit séparé ;
+- contrôle strict: aucune autre colonne ni référence modifiée.
+
+Résultat: jalon catalogue R158-C7 prêt, reproductible et séparé de l'application.
