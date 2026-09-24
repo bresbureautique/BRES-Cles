@@ -1,0 +1,57 @@
+BRES CLÉS — CATALOGUE R158-C9 — LOT EXTERNE AMBIGUS 01
+
+Objet
+Traiter un premier lot de références encore classées « groupe ambigu » après R158-C8.
+Le fabricant n'est renseigné que lorsqu'une source externe associe explicitement
+la référence Silca au fabricant concerné.
+
+Références validées (consultations du 24/09/2026)
+1) TRF1 -> 3F
+   Source : Silca Catalogue 108 indexé par Trade-Keys, rubrique 3F : TRF1 / TRF1R.
+   https://www.trade-keys.co.uk/images/catalogue/108-catalogue-code-p699.pdf
+
+2) BE1R -> BETA
+   Source : Keytrader, catégorie BETA, qui liste explicitement « BE1R Key Blank ».
+   https://www.keytrader.co.uk/Cylinder-Keys/BETA.html
+
+3) CS22 -> CISA
+   Source : Silca Catalogue 110 (2024), section CISA, qui liste CS22 / CS22R.
+   https://proservicescle.fr/wp-content/uploads/catalogue-110.pdf
+
+4) DM27 -> DOM
+   Sources : Aldridge Security (« Silca DM27 ... To Suit DOM ») et A-Key
+   (DM27 avec équivalences DOM).
+   https://www.aldridgesecurity.co.uk/silca-4111-silca-dm27-steel-cylinder-key-blank-to-suit-dom.html
+   https://a-key-gmbh.com/DM27-Silca-1056H-DM33-DOM-48-Zylinderschluessel
+
+5) EV103X-1 -> EVVA
+   Sources : Silca Catalogue 110 (2024), section EVVA, et Silca News 07/2013.
+   https://proservicescle.fr/wp-content/uploads/catalogue-110.pdf
+   https://diazilla.com/doc/719481/silca-news-nr.-07-2013
+
+6) FM3R -> FASEM
+   Source : Silca Catalogue 108, section FASEM, qui liste FM3 / FM3R.
+   https://expres.pl/files/0000/296.pdf
+
+7) LC5R -> LINCE
+   Source : Silca Catalogue 110 (2024), section LINCE, qui liste LC5 / LC5R.
+   https://steenhauer.nl/media/20251/file/files2025/110_catalogue.pdf
+
+8) OC1R -> OMEC
+   Source : Silca Catalogue 109, section OMEC, qui liste OC1 / OC1R.
+   https://www.steenhauer.nl/media/20265/file/files2025/109-catalogue.pdf
+
+9) VI7 -> VIRO
+   Source : Trade Keys, fiche « VI7 Silca Key Blank », champ « For: VIRO ».
+   https://www.trade-keys.co.uk/vi7-silca-key-blank
+
+Décision R158-C9
+- Renseigner uniquement le fabricant des 9 références ci-dessus.
+- Ne modifier ni groupe, ni dimensions, ni géométrie, ni profils, ni scores.
+- Toutes les autres références restent inchangées.
+- Le cas GE34 n'est volontairement PAS modifié : une source externe le donne pour
+  Grundmann, alors que l'heuristique interne par préfixe l'orientait vers GEGE.
+  Ce cas est isolé pour audit séparé afin d'éviter une correction hasardeuse.
+
+IMPORTANT
+R158-C9 est un jalon catalogue séparé. Il ne modifie ni V2.27 stable ni V2.28 test.
