@@ -15,7 +15,7 @@ function startOCRTesaTe8PhysicalTest(){
   ocrTesaTe8PhysicalTestActive=true;
   ocrTesaTe8PhysicalHistory=[];
   ocrTesaTe8PhysicalRejectedCycles=0;
-  const series=startOCRCaptureSeries();
+  const series=startOCRCaptureSeries({preserveSpecialized:true});
   const summary=buildOCRTesaTe8PhysicalTestSummary([],true);
   renderOCRTesaTe8PhysicalTestStatus(summary);
   return {...summary,captureSeriesId:series.seriesId};
