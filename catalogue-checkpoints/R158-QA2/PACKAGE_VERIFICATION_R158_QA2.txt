@@ -1,0 +1,8 @@
+BRES CLES CATALOGUE R158-QA2
+Base R158-QA1 / R158-C19
+Catalogue data unchanged.
+5103 references, 0 blank manufacturers.
+622 same-silhouette cross-manufacturer pairs.
+6 critical ambiguity pairs, 11 near pairs.
+Self-test 10/10 PASS.
+ZIP SHA-256 17b021d57f4d4c2fee33634d7d699aac2d375de5d41e1d1b54f954ff343cebac.
