@@ -1,0 +1,15 @@
+BRES CLÉS — CHECKPOINT CATALOGUE R158-C3
+
+Volet: catalogue uniquement.
+Application V2.28: non modifiée.
+Stable V2.27: non modifiée.
+
+Travail effectué:
+- reprise des 58 candidats forts R158-C2 ;
+- ajout d'une troisième preuve strictement interne par signature géométrique exacte ;
+- 35 candidats disposent de trois preuves concordantes ;
+- 23 restent à preuve groupe+préfixe uniquement ;
+- 0 conflit de jumeau géométrique exact parmi les 58 ;
+- aucune écriture automatique dans le catalogue.
+
+Résultat: jalon d'audit prêt et reproductible.
