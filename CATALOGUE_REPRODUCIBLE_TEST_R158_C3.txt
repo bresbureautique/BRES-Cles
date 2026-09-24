@@ -1,0 +1,11 @@
+BRES CLÉS — CATALOGUE R158-C3 SELFTEST REPRODUCTIBLE
+5103_references: PASS
+5103_unique: PASS
+164_blank_manufacturers: PASS
+c2_categories_unchanged: PASS
+58_c2_strong: PASS
+35_triple_internal_evidence: PASS
+23_strong_text_only: PASS
+0_geometry_conflicts: PASS
+10_chunks_hash_verified: PASS
+TOTAL: 9/9 PASS
