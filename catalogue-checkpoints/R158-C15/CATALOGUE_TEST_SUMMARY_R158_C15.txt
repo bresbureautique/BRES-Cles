@@ -1,0 +1,12 @@
+BRES CLÉS — CATALOGUE R158-C15 — TEST SUMMARY
+
+5103_references: PASS
+5103_unique: PASS
+blank_count_drop: PASS
+exact_changed_refs: PASS
+manufacturer_only_changes: PASS
+all_targets_exact: PASS
+deferred_still_blank: PASS
+selftest_pass: PASS
+
+TOTAL: 8/8 PASS
