@@ -1,0 +1,16 @@
+BRES CLES V2.28 TEST R157 — GITHUB SNAPSHOT VERIFICATION FINAL
+
+Test branch: v2.28-test-r1
+Final branch commit before this verification record: 95425442fb4c71c24fbb768ab726381eac113703
+Stable main commit: 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8
+V2.27 stable: unchanged
+Extended local regression: 94/94 PASS
+Existing R157 regression matrix: 92/92 PASS
+Catalogue: 5103 / 5103 unique, 10 canonical chunks unchanged
+Package SHA-256: cd4e1f1739f69b1c293fb36596207cbe5a0f4c111a55737f0018bb87c9aded98
+Library roundtrip: byte-identical PASS, ZIP integrity PASS
+Corrected TE8 feature: dedicated capture series preserves specialized session
+TE8B: non-canonical
+Decision influence: false
+OCR thresholds: 0.70 / 0.88 unchanged
+Result: PASS
