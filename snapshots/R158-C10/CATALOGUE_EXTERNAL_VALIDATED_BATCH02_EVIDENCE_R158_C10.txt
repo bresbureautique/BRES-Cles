@@ -1,0 +1,51 @@
+BRES CLÉS — CATALOGUE R158-C10 — LOT EXTERNE VALIDÉ 02
+
+Objet
+Renseigner un second petit lot de fabricants uniquement lorsque la référence Silca
+est reliée explicitement au fabricant par une source externe vérifiable.
+
+Références validées (consultations du 24/09/2026)
+1) ALP9 -> ALPHA
+   Source : Aldridge Security — Silca ALP9 explicitement indiqué pour cylindres ALPHA.
+   https://www.aldridgesecurity.co.uk/silca-4094-silca-alp9-steel-cylinder-key-blank-to-suit-alpha.html
+
+2) VAC48 -> VACHETTE
+   Source : Trade Keys — Fiche Silca VAC48 : champ « For: VACHETTE ».
+   https://www.trade-keys.co.uk/vac48-silca-key-blank
+   Source : Motokey — Référence VAC48, producteur original VACHETTE.
+   https://www.motokey.pl/key-silca-vac48
+
+3) FF1 -> F.F.
+   Source : Trade Keys — Fiche Silca FF1 : champ « For: FF-FACCHINETTI ».
+   https://www.trade-keys.co.uk/ff1-silca-key-blank
+   Source : JMA UK — Équivalence JMA FF-2D / Silca FF1 pour F.F.; normalisation catalogue = F.F.
+   https://jma-uk.co.uk/ff-2d-jma-ff-2d-cylinder-key-blank-for-f-f-r
+
+4) DM5R -> DOM
+   Source : Keytrader — Fiche DM5R : « To Suite Manufacturer - DOM ».
+   https://www.keytrader.co.uk/Cylinder-Keys/DOM/DM5R-Key-Blank.html
+
+5) AB17 -> ABUS
+   Source : Keytrader — Fiche AB17 : « To Suite Manufacturer - ABUS ».
+   https://www.keytrader.co.uk/Cylinder-Keys/ABUS/AB17-Key-Blank.html
+   Source : JMA UK — JMA ABU-60 pour Abus; équivalence Silca AB17.
+   https://jma-uk.co.uk/abu-60-jma-abu-60-cylinder-key-blank-for-abusr
+
+6) AB50 -> ABUS
+   Source : Nauta — Clé originale ABUS; codering Silca AB50.
+   https://www.nauta.com/nl/7501001130-pcs-au59-abu23d-abu20-ab50-l010
+
+7) BK21R -> BKS
+   Source : Ogele — Fiche « Silca BK21R Schlüsselrohling für BKS ».
+   https://ogele.de/Silca-BK21R-Schluesselrohling-fuer-BKS
+
+Cas volontairement NON modifiés
+- GE34 : conflit de taxonomie déjà isolé (Grundmann vs GEGE).
+- AGB2 : les sources consultées ne sont pas assez cohérentes pour trancher entre la
+  désignation AGB et des tables de correspondance CISA ; aucune correction automatique.
+
+Décision R158-C10
+- Modifier uniquement le champ fabricant des 7 références ci-dessus.
+- Ne modifier ni groupe, ni dimensions, ni géométrie, ni profil, ni score.
+- Toutes les autres références restent strictement inchangées.
+- Application V2.28 exclue du paquet ; V2.27 stable exclue et inchangée.
