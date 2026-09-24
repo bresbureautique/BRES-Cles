@@ -1,0 +1,94 @@
+BRES CLÉS — CATALOGUE R158-C5 — PREUVES DU JALON
+
+Objet
+Examiner les 21 candidats encore sans corroboration supplémentaire à R158-C4, sans modifier le catalogue canonique.
+
+Règle de famille/série R158-C5
+- même groupe catalogue ;
+- même squelette de référence, obtenu en remplaçant chaque bloc numérique par # ;
+- au moins 2 références déjà renseignées dans cette famille ;
+- 100 % des références renseignées de cette famille/groupe portent le fabricant proposé ;
+- aucune écriture automatique.
+
+Résultats
+Catalogue: 5103 références / 5103 uniques
+Fabricants vides: 164
+Entrée R158-C4: 21 candidats
+Corroborés par famille/série: 16
+Restant non résolus: 5
+Conflits: 0
+
+16 candidats corroborés
+VAC48 -> VACHETTE
+FF6 -> F.F.
+VAC87 -> VACHETTE
+VAC84 -> VACHETTE
+BK53 -> BKS
+FB65R -> FAB
+FF6R -> F.F.
+CS172 -> CISA
+DM123-6 -> DOM
+IE26 -> ISEO
+WK69 -> WILKA
+VAC86 -> VACHETTE
+VAC78 -> VACHETTE
+VAC45 -> VACHETTE
+WK91R -> WILKA
+VAC89 -> VACHETTE
+
+5 cas restant volontairement non résolus
+DM70R -> DOM
+DM22TV6 -> DOM
+DM74R -> DOM
+DM22TV7 -> DOM
+DM60R -> DOM
+
+Tests de jalon
+5103_references: PASS
+5103_unique: PASS
+164_blank_manufacturers: PASS
+21_input_candidates: PASS
+16_family_series_corroborated: PASS
+5_still_unresolved: PASS
+0_family_conflicts: PASS
+expected_corroborated_set: PASS
+expected_unresolved_set: PASS
+10_chunks_bit_identical_to_c4: PASS
+TOTAL: 10/10 PASS
+
+Self-test reproductible
+5103_references: PASS
+5103_unique: PASS
+164_blank_manufacturers: PASS
+16_family_series_corroborated: PASS
+5_still_unresolved: PASS
+0_family_conflicts: PASS
+expected_unresolved_set: PASS
+10_chunks_hash_verified: PASS
+TOTAL: 8/8 PASS
+
+Continuité des 10 blocs canoniques par SHA-256
+catalog-01.js  e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b  PASS
+catalog-02.js  955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75  PASS
+catalog-03.js  9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210  PASS
+catalog-04.js  14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942  PASS
+catalog-05.js  5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b  PASS
+catalog-06.js  b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac  PASS
+catalog-07.js  b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1  PASS
+catalog-08.js  3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814  PASS
+catalog-09.js  4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f  PASS
+catalog-10.js  f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4  PASS
+10/10 bit-identiques à R158-C4: PASS
+
+Paquet Library
+BRES_Cles_Catalogue_V3_R158_C5.zip
+SHA-256 local: b915766760f7f4620a51b5b2b2d74bf971b22e51bad1bd612a93a07b997a0a00
+SHA-256 après rematérialisation Library: b915766760f7f4620a51b5b2b2d74bf971b22e51bad1bd612a93a07b997a0a00
+SHA identical: PASS
+Byte-for-byte identical: PASS
+ZIP integrity: PASS
+Required files: PASS
+Round-trip result: PASS
+
+Politique
+AUDIT ONLY. Cette corroboration structurelle interne ne constitue pas une vérité constructeur externe. Aucune donnée fabricant canonique n'a été modifiée.

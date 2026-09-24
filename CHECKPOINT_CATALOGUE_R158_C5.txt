@@ -1,0 +1,15 @@
+BRES CLÉS — CHECKPOINT CATALOGUE R158-C5
+
+Volet: catalogue uniquement.
+Application V2.28: non modifiée.
+Stable V2.27: non modifiée.
+
+Travail effectué:
+- reprise des 21 candidats encore non corroborés à R158-C4 ;
+- ajout d’une règle reproductible de famille/série de référence ;
+- 16 candidats obtiennent une corroboration structurelle supplémentaire ;
+- 5 cas DOM restent volontairement non résolus ;
+- 0 conflit détecté ;
+- aucune écriture automatique dans le catalogue.
+
+Résultat: jalon d’audit prêt et reproductible.
