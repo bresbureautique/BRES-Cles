@@ -1,0 +1,16 @@
+BRES CLÉS — CHECKPOINT CATALOGUE R158-C15
+
+Volet: catalogue uniquement.
+Base: R158-C14.
+Application V2.28: non modifiée (R157 conservée).
+Stable V2.27: non modifiée.
+
+Travail effectué:
+- lot externe de 11 références validées ;
+- fabricants renseignés: AB1=ABUS, CE18R=CES, DM17=DOM, FB26=FAB, FF6=F.F., FF6R=F.F., FF7=F.F., FF8=F.F., GE8R=GEGE, GE9=GEGE, YT6=YETI ;
+- fabricants vides: 83 -> 72 ;
+- seules ces 11 lignes ont changé, champ fabricant uniquement ;
+- blocs modifiés: catalog-03.js, catalog-04.js, catalog-05.js, catalog-06.js, catalog-10.js ;
+- GE34, AGB2 et RO7 restent volontairement non modifiés.
+
+Résultat: jalon catalogue R158-C15 prêt pour paquet, GitHub et roundtrip Library.
