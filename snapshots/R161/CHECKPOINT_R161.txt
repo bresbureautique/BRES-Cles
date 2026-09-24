@@ -1,0 +1,11 @@
+BRES CLÉS V2.28 TEST — CHECKPOINT R161
+
+Statut : CHECKPOINT TESTÉ CIBLÉ, non promu stable.
+
+Objectif : conserver une trace explicite de la preuve indépendante qui a réellement départagé une collision catalogue QA2, sans modifier les seuils ni les données catalogue.
+
+R161 ajoute une trace de résolution QA2 distincte du diagnostic pré-résolution. Elle indique la référence retenue, la/les référence(s) concurrente(s), le type de signal indépendant (saisie manuelle certaine, OCR recto/verso principal ou OCR des photos rapprochées de tête) et les scores disponibles. La trace est visible dans la décision finale et synchronisée dans l'export de diagnostic OCR.
+
+Conservation : V2.27 reste stable ; V2.28 reste sur sa branche de test ; les 10 blocs catalogue sont inchangés.
+
+Limite de ce checkpoint : la régression historique complète verify_build.py a été lancée mais n'a pas terminé dans la fenêtre d'exécution disponible. Aucun échec fonctionnel n'a été observé ; les suites directement concernées par R161 et les contrôles d'intégrité passent. R161 n'est donc pas promue ni considérée comme version stable.
