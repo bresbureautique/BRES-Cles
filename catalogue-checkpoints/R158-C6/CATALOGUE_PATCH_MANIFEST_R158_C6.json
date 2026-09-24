@@ -1,0 +1,62 @@
+{
+  "milestone": "CATALOGUE R158-C6",
+  "base": "BRES_Cles_Catalogue_V3_R158_C5",
+  "policy": "Five externally verified manufacturer fills only; application excluded.",
+  "references": [
+    {
+      "reference": "DM22TV6",
+      "before_manufacturer": "",
+      "after_manufacturer": "DOM",
+      "group": "83",
+      "chunk": "catalog-07.js",
+      "evidence": "Silca Catalogue 110 (2024), DOM page 83; Silca Matrix Evo/PRO documentation lists DM22TV6 for DOM."
+    },
+    {
+      "reference": "DM22TV7",
+      "before_manufacturer": "",
+      "after_manufacturer": "DOM",
+      "group": "83",
+      "chunk": "catalog-08.js",
+      "evidence": "Silca Catalogue 110 (2024), DOM page 83; Silca Matrix Evo/PRO documentation lists DM22TV7 for DOM."
+    },
+    {
+      "reference": "DM60R",
+      "before_manufacturer": "",
+      "after_manufacturer": "DOM",
+      "group": "84",
+      "chunk": "catalog-09.js",
+      "evidence": "Silca Catalogue 110 (2024), DOM page 84; older Silca 109 catalogue also lists DM60R under DOM."
+    },
+    {
+      "reference": "DM70R",
+      "before_manufacturer": "",
+      "after_manufacturer": "DOM",
+      "group": "84",
+      "chunk": "catalog-06.js",
+      "evidence": "Silca Catalogue 110 (2024), DOM page 84; older Silca 109 catalogue also lists DM70R under DOM."
+    },
+    {
+      "reference": "DM74R",
+      "before_manufacturer": "",
+      "after_manufacturer": "DOM",
+      "group": "84",
+      "chunk": "catalog-07.js",
+      "evidence": "Silca Catalogue 110 (2024), DOM page 84; older Silca 109 catalogue also lists DM74R under DOM."
+    }
+  ],
+  "changed_references": [
+    "DM22TV6",
+    "DM22TV7",
+    "DM60R",
+    "DM70R",
+    "DM74R"
+  ],
+  "changed_chunks": [
+    "catalog-06.js",
+    "catalog-07.js",
+    "catalog-08.js",
+    "catalog-09.js"
+  ],
+  "blank_manufacturers_before": 164,
+  "blank_manufacturers_after": 159
+}

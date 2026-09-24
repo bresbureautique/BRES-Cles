@@ -1,0 +1,13 @@
+BRES CLÉS — CATALOGUE R158-C6 — TEST SUMMARY
+
+5103_references_preserved: PASS
+5103_unique_preserved: PASS
+blank_manufacturers_164_to_159: PASS
+exactly_5_rows_changed: PASS
+only_manufacturer_field_changed_on_5_rows: PASS
+all_5_targets_now_DOM: PASS
+groups_83_84_preserved: PASS
+exactly_4_chunks_changed: PASS
+6_other_chunks_bit_identical_to_C5: PASS
+
+TOTAL: 9/9 PASS

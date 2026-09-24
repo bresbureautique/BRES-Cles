@@ -1,0 +1,33 @@
+BRES CLÉS — GITHUB CHECKPOINT — CATALOGUE R158-C6
+
+Base GitHub catalogue-v3-audit: 1129d5343a35cd109810496bfe8000963f31106b
+Volet: catalogue uniquement.
+Application V2.28: non modifiée.
+Stable V2.27: non modifiée.
+
+Décision:
+- DM70R: fabricant vide -> DOM
+- DM74R: fabricant vide -> DOM
+- DM60R: fabricant vide -> DOM
+- DM22TV6: fabricant vide -> DOM
+- DM22TV7: fabricant vide -> DOM
+
+Justification:
+- Silca Catalogue 110 (2024), section DOM, pages 83-84, liste directement ces cinq références sous DOM.
+- Contrôles historiques Silca 109 et Matrix Evo/PRO concordants.
+
+Vérification:
+- 5103 références conservées
+- 5103 références uniques
+- fabricants vides: 164 -> 159
+- exactement 5 lignes modifiées
+- uniquement le champ fabricant sur ces 5 lignes
+- 9/9 self-test reproductible PASS
+- ZIP Library: BRES_Cles_Catalogue_V3_R158_C6.zip
+- ZIP SHA-256: 92689be6ea77d49bfba91dd9dcdfb7db339d241734e364514a96d55402728352
+- round-trip Library: SHA identical PASS, byte-for-byte PASS, ZIP integrity PASS
+
+Restauration:
+Appliquer sur le snapshot C5 uniquement les 5 remplacements définis dans
+CATALOGUE_PATCH_MANIFEST_R158_C6.json, puis vérifier les hashes de
+CATALOGUE_CHUNK_COMPARISON_R158_C6.txt.
