@@ -1,0 +1,20 @@
+BRES CLÉS — CHECKPOINT CATALOGUE R158-C2
+
+Volet: catalogue uniquement.
+Application V2.28: non modifiée.
+Stable V2.27: non modifiée.
+
+Travail effectué:
+- audit des 164 lignes fabricant vide ;
+- 42 candidats A avec double preuve exacte groupe+préfixe ;
+- 16 candidats B avec groupe mono-fabricant + préfixe dominant >=90 % ;
+- 14 cas C à préfixe mixte ;
+- 1 conflit interne explicite (AX5RP: groupe AVOCET / préfixe AX observé AXA) ;
+- 91 cas D restent ambigus par groupe.
+
+Politique:
+- aucune écriture automatique dans le catalogue ;
+- les 58 candidats A+B sont des pistes à confirmer, pas des vérités canoniques ;
+- les 10 blocs catalogues restent bit-identiques à R158-C1.
+
+Résultat: jalon d'audit prêt et reproductible.

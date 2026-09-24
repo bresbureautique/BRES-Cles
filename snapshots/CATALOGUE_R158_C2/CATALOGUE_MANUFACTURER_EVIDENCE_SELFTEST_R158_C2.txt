@@ -1,0 +1,6 @@
+BRES CLÉS — CATALOGUE R158-C2 SELFTEST
+5103 références: PASS
+5103 uniques: PASS
+164 fabricants vides: PASS
+classification 42/16/14/1/91: PASS
+SELFTEST OK

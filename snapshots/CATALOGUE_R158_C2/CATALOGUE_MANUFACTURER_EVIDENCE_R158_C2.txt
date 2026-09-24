@@ -1,0 +1,100 @@
+BRES CLÉS — CATALOGUE R158-C2 — AUDIT FABRICANTS MANQUANTS
+
+Objectif: approfondir les 164 lignes dont le fabricant est vide sans modifier le catalogue canonique.
+
+Catalogue: 5103 références / 5103 uniques
+Blocs canoniques: 10/10 strictement identiques à R158-C1
+Fabricants vides analysés: 164
+
+Classification interne:
+- A — double preuve exacte groupe + préfixe: 42
+- B — groupe mono-fabricant + préfixe dominant >=90%: 16
+- C — groupe mono-fabricant mais préfixe mixte: 14
+- C — conflit groupe/préfixe: 1
+- D — groupe ambigu multi-fabricants: 91
+
+Candidats internes forts (A+B): 58
+IMPORTANT: même les candidats forts restent des PROPOSITIONS D’AUDIT. Aucune écriture automatique dans les 5103 données.
+
+Candidats forts:
+- ALP9 | groupe 16 | ALPHA | A_DUAL_EXACT | préfixe ALP soutien 16/16 (1.0)
+- DM123-10 | groupe 82 | DOM | A_DUAL_EXACT | préfixe DM soutien 90/90 (1.0)
+- FB64RX | groupe 97 | FAB | A_DUAL_EXACT | préfixe FB soutien 49/49 (1.0)
+- VAC48 | groupe 235 | VACHETTE | A_DUAL_EXACT | préfixe VAC soutien 94/94 (1.0)
+- VI9R | groupe 240 | VIRO | A_DUAL_EXACT | préfixe VI soutien 33/33 (1.0)
+- DM123-9 | groupe 82 | DOM | A_DUAL_EXACT | préfixe DM soutien 90/90 (1.0)
+- FF1 | groupe 103 | F.F. | A_DUAL_EXACT | préfixe FF soutien 27/27 (1.0)
+- RO7 | groupe 189 | RONIS | B_PREFIX_DOMINANT | préfixe RO soutien 68/69 (0.985507)
+- AB17 | groupe 7 | ABUS | B_PREFIX_DOMINANT | préfixe AB soutien 102/104 (0.980769)
+- AB50 | groupe 8 | ABUS | B_PREFIX_DOMINANT | préfixe AB soutien 102/104 (0.980769)
+- DM5R | groupe 81 | DOM | A_DUAL_EXACT | préfixe DM soutien 90/90 (1.0)
+- DM123-8 | groupe 82 | DOM | A_DUAL_EXACT | préfixe DM soutien 90/90 (1.0)
+- FF6 | groupe 103 | F.F. | A_DUAL_EXACT | préfixe FF soutien 27/27 (1.0)
+- VAC87 | groupe 235 | VACHETTE | A_DUAL_EXACT | préfixe VAC soutien 94/94 (1.0)
+- VAC84 | groupe 235 | VACHETTE | A_DUAL_EXACT | préfixe VAC soutien 94/94 (1.0)
+- AB13 | groupe 7 | ABUS | B_PREFIX_DOMINANT | préfixe AB soutien 102/104 (0.980769)
+- AB56 | groupe 8 | ABUS | B_PREFIX_DOMINANT | préfixe AB soutien 102/104 (0.980769)
+- BK53 | groupe 41 | BKS | A_DUAL_EXACT | préfixe BK soutien 46/46 (1.0)
+- DM123-7 | groupe 82 | DOM | A_DUAL_EXACT | préfixe DM soutien 90/90 (1.0)
+- FB26 | groupe 97 | FAB | A_DUAL_EXACT | préfixe FB soutien 49/49 (1.0)
+- FB65R | groupe 97 | FAB | A_DUAL_EXACT | préfixe FB soutien 49/49 (1.0)
+- FF8 | groupe 103 | F.F. | A_DUAL_EXACT | préfixe FF soutien 27/27 (1.0)
+- FF6R | groupe 103 | F.F. | A_DUAL_EXACT | préfixe FF soutien 27/27 (1.0)
+- UNI11AP | groupe 227 | UNION | B_PREFIX_DOMINANT | préfixe UNI soutien 77/79 (0.974684)
+- AB74 | groupe 9 | ABUS | B_PREFIX_DOMINANT | préfixe AB soutien 102/104 (0.980769)
+- ALP4 | groupe 16 | ALPHA | A_DUAL_EXACT | préfixe ALP soutien 16/16 (1.0)
+- CE3 | groupe 55 | CES | A_DUAL_EXACT | préfixe CE soutien 104/104 (1.0)
+- CS172 | groupe 270 | CISA | B_PREFIX_DOMINANT | préfixe CS soutien 107/113 (0.946903)
+- DM123-6 | groupe 82 | DOM | A_DUAL_EXACT | préfixe DM soutien 90/90 (1.0)
+- FF7 | groupe 103 | F.F. | A_DUAL_EXACT | préfixe FF soutien 27/27 (1.0)
+- IE26 | groupe 130 | ISEO | A_DUAL_EXACT | préfixe IE soutien 34/34 (1.0)
+- VI11 | groupe 240 | VIRO | A_DUAL_EXACT | préfixe VI soutien 33/33 (1.0)
+- WK68R | groupe 245 | WILKA | B_PREFIX_DOMINANT | préfixe WK soutien 45/46 (0.978261)
+- DM70R | groupe 84 | DOM | A_DUAL_EXACT | préfixe DM soutien 90/90 (1.0)
+- FH1R | groupe 107 | FTH | A_DUAL_EXACT | préfixe FH soutien 29/29 (1.0)
+- KE13 | groupe 284 | KESO | B_PREFIX_DOMINANT | préfixe KE soutien 13/14 (0.928571)
+- UNI19 | groupe 227 | UNION | B_PREFIX_DOMINANT | préfixe UNI soutien 77/79 (0.974684)
+- WK69 | groupe 245 | WILKA | B_PREFIX_DOMINANT | préfixe WK soutien 45/46 (0.978261)
+- DM22TV6 | groupe 83 | DOM | A_DUAL_EXACT | préfixe DM soutien 90/90 (1.0)
+- DM74R | groupe 84 | DOM | A_DUAL_EXACT | préfixe DM soutien 90/90 (1.0)
+- VAC86 | groupe 235 | VACHETTE | A_DUAL_EXACT | préfixe VAC soutien 94/94 (1.0)
+- VAC78 | groupe 235 | VACHETTE | A_DUAL_EXACT | préfixe VAC soutien 94/94 (1.0)
+- VI2 | groupe 240 | VIRO | A_DUAL_EXACT | préfixe VI soutien 33/33 (1.0)
+- CE6 | groupe 55 | CES | A_DUAL_EXACT | préfixe CE soutien 104/104 (1.0)
+- DM22TV7 | groupe 83 | DOM | A_DUAL_EXACT | préfixe DM soutien 90/90 (1.0)
+- VAC45 | groupe 235 | VACHETTE | A_DUAL_EXACT | préfixe VAC soutien 94/94 (1.0)
+- WK91R | groupe 245 | WILKA | B_PREFIX_DOMINANT | préfixe WK soutien 45/46 (0.978261)
+- AB1X | groupe 6 | ABUS | B_PREFIX_DOMINANT | préfixe AB soutien 102/104 (0.980769)
+- AB35 | groupe 7 | ABUS | B_PREFIX_DOMINANT | préfixe AB soutien 102/104 (0.980769)
+- CE22-35 | groupe 57 | CES | A_DUAL_EXACT | préfixe CE soutien 104/104 (1.0)
+- DM60R | groupe 84 | DOM | A_DUAL_EXACT | préfixe DM soutien 90/90 (1.0)
+- VAC89 | groupe 235 | VACHETTE | A_DUAL_EXACT | préfixe VAC soutien 94/94 (1.0)
+- CE18R | groupe 55 | CES | A_DUAL_EXACT | préfixe CE soutien 104/104 (1.0)
+- DM7 | groupe 82 | DOM | A_DUAL_EXACT | préfixe DM soutien 90/90 (1.0)
+- DM105R | groupe 82 | DOM | A_DUAL_EXACT | préfixe DM soutien 90/90 (1.0)
+- PF8R | groupe 184 | PREFER | A_DUAL_EXACT | préfixe PF soutien 47/47 (1.0)
+- UNI43 | groupe 227 | UNION | B_PREFIX_DOMINANT | préfixe UNI soutien 77/79 (0.974684)
+- VI10 | groupe 240 | VIRO | A_DUAL_EXACT | préfixe VI soutien 33/33 (1.0)
+
+Cas à surveiller:
+- YA85R | groupe 248 | proposition groupe YALE | C_MIXED_PREFIX | préfixe YA soutien exact 63/106 (0.59434)
+- YA18R | groupe 249 | proposition groupe YALE | C_MIXED_PREFIX | préfixe YA soutien exact 63/106 (0.59434)
+- YA86R | groupe 248 | proposition groupe YALE | C_MIXED_PREFIX | préfixe YA soutien exact 63/106 (0.59434)
+- YA17 | groupe 249 | proposition groupe YALE | C_MIXED_PREFIX | préfixe YA soutien exact 63/106 (0.59434)
+- YA4R | groupe 249 | proposition groupe YALE | C_MIXED_PREFIX | préfixe YA soutien exact 63/106 (0.59434)
+- YA34 | groupe 248 | proposition groupe YALE | C_MIXED_PREFIX | préfixe YA soutien exact 63/106 (0.59434)
+- YA20 | groupe 249 | proposition groupe YALE | C_MIXED_PREFIX | préfixe YA soutien exact 63/106 (0.59434)
+- YA109 | groupe 251 | proposition groupe YALE | C_MIXED_PREFIX | préfixe YA soutien exact 63/106 (0.59434)
+- YA64R | groupe 248 | proposition groupe YALE | C_MIXED_PREFIX | préfixe YA soutien exact 63/106 (0.59434)
+- YA32 | groupe 249 | proposition groupe YALE | C_MIXED_PREFIX | préfixe YA soutien exact 63/106 (0.59434)
+- YA69R | groupe 249 | proposition groupe YALE | C_MIXED_PREFIX | préfixe YA soutien exact 63/106 (0.59434)
+- YA68R | groupe 249 | proposition groupe YALE | C_MIXED_PREFIX | préfixe YA soutien exact 63/106 (0.59434)
+- YA16L | groupe 249 | proposition groupe YALE | C_MIXED_PREFIX | préfixe YA soutien exact 63/106 (0.59434)
+- YA90 | groupe 251 | proposition groupe YALE | C_MIXED_PREFIX | préfixe YA soutien exact 63/106 (0.59434)
+- AX5RP | groupe 30 | proposition groupe AVOCET | C_PREFIX_CONFLICT | préfixe AX soutien exact 0/12 (0.0)
+
+Cas ambigus restant sans proposition: 91
+TRF1, BE1R, CS22, DM27, EV103X-1, FM3R, GE34, LC5R, OC1R, VI7, TRE1, AB125RCP, AGB2, BK13, DM61, FI065, LP19R, UNI61R, TRE2, AB1, ASS62, BK21R, DM4, GE9, LS10, LP18R, OJ4, SO4, TRE3, BE202, BK4, BK22R, CA5, JS2, LS3, LP17R, LP10R, SEI10, BK23R, CE130-35, HN4, BK8, BK49R, DM10R, DM17, FI234, GAD4, JW4, LP59R, MC2R, NME1R, TN20, UC2, YT6, ZD5, AGE1R, FAC13, HN1, IE8, JW5, MO3RP, RDC1, UC1, YT1R, ZD4, AGE4R, BAB30R-1, CS162, LS8R, LC7R, MC4, STA4, UNI61, BAB25R, BAB30R-2, BUR3R, CS47, CS8, FAC7, REN6R, STA2, YT12, BUR10R, FAC6R, GE8R, GE17, GE16, IM5R, LS16R, TE24, YT3R
+
+AUCUNE MODIFICATION DES 5103 DONNÉES CATALOGUE.
+SELFTEST OK

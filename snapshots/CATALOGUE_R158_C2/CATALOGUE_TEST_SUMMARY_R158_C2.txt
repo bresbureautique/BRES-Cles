@@ -1,0 +1,11 @@
+BRES CLÉS — CATALOGUE R158-C2 — TEST SUMMARY
+
+PASS — 5103 références / 5103 uniques
+PASS — 10/10 blocs canoniques identiques à R158-C1
+PASS — 164 fabricants vides analysés
+PASS — A 42 / B 16 / C mixte 14 / C conflit 1 / D ambigu 91
+PASS — 58 candidats internes forts A+B, audit uniquement
+PASS — aucune modification des données catalogue
+PASS — selftest reproductible
+
+RESULTAT: OK
