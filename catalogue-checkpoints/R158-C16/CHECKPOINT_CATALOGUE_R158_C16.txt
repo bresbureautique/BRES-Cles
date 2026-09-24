@@ -1,0 +1,16 @@
+BRES CLÉS — CHECKPOINT CATALOGUE R158-C16
+
+Volet: catalogue uniquement.
+Base: R158-C15.
+Application V2.28: non modifiée (R157 conservée).
+Stable V2.27: non modifiée.
+
+Travail effectué:
+- lot externe de 17 références validées ;
+- fabricants renseignés: BK13=BKS, CS47=CISA, CS8=CISA, FAC13=FAC, FAC6R=FAC, FAC7=FAC, GE16=GEGE, GE17=GEGE, LS10=LAS, LS16R=LAS, LS3=LAS, LS8R=LAS, TE24=TESA, UNI43=UNION, YT12=YETI, YT1R=YETI, YT3R=YETI ;
+- fabricants vides: 72 -> 55 ;
+- seules ces 17 lignes ont changé, champ fabricant uniquement ;
+- blocs modifiés: catalog-02.js, catalog-03.js, catalog-04.js, catalog-07.js, catalog-08.js, catalog-09.js, catalog-10.js ;
+- GE34, AGB2, RO7 et CE130-35 restent volontairement non modifiés.
+
+Résultat: jalon catalogue R158-C16 validé localement; sauvegardes GitHub et Library à vérifier.
