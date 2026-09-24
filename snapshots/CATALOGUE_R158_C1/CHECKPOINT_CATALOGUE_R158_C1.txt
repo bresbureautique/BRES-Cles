@@ -1,0 +1,30 @@
+BRES CLÉS — CHECKPOINT CATALOGUE R158-C1
+
+Track: catalogue-only, separate from V2.28 application runtime.
+Source app milestone: V2.28 TEST R157 (read-only source package).
+Source app ZIP SHA-256: cd4e1f1739f69b1c293fb36596207cbe5a0f4c111a55737f0018bb87c9aded98
+Stable V2.27 main commit: 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8 (unchanged)
+R157 application test branch commit at fork: da1eabf5c582ec8f99acfc447f7dd15d04a4557c
+
+CATALOGUE RESULT
+- 5103 references / 5103 exact uniques: PASS
+- 10 canonical chunks bit-identical to R157 source: PASS
+- Canonical ordered rows SHA-256: 01344a3e593e4d6f35a9b8a2562ecf5a6be1e954c3aec661768b65ecea31ca2d
+- Ordered references SHA-256: 54eadf4a8da9ac6c59d68b0b97e2cdcd4b5923417b5a5758e05f25cddac9d2b7
+- Reference charset hygiene: PASS (ASCII A-Z / 0-9 / internal hyphen only)
+- Known loose normalization collision: BK3-4 / BK34 only: PASS
+- Known blank profile refs: BIL1T, CH17T, CH9T, HCT1R: PASS
+- Namespace baseline: 719 manufacturer values including blank, 298 groups, 164 blank manufacturer fields: PASS
+- TE8 separation guard: TE8D/TE8I remain curated/manual application XREFs; TE8B remains non-canonical; none is inserted in the 5103-row mass catalogue: PASS
+- Existing catalogue audit suite + new canonical snapshot audit: 9/9 PASS
+- Catalogue data mutation in R158-C1: NO
+- Application runtime mutation in R158-C1: NO
+- V2.27 mutation in R158-C1: NO
+
+PACKAGE
+BRES_Cles_Catalogue_V3_R158_C1.zip
+SHA-256: 5f8270acdd3ae71b8849c402f862675ef8e664b03e6e032b40ee4bf4fc24e80b
+ZIP integrity: PASS
+Library roundtrip: byte-identical PASS, ZIP integrity PASS
+
+RESULT: PASS
