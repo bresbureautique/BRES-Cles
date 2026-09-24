@@ -1,0 +1,20 @@
+BRES CLÉS — CATALOGUE R158-C15 — EXTERNAL VALIDATED BATCH 07
+
+Fabricants renseignés uniquement lorsque la référence Silca exacte ou une équivalence explicite est documentée.
+
+AB1 -> ABUS | Trade Keys: https://www.trade-keys.co.uk/ab1-silca-key-blank | LSC: https://www.lsc.com.au/silca-blank-ab-1-pkt-10
+CE18R -> CES | BASI: https://shop.basi.eu/de/zylinder-schluesselrohling/item-1-1117000.html | A-Key: https://a-key-gmbh.com/CE18R-Silca-257NN-CE4PS-CE-1I-Zylinderschluessel
+DM17 -> DOM | BSS Belgium: https://www.bssbelgium.com/nl/sleutels/cilindersleutels/silca-brute-sleutel-dm17-ssdm17/ | JMA UK: https://jma-uk.co.uk/dom-12d-jma-cylinder-key-blank-dom-12d-for-domr
+FB26 -> FAB | Polyanka Key: https://www.polyanka-key.ru/shop/group_971/group_972/group_1026/item_13930/
+FF6 -> F.F. | Silca catalogue mirror: https://steenhauer.nl/media/20251/file/files2025/110_catalogue.pdf
+FF6R -> F.F. | Silca catalogue mirror: https://steenhauer.nl/media/20251/file/files2025/110_catalogue.pdf
+FF7 -> F.F. | Silca catalogue mirror: https://steenhauer.nl/media/20251/file/files2025/110_catalogue.pdf
+FF8 -> F.F. | Silca catalogue mirror: https://steenhauer.nl/media/20251/file/files2025/110_catalogue.pdf
+GE8R -> GEGE | JMA UK: https://jma-uk.co.uk/ge-2-jma-ge-2-cylinder-key-blank-for-geger
+GE9 -> GEGE | Aldridge Security/Silca: https://www.aldridgesecurity.co.uk/productpdf/download/file/id/8431/name/SILCA_GE9_Key_Blank_To_Suit_GeGe_Cylinders.pdf/
+YT6 -> YETI | NOVELO 91: https://www.enovelo.cz/products/klic-errebi-ye14-silca-yt6-jma-yet-2-cea-yi11 | Ferramenta CLIK: https://www.ferramentaclik.it/catalogo/chiavi-silca/profilo-acciaio/yt6r-silca-chiave-profilo-acciaio-detail.html
+
+Fabricants vides: 83 -> 72.
+Seules 11 lignes changées, fabricant uniquement.
+GE34, AGB2 et RO7 restent volontairement non modifiés.
+Application V2.28 exclue. V2.27 stable exclue.
