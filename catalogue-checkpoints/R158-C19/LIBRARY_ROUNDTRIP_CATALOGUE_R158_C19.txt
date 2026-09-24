@@ -1,0 +1,14 @@
+BRES CLÉS — LIBRARY ROUNDTRIP — CATALOGUE R158-C19
+
+Package SHA-256 local: fed641054289deea34fd8350e361f52df16cb802575229d9fd936e70f65da828
+Package SHA-256 Library: fed641054289deea34fd8350e361f52df16cb802575229d9fd936e70f65da828
+SHA identical: PASS
+Byte-for-byte identical: PASS
+ZIP integrity: PASS
+Self-test rematerialized: PASS
+RESULT: PASS
+
+Self-test: 14/14 PASS.
+Catalogue: 5103 references, 5103 unique, 0 blank manufacturers.
+V2.27 stable: unchanged.
+V2.28 R157: unchanged.

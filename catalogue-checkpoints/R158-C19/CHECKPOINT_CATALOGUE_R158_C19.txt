@@ -1,0 +1,18 @@
+BRES CLÉS — CHECKPOINT CATALOGUE R158-C19
+
+Volet: catalogue uniquement.
+Base: R158-C18.
+Application V2.28: non modifiée (R157 conservée).
+Stable V2.27: non modifiée.
+
+Travail effectué:
+- lot final de 16 références fabricant validées ;
+- fabricants renseignés: ASS62=ASSA, BAB25R=BAB, BAB30R-1=BAB, BAB30R-2=BAB, CA5=CISA, CE130-35=CES, GAD4=GAD, GE34=GEGE, JW4=JUWEL, JW5=JUWEL, RO7=RONIS, SEI10=606, SO4=SOS, TRE1=333, TRE2=333, TRE3=333 ;
+- fabricants vides: 16 -> 0 ;
+- seules ces 16 lignes ont changé, uniquement dans le champ fabricant ;
+- aucune référence fabricant ne reste vide.
+
+Point particulier:
+- GE34 est classé GEGE selon la taxonomie de section du catalogue Silca; Grundmann est une compatibilité affichée dans cette section.
+
+Résultat: couverture fabricant complète sur les 5 103 références du catalogue V3.

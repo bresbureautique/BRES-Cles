@@ -1,0 +1,2 @@
+SHA-256 package checksum: fed641054289deea34fd8350e361f52df16cb802575229d9fd936e70f65da828
+Package: BRES_Cles_Catalogue_V3_R158_C19.zip
