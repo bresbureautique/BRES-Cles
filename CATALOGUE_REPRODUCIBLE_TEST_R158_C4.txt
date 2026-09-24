@@ -1,0 +1,12 @@
+BRES CLÉS — CATALOGUE R158-C4 SELFTEST REPRODUCTIBLE
+5103_references: PASS
+5103_unique: PASS
+164_blank_manufacturers: PASS
+58_c2_strong: PASS
+35_exact_full_geometry: PASS
+2_exact_profile_alternative: PASS
+37_three_internal_signals: PASS
+21_strong_text_only_remaining: PASS
+0_corroboration_conflicts: PASS
+10_chunks_hash_verified: PASS
+TOTAL: 10/10 PASS
