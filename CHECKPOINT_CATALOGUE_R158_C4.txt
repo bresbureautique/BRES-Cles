@@ -1,0 +1,15 @@
+BRES CLÉS — CHECKPOINT CATALOGUE R158-C4
+
+Volet: catalogue uniquement.
+Application V2.28: non modifiée.
+Stable V2.27: non modifiée.
+
+Travail effectué:
+- conservation des 35 candidats R158-C3 à géométrie complète exacte ;
+- recherche d'une corroboration alternative par hash de profil visuel exact sur les 23 restants ;
+- 2 références supplémentaires corroborées: VI11 -> VIRO et KE13 -> KESO ;
+- 37 candidats disposent désormais de trois signaux internes concordants ;
+- 21 restent à preuve groupe+préfixe uniquement ;
+- aucune écriture automatique dans le catalogue.
+
+Résultat: jalon d'audit prêt et reproductible.
