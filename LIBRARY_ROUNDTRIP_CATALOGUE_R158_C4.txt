@@ -1,0 +1,11 @@
+BRES CLÉS — LIBRARY ROUND-TRIP — CATALOGUE R158-C4
+
+Local ZIP: BRES_Cles_Catalogue_V3_R158_C4.zip
+Library rematerialized: library_roundtrip_BRES_Cles_Catalogue_V3_R158_C4.zip
+Local SHA-256: cf63f7d6c7f5a34a7608d44068277822cd3156bd540946ff6d08ce078a663a55
+Library SHA-256: cf63f7d6c7f5a34a7608d44068277822cd3156bd540946ff6d08ce078a663a55
+SHA identical: PASS
+Byte-for-byte identical: PASS
+ZIP integrity: PASS
+Required files: PASS
+RESULT: PASS
