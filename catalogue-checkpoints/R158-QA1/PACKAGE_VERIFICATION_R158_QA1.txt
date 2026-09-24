@@ -1,0 +1,9 @@
+BRES CLÉS — PACKAGE VERIFICATION R158-QA1
+
+Snapshot: BRES_Cles_Catalogue_V3_R158_QA1.zip
+Base catalogue: R158-C19 (aucun bloc catalogue modifié)
+SHA-256: 5b457bbb78842817da9d061c0d2590e394fd305cc671f35c6ebcdb03d9330690
+Self-test local: 11/11 PASS
+ZIP integrity: PASS avant sauvegarde Library
+V2.27 included: NO
+V2.28 included: NO
