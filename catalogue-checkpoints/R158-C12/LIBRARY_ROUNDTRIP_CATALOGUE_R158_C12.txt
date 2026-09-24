@@ -1,0 +1,23 @@
+BRES CLÉS — LIBRARY ROUNDTRIP — CATALOGUE R158-C12
+
+SHA-256 local: 68bf9e78e6ab377cf428fe2b3c198d7a55cd57adf0ca4d5f0c47d55a4924a28c
+SHA-256 Library: 68bf9e78e6ab377cf428fe2b3c198d7a55cd57adf0ca4d5f0c47d55a4924a28c
+SHA identical: PASS
+Byte-for-byte identical: PASS
+ZIP integrity: PASS
+Self-test rematerialized: PASS
+RESULT: PASS
+
+BRES CLÉS — CATALOGUE R158-C12 SELFTEST REPRODUCTIBLE
+5103_references: PASS
+5103_unique: PASS
+105_blank_manufacturers: PASS
+all_12_targets_present: PASS
+all_12_exact_manufacturer_fills: PASS
+GE34_still_blank: PASS
+AGB2_still_blank: PASS
+manifest_before_117: PASS
+manifest_after_105: PASS
+manifest_12_targets: PASS
+changed_chunks_match_manifest: PASS
+TOTAL: 11/11 PASS
