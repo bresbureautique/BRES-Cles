@@ -1,0 +1,6 @@
+R158-QA2 LIBRARY ROUNDTRIP VERIFICATION
+Library path: /BRES Cles/Sauvegardes/BRES_Cles_Catalogue_V3_R158_QA2.zip
+SHA-256: 17b021d57f4d4c2fee33634d7d699aac2d375de5d41e1d1b54f954ff343cebac
+Byte-for-byte match: PASS
+ZIP integrity: PASS
+Self-test after rematerialization: 10/10 PASS
