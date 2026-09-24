@@ -1,0 +1,22 @@
+{
+  "milestone": "CATALOGUE R158-C15",
+  "base": "BRES_Cles_Catalogue_V3_R158_C14",
+  "policy": "External validated batch 07; manufacturer-only fills; application excluded.",
+  "blank_manufacturers_before": 83,
+  "blank_manufacturers_after": 72,
+  "targets": [
+    {"reference":"AB1","after_manufacturer":"ABUS","chunk":"catalog-03.js"},
+    {"reference":"CE18R","after_manufacturer":"CES","chunk":"catalog-10.js"},
+    {"reference":"DM17","after_manufacturer":"DOM","chunk":"catalog-06.js"},
+    {"reference":"FB26","after_manufacturer":"FAB","chunk":"catalog-04.js"},
+    {"reference":"FF6","after_manufacturer":"F.F.","chunk":"catalog-03.js"},
+    {"reference":"FF6R","after_manufacturer":"F.F.","chunk":"catalog-04.js"},
+    {"reference":"FF7","after_manufacturer":"F.F.","chunk":"catalog-05.js"},
+    {"reference":"FF8","after_manufacturer":"F.F.","chunk":"catalog-04.js"},
+    {"reference":"GE8R","after_manufacturer":"GEGE","chunk":"catalog-10.js"},
+    {"reference":"GE9","after_manufacturer":"GEGE","chunk":"catalog-03.js"},
+    {"reference":"YT6","after_manufacturer":"YETI","chunk":"catalog-06.js"}
+  ],
+  "changed_chunks": ["catalog-03.js","catalog-04.js","catalog-05.js","catalog-06.js","catalog-10.js"],
+  "deferred_cases": ["GE34","AGB2","RO7"]
+}
