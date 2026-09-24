@@ -1,0 +1,31 @@
+BRES CLÉS — CATALOGUE R158-C16 — EXTERNAL VALIDATED BATCH 08
+
+Objet: lot de fabricants renseignés uniquement quand la référence Silca est explicitement rattachée au fabricant par une source externe spécialisée ou un catalogue Silca.
+
+Corrections fabricant appliquées:
+- BK13 -> BKS — Silca Catalogue 110: https://proservicescle.fr/wp-content/uploads/catalogue-110.pdf
+- CS47 -> CISA — Ferramenta CLIK: https://www.ferramentaclik.it/catalogo/chiavi-silca/profilo-ottone/cs47-silca-chiave-profilo-ottone-detail.html
+- CS8 -> CISA — Keytrader: https://www.keytrader.co.uk/shop/Cylinder-Keys/CISA/CS8-Key-Blank.html
+- FAC13 -> FAC — Silca catalogue mirror: https://expres.pl/files/0000/296.pdf
+- FAC6R -> FAC — Silca catalogue mirror: https://expres.pl/files/0000/296.pdf
+- FAC7 -> FAC — Silca catalogue mirror: https://expres.pl/files/0000/296.pdf
+- GE16 -> GEGE — Silca catalogue mirror: https://silca.su/wp-content/uploads/2025/03/04-cilindro-109-pdf-data_1317190.pdf
+- GE17 -> GEGE — Silca catalogue mirror: https://silca.su/wp-content/uploads/2025/03/04-cilindro-109-pdf-data_1317190.pdf
+- LS10 -> LAS — Silca Catalogue 110: https://steenhauer.nl/media/20251/file/files2025/110_catalogue.pdf
+- LS16R -> LAS — Silca Catalogue 110 + Office Specialties: https://www.oskeys.co.uk/silca-ls16r-key-blank
+- LS3 -> LAS — Silca Catalogue 110 + LSC Security: https://www.lsc.com.au/silca-blank-ls-3-pkt-10
+- LS8R -> LAS — Silca Catalogue 110 + LSC Security: https://www.lsc.com.au/silca-blank-ls-8r-pkt-10
+- TE24 -> TESA — Aldridge Security: https://www.aldridgesecurity.co.uk/silca-3900-silca-te24-to-suit-tesa.html
+- UNI43 -> UNION — Silca Catalogue 110: https://steenhauer.nl/media/20251/file/files2025/110_catalogue.pdf
+- YT12 -> YETI — Silca Catalogue 110: https://www.aldridgesecurity.co.uk/media/wysiwyg/Downloads/Files/Silca110Catalogue.pdf
+- YT1R -> YETI — Silca Catalogue 110: https://www.aldridgesecurity.co.uk/media/wysiwyg/Downloads/Files/Silca110Catalogue.pdf
+- YT3R -> YETI — Silca Catalogue 110: https://www.aldridgesecurity.co.uk/media/wysiwyg/Downloads/Files/Silca110Catalogue.pdf
+
+Contrôles de prudence:
+- seuls les champs fabricant des 17 références ci-dessus ont été modifiés ;
+- GE34, AGB2 et RO7 restent volontairement vides ;
+- CE130-35 reste vide car des sources externes se contredisent sur son attribution ;
+- application V2.28 exclue du snapshot ;
+- version stable V2.27 exclue du snapshot.
+
+Fabricants vides: 72 -> 55.
