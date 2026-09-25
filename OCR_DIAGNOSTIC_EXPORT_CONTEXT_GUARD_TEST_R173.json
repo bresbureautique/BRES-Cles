@@ -1,0 +1,12 @@
+{
+  "schema": "bres-ocr-diagnostic-export-context-guard-v1",
+  "milestone": "R173",
+  "seal_present": true,
+  "all_context_epochs_sealed": true,
+  "current_context_checked": true,
+  "seal_attached_on_creation": true,
+  "export_guard_enforced": true,
+  "stale_export_disabled": true,
+  "errors": [],
+  "ok": true
+}
