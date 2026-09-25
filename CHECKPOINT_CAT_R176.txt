@@ -1,0 +1,5 @@
+BRES Cles CAT-R176
+5103 references / 5103 uniques.
+10/10 blocs canoniques identiques a CAT-R175.
+Aucune donnee canonique incertaine ajoutee.
+HCT1R reste protege au niveau de la signature de profil BRES.

@@ -1,0 +1,2 @@
+CAT-R176 external provenance note
+HCT1R / HECTOR is corroborated at reference and maker level by a Silca catalogue search extract (marking 1308). The exact internal BRES profile signature remains unproven and blank. No canonical catalogue field was changed.
