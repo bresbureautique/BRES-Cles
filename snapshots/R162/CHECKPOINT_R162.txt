@@ -1,0 +1,9 @@
+BRES CLÉS V2.28 TEST — CHECKPOINT R162
+
+Statut : CHECKPOINT DE TEST, non promu stable.
+
+Objectif : empêcher qu’une preuve indépendante ayant départagé une collision catalogue QA2 soit réutilisée après le changement d’identification.
+
+R162 lie chaque trace de résolution QA2 à identificationEpoch. Une trace issue d’une identification précédente est automatiquement exclue de l’affichage et des exports de diagnostic. Les seuils de décision, la logique de collision R158 et les données catalogue ne sont pas modifiés.
+
+Conservation : V2.27 reste stable ; V2.28 reste sur sa branche de test ; les 10 blocs catalogue sont inchangés.
