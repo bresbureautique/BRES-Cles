@@ -1,0 +1,9 @@
+BRES CLES V2.28 TEST R173 - TEST SUMMARY
+
+- R173 final diagnostic export context guard: PASS (6/6)
+- Full regression: 96/96 PASS
+- JavaScript syntax, wrapper and inline scripts: PASS
+- Catalogue: 5103 references / 5103 unique
+- Catalogue blocks: 10/10 identical to R172
+- No OCR threshold, score, decision rule, or catalogue data changed
+- V2.27 stable main expected commit: 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8
