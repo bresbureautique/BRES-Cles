@@ -1,0 +1,11 @@
+BRES Cles CAT-R175
+
+Catalogue audit kept separate from V2.28 development.
+- 5103 references / 5103 unique.
+- 10/10 canonical catalogue blocks byte-identical to R174.
+- No canonical catalogue data changed in this checkpoint.
+- Uncertain entries remain protected pending stronger evidence.
+- Audit ZIP verified after Library round-trip.
+
+ZIP SHA-256:
+0a80b09f093fd599a47dab54ba61732111cd8785ec6335437117f7938989fc84  BRES_Cles_Catalogue_Audit_CAT_R175.zip
