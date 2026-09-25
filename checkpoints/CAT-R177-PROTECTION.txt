@@ -1,0 +1,1 @@
+Protected blank BRES profile signatures retained for CH9T, CH17T, HCT1R and BIL1T. Protected collision pairs retained for RO4 with RO45, and VAC151 with VAC151SM. No canonical field changed in CAT-R177.
