@@ -1,0 +1,13 @@
+BRES CLES V2.28 — CHECKPOINT R184
+
+- V2.27 reste la version stable séparée et n’est pas remplacée.
+- Le moteur applicatif testé reste V2.28 TEST R156 ; R184 est le numéro de checkpoint/paquet.
+- R184 corrige une contamination de contexte introduite au changement de série OCR multi-prises : l’ancien diagnostic est invalidé sans effacer silencieusement la chaîne QA2 de l’identification encore affichée.
+- La répétabilité diagnostique OCR est remise à zéro à chaque nouvelle série ; une nouvelle série ne réutilise plus les échantillons de la série précédente.
+- Toute requête OCR encore active reste immédiatement annulée au changement de série (garde R183 conservée).
+- La prochaine lecture OCR ferme proprement l’ancienne chaîne QA2 via R171, ce qui préserve la trace de remise à zéro R168 au lieu de perdre silencieusement cet état.
+- Le sceau d’export R173 continue de suivre captureSeriesActive et captureSeriesId.
+- Tous les exports utilisateur portent R184 et les diagnostics conservent version=V2.28 TEST R156 pour distinguer moteur et paquet.
+- Aucun seuil OCR n’est modifié : 0,70 / 0,88.
+- Aucun des 10 blocs catalogue canoniques n’est modifié.
+- Le jalon est considéré terminé uniquement après régression, vérification ZIP, checksum et sauvegardes séparées.
