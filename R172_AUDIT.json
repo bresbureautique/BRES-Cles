@@ -1,0 +1,14 @@
+{
+  "milestone": "R172",
+  "status": "test_checkpoint",
+  "targeted_guard_passed": true,
+  "regression_passed": 95,
+  "regression_total": 95,
+  "catalogue_references": 5103,
+  "catalogue_unique": 5103,
+  "catalogue_chunks_identical_to_r171": 10,
+  "library_zip_sha256": "93fed7cd6511340e5d1b5cc8f8c246b547e76782bd4d12bad3ade94868139580",
+  "source_index_sha256": "1ed12ebab5493ecbfb3cdd0d4edbce08a9bdba15deb704ce1eac06f90162f26a",
+  "runtime_patch_sha256": "2f0ea9134d41a31558d59cf9e600980e3d13ba9e528c464ec3e28d861d16ed13",
+  "promoted_stable": false
+}
