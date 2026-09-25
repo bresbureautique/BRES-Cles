@@ -1,0 +1,11 @@
+BRES CLES V2.28 - R184 VERIFICATION MANIFEST
+Runtime: V2.28 TEST R156
+Stable line: V2.27 untouched
+Targeted regression: 19/19 PASS
+Checkpoint checks: 11/11 PASS
+JavaScript syntax: PASS
+Catalogue: 5103 refs / 5103 unique
+Canonical catalogue chunks unchanged: 10/10
+OCR thresholds unchanged: 0.70 / 0.88
+Full historical verify_build: not claimed; execution window exceeded.
+See SOURCE_HASHES_R184.txt and the verified Library ZIP.
