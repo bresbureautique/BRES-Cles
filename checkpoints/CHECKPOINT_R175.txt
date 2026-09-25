@@ -1,0 +1,24 @@
+BRES Clés V2.28 — CHECKPOINT R175
+
+Objet
+- Corriger la traçabilité du paquet de test sans renommer artificiellement le moteur V2.28 TEST R156.
+- Afficher explicitement le checkpoint R175 dans l'interface.
+- Renommer les exports de base étalon encore marqués R116 vers CHECKPOINT_R175/R175.
+- Garder V2.27 comme version stable sur main.
+- Maintenir les 10 blocs catalogue canoniques inchangés.
+
+Vérification
+- 112/112 tests Python PASS, exécutés en 4 lots bornés.
+- JavaScript v228-catalogue.js PASS (node --check).
+- JavaScript inline index.html PASS (node --check).
+- checkpoint_traceability_guard_test.py PASS après extraction du ZIP final.
+- catalogue_qa2_resolution_cycle_guard_test.py PASS après extraction du ZIP final.
+- 10/10 blocs catalogue canoniques identiques à R174.
+- 5 103 références / 5 103 uniques.
+- ZIP Library vérifié octet par octet.
+
+ZIP application SHA-256
+8fca976da50e0b89735d253f181ecd03bc62e5204b0df2bcc84d25af04621180  BRES_Cles_Mobile_V2_28_CHECKPOINT_R175.zip
+
+Note
+Le runner verify_build.py complet a dépassé la fenêtre d'exécution de la session. Les 112 tests ont néanmoins été exécutés directement et tous passent.
