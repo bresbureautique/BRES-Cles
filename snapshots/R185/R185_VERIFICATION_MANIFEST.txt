@@ -1,0 +1,12 @@
+BRES CLES V2.28 - CHECKPOINT R185 VERIFICATION
+RESULTAT: PASS
+Runtime: V2.28 TEST R156
+Stable: V2.27 untouched
+Full verify_build: 107/107 PASS
+JavaScript wrapper + inline syntax: PASS
+Capture-series stop guard R185: PASS
+Local recovery guard regression repaired: PASS
+Catalogue: 5103 / 5103 unique
+Canonical catalogue chunks unchanged: 10/10
+OCR thresholds: 0.70 / 0.88 unchanged
+See SOURCE_HASHES_R185.txt and PATCH_R184_TO_R185_*.diff.
