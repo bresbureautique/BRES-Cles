@@ -1,0 +1,3 @@
+BRES CLES CATALOGUE AUDIT CAT-R178
+Separate catalogue audit checkpoint. No canonical catalogue data changed.
+5103 references / 5103 unique. Canonical chunks 10/10 unchanged.
