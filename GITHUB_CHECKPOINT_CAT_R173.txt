@@ -1,0 +1,8 @@
+BRES Cles catalogue audit CAT-R173
+Status: separate catalogue audit checkpoint.
+ZIP SHA256: 4fde18612f47f6659185f3a1c368b38405b18d6cb89f63a4413d1f3eec5495d3
+Catalogue: 5103 references / 5103 unique / 10 chunks.
+8 separate catalogue tests: PASS.
+Blank profiles preserved: CH9T, CH17T, HCT1R, BIL1T.
+Residual protected collisions: RO4/RO45 and VAC151/VAC151SM.
+Catalogue data modified: no.
