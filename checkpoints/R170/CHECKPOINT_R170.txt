@@ -1,0 +1,22 @@
+BRES CLÉS V2.28 TEST — CHECKPOINT R170
+
+Statut : CHECKPOINT DE TEST, non promu stable.
+
+Base : R169 conservée.
+
+Correction : lors du remplacement d’une photo principale recto/verso, l’ancienne décision QA2 était bien invalidée, mais l’export diagnostic OCR précédent pouvait rester disponible jusqu’à la prochaine lecture OCR. R170 ferme d’abord la chaîne QA2 afin que la remise à zéro R168 conserve le sceau de contexte R167 réellement invalidé, puis efface l’ancien diagnostic OCR. Le comportement est désormais cohérent avec la correction R169 appliquée aux photos rapprochées de tête.
+
+Cette correction ne change aucun seuil OCR, aucun score, aucune règle de décision et aucune donnée catalogue. Elle ne modifie pas les chemins caméra/import déjà validés.
+
+Validation :
+- garde spécifique R170 : PASS ;
+- garde R169 photos de tête : PASS ;
+- garde R168 de remise à zéro QA2 : PASS ;
+- invalidation géométrie/photo principale : PASS ;
+- export diagnostic OCR : PASS ;
+- garde caméra native : PASS ;
+- protocole TE8D/TE8I et synthèse de préparation physique : PASS ;
+- régression complète verify_build : 93/93 PASS ;
+- catalogue : 5103 références / 5103 uniques ;
+- 10/10 blocs catalogue strictement identiques à R169 ;
+- V2.27 reste stable sur main au commit 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8.
