@@ -1,0 +1,9 @@
+BRES Cles V2.28 checkpoint R182
+Parent checkpoint: R181
+V2.27 remains stable and unchanged.
+Runtime label remains V2.28 TEST R156.
+R182 adds asynchronous photo-selection publication guards.
+OCR thresholds unchanged: 0.70 / 0.88.
+Canonical catalogue unchanged: 5103 references / 5103 unique.
+Fast checkpoint verification: PASS, 11/11 targeted regressions.
+ZIP SHA-256: 45d5d5e2ba328f25db417ccf4436266cc103a18e9a29f2f6e0f5f2f306bced54
