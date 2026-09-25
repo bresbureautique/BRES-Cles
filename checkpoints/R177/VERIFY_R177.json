@@ -1,0 +1,16 @@
+{
+  "checkpoint": "R177",
+  "parent_commit": "90bbce9de5a825e70c9a20f2d2cd45e7d72c6bd0",
+  "stable_version": "V2.27",
+  "stable_expected_commit": "9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8",
+  "runtime": "V2.28 TEST R156",
+  "zip_sha256": "a19498f7246a2aad2e70b7b68a35a116d79041cd45c17b8a20b4b9576d15feb6",
+  "verify_build": "99/99 PASS",
+  "all_python_scripts": "113/113 exit 0",
+  "mobile_photo_recovery_guard": "8/8 PASS",
+  "extracted_verify_build": "99/99 PASS",
+  "catalogue": "5103/5103; 10/10 canonical blocks unchanged",
+  "prefill_threshold": 0.70,
+  "decision_threshold": 0.88,
+  "patch_sha256": "b0f14c5dda1f419ec7d829b73d2bcb20168aff253c8b9ba2ff0f36338f13a924"
+}
