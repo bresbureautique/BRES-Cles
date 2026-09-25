@@ -1,0 +1,11 @@
+BRES CLES V2.28 — CHECKPOINT R186
+
+- V2.27 reste la version stable séparée et n’est pas remplacée.
+- Le moteur applicatif testé reste V2.28 TEST R156 ; R186 est le numéro de checkpoint/paquet.
+- R186 ajoute une garde de cycle de vie aux séries OCR multi-prises : pendant une série active, les boutons de démarrage de série et de test physique TE8D / TE8I sont désactivés afin qu’un double appui ne puisse pas remettre à zéro silencieusement l’historique déjà collecté.
+- Le bouton « Terminer la série » reste disponible ; il annule toute lecture OCR encore en vol, vide uniquement les états diagnostiques de série puis réactive les deux boutons de démarrage.
+- La chaîne QA2 de l’identification courante reste volontairement conservée pendant la clôture ; elle n’est remplacée qu’au prochain vrai cycle OCR, selon la garde R171.
+- Tous les exports utilisateur portent R186 et les diagnostics conservent version=V2.28 TEST R156 pour distinguer moteur et paquet.
+- Aucun seuil OCR n’est modifié : 0,70 / 0,88.
+- Aucun des 10 blocs catalogue canoniques n’est modifié.
+- Le jalon est considéré terminé uniquement après régression complète, vérification du ZIP, checksum et sauvegardes séparées GitHub / Library.
