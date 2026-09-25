@@ -1,0 +1,11 @@
+BRES CLES V2.28 — CHECKPOINT R177
+
+- V2.27 reste la version stable séparée et n’est pas remplacée.
+- Le moteur applicatif testé reste V2.28 TEST R156 ; R177 est le numéro de checkpoint/paquet.
+- R177 corrige un défaut concret du bouton caméra guidée : si getUserMedia/play échoue dans un contexte HTTPS/PWA, le prochain appui ouvre réellement la caméra native pendant le nouveau geste utilisateur au lieu de relancer indéfiniment la caméra guidée.
+- Le repli est volontairement « un seul appui » : après ouverture native, un appui ultérieur peut retenter la caméra guidée.
+- R177 libère aussi l’Object URL quand le décodage d’une image échoue, afin d’éviter une fuite mémoire lors de reprises de photos/fichiers invalides sur téléphone.
+- Tous les exports utilisateur portent R177 et les diagnostics conservent version=V2.28 TEST R156 pour distinguer moteur et paquet.
+- Aucun seuil OCR n’est modifié : 0,70 / 0,88.
+- Aucun des 10 blocs catalogue canoniques n’est modifié.
+- R176 reste le jalon précédent de traçabilité complète des exports.
