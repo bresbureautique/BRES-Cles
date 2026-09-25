@@ -1,0 +1,21 @@
+BRES CLÉS V2.28 TEST — CHECKPOINT R169
+
+Statut : CHECKPOINT DE TEST, non promu stable.
+
+Base : R168 conservée.
+
+Correction : lors du remplacement d'une photo rapprochée de tête, l'ancien ordre effaçait le diagnostic QA2 avant de fermer la chaîne de décision. Le sceau de contexte R167 pouvait donc être perdu avant que R168 enregistre la remise à zéro. R169 inverse cet ordre : la chaîne QA2 est d'abord invalidée et son ancien sceau est mémorisé, puis le diagnostic est effacé.
+
+Cette correction ne change aucun seuil OCR, aucun score, aucune règle de décision et aucune donnée catalogue. Elle ne modifie pas non plus les chemins caméra/import déjà validés.
+
+Validation :
+- garde spécifique R169 : PASS ;
+- garde R168 de remise à zéro QA2 : PASS ;
+- invalidation photos de tête : PASS ;
+- garde caméra native : PASS ;
+- export diagnostic OCR : PASS après mise à jour de son attente d'ordre ;
+- protocole TE8D/TE8I et synthèse de préparation physique : PASS ;
+- régression complète exécutée par lots bornés : 92/92 PASS ;
+- catalogue : 5103 références / 5103 uniques ;
+- 10/10 blocs catalogue identiques à R168 ;
+- V2.27 reste stable sur main.
