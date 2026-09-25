@@ -1,0 +1,14 @@
+BRES CLES V2.28 — CHECKPOINT R179
+
+- V2.27 reste la version stable séparée et n’est pas remplacée.
+- Le moteur applicatif testé reste V2.28 TEST R156 ; R179 est le numéro de checkpoint/paquet.
+- R179 étend la protection R178 aux photos rapprochées de tête : ouvrir « Tête recto » ou « Tête verso » remet l’input natif à vide pour pouvoir sélectionner la même photo, mais une annulation ne peut plus faire disparaître la dernière photo de tête validée.
+- Une annulation du sélecteur de tête ne modifie ni le statut 0/2, ni les epochs OCR/identification, ni le diagnostic QA2, ni l’aperçu précédent.
+- Une vraie nouvelle photo de tête est mise en cache, invalide l’ancienne décision exactement une fois, puis redessine l’aperçu.
+- Les chemins OCR de tête et « recherche tête » utilisent désormais l’accesseur de photo mis en cache, et non directement input.files[0].
+- R179 corrige aussi le bandeau de traçabilité qui indiquait encore par erreur que les exports portaient R177 dans le paquet R178.
+- Tous les exports utilisateur portent R179 et les diagnostics conservent version=V2.28 TEST R156 pour distinguer moteur et paquet.
+- Aucun seuil OCR n’est modifié : 0,70 / 0,88.
+- Aucun des 10 blocs catalogue canoniques n’est modifié.
+- R178 reste le jalon précédent pour l’annulation de reprise des photos principales.
+- Le jalon est considéré terminé uniquement après régression, vérification ZIP, checksum et sauvegardes séparées.
