@@ -1,0 +1,9 @@
+BRES CLÉS V2.28 TEST — CHECKPOINT R163
+
+Statut : CHECKPOINT DE TEST, non promu stable.
+
+Objectif : empêcher qu’une preuve QA2 issue d’une lecture OCR précédente du même jeu de photos soit réutilisée lorsqu’une nouvelle lecture OCR aboutit à un conflit, à une ambiguïté ou à une lecture insuffisante.
+
+R163 efface explicitement la trace de résolution QA2 au début de chaque nouvelle lecture OCR principale ou de tête. Une preuve n’est recréée qu’après une validation obtenue pendant la lecture courante ou après la revérification d’une saisie manuelle prioritaire. Le garde d’époque R162 reste actif en complément.
+
+Conservation : V2.27 reste stable ; V2.28 reste sur sa branche de test ; les seuils de décision et les 10 blocs catalogue ne sont pas modifiés.
