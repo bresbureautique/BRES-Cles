@@ -1,0 +1,13 @@
+BRES CLES V2.28 — MANIFESTE CHECKPOINT R186
+
+Runtime: V2.28 TEST R156
+Stable conservée: V2.27
+Régression complète: 108/108 PASS
+Nouvelle garde: cycle de vie des séries OCR multi-prises
+Catalogue canonique: 5103 références / 5103 uniques
+Blocs catalogue: 10/10 identiques à R185
+Seuils OCR: 0,70 / 0,88 inchangés
+ZIP extrait et verify_build relancé: PASS
+Copie Library rematérialisée et comparée octet par octet: PASS
+ZIP SHA-256: fd4fe789297a9ce040624933b0e8ae23b90a39cb88716b07278f1a8c030057bc
+Source hashes: SOURCE_HASHES_R186.txt
