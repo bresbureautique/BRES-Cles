@@ -1,0 +1,13 @@
+BRES CLES V2.28 — CHECKPOINT R180
+
+- V2.27 reste la version stable séparée et n’est pas remplacée.
+- Le moteur applicatif testé reste V2.28 TEST R156 ; R180 est le numéro de checkpoint/paquet.
+- R180 rend le chargement des photos rapprochées de tête transactionnel : une photo n’entre dans l’état actif qu’après décodage image réussi.
+- Un fichier de tête illisible ne remplace plus la dernière photo valide, n’invalide pas l’OCR/QA2 et n’est jamais exposé à l’analyse via input.files pendant sa validation.
+- Deux sélections rapprochées sont ordonnées par epoch : si une ancienne image finit de se décoder après une sélection plus récente, elle est ignorée.
+- L’aperçu réutilise l’image déjà décodée, ce qui évite un second décodage asynchrone et réduit le risque de publication tardive.
+- Les protections R178/R179 restent actives : annuler un sélecteur principal ou tête conserve la dernière photo validée.
+- Tous les exports utilisateur portent R180 et les diagnostics conservent version=V2.28 TEST R156 pour distinguer moteur et paquet.
+- Aucun seuil OCR n’est modifié : 0,70 / 0,88.
+- Aucun des 10 blocs catalogue canoniques n’est modifié.
+- Le jalon est considéré terminé uniquement après régression, vérification ZIP, checksum et sauvegardes séparées.
