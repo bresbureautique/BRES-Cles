@@ -1,0 +1,13 @@
+BRES CLÉS V2.28 TEST — VERIFICATION R162
+
+- Nouveau garde d'époque QA2 : 8/8 PASS
+- Syntaxe JavaScript : PASS
+- Suites QA2 ciblées : PASS
+- Régression historique : 91/91 PASS
+- 10 blocs catalogue : identiques à R161
+- ZIP local : intégrité PASS
+- Test R162 après extraction du ZIP : PASS
+- SHA-256 ZIP : 3d8e6b63244f0c46066200008ca757259507dd2cb6b9ef49b4540d7afa7a5570
+- V2.27 stable conservée sur main : 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8
+
+Décision : R162 est un checkpoint V2.28 testé, non promu stable.
