@@ -1,0 +1,39 @@
+{
+  "milestone": "R169",
+  "status": "test-checkpoint",
+  "stable_promoted": false,
+  "base": "R168",
+  "fix": "head-photo QA2 invalidation records the previous R167 context seal before diagnostic reset clears it",
+  "regression": {
+    "total": 92,
+    "passed": 92,
+    "failed": [],
+    "ok": true,
+    "execution": "bounded batches plus serial replay suites"
+  },
+  "specific_guards": {
+    "head_photo_qa2_reset_order_guard_test.py": "PASS",
+    "catalogue_qa2_context_reset_guard_test.py": "PASS",
+    "head_photo_state_invalidation_test.py": "PASS",
+    "camera_native_picker_guard_test.py": "PASS",
+    "ocr_diagnostic_export_guard_test.py": "PASS",
+    "ocr_physical_readiness_guard_test.py": "PASS",
+    "ocr_critical_family_protocol_guard_test.py": "PASS"
+  },
+  "syntax": {
+    "index_inline_js": true,
+    "v228_catalogue_js": true,
+    "python_compile": true
+  },
+  "catalogue": {
+    "references": 5103,
+    "unique": 5103,
+    "blocks_identical_to_r168": 10,
+    "blocks_total": 10,
+    "modified": false,
+    "ok": true
+  },
+  "decision_thresholds_modified": false,
+  "monolithic_verify_build_note": "The monolithic wrapper exceeded the container execution window; the complete 92-test list was then executed in bounded batches, and all 92 passed.",
+  "stable_main_commit": "9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8"
+}
