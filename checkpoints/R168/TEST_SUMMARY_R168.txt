@@ -1,0 +1,9 @@
+BRES CLES - TEST SUMMARY R168
+RESULTAT: PASS
+Test spécifique remise à zéro QA2: PASS (15 scénarios)
+Régression Python: PASS 105/105
+verify_build.py: PASS
+Catalogue: 5103 références / 5103 uniques
+Blocs catalogue: 10/10 identiques à R167
+Seuils de décision: inchangés
+V2.27 stable main = 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8

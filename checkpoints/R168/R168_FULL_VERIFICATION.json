@@ -1,0 +1,35 @@
+{
+  "milestone": "R168",
+  "status": "test-checkpoint",
+  "stable_promoted": false,
+  "base": "R167",
+  "feature": "QA2 context reset trace bound to first clean R167 context seal after invalidation",
+  "specific_test": {
+    "name": "catalogue_qa2_context_reset_guard_test.py",
+    "scenarios": 15,
+    "passed": 15,
+    "ok": true
+  },
+  "python_regression": {
+    "milestone": "R168",
+    "total": 105,
+    "passed": 105,
+    "failed": [],
+    "ok": true
+  },
+  "verify_build": {
+    "ok": true,
+    "errors": []
+  },
+  "catalogue": {
+    "references": 5103,
+    "unique": 5103,
+    "blocks_identical_to_r167": 10,
+    "blocks_total": 10,
+    "modified": false
+  },
+  "decision_thresholds_modified": false,
+  "stable_main_commit": "9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8",
+  "r167_branch_commit": "10642f4947e87e31c2cdb968f6141a41b2e34ea7",
+  "catalogue_audit_commit": "af2c6748079c45ebf1c9026410eea2180e31311b"
+}

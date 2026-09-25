@@ -21,6 +21,3 @@ Conservation :
 - R168 reste une version de test séparée ;
 - R167 est conservée comme jalon précédent ;
 - le catalogue reste séparé et inchangé.
-
-Snapshot complet : BRES_Cles_Mobile_V2_28_TEST_R168.zip
-SHA-256 : 8f0a39a2c0c93e8d571ce2f8eba22f3e01e64d91726c8b948e349998cb26dafc
