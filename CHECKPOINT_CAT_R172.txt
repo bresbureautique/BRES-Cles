@@ -1,0 +1,8 @@
+BRES CLES - CHECKPOINT CATALOGUE CAT-R172
+
+Audit qualitatif separe de V2.28.
+Aucune donnee catalogue modifiee.
+4 profils sans signature certaine : CH9T, CH17T, HCT1R, BIL1T -> conserves vides.
+2 collisions structurelles residuelles : RO4/RO45 et VAC151/VAC151SM -> besoin de departage manuel ou independant.
+Catalogue verifie : 5103 references / 5103 uniques / 10 blocs.
+ZIP Library SHA-256 : 6cc674e45f8273ec3494ace02416a213149a5ca43fe5530270258a1dd7ce4302
