@@ -1,0 +1,34 @@
+{
+  "milestone": "R167",
+  "status": "test-checkpoint",
+  "stable_promoted": false,
+  "feature": "QA2 decision context seal and diagnostic synchronization",
+  "specific_test": {
+    "name": "catalogue_qa2_context_seal_guard_test.py",
+    "scenarios": 14,
+    "passed": 14,
+    "ok": true
+  },
+  "python_regression": {
+    "milestone": "R167",
+    "total": 104,
+    "passed": 104,
+    "failed": [],
+    "elapsed_s": 26.64,
+    "ok": true
+  },
+  "verify_build": {
+    "ok": true,
+    "errors": []
+  },
+  "catalogue": {
+    "references": 5103,
+    "unique": 5103,
+    "blocks_identical_to_r166": 10,
+    "blocks_total": 10,
+    "modified": false
+  },
+  "stable_main_commit": "9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8",
+  "catalogue_audit_commit": "af2c6748079c45ebf1c9026410eea2180e31311b",
+  "r166_branch_commit": "2268909918f0875add65f71b3ccb6d0e7c52510d"
+}
