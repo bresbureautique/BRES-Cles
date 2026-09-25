@@ -1,0 +1,29 @@
+{
+  "checkpoint": "R176",
+  "parent_branch": "v2.28-test-r175",
+  "parent_commit": "6a664c812e65983bd73fca8f9809c90ca0b19d70",
+  "stable_version": "V2.27",
+  "stable_expected_commit": "9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8",
+  "runtime": "V2.28 TEST R156",
+  "zip_sha256": "cacfeb0231bc3a038d69f0c771f9379bf3a4a03d1bedaf2eefbcee9cc4c19cf6",
+  "verify_build": {
+    "ok": true,
+    "tests": 98,
+    "errors": 0
+  },
+  "all_python_tests": "112/112 PASS",
+  "javascript_wrapper": "PASS",
+  "javascript_inline": "PASS",
+  "zip_integrity": "PASS",
+  "library_roundtrip": "BYTE IDENTICAL + verify_build PASS",
+  "catalogue": {
+    "count": 5103,
+    "unique": 5103,
+    "canonical_blocks": "10/10 unchanged"
+  },
+  "thresholds": {
+    "prefill": 0.7,
+    "decision": 0.88
+  },
+  "note": "Complete R176 ZIP snapshot is archived separately in Library BRES Cles/Sauvegardes; this Git checkpoint records verifiable digests and test evidence."
+}

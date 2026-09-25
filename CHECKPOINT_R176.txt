@@ -1,0 +1,10 @@
+BRES CLES V2.28 — CHECKPOINT R176
+
+- V2.27 reste la version stable séparée et n’est pas remplacée.
+- Le moteur applicatif testé reste V2.28 TEST R156 ; R176 est le numéro de checkpoint/paquet.
+- R176 termine la traçabilité des exports : base étalon, diagnostic OCR, diagnostic profil et calibration portent désormais tous le numéro du checkpoint dans leur nom.
+- Les exports diagnostic OCR/profil/calibration incluent aussi packageCheckpoint=R176, tout en conservant version=V2.28 TEST R156 pour distinguer moteur et paquet.
+- Le garde de traçabilité du checkpoint est désormais exécuté par verify_build.py.
+- Aucun seuil OCR n’est modifié : 0,70 / 0,88.
+- Aucun des 10 blocs catalogue canoniques n’est modifié.
+- R175 reste le jalon précédent.
