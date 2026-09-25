@@ -1,0 +1,3 @@
+d24a8d7d5729b2f6b49d015d573b49a86bbca8e06329ff9ad0526ebcc6e42a75  BRES_Cles_Mobile_V2_28_CHECKPOINT_R184.zip
+Library round-trip byte identity: PASS
+Library path: /BRES Cles/Sauvegardes/BRES_Cles_Mobile_V2_28_CHECKPOINT_R184.zip
