@@ -1,0 +1,44 @@
+--- R177/index.html
++++ R178/index.html
+@@
+-<div id="checkpointTrace" class="status ok"><b>Checkpoint de travail : R177</b>
++<div id="checkpointTrace" class="status ok"><b>Checkpoint de travail : R178</b>
+@@
+ const guidedCapture={recto:null,verso:null};
++const nativeMainCapture={recto:null,verso:null};
+ const mainPhotoPreviewUrls={recto:null,verso:null};
+-function getMainPhoto(side){return guidedCapture[side] || (el(side).files&&el(side).files[0]) || null;}
++function getMainPhoto(side){return guidedCapture[side] || nativeMainCapture[side] || (el(side).files&&el(side).files[0]) || null;}
++function commitNativeMainPhoto(side){
++ const input=el(side), file=input?.files&&input.files[0];
++ if(!file)return false;
++ nativeMainCapture[side]=file;
++ guidedCapture[side]=null;
++ photoRefresh();
++ return true;
++}
+@@
+   guidedCapture[side]=new File([blob],`BRES_${side}_${Date.now()}.jpg`,{type:'image/jpeg'});
++  nativeMainCapture[side]=null;
+   closeGuidedCamera();photoRefresh();
+@@
+-el("recto").onchange=()=>{guidedCapture.recto=null;photoRefresh();};el("verso").onchange=()=>{guidedCapture.verso=null;photoRefresh();};
++el("recto").onchange=()=>commitNativeMainPhoto("recto");el("verso").onchange=()=>commitNativeMainPhoto("verso");
+@@
+-R177 export checkpoint names
++R178 export checkpoint names
+
+--- R177/v228-catalogue.js
++++ R178/v228-catalogue.js
+@@
+-payload.packageCheckpoint='R177'
++payload.packageCheckpoint='R178'
+@@
+-BRES_profil_CHECKPOINT_R177_
++BRES_profil_CHECKPOINT_R178_
+@@
+-packageCheckpoint:'R177'
++packageCheckpoint:'R178'
+@@
+-BRES_calibration_CHECKPOINT_R177_
++BRES_calibration_CHECKPOINT_R178_
