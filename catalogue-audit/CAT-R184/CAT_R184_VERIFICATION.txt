@@ -1,0 +1,7 @@
+CAT-R184 verification
+5103 references / 5103 unique
+9/9 catalogue consistency checks PASS
+10/10 canonical chunk hashes match CAT-R183
+Canonical catalogue modified: NO
+Blank-profile set unchanged: CH9T, CH17T, HCT1R, BIL1T
+Collision sets unchanged: RO4/RO45 and VAC151/VAC151SM
