@@ -1,0 +1,23 @@
+BRES CLÉS V2.28 TEST — CHECKPOINT BUNDLE R171
+Date : 2026-09-25
+Statut : TEST uniquement, V2.27 stable non modifiée.
+Base : v2.28-test-r170
+
+Correction R171
+Une nouvelle lecture OCR (principale ou tête) ferme explicitement une chaîne QA2 encore active avant d'effacer le diagnostic puis d'ouvrir le nouveau cycle. Si une invalidation photo/base/contexte a déjà fermé la chaîne, la remise à zéro R168 existante est préservée et n'est pas écrasée.
+
+Validation finale
+- garde R171 : PASS
+- gardes R170/R169/R168 : PASS
+- régression finale : 93/93 PASS
+- catalogue : 5103 références / 5103 uniques
+- 10/10 blocs catalogue identiques à R170
+- ZIP integrity : PASS
+- test R171 après extraction : PASS
+- Library roundtrip octet par octet : PASS
+
+SHA-256 ZIP
+62bfde2eb62063602793dab9ff2572cce567a1585dad441e620080831f08b3e9  BRES_Cles_Mobile_V2_28_TEST_R171.zip
+
+V2.27 stable main attendu
+9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8
