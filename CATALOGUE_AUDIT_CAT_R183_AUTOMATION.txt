@@ -1,0 +1,12 @@
+BRES CLES CATALOGUE - CAT-R183
+Parent: CAT-R182
+Canonical catalogue modified: NO
+Catalogue: 5103 references / 5103 unique
+Protected blank profiles: CH9T, CH17T, HCT1R, BIL1T
+Protected collisions: RO4/RO45 and VAC151/VAC151SM
+Exact full duplicate group: VAC151/VAC151SM only
+Audit checks: 9/9 PASS
+Canonical chunk hashes: 10/10 identical to CAT-R182
+Catalogue ZIP SHA-256: 694db4c9050e01ac61694f453b9d68cc81ec7204198319eb2985ac91b417420b
+Library snapshot byte-compare: PASS
+Decision: no profile or collision resolved by assumption.
