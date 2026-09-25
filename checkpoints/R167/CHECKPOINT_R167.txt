@@ -1,0 +1,24 @@
+BRES CLÉS V2.28 TEST — CHECKPOINT R167
+
+Statut : CHECKPOINT DE TEST, non promu stable.
+
+Objectif : verrouiller une décision QA2 sur le contexte exact qui l'a produite afin qu'un résultat ne puisse plus être publié si les photos, le cycle OCR, la base étalon, l'époque d'identification ou la signature géométrique ont changé entre la preuve et la publication.
+
+R167 ajoute un sceau de contexte QA2. À l'ouverture d'un cycle de décision, le sceau capture l'époque d'identification, l'époque des photos principales, le cycle OCR, l'époque de la base étalon et une empreinte de la signature géométrique. La preuve indépendante R161, l'audit R164 et le reçu R165 reçoivent la même clé de contexte. Le garde R166 refuse désormais la publication si le sceau n'est plus courant ou si une des étapes de la chaîne porte une autre clé.
+
+Le diagnostic exporté inclut maintenant explicitement le cycle QA2, le sceau de contexte et le garde de chaîne ; au moment de l'export, les états QA2 sont resynchronisés afin que le fichier reflète la décision réellement visible.
+
+Validation locale :
+- test spécifique R167 : 14 scénarios PASS ;
+- régression Python complète : 104/104 PASS ;
+- verify_build.py : PASS, aucune erreur ;
+- catalogue applicatif : 5103 références / 5103 uniques ;
+- 10/10 blocs catalogue strictement identiques à R166.
+
+Conservation :
+- V2.27 reste la version stable sur main ;
+- V2.28 R167 reste une version de test séparée ;
+- aucun seuil de décision catalogue/OCR n'a été modifié ;
+- aucune donnée catalogue n'a été modifiée.
+
+Sauvegarde GitHub : branche v2.28-test-r167, dossier checkpoints/R167.
