@@ -1,0 +1,14 @@
+BRES CLES V2.28 — CHECKPOINT R181
+
+- V2.27 reste la version stable séparée et n’est pas remplacée.
+- Le moteur applicatif testé reste V2.28 TEST R156 ; R181 est le numéro de checkpoint/paquet.
+- R181 rend le chargement des photos principales natives transactionnel : un fichier n’entre dans l’état actif qu’après décodage image réussi.
+- Un fichier principal illisible conserve la dernière photo valide et ne déclenche aucune invalidation de géométrie/OCR/QA2.
+- L’ouverture d’un nouveau sélecteur incrémente immédiatement l’epoch principal ou tête : une ancienne sélection encore en décodage ne peut plus gagner après un second essai, même si ce second sélecteur est annulé.
+- Une ouverture de caméra guidée rend également obsolète un décodage natif principal plus ancien de la même face.
+- Les protections R178/R179/R180 restent actives.
+- Tous les exports utilisateur portent R181 ; version moteur = V2.28 TEST R156.
+- Aucun seuil OCR n’est modifié : 0,70 / 0,88.
+- Aucun des 10 blocs catalogue canoniques n’est modifié.
+- Snapshot complet vérifié : Library /BRES Cles/Sauvegardes/BRES_Cles_Mobile_V2_28_CHECKPOINT_R181.zip
+- SHA-256 du ZIP : f9453909f15dea839cb2b8cd8cda478fe8b6b0d586c8d8cbfdf3e8af2be4ca67
