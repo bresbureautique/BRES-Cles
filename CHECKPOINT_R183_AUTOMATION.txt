@@ -1,0 +1,13 @@
+BRES CLES V2.28 - CHECKPOINT R183
+Stable line: V2.27 remains on main and is not replaced.
+Runtime tested: V2.28 TEST R156
+App ZIP SHA-256: 1e3e32ead7fb0d78f61750742b9e2de6ac344baa47e904b5527d223420950fe9
+index.html SHA-256: 518cf8882f40352ca2308d75b8ed36a2e4de88cd5e72cd7c8ce7f67859dfd478
+v228-catalogue.js SHA-256: a30fdfc19ce6980027f4fce880949ec58d82b7446156e7378868974223ff9652
+verify_build.py: PASS, 105/105 tests
+R183 capture-series guard: PASS, 13/13 checks
+Catalogue count: 5103 / 5103 unique
+Canonical catalogue chunks: 10/10 unchanged
+OCR thresholds: 0.70 / 0.88 unchanged
+Library snapshot byte-compare: PASS
+R183 change: starting a new OCR multi-capture series invalidates any in-flight OCR request from the prior series and clears stale diagnostic export; diagnostic seal now binds captureSeriesActive and captureSeriesId.
