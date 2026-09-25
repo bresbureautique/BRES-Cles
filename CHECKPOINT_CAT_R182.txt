@@ -1,0 +1,8 @@
+BRES Cles catalogue CAT-R182
+Parent: CAT-R181
+Canonical catalogue unchanged.
+5103 references / 5103 unique.
+Protected blank profiles: CH9T, CH17T, HCT1R, BIL1T.
+Protected collisions: RO4/RO45 and VAC151/VAC151SM.
+Audit checks: 9/9 PASS.
+ZIP SHA-256: 38707ab5562afffa08a2e3338bc72b571a988bd50c4ec10b43b115232383b865
