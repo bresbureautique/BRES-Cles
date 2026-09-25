@@ -1,0 +1,17 @@
+{
+  "schema": "bres-mobile-photo-recovery-guard-v1",
+  "milestone": "V2.28 CHECKPOINT R177",
+  "runtime": "V2.28 TEST R156",
+  "checks": {
+    "fallback_state_declared": true,
+    "router_consumes_one_shot": true,
+    "guided_failure_arms_fallback": true,
+    "native_picker_not_called_from_async_catch": true,
+    "decode_error_releases_object_url": true,
+    "decode_success_releases_object_url": true,
+    "router_runtime_one_shot": true,
+    "decode_runtime_cleanup_both_paths": true
+  },
+  "errors": [],
+  "ok": true
+}
