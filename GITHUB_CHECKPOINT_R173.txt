@@ -1,0 +1,7 @@
+BRES Cles V2.28 TEST R173
+Status: test checkpoint only.
+Base: v2.28-test-r172.
+ZIP SHA256: 9044c859f9ac16aafa2a8dd428e330c58c0b2a71139c8530549e574ea827271c
+Regression: 96/96 PASS.
+Catalogue: 5103/5103, 10/10 chunks unchanged.
+V2.27 stable main must remain at 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8.
