@@ -1,0 +1,10 @@
+R174 to R175 traceability change specification
+
+- Preserve internal runtime identifier V2.28 TEST R156.
+- Add visible checkpoint label R175 and preserve V2.27 stable notice.
+- Replace the four historical R116 suffixes used only in local export filenames with R175 checkpoint suffixes.
+- Update regression guards so they follow the current R171 fresh-cycle wrapper rather than obsolete direct-call markers.
+- Keep all 10 canonical catalogue data blocks unchanged.
+- No OCR threshold or recognition algorithm change in R175.
+
+The full tested snapshot is archived in Library; R175_SOURCE_MANIFEST.sha256 makes that snapshot independently checkable against this GitHub checkpoint.
