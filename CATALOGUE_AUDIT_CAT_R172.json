@@ -1,0 +1,11 @@
+{
+  "milestone": "CAT-R172",
+  "catalogue_references": 5103,
+  "unique_references": 5103,
+  "chunk_count": 10,
+  "blank_profiles": ["CH9T", "CH17T", "HCT1R", "BIL1T"],
+  "residual_clusters": [["RO4", "RO45"], ["VAC151", "VAC151SM"]],
+  "catalogue_data_modified": false,
+  "checks_ok": true,
+  "library_zip_sha256": "6cc674e45f8273ec3494ace02416a213149a5ca43fe5530270258a1dd7ce4302"
+}
