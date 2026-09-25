@@ -1,0 +1,26 @@
+BRES CLÉS V2.28 TEST — CHECKPOINT R168
+
+Statut : CHECKPOINT DE TEST, non promu stable.
+
+Base : R167 (sceau de contexte QA2) conservée intégralement.
+
+Objectif : rendre les remises à zéro QA2 explicites et auditables. Lorsqu'un changement invalide la décision (photo, OCR, référence, base ou contexte), R168 mémorise le cycle et le sceau R167 qui viennent d'être fermés. Cette trace ne devient pertinente qu'au premier cycle propre suivant, et seulement si l'identifiant du cycle ET la clé du nouveau sceau de contexte R167 correspondent. Elle n'est jamais réutilisée sur les cycles ultérieurs.
+
+Le diagnostic exporté expose uniquement la remise à zéro pertinente au contexte courant. L'écran de validation indique qu'un nouveau contexte vérifié a été ouvert après la remise à zéro.
+
+Validation locale :
+- test spécifique R168 : 15/15 scénarios PASS ;
+- régression Python complète : 105/105 PASS ;
+- verify_build.py : PASS, aucune erreur ;
+- catalogue applicatif : 5103 références / 5103 uniques ;
+- 10/10 blocs catalogue strictement identiques à R167 ;
+- aucun seuil de décision modifié.
+
+Conservation :
+- V2.27 reste la version stable sur main ;
+- R168 reste une version de test séparée ;
+- R167 est conservée comme jalon précédent ;
+- le catalogue reste séparé et inchangé.
+
+Snapshot complet : BRES_Cles_Mobile_V2_28_TEST_R168.zip
+SHA-256 : 8f0a39a2c0c93e8d571ce2f8eba22f3e01e64d91726c8b948e349998cb26dafc
