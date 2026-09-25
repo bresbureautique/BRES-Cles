@@ -1,0 +1,11 @@
+BRES CLÉS V2.28 TEST — CHECKPOINT R166
+
+Statut : CHECKPOINT DE TEST, non promu stable.
+
+Objectif : isoler chaque tentative de décision QA2 dans un cycle explicite afin qu’aucune preuve, aucun audit ni aucun reçu final ne puisse être réutilisé après une nouvelle tentative, une invalidation ou un changement d’identification.
+
+R166 ajoute un identifiant de cycle de décision QA2. Les chaînes de validation concernées par une collision catalogue doivent désormais présenter le même cycle dans la preuve indépendante, l’audit de cohérence et le reçu final. Toute incohérence de cycle, de référence, de source ou de statut bloque la validation avant publication.
+
+Une nouvelle lecture OCR principale ou de tête ouvre un nouveau cycle. Une vérification manuelle ouvre également son propre cycle. Les invalidations d’identification ferment la chaîne courante. Le diagnostic exporté reçoit le cycle courant et le garde de chaîne, et l’écran affiche la session QA2 lorsque la chaîne est cohérente.
+
+Conservation : V2.27 reste stable ; V2.28 reste une version de test séparée ; aucun seuil de décision n’a été modifié ; les 10 blocs catalogue restent strictement inchangés par rapport à R165.
