@@ -4,8 +4,10 @@ Catalogue audit kept separate from V2.28 development.
 - 5103 references / 5103 unique.
 - 10/10 canonical catalogue blocks byte-identical to R174.
 - No canonical catalogue data changed in this checkpoint.
-- Uncertain entries remain protected pending stronger evidence.
+- CH9T and CH17T were corroborated by catalogue pages, without deriving any internal profile signature.
+- BIL1T was visually confirmed in the Silca Futura Auto tubular-key page, without deriving any internal profile signature.
+- HCT1R remains protected; no new source was accepted in CAT-R175 because the available PDF could not be visually verified during this checkpoint.
 - Audit ZIP verified after Library round-trip.
 
 ZIP SHA-256:
-0a80b09f093fd599a47dab54ba61732111cd8785ec6335437117f7938989fc84  BRES_Cles_Catalogue_Audit_CAT_R175.zip
+d441ca3cb416d43f329f6a87032ac1eb7e261883d360eee7cbc7943b257bbe58  BRES_Cles_Catalogue_Audit_CAT_R175.zip
