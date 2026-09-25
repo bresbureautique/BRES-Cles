@@ -1,0 +1,26 @@
+{
+  "milestone": "R164",
+  "new_guard_pass": true,
+  "new_guard_scenarios": 11,
+  "python_tests": {
+    "count": 101,
+    "run": 101,
+    "pass": 101,
+    "fail": 0,
+    "missing": [],
+    "failures": [],
+    "mode": "bounded batches, 4 workers; catalogue namespace prerequisite first"
+  },
+  "javascript_inline_syntax_ok": true,
+  "javascript_wrapper_syntax_ok": true,
+  "catalogue_chunks_identical_to_r163": true,
+  "catalogue_chunks": 10,
+  "catalogue_count_expected": 5103,
+  "catalogue_unique_expected": 5103,
+  "ok": true,
+  "catalogue_count_actual": 5103,
+  "catalogue_unique_actual": 5103,
+  "verify_build_ok": true,
+  "verify_build_regression_tests": 91,
+  "verify_build_errors": []
+}

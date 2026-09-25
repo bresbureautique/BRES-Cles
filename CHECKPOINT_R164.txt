@@ -1,0 +1,11 @@
+BRES CLÉS V2.28 TEST — CHECKPOINT R164
+
+Statut : CHECKPOINT DE TEST, non promu stable.
+
+Objectif : garantir la cohérence entre la décision finale QA2 affichée, la preuve indépendante courante et le diagnostic exporté.
+
+R164 ajoute un audit de décision QA2 lié à l’époque d’identification. Une validation QA2 n’est publiable que si une preuve indépendante courante existe, vise exactement la même référence et satisfait le garde QA2. À l’inverse, un état bloqué/pending ne doit pas conserver une preuve active. L’audit courant est synchronisé dans l’export diagnostic et dans son résumé humain ; une trace ou un audit devenu ancien par changement d’époque est exclu.
+
+Les voies OCR principale, OCR de tête et saisie manuelle passent par ce garde avant publication d’une validation QA2. Les ambiguïtés QA2 enregistrent explicitement un état bloqué.
+
+Conservation : V2.27 reste stable ; V2.28 reste sur sa branche de test ; les seuils de décision et les 10 blocs catalogue ne sont pas modifiés.

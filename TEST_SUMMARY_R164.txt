@@ -1,0 +1,12 @@
+BRES CLÉS V2.28 TEST — TEST SUMMARY R164
+
+- Nouveau garde cohérence décision/preuve/export QA2 : PASS (11 scénarios)
+- JavaScript inline : PASS
+- Wrapper catalogue JavaScript : PASS
+- Tests Python : 101/101 PASS
+- verify_build.py : PASS (91 suites internes)
+- 10 blocs catalogue identiques à R163 : PASS
+- Catalogue applicatif attendu : 5103 références / 5103 uniques (inchangé par R164)
+- V2.27 stable non modifiée.
+
+Décision : R164 est un checkpoint V2.28 testé, non promu stable.
