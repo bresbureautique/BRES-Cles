@@ -1,0 +1,23 @@
+BRES CLÉS V2.28 TEST — CHECKPOINT R172
+
+Statut : CHECKPOINT DE TEST, non promu stable.
+
+Base : R171 conservée.
+
+Correction : les changements de contexte non photographiques ferment désormais la chaîne QA2 avant de rendre indisponible l'ancien export diagnostic OCR. Sont couverts : modification de la référence manuelle, modification de la marque manuelle, effacement de la saisie et modification/import de la base étalon locale.
+
+Ordre protégé :
+1. la décision/chaîne QA2 courante est invalidée ;
+2. la remise à zéro R168 capture le contexte fermé ;
+3. seulement ensuite, l'ancien diagnostic OCR est effacé et son bouton d'export désactivé ;
+4. la trace R168 reste disponible pour être liée au premier cycle propre suivant.
+
+Aucun seuil OCR, score, règle de décision ou donnée catalogue n'est modifié.
+
+Validation ciblée :
+- garde R172 contexte manuel/base locale : PASS ;
+- garde R171 nouvelle lecture OCR : PASS ;
+- gardes R170/R169/R168 : conservées ;
+- tests historiques d'invalidation adaptés sans affaiblir le contrat : les chemins R172 doivent toujours atteindre invalidateIdentificationOutputs avant l'effacement du diagnostic.
+
+V2.27 reste stable sur main ; R172 demeure uniquement une version de test.
