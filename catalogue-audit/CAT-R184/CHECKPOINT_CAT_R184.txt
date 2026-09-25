@@ -1,0 +1,7 @@
+BRES CLES CATALOGUE - CAT-R184
+Parent: CAT-R183
+Canonical catalogue modified: NO
+Count: 5103 / unique: 5103
+Protected blank profiles: CH9T, CH17T, HCT1R, BIL1T
+Protected collisions: RO4/RO45 and VAC151/VAC151SM
+All CAT-R184 audit checks: PASS
