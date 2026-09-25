@@ -1,0 +1,14 @@
+{
+  "schema": "bres-v228-r171-full-verification-v2",
+  "milestone": "R171",
+  "status": "checkpoint-test-not-stable",
+  "targeted_r171_guard_ok": true,
+  "final_regression_recheck_ok": true,
+  "test_count": 93,
+  "tests_passed": 93,
+  "tests_failed": 0,
+  "catalogue_references": 5103,
+  "catalogue_unique_references": 5103,
+  "catalogue_chunks_identical_to_r170": true,
+  "v227_stable_main_commit": "9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8"
+}
