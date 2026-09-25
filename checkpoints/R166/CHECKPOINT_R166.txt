@@ -8,4 +8,16 @@ R166 ajoute un identifiant de cycle de décision QA2. Les chaînes de validation
 
 Une nouvelle lecture OCR principale ou de tête ouvre un nouveau cycle. Une vérification manuelle ouvre également son propre cycle. Les invalidations d’identification ferment la chaîne courante. Le diagnostic exporté reçoit le cycle courant et le garde de chaîne, et l’écran affiche la session QA2 lorsque la chaîne est cohérente.
 
+VERIFICATION R166 :
+- garde cycle QA2 : 13/13 PASS
+- tests Python : 103/103 PASS
+- verify_build : 91/91 PASS
+- catalogue : 5103 références / 5103 uniques
+- blocs catalogue : 10/10 identiques à R165
+- index.html SHA-256 : 5527d42322215477ac7df6e6ffd6926ffcf69b234a9a7e906874894e8a827580
+- feature R166 SHA-256 : 00a3e3edd280c2f6e0af25bcf7c4a8d50b14cddf6d968a07c5e18407dc16deb7
+- test R166 SHA-256 : 3b22ed8187fb7e79f9a477ed9d24b82980005ee8021c06e77e4f353dea0e8b40
+- patch R165->R166 SHA-256 : 231105668fea035e9bcd4a89b356900210e69fd5eb476b7711a4572e8fc22cec
+- ZIP BRES_Cles_Mobile_V2_28_TEST_R166.zip SHA-256 : 3a2f37c4650e884a8e11ab820c3bc012e7f7778d8fd5be51e5b731d36141cddd
+
 Conservation : V2.27 reste stable ; V2.28 reste une version de test séparée ; aucun seuil de décision n’a été modifié ; les 10 blocs catalogue restent strictement inchangés par rapport à R165.
