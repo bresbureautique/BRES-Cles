@@ -1,0 +1,12 @@
+BRES CLES V2.28 — CHECKPOINT R185
+
+- V2.27 reste la version stable séparée et n’est pas remplacée.
+- Le moteur applicatif testé reste V2.28 TEST R156 ; R185 est le numéro de checkpoint/paquet.
+- R185 ajoute une clôture explicite de la série OCR multi-prises : le bouton « Terminer la série » annule toute lecture OCR encore en vol et remet à zéro uniquement les états diagnostiques de série.
+- La chaîne QA2 de l’identification courante est volontairement conservée : terminer une série de diagnostic ne change ni les photos ni l’identification active.
+- Un test physique TE8D / TE8I actif est fermé en même temps que la série afin qu’il ne puisse pas contaminer la série suivante.
+- Les deux gardes historiques d’export/récupération locale ont été rendues indépendantes du numéro de checkpoint ; elles vérifient désormais le motif de nom de fichier au lieu d’attendre R183, ce qui répare la régression du runner complet observée sur R184.
+- Tous les exports utilisateur portent R185 et les diagnostics conservent version=V2.28 TEST R156 pour distinguer moteur et paquet.
+- Aucun seuil OCR n’est modifié : 0,70 / 0,88.
+- Aucun des 10 blocs catalogue canoniques n’est modifié.
+- Le jalon est considéré terminé uniquement après régression complète, vérification ZIP, checksum et sauvegardes séparées.
