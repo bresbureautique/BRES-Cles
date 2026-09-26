@@ -1,0 +1,9 @@
+BRES CLES V2.28 — CHECKPOINT R190
+
+- Parent : CHECKPOINT R189.
+- V2.27 reste la version stable et n'est pas remplacée.
+- Le moteur applicatif testé reste V2.28 TEST R156 ; R190 est le numéro de checkpoint/paquet.
+- R190 rend la clôture d'une série OCR multi-prises idempotente : une seconde commande « Terminer la série » reçue après la clôture ne peut plus annuler une lecture OCR individuelle démarrée juste après ni effacer son diagnostic.
+- La première clôture conserve son comportement : annulation des lectures de l'ancienne série, remise à zéro des états propres à la série et réarmement des contrôles, sans effacer la chaîne QA2 de l'identification courante.
+- Catalogue canonique inchangé : 5103 références / 5103 uniques ; 10/10 blocs inchangés.
+- Tous les exports utilisateur portent R190 et les diagnostics conservent version=V2.28 TEST R156 pour distinguer moteur et paquet.
