@@ -1,0 +1,10 @@
+BRES CLES V2.28 — CHECKPOINT R195
+
+- Parent : CHECKPOINT R194.
+- V2.27 reste la version stable et n'est pas remplacée.
+- Le moteur applicatif testé reste V2.28 TEST R156 ; R195 est le numéro de checkpoint/paquet.
+- R195 ajoute une propriété explicite de la progression OCR : une lecture principale ne peut publier que dans le statut principal et une lecture de tête uniquement dans le statut tête.
+- Les progressions tardives restent bloquées par l’identifiant de requête et l’époque d’identification ; le contrôle de source ajoute une défense contre une destination de statut erronée.
+- Le texte visible du checkpoint et tous les exports utilisateur sont alignés sur R195.
+- Aucun seuil OCR, algorithme de décision, chaîne QA2, logique caméra/import ou donnée catalogue canonique n’est modifié.
+- Catalogue canonique inchangé : 5103 références / 5103 uniques ; 10/10 blocs inchangés.
