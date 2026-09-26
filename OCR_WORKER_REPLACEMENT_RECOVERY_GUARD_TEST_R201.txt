@@ -1,0 +1,4 @@
+BRES CLES — REPRISE APRES REMPLACEMENT WORKER OCR R201
+RESULTAT: PASS
+17/17 controles statiques et comportementaux PASS.
+Scenarios valides: rejet tardif d'un ancien worker apres reset; succes tardif d'un ancien worker ignore; reprise sur le worker courant dans le meme budget; nouveau userJobId par tentative; protections R195-R200 conservees; moteur V2.28 TEST R156 et seuils OCR 0,70/0,88 inchanges.
