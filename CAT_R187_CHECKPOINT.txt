@@ -1,0 +1,8 @@
+BRES CLES CATALOGUE CAT-R187
+parent=CAT-R186
+canonical_catalogue_modified=NO
+count=5103
+unique=5103
+protected_blank_profiles=CH9T,CH17T,HCT1R,BIL1T
+protected_collisions=RO4/RO45;VAC151/VAC151SM
+all_audit_checks=PASS
