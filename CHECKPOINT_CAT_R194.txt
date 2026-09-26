@@ -1,0 +1,8 @@
+BRES CLES — CATALOGUE CHECKPOINT CAT-R194
+
+Parent: CAT-R193.
+Catalogue canonique non modifie: 5103 references / 5103 uniques.
+Les 10 blocs canoniques sont identiques a CAT-R193.
+Audit normalisation: BK3-4 / BK34 restent separes car namespaces et geometries different.
+Profils non inventes: CH9T, CH17T, HCT1R, BIL1T.
+Collisions protegees: RO4/RO45 et VAC151/VAC151SM.
