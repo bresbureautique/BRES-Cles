@@ -1,0 +1,16 @@
+BRES CLES - AUDIT CATALOGUE CAT-R195
+RESULTAT: PASS
+PASS | count_5103
+PASS | unique_5103
+PASS | canonical_hashes_match_cat_r194
+PASS | exactly_four_blank_profiles
+PASS | protected_refs_present
+PASS | protected_profile_hex_blank
+PASS | casefold_collision_count_zero
+PASS | trimmed_collision_count_zero
+PASS | alnum_collision_group_count_one
+PASS | alnum_collision_is_bk34
+PASS | bk34_namespaces_distinct
+PASS | bk34_geometry_distinct
+PASS | bk34_profile_distinct
+PASS | bk34_dimensions_materially_distinct
