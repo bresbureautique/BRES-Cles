@@ -1,0 +1,13 @@
+BRES CLES V2.28 — CHECKPOINT R196
+
+Parent : CHECKPOINT R195.
+Version stable : V2.27 — inchangée et non remplacée.
+Moteur applicatif : V2.28 TEST R156 — inchangé.
+
+Jalon R196 : protection d'identité de la promesse de worker OCR partagé.
+- Une création Tesseract devenue ancienne après resetSharedOCRWorker() ne peut plus effacer la promesse d'un worker de remplacement si elle échoue plus tard.
+- Le nettoyage sur échec reste actif uniquement si la promesse qui échoue est encore exactement la promesse partagée courante.
+- La terminaison en arrière-plan de l'ancien worker reste inchangée et isolée du nouveau worker.
+- La protection R195 des callbacks de progression par userJobId reste en place.
+- Aucun seuil OCR, aucune règle QA2, aucune logique catalogue et aucune logique caméra/import ne sont modifiés.
+- Tous les exports utilisateur portent le checkpoint R196 ; les données conservent V2.28 TEST R156 comme version moteur.
