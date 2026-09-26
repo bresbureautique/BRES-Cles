@@ -1,0 +1,9 @@
+BRES CLES CATALOGUE — CAT-R208 PROOF
+Parent branch: catalogue-v3-audit-r207-proof
+Canonical references: 5103 / 5103 unique.
+Canonical chunks unchanged: 10/10.
+Compact collision count: 1.
+Collision: BK34 compact key maps to BK3-4 and BK34; maker BKS; systems 40 and 41; distinct geometry signatures.
+Audit: PASS 12/12.
+No automatic merge or canonical catalogue modification.
+CAT-R208 ZIP SHA-256: 7e158541240463b06dd3455bfb77f469ac599ee370402f8f7d26da167da38eff
