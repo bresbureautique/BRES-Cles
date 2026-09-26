@@ -1,0 +1,9 @@
+BRES CLES V2.28 — CHECKPOINT R191
+
+- Parent : CHECKPOINT R190.
+- V2.27 reste la version stable et n'est pas remplacée.
+- Le moteur applicatif testé reste V2.28 TEST R156 ; R191 est le numéro de checkpoint/paquet.
+- R191 neutralise ensemble les deux comptes rendus OCR visibles dès qu'une photo principale ou une photo de tête est modifiée. Un résultat OCR appartenant à l'ancien contexte physique ne peut donc plus rester affiché à côté de nouvelles photos et être pris pour leur lecture.
+- L'invalidation conserve les saisies manuelles et la logique QA2 existante ; elle rend seulement les comptes rendus OCR visuels obsolètes et l'identification précédente reste invalidée comme avant.
+- Catalogue canonique inchangé : 5103 références / 5103 uniques ; 10/10 blocs inchangés.
+- Tous les exports utilisateur portent R191 et les diagnostics conservent version=V2.28 TEST R156 pour distinguer moteur et paquet.
