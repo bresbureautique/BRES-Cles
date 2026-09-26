@@ -1,0 +1,13 @@
+BRES CLES CAT-R203 PROOF
+Parent CAT-R202: abeabfd08b722dc351c493094fe031bd687e62f4
+Associated app checkpoint: R203
+Catalogue ZIP SHA256: 2eac6f47fdcbb5b5f33355bdba60577d9732950e94f7c2c18d3fdd3d8de780a0
+Library roundtrip: byte-for-byte PASS; ZIP integrity PASS.
+Audit: 13/13 PASS.
+Catalogue: 5103 references / 5103 unique.
+Canonical catalogue: unchanged, 10/10 chunk hashes unchanged.
+Six strong geometry-signature groups remain unmerged.
+VAC151/VAC151SM and RO4/RO45 remain separate.
+CH9T, CH17T, HCT1R, BIL1T remain unchanged.
+CATALOGUE_INTERNAL_AUDIT_CAT_R203.json SHA256 d95de55189cea05a4fcd5015f19475d106fa44c59b2a4cd1de7aa26e80716ac5
+catalogue_audit_cat_r203.py SHA256 c58848467fd47a64198fd0c27ff0e40bb34e9f11585a1ed31793b067f3b7cb7e
