@@ -1,0 +1,17 @@
+BRES CLES V2.28 — VERIFICATION CHECKPOINT R199
+
+RESULTAT CIBLE: PASS
+- Garde scellement retours OCR tardifs R199 : 16/16 PASS.
+- Alignement checkpoint paquet : 15/15 PASS.
+- Traçabilité checkpoint : 13/13 PASS.
+- Cohérence version active : PASS.
+- Garde budget initialisation worker OCR : PASS.
+- Garde latence OCR : PASS.
+- Syntaxe JavaScript inline : PASS (2 blocs).
+- Syntaxe v228-catalogue.js : PASS.
+- Moteur conservé : V2.28 TEST R156.
+- Seuils OCR conservés : 0,70 / 0,88.
+- Stable : V2.27 non remplacée.
+- Catalogue : traité séparément dans CAT-R199 ; 14/14 PASS ; 10/10 blocs canoniques inchangés.
+
+NOTE : ce jalon est validé sur le périmètre modifié et les régressions adjacentes. Le méga-runner historique n’est pas compté comme un PASS global pour R199.
