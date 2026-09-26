@@ -1,0 +1,8 @@
+CAT-R192 audit verification
+Result: PASS 11/11
+Catalogue: 5103 refs / 5103 unique
+Canonical chunks changed: NO (10/10 match CAT-R191)
+Blank profiles: CH9T, CH17T, HCT1R, BIL1T
+Protected collisions: RO4/RO45 ; VAC151/VAC151SM
+Known full duplicate group: VAC151/VAC151SM
+No canonical enrichment without certain reference.
