@@ -1,0 +1,2 @@
+package_sha256=96d22732d7a87c5fad3ff8d9f30fc0e9a27890c04c55a396fd948c3c3a41a0a9
+catalogue_chunks_identical_to_CAT_R186=YES
