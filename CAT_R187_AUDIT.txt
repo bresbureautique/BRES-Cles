@@ -1,0 +1,1 @@
+CAT-R187 audit PASS. 5103 references / 5103 unique. 10 canonical chunk hashes unchanged. Four blank profiles remain protected: CH9T, CH17T, HCT1R, BIL1T. Residual shape/profile collisions remain RO4/RO45 and VAC151/VAC151SM. VAC151/VAC151SM remains the only full duplicate group. No canonical field changed by assumption.
