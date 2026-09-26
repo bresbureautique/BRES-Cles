@@ -1,15 +1,16 @@
-BRES CLÉS V2.28 — VÉRIFICATION CHECKPOINT R194
+BRES CLES V2.28 — VERIFIED CHECKPOINT R194
 
-RESULTAT: PASS
-Parent: CHECKPOINT R193
-Version stable: V2.27 — inchangée, non remplacée
-Moteur applicatif: V2.28 TEST R156
-Checkpoint paquet: R194
-Correction: alignement de tous les exports utilisateur sur le checkpoint R194 ; les exports profil/calibration encore étiquetés R192 dans le paquet R193 sont corrigés.
-Nouvelle garde: package_checkpoint_alignment_guard_test.py bloque toute dérive future entre interface, exports et documentation.
-Régression verify_build.py: 116/116 PASS, errors=[]
-Tous scripts top-level *_test.py: 130/130 PASS
-Catalogue applicatif: 5103 références / 5103 uniques
-Catalogue canonique: 10/10 blocs inchangés
-Seuils OCR: 0,70 / 0,88 inchangés
-Algorithme OCR / décision / QA2 / caméra-import: non modifiés par R194
+PASS
+Parent: R193
+Stable: V2.27 unchanged
+Runtime engine: V2.28 TEST R156
+Package checkpoint: R194
+Correction: all user export labels are aligned on R194, including profile and calibration exports.
+verify_build.py: 116/116 PASS, errors=[]
+package checkpoint alignment guard: 15/15 PASS
+checkpoint traceability guard: 13/13 PASS
+Catalogue: 5103 references / 5103 unique; 10/10 canonical blocks unchanged
+OCR thresholds 0.70 / 0.88 unchanged
+OCR decision / QA2 / camera-import logic unchanged
+The exact verified package is stored in Library/BRES Cles/Sauvegardes.
+R194_ARCHIVE_SHA256.txt is the authoritative archive checksum. Any earlier per-file hash list on this branch is superseded by the exact Library snapshot verification.
