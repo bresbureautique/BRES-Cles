@@ -1,0 +1,11 @@
+BRES CLES CATALOGUE CAT-R205
+Parent: catalogue-v3-audit-r204-proof
+Canonical catalogue modified: NO
+References: 5103
+Unique references: 5103
+Audit: 15/15 PASS
+ZIP SHA-256: c45bb1757115279e9fc14aacbae9f740b5b240753131589ef73205d9980e9056
+CATALOGUE_INTERNAL_AUDIT_CAT_R205.json SHA-256: 37cd68b147b80ed66361f701f2e51c2836ad378e4aca1ad918ba5a9d9c7a6dee
+Suffix/base audit SHA-256: b4a9a403e2d41c004d6eeedae011455813714c0f77750705b111ed06d840e6a0
+Chunk-hash evidence SHA-256: 7f8d6c94d0532bad79304d4a29befb2ed530ca1d4ef3aceb7a13fd797e943bcf
+Findings: 758 base/R pairs all distinct; 659 base/final-digit pairs all distinct; SM/SM2/SMD/SMS preserved; VAC151 and VAC151SM remain separate pending certain external proof.
