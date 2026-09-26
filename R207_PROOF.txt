@@ -1,0 +1,1 @@
+R207 checkpoint proof. Stable V2.27 unchanged. Artifact SHA256 fbf5e865403cfea27bd7ac3567fa0d876b79286ab0d8b297ed4d10afcef2ae98. Verification PASS.
