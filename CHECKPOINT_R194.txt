@@ -1,0 +1,10 @@
+BRES CLES V2.28 — CHECKPOINT R194
+
+- Parent : CHECKPOINT R193.
+- V2.27 reste la version stable et n'est pas remplacée.
+- Le moteur applicatif testé reste V2.28 TEST R156 ; R194 est le numéro de checkpoint/paquet.
+- R194 corrige uniquement la traçabilité du paquet : les exports OCR, base locale, profil et calibration portent maintenant tous le même checkpoint R194.
+- Le paquet R193 annonçait R193 dans l’interface mais les exports profil/calibration étaient encore étiquetés R192 ; ce décalage est supprimé.
+- Une nouvelle garde automatique vérifie désormais l’alignement du checkpoint entre interface, exports et documentation.
+- Aucun seuil OCR, algorithme de décision, chaîne QA2, logique caméra/import ou donnée catalogue n’est modifié.
+- Catalogue canonique inchangé : 5103 références / 5103 uniques ; 10/10 blocs inchangés.
