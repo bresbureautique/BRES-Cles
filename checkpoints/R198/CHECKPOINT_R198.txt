@@ -1,0 +1,14 @@
+BRES CLES V2.28 — CHECKPOINT R198
+
+Parent : CHECKPOINT R197.
+Version stable : V2.27 — inchangée et non remplacée.
+Moteur applicatif : V2.28 TEST R156 — inchangé.
+
+Jalon R198 : annulation explicite de l’acquisition du worker OCR après timeout.
+- Une passe OCR expirée transmet désormais son état d’annulation à getSharedOCRWorker().
+- L’acquisition vérifie l’annulation avant de créer un worker, après chaque await et avant toute nouvelle boucle d’acquisition.
+- Une ancienne passe timeoutée dont la promesse se résout après resetSharedOCRWorker() s’arrête sans créer ni attendre le worker de remplacement.
+- Une nouvelle passe non annulée peut créer/rejoindre le worker courant normalement.
+- Les protections R195 (progression par userJobId), R196 (rejet tardif d’une ancienne création) et R197 (identité de la promesse/worker courant) restent actives.
+- Aucun seuil OCR, aucune règle QA2, aucune logique catalogue et aucune logique caméra/import ne sont modifiés.
+- Tous les exports utilisateur portent le checkpoint R198 ; les données conservent V2.28 TEST R156 comme version moteur.
