@@ -1,0 +1,7 @@
+BRES CLES — CHECKPOINT CATALOGUE CAT-R209
+
+Parent : CAT-R208.
+Catalogue canonique : inchangé.
+Références : 5103 / 5103 uniques.
+
+Jalon : validation du départage géométrique prudent de l'unique collision OCR compacte BK3-4 / BK34. Les deux références restent distinctes. Résolution automatique seulement avec score minimum 78 et marge minimum 10 ; sinon ambiguïté conservée. Aucune fusion ni alias automatique.
