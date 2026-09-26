@@ -1,0 +1,27 @@
+BRES CLES V2.28 — CHECKPOINT R205 PROOF
+Parent branch: v2.28-test-r204-proof
+Stable preserved: V2.27
+Runtime: V2.28 TEST R156
+ZIP SHA-256: 2aafc2db5021970b0efd8dc5f7c41fe42bead958a220cf897dd1d239ce88d088
+
+Verification:
+- traceability: PASS
+- package_alignment: PASS
+- r205_progress_sink_isolation: PASS
+- r205_worker_replacement_regression: PASS
+- version_consistency: PASS
+- worker_setup_budget: PASS
+- ocr_latency: PASS
+- timeout_phase: PASS
+- phase_timing: PASS
+- catalogue_wrapper_js_syntax: PASS
+- inline_js_syntax: PASS
+- catalogue_canonical_hashes: PASS
+
+Key source hashes:
+2b96756e99e605c8179665f72fd5e466a1bdf4c704578229eb939f140169f634  index.html
+7c2693b160aa063146ca290acb5e532b4827cc98ffa43ad00b73067f137b15e1  v228-catalogue.js
+a8b9ced647d746dc62f617cd0260516acedb8e8304dec22ec572b80d77199849  CHECKPOINT.txt
+5cc2be428068b132c335bfe82b078a1373d71040c23d7d72c065d6ef88320062  ocr_progress_sink_isolation_guard_test.py
+3d1edd147eca87768a964e97dabcf731632f360accd0d111d508487761395b09  verify_checkpoint_r205.py
+13b501d28469c53ea685d0a87295c6e8a2992908841f709a6279c486077b7fb6  R205_VERIFICATION.json
