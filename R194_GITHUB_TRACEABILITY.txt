@@ -1,0 +1,18 @@
+BRES CLES — R194 GITHUB / LIBRARY TRACEABILITY
+
+GitHub branch: v2.28-test-r194-verified
+Logical parent: v2.28-test-r193-verified
+Stable main: V2.27, not replaced.
+
+Authoritative exact snapshot:
+Library/BRES Cles/Sauvegardes/BRES_Cles_Mobile_V2_28_CHECKPOINT_R194.zip
+Its authoritative checksum is recorded in R194_ARCHIVE_SHA256.txt.
+The Library copy was rematerialized and compared byte-for-byte with the built archive: PASS.
+
+Fresh-extraction verification:
+- verify_build.py: 116/116 PASS
+- package checkpoint alignment: 15/15 PASS
+- checkpoint traceability: 13/13 PASS
+- catalogue: 5103 references / 5103 unique, 10/10 canonical blocks unchanged
+
+Important correction: the first R194 GitHub metadata was created before the final package rebuild. R194_ARCHIVE_SHA256.txt and R194_VERIFICATION.txt now supersede that incomplete metadata. The exact source of record is the verified Library ZIP.
