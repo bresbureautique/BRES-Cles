@@ -1,0 +1,9 @@
+CAT-R198
+Parent: CAT-R197
+Catalogue unchanged: 5103 references / 5103 unique.
+Canonical chunks unchanged: 10/10.
+OCR-basic normalization audit: 61 groups / 124 references.
+KFI/KFL/KF1 remain separate; geometry differs.
+Protected pairs remain separate: RO4/RO45, VAC151/VAC151SM, BK3-4/BK34.
+Blank profiles preserved: CH9T, CH17T, HCT1R, BIL1T.
+No canonical data changed.
