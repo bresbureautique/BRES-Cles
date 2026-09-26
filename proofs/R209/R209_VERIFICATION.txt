@@ -1,0 +1,22 @@
+BRES CLES V2.28 — VERIFICATION CHECKPOINT R209
+
+RESULTAT CIBLE: PASS
+- traceability: PASS
+- package_alignment: PASS
+- r209_geometry_disambiguation: PASS
+- r209_compact_collision: PASS
+- r209_suffix_reconstruction: PASS
+- r209_progress_sink_quarantine_regression: PASS
+- r209_worker_replacement_regression: PASS
+- candidate_reconstruction: PASS
+- version_consistency: PASS
+- worker_setup_budget: PASS
+- ocr_latency: PASS
+- timeout_phase: PASS
+- phase_timing: PASS
+- catalogue_wrapper_js_syntax: PASS
+- inline_js_syntax: PASS
+- catalogue_canonical_hashes: PASS
+
+ZIP SHA-256: 4d28565103b52a05f8e1500114d595a60d048d2da6bb14d5cf4d0f167ffdb503
+Stable V2.27 non remplacée.
