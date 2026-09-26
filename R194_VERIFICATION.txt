@@ -1,0 +1,16 @@
+BRES CLES V2.28 — VERIFIED CHECKPOINT R194
+
+PASS
+Parent: R193
+Stable: V2.27 unchanged
+Runtime engine: V2.28 TEST R156
+Package checkpoint: R194
+verify_build.py: 116/116 PASS, errors=[]
+package checkpoint alignment guard: 15/15 PASS
+checkpoint traceability guard: 13/13 PASS
+Catalogue: 5103 references / 5103 unique; 10/10 canonical blocks unchanged
+OCR thresholds 0.70 / 0.88 unchanged
+OCR decision / QA2 / camera-import logic unchanged
+Exact package: Library/BRES Cles/Sauvegardes/BRES_Cles_Mobile_V2_28_CHECKPOINT_R194.zip
+Checksum sidecar: Library/BRES Cles/Sauvegardes/BRES_Cles_Mobile_V2_28_CHECKPOINT_R194.zip.sha256
+Library copy rematerialized and compared byte-for-byte with the built archive: PASS.
