@@ -1,0 +1,12 @@
+BRES CLÉS — VERIFICATION CHECKPOINT R191
+RESULTAT: PASS
+Parent: CHECKPOINT R190
+Version stable: V2.27 — inchangée, non remplacée
+Moteur applicatif: V2.28 TEST R156
+Checkpoint paquet: R191
+Correction: toute modification d'une photo principale ou d'une photo de tête neutralise ensemble les deux comptes rendus OCR visibles afin qu'aucun ancien résultat ne reste affiché à côté de nouvelles images.
+Régression complète: 113/113 tests PASS
+Catalogue applicatif: 5103 références / 5103 uniques
+Catalogue canonique: 10/10 blocs inchangés
+Seuils OCR: 0,70 / 0,88 inchangés
+verify_build.py: PASS, errors=[]
