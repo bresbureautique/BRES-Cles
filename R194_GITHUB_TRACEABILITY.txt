@@ -15,4 +15,4 @@ Fresh-extraction verification:
 - checkpoint traceability: 13/13 PASS
 - catalogue: 5103 references / 5103 unique, 10/10 canonical blocks unchanged
 
-Important correction: the first R194 GitHub metadata was created before the final package rebuild. R194_ARCHIVE_SHA256.txt and R194_VERIFICATION.txt now supersede that incomplete metadata. The exact source of record is the verified Library ZIP.
+Important correction: the first R194 GitHub metadata was created before the final package rebuild. R194_ARCHIVE_SHA256.txt and R194_VERIFICATION.txt now supersede that incomplete metadata. The earlier R194_SOURCE_HASHES.txt must not be used as the source of record. The exact source of record is the verified Library ZIP.
