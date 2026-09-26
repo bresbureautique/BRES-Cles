@@ -1,0 +1,9 @@
+BRES CLES V2.28 — CHECKPOINT R189
+
+- Parent : CHECKPOINT R188.
+- V2.27 reste la version stable et n'est pas remplacée.
+- Le moteur applicatif testé reste V2.28 TEST R156 ; R189 est le numéro de checkpoint/paquet.
+- R189 neutralise les comptes rendus OCR visibles lors d'un démarrage ou d'une clôture de série multi-prises, afin qu'un ancien résultat ne puisse pas sembler appartenir à la nouvelle série.
+- L'invalidation concerne l'affichage OCR, l'export diagnostique et la répétabilité ; les champs manuels et la chaîne QA2 de l'identification courante restent intacts jusqu'à la lecture suivante.
+- Catalogue canonique inchangé : 5103 références / 5103 uniques ; 10/10 blocs inchangés.
+- Tous les exports utilisateur portent R189 et les diagnostics conservent version=V2.28 TEST R156 pour distinguer moteur et paquet.
