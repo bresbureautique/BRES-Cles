@@ -1,0 +1,29 @@
+BRES CLES V2.28 - VERIFICATION CHECKPOINT R210
+
+RESULTAT: PASS
+traceability PASS
+package_alignment PASS
+r210_face_agreement PASS
+r210_compact_collision PASS
+r210_suffix_reconstruction PASS
+r210_progress_sink_quarantine_regression PASS
+r210_worker_replacement_regression PASS
+candidate_reconstruction PASS
+version_consistency PASS
+worker_setup_budget PASS
+ocr_latency PASS
+timeout_phase PASS
+phase_timing PASS
+catalogue_wrapper_js_syntax PASS
+inline_js_syntax PASS
+catalogue_canonical_hashes PASS
+
+Moteur V2.28 TEST R156 inchange.
+Seuils OCR 0.70 / 0.88 inchanges.
+V2.27 stable non remplacee.
+Catalogue canonique 10/10 blocs inchanges; audit separe CAT-R210.
+
+ZIP APP SHA-256 b026bab86b86d6e24bc74a8f79964ed7f06c9414a36d852ddd52c387c30375db
+ZIP CAT SHA-256 b0a4e8651db9185f51e04ab84a482b55acde0df573f7a17081760a5257ba9d57
+
+R210 exige l'accord geometrique recto/verso avant de resoudre une collision OCR compacte; une moyenne forte ne peut pas masquer un desaccord entre les deux faces.
