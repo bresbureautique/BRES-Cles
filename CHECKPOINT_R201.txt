@@ -1,0 +1,15 @@
+BRES CLES V2.28 — CHECKPOINT R201
+
+Parent : CHECKPOINT R200.
+Version stable : V2.27 — inchangée et non remplacée.
+Moteur applicatif : V2.28 TEST R156 — inchangé.
+
+Jalon R201 : reprise sûre lorsqu’un worker OCR est remplacé pendant une reconnaissance.
+- Une passe qui a déjà commencé worker.recognize() vérifie désormais que son lease est encore le worker partagé courant avant d’accepter un résultat.
+- Si une autre passe a provoqué un timeout/reset et remplacé ce worker, le rejet ou le succès tardif de l’ancien worker est ignoré comme obsolète.
+- La passe reprend alors l’acquisition sur le worker courant dans le budget de timeout déjà en cours ; aucun budget supplémentaire n’est créé.
+- Chaque tentative de reprise reçoit un nouveau userJobId de progression afin qu’un callback tardif de l’ancien worker ne puisse pas polluer la progression de la reprise.
+- Le diagnostic non décisionnel expose workerReplacementRetries pour rendre ces reprises visibles sans influencer le choix de référence.
+- Les protections R195 à R200 restent actives : isolation de progression, identité création/acquisition, annulation, scellement tardif et propriété conditionnelle du reset.
+- Aucun seuil OCR, aucune règle QA2, aucune logique catalogue et aucune logique caméra/import ne sont modifiés.
+- Tous les exports utilisateur portent le checkpoint R201 ; les données conservent V2.28 TEST R156 comme version moteur.
