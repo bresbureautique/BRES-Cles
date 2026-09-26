@@ -1,0 +1,7 @@
+R208 verification PASS
+15/15 test families passed.
+Compact catalogue collision guard: PASS.
+BK3-4 and BK34 remain ambiguous in compact form and are not auto-resolved.
+Runtime kept at V2.28 TEST R156; OCR thresholds 0.70 / 0.88.
+Canonical catalogue chunks unchanged 10/10.
+Stable V2.27 not modified.
