@@ -1,0 +1,22 @@
+BRES CLES V2.28 — VERIFICATION CHECKPOINT R201
+
+RESULTAT CIBLE: PASS
+- traceability: PASS
+- package_alignment: PASS
+- version_consistency: PASS
+- r201_worker_replacement_recovery: PASS
+- r200_reset_ownership_regression: PASS
+- r199_late_recognition_regression: PASS
+- worker_setup_budget: PASS
+- ocr_latency: PASS
+- timeout_phase: PASS
+- phase_timing: PASS
+- catalogue_wrapper_js_syntax: PASS
+- inline_js_syntax: PASS
+- catalogue_canonical_hashes: PASS
+- Moteur conservé : V2.28 TEST R156.
+- Seuils OCR conservés : 0,70 / 0,88.
+- Stable : V2.27 non remplacée.
+- Catalogue canonique : 10/10 blocs inchangés ; audit séparé CAT-R201.
+
+NOTE : R201 est validé par la garde dédiée, les régressions R199/R200, les contrôles budget/latence/phase et les contrôles de syntaxe/traçabilité.
