@@ -1,0 +1,8 @@
+BRES CLES — R190 CORE CHANGE
+Parent: R189
+
+stopOCRCaptureSeries() now returns without mutating OCR request/diagnostic state when neither a normal OCR capture series nor the TE8 physical series is active. The inactive duplicate stop re-arms series controls and returns status=inactive, active=false, alreadyStopped=true, decisionInfluence=false.
+
+Purpose: a delayed or duplicate « Terminer la série » after the first closure must not cancel an individual OCR started immediately afterwards or erase its fresh diagnostic/repeatability state.
+
+The first active stop keeps the R189 behavior. Package/export labels advance to R190. Runtime remains V2.28 TEST R156. Canonical catalogue is unchanged.

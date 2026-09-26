@@ -1,0 +1,2 @@
+1ad69af48c97a503904b13cde3623498757d8c16bd817cc4f6e41fce5a6fcd39  BRES_Cles_Mobile_V2_28_CHECKPOINT_R190.zip
+Library byte-for-byte verification: PASS
