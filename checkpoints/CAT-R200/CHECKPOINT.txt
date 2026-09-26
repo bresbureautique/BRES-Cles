@@ -1,0 +1,14 @@
+BRES CLES — CHECKPOINT CATALOGUE CAT-R200
+
+Parent: CAT-R199
+Canonical catalogue: unchanged
+Associated app checkpoint: R200 (runtime V2.28 TEST R156)
+
+Audit focus: KFI / KFL / KF1, the OCR-normalized collision group sharing both maker and namespace.
+- KFI, KFL and KF1 remain three separate references under maker KFV, namespace 139.
+- Their profile_hex signatures are all distinct; no automatic merge is justified.
+- KFI/KFL gross geometry is close (Euclidean width/height delta about 1.429 mm) but profiles remain distinct.
+- KF1 is materially different geometrically from both (>20 mm combined width/height distance).
+- All 10 canonical chunks are byte-for-byte unchanged from CAT-R199.
+- CH9T, CH17T, HCT1R and BIL1T remain intentionally blank rather than invented.
+- RO4/RO45, VAC151/VAC151SM and BK3-4/BK34 remain distinct.
