@@ -1,0 +1,9 @@
+BRES CLES V2.28 — R208 PROOF
+Parent branch: v2.28-test-r207-proof
+Stable preserved: stable-v2.27 @ 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8
+Runtime preserved: V2.28 TEST R156
+Milestone: compact catalogue collision guard
+Known compact collision: BK3-4 / BK34 -> BK34; never auto-resolved by insertion order
+Verification: PASS (15/15 verification families)
+App ZIP SHA-256: fc0393f65ca98a94e943b5442efbcda56fdc7e363fd0fcc58d81e49a78be9035
+CAT-R208 ZIP SHA-256: 7e158541240463b06dd3455bfb77f469ac599ee370402f8f7d26da167da38eff
