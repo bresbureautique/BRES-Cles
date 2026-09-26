@@ -1,0 +1,9 @@
+BRES CLES V2.28 — CHECKPOINT R197
+
+Parent: R196.
+Stable: V2.27 inchangée et non remplacée.
+Moteur applicatif: V2.28 TEST R156 inchangé.
+
+R197 revalide l'identité de la promesse du worker OCR partagé après chaque attente. Si un reset invalide une ancienne création, l'appel se rattache au worker courant au lieu d'utiliser l'ancien. Les protections R195 (progression par userJobId) et R196 (rejet tardif) restent actives. Aucun seuil OCR, règle QA2, catalogue ou chemin caméra/import n'est modifié.
+
+Vérification: verify_build 118/118 PASS; garde R197 12/12 PASS; catalogue applicatif 5103 références / 5103 uniques; 10 blocs canoniques inchangés.
