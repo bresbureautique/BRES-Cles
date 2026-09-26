@@ -1,0 +1,12 @@
+BRES CLES — AUDIT INTERNE CATALOGUE CAT-R209
+RESULTAT: PASS
+PASS | 5103 references / 5103 uniques
+PASS | catalogue canonique inchange, 10 blocs verifies
+PASS | une seule collision compacte : BK3-4 / BK34
+PASS | systemes distincts et geometries distinctes
+PASS | BK3-4 exact : 99 contre 41
+PASS | BK34 exact : 99 contre 41
+PASS | geometrie mediane : 64 / 64, donc ambiguite conservee
+PASS | aucune fusion automatique
+
+ZIP SHA-256: 952436d5b23e4e9107704827bff37ba7603235185450ecaaaf1de42fdff3fee5
