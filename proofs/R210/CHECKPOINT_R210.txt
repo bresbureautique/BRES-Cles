@@ -1,0 +1,16 @@
+BRES CLES V2.28 — CHECKPOINT R210
+
+Parent : CHECKPOINT R209.
+Version stable : V2.27 — inchangée et non remplacée.
+Moteur applicatif : V2.28 TEST R156 — inchangé.
+
+Jalon R210 : consensus recto/verso avant départage d’une collision OCR compacte.
+- Toutes les protections R195 à R209 restent actives.
+- Le texte OCR seul ne résout jamais une forme compacte partagée par plusieurs références.
+- La décision géométrique moyenne R209 reste une condition nécessaire : score >= 78 et marge >= 10.
+- R210 exige en plus deux géométries de face disponibles, chacune individuellement résolue avec les mêmes seuils forts.
+- Recto et verso doivent choisir le même canon, et ce canon doit être celui de la géométrie moyenne.
+- Une face faible, un désaccord recto/verso, une géométrie moyenne ambiguë ou une donnée manquante maintient explicitement l’état ambigu.
+- Le cas BK3-4 / BK34 reste la régression de référence.
+- Aucun seuil OCR (0,70 / 0,88), aucune donnée canonique du catalogue, aucune règle QA2 et aucune logique caméra/import ne sont modifiés.
+- Tous les exports utilisateur portent le checkpoint R210 ; les données conservent V2.28 TEST R156 comme version moteur.
