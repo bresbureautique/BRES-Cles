@@ -1,0 +1,62 @@
+BRES CLES — CHECKPOINT R203 — PREUVE VERIFIABLE
+Parent R202: 8a191c831dd00ad82fc69667d2f42a57fdc40085
+Stable V2.27: 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8
+Stable unchanged: YES
+
+Application ZIP: BRES_Cles_Mobile_V2_28_CHECKPOINT_R203.zip
+SHA256: 5b0b2c58ba46a179dce320d46be74288f0af613117d3fa4c0612e57c0babc193
+Library: /BRES Cles/Sauvegardes/BRES_Cles_Mobile_V2_28_CHECKPOINT_R203.zip
+Library roundtrip SHA256 exact: PASS
+Library byte-for-byte: PASS
+Library ZIP integrity: PASS
+Re-extracted checkpoint verification: PASS
+SOURCE_HASHES_R203: 26/26 PASS
+
+Runtime: V2.28 TEST R156 unchanged
+OCR thresholds: 0.70 / 0.88 unchanged
+Canonical catalogue chunks embedded in app: 10/10 unchanged
+
+R203 functional change:
+- R202 per-job OCR progress routing retained.
+- purgeSharedOCRProgressRoutesForWorkerR203(workerPromise) removes only routes owned by the exact invalidated worker.
+- resetSharedOCRWorker(expectedPromise) performs the ownership guard before purging.
+- stale callbacks from the invalidated worker are rejected.
+- successor/unrelated worker routes remain intact.
+- clearAttemptProgress() is idempotent and nulls its job id before deleting.
+- R195-R202 protections retained.
+
+Verification suites:
+traceability PASS
+package_alignment PASS
+version_consistency PASS
+r203_progress_route_cleanup PASS (21/21 static checks + behavioral concurrency/reset tests)
+r203_worker_replacement_regression PASS (17/17)
+worker_setup_budget PASS
+ocr_latency PASS
+timeout_phase PASS
+phase_timing PASS
+catalogue_wrapper_js_syntax PASS
+inline_js_syntax PASS
+catalogue_canonical_hashes PASS
+
+Key SHA256 source evidence:
+index.html 1e6f175a413dd983e12566e05f7574d00ea96320057d884d0f63c2000a70d02b
+v228-catalogue.js 02c40ffe1db1fed9fcaeac50b06a94905d624e7b93aa1a0d3b96d05525d64a8d
+CHECKPOINT.txt d6a3b95cc974cf4130404a161c794a8bdce0fd67b64f461191beb9598ca1b2ff
+LISEZ-MOI.txt 1697bdd4ac0ecc5315f74c4dd4a9fe553f080fcfc8fca767dcf59a30a32f1a65
+ocr_progress_route_cleanup_guard_test.py a5477a522d3fdbe770c1f0348c981a5039e5dfc49186d6798225ff2b7437d722
+ocr_worker_replacement_recovery_regression_r203.py e02de12f6304769944725b4bd749dc2828d8961ab8378f0e9ef14e0b787f3e2a
+verify_checkpoint_r203.py 92a14c012c8d2d1c5531b9964b843e9a6b827ec0e7eb2c2799ba7054a97b00ec
+package_checkpoint_alignment_guard_test.py 7433a71e7373c265520360d647b67b8e67f95f7bed43ec5b222263705d81badd
+
+Canonical chunk SHA256:
+catalog-01.js e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b
+catalog-02.js 955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75
+catalog-03.js 9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210
+catalog-04.js 14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942
+catalog-05.js 5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b
+catalog-06.js b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac
+catalog-07.js b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1
+catalog-08.js 3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814
+catalog-09.js 4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f
+catalog-10.js f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4
