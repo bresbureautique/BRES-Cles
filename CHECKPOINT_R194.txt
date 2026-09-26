@@ -1,0 +1,8 @@
+BRES CLES V2.28 — CHECKPOINT R194
+
+Parent: CHECKPOINT R193.
+V2.27 remains the stable version and is not replaced.
+Runtime engine remains V2.28 TEST R156; R194 is the package checkpoint.
+R194 aligns all user export labels on checkpoint R194, including profile and calibration exports.
+OCR thresholds, decision logic, QA2, camera/import and canonical catalogue data are unchanged.
+Exact package snapshot: Library/BRES Cles/Sauvegardes/BRES_Cles_Mobile_V2_28_CHECKPOINT_R194.zip
