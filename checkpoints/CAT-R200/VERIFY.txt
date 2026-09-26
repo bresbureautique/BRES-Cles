@@ -1,0 +1,13 @@
+BRES CLES — VERIFICATION CAT-R200
+
+Audit: PASS 14/14
+Catalogue: 5103 references / 5103 unique
+Canonical chunks unchanged: 10/10
+KFI/KFL/KF1 remain separate: same maker KFV, same namespace 139, three distinct profile_hex signatures.
+Profile Hamming distances: KFI/KFL 5 bits; KFI/KF1 13 bits; KFL/KF1 16 bits.
+Gross geometry Euclidean deltas: KFI/KFL about 1.429 mm; KFI/KF1 about 20.433 mm; KFL/KF1 about 20.125 mm.
+Protected pairs and blank profiles preserved.
+No canonical catalogue data changed.
+
+Final Library ZIP SHA-256:
+0f90a3ea3755bdaa38d40d5a0bbbf9272b0b733a518b0f0009fca74ede0c4399  BRES_Cles_Catalogue_Audit_CAT_R200.zip
