@@ -1,0 +1,17 @@
+BRES CLÉS V2.28 — VÉRIFICATION CHECKPOINT R195
+
+RESULTAT: PASS sur le périmètre modifié et les invariants critiques.
+Parent: CHECKPOINT R194
+Version stable: V2.27 — inchangée, non remplacée
+Moteur applicatif: V2.28 TEST R156
+Checkpoint paquet: R195
+
+Nouvelle garde OCR asynchrone: PASS, matrice Node 8/8.
+Tests modifiés / critiques: 20/20 PASS.
+Syntaxe JavaScript wrapper + script inline: PASS.
+Catalogue applicatif: 5103 références / 5103 uniques.
+10/10 blocs canoniques: strictement inchangés.
+Seuils OCR: 0,70 / 0,88 inchangés.
+Package checkpoint / traçabilité: PASS.
+
+Le runner historique verify_build.py a dépassé la fenêtre d’exécution de cette passe et n’est donc pas revendiqué comme PASS global pour R195.
