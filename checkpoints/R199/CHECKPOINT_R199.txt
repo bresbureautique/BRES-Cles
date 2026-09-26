@@ -1,0 +1,14 @@
+BRES CLES V2.28 — CHECKPOINT R199
+
+Parent : CHECKPOINT R198.
+Version stable : V2.27 — inchangée et non remplacée.
+Moteur applicatif : V2.28 TEST R156 — inchangé.
+
+Jalon R199 : scellement explicite d’une passe OCR après timeout/fermeture.
+- Chaque passe possède maintenant un état passClosed distinct du simple indicateur timedOut.
+- Toute progression tardive est filtrée après fermeture de la passe, y compris dans le fallback Tesseract.recognize() sans worker partagé.
+- Un résultat de reconnaissance qui revient après le timeout est explicitement rejeté comme obsolète avant toute publication/retour de résultat.
+- Le sink du worker partagé utilise le filtre de passe R199 en complément du sceau userJobId R195.
+- Les protections R195, R196, R197 et R198 restent actives.
+- Aucun seuil OCR, aucune règle QA2, aucune logique catalogue et aucune logique caméra/import ne sont modifiés.
+- Tous les exports utilisateur portent le checkpoint R199 ; les données conservent V2.28 TEST R156 comme version moteur.
