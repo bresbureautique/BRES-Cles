@@ -1,0 +1,8 @@
+BRES CLÉS — CHECKPOINT CATALOGUE CAT-R191
+
+- Parent : CAT-R190.
+- Catalogue canonique inchangé : 5103 références / 5103 uniques.
+- 10/10 blocs canoniques identiques à CAT-R190.
+- Profils laissés volontairement vides : CH9T, CH17T, HCT1R, BIL1T.
+- Collisions protégées : RO4/RO45 et VAC151/VAC151SM.
+- Aucun enrichissement sans référence certaine.
