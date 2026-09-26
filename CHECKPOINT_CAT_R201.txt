@@ -1,0 +1,13 @@
+BRES CLES — CHECKPOINT CATALOGUE CAT-R201
+
+Parent : CAT-R200.
+Catalogue canonique : inchange.
+Application associee : checkpoint R201 (moteur V2.28 TEST R156).
+
+Audit CAT-R201 : doublons de signature observable interne.
+- 5 103 references / 5 103 references uniques.
+- Six groupes de deux references partagent exactement marque, namespace, largeur, hauteur et profile_hex.
+- Cinq de ces six groupes different encore dans au moins un autre champ stocke ; aucune fusion n'est justifiee.
+- VAC151/VAC151SM est le seul couple dont la ligne stockee est identique hors champ ref. Les deux references restent separees faute de source certaine etablissant une erreur de doublon ou un alias officiel.
+- RO4/RO45 reste separe ; CH9T, CH17T, HCT1R et BIL1T restent inchanges.
+- Les 10 blocs canoniques sont octet pour octet identiques a CAT-R200.
