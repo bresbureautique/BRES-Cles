@@ -1,0 +1,24 @@
+BRES CLES V2.28 — VERIFICATION R200
+
+Targeted verification: PASS
+R200 worker-reset ownership guard: 16/16 PASS
+R199 late-recognition regression: 16/16 PASS
+Package checkpoint alignment: 15/15 PASS
+Checkpoint traceability: 13/13 PASS
+Version consistency: PASS
+Worker setup budget: PASS
+OCR latency guard: PASS
+Timeout phase guard: PASS
+Phase timing guard: PASS
+Catalogue wrapper JS syntax: PASS
+Inline JS syntax: PASS
+Canonical catalogue hashes: 10/10 unchanged
+Runtime: V2.28 TEST R156
+OCR thresholds: 0.70 / 0.88
+Stable V2.27: not replaced
+Catalogue audit: separate CAT-R200
+
+Historical mega-runner is not used as the global R200 criterion because several old guards pin checkpoint R198.
+
+Final Library ZIP SHA-256:
+1118de670c341f263681bce2adb29da5ce57136a261d58c1bae8ff3892d4aab9  BRES_Cles_Mobile_V2_28_CHECKPOINT_R200.zip
