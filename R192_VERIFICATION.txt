@@ -1,0 +1,8 @@
+BRES Cles R192 verification
+Result: PASS
+Parent: R191
+Stable: V2.27 unchanged
+Runtime: V2.28 TEST R156
+Tests: 114/114 PASS
+Catalogue: 5103 refs, 5103 unique, 10/10 canonical chunks unchanged
+OCR thresholds: 0.70 / 0.88 unchanged

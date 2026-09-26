@@ -1,0 +1,9 @@
+BRES CLES V2.28 — CHECKPOINT R192
+
+- Parent : CHECKPOINT R191.
+- V2.27 reste la version stable et n'est pas remplacée.
+- Le moteur applicatif testé reste V2.28 TEST R156 ; R192 est le numéro de checkpoint/paquet.
+- R192 clôt visuellement le compte rendu OCR de l’autre source dès qu’une nouvelle lecture démarre : une lecture principale supersède l’ancien affichage « photos de tête », et une lecture de tête supersède l’ancien affichage principal.
+- Cette garde d’affichage ne modifie ni les saisies manuelles, ni les seuils OCR, ni la chaîne QA2 ; elle évite seulement qu’un ancien résultat reste présenté comme contexte actif pendant une nouvelle lecture.
+- Catalogue canonique inchangé : 5103 références / 5103 uniques ; 10/10 blocs inchangés.
+- Tous les exports utilisateur portent R192 et les diagnostics conservent version=V2.28 TEST R156 pour distinguer moteur et paquet.
