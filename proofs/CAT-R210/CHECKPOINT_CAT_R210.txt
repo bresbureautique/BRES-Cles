@@ -1,0 +1,13 @@
+BRES CLES - CHECKPOINT CATALOGUE CAT-R210
+
+Parent : CAT-R209.
+Catalogue canonique : inchange.
+References : 5103 / 5103 uniques.
+
+Jalon : audit de la regle de consensus geometrique recto/verso pour les collisions OCR compactes.
+- L'unique collision compacte reste BK3-4 / BK34.
+- Les deux references restent distinctes, avec systemes et geometries distincts.
+- Chaque face doit atteindre score >=78 et marge >=10 pour etre consideree comme decisive.
+- Recto et verso doivent designer le meme canon avant toute resolution automatique.
+- Des faces fortes mais contradictoires restent ambigues.
+- Aucune fusion, aucun alias automatique et aucune modification des 10 blocs canoniques.
