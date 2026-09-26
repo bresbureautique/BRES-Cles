@@ -1,0 +1,8 @@
+BRES CLES V2.28 — CHECKPOINT R209
+
+Parent : R208.
+Runtime conservé : V2.28 TEST R156.
+Stable : V2.27 non remplacée.
+Seuils OCR : 0,70 / 0,88.
+
+Jalon R209 : collision OCR compacte BK3-4 / BK34 conservée explicite ; départage seulement par géométrie catalogue forte avec score >= 78 et marge >= 10 ; sinon ambiguïté conservée. Catalogue canonique inchangé (10/10 blocs).
