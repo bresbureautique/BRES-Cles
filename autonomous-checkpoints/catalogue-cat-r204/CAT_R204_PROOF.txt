@@ -1,0 +1,21 @@
+BRES CLES CAT-R204 PROOF
+Parent CAT-R203: 95da3bc79c7fe5f356d5f0bb270967b7cfa338b2
+Associated app checkpoint: R204
+Catalogue ZIP SHA256: 29374b80cf569c61291604dd89ad3e3c59666726663bb3b92bb1199966539fe5
+Library roundtrip SHA256 exact: PASS
+Library byte-for-byte: PASS
+Library ZIP integrity: PASS
+Audit: 15/15 PASS
+Catalogue: 5103 references / 5103 unique
+Canonical catalogue: 10/10 chunk hashes unchanged
+Six strong geometry-signature groups remain unmerged
+KESO SM2/SMD/SMS families verified as canonical
+VACHETTE VAC48SM and VAC151SM both canonical
+RONIS RO4, RO4R and RO45 remain distinct
+SARGENT R-suffix family remains distinct
+VAC151/VAC151SM remain separate pending certain catalogue evidence
+CH9T, CH17T, HCT1R, BIL1T unchanged
+CATALOGUE_INTERNAL_AUDIT_CAT_R204.json SHA256 a70fcccc59ce292039a2cae72d517cf91b17461def441a99e40e9ca41244dca8
+CATALOGUE_SUFFIX_FAMILY_AUDIT_CAT_R204.json SHA256 46cef02149b9544968e2cb89a753f7a188037a397282d12156d16094a1b339b7
+catalogue_audit_cat_r204.py SHA256 6440109d850ec2856490c1fd28ac72dffd9b70a5d8254c95b4d590eb84cf8ddd
+CAT_R204_SOURCE_HASHES: 8/8 PASS
