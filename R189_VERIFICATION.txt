@@ -1,0 +1,13 @@
+BRES CLÉS V2.28 — CHECKPOINT R189 — VÉRIFICATION
+
+RESULTAT: PASS
+Parent: R188
+Version stable conservée: V2.27 (branche main, non modifiée par ce paquet)
+Moteur: V2.28 TEST R156
+Régression complète: 111/111 tests PASS
+Erreurs verify_build.py: 0
+Catalogue: 5103 références / 5103 uniques
+Blocs catalogue canoniques: 10/10 inchangés
+OCR_PREFILL_THRESHOLD: 0.70
+OCR_DECISION_THRESHOLD: 0.88
+R189: les anciens comptes rendus OCR visibles sont neutralisés lors des transitions de série, sans effacer les champs manuels ni la chaîne QA2 courante.
