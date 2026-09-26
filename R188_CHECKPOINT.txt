@@ -1,0 +1,13 @@
+BRES CLES V2.28 — CHECKPOINT R188
+
+- V2.27 reste la version stable séparée et n’est pas remplacée.
+- Le moteur applicatif testé reste V2.28 TEST R156 ; R188 est le numéro de checkpoint/paquet.
+- R188 ajoute une garde finale de publication au diagnostic OCR : un contexte de requête, d’identification ou de série devenu obsolète est refusé avant toute mutation.
+- La répétabilité OCR, l’historique multi-prises, le diagnostic humain et l’export ne peuvent donc plus être contaminés par une publication tardive provenant d’une ancienne série.
+- Les protections R183 à R187 restent actives : annulation des lectures en vol, clôture explicite, garde anti-redémarrage et conservation contrôlée de la chaîne QA2.
+- Tous les exports utilisateur portent R188 et les diagnostics conservent version=V2.28 TEST R156 pour distinguer moteur et paquet.
+- Aucun seuil OCR n’est modifié : 0,70 / 0,88.
+- Aucun des 10 blocs catalogue canoniques n’est modifié.
+- Régression complète : 110/110 PASS.
+- ZIP réextrait et revérifié : PASS.
+- Copie Library rematérialisée et comparée octet par octet : PASS.
