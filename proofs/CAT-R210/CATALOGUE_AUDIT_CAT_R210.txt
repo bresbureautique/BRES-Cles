@@ -1,0 +1,19 @@
+BRES CLES - AUDIT INTERNE CATALOGUE CAT-R210
+RESULTAT: PASS
+PASS count_5103
+PASS unique_5103
+PASS canonical_catalogue_not_modified
+PASS ten_chunk_hashes_present
+PASS compact_collision_count_exactly_1
+PASS bk34_pair_exact
+PASS bk34_distinct_systems
+PASS bk34_geometry_distinct
+PASS each_exact_face_is_individually_strong
+PASS contradictory_strong_faces_must_remain_ambiguous
+PASS automatic_compact_merge_forbidden
+PASS face_consensus_required_before_auto_resolution
+
+BK3-4 exact : score 99, opposant 41, marge 58.
+BK34 exact : score 99, opposant 41, marge 58.
+Decision : une collision compacte ne peut etre auto-resolue que si moyenne, recto et verso sont tous forts et choisissent le meme canon.
+ZIP SHA-256 b0a4e8651db9185f51e04ab84a482b55acde0df573f7a17081760a5257ba9d57
