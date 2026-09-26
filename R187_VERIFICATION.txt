@@ -1,0 +1,11 @@
+BRES CLES V2.28 CHECKPOINT R187
+runtime=V2.28 TEST R156
+stable=V2.27 unchanged
+full_regression=PASS
+tests=109/109
+restart_guard=PASS
+javascript_syntax=PASS
+catalogue_count=5103
+catalogue_unique=5103
+catalogue_chunks_unchanged=10/10
+ocr_thresholds=0.70/0.88
