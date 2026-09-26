@@ -1,0 +1,10 @@
+CAT-R190 AUDIT PASS
+Parent: CAT-R189
+Canonical catalogue modified: NO
+References: 5103
+Unique references: 5103
+Audit checks: 11/11 PASS
+Blank profiles preserved: CH9T, CH17T, HCT1R, BIL1T
+Shape+profile collisions preserved: RO4/RO45; VAC151/VAC151SM
+Only full duplicate group: VAC151/VAC151SM
+Canonical chunk hashes match CAT-R189: PASS
