@@ -1,0 +1,15 @@
+BRES CLÉS V2.28 — VÉRIFICATION CHECKPOINT R194
+
+RESULTAT: PASS
+Parent: CHECKPOINT R193
+Version stable: V2.27 — inchangée, non remplacée
+Moteur applicatif: V2.28 TEST R156
+Checkpoint paquet: R194
+Correction: alignement de tous les exports utilisateur sur le checkpoint R194 ; les exports profil/calibration encore étiquetés R192 dans le paquet R193 sont corrigés.
+Nouvelle garde: package_checkpoint_alignment_guard_test.py bloque toute dérive future entre interface, exports et documentation.
+Régression verify_build.py: 116/116 PASS, errors=[]
+Tous scripts top-level *_test.py: 130/130 PASS
+Catalogue applicatif: 5103 références / 5103 uniques
+Catalogue canonique: 10/10 blocs inchangés
+Seuils OCR: 0,70 / 0,88 inchangés
+Algorithme OCR / décision / QA2 / caméra-import: non modifiés par R194
