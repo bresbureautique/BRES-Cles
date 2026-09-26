@@ -1,0 +1,6 @@
+BRES CLES CATALOGUE CHECKPOINT CAT-R197
+Parent: CAT-R196.
+Canonical catalogue unchanged: 5103 references, 5103 unique.
+All 10 canonical chunks unchanged.
+CAT-R197 audit: PASS 13/13.
+No canonical data modified.
