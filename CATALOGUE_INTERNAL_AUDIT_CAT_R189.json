@@ -1,0 +1,29 @@
+{
+  "checkpoint": "CAT-R189",
+  "parent": "CAT-R188",
+  "canonical_catalogue_modified": false,
+  "catalogue_count": 5103,
+  "catalogue_unique_refs": 5103,
+  "checks": {
+    "count_5103": true,
+    "unique_5103": true,
+    "schema_integrity_selftest_pass": true,
+    "collision_baseline_selftest_pass": true,
+    "reference_identity_selftest_pass": true,
+    "exactly_four_blank_profiles": true,
+    "protected_refs_present": true,
+    "protected_profile_hex_blank": true,
+    "shape_profile_collision_groups_expected": true,
+    "full_duplicate_group_only_vac151": true,
+    "canonical_hashes_match_cat_r188": true
+  },
+  "protected_blank_profiles": [
+    {"ref": "CH9T", "maker": "CHICAGO", "namespace": "60", "profile_hex": ""},
+    {"ref": "CH17T", "maker": "CHICAGO", "namespace": "60", "profile_hex": ""},
+    {"ref": "HCT1R", "maker": "HECTOR", "namespace": "120", "profile_hex": ""},
+    {"ref": "BIL1T", "maker": "BILMA", "namespace": "40", "profile_hex": ""}
+  ],
+  "exact_full_duplicate_groups": [["VAC151","VAC151SM"]],
+  "exact_shape_profile_collision_groups": [["RO4","RO45"],["VAC151","VAC151SM"]],
+  "decision": "No canonical field changed. CAT-R189 independently verifies the 10 canonical chunk hashes against CAT-R188/R40, preserves the four intentionally blank profiles, and keeps the two known collision groups unresolved without assumptions."
+}
