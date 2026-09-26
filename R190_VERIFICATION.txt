@@ -1,0 +1,7 @@
+R190 PASS
+112/112 tests PASS
+Catalogue 5103/5103
+10/10 canonical chunks unchanged
+OCR thresholds 0.70/0.88 unchanged
+Runtime V2.28 TEST R156
+Stable V2.27 unchanged
