@@ -1,0 +1,8 @@
+R188
+110/110 tests PASS
+5103 references / 5103 unique
+10/10 canonical catalogue chunks unchanged
+OCR thresholds 0.70 / 0.88 unchanged
+Runtime V2.28 TEST R156 unchanged
+ZIP extraction PASS
+Library byte comparison PASS
