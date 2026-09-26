@@ -1,0 +1,14 @@
+BRES CLES — CATALOGUE CAT-R194 VERIFICATION
+
+Parent: CAT-R193
+Canonical catalogue modified: no
+Catalogue count: 5103
+Unique references: 5103
+Canonical blocks unchanged: 10/10
+Audit: 12/12 PASS
+Normalized-reference collision audit: BK3-4 and BK34 normalize to BK34, but remain separate because namespace and geometry differ.
+Protected blank profiles remain CH9T, CH17T, HCT1R, BIL1T.
+Protected geometry collisions remain RO4/RO45 and VAC151/VAC151SM.
+Exact package: Library/BRES Cles/Sauvegardes/BRES_Cles_Catalogue_Audit_CAT_R194.zip
+Checksum sidecar: Library/BRES Cles/Sauvegardes/BRES_Cles_Catalogue_Audit_CAT_R194.zip.sha256
+Library copy rematerialized and compared byte-for-byte with the built archive: PASS.
