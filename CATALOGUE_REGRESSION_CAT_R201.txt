@@ -1,0 +1,1 @@
+CAT-R201 regression: 5103 rows; 5103 unique refs; 10/10 canonical chunk hashes unchanged; no canonical mutation. Audit dedicated: 11/11 PASS.
