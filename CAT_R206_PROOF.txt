@@ -1,0 +1,11 @@
+BRES CLES CATALOGUE CAT-R206
+Parent: catalogue-v3-audit-r205-proof
+Canonical catalogue modified: NO
+References: 5103
+Unique references: 5103
+Audit: 13/13 PASS
+ZIP SHA-256: 7e86dc17e0c7202fba0c3537306a8de676b835b04da23f5703697e9878d5105a
+CATALOGUE_INTERNAL_AUDIT_CAT_R206.json SHA-256: c9559520ff888e536050305c90aa27b85d3b0a4a909a7df557eecaaac570cc78
+Multi-suffix audit SHA-256: f19ad80bfd71eb49268a82d2c38a6120c6c3ac022ad68a07f933ad52cc2c2a16
+CAT_R206_SOURCE_HASHES.txt SHA-256: 9c20bb19b20232017af2052e14c70c2a68f55f0cedaa088e2d9655e496fcf5f6
+Findings: 15 refs in SM/SM2/SMD/SMS audit; KE19 and KE20 each have three distinct SM2/SMD/SMS variants; no suffix stripping or automatic merge allowed.
