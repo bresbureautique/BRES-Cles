@@ -1,0 +1,2 @@
+Parent branch: v2.28-test-r186
+R187 blocks any direct restart of an active OCR multi-capture series. It also blocks switching generic series to TE8 or restarting TE8 until the user explicitly terminates the current series. After stop, a clean new generic or TE8 series can start. Canonical catalogue data is unchanged. Full byte snapshot is archived in Library BRES Cles/Sauvegardes with the package SHA-256 recorded in R187_SHA256.txt.
