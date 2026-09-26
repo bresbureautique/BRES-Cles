@@ -1,0 +1,15 @@
+BRES CLES V2.28 — CHECKPOINT R200
+
+Parent: R199
+Stable: V2.27 unchanged and not replaced
+Runtime: V2.28 TEST R156 unchanged
+OCR thresholds: 0.70 / 0.88 unchanged
+
+R200 change:
+- Each OCR pass records the exact shared-worker promise it acquired/awaits.
+- resetSharedOCRWorker(expectedPromise) invalidates the shared worker only if expectedPromise is still current.
+- A stale pass timing out after a successor worker has been installed cannot detach or terminate that successor.
+- Unscoped reset remains available for explicit maintenance/tests.
+- R195 progress-job guard, R196 creation-rejection identity, R197 current-worker identity, R198 acquisition cancellation, and R199 late-return sealing remain active.
+- No QA2, catalogue, camera/import, OCR threshold, or runtime-engine rule changed.
+- User exports are checkpointed R200 while engine identity remains V2.28 TEST R156.
