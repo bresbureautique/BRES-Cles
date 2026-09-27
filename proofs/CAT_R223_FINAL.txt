@@ -1,0 +1,11 @@
+BRES CLES CAT-R223 FINAL
+parent=catalogue-v3-audit-r222-final-proof
+count=5103
+unique=5103
+catalogue_canonical_hashes=10/10 unchanged
+compact_collision=BK3-4 / BK34 preserved
+audit=11/11 PASS
+archive_files=257/257 identical
+library_hash_match=PASS
+runtime_change_only=R223 strict local-template typing; no catalogue mutation
+sha256=dc86ab31d5f60363734a5e274aa9d298138a7bbcf5555c96bb363d1c58aab024
