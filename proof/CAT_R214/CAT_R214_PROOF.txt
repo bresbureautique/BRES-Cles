@@ -1,0 +1,8 @@
+CAT-R214 verified catalogue audit.
+5103 references; 5103 unique.
+10 canonical chunks unchanged.
+BK3-4 and BK34 remain distinct.
+R214 runtime generation data is not in canonical catalogue chunks.
+ZIP round-trip: 185/185 files identical.
+Library round-trip verified.
+SHA256 a2a2ecb5e7cf1d35f7df865e3237efc27bab81e20dd8151ef1995160540b6bdc
