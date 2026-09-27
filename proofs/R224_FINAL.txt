@@ -1,7 +1,14 @@
-BRES CLES R224/R225 PROOF CHAIN
+BRES CLES R224/R225/R226 PROOF CHAIN
 R224 verification=29/29 PASS
 R225 verification=29/29 PASS
 R225 runtime=V2.28 TEST R156
 R225 stable=V2.27 unchanged
 R225 archive=5940/5940 identical
 R225 sha256=ec90e916c805528f3a5a39e685244df8ea645a94cddf7ab5d95ecf02d34e003a
+R226 verification=30/30 PASS
+R226 runtime=V2.28 TEST R156
+R226 stable=V2.27 unchanged
+R226 calibration=4/4 strong for automatic identification; 3/4 measurement-only
+R226 archive=6007/6007 identical
+R226 sha256=3608ea505d65c568e437ee44337ade14912c9e1f791464becb870fae43d6cd1d
+R226 library rematerialization=PASS
