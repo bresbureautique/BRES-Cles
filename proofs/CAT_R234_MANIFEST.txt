@@ -1,0 +1,12 @@
+Checkpoint CAT-R234
+Parent CAT-R233
+Catalogue unchanged
+References 5103 / 5103 unique
+Canonical hashes 10/10 unchanged
+Compact collision preserved: BK3-4 / BK34
+Files 345
+ZIP SHA256 29f30de0f489b4a8f51f17a830ba5a19680c4680dd9bee65143e22c40701a4f4
+CAT_R234_SNAPSHOT_MANIFEST.json SHA256 4d0a66c91999d0c46d5e75059bce3e517543ec06d0bdaedea817c288d1a365ca
+CAT_R234_SOURCE_HASHES.txt SHA256 e527a35563ebad86fb64573d796fa9b62d280ab8e8bc4f7117a68d31b020dff1
+Audit JSON SHA256 a1239b8df94c627d97281421dc2627fb31b7af41b2338ac11f8e9e7bd7161684
+Milestone: R234 runtime calibration/ranking/profile fields remain outside the canonical catalogue.
