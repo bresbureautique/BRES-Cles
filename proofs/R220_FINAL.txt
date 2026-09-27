@@ -1,0 +1,9 @@
+BRES CLES R220 FINAL
+parent=v2.28-test-r219-proof
+runtime=V2.28 TEST R156
+stable=V2.27 unchanged
+verification=24/24 PASS
+archive_files=5603/5603 identical
+library_hash_match=PASS
+catalogue_canonical_hashes=10/10 unchanged
+feature=structural freeze of published average and recto-verso geometry while preserving R218-R219 integrity guards
