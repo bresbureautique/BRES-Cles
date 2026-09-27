@@ -1,4 +1,7 @@
-BRES CLES R224 FINAL
-runtime=V2.28 TEST R156
-stable=V2.27 unchanged
-verification=29/29 PASS
+BRES CLES R224/R225 PROOF CHAIN
+R224 verification=29/29 PASS
+R225 verification=29/29 PASS
+R225 runtime=V2.28 TEST R156
+R225 stable=V2.27 unchanged
+R225 archive=5940/5940 identical
+R225 sha256=ec90e916c805528f3a5a39e685244df8ea645a94cddf7ab5d95ecf02d34e003a
