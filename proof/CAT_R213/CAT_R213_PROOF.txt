@@ -1,0 +1,10 @@
+CAT-R213 PASS
+Parent CAT-R212
+References 5103 / 5103 unique
+Canonical catalogue 10/10 chunk hashes unchanged
+Compact collision set unchanged: BK3-4 / BK34 kept distinct
+Runtime photo identity data remains outside canonical catalogue
+Archive SHA256 c29ed8ed670841e270fbceedc7d2c2d68132c9168802b3fdb76133641493714a
+Extracted archive 177/177 files identical
+Library copy hash identical
+Audit JSON SHA256 b4adde700fdd460f3260e7d0388742844ce76d96af3ab283615e7922bf020ffd
