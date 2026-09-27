@@ -1,0 +1,19 @@
+BRES Cles V2.28 CHECKPOINT R215 - verification proof
+Parent checkpoint: R214
+Runtime engine label: V2.28 TEST R156
+OCR thresholds: 0.70 / 0.88
+Stable V2.27: preserved, not replaced
+
+R215 purpose:
+- Track geometric analysis as published vs in-flight.
+- Once a newer geometry analysis begins, an older published currentSig cannot drive OCR, catalogue ambiguity resolution, manual validation, learning, or geometry-based decisions.
+- A failed newer analysis does not silently re-authorize older geometry.
+- Late callbacks from an older generation cannot overwrite a newer published result.
+
+Verification:
+- verify_checkpoint_r215.py: PASS 19/19 families
+- R215 publication lifecycle regression: PASS
+- Canonical catalogue chunks unchanged: PASS 10/10
+- Archive integrity: PASS
+- Re-extracted archive source comparison: PASS 5389/5389 files identical
+- ZIP SHA-256: f1de0096f56246a41abb5fcc28d558b2c3bab7885f3f0a72cbda3f1e9073084b
