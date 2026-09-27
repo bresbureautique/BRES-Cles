@@ -1,0 +1,14 @@
+Checkpoint R236
+Parent R235
+Runtime V2.28 TEST R156
+Stable V2.27 unchanged
+Tests 39/39 PASS
+Files 6273
+Catalogue canonical hashes 10/10 unchanged
+ZIP SHA256 f0e84ac7feb9bda0010419600a35aa804dd0fc716aafed42adbb8e0df96915ad
+index.html SHA256 552400c7aac0befe1aaae884908451edd39ceb3cd98db089505b9609774c13fc
+v228-catalogue.js SHA256 8c0d1b03dd973478948c27145f85b2b62fc8ab32c0d5c2258390cc30eb237a9b
+SNAPSHOT_MANIFEST_R236.json SHA256 e8ea15da1d4204b866efe5af516993934cc696a7d5029af83a03170351b1e24e
+SOURCE_HASHES_R236.txt SHA256 17cd004f36ab9f9f1adfbb01ca80f549c717c15699fe8b1431c6c1c58030a77c
+R236_VERIFICATION.json SHA256 574f82180668808c6483d8e65e900332088f30cc388da41618fc6ba61481f77b
+Milestone: texture/rainures 12x5 keeps the historical 31% texture weight only when both faces are reliable; limited quality uses 35% of that texture weight; unusable texture is neutralized and active distance weights are renormalized.
