@@ -1,0 +1,25 @@
+CHECKPOINT: R214
+PARENT: R213
+RUNTIME: V2.28 TEST R156
+STABLE_V2_27: unchanged; do not replace with test builds
+
+CHANGE:
+- Adds per-launch geometry analysis generation ordering.
+- A slower older analysis cannot publish over a newer analysis on the same photo pair.
+- R213 photo identity/provenance and R211 calibration guards remain active.
+
+VERIFICATION:
+- 19/19 verification families PASS.
+- ZIP round-trip: 5,348/5,348 files byte-identical.
+- Library round-trip: byte-identical and ZIP integrity PASS.
+- Canonical catalogue chunks: 10/10 unchanged.
+- OCR thresholds unchanged: 0.70 / 0.88.
+
+ZIP_SHA256:
+93072ad2b98e0454134248a366e66071ba63e16320a70abedb92518e23304fe3  BRES_Cles_Mobile_V2_28_CHECKPOINT_R214.zip
+
+SOURCE_SHA256:
+a3a05593577c31413ac93b37ad5851fe357c7bc9755d8eeef6f0e01fb9ad5dba  index.html
+698f80224ac53c138b29a34101535aa7aaf152cc931ac7cf8d87c23780907403  v228-catalogue.js
+9a3af42edb5db6153f3165b67cd045c15f69f8c79ceee09fad6ea8f1a540ca01  geometry_analysis_generation_guard_test_r214.py
+d232ad18d6305dbd74d78da469bee311820cae8cec74842e6b22d7556cff1d05  VERIFY_CHECKPOINT_R214.json
