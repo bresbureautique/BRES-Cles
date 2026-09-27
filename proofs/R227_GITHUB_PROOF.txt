@@ -1,13 +1,12 @@
-BRES CLES V2.28 — GITHUB PROOF R227
+BRES CLES V2.28 - GITHUB PROOF R227
 Parent proof branch: v2.28-test-r226-proof
-Stable branch: stable-v2.27 (must remain unchanged)
+Stable branch: stable-v2.27 unchanged
 Runtime: V2.28 TEST R156
 Verification: 31/31 PASS
 Catalogue canonical hashes: 10/10 unchanged
 Application ZIP SHA-256: 2eb9869c02095309fb65a8ff74b5cae2ebd95b0bd627ccd899d6c0aa39fa5fec
 Final index.html SHA-256: 12ab26757f94e71c4409120491cd3a835d24758764cc1d2e9093acb9be89232a
 Final v228-catalogue.js SHA-256: 4136d4d4985d57479062ded6d1a2de149d986561b6df21b3d0975008f86d36cc
-Reconstructible delta R226 -> R227 SHA-256: e4f5653c0e4cc5848068c494ec2691bf5d5c8267ddeda4caefcecbfbe7bc7591
-Patch transport: concatenate proofs/r227-patch-01.b64 ... proofs/r227-patch-06.b64, base64-decode, verify delta SHA-256 above, then apply to R226 source.
-Library authoritative binary: BRES Cles/Sauvegardes/BRES_Cles_Mobile_V2_28_CHECKPOINT_R227.zip
-Feature: published per-face calibration proof is frozen/sealed; automatic geometry, segmentation and groove/rainure decisions require two coherent strong-4/4 published proofs.
+R226 to R227 delta SHA-256: e4f5653c0e4cc5848068c494ec2691bf5d5c8267ddeda4caefcecbfbe7bc7591
+Authoritative full binary snapshot: Library/BRES Cles/Sauvegardes/BRES_Cles_Mobile_V2_28_CHECKPOINT_R227.zip
+Feature: published per-face calibration proof is sealed; automatic geometry, segmentation and groove decisions require two coherent strong-4/4 proofs.
