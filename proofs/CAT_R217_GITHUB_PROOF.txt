@@ -1,0 +1,23 @@
+BRES CLES — GITHUB PROOF CAT-R217
+
+Parent: catalogue-v3-audit-r216-proof @ 1185a7686006331178a759befc1809fcedd85478
+Catalogue canonical data: unchanged
+References: 5103 / 5103 unique
+Canonical chunks: 10/10 unchanged
+Compact collision set: unchanged; BK3-4 and BK34 remain distinct.
+
+CAT-R217 verifies strict separation between the R217 application-only geometry-generation evidence and catalogue data.
+Audit: PASS, 10/10 checks.
+Runtime-only fields such as geometryEvidenceR217, currentSig and generation state remain absent from canonical catalogue data.
+No alias, merge or canonical reference modification is introduced.
+
+Audit source SHA-256:
+23b995e527891ed667740779cfe64a46adc117fff44888b886a04dd05f96a095  catalogue_audit_cat_r217.py
+ff1b00520431f7090366fcfd4fe823b364f6823c4c08bffb2b7988443284d4f2  CHECKPOINT_CAT_R217.txt
+b75b69c3252f92c333b52cca59e774fae4eb614592cefc5e23b08ccffb03e3da  CATALOGUE_INTERNAL_AUDIT_CAT_R217.txt
+2f9d708e4c35169db4c8b7120af723c37d34d88cce76d4d7f024561fe41fcd76  CATALOGUE_RUNTIME_TEACH_GEOMETRY_SEPARATION_AUDIT_CAT_R217.json
+7f8d6c94d0532bad79304d4a29befb2ed530ca1d4ef3aceb7a13fd797e943bcf  CATALOGUE_CHUNK_HASHES_CAT_R217.txt
+
+Final verified ZIP:
+96885c761ab2d6945eaea9983a89cab320369c4f5b7cfd9bfb0f3cffa2227740  BRES_Cles_Catalogue_Audit_CAT_R217.zip
+Clean extraction: 209/209 files identical; ZIP integrity PASS.

@@ -1,0 +1,14 @@
+BRES CLES — AUDIT INTERNE CATALOGUE CAT-R217
+RESULTAT: PASS
+PASS | count_5103
+PASS | unique_5103
+PASS | ten_hashes_unchanged
+PASS | compact_collision_count_still_1
+PASS | bk34_pair_preserved
+PASS | r217_checkpoint_present
+PASS | r215_runtime_policy_preserved
+PASS | r217_teach_generation_guard_present
+PASS | runtime_guard_fields_absent_from_catalogue
+PASS | r217_requires_no_catalogue_mutation
+
+Décision : la garde R217 de génération géométrique pendant l’apprentissage reste exclusivement applicative ; les 10 blocs canoniques restent inchangés.

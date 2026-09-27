@@ -1,0 +1,11 @@
+BRES CLES — CHECKPOINT CATALOGUE CAT-R217
+
+Parent : CAT-R216.
+Catalogue canonique : inchangé.
+Références : 5103 / 5103 uniques.
+
+Jalon : séparation stricte entre la garde applicative R217 de génération géométrique pendant l’apprentissage et les données catalogue.
+- L’unique collision compacte reste BK3-4 / BK34.
+- La preuve geometryEvidenceR217, currentSig et les mécanismes de génération restent des données d’exécution uniquement.
+- Les protections R215 de publication, R214 d’ordre, R213 d’identité photo et R211 de calibration restent hors catalogue.
+- Aucun alias automatique, aucune fusion et aucune modification de référence.
