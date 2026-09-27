@@ -1,0 +1,14 @@
+Checkpoint R234
+Parent R233
+Runtime V2.28 TEST R156
+Stable V2.27 unchanged
+Tests 38/38 PASS
+Files 6231
+Catalogue canonical hashes 10/10 unchanged
+ZIP SHA256 52a623b7a373b62b580b03978e78a3fb80070e838c3d9fb763226af453ce9a98
+index.html SHA256 910886698bd22b922de9ea5478da4f53f3fbb11424549d03241c61c9429647fd
+v228-catalogue.js SHA256 5f014c4520fe5bc1d08b69742df588b0588b3b2167522118e57d2b497b51239b
+SNAPSHOT_MANIFEST_R234.json SHA256 851d0836b500221f92912f0b16b27d40fd75e1b8904486e83124d7f18bab509b
+SOURCE_HASHES_R234.txt SHA256 940e75bcd77f91e77da90125abc6803f8f83f9b656d3d727ecb768fc879a3179
+R234_VERIFICATION.json SHA256 3a73bcea77945138ee213834df71145b53d55611ab07f41cd919aaf8199cdb2d
+Milestone: massive catalogue geometry ranking is strong-4/4 only; weak calibration stays indicative and cannot seed axial-profile candidate restriction.
