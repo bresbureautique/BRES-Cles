@@ -1,0 +1,9 @@
+BRES CLES R219 FINAL
+parent=v2.28-test-r218-proof
+runtime=V2.28 TEST R156
+stable=V2.27 unchanged
+verification=23/23 PASS
+archive_files=5555/5555 identical
+library_hash_match=PASS
+catalogue_canonical_hashes=10/10 unchanged
+feature=immutable fingerprints for recto/verso face geometry before catalogue disambiguation
