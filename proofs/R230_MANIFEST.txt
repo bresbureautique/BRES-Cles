@@ -1,0 +1,8 @@
+checkpoint=R230
+parent=R229
+runtime=V2.28 TEST R156
+verification=34/34 PASS
+archive_sha256=940d0d5318a0307679c44d8e0d2beaaf27764d9d8914ca524de49792c0208824
+file_count=6146
+stable=stable-v2.27 unchanged
+catalogue=10/10 canonical chunks unchanged
