@@ -1,0 +1,13 @@
+R213 PASS
+Parent R212
+Runtime V2.28 TEST R156
+Stable V2.27 unchanged
+Photo-identity guard added for recto/verso analysis provenance
+18 verification families PASS
+Canonical catalogue hashes 10/10 unchanged
+Archive SHA256 55b4f66e924a1e07bf2144ca7e90c27e2361175423f8322c35fad354a66fc5f5
+Extracted archive 5310/5310 files identical
+Library copy hash identical
+index.html SHA256 988b63c6926b1bf37684b9bcda6723591986dbe624aadb9914e410e854e15d58
+v228-catalogue.js SHA256 bfddd74378371498b6828c9faea0d8b84381ad31ca08bb1255793ca9981a2787
+photo identity guard test SHA256 27adc18e296c176f28201821e3fdb8211bccf6cbb9d7926a8d69d8827f3aae3f
