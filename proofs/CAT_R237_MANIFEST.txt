@@ -1,0 +1,15 @@
+Catalogue audit CAT-R237
+Parent CAT-R236
+Runtime companion: V2.28 CHECKPOINT R237 / engine R156
+Catalogue references: 5103
+Unique references: 5103
+Canonical hashes: 10/10 unchanged
+Critical compact collision preserved: BK3-4 / BK34
+Checks: 14/14 PASS
+ZIP files: 370
+ZIP SHA256: 80ed1130f86297ac2c9d0cbf26ea7239e159dd6e3f75a473bb7bdfcc772feb73
+CAT_R237_SNAPSHOT_MANIFEST.json SHA256: fd30279b6cd7f59ead8018d96711c708469b3e955aafa894362fef3b605f610a
+CAT_R237_SOURCE_HASHES.txt SHA256: 6ab56e91124ce92da43ab7fbc6898590fe46e0ea586a2e52f799a73acfb71ca6
+CATALOGUE_RUNTIME_ACTIVE_TEXTURE_PROOF_SEPARATION_AUDIT_CAT_R237.json SHA256: cadb69fe63d3dddc990b9fc60b1d2b5380b39e9b899efd592a27d7b2255c9cbe
+CHECKPOINT_CAT_R237.txt SHA256: 404bb94fab73e4f8cd4ef0fa98ce7326267600c055eb83f9d4b27c6f9601e494
+Milestone: R237 runtime texture-proof fields remain excluded from the 5103 canonical catalogue records.
