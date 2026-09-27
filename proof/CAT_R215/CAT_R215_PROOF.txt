@@ -1,0 +1,11 @@
+BRES Cles Catalogue Audit CAT-R215 - verification proof
+Parent catalogue checkpoint: CAT-R214
+Canonical references: 5103
+Unique references: 5103
+Canonical chunk hashes unchanged: PASS 10/10
+Compact collision BK3-4 / BK34 preserved as distinct references.
+R215 runtime publication-generation fields absent from canonical catalogue chunks.
+Catalogue mutation required by R215: none.
+Archive integrity: PASS
+Re-extracted archive source comparison: PASS 193/193 files identical
+ZIP SHA-256: 9cb2a2d09abe0bf04d66e29d039663c1ec2cb3dfc5acb3cabc7eab2ab83ec045
