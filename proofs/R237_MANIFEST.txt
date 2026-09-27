@@ -1,0 +1,19 @@
+Checkpoint R237
+Parent R236
+Runtime V2.28 TEST R156
+Stable V2.27 unchanged
+R237 targeted/high-risk verification: 17/17 PASS
+Inherited verified R236 baseline: 39/39 PASS
+Files in verified ZIP: 6293
+Catalogue canonical hashes: 10/10 unchanged
+ZIP SHA256: 01af9fdae3171d8b3140b4f1ecc31e791c1439ff08982721d67aa9245cfc1d10
+index.html SHA256: 5861d642929e74ebf8430b3c90d6a639cf0f05c905d8f1309992d7418395c929
+v228-catalogue.js SHA256: 924959abc96702779ab6ff189027fe303eab8db19b519cbacb0af48b56ff5a88
+SNAPSHOT_MANIFEST_R237.json SHA256: 48d34e1a099b1e9484a28a2270d4dd92b84d5d34fc273fd2870ea5e32269d3aa
+SOURCE_HASHES_R237.txt SHA256: 1abe1a5414926daf2b80c1733efe822f489ba8a94317eaa2b245a2cf4953135f
+R237_VERIFICATION.json SHA256: 09669fb29030261a14cbf1c48f4778b77dbd60ce234918754fb4809b8efaede8
+texture_active_proof_guard_test_r237.py SHA256: 4672a8c12f789dc6f7a950ff0bb09cf43368f55d7fbf4ba6d6b7f46a565786fc
+CHECKPOINT_R237.txt SHA256: cace7aa095a5d1aaad520c16d3b00bae8647d314e47094cca9df9d7cf0f9585f
+R236_TO_R237_INDEX.diff SHA256: 695043037e75527255708eb06ca6c974b554593eb5533e5e63fefc770bde05bb
+R236_TO_R237_CATALOGUE_WRAPPER.diff SHA256: 01a84f843c4c87e5fb60a1bd52660f37cac73a3dc532ca38d648967ccc3f54f3
+Milestone: active capture missing texture reliability proof now fails closed; legacy stored references without R236 metadata remain compatible.
