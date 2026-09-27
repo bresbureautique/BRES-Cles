@@ -1,0 +1,12 @@
+Checkpoint CAT-R236
+Parent CAT-R235
+Catalogue unchanged
+References 5103 / 5103 unique
+Canonical hashes 10/10 unchanged
+Compact collision preserved: BK3-4 / BK34
+Files 362
+ZIP SHA256 c4a574f9731b4063953076eed01d6a762216f31d17c0789a56768f3e8cb2eed8
+CAT_R236_SNAPSHOT_MANIFEST.json SHA256 05468c36aa35c5b1e0df08c6621e5a2ce531824620b9e148c8f6daf68b2367ae
+CAT_R236_SOURCE_HASHES.txt SHA256 ccce7e8fe59ebb7774e3036c625455fa57c33c96f1b48d815f4a27f4411d434b
+Audit JSON SHA256 ed99bf6c184103b47a9772d81b9fdc2b26b375391eb4e915a408c2633a4a51db
+Milestone: R236 runtime texture reliability fields remain outside the canonical catalogue.
