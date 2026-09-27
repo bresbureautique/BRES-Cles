@@ -1,1 +1,8 @@
-R225
+CAT R225
+references 5103
+unique 5103
+canonical blocks unchanged 10/10
+audit 11/11 PASS
+archive files 273/273 identical
+zip digest part A 29de5b2d62781394c0d37fe7635e5d47
+zip digest part B d9fc0b56a75cc4dce4b387278f2aa161
