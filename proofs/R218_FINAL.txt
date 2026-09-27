@@ -1,0 +1,9 @@
+BRES CLES R218 FINAL
+parent=v2.28-test-r217-proof
+runtime=V2.28 TEST R156
+stable=V2.27 unchanged
+verification=22/22 PASS
+archive_files=5510/5510 identical
+library_hash_match=PASS
+catalogue_canonical_hashes=10/10 unchanged
+feature=immutable fingerprint for published geometry and decision evidence
