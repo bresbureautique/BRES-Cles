@@ -1,1 +1,8 @@
 checkpoint=CAT-R229
+parent=CAT-R228
+references=5103
+unique=5103
+chunks=10/10 unchanged
+audit=14/14 PASS
+file_count=305
+library_verification=PASS
