@@ -1,0 +1,17 @@
+BRES CLES V2.28 — CHECKPOINT R211
+
+Parent : CHECKPOINT R210.
+Version stable : V2.27 — inchangée et non remplacée.
+Moteur applicatif : V2.28 TEST R156 — inchangé.
+
+Jalon R211 : garde de qualité/calibration par face avant départage d’une collision OCR compacte.
+- Toutes les protections R195 à R210 restent actives.
+- La règle de consensus géométrique R210 reste obligatoire : moyenne, recto et verso doivent être forts et désigner le même canon.
+- R211 ajoute une garde de calibration indépendante sur chaque face avant toute résolution automatique.
+- Chaque face doit utiliser les 4 repères (mode 4/4), sans repère manquant/inféré, avec markerQuality >= 0,18.
+- Le mode de détection de silhouette « tolérant » est insuffisant pour un départage automatique.
+- Recto et verso doivent utiliser le même mode de détection fiable ; un désaccord de mode conserve l’ambiguïté.
+- Ces règles ne s’appliquent qu’au départage automatique d’une collision OCR compacte ; elles ne changent pas l’analyse normale des photos.
+- Le cas BK3-4 / BK34 reste la régression de référence.
+- Aucun seuil OCR (0,70 / 0,88), aucune donnée canonique du catalogue, aucune règle QA2 et aucune logique caméra/import ne sont modifiés.
+- Tous les exports utilisateur portent le checkpoint R211 ; les données conservent V2.28 TEST R156 comme version moteur.
