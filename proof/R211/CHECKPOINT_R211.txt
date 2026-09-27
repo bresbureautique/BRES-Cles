@@ -15,3 +15,14 @@ Jalon R211 : garde de qualité/calibration par face avant départage d’une col
 - Le cas BK3-4 / BK34 reste la régression de référence.
 - Aucun seuil OCR (0,70 / 0,88), aucune donnée canonique du catalogue, aucune règle QA2 et aucune logique caméra/import ne sont modifiés.
 - Tous les exports utilisateur portent le checkpoint R211 ; les données conservent V2.28 TEST R156 comme version moteur.
+
+VERIFICATION FINALE
+- 16 familles de vérification : PASS.
+- Archive réextraite : 5239/5239 fichiers identiques.
+- ZIP integrity : PASS.
+- SHA256 ZIP : 1851ae08c8cdf970076775d653f09d1436d82f7fab64b1c87cd4aa88fb432503
+- SHA256 index.html : 69042f0849c39a99267e981755987a08d95541bebb319172ce80c0d2064c414c
+- SHA256 v228-catalogue.js : b69de8180c81fd3d8acf85833cc2958b9fd4aaf03f9096d3225d892f9c495a9a
+- SHA256 package checkpoint guard : 66fe6ce80d521ad2b30c8374f2169fa7524a74991fb31b47176e77662f4c17f1
+- Catalogue canonique : 10/10 blocs inchangés.
+- Correction finale vérifiée : aucun message caméra actif ne référence encore R210.
