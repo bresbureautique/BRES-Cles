@@ -1,0 +1,17 @@
+BRES CLES V2.28 — AUDIT R218 / VERIFICATEUR PRINCIPAL
+
+Parent applicatif : CHECKPOINT R217.
+Moteur : V2.28 TEST R156 — inchangé.
+Stable : V2.27 — inchangée et non remplacée.
+Catalogue canonique : inchangé.
+
+Constat : l’ancien verify_build.py provenait encore du jalon R197. Il imposait des libellés historiques et relançait plusieurs harness devenus obsolètes après les protections R198–R217, ce qui pouvait produire un faux ECHEC alors que le vérificateur courant R217 passait.
+
+R218 :
+- conserve l’ancien orchestrateur sous verify_build_legacy_r197.py ;
+- installe verify_build.py comme point d’entrée actuel vers verify_audit_r218.py ;
+- exécute le vérificateur comportemental courant verify_checkpoint_r217.py ;
+- ajoute un balayage large des tests invariants encore actuels ;
+- exclut explicitement 22 anciens harness seulement lorsqu’un remplacement courant est enregistré ;
+- vérifie la syntaxe JavaScript, les 5 103 références uniques et les 10 empreintes canoniques ;
+- ne modifie ni index.html, ni v228-catalogue.js, ni les seuils OCR 0,70 / 0,88, ni la logique caméra, ni la base catalogue.
