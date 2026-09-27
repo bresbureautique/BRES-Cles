@@ -1,0 +1,10 @@
+BRES CLES — CHECKPOINT CATALOGUE CAT-R218
+
+Parent : CAT-R217.
+Catalogue canonique : inchangé.
+Références : 5103 / 5103 uniques.
+
+Le runtime applicatif reste CHECKPOINT R217 / V2.28 TEST R156.
+R218 ne touche que l’orchestration de vérification et ses preuves.
+L’unique collision compacte reste BK3-4 / BK34.
+Aucun alias automatique, aucune fusion, aucune modification de référence ou de géométrie catalogue.
