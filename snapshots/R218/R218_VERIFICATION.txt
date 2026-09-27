@@ -1,0 +1,11 @@
+BRES CLES V2.28 — AUDIT DE VERIFICATION R218
+
+RESULTAT: PASS
+- Paquet applicatif conservé au checkpoint R217; moteur V2.28 TEST R156.
+- Stable V2.27 non remplacée.
+- Régression exécutée : 41/41 réussies; 0 échec(s).
+- Anciens harness explicitement supersédés : 22 (aucun n’est compté comme test courant).
+- Catalogue canonique : 5103 références / 5103 uniques ; 10/10 empreintes inchangées.
+- Objectif R218 : rétablir un vérificateur principal actuel sans modifier le runtime, les seuils OCR ou le catalogue canonique.
+
+SELFTEST OK
