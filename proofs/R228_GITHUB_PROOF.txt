@@ -1,0 +1,12 @@
+BRES CLES V2.28 - GITHUB PROOF R228
+Parent proof branch: v2.28-test-r227-proof
+Stable branch: stable-v2.27 unchanged
+Runtime: V2.28 TEST R156
+Verification: 32/32 PASS
+Catalogue canonical hashes: 10/10 unchanged
+Application ZIP SHA-256: ee2dba7ea1b4b19d2902161f111875b8fe4e44daa063ce2077ef4a5516b36ba3
+Final index.html SHA-256: 1bf02796f9697062a491ec9aefd30784d43e8eb94d3471ecf0e3c2dc270cebad
+Final v228-catalogue.js SHA-256: 211b9d75440b4a9130378382ea1d1c579f8d3f945fd9bfa9942f8724712cd7e3
+R227 to R228 delta SHA-256: 45aff7766a591cbc3f3ef62e0579b02d9fd0981c3f4ea3c0b3a9da65344bd284
+Authoritative full binary snapshot: Library/BRES Cles/Sauvegardes/BRES_Cles_Mobile_V2_28_CHECKPOINT_R228.zip
+Feature: manual reference geometry confirmation/rejection now requires the published two-face strong-4/4 calibration proof; local-template conflicts are automatic only with the same strong proof.
