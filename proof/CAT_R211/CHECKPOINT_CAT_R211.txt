@@ -1,0 +1,30 @@
+BRES CLES — CHECKPOINT CATALOGUE CAT-R211
+
+Parent : CAT-R210.
+Catalogue canonique : inchangé.
+Références : 5103 / 5103 uniques.
+
+Jalon : audit de compatibilité de la garde qualité/calibration R211 avec le catalogue.
+- L’unique collision compacte reste BK3-4 / BK34.
+- Les deux références restent distinctes, avec systèmes et géométries distincts.
+- La qualité/calibration des photos est un signal d’exécution de l’application ; elle n’est pas stockée dans les lignes canoniques du catalogue.
+- CAT-R211 vérifie que la nouvelle garde R211 n’exige aucune mutation des 10 blocs canoniques.
+- Aucun alias automatique, aucune fusion et aucune modification de référence.
+
+VERIFICATION FINALE
+- count_5103 : PASS
+- unique_5103 : PASS
+- ten_chunk_hashes_unchanged : PASS
+- compact_collision_count_still_1 : PASS
+- bk34_pair_preserved : PASS
+- bk34_makers_present : PASS
+- bk34_distinct_systems : PASS
+- bk34_distinct_geometry : PASS
+- r211_policy_present_in_app : PASS
+- r211_policy_does_not_require_catalogue_mutation : PASS
+- automatic_compact_merge_forbidden : PASS
+- Archive réextraite : 161/161 fichiers identiques.
+- ZIP integrity : PASS.
+- SHA256 ZIP : 949a1754a0710eb4d1e121d6b71154434c1ab6b8b21ac1e84b176564282aed4e
+- SHA256 audit JSON : 1cc5a743473e54a8d868c5dd5a1402766e797067479a0420f246632e68f31d59
+- SHA256 CAT_R211_SOURCE_HASHES.txt : aacb61b1a9bdb1a88abaf3f56138be335b0102cd5629eea39991aa7878305107
