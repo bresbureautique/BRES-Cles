@@ -1,0 +1,12 @@
+BRES CLES - CATALOGUE AUDIT CAT-R227
+parent=CAT-R226
+result=PASS 12/12
+canonical_references=5103
+canonical_unique=5103
+canonical_hashes=10/10 unchanged
+BK3-4 and BK34 remain distinct
+runtime_calibration_fields_absent=true
+catalogue_modified=false
+archive_sha256=292e598efb1eb852624891c95e7c30c36049c13c12e434abb3ae07b38ca2108d
+file_count=289
+Library binary=BRES Cles/Sauvegardes/BRES_Cles_Catalogue_Audit_CAT_R227.zip
