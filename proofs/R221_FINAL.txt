@@ -1,0 +1,11 @@
+BRES CLES R221 FINAL
+parent=v2.28-test-r220-proof
+runtime=V2.28 TEST R156
+stable=V2.27 unchanged
+verification=25/25 PASS
+local_template_regression=25/25 PASS
+archive_files=5655/5655 identical
+library_hash_match=PASS
+catalogue_canonical_hashes=10/10 unchanged
+feature=canonical detached copy for learned local-template samples; no runtime geometry object or nested array reference is persisted
+sha256=419d7bc8c72e8b2320ceb1b875310f17b93d41b8232c922639ce44f95aa9d685
