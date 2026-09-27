@@ -1,0 +1,9 @@
+checkpoint=CAT-R230
+parent=CAT-R229
+references=5103
+unique=5103
+chunks=10/10 unchanged
+audit=14/14 PASS
+archive_sha256=85fc9c0c8f4c390135c118078eb455ce0f32300c5ea7042fd9f7f4f0a01fb483
+file_count=313
+runtime_policy=catalogue shape usage R230 kept outside canonical catalogue

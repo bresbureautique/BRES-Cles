@@ -1,0 +1,10 @@
+BRES CLES CATALOGUE - GITHUB PROOF CAT-R230
+Parent: catalogue-v3-audit-r229-final-proof
+Canonical catalogue: unchanged
+References: 5103 / 5103 unique
+Canonical chunks: 10/10 unchanged
+Audit: 14/14 PASS
+BK3-4 / BK34 compact collision preserved and distinct
+R230 runtime shape-usage policy remains application-only and is absent from canonical catalogue chunks.
+Archive SHA256: 85fc9c0c8f4c390135c118078eb455ce0f32300c5ea7042fd9f7f4f0a01fb483
+File count: 313
