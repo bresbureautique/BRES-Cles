@@ -1,0 +1,12 @@
+Checkpoint CAT-R235
+Parent CAT-R234
+Catalogue unchanged
+References 5103 / 5103 unique
+Canonical hashes 10/10 unchanged
+Compact collision preserved: BK3-4 / BK34
+Files 354
+ZIP SHA256 c19dd000e6d9eb038c715a328afe802cbdb656e6a260c0123b5730fd32c15de3
+CAT_R235_SNAPSHOT_MANIFEST.json SHA256 aa311c8def0a09c06fb9aa8cb757d2d562b8089a4558f6c68d90c87fcfa5cac6
+CAT_R235_SOURCE_HASHES.txt SHA256 1a712668bbfbb3a8687eb94069d3fa9a40a4c301b2257760aedbb19c2e6cd579
+Audit JSON SHA256 d9f7bbad4424bcb029eb83493a526cc8aab5ea2f4d51e2240b30ae66333cb42c
+Milestone: R235 runtime candidate-window policy fields remain outside the canonical catalogue.
