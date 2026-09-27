@@ -1,0 +1,27 @@
+BRES CLES V2.28 — GITHUB PROOF R217
+
+Parent: v2.28-test-r216-proof @ aa3b87fffd3e25fd58924dab3ec16ef2fe8559d4
+Stable preserved: stable-v2.27 @ 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8
+Runtime preserved: V2.28 TEST R156
+OCR thresholds preserved: 0.70 / 0.88
+Canonical catalogue: 10/10 canonical chunks unchanged
+
+R217 change:
+- local-template learning captures the R215 decision-geometry generation evidence;
+- evidence is revalidated after analysis and after any mutation-lock wait, immediately before database mutation;
+- any newer geometry analysis invalidates the pending learning operation whether it succeeds or fails;
+- a late callback from an older analysis cannot restore stale evidence;
+- no local-template write is performed when the evidence is stale.
+
+Verification: PASS, 21/21 verification families.
+Key local source SHA-256:
+c438138b95d6eca74f8f7ff6957093464f08c76a217b5071a6950f93fd3222f9  index.html
+8e2cfa351ae2a1461f39de6f6d767bc19c5fc1fec33e27321eda0cbe9d1b00ed  v228-catalogue.js
+919f2aafcef08d8f0df3f0f5477e1dbb5b10086ab6517de02975f53a457d5d40  LISEZ-MOI.txt
+2edbb6aad667ea70e6323fa385400f18657ae2a054281a94445b1d135d9482c0  local_template_geometry_generation_guard_test_r217.py
+
+Final verified ZIP:
+b56d4a34af00569292dd6312b660c7625974fb829aa53cd6f661d5df5de073d3  BRES_Cles_Mobile_V2_28_CHECKPOINT_R217.zip
+Clean extraction: 5468/5468 files identical; ZIP integrity PASS.
+
+R217_FUNCTIONAL_DELTA.txt records the core behavioral delta from the R216 parent. The complete verified R217 ZIP is backed up separately in Library /BRES Cles/Sauvegardes and is tied to this GitHub proof by the SHA-256 above.

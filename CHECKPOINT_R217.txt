@@ -1,0 +1,16 @@
+BRES CLES V2.28 — CHECKPOINT R217
+
+Parent : CHECKPOINT R216.
+Version stable : V2.27 — inchangée et non remplacée.
+Moteur applicatif : V2.28 TEST R156 — inchangé.
+
+Jalon R217 : preuve de génération géométrique figée pendant l’apprentissage local.
+- Toutes les protections R195 à R216 restent actives.
+- Lors du clic « Enregistrer les 2 photos actuelles comme étalon », R217 capture la preuve R215 de la géométrie réellement utilisée.
+- Si aucune géométrie décisionnelle n’est publiée, l’analyse déclenchée par l’apprentissage doit d’abord se publier avant que sa preuve soit capturée.
+- La preuve est revalidée avant le verrou d’écriture et surtout après toute attente du verrou, juste avant la lecture/modification de la base locale.
+- Toute analyse géométrique plus récente invalide cette preuve, qu’elle réussisse ou qu’elle échoue, même lorsque les deux photos n’ont pas changé.
+- Un callback tardif d’une ancienne analyse ne peut pas rendre la preuve R217 valide à nouveau grâce aux générations monotones R214/R215.
+- En cas d’invalidation, aucune écriture d’étalon n’est effectuée et l’utilisateur est invité à relancer l’enregistrement.
+- Aucun seuil OCR (0,70 / 0,88), aucune donnée canonique du catalogue, aucune règle de calibration R211 et aucune identité photo R213 ne sont modifiés.
+- Tous les exports utilisateur portent le checkpoint R217 ; les données conservent V2.28 TEST R156 comme version moteur.

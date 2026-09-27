@@ -1,0 +1,33 @@
+R217 FUNCTIONAL DELTA FROM R216 — local-template geometry-generation guard
+
+In the local-template save handler, replace the R216 geometry acquisition:
+  let sig=currentDecisionGeometryR215()||await analyseCurrent(epoch,photoSelectionSnapshot);
+
+with:
+  let geometryEvidenceR217=captureDecisionGeometryEvidenceR215();
+  let sig=geometryEvidenceR217?.sig||await analyseCurrent(epoch,photoSelectionSnapshot);
+  if(!geometryEvidenceR217&&sig)geometryEvidenceR217=captureDecisionGeometryEvidenceR215();
+
+Immediately after reference/photo checks, add:
+  const geometryChangedR217=!geometryEvidenceR217||!decisionGeometryEvidenceIsCurrentR215(geometryEvidenceR217);
+
+and include geometryChangedR217 in the pre-write cancellation condition.
+
+Inside withLocalTemplateMutationLock(), before reading or modifying the local template database, add:
+  if(!decisionGeometryEvidenceIsCurrentR215(geometryEvidenceR217))return {kind:"stale-geometry"};
+
+After the lock completes, handle stale-geometry before stale/saved:
+  if(outcome.kind==="stale-geometry"){
+    el("teachStatus").className="status warn";
+    el("teachStatus").textContent="Une nouvelle analyse géométrique a démarré pendant l’attente d’écriture : enregistrement annulé. Relancez « Enregistrer cet étalon ».";
+    return;
+  }
+
+Checkpoint/export labels advance from R216 to R217. Runtime remains V2.28 TEST R156. OCR thresholds remain 0.70 / 0.88. Stable V2.27 is untouched.
+
+Functional intent:
+- bind learning to the geometry generation actually used;
+- revalidate after async geometry work;
+- revalidate again after any mutation-lock wait;
+- reject a pending save as soon as any newer analysis generation starts, regardless of success/failure;
+- never allow an older late callback to restore validity.
