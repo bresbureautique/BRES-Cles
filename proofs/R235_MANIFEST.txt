@@ -1,0 +1,14 @@
+Checkpoint R235
+Parent R234
+Runtime V2.28 TEST R156
+Stable V2.27 unchanged
+Tests 38/38 PASS
+Files 6252
+Catalogue canonical hashes 10/10 unchanged
+ZIP SHA256 4b12f8de6cb40992d583ca569418fd1f8f6f286af8c0e81c46d168b91fa5e901
+index.html SHA256 9a505fcc07ce68d63f81f3ccda5d293b97fc7fbaaf22820af6ab34dd133e7e3f
+v228-catalogue.js SHA256 fa51048ee9adf9f86d76d5d77f4e665de6465047dd18eab792ad4b23ecf31cad
+SNAPSHOT_MANIFEST_R235.json SHA256 f092d8f661a3292c093774231e5611c0a0408014121dd2bab5e4822bab228966
+SOURCE_HASHES_R235.txt SHA256 b062560258c2e4fe44929a9bcf62aae4595ad25d77a36a66698f747a0fdddfa1
+R235_VERIFICATION.json SHA256 5a8eafd461afca9f20a7ac15171a20e178655ebb5b46e1425ece76b502021cd6
+Milestone: weak calibration can no longer exclude catalogue candidates through the ±10 mm width / ±12 mm height geometry windows; strong-4/4 preserves the historical filtering.
