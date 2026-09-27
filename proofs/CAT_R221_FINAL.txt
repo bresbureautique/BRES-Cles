@@ -1,0 +1,9 @@
+BRES CLES CAT-R221 FINAL
+parent=catalogue-v3-audit-r220-final-proof
+references=5103/5103 unique
+catalogue_canonical_hashes=10/10 unchanged
+compact_collision=BK3-4/BK34 preserved distinct
+archive_files=241/241 identical
+library_hash_match=PASS
+catalogue_mutation_for_r221=none
+sha256=1f5ceae387236d5bc1940c5dd6c47fc4559aedde20543360cb64d1df3c8a6bc0
