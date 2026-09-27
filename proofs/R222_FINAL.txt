@@ -1,0 +1,11 @@
+BRES CLES R222 FINAL
+parent=v2.28-test-r221-proof
+runtime=V2.28 TEST R156
+stable=V2.27 unchanged
+verification=27/27 PASS
+local_template_regression=25/25 PASS
+archive_files=5728/5728 identical
+library_hash_match=PASS
+catalogue_canonical_hashes=10/10 unchanged
+feature=single detached canonicalization pipeline for learned/imported/restored/exported local-template samples; historical optional fields remain compatible
+sha256=3b8712b733f64063e4b9ffb9ea53b4d7ff1f263404dd65a523291bc1feba6ce9
