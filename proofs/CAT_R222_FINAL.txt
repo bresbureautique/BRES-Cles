@@ -1,0 +1,10 @@
+BRES CLES CATALOGUE CAT-R222 FINAL
+parent=catalogue-v3-audit-r221-final-proof
+canonical_reference_count=5103
+canonical_unique_count=5103
+canonical_hashes=10/10 unchanged
+bk3-4_bk34_distinct=PASS
+runtime_local_template_fields_absent=PASS
+archive_files=249/249 identical
+library_hash_match=PASS
+sha256=e56ce9c3439213f0cd95f3ff691c8d3bdac5bad1b36858e2b560811284a62253
