@@ -1,0 +1,11 @@
+BRES CLES R223 FINAL
+parent=v2.28-test-r222-proof
+runtime=V2.28 TEST R156
+stable=V2.27 unchanged
+verification=28/28 PASS
+local_template_regression=25/25 PASS
+archive_files=5805/5805 identical
+library_hash_match=PASS
+catalogue_canonical_hashes=10/10 unchanged
+feature=strict detached local-template canonicalization without Number coercion; numeric strings rejected, historical optional fields remain compatible
+sha256=33d361bee2523c3def4033f26e3642e28bd0a725d5439ae00ffed80807bb1ef7
