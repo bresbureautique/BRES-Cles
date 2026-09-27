@@ -1,0 +1,8 @@
+checkpoint=CAT-R228
+parent=CAT-R227
+references=5103
+unique=5103
+chunks=10/10 unchanged
+audit=14/14 PASS
+archive_sha256=26ea6405c31467a00bd367e9fc53c58bb1991057db550e7be34e3fb3a15b30be
+file_count=297
