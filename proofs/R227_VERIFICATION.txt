@@ -1,0 +1,9 @@
+BRES CLES V2.28 - CHECKPOINT R227
+PASS 31/31 verification families
+engine=V2.28 TEST R156
+ocr_thresholds=0.70/0.88
+stable=V2.27 unchanged
+catalogue_canonical_hashes=10/10 unchanged
+index_sha256=12ab26757f94e71c4409120491cd3a835d24758764cc1d2e9093acb9be89232a
+catalogue_wrapper_sha256=4136d4d4985d57479062ded6d1a2de149d986561b6df21b3d0975008f86d36cc
+r226_to_r227_delta_sha256=e4f5653c0e4cc5848068c494ec2691bf5d5c8267ddeda4caefcecbfbe7bc7591
