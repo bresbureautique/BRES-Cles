@@ -1,0 +1,2 @@
+Application ZIP SHA256 (remove spaces): ac91d578 8fffdf69 0af32224 76509d42 52a30524 1712b7d7 a947e60c 0c94b3d8
+Catalogue ZIP SHA256 (remove spaces): 2ec7d532 104c6429 0e254b52 bf3eacd3 fc752ad4 56a82f76 4e4fad55 275d9800
