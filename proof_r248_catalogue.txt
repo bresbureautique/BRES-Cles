@@ -5,3 +5,4 @@ Canonical catalogue blocks: 10 / 10 unchanged.
 BK3-4 and BK34 remain distinct.
 Audit result: PASS.
 Archive digest recorded locally for Library cross-check.
+Catalogue archive SHA-256: e8c44fbe33b6b8fd24375810b6dced837341ec9ba44149ec98ea7a386498aa5e.
