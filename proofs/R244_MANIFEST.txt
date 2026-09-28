@@ -1,0 +1,12 @@
+checkpoint=R244
+parent=R243
+runtime=V2.28 TEST R156
+stable=V2.27 unchanged
+verification=22/22 PASS
+zip_sha256=37fd7e4079f6fee91c2d35c103a5bd1484a0729999d9655804c600011c2f5e70
+archive_file_count=6439
+library_roundtrip=PASS
+catalogue=CAT-R244 separate
+catalogue_canonical_hashes=10/10 unchanged
+schema_integrity=bres-diagnostic-export-integrity-r244-v1
+fail_closed=true
