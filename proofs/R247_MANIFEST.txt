@@ -1,0 +1,11 @@
+BRES CLES V2.28 — R247 PROOF MANIFEST
+checkpoint=R247
+parent=v2.28-test-r246-proof
+runtime=V2.28 TEST R156
+stable=V2.27 unchanged
+feature=publication-time fail-closed diagnostic integrity preflight; final R244 export guard retained
+verification=24/24 PASS
+app_files=6511
+catalogue_canonical=10/10 unchanged
+zip_sha256=2278fae20009030f06449452c4ae161fc2b452b85d6bea05d5ce2077c9742bbe
+library_octet_identical=PASS
