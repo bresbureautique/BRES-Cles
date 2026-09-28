@@ -1,0 +1,12 @@
+BRES CLES CATALOGUE — PREUVE CAT-R263
+
+Parent : catalogue-v3-audit-r262-final-proof
+Audit : PASS.
+Références : 5103 / 5103 uniques.
+Empreintes canoniques : 10/10 inchangées.
+Collision compacte volontaire : BK3-4 / BK34 préservée.
+Archive : BRES_Cles_Catalogue_Audit_CAT_R263.zip
+SHA-256 : 98d76695a8e4ad6fcdf3e2da318fa5c42cfac9f78496a9868a4b4f168ecef778
+Fichiers archive : 586.
+Réextraction : 586/586 identiques, 0 différence.
+Library : comparaison octet par octet PASS et ZIP test PASS.
