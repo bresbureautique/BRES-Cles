@@ -1,0 +1,16 @@
+BRES CLES - CHECKPOINT R255 PROOF
+
+Parent: v2.28-test-r254-proof
+Checkpoint: R255
+Runtime: V2.28 TEST R156
+Stable: V2.27 unchanged
+OCR thresholds: 0.70 / 0.88 unchanged
+Verification: 24/24 PASS
+Canonical catalogue: 10/10 hashes unchanged
+Application ZIP SHA-256: ee036ee52383373bd81aff153902843ec5e378528c82a10b6f08635baa4f08a5
+Application file count: 6751
+
+R255 hardens OCR epoch typing across R250, R252 and R254. String epochs such as 42-as-text are rejected fail-closed. The R255 chain guard runs at publication and again before JSON export. Existing R245 invalidation remains the failure path.
+
+Archive verification: unzip PASS; re-extraction 6751/6751 identical.
+Stable V2.27 is not replaced.
