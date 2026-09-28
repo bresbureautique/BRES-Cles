@@ -1,0 +1,11 @@
+Checkpoint R241
+Parent R240
+Runtime V2.28 TEST R156
+Stable V2.27 unchanged
+Verification 21/21 PASS
+Files in verified application ZIP 6373
+Catalogue audit files 402
+Canonical catalogue references 5103 / 5103 unique
+Canonical catalogue hashes unchanged 10/10
+Library copies uploaded, rematerialized and byte-identical
+See R241_CHECKSUMS.txt and R241_SOURCE_PROOF.txt for verification hashes.
