@@ -1,0 +1,14 @@
+--- R247/v228-catalogue.js
++++ R248/v228-catalogue.js
+@@
+- profile/calibration package checkpoint R247
++ profile/calibration package checkpoint R248
+@@
+- BRES_profil_CHECKPOINT_R247_
++ BRES_profil_CHECKPOINT_R248_
+@@
+- BRES_calibration_CHECKPOINT_R247_
++ BRES_calibration_CHECKPOINT_R248_
+
+Runtime remains V2.28 TEST R156.
+Full local diff SHA-256: 2dd3f6c9552d71e323c46ff91738a3d669b43f5c2fa786997db9af5bc33985c8
