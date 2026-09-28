@@ -1,0 +1,6 @@
+checkpoint=CAT-R247
+parent=CAT-R246
+references=5103
+unique=5103
+canonical_hashes_unchanged=10/10
+archive_files=452

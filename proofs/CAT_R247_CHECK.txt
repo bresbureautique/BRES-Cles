@@ -1,0 +1,6 @@
+PASS CAT-R247
+Parent CAT-R246
+References 5103 unique 5103
+Canonical hashes 10 of 10 unchanged
+BK3-4 and BK34 preserved
+R247 runtime preflight remains outside canonical catalogue
