@@ -1,1 +1,7 @@
 Catalogue audit checkpoint R248 verified.
+Parent: CAT-R247 proof branch.
+References: 5103 / 5103 unique.
+Canonical catalogue blocks: 10 / 10 unchanged.
+BK3-4 and BK34 remain distinct.
+Audit result: PASS.
+Archive digest recorded locally for Library cross-check.
