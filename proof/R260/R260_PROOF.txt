@@ -1,0 +1,10 @@
+BRES CLES V2.28 CHECKPOINT R260 PROOF
+Verification 27/27 PASS
+Runtime V2.28 TEST R156
+Stable V2.27 unchanged
+R260 release requires matching requestEpoch AND OCR source
+R259 publication-source guard preserved as second barrier
+ZIP SHA256 dac0c84e9c8ee93d91c52f131af03e4576877631f5018cee0e6480e77028cb2b
+File count 6870
+Library copy verified byte for byte
+CAT-R260 separate and canonical catalogue unchanged
