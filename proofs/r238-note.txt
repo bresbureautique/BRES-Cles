@@ -1,1 +1,11 @@
-R238 catalogue audit completed successfully. No canonical catalogue data changed.
+R238 catalogue audit completed successfully.
+Parent: catalogue R237.
+Canonical catalogue data changed: no.
+Reference count: 5103.
+Unique reference count: 5103.
+Canonical block hashes: 10/10 unchanged.
+Audit result: PASS.
+Verified ZIP SHA256: 17a4ea0bfa2967ed63afec6076b274f46e3e1fb7f644a4f44085a3f9d52541ba.
+Snapshot manifest SHA256: ccbba86467ad7f51268e353f0149999737c0fe6c82e48ac780e96ed8af14ebcf.
+Source hashes SHA256: a630274da0d9b2aeaa415a1ba5a10aa4c2b3f9f3d61af79260014253e61c6ff5.
+R238 only changes runtime presentation of texture reliability provenance and remains outside canonical catalogue data.
