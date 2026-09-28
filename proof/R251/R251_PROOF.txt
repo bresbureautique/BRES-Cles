@@ -1,0 +1,41 @@
+BRES CLES - CHECKPOINT R251 PROOF
+
+Parent: v2.28-test-r250-proof
+Checkpoint: R251
+Runtime: V2.28 TEST R156
+Stable: V2.27 unchanged
+OCR thresholds: 0.70 / 0.88 unchanged
+Verification: 28/28 PASS
+Canonical catalogue: 10/10 hashes unchanged
+Application ZIP SHA-256: 9eb4173f0b3669cdfa817233ed0cccb3bc1ac4023cfd04ab536532273c770a59
+Application file count: 6627
+
+R251 milestone:
+A new OCR request invalidates any previously exportable diagnostic immediately after the new requestEpoch is allocated.
+Both main-photo OCR and head-photo OCR call invalidateOCRDiagnosticForNewRequestR251.
+The old snapshot is removed, export is disabled, and requiresFreshDiagnostic remains true if the new OCR request is interrupted.
+Only a fresh publication through the already guarded R188/R247/R246 path clears the invalidation.
+R250 request binding, R249 context binding, R248 receipt integrity and R244 schema integrity remain independent export barriers.
+
+Regression coverage:
+- main OCR request invalidates old snapshot immediately
+- head OCR request invalidates old snapshot immediately
+- export button disabled during the new request
+- interrupted request cannot restore the previous snapshot
+- request epoch and source recorded
+- fresh publication clears the invalidation
+- R250 request-binding guard remains active
+
+Key source SHA-256:
+index.html b09946fd22318ed5f616e50e700dc4040c7328bd7a009e028116ee39d6204404
+v228-catalogue.js 9ef2a8848879d552a476a896a46ac27fd851503a92ddd311b6209397c8b356fd
+CHECKPOINT_R251.txt 68f6300db6ab951736bea427c069fe78cfeed1e43faddb9c335b3b2f2cca64fd
+R251 guard 40b2933d40da8c9914aceb50155cd2bc97ace1f74942d7091c75bf329cca8ff9
+R251 verification bfb433886ed84f0f4bf5d2c057504d7cd8a6547d897e2ad3967e502b330ed817
+index diff 004276a0645e103baa807bea3ed6b80cdd7d9e16702e317af8a22e0c0a8c5dd7
+wrapper diff 25f9e3ae4e4281d43e97bdcb2ce84594ba8a452d093ebab37041538b461a1d35
+
+Library re-materialization:
+The application ZIP and SHA-256 file matched byte-for-byte after upload to /BRES Cles/Sauvegardes.
+
+No R251 test version replaces stable V2.27.
