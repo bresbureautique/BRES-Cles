@@ -1,0 +1,26 @@
+BRES CLES V2.28 — VERIFICATION CHECKPOINT R243
+RESULTAT: PASS
+22/22 familles de controles PASS.
+checkpoint_traceability PASS
+r243_schema_contract PASS
+r241_repeatability_texture_isolation PASS
+r240_texture_decision_scope PASS
+r238_texture_status_presentation PASS
+r237_texture_active_proof PASS
+package_alignment PASS
+version_consistency PASS
+r235_massive_catalogue_candidate_guard PASS
+r233_manual_wrapper_calibration_guard PASS
+local_db_import_schema PASS
+r217_teach_geometry_generation PASS
+r215_suffix_reconstruction PASS
+candidate_reconstruction PASS
+ocr_latency PASS
+timeout_phase PASS
+phase_timing PASS
+catalogue_wrapper_js_syntax PASS
+inline_js_syntax PASS
+catalogue_canonical_hashes PASS
+r242_checkpoint_inherited PASS
+r242_roundtrip_inherited PASS
+Moteur V2.28 TEST R156 conserve. Seuils OCR 0,70 / 0,88 conserves. Stable V2.27 non remplacee. Catalogue canonique 10/10 blocs inchanges; audit separe CAT-R243.
