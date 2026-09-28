@@ -1,0 +1,7 @@
+BRES CLES R246 verified checkpoint
+Runtime: V2.28 TEST R156
+Stable: V2.27 unchanged
+Library ZIP SHA-256: d80a160ab3b16d5320ed157cf606dad35af8e0be86e95a01c849bb43764cacf3
+Verification: 23/23 PASS
+Catalogue: 5103/5103 unique; 10/10 canonical chunk hashes unchanged
+Physical Samsung test required at this milestone: no
