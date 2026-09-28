@@ -1,0 +1,10 @@
+BRES CLES CATALOGUE CAT-R259 PROOF
+Audit PASS
+References 5103
+Unique 5103
+Canonical hashes 10/10 unchanged
+BK3-4 / BK34 pair preserved
+R259 runtime source binding requires no catalogue mutation
+ZIP SHA256 60668a46827c5712789d767026cf8c68234a8a15c2eb4935eae76a2ad5fd924c
+File count 550
+Library copy verified byte for byte
