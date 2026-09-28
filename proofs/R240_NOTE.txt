@@ -1,0 +1,1 @@
+R240 verification completed successfully. The OCR diagnostic now separates texture contribution to the internal score from texture permission to influence a decision. Weak geometry calibration blocks decision influence even when texture contribution is internally active. Stable V2.27 is unchanged.
