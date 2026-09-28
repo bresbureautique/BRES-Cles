@@ -1,0 +1,126 @@
+--- R248/index.html
++++ R249/index.html
+@@ -34,7 +34,7 @@
+ <body>
+ <div class="app-version-badge">V2.28 TEST R156 • CATALOGUE SILCA MASSIF • STABLE NON REMPLACÉE</div>
+ <header><h1>BRES — Identification de clés</h1><p>V2.28 TEST R156 • application de test séparée + gabarit compact 0–50 mm + caméra guidée autofocus + OCR + catalogue Silca massif</p></header>
+-<div id="checkpointTrace" class="status ok"><b>Checkpoint de travail : R248</b> — moteur V2.28 TEST R156 conservé ; V2.27 reste la version stable. Tous les exports utilisateur portent maintenant le checkpoint R248 ; les données conservent V2.28 TEST R156 comme version moteur.</div>
++<div id="checkpointTrace" class="status ok"><b>Checkpoint de travail : R249</b> — moteur V2.28 TEST R156 conservé ; V2.27 reste la version stable. Tous les exports utilisateur portent maintenant le checkpoint R249 ; les données conservent V2.28 TEST R156 comme version moteur.</div>
+ 
+ <div id="cameraModal" class="camera-modal hidden" aria-hidden="true">
+  <div class="cam-top">BRES : CAMÉRA GUIDÉE V2.28 TEST R156 — <span id="camSideLabel">Recto</span></div>
+@@ -815,6 +815,54 @@
+  const blocked=invalidateOCRDiagnosticSnapshotR245({errors});
+  return {...blocked,preflightReceiptIntegrityR248:receiptIntegrity,decisionInfluence:false};
+ }
++// R249 : le reçu de publication est maintenant lié au sceau de contexte R173
++// et à l’identité de la série de captures du snapshot qui l’a produit. Un reçu
++// structurellement valide mais copié depuis un autre snapshot est refusé.
++function diagnosticPublicationContextIdentityR249(payload){
++ const seal=payload&&payload.contextSealR173;
++ const series=payload&&payload.captureSeries;
++ return {
++  schema:"bres-ocr-diagnostic-publication-context-binding-r249-v1",
++  contextSealSchema:seal&&seal.schema?String(seal.schema):null,
++  identificationEpoch:Number(seal&&seal.identificationEpoch),
++  mainPhotoEpoch:Number(seal&&seal.mainPhotoEpoch),
++  ocrCaptureCycleEpoch:Number(seal&&seal.ocrCaptureCycleEpoch),
++  localTemplateEpoch:Number(seal&&seal.localTemplateEpoch),
++  captureSeriesActive:!!(seal&&seal.captureSeriesActive),
++  captureSeriesId:Number(seal&&seal.captureSeriesId)||0,
++  captureSeriesPayloadId:Number(series&&series.seriesId)||0,
++  signatureFingerprint:String((seal&&seal.signatureFingerprint)||""),
++  preflightReceiptSchemaR247:String((payload&&payload.diagnosticPublicationPreflightR247&&payload.diagnosticPublicationPreflightR247.schema)||""),
++  decisionInfluence:false
++ };
++}
++function bindDiagnosticPublicationContextR249(payload){
++ return diagnosticPublicationContextIdentityR249(payload);
++}
++function diagnosticPublicationContextBindingIntegrityR249(payload){
++ const expected=diagnosticPublicationContextIdentityR249(payload),receipt=payload&&payload.diagnosticPublicationContextBindingR249,errors=[];
++ const finiteFields=["identificationEpoch","mainPhotoEpoch","ocrCaptureCycleEpoch","localTemplateEpoch"];
++ if(!receipt||typeof receipt!=="object")errors.push("publication-context-binding-missing");
++ else{
++  if(receipt.schema!==expected.schema)errors.push("publication-context-binding-schema-mismatch");
++  if(receipt.contextSealSchema!==expected.contextSealSchema)errors.push("publication-context-seal-schema-mismatch");
++  for(const key of finiteFields){
++   if(!Number.isFinite(expected[key])||Number(receipt[key])!==expected[key])errors.push("publication-context-"+key+"-mismatch");
++  }
++  if(!!receipt.captureSeriesActive!==expected.captureSeriesActive)errors.push("publication-context-series-active-mismatch");
++  if(Number(receipt.captureSeriesId||0)!==expected.captureSeriesId)errors.push("publication-context-series-id-mismatch");
++  if(Number(receipt.captureSeriesPayloadId||0)!==expected.captureSeriesPayloadId)errors.push("publication-context-series-payload-id-mismatch");
++  if(String(receipt.signatureFingerprint||"")!==expected.signatureFingerprint)errors.push("publication-context-signature-mismatch");
++  if(String(receipt.preflightReceiptSchemaR247||"")!==expected.preflightReceiptSchemaR247)errors.push("publication-context-preflight-schema-mismatch");
++  if(receipt.decisionInfluence!==false)errors.push("publication-context-decision-influence-invalid");
++ }
++ return {schema:"bres-ocr-diagnostic-publication-context-binding-integrity-r249-v1",ok:errors.length===0,errors,expected:{...expected},decisionInfluence:false};
++}
++function blockInvalidDiagnosticPublicationContextBindingR249(bindingIntegrity){
++ const errors=(bindingIntegrity&&Array.isArray(bindingIntegrity.errors)&&bindingIntegrity.errors.length)?[...bindingIntegrity.errors]:["publication-context-binding-invalid"];
++ const blocked=invalidateOCRDiagnosticSnapshotR245({errors});
++ return {...blocked,publicationContextBindingIntegrityR249:bindingIntegrity,decisionInfluence:false};
++}
+ // R231 : les scores géométriques issus de match() restent visibles dans les
+ // diagnostics, mais leur provenance de calibration est désormais explicite.
+ // Une calibration faible autorise un affichage indicatif uniquement : le score ne doit
+@@ -2418,8 +2466,8 @@
+     // On ne peut pas appeler le sélecteur natif depuis ce catch asynchrone sans risquer son blocage Android.
+     guidedNativeFallbackOnce[side]=true;
+     const status=el('photoStatus');
+-    if(status){status.className='status warn';status.textContent='Caméra guidée indisponible. Appuyez une seconde fois sur Recto/Verso guidé : le checkpoint R248 ouvrira la caméra standard du téléphone.';}
+-    alert('La caméra guidée n’est pas disponible ici. Appuyez une seconde fois : R248 ouvrira la caméra standard du téléphone.');
++    if(status){status.className='status warn';status.textContent='Caméra guidée indisponible. Appuyez une seconde fois sur Recto/Verso guidé : le checkpoint R249 ouvrira la caméra standard du téléphone.';}
++    alert('La caméra guidée n’est pas disponible ici. Appuyez une seconde fois : R249 ouvrira la caméra standard du téléphone.');
+   }
+ }
+ function closeGuidedCamera(){
+@@ -2658,12 +2706,12 @@
+  let a=document.createElement("a"),blob;
+  try{
+   blob=new Blob([JSON.stringify(getDB(),null,2)],{type:"application/json"});
+-  a.download="BRES_base_etalons_V2_28_CHECKPOINT_R248.json";
++  a.download="BRES_base_etalons_V2_28_CHECKPOINT_R249.json";
+  }catch(e){
+   let raw="", storageReadable=true;
+   try{raw=readLocalTemplateRaw()||""}catch(storageError){storageReadable=false;raw="BRES Clés V2.28 TEST R156\n"+(storageError.message||storageError)}
+   blob=new Blob([raw],{type:"text/plain"});
+-  a.download=storageReadable?"BRES_base_etalons_RECUPERATION_R248.txt":"BRES_stockage_local_DIAGNOSTIC_R248.txt";
++  a.download=storageReadable?"BRES_base_etalons_RECUPERATION_R249.txt":"BRES_stockage_local_DIAGNOSTIC_R249.txt";
+   el("teachStatus").className="status warn";
+   el("teachStatus").textContent=storageReadable
+    ? "Base locale endommagée : copie brute de récupération exportée. La base stockée n’a pas été modifiée."
+@@ -2680,7 +2728,7 @@
+   return;
+  }
+  const a=document.createElement("a"),blob=new Blob([raw],{type:"text/plain"});
+- a.download="BRES_base_etalons_copie_externe_RECUP_R248.txt";
++ a.download="BRES_base_etalons_copie_externe_RECUP_R249.txt";
+  a.href=URL.createObjectURL(blob);a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+  el("teachStatus").className="status warn";
+  el("teachStatus").textContent="Copie externe récupérée exportée. Vérifiez-la avant toute réimportation ; la base active n’a pas été modifiée.";
+@@ -5262,6 +5310,7 @@
+   const publicationPreflightR247=preflightOCRDiagnosticPublicationR247(lastOCRDiagnosticExport);
+   if(!publicationPreflightR247.ok)return {...publicationPreflightR247,staleContext:false,captureSeriesId:expectedSeriesId};
+   lastOCRDiagnosticExport.diagnosticPublicationPreflightR247={schema:publicationPreflightR247.schema,ok:true,published:true,schemaIntegrity:true,requiresFreshDiagnostic:false,decisionInfluence:false};
++  lastOCRDiagnosticExport.diagnosticPublicationContextBindingR249=bindDiagnosticPublicationContextR249(lastOCRDiagnosticExport);
+   // R246 : seul ce chemin de publication fraîche, après validation du contexte R188,
+   // est autorisé à lever le reçu d’invalidation R245. R247 impose désormais son précontrôle
+   // d’intégrité avant cette levée et avant toute activation du bouton d’export.
+@@ -5286,12 +5335,14 @@
+   syncCatalogueQa2ResolutionTraceToDiagnostic();
+   const preflightReceiptIntegrityR248=diagnosticPublicationPreflightReceiptIntegrityR248(lastOCRDiagnosticExport);
+   if(!preflightReceiptIntegrityR248.ok)return blockInvalidDiagnosticPreflightReceiptExportR248(preflightReceiptIntegrityR248);
++  const publicationContextBindingIntegrityR249=diagnosticPublicationContextBindingIntegrityR249(lastOCRDiagnosticExport);
++  if(!publicationContextBindingIntegrityR249.ok)return blockInvalidDiagnosticPublicationContextBindingR249(publicationContextBindingIntegrityR249);
+   const schemaIntegrityR244=diagnosticExportSchemaIntegrityR244(lastOCRDiagnosticExport);
+   if(!schemaIntegrityR244.ok)return blockInvalidDiagnosticSchemaExportR244(schemaIntegrityR244);
+-  const exportPayload={...lastOCRDiagnosticExport,packageCheckpoint:"R248",diagnosticPublicationReceiptIntegrityR248:preflightReceiptIntegrityR248,diagnosticSchemaIntegrityR244:schemaIntegrityR244};
++  const exportPayload={...lastOCRDiagnosticExport,packageCheckpoint:"R249",diagnosticPublicationReceiptIntegrityR248:preflightReceiptIntegrityR248,diagnosticPublicationContextBindingIntegrityR249:publicationContextBindingIntegrityR249,diagnosticSchemaIntegrityR244:schemaIntegrityR244};
+   const blob=new Blob([JSON.stringify(exportPayload,null,2)+"\n"],{type:"application/json"});
+   const a=document.createElement("a");
+-  a.download=`BRES_diagnostic_OCR_CHECKPOINT_R248_${new Date().toISOString().replace(/[:.]/g,"-")}.json`;
++  a.download=`BRES_diagnostic_OCR_CHECKPOINT_R249_${new Date().toISOString().replace(/[:.]/g,"-")}.json`;
+   a.href=URL.createObjectURL(blob);a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+ }
+ function escapeOCRDiagnosticText(value){
