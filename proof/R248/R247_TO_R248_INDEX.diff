@@ -1,0 +1,20 @@
+--- R247/index.html
++++ R248/index.html
+@@
+- Checkpoint de travail : R247
++ Checkpoint de travail : R248
+@@
++ R248 adds diagnosticPublicationPreflightReceiptIntegrityR248(payload), requiring the stored R247 preflight receipt to retain schema, ok=true, published=true, schemaIntegrity=true, requiresFreshDiagnostic=false, and decisionInfluence=false.
++ If receipt validation fails, export is blocked through R245 snapshot invalidation and a fresh OCR diagnostic is required.
++ R244 schema/content integrity validation remains the second independent export barrier.
+@@
+- packageCheckpoint: R247
++ packageCheckpoint: R248
+@@
+- BRES_diagnostic_OCR_CHECKPOINT_R247_
++ BRES_diagnostic_OCR_CHECKPOINT_R248_
+@@
+- active base/profile/calibration export labels R247
++ active base/profile/calibration export labels R248
+
+Full local diff SHA-256: 17153665eee109a364610942b7c568775338dd5896db683a03de3e33237a938f
