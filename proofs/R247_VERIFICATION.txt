@@ -1,0 +1,1 @@
+PASS | R247 | 24/24 control families | publication preflight fail-closed | R244 second barrier preserved | R245 invalidation preserved | R246 clearance provenance preserved | runtime R156 | thresholds 0.70/0.88 | stable V2.27 not replaced | canonical catalogue 10/10 unchanged
