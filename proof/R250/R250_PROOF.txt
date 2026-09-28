@@ -1,0 +1,42 @@
+BRES CLES - CHECKPOINT R250 PROOF
+
+Parent: v2.28-test-r249-proof
+Checkpoint: R250
+Runtime: V2.28 TEST R156
+Stable: V2.27 unchanged
+OCR thresholds: 0.70 / 0.88 unchanged
+Verification: 27/27 PASS
+Canonical catalogue: 10/10 hashes unchanged
+Application ZIP SHA-256: a88dd8412454db15e9836a19b9918be1ed2ab14eba25388ce3733dddbf62e282
+Application file count: 6595
+
+R250 milestone:
+The OCR diagnostic is now bound to the exact OCR request that produced it.
+The snapshot records requestEpoch, identificationEpoch and capture-series identity.
+At export time R248 validates the R247 receipt, R249 validates snapshot context,
+R250 validates OCR request identity and requires it to still be the current request,
+then R244 validates diagnostic schemas. A second OCR request on the same photos/series
+therefore supersedes the first request proof. Reusing or mutating an older request receipt
+fails closed through R245 and requires a fresh OCR diagnostic.
+
+Regression coverage:
+- healthy request binding
+- JSON serialize/readback
+- requestEpoch mutation
+- two successive OCR requests on the same photos/series
+- copied first-request proof into the second request
+- fail-closed invalidation through R245
+
+Key source SHA-256:
+index.html 3334db85b24cf5b2e8160f22d2934d3322e9309f19915e73b7a84c93865b486d
+v228-catalogue.js 1e193b89e062ee435a9ef99c4d10b4213ac6d8fc153809889080bf10d09f8804
+CHECKPOINT_R250.txt 5da35c3f862fab6b6aa3ebe313e7feda052bb4e321acc5fbbd92aec1b3b78835
+request binding guard 1ac2ab994e1482ec425be2fc6c689aba1912437be33c73538ab7e92bdc86867a
+R250 verification f420716faa21caf54c5b257c0e09506b45ed0954329eb8200b39d253840c5bdc
+index diff 21d2ea4848abcd4aaa1ccbee4d9f15f63e4e95204862057bb1daa50894a68427
+wrapper diff 2e073559f8645e8dd585c2e2e8f4b2b45a5a537299c3e4bbb101483f46a5c2ae
+
+Library re-materialization:
+The application ZIP and SHA-256 file matched byte-for-byte after upload.
+
+No R250 test version replaces stable V2.27.
