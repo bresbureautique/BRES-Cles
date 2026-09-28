@@ -1,0 +1,9 @@
+BRES CLES CAT-R246 verified checkpoint
+Parent: CAT-R245
+Canonical catalogue: unchanged
+References: 5103 / 5103 unique
+Canonical chunks: 10 / 10 unchanged
+Known compact collision preserved: BK3-4 / BK34
+CAT-R246 audit: PASS
+Library ZIP SHA-256: 51c405afca69107270a74e764d4a66f0914e059417af76abe902e08e0ebb6e34
+Library round-trip audit: PASS
