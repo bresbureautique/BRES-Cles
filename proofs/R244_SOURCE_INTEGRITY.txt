@@ -1,0 +1,6 @@
+BRES CLES R244 — INTEGRITE
+ZIP application SHA-256: 37fd7e4079f6fee91c2d35c103a5bd1484a0729999d9655804c600011c2f5e70
+Fichiers apres reextraction: 6439/6439 identiques
+Archive ZIP: PASS
+Library round-trip: SHA-256 identique a l'original
+Catalogue associe: CAT-R244 separe
