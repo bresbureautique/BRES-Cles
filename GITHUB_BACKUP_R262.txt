@@ -1,0 +1,14 @@
+BRES CLES — SAUVEGARDE GITHUB R262
+
+Branche cible : v2.28-test-r262-proof
+Parent logique : v2.28-test-r261-proof
+Stable : stable-v2.27 et main restent inchangées.
+Moteur : V2.28 TEST R156.
+
+Le snapshot complet vérifié est archivé dans Library :
+BRES Cles/Sauvegardes/BRES_Cles_Mobile_V2_28_CHECKPOINT_R262.zip
+SHA-256 : 851622f771e6461e8dcafe6e3a0226ff8b64bc2bf76cb087f5bd93a2217fed13
+Fichiers : 6931 ; réextraction 6931/6931 ; 0 différence.
+
+GitHub conserve le checkpoint, le rapport de vérification et les empreintes de source pour vérification indépendante.
+Les diffs R261 vers R262 et les tests complets sont inclus dans le snapshot Library vérifié.
