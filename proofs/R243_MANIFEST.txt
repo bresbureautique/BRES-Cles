@@ -1,0 +1,13 @@
+Checkpoint R243
+Parent R242
+Runtime V2.28 TEST R156
+Stable V2.27 unchanged
+Verification 22/22 PASS
+Files in verified application ZIP 6419
+Canonical catalogue references 5103 / 5103 unique
+Canonical catalogue hashes unchanged 10/10
+Diagnostic contract bres-diagnostic-schema-contract-r243-v1
+Geometry diagnostic schema bres-geometry-diagnostic-r242-v1
+Texture provenance schema bres-texture-provenance-r241-v1
+Single-source schema literals: geometry 1 / texture 1
+JSON serialize/read round-trip PASS
