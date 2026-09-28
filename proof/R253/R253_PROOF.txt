@@ -7,8 +7,8 @@ Stable: V2.27 unchanged
 OCR thresholds: 0.70 / 0.88 unchanged
 Verification: 30/30 PASS
 Canonical catalogue: 10/10 hashes unchanged
-Application ZIP SHA-256: 6f2708c551e68ecdc58fbab7e4fb9967d43ac0d4b16abcbe2d029fe4fa0d095d
-Application file count: 6708
+Application ZIP SHA-256: 508bfe0e7628d49e185b61a73e1559aabc5ff49a8bdf98c504890d950e6bd56f
+Application file count: 6709
 
 R253 milestone:
 The R252 freshness-release receipt is now validated with strict canonical types. The errors field must be exactly an empty array; status fields must be strict booleans; schema/source fields must be exact strings; request epochs must be positive integer numbers. String coercion such as requestEpoch="42" is rejected. The canonical guard runs at publication and again immediately before JSON export. Failure triggers the existing R245 fail-closed invalidation and requires a fresh OCR diagnostic. Existing R244-R252 protections remain active.
@@ -25,9 +25,9 @@ Regression coverage:
 
 Archive verification:
 unzip integrity PASS
-re-extraction comparison 6708/6708 files identical, 0 differences
+re-extraction comparison 6709/6709 files identical, 0 differences
 
 Library verification:
-The application ZIP and SHA-256 file matched byte-for-byte after upload to /BRES Cles/Sauvegardes. The re-materialized ZIP SHA-256 remained 6f2708c551e68ecdc58fbab7e4fb9967d43ac0d4b16abcbe2d029fe4fa0d095d and unzip integrity remained PASS.
+The application ZIP and SHA-256 file matched byte-for-byte after upload to /BRES Cles/Sauvegardes. The re-materialized ZIP SHA-256 remained 508bfe0e7628d49e185b61a73e1559aabc5ff49a8bdf98c504890d950e6bd56f and unzip integrity remained PASS.
 
 No R253 test version replaces stable V2.27.
