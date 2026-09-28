@@ -1,0 +1,37 @@
+BRES CLES V2.28 — VERIFICATION CHECKPOINT R262
+
+RESULTAT CIBLE: PASS
+- Familles de contrôles R262 : 29/29 PASS
+- checkpoint_traceability: PASS
+- r262_request_integer_identity: PASS
+- r261_request_source_validity: PASS
+- r260_release_source_binding: PASS
+- r259_publication_source_binding: PASS
+- r258_strict_invalidation_source: PASS
+- r256_epoch_canonical_source: PASS
+- r252_invalidation_clearance: PASS
+- r245_snapshot_invalidation: PASS
+- r243_schema_contract: PASS
+- r241_repeatability_texture_isolation: PASS
+- r240_texture_decision_scope: PASS
+- r238_texture_status_presentation: PASS
+- r237_texture_active_proof: PASS
+- package_alignment: PASS
+- version_consistency: PASS
+- r235_massive_catalogue_candidate_guard: PASS
+- r233_manual_wrapper_calibration_guard: PASS
+- local_db_import_schema: PASS
+- r217_teach_geometry_generation: PASS
+- r215_suffix_reconstruction: PASS
+- candidate_reconstruction: PASS
+- ocr_latency: PASS
+- timeout_phase: PASS
+- phase_timing: PASS
+- catalogue_wrapper_js_syntax: PASS
+- inline_js_syntax: PASS
+- catalogue_canonical_hashes: PASS
+- r261_checkpoint_inherited: PASS
+- Moteur conservé : V2.28 TEST R156.
+- Seuils OCR conservés : 0,70 / 0,88.
+- Stable : V2.27 non remplacée.
+- Catalogue canonique : 10/10 blocs inchangés ; audit séparé CAT-R262.
