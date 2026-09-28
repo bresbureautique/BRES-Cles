@@ -1,0 +1,5 @@
+BRES CLES V2.28 CHECKPOINT R244
+Parent GitHub: v2.28-test-r243-proof @ d52d158336626ed3d2969524179dd954054d64fa
+Stable preservee: V2.27.
+Jalon: garde fail-closed d'integrite des schemas juste avant export diagnostic OCR.
+Le moteur reste V2.28 TEST R156; seuils OCR 0,70 / 0,88; catalogue canonique inchange.
