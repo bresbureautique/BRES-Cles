@@ -1,0 +1,31 @@
+BRES CLES - CHECKPOINT R252 PROOF
+
+Parent: v2.28-test-r251-proof
+Checkpoint: R252
+Runtime: V2.28 TEST R156
+Stable: V2.27 unchanged
+OCR thresholds: 0.70 / 0.88 unchanged
+Verification: 29/29 PASS
+Canonical catalogue: 10/10 hashes unchanged
+Application ZIP SHA-256: 03d724987c93e7743bb4f9e13043d910b56fbaee618126b7b00a88e5cc41c61a
+Application file count: 6669
+
+R252 milestone:
+The R251 fresh-diagnostic invalidation can be released only by the exact OCR request that created the replacement diagnostic. The R252 release verifies the R251 invalidation receipt, the R250 publication request proof and the current requestEpoch before clearing the fresh-diagnostic requirement. Export independently rechecks the stored R252 release proof before the existing R244 schema barrier. Existing R244-R251 protections remain active.
+
+Regression coverage:
+- matching OCR request releases the invalidation
+- different requestEpoch is rejected
+- an old release is rejected after a newer OCR request starts
+- interrupted then resumed OCR can release only the matching current request
+- JSON serialize/parse preserves the release proof
+- missing or modified release proof is rejected at export
+
+Archive verification:
+unzip integrity PASS
+re-extraction comparison 6669/6669 files identical, 0 differences
+
+Library verification:
+The application ZIP and SHA-256 file matched byte-for-byte after upload to /BRES Cles/Sauvegardes. The re-materialized ZIP SHA-256 remained 03d724987c93e7743bb4f9e13043d910b56fbaee618126b7b00a88e5cc41c61a and unzip integrity remained PASS.
+
+No R252 test version replaces stable V2.27.
