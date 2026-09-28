@@ -1,0 +1,1 @@
+CAT-R240 audit PASS. Parent CAT-R239. Canonical catalogue unchanged: 5103 references, 5103 unique, 10 canonical block hashes unchanged. R240 diagnostic decision-scope fields stay outside canonical catalogue data.
