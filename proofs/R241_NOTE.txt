@@ -1,0 +1,1 @@
+R241 verification PASS. Stable V2.27 unchanged. See the checksum and manifest proof files for details.
