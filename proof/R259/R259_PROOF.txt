@@ -1,0 +1,8 @@
+BRES CLES V2.28 CHECKPOINT R259 PROOF
+Verification 26/26 PASS
+Runtime V2.28 TEST R156
+Stable V2.27 unchanged
+ZIP SHA256 a610cf30a1057301e94f5059fb0f30e41908f7a4c5925f44661edc3f5cc7b261
+File count 6842
+Library copy verified byte for byte
+CAT-R259 separate and canonical catalogue unchanged
