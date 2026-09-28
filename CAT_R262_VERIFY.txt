@@ -1,0 +1,4 @@
+CAT-R262 PASS
+5103 references; 5103 unique; 10 canonical hashes unchanged.
+Library ZIP SHA256 02969c3d7cfa2815c87a0151ad69ecf6b8893125695f50c98ce1b74b7b7e6e96
+577 files; 0 differences after re-extraction.
