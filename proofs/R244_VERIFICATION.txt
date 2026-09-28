@@ -1,0 +1,12 @@
+BRES CLES V2.28 — VERIFICATION CHECKPOINT R244
+RESULTAT: PASS
+Familles de controles: 22/22 PASS
+- garde integrite export schema R244: PASS
+- contrat schema R243 preserve: PASS
+- repeatabilite texture R241: PASS
+- portee decisionnelle texture R240: PASS
+- alignement checkpoint paquet R244: PASS
+- syntaxe JS inline/wrapper: PASS
+- catalogue canonique: 10/10 empreintes inchangees
+- checkpoint R243 herite: PASS
+Stable: V2.27 non remplacee.
