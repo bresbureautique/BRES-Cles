@@ -1,0 +1,6 @@
+CAT-R244 INTEGRITE
+ZIP SHA-256: 71eda2e30d34a85cc13ee406fe445c6a5095eac329073676873a8eb6ec9f43ed
+426/426 fichiers identiques apres reextraction
+Archive ZIP: PASS
+Library round-trip: PASS
+Catalogue canonique modifie: NON
