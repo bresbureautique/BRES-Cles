@@ -1,0 +1,13 @@
+BRES CLES V2.28 — PREUVE R263
+
+Parent : v2.28-test-r262-proof
+Jalon : liaison R250 strictement typée sans Number(...).
+Runtime : V2.28 TEST R156.
+Stable : V2.27 inchangée.
+Tests : 30/30 PASS.
+Catalogue canonique : 10/10 empreintes inchangées ; audit séparé CAT-R263.
+Archive : BRES_Cles_Mobile_V2_28_CHECKPOINT_R263.zip
+SHA-256 : 917342a41542e1e1e94ee3fdc6bdefd95960cbf5d13e33e0f17f3d69201ee848
+Fichiers archive : 6966.
+Réextraction : 6966/6966 identiques, 0 différence.
+Library : archive et SHA rematérialisés, comparaison octet par octet PASS, ZIP test PASS.
