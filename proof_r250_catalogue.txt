@@ -1,0 +1,12 @@
+Catalogue audit checkpoint R250 verified.
+Parent: CAT-R249 proof branch.
+References: 5103 / 5103 unique.
+Canonical catalogue blocks: 10 / 10 unchanged.
+BK3-4 and BK34 remain distinct.
+Runtime OCR-request binding separation audit: PASS.
+Catalogue archive SHA-256: b7d8092c7a8d9157fbd8a38b7cf28814f2a221c8a4317ed99468be11313dba9f.
+Catalogue archive file count: 479.
+Audit script SHA-256: 611a14c55ba9e7c3977b259c141c05415b7b2d272236a1b66979db64a10cb77f.
+Separation audit SHA-256: 682e89686842901e51f6562be9fb1ef66c64aa41eb67fba39b772d9fae7cbd7a.
+Library re-materialization: catalogue ZIP and SHA-256 file matched byte-for-byte.
+R250 request identity fields remain runtime-only and do not modify canonical catalogue data.
