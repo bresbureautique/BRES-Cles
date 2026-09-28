@@ -1,0 +1,30 @@
+BRES CLES — AUDIT INTERNE CATALOGUE CAT-R262
+RESULTAT: PASS
+PASS | count_5103
+PASS | unique_5103
+PASS | ten_hashes_unchanged
+PASS | compact_collision_count_still_1
+PASS | bk34_pair_preserved
+PASS | r262_checkpoint_present
+PASS | r258_strict_invalidation_source_preserved
+PASS | r259_publication_source_binding_preserved
+PASS | r260_release_source_guard_present
+PASS | r261_request_source_validity_present
+PASS | r262_request_integer_identity_present
+PASS | r256_guard_bound
+PASS | r253_canonical_guard_preserved
+PASS | r251_new_request_invalidation_preserved
+PASS | r250_request_binding_preserved
+PASS | r249_context_binding_preserved
+PASS | r248_receipt_guard_preserved
+PASS | r245_snapshot_state_preserved
+PASS | r244_export_integrity_guard_preserved
+PASS | r241_repeatability_boundary_preserved
+PASS | r240_texture_decision_scope_preserved
+PASS | r237_fail_closed_preserved
+PASS | r235_catalogue_window_guard_preserved
+PASS | runtime_r237_to_r262_fields_absent_from_catalogue
+PASS | r262_requires_no_catalogue_mutation
+PASS | runtime_preserved
+
+Décision : la garde R262 d'identifiants entiers de requête R250 reste exclusivement runtime ; la garde R261 de source canonique et les protections précédentes restent préservées ; les 10 blocs canoniques et les 5 103 références restent inchangés.
