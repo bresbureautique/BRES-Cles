@@ -1,0 +1,19 @@
+Checkpoint R238
+Parent R237
+Runtime V2.28 TEST R156
+Stable V2.27 unchanged
+R238 verification: 18/18 PASS
+Inherited R237 verification: PASS
+Files in verified ZIP: 6313
+Catalogue canonical hashes: 10/10 unchanged
+ZIP SHA256: 8ee51a4b5581a7dd5d6e4df021eb247054a4d88ee7cd8c6b25dec96243a8678d
+index.html SHA256: a0b2612aee66b5ed199d1b694e7201d93052785135dd7e44dc8757d231dc21b5
+v228-catalogue.js SHA256: 7c9d22647c991aeab5144237c2c8b4259e377cf5f403fee666a88b9ae276b6b5
+SNAPSHOT_MANIFEST_R238.json SHA256: 5a951369b65352e4627ec7d11cca3d4dfd7420a3bb052175353f34e8cb1d0409
+SOURCE_HASHES_R238.txt SHA256: f63161e37b13e122fe173989023a395c68e0603bc8eff16ed34241c7452d1e42
+R238_VERIFICATION.json SHA256: 33b347f930968995f79ad8fa59ca98f8a1aeb654190d4543a857d6b158d3496d
+texture_status_presentation_guard_test_r238.py SHA256: 449e0fbc5c01898164091116d49697b35e4704795a7072bcf13e02b23e0b9d72
+CHECKPOINT_R238.txt SHA256: bf6d028adb5161060c778a315625633663117e3ef44d82607f0c0bef6d11590f
+R237_TO_R238_INDEX.diff SHA256: 865c7af0ebeaf109a203af0d83868780b1c56ac2fcacdc6961288d9c2acbb372
+R237_TO_R238_CATALOGUE_WRAPPER.diff SHA256: 70e9ef419882438ab8a18e59739830a8d55127994d2ffd91e60c58da4612dc3c
+Milestone: active-texture proof absence is now explicitly shown as “neutralisée — preuve de fiabilité active absente”; R237 fail-closed behavior is preserved.
