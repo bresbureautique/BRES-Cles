@@ -1,0 +1,11 @@
+CAT-R252 VERIFIED
+Parent: catalogue-v3-audit-r251-final-proof
+Canonical references: 5103 / 5103 unique
+Canonical hashes: 10 / 10 unchanged
+BK3-4 and BK34 remain distinct
+Catalogue ZIP: 1c5b98645d9288309c4b33add6832cef810e971eff8e341c41b1809add07b5ba
+Catalogue files: 495
+Archive integrity: PASS
+Re-extraction: 495/495 files identical
+Library verification: byte-for-byte PASS after re-materialization
+R252 runtime fields do not change canonical catalogue data
