@@ -1,0 +1,13 @@
+BRES CLES - CATALOGUE AUDIT CAT-R255 PROOF
+
+Parent: catalogue-v3-audit-r254-final-proof
+Checkpoint: CAT-R255
+Application checkpoint audited: R255
+Catalogue references: 5103
+Unique references: 5103
+Canonical chunks: 10/10 unchanged
+Compact collision preserved: BK3-4 / BK34
+Catalogue ZIP SHA-256: b41f6bda70e6039e260973cf7347c9c34f6bba29ba65fcdeb3c8b41ad562c185
+Archive files: 519
+Archive verification: unzip PASS; re-extraction 519/519 identical.
+R255 runtime guards do not alter canonical catalogue data.
