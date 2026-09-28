@@ -1,0 +1,14 @@
+BRES CLES - CATALOGUE CAT-R257 PROOF
+
+Parent: catalogue-v3-audit-r256-final-proof
+Checkpoint: CAT-R257
+Canonical catalogue: unchanged
+References: 5103 / 5103 unique
+Canonical hashes: 10/10 unchanged
+Compact collision: BK3-4 / BK34 only
+Catalogue ZIP SHA-256: 7f64f67d6b5812d2b9870573cdf90cdd488fa29e32db4569def7d9bfc76d6df2
+Catalogue audit file count: 534
+
+CAT-R257 verifies that the R257 strict invalidation-epoch source hardening remains exclusively runtime and changes no catalogue reference or canonical hash.
+
+Archive verification: unzip PASS; re-extraction 534/534 identical; Library rematerialization byte-identical.
