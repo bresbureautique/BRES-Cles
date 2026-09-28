@@ -1,0 +1,14 @@
+checkpoint=R245
+parent=R244
+runtime=V2.28 TEST R156
+stable=V2.27 unchanged
+verification=22/22 PASS
+zip_sha256=ed93efd1a5340e1401c539c2c234a4e7cdc460b3258e13c6cbeb47ebfc2d162f
+archive_file_count=6459
+library_roundtrip=PASS
+catalogue=CAT-R245 separate
+catalogue_canonical_hashes=10/10 unchanged
+snapshot_invalidation=bres-ocr-diagnostic-snapshot-invalidation-r245-v1
+fail_closed=true
+requires_fresh_diagnostic=true
+secondary_sync_cannot_restore=true
