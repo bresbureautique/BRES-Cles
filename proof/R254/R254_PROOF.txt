@@ -1,0 +1,33 @@
+BRES CLES - CHECKPOINT R254 PROOF
+
+Parent: v2.28-test-r253-proof
+Checkpoint: R254
+Runtime: V2.28 TEST R156
+Stable: V2.27 unchanged
+OCR thresholds: 0.70 / 0.88 unchanged
+Verification: 24/24 PASS
+Canonical catalogue: 10/10 hashes unchanged
+Application ZIP SHA-256: 3691b7d9969d36885cf8064abd47e55943fe17ecf5be5f4f9d6d837214a2b477
+Application file count: 6730
+
+R254 milestone:
+The current OCR request epoch is now validated without implicit numeric coercion. currentRequestEpoch must already be a positive integer number; values such as "42", floats, NaN, Infinity, null and boxed Number objects are rejected fail-closed. R254 also binds the current epoch strictly to the R250 publication request and to the three R252 receipt epochs. The guard runs at diagnostic publication and again immediately before JSON export. Any failure delegates to the existing R245 invalidation and requires a fresh OCR diagnostic. Existing R244-R253 protections remain active.
+
+Regression coverage:
+- valid numeric epoch passes
+- JSON serialize/parse preserves acceptance
+- string epoch rejected
+- float epoch rejected
+- NaN and Infinity rejected
+- null and boxed Number rejected
+- request epoch mismatch rejected
+- receipt epoch mismatch rejected
+
+Archive verification:
+unzip integrity PASS
+re-extraction comparison 6730/6730 files identical, 0 differences
+
+Library verification:
+Application ZIP and SHA-256 file matched byte-for-byte after upload to /BRES Cles/Sauvegardes. Re-materialized ZIP SHA-256 remained 3691b7d9969d36885cf8064abd47e55943fe17ecf5be5f4f9d6d837214a2b477 and unzip integrity remained PASS.
+
+No R254 test version replaces stable V2.27.
