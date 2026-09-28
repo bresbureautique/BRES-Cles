@@ -1,0 +1,10 @@
+BRES CLES V2.28 — CHECKPOINT R261
+
+Parent GitHub : v2.28-test-r260-proof.
+Moteur : V2.28 TEST R156.
+Stable : V2.27 préservée.
+Seuils OCR : 0,70 / 0,88 inchangés.
+Jalon : la requête R250 exige désormais une provenance OCR canonique (ocr-main ou ocr-head) pour être valide.
+Vérification locale : 28/28 familles PASS.
+Archive vérifiée par réextraction : 6899/6899 fichiers identiques.
+SHA-256 ZIP : 3ff7c5616ae8bfd8d700f0f0b2a82d952f3a38c60ca29c11484309ffed101816
