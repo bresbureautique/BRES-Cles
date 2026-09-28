@@ -1,0 +1,13 @@
+BRES CLES - CATALOGUE CAT-R253 PROOF
+Parent: catalogue-v3-audit-r252-final-proof
+Audit: PASS
+References: 5103 / 5103 unique
+Canonical chunks: 10/10 hashes unchanged
+Compact collision: BK3-4 / BK34 preserved
+Runtime R253 canonical receipt guard absent from catalogue data: PASS
+Catalogue ZIP SHA-256: 59e4401440cfb9b9206d75aa5422949f567e17bdf1907a48f53892c00ae94650
+Catalogue file count: 503
+Archive integrity: PASS
+Re-extraction comparison: 503/503 files identical, 0 differences
+Library round-trip: byte-for-byte PASS, SHA-256 unchanged, unzip PASS
+Stable V2.27 untouched.
