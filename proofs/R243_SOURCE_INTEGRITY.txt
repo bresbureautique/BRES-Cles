@@ -1,0 +1,5 @@
+R243 source integrity proof
+index.html sha256 groups: 107168c5 baaf0ed6 da6c8b34 c629bd01 b30be1b2 55a35246 2e2602ed 0d60d50e
+v228-catalogue.js sha256 groups: 8052854f 6c41e0f8 fe82a5ea 9d8d0b6b 1fc20951 2548e6c7 2c52160c 1e9732d1
+R243 verification report sha256 groups: d237ef49 c369de64 5773acfd d9f1bea3 06bf091b f8f5a45d 30f7ab3c 783ec251
+Application archive sha256 groups: 1a5654e0 8f6bfe73 96533616 4b1bb7f9 9ff228d7 37dec1c0 eec0dafc 1ac0b12e
