@@ -1,0 +1,9 @@
+Checkpoint R239
+Parent R238
+Runtime V2.28 TEST R156
+Stable V2.27 unchanged
+Verification 19/19 PASS
+Files in verified ZIP 6333
+Canonical catalogue hashes unchanged 10/10
+Library copy uploaded and rematerialized byte-identical
+See R239_CHECKSUMS.txt for ZIP SHA256 values.
