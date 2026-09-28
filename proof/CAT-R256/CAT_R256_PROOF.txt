@@ -1,0 +1,14 @@
+BRES CLES - CATALOGUE CAT-R256 PROOF
+
+Parent: catalogue-v3-audit-r255-final-proof
+Checkpoint: CAT-R256
+Canonical catalogue: unchanged
+References: 5103 / 5103 unique
+Canonical hashes: 10/10 unchanged
+Compact collision: BK3-4 / BK34 only
+Catalogue ZIP SHA-256: 205b80accd22262ba3d7b306fe9e4d957985345de6b1240ee5f4f3f075b24802
+Catalogue audit file count: 525
+
+CAT-R256 verifies that the R256 runtime canonical-source epoch guard remains outside the ten canonical catalogue chunks and changes no catalogue reference or canonical hash.
+
+Archive verification: unzip PASS; re-extraction 525/525 identical.
