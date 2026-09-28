@@ -1,0 +1,7 @@
+Catalogue audit checkpoint R249 verified.
+Parent: CAT-R248 proof branch.
+References: 5103 / 5103 unique.
+Canonical catalogue blocks: 10 / 10 unchanged.
+BK3-4 and BK34 remain distinct.
+Runtime context-binding separation audit: PASS.
+Catalogue archive SHA-256: cd429880dd2a5eec03c226042af1a66797db9206c7cec65261df6f3748df265e.
