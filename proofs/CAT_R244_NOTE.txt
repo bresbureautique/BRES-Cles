@@ -1,0 +1,7 @@
+BRES CLES CATALOGUE — CAT-R244
+Parent GitHub: catalogue-v3-audit-r243-final-proof @ cd68820029b53833b04ce446acf7f2a059452a22
+Audit: PASS
+References: 5103 / 5103 uniques
+Empreintes canoniques: 10/10 inchangees
+Collision compacte historique: BK3-4 / BK34 preservee
+Jalon R244 exclusivement runtime: garde fail-closed d'integrite export diagnostic.
