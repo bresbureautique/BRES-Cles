@@ -7,5 +7,4 @@ Files in verified application ZIP 6373
 Catalogue audit files 402
 Canonical catalogue references 5103 / 5103 unique
 Canonical catalogue hashes unchanged 10/10
-Library copies uploaded, rematerialized and byte-identical
-See R241_CHECKSUMS.txt and R241_SOURCE_PROOF.txt for verification hashes.
+Archive hashes are recorded in R241_CHECKSUMS.txt for verification against the Library copies.
