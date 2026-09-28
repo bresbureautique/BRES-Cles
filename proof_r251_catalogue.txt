@@ -1,0 +1,11 @@
+CAT-R251 VERIFIED
+Parent: catalogue-v3-audit-r250-final-proof
+Canonical references: 5103 / 5103 unique
+Canonical hashes: 10 / 10 unchanged
+BK3-4 and BK34 preserved as distinct references
+Catalogue ZIP SHA256: 7187e41b9cddf293edc649e244a8e52753901a7676d78f3879438b9011bb1f42
+Catalogue files: 488
+Audit script SHA256: fdbf63b4ddf4ededb54bea5f4f08b2ec5bdee373e82d072f50f72e8d7c08e735
+Separation audit SHA256: cbe0bb4ba12ca479ec2f966470949ef39c27f1d2f0322f07d3c2b201f1a71dac
+Library copy verified byte-for-byte
+R251 runtime invalidation fields do not modify canonical catalogue data
