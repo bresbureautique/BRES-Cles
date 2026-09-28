@@ -1,0 +1,16 @@
+BRES CLES - CHECKPOINT R258 PROOF
+
+Parent: v2.28-test-r257-proof
+Checkpoint: R258
+Runtime: V2.28 TEST R156
+Stable: V2.27 unchanged
+OCR thresholds: 0.70 / 0.88 unchanged
+Verification: 25/25 PASS
+Canonical catalogue: 10/10 hashes unchanged
+Application ZIP SHA-256: a1afc10985f8a5aa7e8ec4526f1c56a94eb5328a8f3b0242e526d08a692ad3a7
+Application file count: 6817
+
+R258 makes the R251 invalidation source strict. Only ocr-main and ocr-head are copied into the receipt; any other value produces source:null. Invalidation remains immediate and fail-closed, and R252 refuses to release freshness unless the source is valid.
+
+Archive verification: unzip PASS; re-extraction 6817/6817 identical; Library rematerialization byte-identical.
+Stable V2.27 is not replaced.
