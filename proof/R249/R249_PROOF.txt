@@ -1,0 +1,29 @@
+BRES CLES - CHECKPOINT R249 PROOF
+
+Parent: v2.28-test-r248-proof
+Checkpoint: R249
+Runtime: V2.28 TEST R156
+Stable: V2.27 unchanged
+OCR thresholds: 0.70 / 0.88 unchanged
+Verification: 26/26 PASS
+Canonical catalogue: 10/10 hashes unchanged
+Application ZIP SHA-256: 57df466b1acbf093bf728fbe00ed515c75eb43d108c019c875d52059c47572a0
+Application file count: 6564
+
+R249 milestone:
+The publication proof is now bound to the R173 diagnostic context seal and capture-series identity.
+The binding records identification/photo/OCR/local-template epochs, series active/id, diagnostic series id,
+QA2 signature fingerprint, and the R247 preflight receipt schema.
+At export time R248 validates the receipt structure, R249 validates that binding against the current snapshot,
+then R244 validates diagnostic content. Any mismatch fails closed through R245 and requires a fresh OCR diagnostic.
+
+Key source SHA-256:
+index.html 969a77e585dca688674d288e9b873975f788877b4c53f8523a1fc324c7acc501
+v228-catalogue.js a88d23ad214d87c8cd2a0f3acee1f70311f045081758c3895b65f28017425414
+CHECKPOINT_R249.txt cdbf1ddffedd5df0797e93571ac59a5d8d8d84396eeb4711a7574b8134d481ba
+context binding guard 3e56d75204e4ddab3f3f5cb069adde6e7af2458b73f861ca133472a8829f9501
+R249 verification e5992432fada70f29ee3c570d3a5f77d843a17fb89941b662f954ef9c3ed5847
+index diff af6f962fee0bb85eb392a698418adbd22fbdcd8b021a5ab2ba776d094678315f
+wrapper diff de2f9baa22636f88fdcc12972cc4c684bda7f9f225ed058c674996c7644518ad
+
+No R249 test version replaces stable V2.27.
