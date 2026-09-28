@@ -1,0 +1,16 @@
+BRES CLES - CHECKPOINT R257 PROOF
+
+Parent: v2.28-test-r256-proof
+Checkpoint: R257
+Runtime: V2.28 TEST R156
+Stable: V2.27 unchanged
+OCR thresholds: 0.70 / 0.88 unchanged
+Verification: 25/25 PASS
+Canonical catalogue: 10/10 hashes unchanged
+Application ZIP SHA-256: f5b577d0f4d38ef79c832a7ef305b0e0f0e935557d65dd98fc1ce4a7c02154f6
+Application file count: 6792
+
+R257 hardens invalidateOCRDiagnosticForNewRequestR251 by removing Number(requestEpoch) coercion. Only a native positive integer is copied into the invalidation receipt; numeric strings, floats, NaN, Infinity, null, zero, negative values, and boxed Number objects remain invalid and produce requestEpoch:null. R252 therefore cannot release freshness from a silently normalized invalidation epoch. Guards R244-R256 remain preserved.
+
+Archive verification: unzip PASS; re-extraction 6792/6792 identical; Library rematerialization byte-identical.
+Stable V2.27 is not replaced.
