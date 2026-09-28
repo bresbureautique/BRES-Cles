@@ -1,0 +1,12 @@
+BRES CLES - CATALOGUE CAT-R258 PROOF
+
+Parent: catalogue-v3-audit-r257-final-proof
+Checkpoint: CAT-R258
+References: 5103 / 5103 unique
+Canonical hashes: 10/10 unchanged
+Catalogue ZIP SHA-256: 818e04d579b9cc32e6109a5234a89d70928cd2a25b3aa52b93ed20c9e5d8d375
+Catalogue audit file count: 542
+
+CAT-R258 confirms the catalogue data are unchanged while the R258 source validation remains runtime-only.
+
+Archive verification: unzip PASS; re-extraction 542/542 identical; Library rematerialization byte-identical.
