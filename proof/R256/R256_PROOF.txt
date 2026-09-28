@@ -1,0 +1,16 @@
+BRES CLES - CHECKPOINT R256 PROOF
+
+Parent: v2.28-test-r255-proof
+Checkpoint: R256
+Runtime: V2.28 TEST R156
+Stable: V2.27 unchanged
+OCR thresholds: 0.70 / 0.88 unchanged
+Verification: 24/24 PASS
+Canonical catalogue: 10/10 hashes unchanged
+Application ZIP SHA-256: 3cc093040d4b87d7afcc2383eac772075fe3e17932c269b836b0728eda45cb42
+Application file count: 6768
+
+R256 removes the remaining numeric coercions in the R250 publication request producer, the R250 request identity, and the R253 canonical current-epoch guard. The R256 canonical-source guard verifies strict type/value continuity from publication request through binding and freshness-release receipts at publication and immediately before JSON export.
+
+Archive verification: unzip PASS; re-extraction 6768/6768 identical.
+Stable V2.27 is not replaced.
