@@ -1,0 +1,34 @@
+BRES CLES - CHECKPOINT R248 PROOF
+
+Parent: v2.28-test-r247-proof
+Checkpoint: R248
+Runtime: V2.28 TEST R156
+Stable: V2.27 unchanged
+OCR thresholds: 0.70 / 0.88 unchanged
+Verification: 25/25 PASS
+Canonical catalogue: 10/10 hashes unchanged
+Application ZIP SHA-256: a3967aa87697b751cf28e55526f96a7b621dd0ba343256001badee999b110634
+Application file count: 6536
+
+R248 milestone:
+The R247 publication-preflight receipt is now mandatory again at export time.
+Required receipt values:
+schema=bres-ocr-diagnostic-publication-preflight-r247-v1
+ok=true
+published=true
+schemaIntegrity=true
+requiresFreshDiagnostic=false
+decisionInfluence=false
+
+If the receipt is missing or altered, export fails closed through the existing R245 snapshot invalidation path and a fresh OCR diagnostic is required. The R244 content-integrity guard remains a second independent barrier immediately before JSON export.
+
+Key source SHA-256:
+index.html 72eaacabb49434db55b5a9f14b86fff57831a883a7f088d5fe86caab6460ed94
+v228-catalogue.js d4ab247a46e35ceda3eafc5032211c55591c31cd787c7b59d88ea9b7afd7a4de
+CHECKPOINT_R248.txt f599ed331dd756cd713b40a2e2d4976d6d6f334a88ba9e2f24852a80844ef324
+receipt guard test 7da01f95bf6471a559b7038fffe1a19a61851d712f2c77a4787311a39b3188f2
+R248 verification e2120fc63468cbaf63c0e3191ab626f918afaa02af4987be8e8fb7f27cba3980
+index diff 17153665eee109a364610942b7c568775338dd5896db683a03de3e33237a938f
+wrapper diff 2dd3f6c9552d71e323c46ff91738a3d669b43f5c2fa786997db9af5bc33985c8
+
+No R248 test version replaces stable V2.27.
