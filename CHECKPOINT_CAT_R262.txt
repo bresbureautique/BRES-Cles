@@ -1,0 +1,11 @@
+BRES CLES — CHECKPOINT CATALOGUE CAT-R262
+
+Parent : CAT-R261.
+Catalogue canonique : inchangé.
+Références : 5103 / 5103 uniques.
+
+Jalon : séparation stricte entre la garde runtime R262 d'identifiants entiers dans la requête R250 et les données catalogue.
+- L’unique collision compacte reste BK3-4 / BK34.
+- La garde R262, la garde R261 et les protections R244-R260 restent hors des 10 blocs canoniques.
+- R262 ne modifie aucune référence catalogue ni aucune empreinte canonique.
+- Les 10 empreintes des blocs canoniques restent strictement identiques.
