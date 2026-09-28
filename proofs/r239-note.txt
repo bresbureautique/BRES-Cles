@@ -1,0 +1,9 @@
+R239 catalogue audit completed successfully.
+Parent catalogue R238.
+Canonical catalogue data changed: no.
+Reference count: 5103.
+Unique reference count: 5103.
+Canonical block hashes unchanged: 10/10.
+Audit result: PASS.
+R239 keeps diagnostic texture provenance outside canonical catalogue data.
+See r239-checksums.txt for the verified ZIP SHA256 value.
