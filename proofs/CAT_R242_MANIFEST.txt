@@ -1,0 +1,9 @@
+Catalogue checkpoint CAT-R242
+Parent CAT-R241
+Canonical catalogue modified: no
+References 5103 / 5103 unique
+Canonical hashes unchanged 10/10
+Only compact collision preserved: BK3-4 / BK34
+Runtime export schemas R241/R242 remain outside canonical catalogue chunks
+Audit: PASS
+Catalogue snapshot files: 410
