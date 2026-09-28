@@ -1,0 +1,12 @@
+BRES CLES V2.28 — CHECKPOINT R262
+
+Version moteur : V2.28 TEST R156.
+Version stable préservée : V2.27.
+Seuils OCR : 0,70 / 0,88 inchangés.
+Catalogue canonique : inchangé ; audit séparé CAT-R262.
+
+Jalon R262 : `identificationEpoch` et `captureSeriesId` sont désormais canoniques dès la création de la requête R250.
+`identificationEpoch` doit être un entier natif >= 0. `captureSeriesId` doit être `null` ou un entier natif >= 0. Les décimaux, chaînes numériques, valeurs non finies, valeurs négatives et mauvais types sont rejetés sans conversion silencieuse.
+
+La source OCR R261 reste obligatoire et canonique (`ocr-main` / `ocr-head`). Les gardes R244-R261 restent actives. R262 ne modifie ni le moteur R156, ni les seuils OCR, ni la décision automatique, ni les 10 blocs catalogue canoniques.
+Tous les exports utilisateur portent le checkpoint R262 ; les données conservent V2.28 TEST R156 comme version moteur.
