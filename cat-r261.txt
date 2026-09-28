@@ -1,1 +1,5 @@
 CAT-R261 audit PASS.
+References: 5103/5103 unique.
+Canonical catalogue hashes: 10/10 unchanged.
+Archive files: 568.
+ZIP SHA-256: 87224e90c3d612b177e4c2c81cc72cade8b8d2993fb381aea350a7ca22ff3aed
