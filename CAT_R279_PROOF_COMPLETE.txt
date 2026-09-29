@@ -1,0 +1,12 @@
+BRES CLES — PREUVE COMPLETE CAT-R279
+RESULTAT: PASS
+references=5103
+unique=5103
+canonical_hashes=10/10 unchanged
+compact_collision=BK3-4 / BK34
+archive_sha256=f16efcdd9069c6f581e1f1efec6daa5710751b91c83964df4e2e372b3394feba
+archive_regular_files=732
+audit_sha256=dfcd3b5305078b8bda3f81aa056e7d1ed78bbfb50cf7e779a0794fa007b63a81
+checkpoint_sha256=c31a40ea317c78d859e02c1ba8839e09e49667b117e7912f40a4f3e84bd05cc9
+chunk_hashes_sha256=7f8d6c94d0532bad79304d4a29befb2ed530ca1d4ef3aceb7a13fd797e943bcf
+parent=catalogue-v3-audit-r278-proof
