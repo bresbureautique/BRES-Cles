@@ -1,1 +1,1 @@
-CAT-R269 proof stored on the CAT-R269 branch; filename inherited from CAT-R268 branch layout. Audit PASS: 5103 references, 5103 unique, canonical hashes 10/10 unchanged, compact collision BK3-4 / BK34 only. R269 runtime changes remain outside canonical catalogue data.
+CAT-R270 proof stored on the CAT-R270 branch; filename inherited from CAT-R268 branch layout. Audit PASS: 5103 references, 5103 unique, canonical hashes 10/10 unchanged, compact collision BK3-4 / BK34 only. R270 runtime changes remain outside canonical catalogue data.
