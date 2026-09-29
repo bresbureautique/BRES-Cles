@@ -1,0 +1,34 @@
+BRES CLES — PREUVE GITHUB R275
+RESULTAT: PASS
+Parent GitHub: v2.28-test-r274-proof
+Checkpoint: R275
+Runtime: V2.28 TEST R156
+Stable: V2.27 unchanged
+Verification: 36/36 families PASS
+Canonical catalogue hashes: 10/10 unchanged
+
+Archive Library:
+BRES Cles/Sauvegardes/BRES_Cles_Mobile_V2_28_CHECKPOINT_R275.zip
+SHA-256 archive: 6c2e75fb7d4248f9f355bc836c8f6a7489cfb8b33e090b4a062919b2be9fb903
+Archive file entries: 7275
+ZIP integrity: PASS
+Library roundtrip byte-for-byte: PASS
+
+Key source SHA-256:
+index.html  9d9da17fad9da68520b7879bb9fdda25357b39ae1fd1af5f20894244d97ff758
+v228-catalogue.js  75575f8743daf6a12260fa6665d57568ce1112b24720f8386ec2910efd82b1df
+photo_selection_epoch_strict_type_guard_test_r275.py  b59e35c8a68e35e70cfe103cb0eb95954040e330f7c45b53948c97e7424cce4d
+PHOTO_SELECTION_EPOCH_STRICT_TYPE_GUARD_TEST_R275.json  f01379df329e899977f7be919ffc12076a41d55b7e7fba9d34a0279b77436467
+verify_checkpoint_r275.py  781f331d6159b0eb318eb4ecbdea135ddab60624eb8e588898fb661c90c85980
+R275_VERIFICATION.json  d99c1747d9d7099258c24d47d8e312d8fa75e845c4a856c3980aeade952120e7
+CHECKPOINT_R275.txt  a603e03ce4fb39ced5a8c2c167a0e13067783db17b1114a7ed6ad0b52c768bef
+LISEZ-MOI.txt  20f95ad337df48733b5bab1499c608c315816f79148958a408bf0b5bdcdb152d
+R275_PROOF.txt  561a001ed73c3064e614387f0cdc0000a4197e39651de363af1248522aeb80f0
+
+Reconstruction patch SHA-256:
+R274_TO_R275_INDEX.diff  968b108a7aaada6090365387d4d4ff0bafb3b4e9b3853d6e99ba31e8c4d23c12
+R274_TO_R275_WRAPPER.diff  de803237b9174517486bcb3cac1fd61c47b05aaddd3e4d082c40ff6cbc51ae4a
+R274_TO_R275_README.diff  7da1d1983b7e3b07aba8d0fc5c8a692e9d1d4be96f686d95d1e48a976d6aea61
+R274_TO_R275_CHECKPOINT.diff  ef3e4635f02a2cd3ca88e1fc938603734fbc52bc2d17c96566e3c400d2057ec1
+
+R275 hardens native photo-selection epochs and snapshots without replacing V2.27.
