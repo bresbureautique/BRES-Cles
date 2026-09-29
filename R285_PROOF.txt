@@ -1,0 +1,11 @@
+BRES CLES — PREUVE APPLICATION V2.28 CHECKPOINT R285
+RESULTAT: PASS
+- 49/49 familles de contrôles passent.
+- ocrDiagnosticExportContextIsCurrentR173() borne désormais les cinq identités du sceau R173/R265 avec Number.isSafeInteger.
+- Number.MAX_SAFE_INTEGER est accepté lorsque le sceau et le contexte courant correspondent ; toute valeur supérieure est rejetée en fail-closed.
+- Chaînes numériques, décimaux, négatifs, NaN et Infinity restent rejetés sans coercition Number(...).
+- buildOCRDiagnosticExportContextSealR173() conserve les types natifs ; une identité mal typée n'est jamais normalisée silencieusement.
+- Les protections R284 et antérieures sont préservées.
+- Runtime conservé : V2.28 TEST R156 ; seuils OCR 0,70 / 0,88 inchangés.
+- Stable préservée : V2.27 ; aucune version de test ne remplace la stable.
+- Catalogue canonique : 10/10 empreintes inchangées ; audit séparé CAT-R285.
