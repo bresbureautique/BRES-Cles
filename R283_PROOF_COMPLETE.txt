@@ -1,0 +1,14 @@
+BRES CLES — PREUVE COMPLETE APPLICATION V2.28 CHECKPOINT R283
+RESULTAT: PASS
+- 47/47 familles de contrôles PASS.
+- R283 borne toute la chaîne aval de fraîcheur/publication R252-R259 avec Number.isSafeInteger, sans coercition.
+- Number.MAX_SAFE_INTEGER est accepté ; toute valeur supérieure est rejetée en fail-closed.
+- Runtime conservé : V2.28 TEST R156 ; seuils 0,70 / 0,88 inchangés.
+- Stable préservée : V2.27 ; main et stable-v2.27 restent identiques au commit 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8.
+- Archive : BRES_Cles_Mobile_V2_28_CHECKPOINT_R283.zip
+- SHA-256 : 634f2e0fcbb143a08196953d28d7e80b006a2d55b5a19015eab3e92821b9baf0
+- Intégrité ZIP, réextraction, comparaison de tous les fichiers et reverification R283 : PASS.
+- Fichiers réguliers vérifiés après round-trip ZIP : 7 499.
+- index.html SHA-256 : d0f31bcef1929e667574e2c759bd001fffd613bb1309927c3cf14a04d3825e00
+- R283_VERIFICATION.json SHA-256 : fe956bf0a3bbedc43f1be51be90ab332f8514d001e1ad02133ad20558409b24e
+- Catalogue canonique inchangé ; audit séparé CAT-R283.
