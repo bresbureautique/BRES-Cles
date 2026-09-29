@@ -1,0 +1,5 @@
+CAT-R278 PASS
+5103/5103 unique
+10/10 canonical hashes unchanged
+Archive SHA-256 95670de5a0d432a26f3bbd4c582193476c17a2ea91946db3856dba6a52ab9981
+722 entries
