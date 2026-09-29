@@ -1,0 +1,5 @@
+CAT-R281 PASS
+5103 references / 5103 uniques
+10/10 empreintes canoniques inchangees
+Collision compacte: BK3-4 / BK34
+ZIP SHA-256: c0894cb0e15bf67b386956540ea4649639bbca0029691da20c989074288b93a4
