@@ -1,9 +1,1 @@
-BRES CLES CATALOGUE CAT-R268
-Parent: CAT-R267
-References: 5103 / 5103 unique
-Canonical hashes: 10/10 unchanged
-Compact collision: BK3-4 / BK34 only
-Archive: BRES_Cles_Catalogue_Audit_CAT_R268.zip
-SHA256: 58cd20d19e402a2cade2e42e2c5563cedb43ae6d2dcc68a91548a34ca596bb1c
-ZIP entries: 630
-Library copy: byte-identical PASS
+CAT-R269 proof stored on the CAT-R269 branch; filename inherited from CAT-R268 branch layout. Audit PASS: 5103 references, 5103 unique, canonical hashes 10/10 unchanged, compact collision BK3-4 / BK34 only. R269 runtime changes remain outside canonical catalogue data.
