@@ -1,0 +1,6 @@
+CAT-R265 PASS
+5103/5103 unique references
+10/10 canonical hashes unchanged
+BK3-4 / BK34 preserved
+603 files verified after extraction
+ZIP SHA-256 6fdb0a37a1847d348e7df00da282ac717a0549614a6e747961950b2b386d1508
