@@ -1,0 +1,9 @@
+CAT-R277 PASS
+References: 5103 unique out of 5103.
+Canonical catalogue hashes: 10 of 10 unchanged.
+Only compact collision retained: BK3-4 and BK34.
+Archive SHA-256: 2e24d02a27329b52f74fdbeb7c1dd363255cb544585bd22b35bfc817a8c032e8
+Archive entries: 712.
+ZIP integrity: PASS.
+Library roundtrip: byte-for-byte PASS.
+V2.27 stable unchanged.
