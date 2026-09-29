@@ -1,0 +1,10 @@
+BRES CLES — PREUVE R273
+RESULTAT: PASS
+- Vérification complète : 34/34 familles PASS.
+- R213/R214 : identité géométrique native (epoch identification, epoch photo, génération d’analyse), fail-closed.
+- Chaînes numériques, décimaux, valeurs négatives, NaN et Infinity : rejetés sans coercition silencieuse.
+- Sceau R213 et preuve courante conservent les valeurs natives ; identityValid expose explicitement la validité du contexte courant.
+- Moteur : V2.28 TEST R156.
+- Seuils OCR : 0,70 / 0,88 inchangés.
+- Stable : V2.27 non remplacée.
+- Catalogue canonique : 10/10 blocs inchangés ; audit séparé CAT-R273.
