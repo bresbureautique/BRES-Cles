@@ -1,9 +1,1 @@
-BRES CLES V2.28 CHECKPOINT R268
-Runtime: V2.28 TEST R156
-Stable preserved: V2.27
-Verification: 29/29 PASS
-Archive: BRES_Cles_Mobile_V2_28_CHECKPOINT_R268.zip
-SHA256: 25f6e02b3a26e5c7dcc60457916cd8aada257db82d5e6683d07507805a5ef0bb
-ZIP entries: 7115
-Library copy: byte-identical PASS
-Catalogue canonical hashes: 10/10 unchanged; CAT-R268 separate
+R269 proof branch checkpoint. Validation 30/30 PASS. Stable V2.27 unchanged. Application archive SHA256 08d29f4ccc97cf8e14b12d40c8b18f37ffb8a6000f28e663891d3886be75a45f. Catalogue is audited separately in CAT-R269.
