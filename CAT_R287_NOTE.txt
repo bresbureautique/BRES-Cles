@@ -1,1 +1,5 @@
 CAT R287 verification completed successfully.
+References checked: 5103 total, 5103 unique.
+Canonical catalogue chunks: 10 of 10 hashes unchanged.
+Known compact collision remains BK3-4 / BK34 only.
+The R287 runtime change does not modify catalogue data.
