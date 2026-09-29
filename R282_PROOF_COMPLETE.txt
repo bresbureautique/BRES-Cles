@@ -1,0 +1,12 @@
+BRES CLES — PREUVE COMPLETE APPLICATION V2.28 CHECKPOINT R282
+RESULTAT: PASS
+- 46/46 familles de contrôles PASS.
+- R282 sécurise R250/R263 avec Number.isSafeInteger sans coercition.
+- Runtime conservé : V2.28 TEST R156 ; seuils 0,70 / 0,88 inchangés.
+- Stable préservée : V2.27 ; main et stable-v2.27 restent identiques au commit 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8.
+- Archive : BRES_Cles_Mobile_V2_28_CHECKPOINT_R282.zip
+- SHA-256 : 51d66a5e6dd043a1c53f357ffc7e8a0c9141339b79fea08f9f35976addf4d897
+- Intégrité ZIP, réextraction et reverification R282 : PASS.
+- index.html SHA-256 : 5d8b06cf69e268fda2ad9161f16ff50efd66134177bc6aa543ac584a975818ac
+- R282_VERIFICATION.json SHA-256 : 3fbb2ea2f7bdafd9ddd3a9d54f9611fbbc894427c10a5e866f5c6641a9c398b6
+- Catalogue canonique inchangé ; audit séparé CAT-R282.
