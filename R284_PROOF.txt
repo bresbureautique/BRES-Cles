@@ -1,0 +1,12 @@
+BRES CLES — PREUVE APPLICATION V2.28 CHECKPOINT R284
+RESULTAT: PASS
+- 48/48 familles de contrôles passent.
+- invalidateOCRDiagnosticForNewRequestR251() exige désormais un requestEpoch natif dans la plage Number.isSafeInteger.
+- Number.MAX_SAFE_INTEGER est accepté ; toute valeur supérieure est rejetée en fail-closed et devient null dans le reçu.
+- Chaînes numériques, décimaux, négatifs, zéro, NaN et Infinity restent rejetés sans coercition Number(...).
+- Une identité invalide ne restaure jamais un ancien diagnostic : l’invalidation reste active et requiresFreshDiagnostic reste vrai.
+- Les sources R258 restent limitées à ocr-main / ocr-head.
+- Les protections R283 et antérieures sont préservées.
+- Runtime conservé : V2.28 TEST R156 ; seuils OCR 0,70 / 0,88 inchangés.
+- Stable préservée : V2.27 ; aucune version de test ne remplace la stable.
+- Catalogue canonique : 10/10 empreintes inchangées ; audit séparé CAT-R284.
