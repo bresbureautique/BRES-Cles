@@ -1,0 +1,9 @@
+BRES CLES CATALOGUE CAT-R267
+Parent: CAT-R266
+References: 5103 / 5103 unique
+Canonical hashes: 10/10 unchanged
+Compact collision: BK3-4 / BK34 only
+Archive: BRES_Cles_Catalogue_Audit_CAT_R267.zip
+SHA256: 84267c1856386ccba5c36ca6e2dfae08def314aa61eff47daf103cd710d37a21
+ZIP entries: 621
+Library copy: byte-identical PASS
