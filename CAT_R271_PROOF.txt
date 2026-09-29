@@ -1,0 +1,6 @@
+CAT-R271 PASS
+5103 references / 5103 unique
+10/10 canonical hashes unchanged
+Only compact collision: BK3-4 / BK34
+Catalogue ZIP sha256 52a267315638374f9fb8f5935a1899bbfe74ff41198fdf05c9e33488319c0edb
+657 files, extraction diff 0
