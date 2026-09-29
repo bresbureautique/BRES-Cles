@@ -1,0 +1,3 @@
+CAT-R271 archive checksum
+45ca1636fe63754dbf022c2655152d790e7bfc4b36fcec1a3bb30d4b80ccd0f8
+file BRES_Cles_Catalogue_Audit_CAT_R271.zip

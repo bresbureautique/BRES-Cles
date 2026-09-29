@@ -1,0 +1,8 @@
+BRES CLES — GITHUB PROOF CAT-R271
+Parent: CAT-R270
+Canonical references: 5103
+Unique references: 5103
+Canonical hash checks: 10/10 unchanged
+Compact collision BK3-4 / BK34 remains distinct
+Catalogue archive SHA256: 45ca1636fe63754dbf022c2655152d790e7bfc4b36fcec1a3bb30d4b80ccd0f8
+Application changes remain separate.
