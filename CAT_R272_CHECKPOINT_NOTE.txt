@@ -1,0 +1,7 @@
+BRES CLES CAT-R272 checkpoint PASS.
+Parent: CAT-R271.
+References: 5103 / 5103 unique.
+Canonical hashes: 10/10 unchanged.
+Compact collision: BK3-4 / BK34 only.
+CAT ZIP: 666 files; SHA256 fcf4341c46b41d0faf7e3a6fcd43fe907f029254ca266f84e53244238b43b554.
+Runtime R272 stays outside canonical catalogue.
