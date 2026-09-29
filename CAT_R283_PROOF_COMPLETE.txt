@@ -1,0 +1,6 @@
+CAT-R283 proof
+PASS
+5103 references, 5103 unique.
+10 canonical hashes unchanged.
+Archive SHA-256: e4143425537bac73a9d44d4606d7ab8dd407463d1ac6f1517b187aff4942c81c
+Round-trip ZIP verification and CAT-R283 audit passed.
