@@ -1,0 +1,13 @@
+BRES CLES — PREUVE COMPLETE R279
+RESULTAT: PASS
+verification=43/43
+runtime=V2.28 TEST R156
+stable=V2.27 preserved
+archive_sha256=fd850eb71a851eec66caf8b7d04cc3f3f9f20a628f8180f3be15e87b3e85a133
+archive_regular_files=7388
+index_sha256=4d8b4edeb1eacd6bd1175ffbc8614d73558b16cef383a996187c1d8d0bac617e
+qa2_guard_sha256=aa5960525d0462d7fc41a1b10e41ce7a89cf9eada34db804d629570209ac0bd1
+verification_sha256=f052828e64dc23c1b92ca36222fb6c62f114e66bf31b3f973a390568469cc600
+checkpoint_sha256=ff6ec72e3d355d0c1ac85b42b4df05f6f40faaf5f3067deb8b5c05110d22814a
+catalogue_hashes=10/10 unchanged
+parent=v2.28-test-r278-proof
