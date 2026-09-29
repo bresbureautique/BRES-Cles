@@ -1,1 +1,9 @@
-R267 proof
+BRES CLES V2.28 CHECKPOINT R267
+Runtime: V2.28 TEST R156
+Stable preserved: V2.27
+Verification: 29/29 PASS
+Archive: BRES_Cles_Mobile_V2_28_CHECKPOINT_R267.zip
+SHA256: 3b21f5a480d89b86b3ab860bfc947262f768b2014aec00668908c633f5a12631
+ZIP entries: 7092
+Library copy: byte-identical PASS
+Catalogue canonical hashes: 10/10 unchanged; CAT-R267 separate
