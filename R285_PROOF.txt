@@ -1,11 +1,9 @@
-BRES CLES — PREUVE APPLICATION V2.28 CHECKPOINT R285
+BRES CLES — PREUVE APPLICATION V2.28 CHECKPOINT R286
 RESULTAT: PASS
-- 49/49 familles de contrôles passent.
-- ocrDiagnosticExportContextIsCurrentR173() borne désormais les cinq identités du sceau R173/R265 avec Number.isSafeInteger.
-- Number.MAX_SAFE_INTEGER est accepté lorsque le sceau et le contexte courant correspondent ; toute valeur supérieure est rejetée en fail-closed.
-- Chaînes numériques, décimaux, négatifs, NaN et Infinity restent rejetés sans coercition Number(...).
-- buildOCRDiagnosticExportContextSealR173() conserve les types natifs ; une identité mal typée n'est jamais normalisée silencieusement.
-- Les protections R284 et antérieures sont préservées.
-- Runtime conservé : V2.28 TEST R156 ; seuils OCR 0,70 / 0,88 inchangés.
-- Stable préservée : V2.27 ; aucune version de test ne remplace la stable.
-- Catalogue canonique : 10/10 empreintes inchangées ; audit séparé CAT-R285.
+- 50/50 familles de controles passent.
+- buildOCRCaptureSeriesSessionGuard() borne expectedSeriesId et ocrCaptureSeriesId avec Number.isSafeInteger.
+- Number.MAX_SAFE_INTEGER est accepte ; toute valeur superieure est rejetee en fail-closed.
+- La garde geometrique de serie reste active et FEATURE_SESSION_GUARD_R154.js est aligne sur le runtime.
+- Runtime conserve : V2.28 TEST R156 ; stable V2.27 preservee.
+- Archive Library : BRES_Cles_Mobile_V2_28_CHECKPOINT_R286.zip
+- SHA-256 archive : 22442d549007826635d1b11408d98f4d59269c4de04289db4bbf144e305aa44e
