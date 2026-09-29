@@ -1,1 +1,1 @@
-R269 proof branch checkpoint. Validation 30/30 PASS. Stable V2.27 unchanged. Application archive SHA256 08d29f4ccc97cf8e14b12d40c8b18f37ffb8a6000f28e663891d3886be75a45f. Catalogue is audited separately in CAT-R269.
+R270 proof checkpoint. Validation 31/31 PASS. Stable V2.27 unchanged. Application archive SHA256 892564bf3061d2f6201759f1828681615a4082d3dd4475f35e8cfec98bb3fa13. Separate catalogue audit: CAT-R270.
