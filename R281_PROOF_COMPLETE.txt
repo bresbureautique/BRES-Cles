@@ -1,0 +1,14 @@
+BRES CLES — PREUVE COMPLETE APPLICATION R281
+RESULTAT: PASS
+Parent GitHub: v2.28-test-r280-proof
+Checkpoint: V2.28 CHECKPOINT R281
+Runtime: V2.28 TEST R156
+Stable: V2.27 preservee, non remplacee
+Verification: 45/45 familles PASS
+Jalon: diagnosticPublicationContextBindingIntegrityR249 utilise Number.isSafeInteger pour les 6 identites de contexte R249/R264.
+Borne: Number.MAX_SAFE_INTEGER accepte ; valeur superieure rejetee fail-closed.
+ZIP SHA-256: becbdeee624e2b46af8f24f28c8ce528ea085eab01118e58ad63bd81c4a4d3d1
+ZIP fichiers: 7455
+index.html SHA-256: fd353d5c2917d14ebf918c82e0d0d94fb02e947417f8a9752e400483e841d50e
+R281_VERIFICATION.json SHA-256: 15235891aad887766c914f09723391149c5cba680eebdb3d75f9559ec36778e2
+Catalogue canonique: 10/10 empreintes inchangees ; audit separe CAT-R281.
