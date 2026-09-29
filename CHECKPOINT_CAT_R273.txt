@@ -1,0 +1,4 @@
+CAT-R273 proof
+5103 references / 5103 unique
+10/10 canonical hashes unchanged
+BK3-4 / BK34 compact collision preserved
