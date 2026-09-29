@@ -1,1 +1,7 @@
-BRES CLES R272 checkpoint test result PASS.
+BRES CLES R272 checkpoint PASS.
+Runtime: V2.28 TEST R156.
+Stable: V2.27 unchanged.
+Verification: 33/33 control families PASS.
+R161/R162 QA2 proof identity is strict and fail-closed.
+Catalogue canonical hashes: 10/10 unchanged; separate CAT-R272 audit.
+App ZIP: 7206 files; SHA256 5ed76943cf4442b8cb180f16d58141ca56db04d956511391dd886adaa049f538.
