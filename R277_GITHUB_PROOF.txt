@@ -1,0 +1,36 @@
+BRES CLES — PREUVE GITHUB R277
+RESULTAT: PASS
+Parent GitHub: v2.28-test-r276-proof
+Checkpoint: R277
+Runtime: V2.28 TEST R156
+Stable: V2.27 unchanged
+Verification: 41/41 families PASS
+Canonical catalogue hashes: 10/10 unchanged
+
+Archive Library:
+BRES Cles/Sauvegardes/BRES_Cles_Mobile_V2_28_CHECKPOINT_R277.zip
+SHA-256 archive: 2e14f2886180c2b4378d4fbb6890930bc7d168514ce867427dd1928f82804b91
+Archive file entries: 7329
+ZIP integrity: PASS
+Library roundtrip byte-for-byte: PASS
+
+Key source SHA-256:
+index.html  8a5b8b883f3a427f769a28264fa934d4f77660dffc13768a1092f661f8b88cc2
+v228-catalogue.js  a2640c4c44f649d52d3cfda3a2ec428407231ab873fee6e8f74febca9bb661f5
+FEATURE_TESA_TE8_PHYSICAL_PROTOCOL_R157.js  9b0361398eee7c641fc62afe987ece48bb6a152f3703d257c7a391c073d7259c
+ocr_tesa_te8_cycle_epoch_strict_identity_test_r277.py  0bd76c9657fae0106568c5db29d870226702928cb2fb2946df7efcd51488141e
+OCR_TESA_TE8_CYCLE_EPOCH_STRICT_IDENTITY_GUARD_TEST_R277.json  b3f4aaa1e5d33e50f6b1c5fd24658655505a51416d218bc361d853d1beafff29
+R277_VERIFICATION.json  1df850fa95399c4138f280635e2cae3a3bb8a93a9e15bb2f8411a71aeffdef4b
+CHECKPOINT_R277.txt  2c3c00eaa6d8527c11b0702b0a8f00dd03c76b5050fd171458b0b6c4f1c31d0f
+LISEZ-MOI.txt  6172a6c6a51cd27772e0f3addfaae4d775bd9e9013cc49858d080ca380b668af
+R277_PROOF.txt  196ab61d9ba2590efb4ea5341cbbd9f296206680f07e0f2af4792eb96181decb
+
+Reconstruction patch SHA-256:
+R276_TO_R277_INDEX.diff  048cef493f71f5200322c1060a6ec57dbb1fd3b4f89b76b021c8fe33d8ff79b2
+R276_TO_R277_FEATURE_TESA_TE8_PHYSICAL_PROTOCOL.diff  623d320734fc42d90af166bcbd5c97b8182e31fce25d8e91199d58e3822160c1
+R276_TO_R277_WRAPPER.diff  7a4611a40ae468979afe686b9f9d3d4e7a7b847997ff3701dedf03ae266af7ec
+R276_TO_R277_CHECKPOINT.diff  a9579bb0b20ad008796c3f0f6d82e0c96a28db6758e9ca6f135bf78373b74eaa
+R276_TO_R277_README.diff  96961b0d67cfda3af9ad1851827fcd42a687cb2f8596cb4890ab133bee0c38f5
+
+R277 hardens the native TE8D / TE8I physical-protocol cycleEpoch without replacing V2.27.
+TE8B remains a non-canonical OCR bridge token.
