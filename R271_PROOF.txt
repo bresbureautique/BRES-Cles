@@ -1,0 +1,7 @@
+R271 PASS
+32/32 tests
+Runtime V2.28 TEST R156
+Stable V2.27 unchanged
+App ZIP sha256 849391446058f7cec4f3e2f1f578a59be2777e86550a2f28dc57229a80372f85
+7183 files, extraction diff 0
+Catalogue 10/10 canonical hashes unchanged
