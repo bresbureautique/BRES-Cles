@@ -1,0 +1,7 @@
+BRES CLES — GITHUB PROOF R271
+Checkpoint: V2.28 R271
+Runtime: V2.28 TEST R156 unchanged
+Stable: V2.27 unchanged
+Validation: 32/32 PASS
+Application archive SHA256: 1034e600919386e9c5986cfd893c7b22d638faa92756af58f65b268dc1632a04
+Catalogue audit: CAT-R271 separate; 5103/5103 unique; 10/10 canonical hashes unchanged.
