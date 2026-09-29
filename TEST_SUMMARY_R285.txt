@@ -1,6 +1,7 @@
-BRES CLES — TEST SUMMARY R285
+BRES CLES — TEST SUMMARY R286
 RESULTAT: PASS
-Familles: 49/49 PASS
+Familles: 50/50 PASS
 Runtime: V2.28 TEST R156
 Stable: V2.27 inchangée
 Catalogue: 10/10 empreintes canoniques inchangées
+Archive SHA-256: 22442d549007826635d1b11408d98f4d59269c4de04289db4bbf144e305aa44e
