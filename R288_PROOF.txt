@@ -1,0 +1,7 @@
+BRES CLES — PREUVE APPLICATION V2.28 CHECKPOINT R288
+RESULTAT: PASS
+- 52/52 familles de contrôles passent.
+- La garde finale de publication OCR utilise désormais Number.isSafeInteger pour requestEpoch, identificationEpoch et les identités de série.
+- V2.28 TEST R156 conservée ; seuils OCR 0,70 / 0,88 inchangés.
+- V2.27 reste la version stable et n'est pas remplacée.
+- Catalogue canonique inchangé ; audit séparé CAT-R288.
