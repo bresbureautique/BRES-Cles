@@ -1,0 +1,7 @@
+BRES CLES V2.28 — PREUVE CHECKPOINT R265
+Résultat : PASS — 32/32 familles de contrôles.
+Runtime : V2.28 TEST R156. Stable : V2.27 inchangée.
+R265 : buildOCRDiagnosticExportContextSealR173() et ocrDiagnosticExportContextIsCurrentR173() refusent désormais toute coercition silencieuse des epochs / captureSeriesId.
+Archive : 7035 fichiers ; réextraction 7035/7035 identiques ; ZIP test PASS.
+SHA-256 ZIP : 88f882463bc334f013cf24898244f7bce59e9d2ebba220a1fcd688ae22dbd8fd
+Catalogue : séparé, CAT-R265.
