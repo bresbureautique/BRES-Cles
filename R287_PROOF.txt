@@ -1,0 +1,13 @@
+BRES CLES — PREUVE APPLICATION V2.28 CHECKPOINT R287
+RESULTAT: PASS
+- 51/51 familles de controles passent.
+- isValidOCRCaptureCycleEpochR268() borne l epoch du cycle physique avec Number.isSafeInteger.
+- Number.MAX_SAFE_INTEGER est accepte ; toute valeur superieure est rejetee en fail-closed.
+- Chaines numeriques, decimaux, negatifs, NaN, Infinity et objets coercibles restent rejetes sans conversion Number(...).
+- La deduplication des prises et les comparaisons de cycle restent exactes dans la plage entiere sure JavaScript.
+- FEATURE_SESSION_GUARD_R154.js est aligne sur le helper actif.
+- Runtime conserve : V2.28 TEST R156 ; seuils OCR 0,70 / 0,88 inchanges.
+- Stable preservee : V2.27 ; aucune version de test ne remplace la stable.
+- Catalogue canonique : 10/10 empreintes inchangees ; audit separe CAT-R287.
+- Archive Library : BRES_Cles_Mobile_V2_28_CHECKPOINT_R287.zip
+- SHA-256 archive : 65aa868d2f3fe009f370f981142249371b94efd1d71c3367860d5caa64a7c0c0
