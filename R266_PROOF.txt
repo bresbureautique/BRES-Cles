@@ -1,0 +1,7 @@
+BRES CLES V2.28 CHECKPOINT R266 — PROOF
+Runtime: V2.28 TEST R156
+Stable preserved: V2.27 (main/stable-v2.27 identical at 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8)
+Verification: 33/33 PASS
+Canonical catalogue hashes: 10/10 unchanged
+ZIP SHA-256: 2ea8b6a7295251bb8168f8da9f5666d8acbb71f3ef95b62f5c218e3fbbf025a9
+Library target: /BRES Cles/Sauvegardes/BRES_Cles_Mobile_V2_28_CHECKPOINT_R266.zip
