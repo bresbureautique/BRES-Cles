@@ -1,0 +1,1 @@
+CAT-R286 PASS. 5103 references, 5103 uniques. 10/10 empreintes canoniques inchangees. Collision connue BK3-4 / BK34. R286 ne modifie aucune donnee catalogue. Archive SHA-256 e15ebf83a63b92e14cf3889304016e9af05b4e8a39f8913da58300333613aca0.
