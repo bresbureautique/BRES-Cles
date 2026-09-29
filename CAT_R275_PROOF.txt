@@ -1,0 +1,2 @@
+CAT-R275 verification completed successfully.
+5103 references checked; canonical catalogue unchanged.
