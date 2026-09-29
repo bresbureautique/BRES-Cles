@@ -1,0 +1,1 @@
+CAT-R274 PASS | references 5103/5103 unique | canonical hashes 10/10 unchanged | compact collision BK3-4 / BK34 only | runtime R274 remains outside canonical catalogue
