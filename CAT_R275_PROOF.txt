@@ -1,2 +1,6 @@
-CAT-R275 verification completed successfully.
-5103 references checked; canonical catalogue unchanged.
+CAT-R276 verification completed successfully on branch catalogue-v3-audit-r276-proof.
+5103 references / 5103 unique; canonical catalogue 10/10 unchanged.
+Known compact collision only: BK3-4 / BK34.
+Archive SHA-256: 109dcf7a4b1221179882c675ab7e34f0488bcc1a84dc9872ae9e86e34d925283
+Archive entries: 702; ZIP integrity PASS; Library roundtrip byte-for-byte PASS.
+V2.27 stable unchanged.
