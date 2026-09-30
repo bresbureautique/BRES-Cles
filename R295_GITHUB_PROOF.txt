@@ -1,0 +1,15 @@
+BRES CLES - GITHUB PROOF V2.28 CHECKPOINT R295
+RESULTAT: PASS
+Parent: v2.28-test-r294-proof
+Runtime: V2.28 TEST R156
+Stable: V2.27 unchanged
+Verification: 59/59 families PASS
+Change: calibrated continuity ranking factor 0.86-1.00 derived from R294 metrics, exported diagnostically only; R292 acceptance and R293 active ranking unchanged.
+Synthetic coverage: grooved key, light metal, thin guide line, connected thin-tail parasite, bounds and invalid inputs.
+Archive: BRES_Cles_Mobile_V2_28_CHECKPOINT_R295.zip
+Archive SHA-256: f2e66d756aec0857ea17ac6378e208f59108651c16a21e5aacd3cc1c52f638a7
+index.html SHA-256: 1ab89cc744dcb02a4934691cd72912b0ee36b029d9a7b1153565f013102cfec2
+v228-catalogue.js SHA-256: 3e605e2c54d344b5c30a0e1f0ce129e874fa742217748162a52506a19125da00
+R295_VERIFICATION.json SHA-256: 512b9c2fe373ae5a0aa87c68d2fe5ea348b437f4889a70708f79216202db352e
+Regression script SHA-256: 01aee0965deb8b0d2a18de041d8c02764c5c10a4a665644d420fd45874c55b48
+OCR thresholds unchanged: 0.70 / 0.88
