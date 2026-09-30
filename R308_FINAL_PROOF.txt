@@ -1,0 +1,11 @@
+BRES CLES R308 FINAL VERIFIED PROOF
+Status: PASS
+V2.27 stable unchanged
+R308 checks: 17/17 PASS
+Inherited R307: 16/16 PASS
+R308 certified exact cases: 34
+Recovered beyond R301: 3
+False certifications: 0
+App ZIP SHA256: 3e8113ddee7f8221acd9d744b5cc71a3813e454b1d24727bdb6e96e8e08b4274
+Catalogue ZIP SHA256: 6ff3b49a0fe60e750867907803a64cda66678474ad7bb1bd34bd63cc56474190
+Catalogue: 5103 / 5103 unique; 10/10 canonical hashes unchanged
