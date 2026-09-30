@@ -1,0 +1,18 @@
+{
+  "schema": "bres-r310-snapshot-manifest-v1",
+  "checkpoint": "R310",
+  "runtime": "V2.28 TEST R156",
+  "stable": "V2.27 unchanged",
+  "verification_ok": true,
+  "verification": "19/19",
+  "total_cases": 538,
+  "shape_cases": 370,
+  "direct_cases": 168,
+  "shape_robust_at_005": 168,
+  "shape_robust_at_010": 152,
+  "shape_robust_at_015": 134,
+  "shape_robust_at_020": 115,
+  "shape_near_r309_boundary": 30,
+  "direct_near_r309_boundary": 72,
+  "zip_sha256": "45d4bd0e674bd5021f599f4dc6596bcbe71929f83af9cfe27a924032bb0ee729"
+}

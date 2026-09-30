@@ -1,0 +1,10 @@
+BRES CLES V2.28 - CHECKPOINT R310
+
+STATUS: TEST CANDIDATE - DOES NOT REPLACE V2.27 STABLE
+RUNTIME: V2.28 TEST R156
+PURPOSE: diagnostic multi-budget robustness profile around the R309 boundary.
+CATALOGUE: separate and unchanged in this application package.
+
+R310 preserves R292 acceptance, R296 base ranking, R301 safety envelope, R303 cache, active R305 gate, R306 telemetry, R307 decomposition, R308 sufficient proof, R309 robustness audit and OCR thresholds 0.70 / 0.88.
+R310 adds only a non-decision profile of the same exact margin under four adversarial budgets: +/-0.05%, +/-0.10%, +/-0.15% and +/-0.20% of score scale.
+The +/-0.10% level is required to match R309 exactly. No pixel is reread and active R305 is not widened.

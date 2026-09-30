@@ -1,0 +1,18 @@
+BRES CLES - CHECKPOINT R310
+Status: PASS
+Stable: V2.27 unchanged
+Runtime: V2.28 TEST R156
+OCR thresholds: 0.70 / 0.88 unchanged
+R310 verification: 19/19 PASS
+R309 inherited checks: 18/18 PASS
+Stress cases: 538
+Shape cases: 370
+Direct boundary cases: 168
+Shape robust at 0.05%: 168
+Shape robust at 0.10%: 152
+Shape robust at 0.15%: 134
+Shape robust at 0.20%: 115
+Near R309 boundary: 30 shape + 72 direct
+Added pixel reconstruction: 0
+Active R305 rule: unchanged
+Catalogue canonical hashes: 10/10 unchanged
