@@ -1,0 +1,9 @@
+BRES CLES - PREUVE GITHUB CATALOGUE CAT-R292
+RESULTAT: PASS
+References: 5103 / 5103 uniques.
+Empreintes canoniques: 10/10 inchangees.
+Collision compacte connue: BK3-4 / BK34 seulement.
+Objet: separation stricte du filet de regression segmentation/silhouette R292 et des donnees catalogue.
+Archive: BRES_Cles_Catalogue_Audit_CAT_R292.zip
+SHA-256 archive: e38508a13387c1ec36ca13bb47955ea6aa19eeb4632283e034faca676d39a825
+SHA-256 audit JSON: 12ae1f29513aeaa76f70d7cc1cf45b0fcf34a6d25106ecd787bf5721ccb58c52
