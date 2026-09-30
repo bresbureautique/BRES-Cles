@@ -1,0 +1,7 @@
+BRES CLES R299
+Application: PASS 63 sur 63.
+Runtime: V2.28 TEST R156.
+Stable: V2.27 non remplacee.
+R299 ajoute un audit diagnostique de continuite sans modifier le classement actif R296 ni l'acceptation R292.
+Le garde-fou TE8 de R298 est conserve.
+Archives et controles d'integrite: Library BRES Cles/Sauvegardes.
