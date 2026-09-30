@@ -1,0 +1,10 @@
+BRES CLES — PREUVE CATALOGUE CAT-R312
+
+Audit : PASS.
+Références : 5103 / 5103 uniques.
+10/10 empreintes canoniques inchangées.
+Stress pixel R312 absent du catalogue massif.
+Collision compacte unique BK3-4 / BK34 préservée.
+Aucune donnée catalogue modifiée par CAT-R312.
+ZIP catalogue SHA-256 : 09e6e8df383302e32d1e37482f0699ac6d13fc7d1ce1ce40509b7f70d15673ab
+Réextraction + manifest 1034 fichiers + ZIP test : PASS.
