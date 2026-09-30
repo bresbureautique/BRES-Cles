@@ -1,0 +1,1 @@
+R297 verified checkpoint proof. V2.27 stable remains unchanged.
