@@ -1,0 +1,13 @@
+BRES CLES — CHECKPOINT CATALOGUE CAT-R300
+
+Parent : CAT-R299.
+Catalogue canonique : inchangé.
+Références : 5103 / 5103 uniques.
+
+Jalon : preuve de séparation du diagnostic contrefactuel de continuité exacte R300 et du catalogue massif canonique.
+- R300 reste dans l’application et n’est pas injecté dans les données catalogue.
+- Les audits R299 et TE8 de R298 restent conservés.
+- TE8D / TE8I restent distincts et TE8B reste un jeton-pont non canonique.
+- La référence canonique TE8XFA reste présente et distincte.
+- L’unique collision compacte reste BK3-4 / BK34.
+- Les 10 empreintes des blocs canoniques restent strictement identiques.

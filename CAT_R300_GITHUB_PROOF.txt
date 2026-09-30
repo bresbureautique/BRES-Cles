@@ -1,0 +1,8 @@
+BRES CLES — GITHUB PROOF CAT-R300
+
+Parent proof branch: catalogue-v3-audit-r299-verified-proof
+CAT-R300 status: catalogue audit snapshot only; canonical catalogue unchanged.
+References: 5103 / 5103 unique.
+Canonical chunks: 10/10 SHA-256 unchanged.
+Compact collision: BK3-4 / BK34 only.
+Catalogue ZIP SHA-256: 64677ac7bed72e8ee46fd43a28913f3154a597c7944c8d4256feba0d6d9a45ef
