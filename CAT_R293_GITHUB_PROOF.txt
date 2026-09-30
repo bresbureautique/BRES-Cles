@@ -1,0 +1,10 @@
+BRES CLES - GITHUB PROOF CATALOGUE CAT-R293
+RESULTAT: PASS
+Parent: catalogue-v3-audit-r292-verified-proof
+References: 5103 / 5103 unique
+Canonical hashes: 10/10 unchanged
+Known compact collision: BK3-4 / BK34 only
+R293 silhouette plausibility ranking remains outside catalogue data.
+Archive SHA-256: 4ee2e2266af1b51299ccaa5265c7fe2dad50b7f59bec32de54f0eccf1d739b35
+CAT_R293_PROOF.txt SHA-256: 6264e01c874e3648c3df3fb4afcf503b5280b916a0bf50cb0fb3b3e7b6c77cfe
+CATALOGUE_INTERNAL_AUDIT_CAT_R293.txt SHA-256: fbd627bfc55712439eb5afeab74946a72bd8266d6a926ff22608688fa1d7d24d
