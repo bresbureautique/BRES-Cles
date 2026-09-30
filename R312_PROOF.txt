@@ -1,0 +1,1 @@
+BRES CLES R312 VERIFIED\nVerification 21/21 PASS. R311 inherited 20/20 PASS. Pixel stress: 375 cases; 221 R311-robust; 106 stable under four one-pixel perturbations; 115 unstable. R305 remains the only active gate. V2.27 stable unchanged. App ZIP SHA256: 8cf4a1246051c99946cea26ad5a27234d4f0848deab6b25ddeea98a05f67b6ad\n
