@@ -1,0 +1,5 @@
+R310 current verified source summary
+index.html and v228-catalogue.js checkpointed at R310.
+R310 verification: 19/19 PASS.
+R309 inherited verification: 18/18 PASS.
+Canonical catalogue hashes embedded in app: 10/10 unchanged.
