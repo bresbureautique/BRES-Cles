@@ -1,0 +1,10 @@
+BRES CLES - PREUVE CHECKPOINT R313
+Statut: PASS
+Stable V2.27: non remplacee
+Moteur: V2.28 TEST R156
+Verification R313: 22/22 PASS
+Heritage R312: 21/21 PASS
+Batterie morphologique: 1025 cas; 739 robustes R311; 152 predits surs; 0 faux-sur
+Precision observee: 100.0%; couverture des cas stables: 40.3%
+R313 reste diagnostique; R305 reste la seule regle active
+Catalogue: 10/10 empreintes canoniques inchangees
