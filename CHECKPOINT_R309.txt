@@ -1,0 +1,10 @@
+BRES CLES V2.28 — CHECKPOINT R309
+
+STATUT : CANDIDAT DE TEST — NE REMPLACE PAS V2.27 STABLE
+MOTEUR : V2.28 TEST R156
+OBJET : audit de robustesse diagnostique de la preuve exacte R308 sous perturbation adversariale des scores.
+CATALOGUE : séparé, inchangé dans ce paquet applicatif.
+
+R309 conserve intégralement l'acceptation R292, le classement de base R296, la garde R301, le cache R303, la règle d’activation R305, la télémétrie R306, la décomposition R307, la preuve suffisante R308 et les seuils OCR 0,70 / 0,88.
+R309 ajoute uniquement un audit non décisionnel : chaque score exact est soumis à un budget de stress de ±0,1 % de l'échelle de score. Une preuve R308 n'est classée robuste que si la marge reste positive dans le pire cas gagnant vers le bas / concurrent vers le haut.
+Cet audit ne relit aucun pixel et n’élargit jamais la règle active R305.
