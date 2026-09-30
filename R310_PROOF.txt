@@ -1,0 +1,14 @@
+BRES CLES — PREUVE CHECKPOINT R310
+
+Statut : PASS.
+Stable : V2.27 inchangée ; R310 reste un candidat V2.28 séparé.
+Moteur : V2.28 TEST R156.
+Vérification R310 : 19/19 PASS.
+Héritage R309 : 18/18 PASS.
+Profil frontière : 600 cas limites + 10 cas directs.
+R309 reproduit exactement au budget ±0,1 % : équivalence PASS.
+Décision active : inchangée ; R305 reste la seule garde active.
+Pixels reconstruits ajoutés par R310 : 0.
+Seuils OCR : 0,70 / 0,88 inchangés.
+ZIP application SHA-256 : 42637360d1ffd3a6a0f267f682694cdcb240168afd8b849f02f1390fac9fd3e4
+Réextraction + contrôle de tous les fichiers manifestés : PASS.
