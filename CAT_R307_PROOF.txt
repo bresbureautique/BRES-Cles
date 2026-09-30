@@ -1,11 +1,11 @@
-BRES CLES CAT-R307 VERIFIED PROOF
+BRES CLES CAT-R308 VERIFIED PROOF
 Status: PASS
 References: 5103 / 5103 unique
 Canonical block hashes: 10/10 unchanged
-R307 diagnostic fields absent from canonical catalogue
+R308 diagnostic fields absent from canonical catalogue
 Compact collision preserved: BK3-4 / BK34
 TE8D and TE8I remain distinct
 TE8B remains non-canonical bridge token
 TE8XFA preserved
 No catalogue data mutation
-Catalogue ZIP SHA256: 85cc99da2dc4985f5ef04ba30dd60fb84551745a6b0f739b7a7a92aeec3c7b78
+Catalogue ZIP SHA256: 6ff3b49a0fe60e750867907803a64cda66678474ad7bb1bd34bd63cc56474190
