@@ -1,0 +1,15 @@
+BRES CLES V2.28 — CHECKPOINT R305
+
+STATUT : CANDIDAT DE TEST — NE REMPLACE PAS V2.27 STABLE
+MOTEUR : V2.28 TEST R156
+OBJET : activation très prudente du score de continuité exacte, uniquement quand le gagnant R296 est mathématiquement garanti par R301 et confirmé par la simulation R303 100 % cache.
+CATALOGUE : séparé, inchangé dans ce paquet applicatif.
+
+R305 conserve l'acceptation R292, les seuils OCR 0,70 / 0,88 et le moteur V2.28 TEST R156.
+Le classement R296 reste la base et est toujours calculé en premier. R305 n'applique les scores exacts qu'après cette sélection initiale, seulement si :
+- l'enveloppe R301 garantit le gagnant ;
+- R303 calcule exactement tous les candidats et confirme le même gagnant ;
+- 100 % des mesures viennent du cache R303, sans reconstruction R302 ;
+- la marge exacte est strictement positive lorsqu'il existe plusieurs candidats.
+Dans tous les autres cas, R305 se bloque et conserve intégralement les scores R296.
+La sélection gagnante ne doit donc jamais changer lors d'une activation R305 valide ; seule la précision du score appliqué est améliorée sous garantie.
