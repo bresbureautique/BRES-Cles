@@ -1,0 +1,10 @@
+BRES CLES - GITHUB PROOF CATALOGUE CAT-R296
+RESULTAT: PASS
+Parent: catalogue-v3-audit-r295-proof
+Catalogue: 5103 references / 5103 unique
+Canonical hashes: 10/10 unchanged
+Compact collision: BK3-4 / BK34 only
+Change: R296 continuity ranking activation remains runtime-only and is not injected into catalogue canonical data.
+Archive: BRES_Cles_Catalogue_Audit_CAT_R296.zip
+Archive SHA-256: 5da2ceeafa144c08efabb3c46d6621c8c3308fd835f4bd1da275e2d8ef35ee53
+Canonical catalogue mutation: NONE
