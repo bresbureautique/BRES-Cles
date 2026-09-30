@@ -1,0 +1,11 @@
+BRES CLES — PREUVE APPLICATION V2.28 CHECKPOINT R290
+RESULTAT: PASS
+- 54/54 familles de contrôles passent.
+- Les huit compteurs d’identité critiques ciblés par R290 utilisent une avance monotone sûre : identificationEpoch, mainPhotoEpoch, ocrCaptureCycleEpoch, localTemplateEpoch, ocrRequestEpoch, geometryAnalysisGenerationR214, camSessionEpoch et ocrCaptureSeriesId.
+- nextSafeMonotonicIdentityR290() accepte uniquement un entier natif sûr >= 0 et strictement inférieur à Number.MAX_SAFE_INTEGER.
+- À saturation ou état invalide, le compteur est empoisonné en NaN et l’appel reçoit null : aucun recyclage/wrap d’identifiant n’est possible.
+- Les incréments directs de ocrRequestEpoch et ocrCaptureSeriesId dans les chemins caméra/série ont été supprimés ; les tests R274/R275 ont été adaptés à la nouvelle dépendance sans changer leur contrat fonctionnel.
+- Les protections R289 et antérieures restent préservées.
+- Runtime conservé : V2.28 TEST R156 ; seuils OCR 0,70 / 0,88 inchangés.
+- Stable préservée : V2.27 ; aucune version de test ne remplace la stable.
+- Catalogue canonique : 10/10 empreintes inchangées ; audit séparé CAT-R290.

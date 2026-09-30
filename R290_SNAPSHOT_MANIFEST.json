@@ -1,0 +1,13 @@
+{
+  "schema": "bres-r290-snapshot-manifest-v1",
+  "checkpoint": "R290",
+  "runtime": "V2.28 TEST R156",
+  "stable": "V2.27 unchanged",
+  "verification": {"ok": true, "passed": 54, "count": 54},
+  "key_sha256": {
+    "index.html": "4890b99c688d9faec10e38a5b3ef9f961cd45c559ea7d326c752f2a0e75853b4",
+    "v228-catalogue.js": "2dc393f0795d6734e65803410ae638659f167e86ec0afd218aa38ba3f36efccf",
+    "R290_VERIFICATION.json": "d794816229c4c510a8f86435a565d07a2350ec3e75128be79408fb7bebe0e8e4",
+    "R289_TO_R290_INDEX.diff": "f5bea7d741e7af31c20b9123426fd8146d1d1221150ed6dbbb198dd8ccc2b0a5"
+  }
+}
