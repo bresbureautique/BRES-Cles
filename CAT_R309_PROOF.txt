@@ -1,0 +1,7 @@
+BRES CLES - CATALOGUE CAT-R309
+Audit: PASS
+References: 5103 / 5103 unique
+Canonical hashes: 10/10 unchanged
+R309 robustness fields absent from canonical catalogue
+Compact collision: BK3-4 / BK34 only
+Catalogue data mutation: none
