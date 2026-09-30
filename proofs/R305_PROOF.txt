@@ -1,0 +1,9 @@
+BRES CLES — PREUVE CHECKPOINT R305
+
+Statut : PASS.
+Stable V2.27 : non remplacée.
+Moteur V2.28 TEST R156 : conservé.
+R305 : activation du score de continuité exacte uniquement lorsque R301 garantit mathématiquement le gagnant, que R303 confirme le même gagnant et que 100 % des métriques exactes proviennent du cache sans reconstruction.
+Si une condition manque, R296 est conservé.
+Contrôles R305 : 15/15 PASS ; héritage R304 : 72/72 PASS.
+Catalogue embarqué : 10/10 blocs canoniques inchangés ; audit séparé CAT-R305.
