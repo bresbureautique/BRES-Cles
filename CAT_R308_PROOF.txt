@@ -1,0 +1,8 @@
+BRES CLES CAT-R308 VERIFIED PROOF
+Status: PASS
+References: 5103 / 5103 unique
+Canonical block hashes: 10/10 unchanged
+R308 diagnostic fields absent from canonical catalogue
+Compact collision preserved: BK3-4 / BK34
+No catalogue data mutation
+Catalogue ZIP SHA256: 6ff3b49a0fe60e750867907803a64cda66678474ad7bb1bd34bd63cc56474190
