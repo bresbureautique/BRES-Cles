@@ -1,0 +1,9 @@
+BRES CLES - CHECKPOINT CATALOGUE CAT-R310
+Parent: CAT-R309
+Catalogue canonique: unchanged
+References: 5103 / 5103 unique
+Separation proof: R310 sensitivity metrics stay application-only
+TE8D and TE8I remain distinct; TE8B remains non-canonical bridge
+TE8XFA preserved
+Only compact collision remains BK3-4 / BK34
+Canonical block hashes: 10/10 unchanged

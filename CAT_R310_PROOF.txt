@@ -1,0 +1,7 @@
+BRES CLES - CATALOGUE CAT-R310
+Audit: PASS
+References: 5103 / 5103 unique
+Canonical hashes: 10/10 unchanged
+R310 robustness sensitivity profile absent from canonical catalogue
+Compact collision: only BK3-4 / BK34
+No catalogue data changed by CAT-R310
