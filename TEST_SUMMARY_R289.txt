@@ -1,0 +1,4 @@
+BRES CLES V2.28 CHECKPOINT R289 — TEST SUMMARY
+PASS 53/53 familles. Runtime V2.28 TEST R156. Stable V2.27 inchangée.
+Durcissement : index de face calibration/provenance strictement typé 0/1, sans coercition Number(...).
+Catalogue canonique inchangé ; CAT-R289 séparé.
