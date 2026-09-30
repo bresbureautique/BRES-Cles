@@ -1,0 +1,15 @@
+BRES CLES - GITHUB PROOF V2.28 CHECKPOINT R294
+RESULTAT: PASS
+Parent: v2.28-test-r293-proof
+Runtime: V2.28 TEST R156
+Stable: V2.27 unchanged
+Verification: 58/58 families PASS
+Change: diagnostic-only continuity/occupancy metrics on the selected silhouette component; R292 acceptance and R293 ranking unchanged.
+Synthetic coverage: grooved key, light-metal holes, thin guide line, connected thin-tail parasite.
+Archive: BRES_Cles_Mobile_V2_28_CHECKPOINT_R294.zip
+Archive SHA-256: 0fe46e064c5ed258b05edbbd3b7acbbbc234aa2c41117393daa8665fac80dd94
+index.html SHA-256: d5752c0caf6a5ccef2a64405b59e674197750e9c8f3543089e14afbdd523ffb3
+v228-catalogue.js SHA-256: 84602fcb1b0a81e8c8185c83c612d7afaf01165371a35284e660a50c366c9c7c
+R294_VERIFICATION.json SHA-256: 5c3acf3f00462fafdf9295c20e79d7fa93dc766663c7b197aabb7a688df5a706
+Regression script SHA-256: 596cbadd0b29c5e87ff9fa3af0492bc37d78bd1bcb5855ec131f71eee9ca4e7e
+OCR thresholds unchanged: 0.70 / 0.88
