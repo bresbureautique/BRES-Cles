@@ -1,0 +1,10 @@
+BRES CLES - PREUVE GITHUB V2.28 CHECKPOINT R292
+RESULTAT: PASS
+Verification locale: 56/56 familles PASS.
+Runtime: V2.28 TEST R156.
+Stable: V2.27 inchangee.
+Objet: regression synthetique de selection de silhouette, seuils V2.22 inchanges.
+Archive: BRES_Cles_Mobile_V2_28_CHECKPOINT_R292.zip
+SHA-256 archive: 6711f3b327b292216d6c6234e8ca7727febac48da3577a052d587fc1e2e73060
+SHA-256 index.html: c4a7db98581bfc113a3c08d9cc5419403de1ab4b337f0f7cd4326ba6ea61a691
+SHA-256 v228-catalogue.js: eaf2db13e9003c4bdf5e0e8c7843144bd3cbd71ff34f688e37b15d11f5d2ca44
