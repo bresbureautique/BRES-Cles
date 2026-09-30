@@ -1,0 +1,12 @@
+BRES CLES — PREUVE APPLICATION V2.28 CHECKPOINT R289
+RESULTAT: PASS
+- 53/53 familles de contrôles passent.
+- L’index de face de calibration/provenance est désormais strict : seules les valeurs numériques natives 0 (recto) et 1 (verso) sont acceptées.
+- Les chaînes "0"/"1", décimaux, négatifs, valeurs hors domaine et objets coercibles sont rejetés en fail-closed.
+- buildFaceCalibrationEvidenceR227() ne convertit plus index avec Number(...), et validatePublishedFaceCalibrationR227() refuse un index non canonique avant toute validation de preuve.
+- L’audit des coercitions Number(...) ne trouve plus de coercition sur les epochs, séries, requestEpoch, identificationEpoch, analysisGeneration ou index de face durcis.
+- Les conversions Number(...) restantes servent aux mesures, scores, dimensions, temps ou compteurs non identitaires.
+- Les protections R288 et antérieures restent préservées.
+- Runtime conservé : V2.28 TEST R156 ; seuils OCR 0,70 / 0,88 inchangés.
+- Stable préservée : V2.27 ; aucune version de test ne remplace la stable.
+- Catalogue canonique : 10/10 empreintes inchangées ; audit séparé CAT-R289.
