@@ -1,9 +1,8 @@
-BRES CLES — PREUVE CATALOGUE CAT-R310 — SNAPSHOT VERIFIE 2026-09-30
+BRES CLES — PREUVE CATALOGUE CAT-R310
 
-Statut : PASS.
+Audit : PASS.
 Références : 5103 / 5103 uniques.
 10/10 empreintes canoniques inchangées.
-Collision compacte unique : BK3-4 / BK34.
-Profil frontière R310 strictement absent des données catalogue canoniques.
-ZIP catalogue SHA-256 : 7c99a3f3b9c5cfd9cdd35578116d9ca251ce7a31476eb505f253116a06803a8c
-Réextraction + contrôle de tous les fichiers manifestés : PASS.
+Profil de sensibilité R310 absent du catalogue massif.
+Collision compacte unique BK3-4 / BK34 préservée.
+Aucune donnée catalogue modifiée par CAT-R310.
