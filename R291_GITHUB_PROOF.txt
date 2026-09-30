@@ -1,0 +1,9 @@
+BRES CLES — PREUVE GITHUB V2.28 CHECKPOINT R291
+RESULTAT: PASS
+Verification locale: 55/55 familles PASS.
+Runtime: V2.28 TEST R156.
+Stable: V2.27 inchangee.
+Archive: BRES_Cles_Mobile_V2_28_CHECKPOINT_R291.zip
+SHA-256 archive: 2cc2095b78e00026e8b1a41339fdc4a3e4f9c5d8b1b5f7141ba7018523b6cbe8
+SHA-256 index.html: 4b1c3a64c62830749b4bd85d42a71c15b5a37fe52316f3d650b9b4521e55fbdf
+SHA-256 v228-catalogue.js: be1f5f18dedf7a04e4ae97315166585c5fd55b7bc9a1ced61954fd5e877d0d1f
