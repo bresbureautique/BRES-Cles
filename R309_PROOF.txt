@@ -1,0 +1,15 @@
+BRES CLES - CHECKPOINT R309
+Status: PASS
+Stable: V2.27 unchanged
+Runtime: V2.28 TEST R156
+OCR thresholds: 0.70 / 0.88 unchanged
+R309 verification: 18/18 PASS
+R308 inherited checks: 17/17 PASS
+Stress cases: 250
+R308 certified: 146
+R309 robust: 145
+R309 fragile: 1
+False robust: 0
+Added pixel reconstruction: 0
+Active R305 rule: unchanged
+Catalogue canonical hashes: 10/10 unchanged
