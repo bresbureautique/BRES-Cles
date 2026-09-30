@@ -1,0 +1,4 @@
+CAT-R304 verified source-hash ledger SHA256: 9ced4770db6865ef3d0bdee71a1e17493cd2830b29c5063f32e077074602a769  CAT_R304_SOURCE_HASHES.txt
+catalogue_audit_cat_r304.py SHA256: e46b19d55157c43c5bb296f451508d2355800b4fce7a10ea85e8f2fbbd14a20e
+CATALOGUE_RUNTIME_CONTINUITY_COST_PROFILE_SEPARATION_AUDIT_CAT_R304.json SHA256: 7e2b6eee28cf42a350de55e13f5be65ae349e3c1fa79c8cdcdb33621955d5c5f
+Catalogue: 5103/5103 unique; 10/10 canonical hashes unchanged; compact collision BK3-4 / BK34 only.
