@@ -1,1 +1,1 @@
-R306
+R306 catalogue verification PASS. 5103 references, 5103 unique. Canonical data unchanged. Package checksum recorded in Library backup.
