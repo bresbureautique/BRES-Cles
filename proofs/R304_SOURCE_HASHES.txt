@@ -1,0 +1,5 @@
+R304 verified source-hash ledger SHA256: 0fe8f36f20557afb44bf1344a8ed2a50ba510b7a7b50b3dac80f22a2e130d8e9  R304_SOURCE_HASHES.txt
+index.html SHA256: 628719dd2e01ca498f0e5e4c32cfee12a4d97b31c82960219822ab4f782377da
+verify_checkpoint_r304.py SHA256: c86cde34a2cb7213d863985382c9e7c6087b74ec30feb45bd38008fbb571205c
+R304_VERIFICATION.json SHA256: 1cfaf1ec133ea32295ca0ce46d832d90af835c00c1b90378017dd89779de587c
+Canonical catalogue hashes: 10/10 unchanged; see local/Library R304_SOURCE_HASHES.txt.
