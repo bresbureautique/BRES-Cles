@@ -1,0 +1,7 @@
+BRES CLES CATALOGUE CHECKPOINT CAT-R307
+Parent: CAT-R306
+Canonical catalogue unchanged
+References: 5103 / 5103 unique
+Purpose: prove separation of R307 application diagnostics from canonical catalogue data.
+Ten canonical hashes unchanged.
+Only compact collision remains BK3-4 / BK34.
