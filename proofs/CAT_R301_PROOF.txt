@@ -1,0 +1,9 @@
+BRES CLES — PREUVE CATALOGUE CAT-R301
+
+Audit : PASS.
+Références : 5103 / 5103 uniques.
+10/10 empreintes canoniques inchangées.
+Diagnostic R301 absent du catalogue massif ; TE8D / TE8I / TE8B restent absents du catalogue massif canonique ; TE8XFA préservée.
+Collision compacte unique BK3-4 / BK34 préservée.
+Aucune donnée catalogue modifiée par CAT-R301.
+ZIP catalogue SHA-256 : 5c88f854395b87aadc532c052458a1c630f1a828199437daa8c363dd2cf8ba79
