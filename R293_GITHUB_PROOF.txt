@@ -1,0 +1,14 @@
+BRES CLES - GITHUB PROOF V2.28 CHECKPOINT R293
+RESULTAT: PASS
+Parent: v2.28-test-r292-verified-proof
+Runtime: V2.28 TEST R156
+Stable: V2.27 unchanged
+Verification: 57/57 families PASS
+Change: bounded silhouette density plausibility ranking 0.80..1.00; R292 acceptance criteria unchanged.
+Archive: BRES_Cles_Mobile_V2_28_CHECKPOINT_R293.zip
+Archive SHA-256: f739fafbdf9ddf6e6d7f189e86d44ecca0bae7f7d6a425fc4c26e127e7f7b21d
+index.html SHA-256: d0e6b69603524d96467f0073def2c46de105f81209ab980f27bf82892ec990a0
+v228-catalogue.js SHA-256: 28d923529e495ea6ab0619f266d98c2b915fc3e18c7af2a54d728a641b541479
+R293_VERIFICATION.json SHA-256: 4ba97562c4903b0dee4d8f340d9f9d42ffd70c430dbd4508e66d0072d30321b7
+Regression script SHA-256: e7778950d1d99be7aa93fbcf3c83fbdf688f4d8e17afd10ced4d67ed7175b7ef
+OCR thresholds unchanged: 0.70 / 0.88
