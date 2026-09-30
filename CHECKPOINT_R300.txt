@@ -1,0 +1,11 @@
+BRES CLES V2.28 — CHECKPOINT R300
+
+STATUT : CANDIDAT DE TEST — NE REMPLACE PAS V2.27 STABLE
+MOTEUR : V2.28 TEST R156
+OBJET : mesure contrefactuelle de l'impact qu'aurait une continuité calculée sur le composant connecté exact avant toute activation.
+CATALOGUE : séparé, inchangé dans ce paquet applicatif.
+
+R300 ne modifie ni l'acceptation R292, ni le score actif R296, ni les seuils OCR 0,70 / 0,88.
+Après le classement actif, le gagnant conserve désormais le score du second candidat à titre diagnostique. Une fois le composant exact reconstruit, R300 recalcule un score contrefactuel utilisant son facteur de continuité exact et mesure l'écart, la marge et un éventuel renversement face au second candidat.
+Cette mesure reste strictement diagnostique (decisionInfluence=false) et sert à décider si une future activation serait sûre sur les clés fines, rainurées, métalliques claires et les cas parasités.
+Les garde-fous R299 et TE8D / TE8I de R298 restent intacts.

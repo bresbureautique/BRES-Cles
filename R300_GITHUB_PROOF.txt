@@ -1,0 +1,9 @@
+BRES CLES — GITHUB PROOF R300
+
+Parent proof branch: v2.28-test-r299-verified-proof
+R300 status: CHECKPOINT TEST, does not replace V2.27 stable.
+Runtime engine: V2.28 TEST R156.
+Verification: PASS 65/65.
+Active ranking remains R296; R300 is diagnostic-only (counterfactual exact continuity impact).
+Application ZIP SHA-256: c5e546318c7d5a103c52fea37bd908957880eb6fca650af89c397ff9b07a5632
+Catalogue audit remains separate under CAT-R300.
