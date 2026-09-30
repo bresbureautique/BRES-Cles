@@ -1,0 +1,7 @@
+BRES CLES R311 VERIFIED PASS
+V2.27 stable unchanged.
+V2.28 TEST R156 kept separate.
+R311 verification: 20/20 PASS; R310 inherited: 19/19 PASS.
+Boundary sweep: 384 cases. R309 mathematical threshold: exact margin strictly above 0.2 percent of score scale plus 1e-9 epsilon.
+R305 remains the only active gate. R311 adds zero reconstructed pixels.
+Catalogue canonical hashes: 10/10 unchanged; CAT-R311 audited separately.
