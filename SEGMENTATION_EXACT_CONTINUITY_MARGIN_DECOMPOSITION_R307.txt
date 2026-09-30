@@ -1,0 +1,19 @@
+R307 MARGIN DECOMPOSITION REGRESSION
+RESULT: PASS
+Standard cases: 40
+Controlled probes: 3
+Envelope guaranteed: 30
+Conservative but exact safe: 3
+Exact unsafe: 10
+R305 activations: 30
+R305 blocks: 13
+PASS exact_unsafe_never_activated
+PASS conservative_safe_never_activated_by_r305
+PASS controlled_grooved_conservative_probe
+PASS controlled_tail_conservative_probe
+PASS controlled_solid_conservative_probe
+PASS r305_gate_preserved
+PASS r296_reference_preserved
+PASS r292_acceptance_unchanged
+PASS thresholds_unchanged
+PASS stable_preserved

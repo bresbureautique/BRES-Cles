@@ -1,0 +1,18 @@
+R307 VERIFICATION SUMMARY
+R307 checks: 16/16 PASS
+Inherited R306: 16/16 PASS
+Matrix: 40 standard cases + 3 controlled probes
+R301 guaranteed: 30
+R301 conservative but exact safe: 3 controlled probes
+Exact unsafe: 10
+R305 activations: 30
+R305 blocks: 13
+No conservative controlled probe activated
+R305 gate unchanged
+R303 cache reuse PASS
+R301 safety envelope PASS
+R296 active ranking PASS
+R292 acceptance PASS
+OCR thresholds 0.70 / 0.88 unchanged
+Runtime V2.28 TEST R156 unchanged
+V2.27 stable not replaced

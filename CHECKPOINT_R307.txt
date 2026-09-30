@@ -1,0 +1,9 @@
+BRES CLES V2.28 CHECKPOINT R307
+STATUS: TEST CANDIDATE - DOES NOT REPLACE V2.27 STABLE
+Runtime: V2.28 TEST R156
+Purpose: diagnostic decomposition of conservative R301 margin versus exact R303 margin.
+R305 activation rule unchanged.
+R306 telemetry preserved.
+R296 base ranking preserved.
+R292 acceptance preserved.
+OCR thresholds 0.70 / 0.88 unchanged.
