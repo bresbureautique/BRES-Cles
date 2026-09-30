@@ -1,0 +1,8 @@
+BRES CLES — PREUVE CATALOGUE CAT-R290
+RESULTAT: PASS
+- 5 103 références / 5 103 uniques.
+- 10/10 empreintes canoniques inchangées.
+- Une seule collision compacte connue : BK3-4 / BK34.
+- Le durcissement R290 des incréments d’identité critiques reste entièrement hors des données catalogue.
+- Aucun bloc canonique n’est modifié par CAT-R290.
+- Parent : CAT-R289.

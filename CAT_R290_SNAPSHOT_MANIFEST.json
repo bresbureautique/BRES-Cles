@@ -1,0 +1,9 @@
+{
+  "schema": "bres-cat-r290-snapshot-manifest-v1",
+  "checkpoint": "CAT-R290",
+  "parent": "CAT-R289",
+  "catalogue": "canonical unchanged",
+  "count": 5103,
+  "unique": 5103,
+  "audit_ok": true
+}
