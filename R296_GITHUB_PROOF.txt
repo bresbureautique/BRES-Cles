@@ -1,0 +1,16 @@
+BRES CLES - GITHUB PROOF V2.28 CHECKPOINT R296
+RESULTAT: PASS
+Parent: v2.28-test-r295-proof
+Runtime: V2.28 TEST R156
+Stable: V2.27 unchanged
+Verification: 58/58 active families PASS
+Inherited verification: R295 59/59 PASS; R294 58/58 PASS
+Change: bounded continuity factor 0.86-1.00 is active only in candidate ranking after R293 plausibility; R292 acceptance is unchanged and no new rejection path is added.
+Synthetic coverage: grooved key, light metal, thin guide line, connected thin-tail parasite, before/after ordering, bounds and invalid inputs.
+Archive: BRES_Cles_Mobile_V2_28_CHECKPOINT_R296.zip
+Archive SHA-256: 16f86c6e13f46b29fe2b4419305ddca36acd6a9875050edf371e433aca5e8bc7
+index.html SHA-256: ba74036a22766df3da31c2b0067e69d3494384b15ae6a3ead99c3d0659476542
+v228-catalogue.js SHA-256: 43b74823fd1cc5a02481561b83a5850eb2916042f09d54b7d397aaf6bf712cda
+R296_VERIFICATION.json SHA-256: 0d6ccb8008ab58d9f72c41b2177e568fa3f501dea07b88b00f98ed8d7cf5d540
+Regression script SHA-256: 325c6d1caf0b2d6c04daab5c13993566f8e54a7031b7c661c292588e112d6a0e
+OCR thresholds unchanged: 0.70 / 0.88
