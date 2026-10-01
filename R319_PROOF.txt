@@ -1,0 +1,14 @@
+BRES CLES — PREUVE CHECKPOINT R319
+
+Statut : PASS.
+Stable V2.27 : non remplacée.
+Moteur : V2.28 TEST R156 conservé.
+Seuils OCR : 0,70 / 0,88 inchangés.
+Vérification R319 : 28/28 PASS ; héritage R318 : 27/27 PASS.
+Validation bidirectionnelle queue↔queue : 1160 paires robustes testées.
+Marge >=2 % : 797/797 paires sûres dans les deux ordres sous les quatre perturbations R312.
+Sous 2 % : 3/363 paires seulement sûres dans les deux ordres ; marge instable maximale observée : 1,98000 %.
+17 cas restants R318 : 0/17 sûrs bidirectionnellement ; ils restent volontairement bloqués.
+Décision R319 : seuil diagnostique R316 de 2 % confirmé comme borne conservatrice permutation-invariante sur cette grille ; aucune extension active.
+R305 reste la seule règle active.
+Catalogue canonique embarqué : 10/10 empreintes inchangées ; audit séparé CAT-R319.
