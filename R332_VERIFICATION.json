@@ -1,0 +1,17 @@
+{
+  "schema": "bres-r332-verification-v1",
+  "milestone": "R332",
+  "parent": "R331",
+  "status": "PASS_PRE_PHYSICAL",
+  "checks": {
+    "validator_clean_review_candidate": true,
+    "validator_pair_direction_fragile_not_review_candidate": true,
+    "validator_leave_one_out_fragile_not_review_candidate": true,
+    "automatic_activation_disabled": true,
+    "r331_benchmark_preserved": true,
+    "r305_only_preserved": true,
+    "v228_runtime_preserved": true
+  },
+  "physical_samsung_status": "PENDING_REQUIRED_BEFORE_INTEGRATION",
+  "ok": true
+}
