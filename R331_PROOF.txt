@@ -1,0 +1,8 @@
+BRES CLES - PREUVE CHECKPOINT R331
+Statut : PASS.
+Benchmark hote : 24 echantillons / 192 comparaisons ; 0 divergence ; 0 faux-sur ; 0 faux-unsafe.
+Protocole : 2 prechauffages + 7 repetitions en ordre alterne local/full puis full/local ; speedup hote median x9.01.
+Validateur R331 : fixture Samsung synthetique acceptee ; ordre falsifie et paire de temps falsifiee rejetes.
+index.html : une seule ligne modifiee face a R330, exclusivement le lien de diagnostic R331 (ligne 38).
+R305 reste la seule regle active. V2.27 reste stable et non remplacee.
+Mesure Samsung physique : EN ATTENTE ; requise avant toute integration.
