@@ -1,0 +1,12 @@
+R316 VERIFIED PASS
+Verification 25/25 PASS
+Inherited R315 24/24 PASS
+Stable V2.27 unchanged
+Runtime V2.28 TEST R156
+R305 remains the only active rule
+R316 is diagnostic only
+Main battery 2025 cases
+R316 tail-tail added safe subset: 41 cases, 0 observed false-safe
+Combined diagnostic coverage: 583 of 752 stable cases
+Dense tail-tail sweep: 81 selected, 0 observed false-safe
+Application ZIP SHA256 cb236c67854478cacecbdd35ed14ea5dad99558ed86cbd0fbdce65f042555a3c
