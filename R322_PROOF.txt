@@ -1,0 +1,11 @@
+BRES CLES — PREUVE CHECKPOINT R322
+Statut : PASS.
+Vérification R322 : 31/31 PASS.
+Héritage R321 : rapport 30/30 PASS + 8 352 fichiers hérités vérifiés par manifeste SHA-256.
+Batterie train : 7 218 cas robustes ; holdout offsets haut/bas : 4 626 cas robustes.
+Signature destructive érosion+coupure de bord : 4 224/4 224 sûrs sur train et 2 528/2 528 sûrs sur holdout ; 0 faux-sûr observé.
+9 règles géométriques seules étaient parfaites sur train, mais 0 ne reste sans faux-sûr sur le holdout ; la meilleure tombe à 5/6.
+Conclusion : la signature destructive est un préfiltre diagnostique prometteur, mais aucune nouvelle règle active n'est autorisée.
+R305 reste la seule règle active.
+V2.27 reste stable et non remplacée.
+ZIP application SHA-256 : 4cf03bd02ef8b054c5024f43ba89c9a3ed1f23c676726df3d3cc57d4ca7ca2af
