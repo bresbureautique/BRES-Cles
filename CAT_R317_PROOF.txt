@@ -1,0 +1,8 @@
+BRES CLES — PREUVE CATALOGUE CAT-R317
+
+Audit : PASS.
+Références : 5103 / 5103 uniques.
+10/10 empreintes canoniques inchangées.
+Critère directionnel fin↔corps dense R317 absent du catalogue massif.
+Collision compacte unique BK3-4 / BK34 préservée.
+Aucune donnée catalogue modifiée par CAT-R317.
