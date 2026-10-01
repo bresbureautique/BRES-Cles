@@ -1,0 +1,13 @@
+{
+  "milestone": "CAT-R335",
+  "status": "PASS",
+  "parent": "CAT-R334",
+  "catalogueZip": "BRES_Cles_Catalogue_Audit_CAT_R335.zip",
+  "catalogueZipSha256": "0d96b2aab6be9232b3a21b0c57104a7cd525cfc19c23d8894bbb3d0e4bade548",
+  "count": 5103,
+  "unique": 5103,
+  "canonicalChunkHashesUnchanged": true,
+  "compactCollisionCount": 1,
+  "bk34PairPreserved": true,
+  "canonicalDataMutated": false
+}
