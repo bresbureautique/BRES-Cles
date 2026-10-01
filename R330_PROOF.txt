@@ -1,8 +1,6 @@
 BRES CLES - PREUVE CHECKPOINT R330
 Statut : PASS.
-Validateur renforce : fixture PASS acceptee ; faux-sur rejete ; mediane falsifiee rejetee ; speedup falsifie rejete ; execution browserless rejetee.
-Fixture forte variabilite : resultat technique conserve mais exclu de la revue d integration.
-Moteur actif et benchmark R328 inchanges bit-a-bit.
+Validateur renforce et aucun changement du moteur actif.
 R305 reste la seule regle active.
 V2.27 reste stable et non remplacee.
-Mesure Samsung : NON ENCORE EFFECTUEE ; requise avant toute integration.
+Mesure Samsung : en attente avant integration.
