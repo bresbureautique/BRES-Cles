@@ -1,0 +1,10 @@
+BRES CLES — PREUVE CHECKPOINT R321
+Statut : PASS.
+Vérification R321 : 30/30 PASS.
+Héritage R320 : 29/29 PASS.
+8 748 cas diagnostiques ; 4 266 cas >=2 % ; 1 586 instables malgré cette marge.
+Érosion impliquée dans 948 cas ; 638 autres instables via une autre perturbation.
+Conclusion : combiner sensibilité morphologique et géométrie ; aucune nouvelle règle active.
+R305 reste la seule règle active.
+V2.27 reste stable et non remplacée.
+ZIP application SHA-256 : 022a399a01adc1db29340b53be17fca1a5b9452836aa6b978c740c4c5a5c4e4f
