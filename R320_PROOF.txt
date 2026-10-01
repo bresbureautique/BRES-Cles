@@ -1,0 +1,14 @@
+BRES CLES — PREUVE CHECKPOINT R320
+
+Statut : PASS.
+Stable V2.27 : non remplacée.
+Moteur : V2.28 TEST R156 conservé.
+Seuils OCR : 0,70 / 0,88 inchangés.
+Vérification R320 : 29/29 PASS ; héritage R319 : 28/28 PASS.
+Stress géométrique queue↔queue : 8748 cas sur 1458 configurations.
+Cas robustes R311 : 7218.
+Marge >=2 % : 2680/4266 sûres bidirectionnellement ; 1586 contre-exemples.
+Marge instable maximale observée : 6.52343 %.
+Décision R320 : le seuil R316 de 2 % ne doit pas être généralisé ; aucune extension active.
+R305 reste la seule règle active.
+Catalogue canonique embarqué : 10/10 empreintes inchangées ; audit séparé CAT-R320.
