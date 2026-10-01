@@ -10,3 +10,4 @@ Filtres diagnostiques : R313=304 ; R314=+76 ; R315=+162 ; combinés=542 ; faux-s
 Couverture des cas réellement stables : 72.1 %.
 R315 reste diagnostique ; R305 reste la seule règle active.
 Catalogue canonique embarqué : 10/10 empreintes inchangées ; audit séparé CAT-R315.
+ZIP application SHA-256 : 025267c6643c25ea7d0f531bd8a8eb8febcce81b0e30ed06ca07226e2d6f03e2
