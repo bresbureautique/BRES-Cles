@@ -1,0 +1,10 @@
+BRES CLES - PREUVE CHECKPOINT R332
+Statut : PASS PRE-PHYSIQUE.
+R332 ajoute un validateur diagnostique plus strict sur les resultats Samsung R331.
+Fixture propre : acceptee comme candidate a revue ingenierie.
+Fixture avec seulement 5/7 paires plus rapides : mesure valide mais refusee comme candidate a revue.
+Fixture leave-one-out fragile : mesure valide mais refusee comme candidate a revue quand une exclusion fait tomber le gain sous x1.25.
+Aucune activation automatique ; activation_candidate reste toujours false.
+index.html et le moteur d identification restent inchanges face a R331.
+R305 reste la seule regle active. V2.27 reste stable et non remplacee.
+Mesure Samsung physique : EN ATTENTE.
