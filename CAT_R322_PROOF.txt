@@ -1,0 +1,7 @@
+BRES CLES - PREUVE CATALOGUE CAT-R322
+Audit: PASS
+References: 5103 / 5103 uniques
+Empreintes canoniques: 10/10 inchangees
+Collision compacte unique: BK3-4 / BK34
+Aucune donnee catalogue modifiee par CAT-R322
+ZIP catalogue SHA-256: 227c37dd9930b3721e824b6b70550132590a9d4ac0da9c909a77131c9192b08f
