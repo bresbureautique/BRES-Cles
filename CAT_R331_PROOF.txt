@@ -1,0 +1,8 @@
+BRES CLES - PREUVE CATALOGUE CAT-R331
+Audit : PASS.
+References : 5103 / 5103 uniques.
+10/10 empreintes canoniques inchangees.
+Benchmark alterne R331 absent du catalogue canonique.
+Collision compacte unique BK3-4 / BK34 preservee.
+Aucune donnee catalogue modifiee par CAT-R331.
+ZIP catalogue SHA-256 : 4f51da694370f0e2ccee21566f8bb27cdf6c53e77bae8f1e368f3331081be659
