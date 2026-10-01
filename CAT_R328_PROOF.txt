@@ -1,0 +1,8 @@
+BRES CLES - PREUVE CATALOGUE CAT-R328
+Audit : PASS.
+References : 5103 / 5103 uniques.
+10/10 empreintes canoniques inchangees.
+Diagnostic de benchmark Samsung R328 absent du catalogue canonique.
+Collision compacte unique BK3-4 / BK34 preservee.
+Aucune donnee catalogue modifiee par CAT-R328.
+ZIP catalogue SHA-256 : f94164df04e42423e70a4364d9edeb00fd9c6d99c57a07014b7acff3f2a2993b
