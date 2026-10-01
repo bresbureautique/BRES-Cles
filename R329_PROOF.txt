@@ -1,0 +1,8 @@
+BRES CLES - PREUVE CHECKPOINT R329
+Statut preparation resultat physique : PASS.
+Moteur actif d identification : inchange depuis R328 (index.html SHA-256 0e988d829e518f2bcb8b45b752703f2b967347f47c9ed2d6e3594a7a2f838413).
+Benchmark hote R328 reexecute : PASS ; 24 echantillons ; 192 operations ; 0 divergence ; 0 faux-sur ; 0 faux-unsafe.
+Validateur R329 : fixture PASS accepte ; fixture avec 1 faux-sur rejetee ; activation automatique explicitement interdite.
+Mesure Samsung : NON ENCORE EFFECTUEE ; requise avant toute integration de la projection locale.
+R305 reste la seule regle active.
+V2.27 reste stable et non remplacee.
