@@ -1,0 +1,7 @@
+BRES CLES - PREUVE CATALOGUE CAT-R327
+Audit : PASS.
+References : 5103 / 5103 uniques.
+10/10 empreintes canoniques inchangees.
+Diagnostic de projection/benchmark R327 absent du catalogue canonique.
+Collision compacte unique BK3-4 / BK34 preservee.
+Aucune donnee catalogue modifiee par CAT-R327.
