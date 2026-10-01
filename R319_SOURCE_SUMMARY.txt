@@ -1,0 +1,9 @@
+R319 verified source summary
+Checkpoint: R319
+Runtime: V2.28 TEST R156
+Stable: V2.27 unchanged
+Verification: 28/28 PASS
+Inherited R318: 27/27 PASS
+R319 is diagnostic-only; active rule remains R305.
+Tail↔tail permutation-invariant validation confirms all 797/797 tested pairs at >=2% margin are stable in both orders.
+Canonical catalogue hashes embedded in app: 10/10 unchanged.
