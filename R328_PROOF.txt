@@ -1,0 +1,8 @@
+BRES CLES - PREUVE CHECKPOINT R328
+Statut instrumentation : PASS.
+Moteur actif d identification : inchange depuis R327 (empreinte JS active identique).
+Benchmark hote R328 : 24 echantillons ; 192 operations direction-mode ; accord local/plein-canvas 192/192 ; 0 faux-sur ; 0 faux-unsafe.
+Mesure Samsung : NON ENCORE EFFECTUEE ; requise avant toute activation de la projection.
+R305 reste la seule regle active.
+V2.27 reste stable et non remplacee.
+ZIP application SHA-256 : fc453ef1025dfe241901804b378823173192c36df375c943bf781f44d96a76eb
