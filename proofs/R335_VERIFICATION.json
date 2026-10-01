@@ -1,0 +1,25 @@
+{
+  "milestone": "R335",
+  "status": "PASS PRE-PHYSIQUE",
+  "parent": "R334",
+  "stable": "V2.27 unchanged",
+  "activeRule": "R305 only",
+  "physicalSamsung": "EN ATTENTE",
+  "appZip": "BRES_Cles_Mobile_V2_28_CHECKPOINT_R335.zip",
+  "appZipSha256": "de2b95872907957fd9bfc6522086977c70cbea0b388b8fecc3edcb2736ddf74f",
+  "benchmarkFileSha256": "a1cfdd1f427175bcf0601a9b9df6b808b578199b03c7bfafac2ca7ac710849e8",
+  "benchmarkRuntimeRunSha256": "cb6ed90da456b42c950ae4b39eb8a59db241319b65b268ecefaa07d7c7dbd04b",
+  "host": {
+    "samples": 24,
+    "comparisons": 192,
+    "disagree": 0,
+    "falseSafe": 0,
+    "falseUnsafe": 0
+  },
+  "checks": {
+    "parentImmutableExceptIndex": true,
+    "coreUnchanged": true,
+    "runtimeFingerprint": true,
+    "automaticActivation": false
+  }
+}
