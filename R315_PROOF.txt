@@ -1,0 +1,12 @@
+BRES CLES — PREUVE CHECKPOINT R315
+
+Statut : PASS.
+Stable V2.27 : non remplacée.
+Moteur : V2.28 TEST R156 conservé.
+Seuils OCR : 0,70 / 0,88 inchangés.
+Vérification R315 : 24/24 PASS ; héritage R314 : 23/23 PASS.
+Batterie R315 : 2025 cas ; 1471 cas R311 robustes ; 752 réellement stables sous 4 perturbations.
+Filtres diagnostiques : R313=304 ; R314=+76 ; R315=+162 ; combinés=542 ; faux-sûr combiné=0.
+Couverture des cas réellement stables : 72.1 %.
+R315 reste diagnostique ; R305 reste la seule règle active.
+Catalogue canonique embarqué : 10/10 empreintes inchangées ; audit séparé CAT-R315.
