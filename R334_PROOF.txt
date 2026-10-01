@@ -1,0 +1,7 @@
+BRES CLES - PREUVE CHECKPOINT R334
+Statut : PASS PRE-PHYSIQUE.
+Application ZIP SHA-256 : 4e410d0ad74943bd725d0aec4a416086f40041563f7fc79fdf8f76ba51f3955c
+R334 renforce la preuve du benchmark Samsung sans modifier r331-device-benchmark.js.
+Hote : 24 echantillons / 192 comparaisons, 0 divergence, 0 faux-sur, 0 faux-unsafe.
+Aucune activation automatique ; R305 reste la seule regle active. V2.27 reste stable et non remplacee.
+Mesure Samsung physique : EN ATTENTE.
