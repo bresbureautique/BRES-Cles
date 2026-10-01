@@ -6,3 +6,4 @@ Références : 5103 / 5103 uniques.
 Filtre morphologique tertiaire R315 absent du catalogue massif.
 Collision compacte unique BK3-4 / BK34 préservée.
 Aucune donnée catalogue modifiée par CAT-R315.
+ZIP catalogue SHA-256 : 676d853080ece2af59ca5ec25c16cb1e8a12263e3dd4b99fd258019133e5897d
