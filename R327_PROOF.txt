@@ -1,0 +1,11 @@
+BRES CLES - PREUVE CHECKPOINT R327
+Statut : PASS.
+Matrice large : 14 580 cas ; 11 844 robustes R311.
+Projection locale R327 : 3 016 cas surs ; 0 faux-sur ; 0 faux-unsafe ; 47 376 comparaisons de modes ; accord oracle local 100 %.
+Spot-check plein-canvas : 321 cas / 1 284 comparaisons ; 0 faux-sur ; 0 faux-unsafe.
+Tie-break de lignee : 60 decisions diagnostiques corrigees ; les 2 faux-unsafe conservateurs R326 sont elimines.
+Benchmark hote Node : 48 echantillons / 384 operations direction-mode ; mediane locale 17.891 ms contre 108.631 ms plein-canvas, soit x6.07 sur cet environnement (ce n'est pas encore une mesure Samsung).
+Ratio estime parcours local / plein-canvas : 1.20 %.
+Conclusion : piste R327 prometteuse mais encore diagnostique ; validation runtime sur Samsung requise avant toute activation.
+R305 reste la seule regle active.
+V2.27 reste stable et non remplacee.
