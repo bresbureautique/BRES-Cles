@@ -1,0 +1,4 @@
+CAT-R334 PASS
+5103 references uniques.
+10 empreintes canoniques inchangees.
+Catalogue ZIP SHA-256: d2b3f2a33e339d43750112bdf6c324b6007277a5cdb303dcc6d8021140d1f26a
