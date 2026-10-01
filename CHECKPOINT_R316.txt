@@ -1,0 +1,9 @@
+BRES CLES V2.28 — CHECKPOINT R316
+
+Version stable : V2.27 (inchangée).
+Moteur de test : V2.28 TEST R156.
+Règle active : R305 inchangée.
+
+R316 conserve intégralement R292/R296/R301/R303/R305 et les diagnostics R306 à R315.
+R316 ne modifie aucune décision active. Il teste une quatrième condition diagnostique très conservatrice pour les couples queue > queue : les deux candidats doivent présenter la signature morphologique de queue continue R315 et la marge exacte normalisée R311 doit être supérieure ou égale à 0,020 (2 % de l’échelle de score).
+La batterie principale reste à 2 025 cas synthétiques et quatre perturbations 1 px pour permettre une comparaison exacte avec R315. Un balayage dédié queue > queue plus fin (pas 0,0005 sur le ratio) contrôle la frontière du seuil de 2 %.
