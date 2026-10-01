@@ -1,0 +1,10 @@
+{
+  "milestone":"CAT-R332",
+  "parent":"CAT-R331",
+  "count":5103,
+  "unique":5103,
+  "canonical_hashes_unchanged":10,
+  "compact_collision":"BK3-4/BK34",
+  "catalogue_mutated":false,
+  "ok":true
+}
