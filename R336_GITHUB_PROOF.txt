@@ -1,0 +1,18 @@
+BRES CLES - GITHUB PROOF R336
+Parent branch: v2.28-test-r335-proof-de2b95872907
+Parent commit: a2bfad38d3192b776c9b794be03256a4a64ea25f
+Stable main expected: 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8 (V2.27)
+Application ZIP SHA-256: 0d4dc322be5478f134615be9e6ebc5ba17a05a182f296a14c67ad88df58ea23c
+Runtime: V2.28 TEST R156; active OCR gate: R305 only; automatic activation disabled.
+R336: chronology integrity layer for Samsung benchmark; PASS pre-physical.
+Key file SHA-256:
+7695301023e526d4cdc92e05fcf7f62df1e56bef1ebc639766e91788849bbeba  index.html
+88ba150f4aa6de1d12f731d7a4dd50b5f97934fe068bb0bab32263679f381690  device_benchmark_r336.html
+ac3721bff8e95e72c286f94d7987ee30b1224325311e0eb63ebc83f9d7268b4d  validate_r336_device_result.py
+05ec5785e821ffeea16e40bca9d9b71ece0fab4e4e09612c239816e46666b8de  r336_chronology_regression.py
+eea90bd6ed8c81fa310d886f65ab323de104d5c47d87715048cbfc93f8e9d76c  R336_PROOF.txt
+9ba9711effcdb3da1b96a62af60a0ad29bc6945c7073817b1476776b6477d7bd  R336_VERIFICATION.txt
+0774bd115fc9ebbbfb3a6f01e1e262e2b9a2a1601731a974b7b24166acb4ec8c  SNAPSHOT_MANIFEST_R336.sha256
+d8ca1d6aa253716a88d55c770e9f52f544c11e27991b32439a1f62782496a720  R336_INDEX_PATCH.diff
+Library verification: rematerialized ZIP matched exact SHA and critical tests PASS.
+Samsung physical measurement: PENDING.
