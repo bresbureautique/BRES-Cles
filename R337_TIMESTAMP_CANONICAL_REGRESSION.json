@@ -1,0 +1,37 @@
+{
+  "schema": "bres-r337-timestamp-canonical-regression-v1",
+  "milestone": "R337",
+  "checks": {
+    "clean_r336_accepted": true,
+    "clean_r337_accepted": true,
+    "offset_still_r336_accepted": true,
+    "offset_r337_rejected": true,
+    "overprecise_still_r336_accepted": true,
+    "overprecise_r337_rejected": true,
+    "automatic_activation_disabled": true
+  },
+  "cases": {
+    "clean": {
+      "r336_ok": true,
+      "r337_ok": true,
+      "r337_errors": []
+    },
+    "offset": {
+      "r336_ok": true,
+      "r337_ok": false,
+      "r337_errors": [
+        "timestamp_noncanonical:r334_startedAt",
+        "timestamp_noncanonical:r336_startedAt"
+      ]
+    },
+    "overprecise": {
+      "r336_ok": true,
+      "r337_ok": false,
+      "r337_errors": [
+        "timestamp_noncanonical:createdAt",
+        "timestamp_noncanonical:r336_benchmarkCreatedAt"
+      ]
+    }
+  },
+  "ok": true
+}
