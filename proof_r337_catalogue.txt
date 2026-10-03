@@ -1,0 +1,7 @@
+BRES CLES - PREUVE CATALOGUE CAT-R337
+Audit : PASS.
+References : 5103 / 5103 uniques ; 10/10 empreintes canoniques inchangees.
+Trois groupes glyphes residuels apres preuve fabricant : CB30R/CB3OR, CB90R/CB9OR, VI2/VL2.
+Marge de longueur (demi-ecart pairwise) : 6.115 mm, 14.760 mm et 3.530 mm ; minimum 3.530 mm.
+Cette marge ne devient pas un seuil : une calibration physique devra d abord demontrer une erreur absolue inferieure a la marge retenue.
+Aucune donnee catalogue ni regle OCR active modifiee par CAT-R337.
