@@ -1,0 +1,7 @@
+BRES CLES - R337 application proof
+PASS PRE-PHYSIQUE
+Parent R336 immutable
+R305 only
+V2.27 stable
+Samsung physical benchmark pending
+ZIP SHA256 d67e8c27344d751f46cc8f81e1398481ed81e384f7867236a6af6c6c235f8455
