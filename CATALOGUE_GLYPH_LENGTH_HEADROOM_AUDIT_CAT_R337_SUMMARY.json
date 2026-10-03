@@ -1,0 +1,27 @@
+{
+  "schema": "bres-cat-r337-glyph-length-headroom-audit-v1",
+  "milestone": "CAT-R337",
+  "parent": "CAT-R336",
+  "count": 5103,
+  "unique": 5103,
+  "glyph_groups": 64,
+  "minimum_symmetric_length_error_headroom_mm": 3.53,
+  "residual_pairs": [
+    {"refs":["CB30R","CB3OR"],"length_gap_mm":12.23,"max_symmetric_length_error_mm_strictly_less_than":6.115},
+    {"refs":["CB90R","CB9OR"],"length_gap_mm":29.52,"max_symmetric_length_error_mm_strictly_less_than":14.76},
+    {"refs":["VI2","VL2"],"length_gap_mm":7.06,"max_symmetric_length_error_mm_strictly_less_than":3.53}
+  ],
+  "interpretation": "Evidence only. No physical precision is assumed and no OCR threshold or rule is activated.",
+  "checks": {
+    "count_5103": true,
+    "unique_5103": true,
+    "ten_hashes_unchanged": true,
+    "glyph_groups_64": true,
+    "residual_groups_exact": true,
+    "all_residual_length_gaps_positive": true,
+    "minimum_symmetric_length_error_headroom_3_53": true,
+    "r305_gate_preserved": true,
+    "runtime_preserved": true
+  },
+  "ok": true
+}
