@@ -1,0 +1,7 @@
+CAT-R338 verified backup
+Parent CAT-R337.
+Library ZIP SHA-256: 4a7efd3d303dbedae08c3da3b802bfe1c720a8f76285e7b17afc888807ddc970
+Catalogue count: 5103.
+Unique references: 5103.
+Canonical chunks unchanged: 10 of 10.
+No catalogue data changed.
