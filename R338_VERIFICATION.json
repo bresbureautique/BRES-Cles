@@ -1,0 +1,26 @@
+{
+  "schema": "bres-r338-verification-v1",
+  "milestone": "R338",
+  "parent": "R337",
+  "status": "PASS PRE-PHYSIQUE",
+  "checks": {
+    "parent_r337_immutable": true,
+    "samsung_requirement_regression_pass": true,
+    "r337_timestamp_guard_preserved": true,
+    "r336_chronology_guard_preserved": true,
+    "r335_runtime_fingerprint_preserved": true,
+    "benchmark_r331_preserved": true,
+    "runtime_engine_preserved": true,
+    "r305_only_preserved": true,
+    "stable_v227_marker_preserved": true,
+    "automatic_activation_disabled": true,
+    "catalogue_5103_preserved": true
+  },
+  "physical_samsung": "PENDING",
+  "runtime_changed": false,
+  "ocr_thresholds_changed": false,
+  "catalogue_changed": false,
+  "active_rule": "R305 only",
+  "stable": "V2.27 unchanged",
+  "ok": true
+}
