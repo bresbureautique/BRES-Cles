@@ -1,0 +1,14 @@
+BRES CLES - CHECKPOINT GITHUB R338
+Parent: v2.28-test-r337-proof-d67e8c27344d @ e5ee6ec87db06e108c6365b4ffa46c0a4536ad2f
+ZIP application Library: BRES_Cles_Mobile_V2_28_CHECKPOINT_R338.zip
+SHA-256 ZIP: 541040a9bd2994e63808615ec52ff9d83bdd3ec2b3c9d47892683d1d23a319db
+Statut: PASS PRE-PHYSIQUE
+Regression R338: 7/7 PASS
+Benchmark hote preserve: 24 echantillons / 192 comparaisons / 0 divergence
+Runtime: V2.28 TEST R156 inchange
+Regle OCR active: R305 uniquement
+Seuils OCR: inchanges
+Catalogue: inchange, 5103 / 5103
+Activation automatique: desactivee
+Samsung physique: PENDING
+Stable: V2.27 inchange sur main
