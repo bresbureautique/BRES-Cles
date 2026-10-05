@@ -1,0 +1,1 @@
+CAT-R339 PASS. Catalogue 5103 references / 5103 uniques, 10/10 canonical hashes unchanged. OCR normalization: 5059 raw references to 5058 normalized tokens; only collision BK3-4/BK34, explicitly preserved. The prior normalized label CB4OR is traced to exact raw catalogue reference CB4-OR. No catalogue row or OCR rule changed.
