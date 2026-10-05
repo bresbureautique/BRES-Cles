@@ -1,0 +1,1 @@
+CAT-R339 checks complete. 5103 items, 5103 unique. 64 character-confusion groups, 129 normalized tokens. Minimum geometry margin observed in the reviewed subset: 1.055 mm.
