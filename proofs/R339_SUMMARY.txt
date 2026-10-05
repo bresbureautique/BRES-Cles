@@ -1,0 +1,1 @@
+R339 PASS PRE-PHYSIQUE. Correction du controle local du resultat Samsung. Le moteur OCR et V2.27 ne sont pas modifies. ZIP SHA-256 d34db9c520e71e194c5f92f7bbf5cfe3376e7bfb423c74ade8a68b913726f894.
