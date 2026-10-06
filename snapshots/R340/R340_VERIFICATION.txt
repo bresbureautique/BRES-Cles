@@ -1,0 +1,1 @@
+R340 PASS. Seven current regression suites passed. index.html and benchmark engine unchanged from R339. OCR thresholds and active rule unchanged. Automatic activation disabled. Physical Samsung validation pending.
