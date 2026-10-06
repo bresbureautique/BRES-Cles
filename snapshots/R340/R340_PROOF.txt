@@ -1,0 +1,1 @@
+R340 verification PASS. V2.27 stable unchanged. V2.28 test only. Samsung physical validation pending.
