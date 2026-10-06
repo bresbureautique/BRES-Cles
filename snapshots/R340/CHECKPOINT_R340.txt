@@ -1,0 +1,5 @@
+BRES CLES - CHECKPOINT R340
+Parent R339.
+R340 durcit uniquement la validation du resultat physique Samsung contre les contradictions explicites de preuve appareil.
+Moteur V2.28 TEST R156, regle OCR active R305, seuils OCR, index.html et catalogue inchanges.
+V2.27 reste stable. Test Samsung physique en attente.
