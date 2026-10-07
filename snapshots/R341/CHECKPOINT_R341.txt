@@ -1,0 +1,1 @@
+R341 parent=R340; app=V2.28_TEST_R156; active_rule=R305; protocol=24/192/2/7; tests=8/8_PASS; stable_main=V2.27; physical_test=PENDING
