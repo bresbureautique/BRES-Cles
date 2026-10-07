@@ -1,0 +1,3 @@
+R341 application ZIP SHA-256: f0427bab82700961f9439215cfd6c6cf6e0c934ddb65dbe7fa095ed659c57931
+Library round-trip: PASS.
+V2.27 stable branch main unchanged.
