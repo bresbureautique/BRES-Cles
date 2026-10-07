@@ -1,0 +1,2 @@
+CAT-R341 ZIP SHA-256: 53eebbd35697e69ea3783b70025f41f85e5fd507118c2f44ce3ca9f93efcdf8a
+Library round-trip: PASS.
