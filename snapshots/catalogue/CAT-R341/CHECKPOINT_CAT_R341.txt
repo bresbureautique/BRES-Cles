@@ -1,0 +1,1 @@
+CAT-R341 parent=CAT-R340; refs=5103/5103_unique; canonical_hashes=10/10_unchanged; ambiguity_groups=17; preferred_axis=length_all_17; tightest_half_gap_mm=1.055; active_geometry_threshold=none
