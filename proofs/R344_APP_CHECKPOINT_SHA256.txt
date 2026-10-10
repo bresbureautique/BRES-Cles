@@ -1,0 +1,8 @@
+BRES Cles — R344 application V2.28 TEST checkpoint — 2026-10-10
+ZIP: BRES_Cles_Mobile_V2_28_CHECKPOINT_R344.zip
+SHA256: b58035119a33d45e14acc416c9d7018c208a61915ba5d0d1d50657225b52a065
+Count: 8687 file entries; 8676 parent R343 entries preserved bit-for-bit; 11 new.
+Manifest SHA256: d79b4a182deedb2e7653145ec93b3419be80dfc4101a399929d33eb68dc81717
+Verification: inherited 10 suites PASS; R344 numeric regression 9 cases PASS; runtime hashes unchanged.
+ZIP located in Library/BRES Cles/Sauvegardes, verified by SHA and reextraction.
+R344 test branch ONLY; stable V2.27 on main. Samsung physical benchmark PENDING; no OCR activation.
