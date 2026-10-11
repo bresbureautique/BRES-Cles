@@ -1,0 +1,8 @@
+BRES-Cles Catalogue CAT-R345, 2026-10-11
+ZIP BRES_Cles_Catalogue_Audit_CAT_R345.zip
+SHA-256 66fdfbf9fa992770d9c7003a390348b416cd87f3f95440964346319683a68acc
+Library /BRES Cles/Sauvegardes/BRES_Cles_Catalogue_Audit_CAT_R345.zip
+Parent CAT-R344 SHA-256 e51717a8dddb927b48402400610e3ca0c1aa85b4414ce96de4675f9dc33748ca
+1320 files; 1309 parent files preserved byte-for-byte; 5103 unique, 10 canonical hashes unchanged.
+CAT-R345: 17 OCR ambiguity groups audited, scenarios theoretical only, no calibrated thresholds. Samsung physical test PENDING.
+Stable V2.27 remains on main. Source tests and full ZIP: Library R345-Sources and ZIP.
