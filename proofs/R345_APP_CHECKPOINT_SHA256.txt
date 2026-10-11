@@ -1,0 +1,8 @@
+BRES-Cles V2.28 TEST R345, 2026-10-11
+ZIP BRES_Cles_Mobile_V2_28_CHECKPOINT_R345.zip
+SHA-256 edf2692dd7242bfe173c343e0cbbcdf5c7a04ca66c4f0f0fbbee1140cafaec19
+Library /BRES Cles/Sauvegardes/BRES_Cles_Mobile_V2_28_CHECKPOINT_R345.zip
+Parent R344 SHA-256 b58035119a33d45e14acc416c9d7018c208a61915ba5d0d1d50657225b52a065
+8699 files; R344 parent 8687 preserved byte-for-byte; manifest and CRC PASS.
+R345: static dependency audit PASS, 8 mutation checks PASS. OCR offline NOT verified (external Tesseract CDN). Samsung physical benchmark PENDING.
+Stable V2.27 remains on main. Source tests and full ZIP: Library R345-Sources and ZIP.
