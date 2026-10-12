@@ -1,0 +1,6 @@
+BRES Cles V2.28 TEST R346 (diagnostic only) — 2026-10-12
+Archive in Library /BRES Cles/Sauvegardes/BRES_Cles_Mobile_V2_28_CHECKPOINT_R346.zip
+SHA256: 63693c3eaeb0ddf2eb28cbb1c83a7e143c0aafa7f33a099ea23169199ca2a1ee
+8711 files. Verified after rematerialization: byte-identical SHA256, CRC, manifest, R346 regressions PASS.
+V2.27 main stable unchanged; engine V2.28 TEST R156, rule R305, Samsung benchmark physical PENDING.
+GitHub is proof-of-Library-SHA only, not full source archive.
