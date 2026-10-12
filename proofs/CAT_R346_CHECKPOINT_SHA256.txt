@@ -1,0 +1,5 @@
+BRES Cles CAT-R346 audit only — 2026-10-12
+Archive in Library /BRES Cles/Sauvegardes/BRES_Cles_Catalogue_Audit_CAT_R346.zip
+SHA256: 14cad5205ca7008d67b20955c1f9a3c02fe3f49f19097bb275fa9af45065a915
+1332 files, SHA256, ZIP CRC, internal manifest and audits verified from Library. 5103 references unique, 10 canonical blocks unchanged. No OCR activation.
+GitHub proof-only, not full source archive.
