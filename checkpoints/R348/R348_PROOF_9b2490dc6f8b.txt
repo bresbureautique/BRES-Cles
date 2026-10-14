@@ -1,0 +1,7 @@
+BRES Cles R348 / 2026-10-14
+Application V2.28 TEST R156; runtime source unchanged; R305 sole active OCR rule; stable V2.27 main protected.
+ZIP: BRES_Cles_Mobile_V2_28_CHECKPOINT_R348.zip
+SHA-256: 9b2490dc6f8b22d70117b147b542e329d053d4b1698af4caff633804f412d7e0
+Library: /BRES Cles/Sauvegardes/BRES_Cles_Mobile_V2_28_CHECKPOINT_R348.zip
+Validation: R348 7/7 gates passed, broad-bounds regression 6 outliers rejected, four acceptable fixtures accepted; inherited R346 checks passed. Physical Samsung R336 still PENDING. NOT an OCR validation.
+Source and full manifest are inside Library ZIP. No test release promoted to main.
