@@ -1,0 +1,5 @@
+CAT-R348 / 2026-10-14
+Package SHA-256: 64221a28f1143edf203a15cbae8acc0cf1dceaf452b43797a94d3b3c5a326881
+Canonical references: 5103 distinct; 10 source chunk hashes preserved.
+Offline OCR and physical Samsung test remain pending.
+This is checksum evidence, not an independent archive; full ZIP retained in BRES Cles/Sauvegardes Library.
