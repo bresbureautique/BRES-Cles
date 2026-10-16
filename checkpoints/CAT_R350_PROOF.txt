@@ -1,0 +1,9 @@
+BRES Clés — CAT-R350 (audit diagnostic uniquement) — 2026-10-16
+5 103 références uniques; 10 fragments canoniques inchangés; fabricants manquants: 164.
+Pour fenêtre de TRIAGE ±1 mm: 5 fiches voisins avec fabricants concurrents, 114 voisins d'une seule marque non prouvée, 45 sans voisins.
+VI2/VL2 prioritaire; aucune attribution de marque automatique ni seuil OCR activé.
+Tests CAT-R350: audit 10/10 et 3 fixtures, verificateur 7/7 PASS.
+Paquet Library /BRES Cles/Sauvegardes/BRES_Cles_Catalogue_Audit_CAT_R350.zip
+SHA-256 ZIP: 7d202e5290ce83c9fb09543b9dbc80177df633a2b0afda3421e8f44f8144205b
+SHA-256 manifeste 1372 fichiers: 440e2d8792dbf880bd6c833869539b04584a73f0ea88390c391f6969511b9330
+GitHub contient une attestation de checkpoint, non le ZIP complet; sources et rapports dans Library.
