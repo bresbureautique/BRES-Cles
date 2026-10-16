@@ -1,0 +1,11 @@
+BRES Clés — R350 (V2.28 TEST uniquement) — 2026-10-16
+Stable: V2.27, main immuable (9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8).
+Runtime: V2.28 TEST R156; OCR: seule règle R305; pas de seuil activé.
+Changement: audit de dépendances hors-ligne, ne touche aucun code de reconnaissance.
+Constat: Tesseract.js par CDN; worker/WASM/eng.traineddata absents du ZIP; OCR offline froid NON VALIDÉ.
+Tests: R341 et R348 PASS; R350 audit 10/10 avec 6 fixtures PASS.
+Samsung benchmark physique R336: PENDING.
+Paquet Library /BRES Cles/Sauvegardes/BRES_Cles_Mobile_V2_28_CHECKPOINT_R350.zip
+SHA-256 ZIP: 4c26227156395fa90caf8cdc2ff73000e67445abfc5839d1224e8cef1e666228
+SHA-256 manifeste 8752 fichiers: 4e7d0ed26143518076c8457596163708d27f4612a270f022b7dafdedc8a12632
+GitHub contient une attestation de checkpoint, et non le ZIP entier; source complète dans Library.
