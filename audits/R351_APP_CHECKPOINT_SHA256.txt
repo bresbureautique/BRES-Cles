@@ -1,0 +1,9 @@
+BRES Cles application V2.28 TEST R156 / R351 -- 2026-10-17
+Stable V2.27 is main, untouched; NEVER promote test.
+R351 complete snapshot ZIP SHA-256: 9c1a6ad62cc39383366a0785b7c392d3e299b27eee0a5f1484bd39b31c19c21b
+ZIP filename: BRES_Cles_Mobile_V2_28_CHECKPOINT_R351.zip
+ZIP members: 8761; all-member checksum comparison PASS; CRC PASS.
+New diagnostic R351: reexecuted R341, R348, R347 node engine, R350 cold-offline audit; 8/8 checks, 7/7 verifier.
+Runtime index.html, catalogue runtime JS, R331 engine, benchmark HTML: protected unchanged.
+OCR active rule: R305 only. Physical Samsung: PENDING. Cold-offline OCR: NOT VERIFIED.
+Full ZIP and evidence are stored in ChatGPT Library /BRES Cles/Sauvegardes, not in this Git commit.
