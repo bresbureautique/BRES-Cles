@@ -1,0 +1,8 @@
+BRES Cles catalogue CAT-R351 -- 2026-10-17
+CAT-R351 snapshot ZIP SHA-256: fc51c6e6237b7f606e15952c8813454ee79f7fd9d7b7fc9398695c9c352d849c
+ZIP filename: BRES_Cles_Catalogue_Audit_CAT_R351.zip
+ZIP members: 1383; all-member checksum comparison PASS; CRC PASS.
+Canonical 10 chunks unchanged; 5103 unique records. 64 OCR-confusable groups, 68 pairs, 3 theoretical two-axis measurement overlap pairs at +/-1mm:
+KFI/KFL; VI4/VL4; VI4R/VL4R. VI2/VL2 length gap 7.06mm; VI2 maker not verified.
+Full report and source audit script in ChatGPT Library /BRES Cles/Sauvegardes; Git branch records text proof only.
+No automatic aliases, no recognition threshold activation, no maker imputation, no physical Samsung proof.
