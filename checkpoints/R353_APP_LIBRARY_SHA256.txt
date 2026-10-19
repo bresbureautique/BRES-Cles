@@ -1,0 +1,8 @@
+BRES CLES R353 / 2026-10-19
+V2.28 TEST R156. Stable V2.27 never touched.
+Snapshot in ChatGPT Library: /BRES Cles/Sauvegardes/BRES_Cles_Mobile_V2_28_CHECKPOINT_R353.zip
+SHA256: 485e45fcc9871312f2bb870be2395a59b5efcab789aa46f26fcfca06510f4bbb
+8763 ZIP members, 8762 SHA256 manifest entries; CRC, re-extraction and local non-regression tests PASS.
+R353 adds independent non-runtime OCR offline-asset trust audit; active OCR R305 only.
+Samsung physical benchmark R336 PENDING; cold offline OCR NOT CERTIFIED.
+The entire ZIP is kept in Library and is not stored inside GitHub by this text proof.
