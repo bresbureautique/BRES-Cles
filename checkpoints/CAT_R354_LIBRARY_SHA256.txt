@@ -1,0 +1,6 @@
+CAT-R354 catalogue | 2026-10-20 | V2.27 STABLE UNTOUCHED
+BRES_Cles_Catalogue_Audit_CAT_R354.zip
+SHA256 594926ed4901869bcfed66e00f13406527feb5d28a146aba811b42f75b0c1646
+Library: /BRES Cles/Sauvegardes/BRES_Cles_Catalogue_Audit_CAT_R354.zip
+10/10 verifier; 1407 manifest files; 10 canonical fragments bundled; library roundtrip PASS
+GitHub presence of this text does NOT mean whole ZIP/code backed up to GitHub.
