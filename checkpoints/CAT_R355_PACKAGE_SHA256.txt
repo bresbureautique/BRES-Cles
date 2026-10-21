@@ -1,0 +1,8 @@
+BRES Cles CAT-R355 — 2026-10-21
+ZIP: BRES_Cles_Catalogue_Audit_CAT_R355.zip
+SHA256: 6b42f0c226ebf5e15fcb0634cadbb31a8cc4927c8132ec0f340bcc18a181e8d6
+Source: Library /BRES Cles/Sauvegardes (authoritative full ZIP)
+Checks: 10/10, fixtures: 13/13; extracted independently, 1416 manifest hashes and replay PASS
+5103 unique references, 10 unchanged canonical fragments; 68 OCR-confusable pairs audited.
+No classification threshold, maker inference, or production activation.
+NOT a complete GitHub archive unless all sources/ZIP are stored and verified.
