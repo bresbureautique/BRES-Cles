@@ -1,0 +1,4 @@
+CAT-R356 source audit (not a full GitHub archive)
+catalogue_confusion_components_cat_r356.py SHA256 6ad907b9dd01f99358a1fa3cb213317bee897d160c8b546e7d058c384d0c2200
+verify_catalogue_cat_r356.py SHA256 08a9a6f7728e615c2c77ac1525810f2337e70347dd80dfdc393990a588ae1f00
+Full source and package are in Library BRES Cles/Sauvegardes/R356-Sources and the CAT-R356 ZIP.
