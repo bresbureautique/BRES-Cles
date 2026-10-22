@@ -1,0 +1,3 @@
+CAT-R356 2026-10-22
+SHA256 19b0478ed9d70b148182079c77358146724989b997e0c72bf940d7ccf268e0e1
+5103 unique refs, 10 unchanged catalogue chunks.
