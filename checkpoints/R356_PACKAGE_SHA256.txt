@@ -1,0 +1,6 @@
+BRES Cles V2.28 TEST R356 - 2026-10-22
+Parent R355 immutable. V2.27 stable main never modified.
+ZIP BRES_Cles_Mobile_V2_28_CHECKPOINT_R356.zip SHA256 2e3ec2e1b7154a8e6c281e7160089321c9bbd22b2b1ab94419b3dcf5e15c4b91
+ZIP bytes 30365131; files 8787; re-extraction and regression replay PASS.
+All 10 cold-network Chromium checks PASS; offline Tesseract unavailable; Samsung physical R336 pending.
+Source full archive in ChatGPT Library /BRES Cles/Sauvegardes.
