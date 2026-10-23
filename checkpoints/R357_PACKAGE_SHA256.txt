@@ -1,0 +1,7 @@
+BRES-CLES MOBILE V2.28 TEST R357 — 2026-10-23
+ZIP: BRES_Cles_Mobile_V2_28_CHECKPOINT_R357.zip
+BYTES: 30754302
+SHA256: 2007563934513dad93ffd86cb87d8d9f549140cea6213527412e9cb10a82c4e9
+SOURCE BACKUP: Library /BRES Cles/Sauvegardes/BRES_Cles_Mobile_V2_28_CHECKPOINT_R357.zip
+Tests: 11/11 R357 manual-input XSS; 10/10 R356 offline Chromium replay; 8/8 final; restore verified.
+WARNING: repository proof is NOT the complete ZIP. Stable V2.27 main remains untouched.
