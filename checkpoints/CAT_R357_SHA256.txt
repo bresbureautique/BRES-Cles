@@ -1,0 +1,7 @@
+BRES-CLES CATALOGUE V3 CAT-R357 — 2026-10-23
+ZIP: BRES_Cles_Catalogue_Audit_CAT_R357.zip
+BYTES: 4016352
+SHA256: 4391440f308fb145f55485ed664424d7e71437af939e1093a2780710f7a2a0ab
+SOURCE BACKUP: Library /BRES Cles/Sauvegardes/BRES_Cles_Catalogue_Audit_CAT_R357.zip
+Tests: 11/11 catalogue audit; 5/5 fixtures; 8/8 final; restore verified. 5103 unique refs intact.
+WARNING: repository proof is NOT the complete ZIP. No automatic OCR calibration or maker attribution.
