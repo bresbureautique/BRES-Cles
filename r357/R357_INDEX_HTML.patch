@@ -1,0 +1,60 @@
+--- a/app/index.html
++++ b/app/index.html
+@@ -4804,6 +4804,11 @@
+   }
+   return null;
+ }
++// R357: manual entries are untrusted text. HTML-escape before any innerHTML rendering.
++// This affects display only; reference normalization and recognition remain unchanged.
++function escapeManualHtmlR357(value){
++  return String(value??"").replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
++}
+ function manualCatalogueLookup(raw,makerHint=""){
+   let typed=(raw||"").trim();
+   let enforcedMaker=manualAliasMakerHint(makerHint);
+@@ -4811,19 +4816,19 @@
+   let canon=normalizeKnownRef(typed,makerHint);
+   if(!typed) return {ok:false,msg:"Saisissez une référence."};
+   if(canon){
+-    let x=XREF[canon], msg=`<b>Référence saisie :</b> ${typed}<br><b>Correspondance catalogue :</b> ${canon}<br>`;
+-    if(enforcedMaker)msg+=`<b>Fabricant d’ébauche contrôlé :</b> ${enforcedMaker}<br>`;
+-    if(x.Pour) msg+=`Pour : ${x.Pour}<br>`;
++    let x=XREF[canon], msg=`<b>Référence saisie :</b> ${escapeManualHtmlR357(typed)}<br><b>Correspondance catalogue :</b> ${escapeManualHtmlR357(canon)}<br>`;
++    if(enforcedMaker)msg+=`<b>Fabricant d’ébauche contrôlé :</b> ${escapeManualHtmlR357(enforcedMaker)}<br>`;
++    if(x.Pour) msg+=`Pour : ${escapeManualHtmlR357(x.Pour)}<br>`;
+     for(const [k,v] of Object.entries(x)){
+       if(["JMA_URL","Pour","SILCA_PAGE","SILCA_VISUAL"].includes(k)||!v)continue;
+-      msg+=`<span class="pill"><b>${k}</b> ${v}</span>`;
++      msg+=`<span class="pill"><b>${escapeManualHtmlR357(k)}</b> ${escapeManualHtmlR357(v)}</span>`;
+     }
+-    if(x.JMA_URL) msg+=`<br><a class="btn alt" href="${x.JMA_URL}" target="_blank">Ouvrir la fiche JMA</a>`;
++    if(x.JMA_URL && /^https:\/\//i.test(String(x.JMA_URL))) msg+=`<br><a class="btn alt" href="${escapeManualHtmlR357(x.JMA_URL)}" target="_blank" rel="noopener noreferrer">Ouvrir la fiche JMA</a>`;
+     return {ok:true,canon,msg};
+   }
+-  if(makerConflict)return {ok:false,msg:`Plusieurs fabricants d’ébauches contradictoires sont indiqués dans « ${makerHint} ». Précisez un seul fabricant ou saisissez une référence canonique certaine.`};
+-  if(enforcedMaker)return {ok:false,msg:`Référence « ${typed} » non trouvée dans l’espace ${enforcedMaker}. Vérifiez la marque ou la référence avant validation.`};
+-  return {ok:false,msg:`Référence « ${typed} » non trouvée dans la base catalogue pilote intégrée.`};
++  if(makerConflict)return {ok:false,msg:`Plusieurs fabricants d’ébauches contradictoires sont indiqués dans « ${escapeManualHtmlR357(makerHint)} ». Précisez un seul fabricant ou saisissez une référence canonique certaine.`};
++  if(enforcedMaker)return {ok:false,msg:`Référence « ${escapeManualHtmlR357(typed)} » non trouvée dans l’espace ${escapeManualHtmlR357(enforcedMaker)}. Vérifiez la marque ou la référence avant validation.`};
++  return {ok:false,msg:`Référence « ${escapeManualHtmlR357(typed)} » non trouvée dans la base catalogue pilote intégrée.`};
+ }
+ async function bestOCR(canvas,label,expectedEpoch=identificationEpoch,statusId="ocrStatus",expectedRequestEpoch=ocrRequestEpoch,deadline=Date.now()+OCR_ACTION_BUDGET_MS){
+   // R98 : chemin mobile borné, avec recadrage auto de tête puis gravure centrale. R94 testait jusqu'à 40 passes primaires puis 48 renforcées par face.
+@@ -5440,7 +5445,7 @@
+   let r=manualCatalogueLookup(typed,brand);
+   if(!r.ok){
+     el("manualRefStatus").className="status warn";
+-    el("manualRefStatus").innerHTML=r.msg+(brand?`<br><b>Marque saisie :</b> ${brand}`:"");
++    el("manualRefStatus").innerHTML=r.msg+(brand?`<br><b>Marque saisie :</b> ${escapeManualHtmlR357(brand)}`:"");
+     clearCatalogVisual("Aucun visuel catalogue associé à cette référence dans la base pilote.");
+     el("finalDecision").className="status warn";
+     el("finalDecision").innerHTML="<b>RÉFÉRENCE NON VALIDÉE</b><br>Corrigez la référence ou la marque avant de poursuivre.";
+@@ -5452,7 +5457,7 @@
+   let vis=renderCatalogVisual(r.canon);
+   let th=parseManualThickness(el("manualThickness").value);
+   let details=`<b>Saisie manuelle prioritaire.</b><br>`+r.msg;
+-  if(brand)details+=`<br><b>Marque saisie / lue :</b> ${brand}`;
++  if(brand)details+=`<br><b>Marque saisie / lue :</b> ${escapeManualHtmlR357(brand)}`;
+   if(Number.isFinite(th)&&th>0)details+=`<br><b>Épaisseur mesurée :</b> ${th.toFixed(2)} mm`;
+   el("manualRefStatus").className="status ok";
+   el("manualRefStatus").innerHTML=details;
