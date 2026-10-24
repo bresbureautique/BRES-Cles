@@ -1,0 +1,15 @@
+BRES CLES V2.28 TEST R358 - 2026-10-24
+Parent: R357 security fix (manual HTML escaping) preserved byte-for-byte.
+ZIP: BRES_Cles_Mobile_V2_28_CHECKPOINT_R358.zip
+ZIP_SHA256: fd1b20579675db1f1088d1ef1d881fbb61c510a2c9b695db9c201b0299ff7f25
+ZIP_BYTES: 31144875
+ZIP_ENTRIES: 8804
+LOCAL_RESTORE_SHA256: PASS ALL 8804
+LIBRARY_BACKUP: /BRES Cles/Sauvegardes/BRES_Cles_Mobile_V2_28_CHECKPOINT_R358.zip
+LIBRARY_REDOWNLOAD_BYTE_EXACT: PASS
+SOFTWARE_TESTS: 12/12 R358 + inherited 8/8 R357; security 11/11; 130/130 OCR-confusable references safely not validated in distinct pilot
+CORE_ENGINE: V2.28 TEST R156, R305 unchanged
+PHYSICAL_SAMSUNG_R336: PENDING
+OCR_OFFLINE_TESSERACT: NOT CERTIFIED
+STABLE_V2_27_MAIN: 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8 - unchanged
+WARNING: This is an attestation, not the complete 31MB ZIP backup. Archive stored in Library.
