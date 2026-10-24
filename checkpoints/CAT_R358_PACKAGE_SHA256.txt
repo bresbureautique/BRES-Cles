@@ -1,0 +1,17 @@
+BRES CLES CATALOGUE V3 CAT-R358 - 2026-10-24
+Parent: CAT-R357 original review queue retained unchanged.
+ZIP: BRES_Cles_Catalogue_Audit_CAT_R358.zip
+ZIP_SHA256: a7b8f13805ca533b6d246d0673d1b0c9961fe540b78351477bae20b0032fa8ef
+ZIP_BYTES: 4090885
+ZIP_ENTRIES: 1455
+LOCAL_RESTORE_SHA256: PASS ALL 1455
+LIBRARY_BACKUP: /BRES Cles/Sauvegardes/BRES_Cles_Catalogue_Audit_CAT_R358.zip
+LIBRARY_REDOWNLOAD_BYTE_EXACT: PASS
+SOFTWARE_TESTS: CAT-R358 10/10, inherited CAT-R357 8/8
+CANONICAL: 10 unchanged; 5103 distinct references
+REVIEW_ONLY: 64 groups, 130 OCR-confusable refs, 68 links; dimension-only margin priority P0=2 P1=2 P2=4 P3=56
+NO_AUTOMATIC_MERGE: TRUE
+NO_MAKER_OR_THRESHOLD_CHANGE: TRUE
+PHYSICAL_MEASUREMENTS: PENDING
+STABLE_V2_27_MAIN: 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8 - unchanged
+WARNING: This is an attestation, not the complete 4MB ZIP backup. Archive stored in Library.
