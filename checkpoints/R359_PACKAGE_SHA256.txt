@@ -1,0 +1,9 @@
+BRES-CLES R359 — 2026-10-25
+Version stable V2.27 (main) NON modifiée.
+Version de TEST V2.28 moteur R156, règle OCR R305 inchangés.
+Application ZIP dans Library /BRES Cles/Sauvegardes/BRES_Cles_Mobile_V2_28_CHECKPOINT_R359.zip
+SHA256 ddb52a96d0d083f4015fc3c18ee9600df083174a14f18cbe54049877465cf38c
+Taille 31534713 octets ; 8812 fichiers ; CRC PASS et extraction SHA256 PASS.
+Vérification R359 10/10 ; tests Chromium réseau coupé 14/14 ; pilote 130 confusables bloquées (R358).
+Sauvegarde GitHub des ZIP COMPLETS NON confirmée. Pour restauration INTEGRALE récupérer le ZIP dans Library et en vérifier le SHA256.
+Samsung R336 physique non validé. OCR Tesseract sans réseau non fonctionnel.
