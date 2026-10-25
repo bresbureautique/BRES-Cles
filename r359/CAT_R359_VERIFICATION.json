@@ -1,0 +1,24 @@
+{
+  "schema": "bres-cat-r359-verification-v1",
+  "milestone": "CAT-R359",
+  "parent": "CAT-R358",
+  "checks": {
+    "all_1444_prior_cat_files_byte_identical": true,
+    "CAT_R358_10_checks_preserved": true,
+    "source_provenance_script_pass": true,
+    "13_new_checks_pass": true,
+    "exact_5103_no_mutation": true,
+    "8_priority_groups_contain_18_distinct_refs": true,
+    "source_sha_matches_current_canonical_files": true,
+    "uncertainty_and_makers_not_certified": true,
+    "all_packets_manual_only": true
+  },
+  "parent_entries": 1444,
+  "parent_mismatches": [],
+  "job": {
+    "exit_code": 0,
+    "stdout": "{\"ok\": true, \"checks\": 13, \"priority_groups\": 8, \"references\": 18}\n",
+    "stderr": ""
+  },
+  "ok": true
+}
