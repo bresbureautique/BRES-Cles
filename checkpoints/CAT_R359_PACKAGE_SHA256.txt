@@ -1,0 +1,8 @@
+BRES-CLES CAT-R359 — 2026-10-25
+Base catalogue V3 SÉPARÉE du pilote V2.28 ; 5103 références uniques / 10 canoniques préservés.
+Catalogue ZIP dans Library /BRES Cles/Sauvegardes/BRES_Cles_Catalogue_Audit_CAT_R359.zip
+SHA256 a7f9f5c0ffc38592cc1a253166af2ac8856c4bcc652b5a19c16ca18e4a784aca
+Taille 4158166 octets ; 1464 entrées dont 10 canoniques ; CRC PASS et extraction SHA256 PASS.
+Vérification CAT-R359 9/9 ; audit provenance 13/13 ; 8 groupes prioritaires, 18 références.
+Aucun alias, fabricant, seuil OCR attribué ou activé. Les mesures ne sont PAS des preuves physiques.
+Sauvegarde GitHub des ZIP COMPLETS NON confirmée. Pour restauration INTEGRALE récupérer le ZIP dans Library et en vérifier le SHA256.
