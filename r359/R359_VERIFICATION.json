@@ -1,0 +1,25 @@
+{
+  "schema": "bres-r359-verification-v1",
+  "milestone": "R359",
+  "parent": "R358",
+  "checks": {
+    "all_8803_parent_manifest_entries_unchanged": true,
+    "R358_12_checks_still_pass": true,
+    "R358_130_confusable_safe_failures_unchanged": true,
+    "positive_negative_browser_exit_pass": true,
+    "14_new_browser_checks_pass": true,
+    "actual_pilot_source_hashes_match": true,
+    "no_HTML_execution_and_state_invalidation": true,
+    "engine_R156_and_OCR_R305_not_modified": true,
+    "no_real_samsung_or_offline_claim": true,
+    "CAT_V3_not_implicitly_integrated": true
+  },
+  "parent_entries": 8803,
+  "parent_mismatches": [],
+  "job": {
+    "exit_code": 0,
+    "stdout": "{\"ok\": true, \"checks\": 14, \"errors\": 0, \"dialogs\": 0}\n",
+    "stderr": ""
+  },
+  "ok": true
+}
