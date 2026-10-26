@@ -1,0 +1,2081 @@
+{
+  "schema": "bres-cat-r360-ocr-abstention-audit-v1",
+  "milestone": "CAT-R360",
+  "parent": "CAT-R359",
+  "purpose": "Catalogue V3 / OCR groups: prevent unearned identification in future integration",
+  "source_canonical_sha256": {
+    "catalog-01.js": "e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b",
+    "catalog-02.js": "955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75",
+    "catalog-03.js": "9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210",
+    "catalog-04.js": "14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942",
+    "catalog-05.js": "5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b",
+    "catalog-06.js": "b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac",
+    "catalog-07.js": "b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1",
+    "catalog-08.js": "3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814",
+    "catalog-09.js": "4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f",
+    "catalog-10.js": "f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4"
+  },
+  "source_graph_sha256": "7c63a75f88655bdda807f0e8c54323d4ffba588199b7f80e80a75b25420b43f2",
+  "source_priority_sha256": "b150a1aace8eeb87d9d610ccf5d98486082f305bd21fafe2a540c74dea908a84",
+  "references": 5103,
+  "distinct_references": 5103,
+  "ocr_groups": 64,
+  "ocr_edges": 68,
+  "groups_across_source_makers": 59,
+  "groups_same_source_maker": 4,
+  "groups_with_missing_source_maker": 1,
+  "priority8_multimaker": 7,
+  "distribution": {
+    "fabricant_manquant": 1,
+    "fabricants_distincts": 59,
+    "meme_fabricant_catalogue": 4
+  },
+  "groups": [
+    {
+      "references": [
+        "CIL1",
+        "CLI1",
+        "CLL1"
+      ],
+      "count": 3,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "CIL LIL",
+        "CILA-GENTILI",
+        "COLL"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "63.74",
+          "24.22"
+        ],
+        [
+          "58.33",
+          "21.75"
+        ],
+        [
+          "60.44",
+          "21.99"
+        ]
+      ],
+      "priority": "P1",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "0.055",
+      "ocr_edge_count": 3,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "KF1",
+        "KFI",
+        "KFL"
+      ],
+      "count": 3,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "KFV"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "meme_fabricant_catalogue",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "56.68",
+          "25.99"
+        ],
+        [
+          "43.39",
+          "10.47"
+        ],
+        [
+          "42.57",
+          "11.64"
+        ]
+      ],
+      "priority": "P1",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "0.085",
+      "ocr_edge_count": 3,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "AB51",
+        "ABS1"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "ABSA",
+        "ABUS"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "33.63",
+          "15.05"
+        ],
+        [
+          "43.74",
+          "24.81"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "4.38",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "AB52",
+        "ABS2"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "ABSA",
+        "ABUS"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "46.8",
+          "21.17"
+        ],
+        [
+          "41.39",
+          "25.05"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "1.705",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "AB53",
+        "ABS3"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "ABSA",
+        "ABUS"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "40.8",
+          "18.81"
+        ],
+        [
+          "41.39",
+          "25.05"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "2.62",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "AI1",
+        "AL1"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "AL",
+        "ALIANÇA"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "45.98",
+          "21.17"
+        ],
+        [
+          "52.45",
+          "25.05"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "2.235",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "BAI2",
+        "BAL2"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "BAAL",
+        "BARAS"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "44.57",
+          "20.7"
+        ],
+        [
+          "50.8",
+          "21.28"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "2.115",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "BAI3",
+        "BAL3"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "BAAL",
+        "BASI"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "39.86",
+          "18.7"
+        ],
+        [
+          "48.1",
+          "21.52"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "3.12",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "BK3-4",
+        "BK34"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "BKS"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "meme_fabricant_catalogue",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "47.98",
+          "20.58"
+        ],
+        [
+          "48.68",
+          "25.75"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "2.085",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "CB3-OR",
+        "CB30R"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "CORBIN (IT)"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "meme_fabricant_catalogue",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "43.98",
+          "20.46"
+        ],
+        [
+          "56.21",
+          "26.11"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "5.115",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "CB4-OR",
+        "CB40R"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "CORBIN (IT)",
+        "CORBIN (US)"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "39.51",
+          "18.58"
+        ],
+        [
+          "57.39",
+          "23.4"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "7.94",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "CB9-OR",
+        "CB90R"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "CORBIN (IT)"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "meme_fabricant_catalogue",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "32.22",
+          "17.29"
+        ],
+        [
+          "61.74",
+          "26.11"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "13.76",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "CI2",
+        "CL2"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "CASI",
+        "CLUM"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "50.21",
+          "21.87"
+        ],
+        [
+          "45.27",
+          "21.52"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "1.47",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "CI3",
+        "CL3"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "CASI",
+        "CLUM"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "54.09",
+          "22.7"
+        ],
+        [
+          "45.27",
+          "21.52"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "3.41",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "CI4",
+        "CL4"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "CASI",
+        "CLUM"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "55.03",
+          "24.11"
+        ],
+        [
+          "45.27",
+          "21.52"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "3.88",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "CI5",
+        "CL5"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "CASI",
+        "CLUM"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "56.21",
+          "26.22"
+        ],
+        [
+          "45.27",
+          "21.52"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "4.47",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "CIS1",
+        "CLS1"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "CAS-CISMA",
+        "CIELS"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "38.81",
+          "20.7"
+        ],
+        [
+          "48.45",
+          "22.46"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "3.82",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "CIS2",
+        "CLS2"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "CAS-CISMA",
+        "CIELS"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "42.33",
+          "20.58"
+        ],
+        [
+          "55.97",
+          "24.22"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "5.82",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "CIS3",
+        "CLS3"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "CAS-CISMA",
+        "CIELS"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "38.81",
+          "20.7"
+        ],
+        [
+          "61.38",
+          "25.4"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "10.285",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "FI2",
+        "FL2"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "FIAM",
+        "FLORA"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "48.8",
+          "22.58"
+        ],
+        [
+          "61.03",
+          "25.75"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "5.115",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "IF1",
+        "LF1"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "IES",
+        "LOWE & FLETCHER"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "56.33",
+          "25.4"
+        ],
+        [
+          "47.74",
+          "27.05"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "3.295",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "IF14",
+        "LF14"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "IFAM",
+        "LOWE & FLETCHER"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "62.68",
+          "30.57"
+        ],
+        [
+          "59.62",
+          "26.69"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "1.44",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "IF15R",
+        "LF15R"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "EURO LOCKS",
+        "IFAM"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "61.38",
+          "23.64"
+        ],
+        [
+          "47.39",
+          "19.64"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "5.995",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "IF16",
+        "LF16"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "IFAM",
+        "LOWE & FLETCHER"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "66.91",
+          "26.69"
+        ],
+        [
+          "49.98",
+          "20.11"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "7.465",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "IF17",
+        "LF17"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "IFAM",
+        "LOWE & FLETCHER"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "66.79",
+          "26.81"
+        ],
+        [
+          "47.51",
+          "19.64"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "8.64",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "IF2",
+        "LF2"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "EURO LOCKS",
+        "IFAM"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "54.68",
+          "19.99"
+        ],
+        [
+          "48.68",
+          "19.76"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "2.0",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "IF3",
+        "LF3"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "IFAM",
+        "LOWE & FLETCHER"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "54.68",
+          "22.22"
+        ],
+        [
+          "60.56",
+          "22.7"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "1.94",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "IF6",
+        "LF6"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "IFAM",
+        "LOWE & FLETCHER"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "44.92",
+          "19.76"
+        ],
+        [
+          "41.63",
+          "19.76"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "0.645",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "IF7",
+        "LF7"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "EURO LOCKS",
+        "IFAM"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "53.39",
+          "21.52"
+        ],
+        [
+          "49.27",
+          "21.17"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "1.06",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "IF8",
+        "LF8"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "IFAM",
+        "LOWE & FLETCHER"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "43.27",
+          "20.81"
+        ],
+        [
+          "49.15",
+          "21.17"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "1.94",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "IF8R",
+        "LF8R"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "EURO LOCKS",
+        "IFAM"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "43.27",
+          "20.81"
+        ],
+        [
+          "49.27",
+          "21.17"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "2.0",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "IL1",
+        "LL1"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "ILARGI",
+        "LOCKWOOD"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "56.68",
+          "25.4"
+        ],
+        [
+          "43.74",
+          "26.46"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "5.47",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "IM3R",
+        "LM3R"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "IMSA",
+        "LUMA"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "51.74",
+          "22.22"
+        ],
+        [
+          "42.8",
+          "21.99"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "3.47",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "IM4R",
+        "LM4R"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "IMSA",
+        "LUMA"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "55.5",
+          "27.63"
+        ],
+        [
+          "61.5",
+          "24.93"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "2.0",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "IN1",
+        "LN1"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "ILLINOIS",
+        "LN"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "43.63",
+          "20.93"
+        ],
+        [
+          "50.09",
+          "23.87"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "2.23",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "IS1",
+        "LS1"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "IGS",
+        "RENZ"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "57.86",
+          "23.99"
+        ],
+        [
+          "45.74",
+          "21.87"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "5.06",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "IS2",
+        "LS2"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "IGS",
+        "RENZ"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "64.32",
+          "23.64"
+        ],
+        [
+          "45.98",
+          "21.99"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "8.17",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "IT1",
+        "LT1"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "BKS",
+        "INT"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "40.92",
+          "20.46"
+        ],
+        [
+          "59.74",
+          "24.69"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "8.41",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "IT2",
+        "LT2"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "INT",
+        "LITTO"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "37.86",
+          "20.34"
+        ],
+        [
+          "54.33",
+          "23.75"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "7.235",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "IW1R",
+        "LW1R"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "IWATA",
+        "LOCKWOOD"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "58.91",
+          "26.58"
+        ],
+        [
+          "53.97",
+          "25.28"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "1.47",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "IX1",
+        "LX1"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "IALEX",
+        "LUX"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "63.38",
+          "25.05"
+        ],
+        [
+          "42.69",
+          "22.34"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "9.345",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "IX1R",
+        "LX1R"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "IALEX",
+        "LUX"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "63.38",
+          "25.05"
+        ],
+        [
+          "42.69",
+          "22.34"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "9.345",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "MS11",
+        "MSL1"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "MASTER",
+        "MASTER LOCK"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "47.51",
+          "22.81"
+        ],
+        [
+          "65.62",
+          "26.69"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "8.055",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "MS12",
+        "MSL2"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "MASTER",
+        "MASTER LOCK"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "41.75",
+          "22.93"
+        ],
+        [
+          "51.86",
+          "27.63"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "4.055",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "PC11R",
+        "PCL1R"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "P.C. (CORTELLEZZI)",
+        "PACO LOCKS"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "52.68",
+          "23.52"
+        ],
+        [
+          "63.38",
+          "26.34"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "4.35",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "SI1",
+        "SL1"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "SEGAL",
+        "SOFI-SONAFI"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "59.27",
+          "24.58"
+        ],
+        [
+          "55.39",
+          "27.05"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "0.94",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "TI1",
+        "TL1"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "TIK",
+        "TRI-CIRCLE"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "49.98",
+          "21.4"
+        ],
+        [
+          "52.21",
+          "21.64"
+        ]
+      ],
+      "priority": "P2",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "0.115",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "TO11",
+        "TOL1"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "TOK-WINKHAUS",
+        "TULA"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "34.69",
+          "27.52"
+        ],
+        [
+          "57.39",
+          "25.05"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "10.35",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "TO12",
+        "TOL2"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "TOK-TRELOCK",
+        "TULA"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "40.8",
+          "19.4"
+        ],
+        [
+          "55.62",
+          "25.05"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "6.41",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "TR11R",
+        "TRI1R"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "TRIMARK",
+        "TRIOVING"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "63.74",
+          "25.64"
+        ],
+        [
+          "54.21",
+          "26.81"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "3.765",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "TR13R",
+        "TRI3R"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "TRIMARK",
+        "TRIOVING"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "43.39",
+          "25.64"
+        ],
+        [
+          "50.8",
+          "26.81"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "2.705",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "TR17R",
+        "TRI7R"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "TRIMARK",
+        "TRIOVING"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "58.91",
+          "10.82"
+        ],
+        [
+          "46.68",
+          "20.7"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "5.115",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "TR18R",
+        "TRI8R"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "TRIMARK",
+        "TRIOVING"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "58.91",
+          "10.82"
+        ],
+        [
+          "46.68",
+          "20.7"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "5.115",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "TR19R",
+        "TRI9R"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "TRIMARK",
+        "TRIOVING"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "53.74",
+          "10.82"
+        ],
+        [
+          "37.28",
+          "20.7"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "7.23",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "VI2",
+        "VL2"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "V.G.F. VILLATORE"
+      ],
+      "missing_manufacturer_references": [
+        "VI2"
+      ],
+      "kind": "fabricant_manquant",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "47.62",
+          "23.75"
+        ],
+        [
+          "54.68",
+          "23.75"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "2.53",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "VI2R",
+        "VL2R"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "V.G.F. VILLATORE",
+        "VIRO"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "47.62",
+          "23.75"
+        ],
+        [
+          "54.68",
+          "23.75"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "2.53",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "VI3",
+        "VL3"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "V.G.F. VILLATORE",
+        "VIRO"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "38.1",
+          "24.34"
+        ],
+        [
+          "55.74",
+          "24.34"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "7.82",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "VI3R",
+        "VL3R"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "V.G.F. VILLATORE",
+        "VIRO"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "50.21",
+          "24.34"
+        ],
+        [
+          "55.74",
+          "24.34"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "1.765",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "VI4",
+        "VL4"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "V.G.F. VILLATORE",
+        "VIRO"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "42.1",
+          "21.28"
+        ],
+        [
+          "43.98",
+          "20.93"
+        ]
+      ],
+      "priority": "P0",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "0",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "VI4R",
+        "VL4R"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "V.G.F. VILLATORE",
+        "VIRO"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "42.1",
+          "21.28"
+        ],
+        [
+          "43.98",
+          "20.93"
+        ]
+      ],
+      "priority": "P0",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "0",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "WE12",
+        "WEI2"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "WEISER",
+        "WELKA"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "48.8",
+          "22.22"
+        ],
+        [
+          "57.62",
+          "22.93"
+        ]
+      ],
+      "priority": "P3",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "3.41",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "WE13",
+        "WEI3"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "WEISER",
+        "WELKA"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "51.27",
+          "23.87"
+        ],
+        [
+          "54.21",
+          "23.75"
+        ]
+      ],
+      "priority": "P2",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "0.47",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "WE14",
+        "WEI4"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "WEISER",
+        "WELKA"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "59.97",
+          "23.87"
+        ],
+        [
+          "57.5",
+          "22.7"
+        ]
+      ],
+      "priority": "P2",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "0.235",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    },
+    {
+      "references": [
+        "WE15",
+        "WEI5"
+      ],
+      "count": 2,
+      "source_manufacturers_NOT_PHYSICALLY_VERIFIED": [
+        "WEISER",
+        "WELKA"
+      ],
+      "missing_manufacturer_references": [],
+      "kind": "fabricants_distincts",
+      "dimension_values_SOURCE_ONLY": [
+        [
+          "51.27",
+          "23.87"
+        ],
+        [
+          "53.86",
+          "22.58"
+        ]
+      ],
+      "priority": "P2",
+      "min_extra_uncertainty_mm_THEORETICAL_ONLY": "0.295",
+      "ocr_edge_count": 1,
+      "action": "EXIGER_CONFIRMATION_HUMAINE_SUR_CLE_REELLE",
+      "auto_accept": false,
+      "maker_inferred": false,
+      "merged": false,
+      "threshold_changed": false
+    }
+  ],
+  "decision_fixtures": {
+    "empty": {
+      "status": "unknown_catalogue",
+      "automatically_validated": false
+    },
+    "unknown": {
+      "status": "unknown_catalogue",
+      "automatically_validated": false
+    },
+    "single_known": {
+      "status": "candidate_requires_physical_confirmation",
+      "automatically_validated": false
+    },
+    "confusable_pair": {
+      "status": "ambiguous_manual_review",
+      "automatically_validated": false
+    },
+    "duplicate_single": {
+      "status": "candidate_requires_physical_confirmation",
+      "automatically_validated": false
+    },
+    "mixed_unknown": {
+      "status": "ambiguous_manual_review",
+      "automatically_validated": false
+    },
+    "missing_maker_pair": {
+      "status": "ambiguous_manual_review",
+      "automatically_validated": false
+    }
+  },
+  "checks": {
+    "source_hashes_match_10_canonical": true,
+    "source_exact_5103_unique": true,
+    "64_disjoint_ocr_groups": true,
+    "68_distinct_edges": true,
+    "all_graph_edges_have_distinct_known_references": true,
+    "priority_matches_2_2_4_56": true,
+    "64_groups_have_source_dimensions": true,
+    "59_groups_cross_maker_and_no_maker_claim": true,
+    "4_groups_same_maker_but_not_equated": true,
+    "one_group_missing_maker_VI2_VL2": true,
+    "8_priority_7_multi_maker": true,
+    "all_68_edge_cases_reject_automatic_validation": true,
+    "single_reference_not_a_real_world_proof": true,
+    "unknown_and_mixed_input_fail_closed": true,
+    "known_duplicate_does_not_create_second_candidate": true,
+    "no_alias_threshold_maker_or_approval_added": true,
+    "provenance_CAT_R359_unchanged": true
+  },
+  "samsung_physical_validated": false,
+  "maker_proven": false,
+  "ocr_offline_validated": false,
+  "activated_in_application": false,
+  "ok": true
+}
