@@ -26,3 +26,4 @@
    // R55: the manufacturer changes the alias namespace, so a previous validation cannot remain visible.
    manualBrandSource=el("manualBrand").value.trim()?"manual":"";refreshFieldSourceStatus();
    invalidateDecisionContextAndDiagnosticR172("Marque modifiée : résultat précédent invalidé, revérification nécessaire.");
+   clearTimeout(autoVerifyTimer);
