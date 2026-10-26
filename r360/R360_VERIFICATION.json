@@ -1,0 +1,37 @@
+{
+  "schema": "bres-r360-verification-v1",
+  "milestone": "R360",
+  "parent": "R359",
+  "intentional_modified_parent_paths": [
+    "index.html"
+  ],
+  "source_index_sha256": "e461c52c1e076f61ce814a4545850edac0cfa099bc936436169d2f1898624761",
+  "parent_index_sha256": "4a792d186be9e40b5f71e80dff351d2d545aadeb545dc8ebd66ebf2f324ef688",
+  "checks": {
+    "all_8811_R359_files_verified_except_intended_index_change": true,
+    "patched_index_reversible_to_exact_R359_sha256": true,
+    "unchanged_R359_pilot_catalogue_source": true,
+    "only_two_event_handlers_changed": true,
+    "browser_R360_success": true,
+    "sixteen_new_browser_checks_pass": true,
+    "R359_14_checks_replayed_on_patched_runtime": true,
+    "R358_130_confusable_cases_replayed": true,
+    "existing_R359_outputs_preserved": true,
+    "source_hashes_match_current_runtime": true,
+    "historical_R305_and_engine_title_preserved": true,
+    "no_physical_or_offline_OCR_certification": true
+  },
+  "replayed": {
+    "R359": {
+      "exit": 0,
+      "stdout": "{\"ok\": true, \"checks\": 14, \"errors\": 0, \"dialogs\": 0}\n"
+    },
+    "R358": {
+      "exit": 0,
+      "stdout": "{\"ok\": true, \"tested\": 130, \"present_pilot\": 0, \"absent_pilot\": 130, \"checks\": 10, \"unsafe\": 0}\n"
+    }
+  },
+  "current_test_stdout": "{\"ok\": true, \"checks\": 16, \"js_errors\": 0}\n",
+  "current_test_stderr": "",
+  "ok": true
+}
