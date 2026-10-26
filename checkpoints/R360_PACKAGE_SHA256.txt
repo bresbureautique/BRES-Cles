@@ -1,0 +1,13 @@
+BRES Cles V2.28 TEST R360 — 2026-10-26
+ZIP: BRES_Cles_Mobile_V2_28_CHECKPOINT_R360.zip
+BYTES: 31928312
+SHA256: 25c4796bcca35831f5eea24e38d37dc7537b5048eb7676c015750586cab508f4
+ZIP_ENTRIES: 8822
+MANIFEST_ENTRIES: 8821
+TESTS: R360 browser 16/16 PASS; R359 replay 14/14 PASS; R358 130 confusable inputs PASS; verifier 12/12 PASS.
+R359_TO_R360: only index.html intentionally modified; source v228-catalogue.js preserved.
+LIBRARY: /BRES Cles/Sauvegardes/BRES_Cles_Mobile_V2_28_CHECKPOINT_R360.zip (restored and byte-verified)
+GITHUB: proof and patch only; NOT a complete application ZIP mirror.
+MAIN: V2.27 stable must not be modified.
+PHYSICAL_SAMSUNG_R336: PENDING
+OFFLINE_OCR: NOT_CERTIFIED
