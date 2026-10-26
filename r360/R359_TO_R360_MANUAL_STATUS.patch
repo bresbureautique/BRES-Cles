@@ -1,0 +1,28 @@
+--- a/index.html
++++ b/index.html
+@@ -5563,20 +5563,26 @@
+   }
+   showXref(r.canon);
+ }
+ 
+ el("manualRef").addEventListener("input",()=>{
++  // R360: cancel the previous green manual lookup feedback synchronously.
++  el("manualRefStatus").className="status warn";
++  el("manualRefStatus").textContent="Référence modifiée : ancienne correspondance annulée. Vérifiez à nouveau.";
+   bumpIdentificationEpoch();
+   // R55: editing or deleting a reference invalidates any decision produced from the previous value.
+   manualRefSource=el("manualRef").value.trim()?"manual":"";refreshFieldSourceStatus();
+   invalidateDecisionContextAndDiagnosticR172("Référence modifiée : résultat précédent invalidé, revérification nécessaire.");
+   clearTimeout(autoVerifyTimer);
+   autoVerifyTimer=setTimeout(()=>{
+     if(el("manualRef").value.trim() && currentDecisionGeometryR215()) verifyManualReference(true);
+   },700);
+ });
+ el("manualBrand").addEventListener("input",()=>{
++  // R360: cancel the previous green manual lookup feedback synchronously.
++  el("manualRefStatus").className="status warn";
++  el("manualRefStatus").textContent="Marque modifiée : ancienne correspondance annulée. Vérifiez à nouveau.";
+   bumpIdentificationEpoch();
+   // R55: the manufacturer changes the alias namespace, so a previous validation cannot remain visible.
+   manualBrandSource=el("manualBrand").value.trim()?"manual":"";refreshFieldSourceStatus();
+   invalidateDecisionContextAndDiagnosticR172("Marque modifiée : résultat précédent invalidé, revérification nécessaire.");
