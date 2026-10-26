@@ -1,0 +1,13 @@
+BRES Cles Catalogue V3 CAT-R360 — 2026-10-26
+ZIP: BRES_Cles_Catalogue_Audit_CAT_R360.zip
+BYTES: 4230145
+SHA256: 1460f56b69c807b2240221f7a988eca796e6a70e6e3a5dd0a49dd4b9ecfbdadb
+ZIP_ENTRIES: 1473
+MANIFEST_ENTRIES: 1462
+TESTS: CAT-R360 audit 17/17 PASS; CAT-R360 verifier 12/12 PASS.
+CANONICAL: 5103 distinct records; 10 source catalog fragments unchanged.
+OCR_GROUPS: 64 (59 mixed makers, 4 single maker, 1 missing maker VI2/VL2)
+OCR_EDGES: 68
+LIBRARY: /BRES Cles/Sauvegardes/BRES_Cles_Catalogue_Audit_CAT_R360.zip (restored and byte-verified)
+GITHUB: proof and review notes only; NOT a complete catalogue ZIP mirror.
+NO AUTOMATIC MERGE, ALIAS, MAKER ASSIGNMENT OR THRESHOLD CHANGE.
