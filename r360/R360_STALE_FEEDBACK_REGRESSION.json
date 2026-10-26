@@ -1,0 +1,124 @@
+{
+  "schema": "bres-r360-stale-feedback-regression-v1",
+  "milestone": "R360",
+  "parent": "R359",
+  "test_scope": "manual status refresh on V2.28 TEST pilot in offline Chromium",
+  "source_sha256": {
+    "index.html": "e461c52c1e076f61ce814a4545850edac0cfa099bc936436169d2f1898624761",
+    "v228-catalogue.js": "433c98851e99bfa116776e13eac95164b4c9c68d7e487763b31548194235fcd1"
+  },
+  "checks": {
+    "TE8D_first_match_without_earned_validation": true,
+    "immediate_reference_edit_clears_previous_green_status": true,
+    "immediate_reference_edit_invalidates_decision": true,
+    "debounce_without_geometry_cannot_resurrect_old_match": true,
+    "unknown_ref_requires_correction": true,
+    "TE8I_relookup_works_after_negative": true,
+    "immediate_brand_edit_clears_previous_green_status": true,
+    "brand_change_invalidates_prior_decision": true,
+    "brand_clear_does_not_restore_old_match": true,
+    "manual_verification_restores_only_fresh_lookup": true,
+    "hostile_brand_does_not_retain_old_green_status": true,
+    "hostile_input_never_executes_or_validates": true,
+    "rapid_edit_clear_blocks_stale_autovalidation": true,
+    "all_automated_requests_network_denied": true,
+    "no_page_error_no_dialog": true,
+    "remains_V2_28_TEST_R156": true
+  },
+  "trace": [
+    {
+      "phase": "lookup_TE8D",
+      "reference": "TE8D",
+      "brand": "",
+      "status": "Saisie manuelle prioritaire.\nRéférence saisie : TE8D\nCorrespondance catalogue : TE8D\nPour : TESA\nJMA TE-8DSilca TE2RErrebi TS7Keyline TES5S\n\nOuvrir la fiche JMA",
+      "status_class": "status ok",
+      "decision": "RÉFÉRENCE TROUVÉE : TE8D\nAnalysez d'abord les deux photos."
+    },
+    {
+      "phase": "edit_ref_without_click",
+      "reference": "VI2",
+      "brand": "",
+      "status": "Référence modifiée : ancienne correspondance annulée. Vérifiez à nouveau.",
+      "status_class": "status warn",
+      "decision": "Décision finale : en attente d’une nouvelle analyse."
+    },
+    {
+      "phase": "reference_wait_820ms",
+      "reference": "VI2",
+      "brand": "",
+      "status": "Référence modifiée : ancienne correspondance annulée. Vérifiez à nouveau.",
+      "status_class": "status warn",
+      "decision": "Décision finale : en attente d’une nouvelle analyse."
+    },
+    {
+      "phase": "unknown_verified",
+      "reference": "VI2",
+      "brand": "",
+      "status": "Référence « VI2 » non trouvée dans la base catalogue pilote intégrée.",
+      "status_class": "status warn",
+      "decision": "RÉFÉRENCE NON VALIDÉE\nCorrigez la référence ou la marque avant de poursuivre."
+    },
+    {
+      "phase": "lookup_TE8I",
+      "reference": "TE8I",
+      "brand": "",
+      "status": "Saisie manuelle prioritaire.\nRéférence saisie : TE8I\nCorrespondance catalogue : TE8I\nPour : TESA\nJMA TE-8ISilca TE2Errebi TS7R / TS9RKeyline TES5\n\nOuvrir la fiche JMA",
+      "status_class": "status ok",
+      "decision": "RÉFÉRENCE TROUVÉE : TE8I\nAnalysez d'abord les deux photos."
+    },
+    {
+      "phase": "brand_change_without_click",
+      "reference": "TE8I",
+      "brand": "AUTRE MARQUE",
+      "status": "Marque modifiée : ancienne correspondance annulée. Vérifiez à nouveau.",
+      "status_class": "status warn",
+      "decision": "Décision finale : en attente d’une nouvelle analyse."
+    },
+    {
+      "phase": "brand_clear_without_click",
+      "reference": "TE8I",
+      "brand": "",
+      "status": "Marque modifiée : ancienne correspondance annulée. Vérifiez à nouveau.",
+      "status_class": "status warn",
+      "decision": "Décision finale : en attente d’une nouvelle analyse."
+    },
+    {
+      "phase": "manually_reverify_same_ref",
+      "reference": "TE8I",
+      "brand": "",
+      "status": "Saisie manuelle prioritaire.\nRéférence saisie : TE8I\nCorrespondance catalogue : TE8I\nPour : TESA\nJMA TE-8ISilca TE2Errebi TS7R / TS9RKeyline TES5\n\nOuvrir la fiche JMA",
+      "status_class": "status ok",
+      "decision": "RÉFÉRENCE TROUVÉE : TE8I\nAnalysez d'abord les deux photos."
+    },
+    {
+      "phase": "html_brand_edit",
+      "reference": "TE8I",
+      "brand": "<img src=x onerror=\"globalThis.__bresR360Attack=1\">",
+      "status": "Marque modifiée : ancienne correspondance annulée. Vérifiez à nouveau.",
+      "status_class": "status warn",
+      "decision": "Décision finale : en attente d’une nouvelle analyse."
+    },
+    {
+      "phase": "html_ref_lookup",
+      "reference": "<img src=x onerror=\"globalThis.__bresR360Attack=1\">",
+      "brand": "<img src=x onerror=\"globalThis.__bresR360Attack=1\">",
+      "status": "Référence « <img src=x onerror=\"globalThis.__bresR360Attack=1\"> » non trouvée dans la base catalogue pilote intégrée.\nMarque saisie : <img src=x onerror=\"globalThis.__bresR360Attac",
+      "status_class": "status warn",
+      "decision": "RÉFÉRENCE NON VALIDÉE\nCorrigez la référence ou la marque avant de poursuivre."
+    },
+    {
+      "phase": "rapid_edit_then_clear_and_wait",
+      "reference": "",
+      "brand": "",
+      "status": "Saisie effacée.",
+      "status_class": "status",
+      "decision": "Décision finale : en attente d’une nouvelle analyse."
+    }
+  ],
+  "page_errors": [],
+  "dialogs": [],
+  "samsung_real_tested": false,
+  "ocr_offline_certified": false,
+  "catalogue_v3_integrated": false,
+  "ok": true
+}
