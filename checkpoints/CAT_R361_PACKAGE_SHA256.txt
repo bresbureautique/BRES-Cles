@@ -1,0 +1,6 @@
+BRES CLES CAT-R361 audit checkpoint — 2026-10-27
+V2.27 stable unchanged; no merge to main.
+BRES_Cles_Catalogue_Audit_CAT_R361.zip
+SHA256 c90ec55992eb32cf32af7419b89ecac4f23976b7c8e391fc3630464b97327234
+bytes 4285772; zip entries 1482; CRC and extracted SHA256 PASS; complete ZIP in Library /BRES Cles/Sauvegardes/
+68 OCR pairs preserved, 325 additional human typing transpositions (textual, not physical proof). GitHub stores scripts + checksums, NOT complete ZIP.
