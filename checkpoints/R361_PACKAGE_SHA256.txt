@@ -1,0 +1,6 @@
+BRES CLES R361 TEST checkpoint — 2026-10-27
+V2.27 stable unchanged; no merge to main.
+BRES_Cles_Mobile_V2_28_CHECKPOINT_R361.zip
+SHA256 68d32469eaaa17aa0e67af349f768bdc11955f341625994967bee90936c021b5
+bytes 32173166; zip entries 8832; CRC and extracted SHA256 PASS; complete ZIP in Library /BRES Cles/Sauvegardes/
+GitHub stores scripts + checksums, NOT the complete ZIP.
