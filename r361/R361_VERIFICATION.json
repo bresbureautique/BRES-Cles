@@ -1,0 +1,59 @@
+{
+  "schema": "bres-r361-verification-v1",
+  "milestone": "R361",
+  "parent": "R360",
+  "changed_parent_paths": [
+    "index.html"
+  ],
+  "sha256": {
+    "index_R361": "af6433b071e3ec45e3e67267381b1092b6941169d6051c7cc11af2416f067a51",
+    "index_R360": "e461c52c1e076f61ce814a4545850edac0cfa099bc936436169d2f1898624761",
+    "pilot": "433c98851e99bfa116776e13eac95164b4c9c68d7e487763b31548194235fcd1"
+  },
+  "replayed": {
+    "r360_stale_feedback_regression.py": {
+      "exit": 0,
+      "ok": true,
+      "checks": 16,
+      "tested": null,
+      "unsafe": 0,
+      "stdout": "{\"ok\": true, \"checks\": 16, \"js_errors\": 0}\n",
+      "stderr": ""
+    },
+    "r359_manual_state_transition_regression.py": {
+      "exit": 0,
+      "ok": true,
+      "checks": 14,
+      "tested": null,
+      "unsafe": 0,
+      "stdout": "{\"ok\": true, \"checks\": 14, \"errors\": 0, \"dialogs\": 0}\n",
+      "stderr": ""
+    },
+    "r358_pilot_confusable_regression.py": {
+      "exit": 0,
+      "ok": true,
+      "checks": 10,
+      "tested": 130,
+      "unsafe": 0,
+      "stdout": "{\"ok\": true, \"tested\": 130, \"present_pilot\": 0, \"absent_pilot\": 130, \"checks\": 10, \"unsafe\": 0}\n",
+      "stderr": ""
+    }
+  },
+  "current_test_stdout": "{\"ok\": true, \"checks\": 15, \"errors\": [], \"failed_network_requests\": 1}\n",
+  "current_test_stderr": "",
+  "checks": {
+    "parent_manifest_8821_files_only_intended_index_changed": true,
+    "parent_index_patch_reversible_to_R360_SHA": true,
+    "R360_pilot_catalogue_js_unchanged": true,
+    "R361_source_contains_single_guard": true,
+    "R361_browser_15_checks_pass": true,
+    "R361_passed_source_hashes_current": true,
+    "R360_16_browser_checks_replayed_from_isolated_workdir": true,
+    "R359_14_browser_checks_replayed_from_isolated_workdir": true,
+    "R358_130_confusable_input_cases_no_false_validation": true,
+    "parent_old_result_unchanged": true,
+    "stable_and_OCR_rules_not_activated": true,
+    "no_browser_page_errors": true
+  },
+  "ok": true
+}
