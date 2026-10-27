@@ -1,0 +1,327 @@
+<PARSED TEXT FOR SHEET: 1 / 1 TABS
+TAB NAME: CAT_R361_NEW_TYPING_COLLISIONS.csv>index,reference_a,reference_b,edit_types,manufacturer_a_SOURCE_UNVERIFIED,manufacturer_b_SOURCE_UNVERIFIED,same_manufacturer_SOURCE_ONLY,manufacturer_gap_SOURCE_ONLY,physical_confirmation_required,automatically_validated
+0,AB1,BA1,['adjacent_transposition'],,BRIGGS & STRATTON,False,True,True,False
+1,AB13,AB31,['adjacent_transposition'],,ABUS,False,True,True,False
+2,AB14R,AB41R,['adjacent_transposition'],ABUS,ABUS,True,False,True,False
+3,AB15,AB51,['adjacent_transposition'],ABUS,ABUS,True,False,True,False
+4,AB16,AB61,['adjacent_transposition'],ABUS,ABUS,True,False,True,False
+5,AB17,AB71,['adjacent_transposition'],,ABUS,False,True,True,False
+6,AB18,AB81,['adjacent_transposition'],ABUS,ABUS,True,False,True,False
+7,AB19,AB91,['adjacent_transposition'],ABUS,ABUS,True,False,True,False
+8,AB23,AB32,['adjacent_transposition'],ABUS,ABSA,False,False,True,False
+9,AB27,AB72,['adjacent_transposition'],ABUS,ABUS,True,False,True,False
+10,AB3,BA3,['adjacent_transposition'],ABUS,BRIGGS & STRATTON,False,False,True,False
+11,AB35,AB53,['adjacent_transposition'],,ABUS,False,True,True,False
+12,AB39R,AB93R,['adjacent_transposition'],ABUS,ABUS,True,False,True,False
+13,AB3R,BA3R,['adjacent_transposition'],ABUS,BRIGGS & STRATTON,False,False,True,False
+14,AB4,BA4,['adjacent_transposition'],ABUS,BRIGGS & STRATTON,False,False,True,False
+15,AB45,AB54,['adjacent_transposition'],ABUS,ABUS,True,False,True,False
+16,AB48,AB84,['adjacent_transposition'],ABUS,ABUS,True,False,True,False
+17,AB5,BA5,['adjacent_transposition'],ABUS,BASCO,False,False,True,False
+18,AB6,BA6,['adjacent_transposition'],ABUS,BRIGGS & STRATTON,False,False,True,False
+19,AB67,AB76,['adjacent_transposition'],ABUS,ABUS,True,False,True,False
+20,AB7,BA7,['adjacent_transposition'],ABUS,BRIGGS & STRATTON,False,False,True,False
+21,AB8,BA8,['adjacent_transposition'],ABUS,BASCO,False,False,True,False
+22,AB89,AB98,['adjacent_transposition'],ABUS,ABUS,True,False,True,False
+23,AB8R,BA8R,['adjacent_transposition'],ABUS,BASCO,False,False,True,False
+24,ABS1,BAS1,['adjacent_transposition'],ABSA,BASTA,False,False,True,False
+25,AC1,CA1,['adjacent_transposition'],ABC,CITY,False,False,True,False
+26,AC2,CA2,['adjacent_transposition'],ABC,ZENITH,False,False,True,False
+27,ACR1,CAR1,['adjacent_transposition'],ANCHOR,CARACAL,False,False,True,False
+28,AK2R,AKR2,['adjacent_transposition'],AKS,ANKERSLOT,False,False,True,False
+29,ALP1,LAP1,['adjacent_transposition'],ALPHA,LA PORTE,False,False,True,False
+30,ALP2,LAP2,['adjacent_transposition'],ALPHA,LA PORTE,False,False,True,False
+31,ALP3,LAP3,['adjacent_transposition'],ALPHA,LA PORTE,False,False,True,False
+32,ANB1,NAB1,['adjacent_transposition'],ANBO,NABOB,False,False,True,False
+33,AS1,SA1,['adjacent_transposition'],CINA,SAMSONITE,False,False,True,False
+34,ASN1,SAN1,['adjacent_transposition'],ASIAN,SÄNTIS,False,False,True,False
+35,ASS36,ASS63,['adjacent_transposition'],ASSA,ASSA,True,False,True,False
+36,ASS45,ASS54,['adjacent_transposition'],ASSA,ASSA,True,False,True,False
+37,ASS59,ASS95,['adjacent_transposition'],ASSA,ASSA,True,False,True,False
+38,ASS59R,ASS95R,['adjacent_transposition'],ASSA,ASSA,True,False,True,False
+39,AVC1,VAC1,['adjacent_transposition'],AVOCET,VACHETTE,False,False,True,False
+40,AVC2,VAC2,['adjacent_transposition'],AVOCET,VACHETTE,False,False,True,False
+41,AW1,WA1,['adjacent_transposition'],ARROW,WALLY,False,False,True,False
+42,AW2,WA2,['adjacent_transposition'],ARROW,WALLY,False,False,True,False
+43,AW3,WA3,['adjacent_transposition'],ARROW,WALLY,False,False,True,False
+44,AW4,WA4,['adjacent_transposition'],ARROW,WALLY,False,False,True,False
+45,AW6,WA6,['adjacent_transposition'],ARROW,WALLY,False,False,True,False
+46,AW7,WA7,['adjacent_transposition'],ARROW,WALLY,False,False,True,False
+47,AY1,YA1,['adjacent_transposition'],ABLOY,RABBIT,False,False,True,False
+48,AY12,AY21,['adjacent_transposition'],ABLOY,ABLOY,True,False,True,False
+49,AY13,AY31,['adjacent_transposition'],ABLOY,ABLOY,True,False,True,False
+50,AY13,YA13,['adjacent_transposition'],ABLOY,YALE (IT),False,False,True,False
+51,AY14,YA14,['adjacent_transposition'],ABLOY,YALE (IT),False,False,True,False
+52,AY15,YA15,['adjacent_transposition'],ABLOY,YALE,False,False,True,False
+53,AY16,YA16,['adjacent_transposition'],ABLOY,YALE,False,False,True,False
+54,AY17,YA17,['adjacent_transposition'],ABLOY,,False,True,True,False
+55,AY18,YA18,['adjacent_transposition'],ABLOY,CHICAGO,False,False,True,False
+56,AY2,YA2,['adjacent_transposition'],ABLOY,YALE (DE) (GB),False,False,True,False
+57,AY20,YA20,['adjacent_transposition'],ABLOY,,False,True,True,False
+58,AY23,YA23,['adjacent_transposition'],ABLOY,YALE,False,False,True,False
+59,AY29,YA29,['adjacent_transposition'],ABLOY,YALE,False,False,True,False
+60,AY3,YA3,['adjacent_transposition'],ABLOY,YALE,False,False,True,False
+61,AY30,YA30,['adjacent_transposition'],ABLOY,YALE,False,False,True,False
+62,AY31,YA31,['adjacent_transposition'],ABLOY,YALE (IT),False,False,True,False
+63,AZ2R,ZA2R,['adjacent_transposition'],AZBE,ZANETTI ANGELO,False,False,True,False
+64,BAB13,BAB31,['adjacent_transposition'],BAB,BAB,True,False,True,False
+65,BAL1,BLA1,['adjacent_transposition'],BAAL,BLASER,False,False,True,False
+66,BAL2,BLA2,['adjacent_transposition'],BAAL,BLASER,False,False,True,False
+67,BAL3,BLA3,['adjacent_transposition'],BAAL,BLASER,False,False,True,False
+68,BAR1R,BRA1R,['adjacent_transposition'],BARAS,BRASIL,False,False,True,False
+69,BC1,CB1,['adjacent_transposition'],BABY CLIP,CORBIN (IT),False,False,True,False
+70,BC1R,CB1R,['adjacent_transposition'],BABY CLIP,CORBIN (IT),False,False,True,False
+71,BD1,DB1,['adjacent_transposition'],BRICARD,DOBLINA,False,False,True,False
+72,BD14,BD41,['adjacent_transposition'],BRICARD,BRICARD,True,False,True,False
+73,BD16,DB16,['adjacent_transposition'],BRICARD,DOBLINA,False,False,True,False
+74,BD17,DB17,['adjacent_transposition'],BRICARD,DOBLINA,False,False,True,False
+75,BD2,DB2,['adjacent_transposition'],BRICARD,DOBLINA,False,False,True,False
+76,BD2R,DB2R,['adjacent_transposition'],BRICARD,DOBLINA,False,False,True,False
+77,BD3,DB3,['adjacent_transposition'],BRICARD,DOBLINA,False,False,True,False
+78,BD3R,DB3R,['adjacent_transposition'],BRICARD,DOBLINA,False,False,True,False
+79,BD4,DB4,['adjacent_transposition'],BRICARD,DOBLINA,False,False,True,False
+80,BD5,DB5,['adjacent_transposition'],BRICARD,DOBLINA,False,False,True,False
+81,BG1,GB1,['adjacent_transposition'],BIGLA,GABON,False,False,True,False
+82,BK16,BK61,['adjacent_transposition'],BKS,BKS,True,False,True,False
+83,BM1,MB1,['adjacent_transposition'],BANHAM,MONOBLOC,False,False,True,False
+84,BRT2,RBT2,['adjacent_transposition'],BERTO,RABBIT,False,False,True,False
+85,BS1,SB1,['adjacent_transposition'],BSS,SABI,False,False,True,False
+86,BU1R,BUR1,['adjacent_transposition'],BURAM,BURG,False,False,True,False
+87,BU1R,UB1R,['adjacent_transposition'],BURAM,URBIS,False,False,True,False
+88,BUR12,BUR21,['adjacent_transposition'],BURG,BURG,True,False,True,False
+89,BUR13,BUR31,['adjacent_transposition'],BURG,BURG,True,False,True,False
+90,BUR23,BUR32,['adjacent_transposition'],BURG,BURG,True,False,True,False
+91,BUR26,BUR62,['adjacent_transposition'],BURG,BURG,True,False,True,False
+92,BUR27,BUR72,['adjacent_transposition'],BURG,BURG,True,False,True,False
+93,C1R,CR1,['adjacent_transposition'],C.R.,CLAUSOR,False,False,True,False
+94,CB12,CB21,['adjacent_transposition'],CORBIN (US),CORBIN (IT),False,False,True,False
+95,CB13,CB31,['adjacent_transposition'],CORBIN (US),CORBIN (IT),False,False,True,False
+96,CB14R,CB41R,['adjacent_transposition'],CORBIN (US),CORBIN (US),True,False,True,False
+97,CB18,CB81,['adjacent_transposition'],CORBIN (US),CORBIN (IT),False,False,True,False
+98,CB34R,CB43R,['adjacent_transposition'],CORBIN (US),CORBIN (IT),False,False,True,False
+99,CB38,CB83,['adjacent_transposition'],CORBIN (US),CORBIN (IT),False,False,True,False
+100,CB79,CB97,['adjacent_transposition'],CORBIN (IT),CORBIN,False,False,True,False
+101,CE13,CE31,['adjacent_transposition'],CES,CES,True,False,True,False
+102,CE23R,CE32R,['adjacent_transposition'],CES,CES,True,False,True,False
+103,CE5,EC5,['adjacent_transposition'],CES,TESA,False,False,True,False
+104,CEM1,ECM1,['adjacent_transposition'],CEM,ECM,False,False,True,False
+105,CIS1,ICS1,['adjacent_transposition'],CAS-CISMA,ICSA,False,False,True,False
+106,CIS2,ICS2,['adjacent_transposition'],CAS-CISMA,ICSA,False,False,True,False
+107,CIS2R,ICS2R,['adjacent_transposition'],CAS-CISMA,ICSA,False,False,True,False
+108,CIS3,ICS3,['adjacent_transposition'],CAS-CISMA,ICSA,False,False,True,False
+109,CIS5,ICS5,['adjacent_transposition'],CAS-CISMA,ICSA,False,False,True,False
+110,CL2,LC2,['adjacent_transposition'],CLUM,LINCE,False,False,True,False
+111,CL3,LC3,['adjacent_transposition'],CLUM,LINCE,False,False,True,False
+112,CL4,LC4,['adjacent_transposition'],CLUM,LINCE,False,False,True,False
+113,CL5,LC5,['adjacent_transposition'],CLUM,LINCE,False,False,True,False
+114,CM1,MC1,['adjacent_transposition'],CEMA,MCM,False,False,True,False
+115,CM1R,MC1R,['adjacent_transposition'],CEMA,MCM,False,False,True,False
+116,CM2,MC2,['adjacent_transposition'],GIOBERT,MCM,False,False,True,False
+117,CM2R,MC2R,['adjacent_transposition'],GIOBERT,,False,True,True,False
+118,CM3,MC3,['adjacent_transposition'],CEMA,MCM,False,False,True,False
+119,CM4,MC4,['adjacent_transposition'],CEMA,,False,True,True,False
+120,CM4R,MC4R,['adjacent_transposition'],CEMA,MCM,False,False,True,False
+121,CO1,OC1,['adjacent_transposition'],COTICO,OMEC,False,False,True,False
+122,CO1R,COR1,['adjacent_transposition'],COTICO,CORONA,False,False,True,False
+123,CO1R,OC1R,['adjacent_transposition'],COTICO,,False,True,True,False
+124,CR3R,RC3R,['adjacent_transposition'],CLAUSOR,CINA,False,False,True,False
+125,CR5R,RC5R,['adjacent_transposition'],CLAUSOR,CINA,False,False,True,False
+126,CS119,CS191,['adjacent_transposition'],CISA,CISA,True,False,True,False
+127,CS12,CS21,['adjacent_transposition'],ALA,CISA,False,False,True,False
+128,CS12R,CS21R,['adjacent_transposition'],ALA,CISA,False,False,True,False
+129,CS13,CS31,['adjacent_transposition'],CISA,CISA,True,False,True,False
+130,CS168,CS186,['adjacent_transposition'],CISA,CISA,True,False,True,False
+131,CS178,CS187,['adjacent_transposition'],CISA,CISA,True,False,True,False
+132,CS23,CS32,['adjacent_transposition'],CISA,BUGA,False,False,True,False
+133,CS23R,CS32R,['adjacent_transposition'],CISA,BUGA,False,False,True,False
+134,CS24,CS42,['adjacent_transposition'],CISA,CISA,True,False,True,False
+135,CS26,CS62,['adjacent_transposition'],CISA,CISA,True,False,True,False
+136,CT1,TC1,['adjacent_transposition'],CRISTANI,TICINO,False,False,True,False
+137,CT1R,TC1R,['adjacent_transposition'],CRISTANI,TICINO,False,False,True,False
+138,CV1,VC1,['adjacent_transposition'],CANDAVEN CV,VECO,False,False,True,False
+139,CW1,WC1,['adjacent_transposition'],CROWN,WHITCO,False,False,True,False
+140,DCR1,DRC1,['adjacent_transposition'],DOUBLE CIRCLE,DORIC,False,False,True,False
+141,DM11,MD11,['adjacent_transposition'],DOM,MEDECO,False,False,True,False
+142,DM1R,MD1R,['adjacent_transposition'],DOM,MEDECO,False,False,True,False
+143,DM23,DM32,['adjacent_transposition'],DOM,DOM,True,False,True,False
+144,DM24,DM42,['adjacent_transposition'],DOM,DOM,True,False,True,False
+145,DM34,DM43,['adjacent_transposition'],DOM,DOM,True,False,True,False
+146,DM4,MD4,['adjacent_transposition'],,MEDECO,False,True,True,False
+147,DM49,DM94,['adjacent_transposition'],DOM,DOM,True,False,True,False
+148,DM6,MD6,['adjacent_transposition'],DOM,MEDECO,False,False,True,False
+149,DM7,MD7,['adjacent_transposition'],,MEDECO,False,True,True,False
+150,DM8R,MD8R,['adjacent_transposition'],DOM,MEDECO,False,False,True,False
+151,DP1,PD1,['adjacent_transposition'],DUPLOMATIC,PUNDRA,False,False,True,False
+152,DRC1,RDC1,['adjacent_transposition'],DORIC,,False,True,True,False
+153,DS1,SD1,['adjacent_transposition'],DOMUS (IT),SIDLEEN,False,False,True,False
+154,DS2,SD2,['adjacent_transposition'],DOMUS (IT),SIDLEEN,False,False,True,False
+155,DY1,YD1,['adjacent_transposition'],DAIYA,YANMAR,False,False,True,False
+156,DY1R,YD1R,['adjacent_transposition'],DAIYA,YARDENI,False,False,True,False
+157,EG1,GE1,['adjacent_transposition'],EAGLE,GEGE,False,False,True,False
+158,EG2,GE2,['adjacent_transposition'],EAGLE,GEGE,False,False,True,False
+159,EG2R,GE2R,['adjacent_transposition'],EAGLE,GEGE,False,False,True,False
+160,EK1,KE1,['adjacent_transposition'],EUREKA,KASSEL,False,False,True,False
+161,EK2,KE2,['adjacent_transposition'],EUREKA,KESO,False,False,True,False
+162,EK3,KE3,['adjacent_transposition'],EUROBOX,KESO,False,False,True,False
+163,EK4,KE4,['adjacent_transposition'],EUREKA,KESO,False,False,True,False
+164,EM2R,ME2R,['adjacent_transposition'],EMR,MELSMETALL,False,False,True,False
+165,EM3,ME3,['adjacent_transposition'],EMR,MELSMETALL,False,False,True,False
+166,EM4,ME4,['adjacent_transposition'],EMR,MELSMETALL,False,False,True,False
+167,ES1,SE1,['adjacent_transposition'],ESA,SELECT,False,False,True,False
+168,ES1R,SE1R,['adjacent_transposition'],ESA,SELMACH,False,False,True,False
+169,ET1,TE1,['adjacent_transposition'],ETNA,TESA,False,False,True,False
+170,ET1R,TE1R,['adjacent_transposition'],ETNA,TESA,False,False,True,False
+171,EU1R,EUR1,['adjacent_transposition'],EURO LOCKS,EURO PLUS,False,False,True,False
+172,EU2R,EUR2,['adjacent_transposition'],EURO LOCKS,EURO PLUS,False,False,True,False
+173,EU2R,UE2R,['adjacent_transposition'],EURO LOCKS,UEME,False,False,True,False
+174,EU4R,UE4R,['adjacent_transposition'],EURO LOCKS,UEME,False,False,True,False
+175,EU5R,UE5R,['adjacent_transposition'],EURO LOCKS,UEME,False,False,True,False
+176,EZ1,ZE1,['adjacent_transposition'],EZCURRA,ZEISS IKON,False,False,True,False
+177,EZ3,ZE3,['adjacent_transposition'],EZCURRA,ZEISS IKON,False,False,True,False
+178,EZ4,ZE4,['adjacent_transposition'],EZCURRA,ZEISS IKON,False,False,True,False
+179,EZ5,ZE5,['adjacent_transposition'],EZCURRA,ZEISS IKON,False,False,True,False
+180,EZ7,ZE7,['adjacent_transposition'],EZCURRA,ZEISS IKON,False,False,True,False
+181,FAC13,FAC31,['adjacent_transposition'],,FAC,False,True,True,False
+182,FAC1R,FCA1R,['adjacent_transposition'],FAC,FAICA,False,False,True,False
+183,FH1R,HF1R,['adjacent_transposition'],,HÄFELE,False,True,True,False
+184,FI1,IF1,['adjacent_transposition'],FIAM,IES,False,False,True,False
+185,FI1R,FIR1,['adjacent_transposition'],FIAM,FIRMADOOR,False,False,True,False
+186,FI2,IF2,['adjacent_transposition'],FIAM,IFAM,False,False,True,False
+187,FI3R,FIR3,['adjacent_transposition'],FIAM,FIRST,False,False,True,False
+188,FI3R,IF3R,['adjacent_transposition'],FIAM,IFAM,False,False,True,False
+189,FI6,IF6,['adjacent_transposition'],FIAM,IFAM,False,False,True,False
+190,FK1,KF1,['adjacent_transposition'],FLIK,KFV,False,False,True,False
+191,FL2,LF2,['adjacent_transposition'],FLORA,EURO LOCKS,False,False,True,False
+192,FM1,MF1,['adjacent_transposition'],FASEM,MEDECO,False,False,True,False
+193,FN1,NF1,['adjacent_transposition'],FAICA,NELFA,False,False,True,False
+194,FS1,SF1,['adjacent_transposition'],FAS,SAFE,False,False,True,False
+195,GE23,GE32,['adjacent_transposition'],GEGE,GEGE,True,False,True,False
+196,GL12R,GL21R,['adjacent_transposition'],GLOBE,GLOBE,True,False,True,False
+197,GP1,PG1,['adjacent_transposition'],GIP,PERINO PG,False,False,True,False
+198,GS1,SG1,['adjacent_transposition'],GIUSSANI,SHANGHAI,False,False,True,False
+199,GT1,TG1,['adjacent_transposition'],GIOBERT,TIGRIS,False,False,True,False
+200,GV1,VG1,['adjacent_transposition'],GTV,VING,False,False,True,False
+201,GV2,VG2,['adjacent_transposition'],GTV,VING,False,False,True,False
+202,GV3,VG3,['adjacent_transposition'],GTV,VING,False,False,True,False
+203,H1R,HR1,['adjacent_transposition'],HK,HR,False,False,True,False
+204,HM2,MH2,['adjacent_transposition'],HAMA,MICHEL-SEAT,False,False,True,False
+205,HM3,MH3,['adjacent_transposition'],HAMA,MICHEL-SEAT,False,False,True,False
+206,HW1,WH1,['adjacent_transposition'],HUWIL,WILSON BOHANNON,False,False,True,False
+207,IM1,MI1,['adjacent_transposition'],IMSA,MORI E.,False,False,True,False
+208,IM2,MI2,['adjacent_transposition'],IMSA,MORI E.,False,False,True,False
+209,IM3R,MI3R,['adjacent_transposition'],IMSA,MORI E.,False,False,True,False
+210,IM5R,MI5R,['adjacent_transposition'],,MORI E.,False,True,True,False
+211,IS1,SI1,['adjacent_transposition'],IGS,SOFI-SONAFI,False,False,True,False
+212,IT1,TI1,['adjacent_transposition'],INT,TIK,False,False,True,False
+213,JS1R,SJ1R,['adjacent_transposition'],JIS,SJL,False,False,True,False
+214,JW1R,WJ1R,['adjacent_transposition'],JUWEL,WANJIN,False,False,True,False
+215,KER1,KRE1,['adjacent_transposition'],KEYRACK,KREMENCHUK,False,False,True,False
+216,LB23,LB32,['adjacent_transposition'],LÅSBOLAGET,LÅSBOLAGET,True,False,True,False
+217,LF15R,LF51R,['adjacent_transposition'],EURO LOCKS,LOWE & FLETCHER,False,False,True,False
+218,LF16R,LF61R,['adjacent_transposition'],LOWE & FLETCHER,LOWE & FLETCHER,True,False,True,False
+219,LF23R,LF32R,['adjacent_transposition'],LOWE & FLETCHER,LOWE & FLETCHER,True,False,True,False
+220,LF25,LF52,['adjacent_transposition'],LOWE & FLETCHER,LOWE & FLETCHER,True,False,True,False
+221,LF26,LF62,['adjacent_transposition'],EURO LOCKS,LOWE & FLETCHER,False,False,True,False
+222,LF35,LF53,['adjacent_transposition'],LOWE & FLETCHER,LOWE & FLETCHER,True,False,True,False
+223,LH14P,LH41P,['adjacent_transposition'],LAPERCHE,LAPERCHE,True,False,True,False
+224,LH24,LH42,['adjacent_transposition'],LAPERCHE,LAPERCHE,True,False,True,False
+225,LP12,LP21,['adjacent_transposition'],LIPS,LIPS,True,False,True,False
+226,LP14,LP41,['adjacent_transposition'],LIPS,LIPS,True,False,True,False
+227,LS1,SL1,['adjacent_transposition'],RENZ,SEGAL,False,False,True,False
+228,LT1,TL1,['adjacent_transposition'],BKS,TRI-CIRCLE,False,False,True,False
+229,LT2,TL2,['adjacent_transposition'],LITTO,TRI-CIRCLE,False,False,True,False
+230,LT3,TL3,['adjacent_transposition'],LITTO,TRI-CIRCLE,False,False,True,False
+231,LT4,TL4,['adjacent_transposition'],LITTO,TRI-CIRCLE,False,False,True,False
+232,LT5,TL5,['adjacent_transposition'],LITTO,TRI-CIRCLE,False,False,True,False
+233,LT6R,TL6R,['adjacent_transposition'],LITTO,TRI-CIRCLE,False,False,True,False
+234,LW12R,LW21R,['adjacent_transposition'],LOCKWOOD,LOCKWOOD,True,False,True,False
+235,MC12,MC21,['adjacent_transposition'],MCM,MCM,True,False,True,False
+236,MCE1,MEC1,['adjacent_transposition'],MEC,MECO,False,False,True,False
+237,ME2R,MER2,['adjacent_transposition'],MELSMETALL,MERONI,False,False,True,False
+238,ME4R,MER4,['adjacent_transposition'],MELSMETALL,MERONI,False,False,True,False
+239,ME5R,MER5,['adjacent_transposition'],MELSMETALL,MERONI,False,False,True,False
+240,MER23,MER32,['adjacent_transposition'],MERONI,MERONI,True,False,True,False
+241,MER34R,MER43R,['adjacent_transposition'],MERONI,MERONI,True,False,True,False
+242,MS1,SM1,['adjacent_transposition'],MASTER,BRETER,False,False,True,False
+243,MS11,SM11,['adjacent_transposition'],MASTER,SIS (IT),False,False,True,False
+244,MS12,SM12,['adjacent_transposition'],MASTER,SIMECA,False,False,True,False
+245,MS16,SM16,['adjacent_transposition'],MASTER,SIMECA,False,False,True,False
+246,MS3,SM3,['adjacent_transposition'],MASTER,SIMECA,False,False,True,False
+247,MS6,SM6,['adjacent_transposition'],MASTER,SIMECA,False,False,True,False
+248,MS8,SM8,['adjacent_transposition'],MASTER,SIMECA,False,False,True,False
+249,MS9R,SM9R,['adjacent_transposition'],MASTER,SIMECA,False,False,True,False
+250,MST1,MTS1,['adjacent_transposition'],MOSRENTGEN,MOTORSICH,False,False,True,False
+251,NP1R,PN1R,['adjacent_transposition'],NEPTUNE,PERINO PG,False,False,True,False
+252,OR1R,RO1R,['adjacent_transposition'],ORDO,RONIS,False,False,True,False
+253,PDO12,PDO21,['adjacent_transposition'],PADO,PADO,True,False,True,False
+254,PDO12R,PDO21R,['adjacent_transposition'],PADO,PADO,True,False,True,False
+255,PF12,PF21,['adjacent_transposition'],PREFER,PREFER,True,False,True,False
+256,PT1,TP1,['adjacent_transposition'],POTENT,BASSI,False,False,True,False
+257,PT1R,TP1R,['adjacent_transposition'],POTENT,TAMPALINI,False,False,True,False
+258,PT2,TP2,['adjacent_transposition'],POTENT,TAMPALINI,False,False,True,False
+259,RC12R,RC21R,['adjacent_transposition'],CINA,CINA,True,False,True,False
+260,RO12,RO21,['adjacent_transposition'],RONIS,RONIS,True,False,True,False
+261,RO12R,RO21R,['adjacent_transposition'],RONIS,RONIS,True,False,True,False
+262,RO14,RO41,['adjacent_transposition'],RONIS,VACHETTE,False,False,True,False
+263,RO15,RO51,['adjacent_transposition'],RONIS,RONIS,True,False,True,False
+264,RO68,RO86,['adjacent_transposition'],RONIS,RONIS,True,False,True,False
+265,RU1,UR1,['adjacent_transposition'],RUKO,URKO,False,False,True,False
+266,RU1R,UR1R,['adjacent_transposition'],RUKO,URKO,False,False,True,False
+267,RV1,VR1,['adjacent_transposition'],RIVERS,VERA,False,False,True,False
+268,SA1R,SAR1,['adjacent_transposition'],SAMSONITE,SARGENT,False,False,True,False
+269,SA2R,SAR2,['adjacent_transposition'],SAMSONITE,SARGENT,False,False,True,False
+270,SA3R,SAR3,['adjacent_transposition'],SAMSONITE,SARGENT,False,False,True,False
+271,SAM1,SMA1,['adjacent_transposition'],SQUIRE & SONS,SAM,False,False,True,False
+272,SDT1R,STD1R,['adjacent_transposition'],SÜDMETALL,STANDERS,False,False,True,False
+273,ST1,TS1,['adjacent_transposition'],SCHLECHTENDAHL,TRAINS,False,False,True,False
+274,SW2,WS2,['adjacent_transposition'],SWEDA,WESLOCK,False,False,True,False
+275,SW3,WS3,['adjacent_transposition'],SWEDA,WESLOCK,False,False,True,False
+276,SWA1,WSA1,['adjacent_transposition'],SHOWA,WASA-IVANA,False,False,True,False
+277,TN13R,TN31R,['adjacent_transposition'],TITAN,TITAN,True,False,True,False
+278,TN23,TN32,['adjacent_transposition'],TITAN,TITAN,True,False,True,False
+279,TO12,TO21,['adjacent_transposition'],TOK-TRELOCK,TOK-WINKHAUS,False,False,True,False
+280,TO16,TO61,['adjacent_transposition'],TOK-WINKHAUS,TOK-WINKHAUS,True,False,True,False
+281,TO19,TO91,['adjacent_transposition'],TOK-WINKHAUS,TOK-WINKHAUS,True,False,True,False
+282,TO34,TO43,['adjacent_transposition'],TOK-WINKHAUS,TOK-WINKHAUS,True,False,True,False
+283,TO35,TO53,['adjacent_transposition'],TOK-WINKHAUS,TOK-WINKHAUS,True,False,True,False
+284,TY1,YT1,['adjacent_transposition'],TAYLOR,YETI,False,False,True,False
+285,UL046,UL064,['adjacent_transposition'],UNIVERSAL SERIE DISTINZIONE,UNIVERSAL SERIE DISTINZIONE,True,False,True,False
+286,UNI13,UNI31,['adjacent_transposition'],UNION,UNION,True,False,True,False
+287,UNI14,UNI41,['adjacent_transposition'],UNION,UNION,True,False,True,False
+288,UNI15,UNI51,['adjacent_transposition'],UNION,UNION,True,False,True,False
+289,UNI16,UNI61,['adjacent_transposition'],UNION,,False,True,True,False
+290,UNI16R,UNI61R,['adjacent_transposition'],UNION,,False,True,True,False
+291,UNI25,UNI52,['adjacent_transposition'],UNION,UNION,True,False,True,False
+292,UNI45R,UNI54R,['adjacent_transposition'],UNION,UNION,True,False,True,False
+293,VAC105,VAC150,['adjacent_transposition'],VACHETTE,VACHETTE,True,False,True,False
+294,VAC106,VAC160,['adjacent_transposition'],VACHETTE,VACHETTE,True,False,True,False
+295,VAC14,VAC41,['adjacent_transposition'],VACHETTE,VACHETTE,True,False,True,False
+296,VAC17,VAC71,['adjacent_transposition'],VACHETTE,VACHETTE,True,False,True,False
+297,VAC19,VAC91,['adjacent_transposition'],VACHETTE,VACHETTE,True,False,True,False
+298,VAC45,VAC54,['adjacent_transposition'],,VACHETTE,False,True,True,False
+299,VAC48,VAC84,['adjacent_transposition'],,,False,True,True,False
+300,VAC68,VAC86,['adjacent_transposition'],VACHETTE,,False,True,True,False
+301,VAC78,VAC87,['adjacent_transposition'],,,False,True,True,False
+302,WK25R,WK52R,['adjacent_transposition'],WILKA,WILKA,True,False,True,False
+303,WK29,WK92,['adjacent_transposition'],WILKA,WILKA,True,False,True,False
+304,WK45R,WK54R,['adjacent_transposition'],WILKA,WILKA,True,False,True,False
+305,WK69,WK96,['adjacent_transposition'],,WILKA,False,True,True,False
+306,YA13,YA31,['adjacent_transposition'],YALE (IT),YALE (IT),True,False,True,False
+307,YA13R,YA31R,['adjacent_transposition'],YALE (IT),YALE (IT),True,False,True,False
+308,YA14,YA41,['adjacent_transposition'],YALE (IT),YALE (IT),True,False,True,False
+309,YA15,YA51,['adjacent_transposition'],YALE,YALE (IT),False,False,True,False
+310,YA16,YA61,['adjacent_transposition'],YALE,YALE (IT),False,False,True,False
+311,YA17,YA71,['adjacent_transposition'],,YALE (DE) (GB),False,True,True,False
+312,YA17R,YA71R,['adjacent_transposition'],YALE,YALE (DE) (GB),False,False,True,False
+313,YA19,YA91,['adjacent_transposition'],YALE,YALE,True,False,True,False
+314,YA1R,YAR1,['adjacent_transposition'],RABBIT,YANMAR,False,False,True,False
+315,YA23,YA32,['adjacent_transposition'],YALE,,False,True,True,False
+316,YA27R,YA72R,['adjacent_transposition'],XIEHE,YALE (DE) (GB),False,False,True,False
+317,YA36,YA63,['adjacent_transposition'],YALE,YALE (IT),False,False,True,False
+318,YA46,YA64,['adjacent_transposition'],YALE (IT),YALE,False,False,True,False
+319,YA47,YA74,['adjacent_transposition'],YALE (IT),YALE (IT),True,False,True,False
+320,YA48,YA84,['adjacent_transposition'],YALE (IT),YALE,False,False,True,False
+321,YA49,YA94,['adjacent_transposition'],YALE (IT),YALE,False,False,True,False
+322,YA68,YA86,['adjacent_transposition'],YALE,YALE,True,False,True,False
+323,YA68R,YA86R,['adjacent_transposition'],,,False,True,True,False
+324,ZE46R,ZE64R,['adjacent_transposition'],ZEISS IKON,ZEISS IKON,True,False,True,False
