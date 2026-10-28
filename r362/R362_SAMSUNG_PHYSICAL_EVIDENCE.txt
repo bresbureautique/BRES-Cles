@@ -1,0 +1,9 @@
+BRES Clés — état des preuves Samsung au 28/10/2026
+Test physique antérieur documenté par capture utilisateur du 27/10/2026 :
+PASS local R336, 192/192 comparaisons sans divergence ; médiane 2,30 ms,
+plein canvas 36,20 ms, accélération x15,74 ; empreinte moteur conforme.
+La capture ne remplace pas le fichier complet de reçu JSON.
+Fichier JSON BRES_Cles_R336_Samsung_Benchmark_Result.json : NON REÇU.
+Nouvelle fonction de téléchargement R362 : testée dans Chromium, PAS encore
+validée par essai réel sur le Samsung. Aucun nouveau test physique imposé.
+La version stable reste V2.27. Le benchmark est strictement diagnostique.
