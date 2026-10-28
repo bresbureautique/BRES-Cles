@@ -1,0 +1,35 @@
+{
+  "schema": "bres-cat-r362-checkpoint-verification-v1",
+  "milestone": "CAT-R362",
+  "parent": "CAT-R361",
+  "old_parent_paths": 1471,
+  "modified_parent_files": [],
+  "canonical_sha256": {
+    "catalog-01.js": "e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b",
+    "catalog-02.js": "955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75",
+    "catalog-03.js": "9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210",
+    "catalog-04.js": "14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942",
+    "catalog-05.js": "5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b",
+    "catalog-06.js": "b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac",
+    "catalog-07.js": "b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1",
+    "catalog-08.js": "3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814",
+    "catalog-09.js": "4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f",
+    "catalog-10.js": "f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4"
+  },
+  "checks": {
+    "parent_1471_files_unchanged": true,
+    "prior_R361_risk_outputs_still_identical": true,
+    "R362_graph_script_succeeded": true,
+    "catalogue_5103_immutable_references": true,
+    "10_canonical_sha256_same_as_parent": true,
+    "catalogue_JS_chunks_not_modified": true,
+    "prior_393_hypothetical_edges_preserved": true,
+    "graph_vertices_and_components_consistent": true,
+    "priority_queue_separated_no_mutation": true,
+    "all_group_members_fail_closed": true,
+    "maker_physical_claims_disabled": true
+  },
+  "ok": true,
+  "parent_test_stdout": "{\"ok\": true, \"checks\": 12, \"pairs\": 393, \"new_typing_pairs\": 325, \"kinds\": {\"adjacent_transposition\": 326, \"glyph_confusable\": 63, \"separator_omission\": 1, \"separator_omission_plus_glyph\": 3}}",
+  "new_test_stdout": "{\"ok\": true, \"checks\": 14, \"components\": 345, \"vertices\": 732, \"max_component\": 4, \"priorities\": {\"P1_multiref_OCR_review\": 24, \"P3_multiref_typing_review\": 12, \"P4_typing_review\": 272, \"P2_OCR_review\": 37}}"
+}
