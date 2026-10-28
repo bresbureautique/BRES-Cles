@@ -1,0 +1,81 @@
+{
+  "schema": "bres-r362-verification-v1",
+  "milestone": "R362",
+  "parent": "R361",
+  "parent_changed_files": [
+    "index.html"
+  ],
+  "parent_manifest_paths": 8831,
+  "sha256": {
+    "index_R361": "af6433b071e3ec45e3e67267381b1092b6941169d6051c7cc11af2416f067a51",
+    "index_R362": "312b5201fea52fd92adc1a87aed592ac2dce7aba3dccab898bd537a694fced00",
+    "autonomous_R336": "c8137a381af5c5667af0b5c97d760dc29c9bbcb047ff628968c39991d74e7a1c"
+  },
+  "browser": {
+    "returncode": 0,
+    "output": "{\"ok\": true, \"checks\": 13, \"failed\": [], \"errors\": []}\n"
+  },
+  "replays": {
+    "r361_thickness_staleness_regression.py": {
+      "returncode": 0,
+      "ok": true,
+      "checks": 15,
+      "tested": null,
+      "unsafe": 0,
+      "stdout": "{\"ok\": true, \"checks\": 15, \"errors\": [], \"failed_network_requests\": 1}\n",
+      "stderr": ""
+    },
+    "r360_stale_feedback_regression.py": {
+      "returncode": 0,
+      "ok": true,
+      "checks": 16,
+      "tested": null,
+      "unsafe": 0,
+      "stdout": "{\"ok\": true, \"checks\": 16, \"js_errors\": 0}\n",
+      "stderr": ""
+    },
+    "r359_manual_state_transition_regression.py": {
+      "returncode": 0,
+      "ok": true,
+      "checks": 14,
+      "tested": null,
+      "unsafe": 0,
+      "stdout": "{\"ok\": true, \"checks\": 14, \"errors\": 0, \"dialogs\": 0}\n",
+      "stderr": ""
+    },
+    "r358_pilot_confusable_regression.py": {
+      "returncode": 0,
+      "ok": true,
+      "checks": 10,
+      "tested": 130,
+      "unsafe": 0,
+      "stdout": "{\"ok\": true, \"tested\": 130, \"present_pilot\": 0, \"absent_pilot\": 130, \"checks\": 10, \"unsafe\": 0}\n",
+      "stderr": ""
+    }
+  },
+  "checks": {
+    "R361_all_8831_manifest_entries_present": true,
+    "only_R361_index_modified": true,
+    "parent_R361_index_hash_exact": true,
+    "R362_patch_replayed_identically_from_R361": true,
+    "R331_engine_bytes_unmodified": true,
+    "original_R336_html_unmodified": true,
+    "pilot_catalogue_JS_unchanged": true,
+    "autonomous_file_has_exact_expected_44345_bytes": true,
+    "Chromium_R362_13_checks_PASS": true,
+    "prior_R361_15_checks_replayed": true,
+    "prior_R360_16_checks_replayed": true,
+    "prior_R359_14_checks_replayed": true,
+    "prior_R358_130_no_false_acceptances": true,
+    "prior_R361_results_untouched": true,
+    "no_page_errors_or_unhandled_exception": true,
+    "stable_V227_not_promoted_and_OCR_R305_not_changed": true
+  },
+  "ok": true,
+  "scope": "V2.28 separate test launcher only; no V2.27 main modification",
+  "not_certified": [
+    "Samsung download from new launcher not re-tested physically",
+    "OCR fully offline",
+    "physical reference/manufacturer"
+  ]
+}
