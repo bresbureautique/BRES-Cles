@@ -1,0 +1,32 @@
+{
+  "schema": "bres-r362-package-verification-v1",
+  "milestone": "R362 / CAT-R362",
+  "stable": "V2.27 (GitHub main) preserved, never updated",
+  "packages": [
+    {
+      "file": "BRES_Cles_Mobile_V2_28_CHECKPOINT_R362.zip",
+      "path": "/mnt/data/bres_r362_release/BRES_Cles_Mobile_V2_28_CHECKPOINT_R362.zip",
+      "bytes": 32489192,
+      "sha256": "b02e9ae033ee93c08eaa0feb7b6f55e7737d8228a91fd932bb15f87a8c36c285",
+      "entries": 8844,
+      "files_sha256_verified": 8843,
+      "zip_crc": "PASS",
+      "manifest_sha256": "9dd228ccba2b6269bc5bfbb12682836ef2be176bdbab98f65c47e49b8350e3d4",
+      "worktree_files": 8843,
+      "valid": true
+    },
+    {
+      "file": "BRES_Cles_Catalogue_Audit_CAT_R362.zip",
+      "path": "/mnt/data/bres_r362_release/BRES_Cles_Catalogue_Audit_CAT_R362.zip",
+      "bytes": 3748738,
+      "sha256": "fe844276050f6563ebca7489c2c8528eba46d7d24d893c2e717b71392bc15670",
+      "entries": 1482,
+      "files_sha256_verified": 1481,
+      "zip_crc": "PASS",
+      "manifest_sha256": "9c832ad89a6f63dd134c6048fc061d2819680ce816b68a2029270a1d3dd15ff3",
+      "worktree_files": 1481,
+      "valid": true
+    }
+  ],
+  "both_valid": true
+}
