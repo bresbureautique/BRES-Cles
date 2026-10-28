@@ -1,0 +1,44 @@
+{
+  "schema": "bres-r362-samsung-autonomous-launcher-test-v1",
+  "milestone": "R362",
+  "checks": {
+    "V2_28_TEST_is_separate_not_stable": true,
+    "launcher_uses_a_click_not_sibling_navigation": true,
+    "standalone_includes_exact_R331_engine": true,
+    "original_R336_HTML_still_uses_original_external_engine": true,
+    "expected_samsung_filename": true,
+    "download_bytes_identical_to_standalone": true,
+    "downloaded_HTML_is_single_file_no_external_engine": true,
+    "user_gets_open_from_Mes_fichiers_instructions": true,
+    "no_unwanted_navigation_during_download": true,
+    "standalone_scripts_evaluate_without_errors": true,
+    "benchmark_action_is_present": true,
+    "benchmark_page_declares_unchanged_stable_V227": true,
+    "all_browser_requests_blocked_network_offline": true
+  },
+  "sha256": {
+    "index_R362": "312b5201fea52fd92adc1a87aed592ac2dce7aba3dccab898bd537a694fced00",
+    "standalone_R336": "c8137a381af5c5667af0b5c97d760dc29c9bbcb047ff628968c39991d74e7a1c",
+    "original_R336": "3cda55a92c58a6fa0ec7050f7359e4b7dac5d5f1dd88c67d4dbba6f60c355da2",
+    "original_R331": "a1cfdd1f427175bcf0601a9b9df6b808b578199b03c7bfafac2ca7ac710849e8"
+  },
+  "download": [
+    {
+      "filename": "BRES_Cles_Benchmark_Samsung_R336_AUTONOME.html",
+      "sha256": "c8137a381af5c5667af0b5c97d760dc29c9bbcb047ff628968c39991d74e7a1c",
+      "bytes": 44345
+    }
+  ],
+  "errors": [],
+  "trace": [
+    "error:Failed to load resource: net::ERR_BLOCKED_BY_CLIENT.Inspector",
+    "BRES Clés — Benchmark Samsung R336\nDiagnostic uniquement. Ce test ne modifie aucune identification, aucun score ni le catalogue. La règle active reste R305 et V2.27 reste la version stable.\nPré-contrôle du téléphone : pré-requis manquant ou moteur différent\nAndroid : oui • indice Samsung : oui • page visible : oui • empreinte moteur : NON CONFORME • modèle : non exposé\nSHA moteur mémoire : indispo"
+  ],
+  "scope": "offline Chromium; Android actual content URI can differ",
+  "physical_Samsung_download_retest": false,
+  "prior_R336_user_screenshot": {
+    "reported": "PASS local R336; 192/192 comparisons; engine fingerprint conforms",
+    "receipt_json": "not supplied"
+  },
+  "ok": true
+}
