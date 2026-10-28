@@ -1,0 +1,396 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BRES Clés — Benchmark Samsung R336</title>
+<style>body{font-family:Arial,sans-serif;margin:0;background:#f4f6f8;color:#17202a}main{max-width:780px;margin:auto;padding:18px}.card{background:#fff;border-radius:12px;padding:16px;margin:12px 0;box-shadow:0 1px 5px #0002}.btn{display:inline-block;border:0;border-radius:9px;padding:12px 16px;background:#1f6feb;color:#fff;font-weight:700;font-size:16px;margin:4px 2px}.btn.alt{background:#57606a}.btn:disabled{opacity:.5}.ok{border-left:5px solid #2da44e}.bad{border-left:5px solid #cf222e}.warn{border-left:5px solid #bf8700}pre{white-space:pre-wrap;word-break:break-word;font-size:12px;background:#f6f8fa;padding:12px;border-radius:8px}.small{font-size:13px;color:#57606a}.mono{font-family:monospace;word-break:break-all}</style></head><body><main>
+<h1>BRES Clés — Benchmark Samsung R336</h1>
+<div class="card warn"><b>Diagnostic uniquement.</b> Ce test ne modifie aucune identification, aucun score ni le catalogue. La règle active reste R305 et V2.27 reste la version stable.</div>
+<div class="card" id="preflight"><b>Pré-contrôle du téléphone :</b> en cours…</div>
+<div class="card"><p>R336 conserve l’empreinte exacte du moteur R331 et ajoute un contrôle de chronologie : début, création du résultat, fin et durée monotone doivent rester cohérents. Le test reste purement diagnostique.</p><button class="btn" id="run">Lancer le benchmark</button> <button class="btn" id="save" disabled>Enregistrer le résultat</button> <button class="btn alt" id="copy" disabled>Copier le résultat</button><p class="small">Protocole inchangé : 2 préchauffages + 7 répétitions en ordre alterné, sur 24 échantillons / 192 comparaisons. Aucune activation automatique n'est possible.</p></div>
+<div class="card" id="status">Prêt.</div><div class="card" id="receipt"><b>Reçu local :</b> aucun résultat pour l'instant.</div><pre id="out"></pre>
+<script>
+/* BRES Clés R331 — benchmark Samsung à ordre alterné. Diagnostic uniquement; aucune influence sur le classement ou la décision. */
+(function(root){
+function componentsBinary(data,w,h,mask,step=1,captureContinuityR303=false){
+ const seen=new Uint8Array(w*h), comps=[];
+ const dirs=[[1,0],[-1,0],[0,1],[0,-1]];
+ for(let y=0;y<h;y+=step) for(let x=0;x<w;x+=step){
+  let p=y*w+x;if(!mask[p]||seen[p])continue;
+  let q=[p], qi=0; seen[p]=1; let n=0,sx=0,sy=0,minx=x,maxx=x,miny=y,maxy=y;
+  const colCountsR303=captureContinuityR303?new Map():null;
+  while(qi<q.length){
+   let a=q[qi++], ay=Math.floor(a/w), ax=a-ay*w;n++;sx+=ax;sy+=ay;
+   if(colCountsR303)colCountsR303.set(ax,(colCountsR303.get(ax)||0)+1);
+   if(ax<minx)minx=ax;if(ax>maxx)maxx=ax;if(ay<miny)miny=ay;if(ay>maxy)maxy=ay;
+   for(const [dx,dy] of dirs){let nx=ax+dx,ny=ay+dy;if(nx<0||ny<0||nx>=w||ny>=h)continue;let np=ny*w+nx;if(mask[np]&&!seen[np]){seen[np]=1;q.push(np)}}
+  }
+  if(n>15){
+   const o={n,cx:sx/n,cy:sy/n,minx,maxx,miny,maxy,w:maxx-minx+1,h:maxy-miny+1,seed:p};
+   if(colCountsR303){
+    const bw=o.w,bh=o.h,strongMin=Math.max(3,Math.ceil(bh*.08));
+    let occupied=0,strong=0,sumFill=0,maxWeakRun=0,weakRun=0;
+    for(let xx=minx;xx<=maxx;xx++){
+     const cn=colCountsR303.get(xx)||0;
+     if(cn>0)occupied++;sumFill+=cn/bh;
+     if(cn>=strongMin){strong++;weakRun=0}else{weakRun++;if(weakRun>maxWeakRun)maxWeakRun=weakRun}
+    }
+    o.kexactContinuityCachedR303={valid:true,source:'componentsBinary-pass',pixelCount:n,componentPixelCountMatches:true,metrics:{strongMinPixels:strongMin,occupiedColumnRatio:occupied/bw,strongColumnRatio:strong/bw,meanColumnFill:sumFill/bw,maxWeakRunColumns:maxWeakRun,maxWeakRunRatio:maxWeakRun/bw}};
+   }
+   comps.push(o);
+  }
+ }
+ return comps;
+}
+function keyComponentContinuityRankFactorR295(m){
+ if(!m || !Number.isFinite(m.occupiedColumnRatio) || !Number.isFinite(m.strongColumnRatio) || !Number.isFinite(m.maxWeakRunRatio)){
+   return {valid:false,scoreFactor:1,occupiedColumnRatio:null,strongColumnRatio:null,maxWeakRunRatio:null};
+ }
+ const occupied=Math.max(0,Math.min(1,m.occupiedColumnRatio));
+ const strong=Math.max(0,Math.min(1,m.strongColumnRatio));
+ const weak=Math.max(0,Math.min(1,m.maxWeakRunRatio));
+ const raw=.90+strong*.06+occupied*.04-weak*.08;
+ const scoreFactor=Math.max(.86,Math.min(1,raw));
+ return {valid:true,scoreFactor,occupiedColumnRatio:occupied,strongColumnRatio:strong,maxWeakRunRatio:weak};
+}
+function keyComponentExactContinuityMetricsR303(mask,w,h,o){
+ const cached=o&&o.kexactContinuityCachedR303;
+ const m=cached&&cached.metrics;
+ const metricsValid=!!m&&['occupiedColumnRatio','strongColumnRatio','meanColumnFill','maxWeakRunRatio'].every(k=>Number.isFinite(m[k]));
+ const countMatch=!!cached&&Number.isFinite(cached.pixelCount)&&(!Number.isFinite(o?.n)||cached.pixelCount===o.n);
+ if(cached&&cached.valid===true&&metricsValid&&countMatch){
+   return {valid:true,source:'cached-component-pass',cacheHit:true,reconstructionPixels:0,pixelCount:cached.pixelCount,componentPixelCountMatches:true,metrics:m};
+ }
+ const rebuilt=keyComponentExactContinuityMetricsR302(mask,w,h,o);
+ return {valid:rebuilt.valid,source:'r302-reconstructed',cacheHit:false,reconstructionPixels:rebuilt.pixelCount||0,pixelCount:rebuilt.pixelCount||0,componentPixelCountMatches:rebuilt.componentPixelCountMatches,metrics:rebuilt.metrics};
+}
+function keyComponentExactContinuityFullSimulationR303(comps,mask,w,h){
+ if(!Array.isArray(comps)||!comps.length)return {valid:false,decisionInfluence:false,candidateCount:0,exactComputedCount:0,allCandidatesExact:false,winnerChangedFromR296:false,simulatedWinnerCandidateIndex:null,activeWinnerExactScore:null,simulatedWinnerExactScore:null,simulatedRunnerUpExactScore:null,simulatedExactMargin:null,cacheHitCount:0,cacheMissCount:0,reconstructionPixels:0,avoidedReconstructionPixels:0,candidates:[]};
+ const rows=[];let reconstructionPixels=0,avoidedReconstructionPixels=0,cacheHitCount=0,cacheMissCount=0;
+ for(let i=0;i<comps.length;i++){
+   const c=comps[i],exact=keyComponentExactContinuityMetricsR303(mask,w,h,c);
+   if(exact.cacheHit){cacheHitCount++;avoidedReconstructionPixels+=exact.pixelCount||0}else{cacheMissCount++;reconstructionPixels+=exact.reconstructionPixels||0}
+   if(!exact.valid||!exact.metrics||!Number.isFinite(c.kbaseScoreR296)){
+     rows.push({candidateIndex:i,valid:false,baseScore:Number.isFinite(c.kbaseScoreR296)?c.kbaseScoreR296:null,activeScore:Number.isFinite(c.kscore)?c.kscore:null,exactFactor:null,exactScore:null,pixelCount:exact.pixelCount||0,componentPixelCountMatches:exact.componentPixelCountMatches,exactSource:exact.source});
+     continue;
+   }
+   const rank=keyComponentContinuityRankFactorR295(exact.metrics),exactScore=c.kbaseScoreR296*rank.scoreFactor;
+   rows.push({candidateIndex:i,valid:true,baseScore:c.kbaseScoreR296,activeScore:Number.isFinite(c.kscore)?c.kscore:null,candidateFactor:Number.isFinite(c.kcontinuityFactorR296)?c.kcontinuityFactorR296:null,exactFactor:rank.scoreFactor,exactScore,pixelCount:exact.pixelCount,componentPixelCountMatches:exact.componentPixelCountMatches,scoreDeltaFromR296:Number.isFinite(c.kscore)?exactScore-c.kscore:null,exactSource:exact.source});
+ }
+ const validRows=rows.filter(x=>x.valid&&Number.isFinite(x.exactScore));
+ const sorted=validRows.slice().sort((a,b)=>(b.exactScore-a.exactScore)||(a.candidateIndex-b.candidateIndex));
+ const winner=sorted[0]||null,runner=sorted[1]||null,active=rows[0]||null;
+ const allCandidatesExact=validRows.length===comps.length;
+ return {valid:allCandidatesExact&&!!winner,decisionInfluence:false,candidateCount:comps.length,exactComputedCount:validRows.length,allCandidatesExact,winnerChangedFromR296:!!winner&&winner.candidateIndex!==0,simulatedWinnerCandidateIndex:winner?winner.candidateIndex:null,activeWinnerExactScore:active&&Number.isFinite(active.exactScore)?active.exactScore:null,simulatedWinnerExactScore:winner?winner.exactScore:null,simulatedRunnerUpExactScore:runner?runner.exactScore:null,simulatedExactMargin:(winner&&runner)?winner.exactScore-runner.exactScore:null,cacheHitCount,cacheMissCount,reconstructionPixels,avoidedReconstructionPixels,candidates:rows};
+}
+function keyComponentExactContinuityRobustnessAuditR309(proofR308,simulationR303){
+ const count=(simulationR303&&Number.isFinite(simulationR303.candidateCount))?Math.max(0,Math.trunc(simulationR303.candidateCount)):0;
+ const rows=simulationR303&&Array.isArray(simulationR303.candidates)?simulationR303.candidates:[];
+ const mapValid=count>0&&rows.length===count&&rows.every((r,i)=>!!r&&r.valid===true&&r.candidateIndex===i&&Number.isFinite(r.exactScore));
+ let scoreScale=0;
+ if(mapValid)for(const r of rows)scoreScale=Math.max(scoreScale,Math.abs(r.exactScore));
+ const relativeBudgetPerCandidate=0.001;
+ const perturbationBudget=Math.max(1e-9,scoreScale*relativeBudgetPerCandidate);
+ const requiredMargin=count<=1?0:2*perturbationBudget;
+ const exactMargin=(simulationR303&&Number.isFinite(simulationR303.simulatedExactMargin))?simulationR303.simulatedExactMargin:null;
+ const proofSufficient=!!(proofR308&&proofR308.valid===true&&proofR308.sufficient===true);
+ const cacheOnly=!!simulationR303&&simulationR303.cacheHitCount===count&&simulationR303.cacheMissCount===0&&simulationR303.reconstructionPixels===0;
+ const winnerPreserved=!!simulationR303&&simulationR303.winnerChangedFromR296!==true&&simulationR303.simulatedWinnerCandidateIndex===0;
+ const worstCaseMargin=count<=1?(winnerPreserved?Infinity:null):(Number.isFinite(exactMargin)?exactMargin-requiredMargin:null);
+ const robust=proofSufficient&&mapValid&&cacheOnly&&winnerPreserved&&(count<=1||(Number.isFinite(worstCaseMargin)&&worstCaseMargin>1e-9));
+ const fragile=proofSufficient&&!robust;
+ const robustnessRatio=(count>1&&Number.isFinite(exactMargin)&&requiredMargin>0)?exactMargin/requiredMargin:(count===1&&robust?Infinity:null);
+ let classification='invalid';
+ if(mapValid){
+   if(!proofSufficient)classification='r308-not-certified';
+   else if(!cacheOnly)classification='cache-incomplete';
+   else if(!winnerPreserved)classification='winner-not-preserved';
+   else if(robust)classification='robust-exact-certified';
+   else classification='fragile-exact-margin';
+ }
+ return {
+   valid:mapValid,
+   decisionInfluence:false,
+   classification,
+   robust,
+   fragile,
+   proofSufficient,
+   cacheOnly,
+   winnerPreserved,
+   candidateCount:count,
+   exactMargin,
+   scoreScale,
+   relativeBudgetPerCandidate,
+   perturbationBudget,
+   requiredMargin,
+   worstCaseMargin:Number.isFinite(worstCaseMargin)?worstCaseMargin:null,
+   robustnessRatio:Number.isFinite(robustnessRatio)?robustnessRatio:null,
+   pixelReconstructionAdded:0
+ };
+}
+function keyComponentExactContinuityRobustnessSensitivityR310(proofR308,simulationR303,auditR309){
+ const count=(simulationR303&&Number.isFinite(simulationR303.candidateCount))?Math.max(0,Math.trunc(simulationR303.candidateCount)):0;
+ const rows=simulationR303&&Array.isArray(simulationR303.candidates)?simulationR303.candidates:[];
+ const mapValid=count>0&&rows.length===count&&rows.every((r,i)=>!!r&&r.valid===true&&r.candidateIndex===i&&Number.isFinite(r.exactScore));
+ let scoreScale=0;
+ if(mapValid)for(const r of rows)scoreScale=Math.max(scoreScale,Math.abs(r.exactScore));
+ const exactMargin=(simulationR303&&Number.isFinite(simulationR303.simulatedExactMargin))?simulationR303.simulatedExactMargin:null;
+ const proofSufficient=!!(proofR308&&proofR308.valid===true&&proofR308.sufficient===true);
+ const cacheOnly=!!simulationR303&&simulationR303.cacheHitCount===count&&simulationR303.cacheMissCount===0&&simulationR303.reconstructionPixels===0;
+ const winnerPreserved=!!simulationR303&&simulationR303.winnerChangedFromR296!==true&&simulationR303.simulatedWinnerCandidateIndex===0;
+ const budgets=[0.0005,0.001,0.0015,0.002];
+ const levels=budgets.map(relativeBudgetPerCandidate=>{
+   const perturbationBudget=Math.max(1e-9,scoreScale*relativeBudgetPerCandidate);
+   const requiredMargin=count<=1?0:2*perturbationBudget;
+   const worstCaseMargin=count<=1?(winnerPreserved?Infinity:null):(Number.isFinite(exactMargin)?exactMargin-requiredMargin:null);
+   const robust=proofSufficient&&mapValid&&cacheOnly&&winnerPreserved&&(count<=1||(Number.isFinite(worstCaseMargin)&&worstCaseMargin>1e-9));
+   return {relativeBudgetPerCandidate,perturbationBudget,requiredMargin,worstCaseMargin:Number.isFinite(worstCaseMargin)?worstCaseMargin:null,robust};
+ });
+ const level050=levels[0],level100=levels[1],level150=levels[2],level200=levels[3];
+ const r309Robust=!!(auditR309&&auditR309.valid===true&&auditR309.robust===true);
+ const r309Consistent=!!auditR309&&auditR309.valid===true&&level100.robust===r309Robust;
+ const boundaryDistanceR309=(count<=1?Infinity:(Number.isFinite(exactMargin)?exactMargin-level100.requiredMargin:null));
+ const nearBoundaryR309=count>1&&Number.isFinite(boundaryDistanceR309)&&Math.abs(boundaryDistanceR309)<=Math.max(1e-9,0.25*level100.requiredMargin);
+ let stabilityBand='invalid';
+ if(mapValid&&proofSufficient&&cacheOnly&&winnerPreserved){
+   if(level200.robust)stabilityBand='robust-at-0.20pct';
+   else if(level150.robust)stabilityBand='robust-at-0.15pct';
+   else if(level100.robust)stabilityBand='robust-at-0.10pct';
+   else if(level050.robust)stabilityBand='robust-at-0.05pct';
+   else stabilityBand='fragile-below-0.05pct';
+ }
+ return {
+   valid:mapValid,
+   decisionInfluence:false,
+   classification:stabilityBand,
+   proofSufficient,
+   cacheOnly,
+   winnerPreserved,
+   candidateCount:count,
+   exactMargin,
+   scoreScale,
+   levels,
+   robustAt050:level050.robust,
+   robustAt100:level100.robust,
+   robustAt150:level150.robust,
+   robustAt200:level200.robust,
+   r309Robust,
+   r309Consistent,
+   boundaryDistanceR309:Number.isFinite(boundaryDistanceR309)?boundaryDistanceR309:null,
+   nearBoundaryR309,
+   pixelReconstructionAdded:0
+ };
+}
+function keyComponentExactContinuityRobustnessBoundaryR311(proofR308,simulationR303,auditR309,sensitivityR310){
+ const count=(simulationR303&&Number.isFinite(simulationR303.candidateCount))?Math.max(0,Math.trunc(simulationR303.candidateCount)):0;
+ const rows=simulationR303&&Array.isArray(simulationR303.candidates)?simulationR303.candidates:[];
+ const mapValid=count>0&&rows.length===count&&rows.every((r,i)=>!!r&&r.valid===true&&r.candidateIndex===i&&Number.isFinite(r.exactScore));
+ let scoreScale=0;
+ if(mapValid)for(const r of rows)scoreScale=Math.max(scoreScale,Math.abs(r.exactScore));
+ const exactMargin=(simulationR303&&Number.isFinite(simulationR303.simulatedExactMargin))?simulationR303.simulatedExactMargin:null;
+ const proofSufficient=!!(proofR308&&proofR308.valid===true&&proofR308.sufficient===true);
+ const cacheOnly=!!simulationR303&&simulationR303.cacheHitCount===count&&simulationR303.cacheMissCount===0&&simulationR303.reconstructionPixels===0;
+ const winnerPreserved=!!simulationR303&&simulationR303.winnerChangedFromR296!==true&&simulationR303.simulatedWinnerCandidateIndex===0;
+ const relativeBudgetPerCandidate=0.001;
+ const perturbationBudget=Math.max(1e-9,scoreScale*relativeBudgetPerCandidate);
+ const requiredMargin=count<=1?0:2*perturbationBudget;
+ const strictEpsilon=1e-9;
+ const decisionBoundary=count<=1?0:requiredMargin+strictEpsilon;
+ const worstCaseMargin=count<=1?(winnerPreserved?Infinity:null):(Number.isFinite(exactMargin)?exactMargin-requiredMargin:null);
+ const boundaryDelta=count<=1?(winnerPreserved?Infinity:null):(Number.isFinite(worstCaseMargin)?worstCaseMargin-strictEpsilon:null);
+ const mathematicallyRobust=proofSufficient&&mapValid&&cacheOnly&&winnerPreserved&&(count<=1||(Number.isFinite(worstCaseMargin)&&worstCaseMargin>strictEpsilon));
+ const r309Robust=!!(auditR309&&auditR309.valid===true&&auditR309.robust===true);
+ const r309Consistent=!!auditR309&&auditR309.valid===true&&mathematicallyRobust===r309Robust;
+ const r310Consistent=!!sensitivityR310&&sensitivityR310.valid===true&&sensitivityR310.robustAt100===r309Robust;
+ const normalizedRequiredMargin=(count>1&&scoreScale>0)?requiredMargin/scoreScale:null;
+ const normalizedExactMargin=(count>1&&scoreScale>0&&Number.isFinite(exactMargin))?exactMargin/scoreScale:null;
+ const boundaryDeltaPpm=(count>1&&scoreScale>0&&Number.isFinite(boundaryDelta))?boundaryDelta/scoreScale*1e6:null;
+ let classification='invalid';
+ if(mapValid){
+   if(!proofSufficient)classification='r308-not-certified';
+   else if(!cacheOnly)classification='cache-incomplete';
+   else if(!winnerPreserved)classification='winner-not-preserved';
+   else if(count<=1)classification='single-candidate';
+   else if(mathematicallyRobust)classification='above-r309-strict-boundary';
+   else classification='at-or-below-r309-strict-boundary';
+ }
+ return {
+   valid:mapValid,
+   decisionInfluence:false,
+   classification,
+   mathematicallyRobust,
+   proofSufficient,
+   cacheOnly,
+   winnerPreserved,
+   candidateCount:count,
+   exactMargin,
+   scoreScale,
+   relativeBudgetPerCandidate,
+   perturbationBudget,
+   requiredMargin,
+   strictEpsilon,
+   decisionBoundary,
+   worstCaseMargin:Number.isFinite(worstCaseMargin)?worstCaseMargin:null,
+   boundaryDelta:Number.isFinite(boundaryDelta)?boundaryDelta:null,
+   boundaryDeltaPpm:Number.isFinite(boundaryDeltaPpm)?boundaryDeltaPpm:null,
+   normalizedRequiredMargin:Number.isFinite(normalizedRequiredMargin)?normalizedRequiredMargin:null,
+   normalizedExactMargin:Number.isFinite(normalizedExactMargin)?normalizedExactMargin:null,
+   r309Robust,
+   r309Consistent,
+   r310Consistent,
+   pixelReconstructionAdded:0
+ };
+}
+
+function put(mask,w,h,x,y){if(x>=0&&y>=0&&x<w&&y<h)mask[y*w+x]=1}
+function rect(mask,w,h,x0,x1,y0,y1){for(let y=y0;y<=y1;y++)for(let x=x0;x<=x1;x++)put(mask,w,h,x,y)}
+function line(mask,w,h,x0,x1,y){for(let x=x0;x<=x1;x++)put(mask,w,h,x,y)}
+function shape(mask,w,h,x0,y0,bodyLen,bodyThick,tailLen,tailOffset){rect(mask,w,h,x0,x0+bodyLen-1,y0,y0+bodyThick-1);const ty=y0+Math.max(1,Math.min(bodyThick-2,tailOffset));line(mask,w,h,x0+bodyLen,x0+bodyLen+tailLen-1,ty)}
+function morph(mask,w,h,mode){
+ const out=new Uint8Array(mask.length);
+ if(mode==='erode-1px'){for(let y=0;y<h;y++)for(let x=0;x<w;x++)if(mask[y*w+x]){let ok=true;for(const [dx,dy] of [[1,0],[-1,0],[0,1],[0,-1]]){const nx=x+dx,ny=y+dy;if(nx<0||ny<0||nx>=w||ny>=h||!mask[ny*w+nx]){ok=false;break}}if(ok)out[y*w+x]=1}return out}
+ if(mode==='edge-cut-p0'||mode==='edge-cut-p1'||mode==='edge-cut-p2'){out.set(mask);for(let y=1;y<h-1;y++)for(let x=1;x<w-1;x++)if(mask[y*w+x]){let hit=false;if(mode==='edge-cut-p0')hit=((2*x+y)%13===0);else if(mode==='edge-cut-p1')hit=((2*x+y+6)%13===0);else hit=((3*x+2*y+4)%17===0);if(hit){const up=mask[(y-1)*w+x],dn=mask[(y+1)*w+x];if(!up||!dn)out[y*w+x]=0}}return out}
+ throw new Error(mode)
+}
+function baseFor(mask,w,h,bases){
+ const spatial=componentsBinary(null,w,h,mask,1,true).sort((a,b)=>a.minx-b.minx);if(spatial.length!==bases.length)return {valid:false};
+ for(let i=0;i<spatial.length;i++){const c=spatial[i],cached=c.kexactContinuityCachedR303;c.kbaseScoreR296=bases[i];c.kscore=bases[i];c.kcontinuityFactorR296=1;c.kcontinuityMetricsR296=cached&&cached.metrics?cached.metrics:null;c._spatial=i}
+ const comps=spatial.slice().sort((a,b)=>(b.kscore-a.kscore)||(a.minx-b.minx));const sim=keyComponentExactContinuityFullSimulationR303(comps,mask,w,h);return {valid:sim.valid,sim,spatial,sortedSpatial:comps.map(c=>c._spatial)}
+}
+function simFor(mask,w,h,bases){const b=baseFor(mask,w,h,bases);return b.valid?b.sim:{valid:false}}
+const modes=['erode-1px','edge-cut-p0','edge-cut-p1','edge-cut-p2'];
+function keepPixel(mask,w,h,x,y,mode){
+ const p=y*w+x;if(!mask[p])return false;
+ if(mode==='erode-1px')return x>0&&y>0&&x<w-1&&y<h-1&&mask[p-1]&&mask[p+1]&&mask[p-w]&&mask[p+w];
+ let hit=false;if(mode==='edge-cut-p0')hit=((2*x+y)%13===0);else if(mode==='edge-cut-p1')hit=((2*x+y+6)%13===0);else hit=((3*x+2*y+4)%17===0);
+ if(!hit)return true;const up=(y>0&&mask[p-w]),dn=(y<h-1&&mask[p+w]);return !!(up&&dn)
+}
+function projectedComponent(mask,w,h,c,mode){
+ const bw0=c.w,bh0=c.h,local=new Uint8Array(bw0*bh0);
+ for(let y=c.miny;y<=c.maxy;y++)for(let x=c.minx;x<=c.maxx;x++)if(mask[y*w+x]&&keepPixel(mask,w,h,x,y,mode))local[(y-c.miny)*bw0+(x-c.minx)]=1;
+ const seen=new Uint8Array(local.length),children=[],dirs=[[1,0],[-1,0],[0,1],[0,-1]];
+ for(let ly=0;ly<bh0;ly++)for(let lx=0;lx<bw0;lx++){
+   const seed=ly*bw0+lx;if(!local[seed]||seen[seed])continue;let q=[seed],qi=0;seen[seed]=1;let n=0,minx=lx,maxx=lx,miny=ly,maxy=ly,col=new Map();
+   while(qi<q.length){const a=q[qi++],ay=Math.floor(a/bw0),ax=a-ay*bw0;n++;col.set(ax,(col.get(ax)||0)+1);if(ax<minx)minx=ax;if(ax>maxx)maxx=ax;if(ay<miny)miny=ay;if(ay>maxy)maxy=ay;for(const [dx,dy] of dirs){const nx=ax+dx,ny=ay+dy;if(nx<0||ny<0||nx>=bw0||ny>=bh0)continue;const np=ny*bw0+nx;if(local[np]&&!seen[np]){seen[np]=1;q.push(np)}}}
+   if(n>15)children.push({n,minx,maxx,miny,maxy,col});
+ }
+ if(children.length!==1)return {valid:false,reason:'projected-child-count-'+children.length};
+ const z=children[0],bw=z.maxx-z.minx+1,bh=z.maxy-z.miny+1,strongMin=Math.max(3,Math.ceil(bh*.08));let occupied=0,strong=0,sumFill=0,maxWeakRun=0,weakRun=0;
+ for(let j=z.minx;j<=z.maxx;j++){const cn=z.col.get(j)||0;if(cn>0)occupied++;sumFill+=cn/bh;if(cn>=strongMin){strong++;weakRun=0}else{weakRun++;if(weakRun>maxWeakRun)maxWeakRun=weakRun}}
+ const metrics={strongMinPixels:strongMin,occupiedColumnRatio:occupied/bw,strongColumnRatio:strong/bw,meanColumnFill:sumFill/bw,maxWeakRunColumns:maxWeakRun,maxWeakRunRatio:maxWeakRun/bw};
+ const rank=keyComponentContinuityRankFactorR295(metrics);return {valid:true,n:z.n,bw,bh,metrics,factor:rank.scoreFactor}
+}
+function oracleComponentLocal(mask,w,h,c,mode){
+ const bw0=c.w,bh0=c.h,local=new Uint8Array(bw0*bh0);
+ for(let y=c.miny;y<=c.maxy;y++)for(let x=c.minx;x<=c.maxx;x++)if(mask[y*w+x]&&keepPixel(mask,w,h,x,y,mode))local[(y-c.miny)*bw0+(x-c.minx)]=1;
+ const cs=componentsBinary(null,bw0,bh0,local,1,true);
+ if(cs.length!==1)return {valid:false,reason:'oracle-child-count-'+cs.length};
+ const child=cs[0],cached=child.kexactContinuityCachedR303,metrics=cached&&cached.metrics;
+ if(!metrics)return {valid:false,reason:'oracle-metrics-missing'};
+ const rank=keyComponentContinuityRankFactorR295(metrics);return {valid:rank.valid===true,factor:rank.scoreFactor,metrics,n:child.n,bw:child.w,bh:child.h}
+}
+function safeFromComponents(base,mask,w,h,bases,mode,kind){
+ if(!base.valid||base.sortedSpatial.length!==bases.length)return false;const rows=[];
+ for(let i=0;i<base.spatial.length;i++){const p=kind==='oracle'?oracleComponentLocal(mask,w,h,base.spatial[i],mode):projectedComponent(mask,w,h,base.spatial[i],mode);if(!p.valid)return false;rows.push({spatial:i,score:bases[i]*p.factor})}
+ rows.sort((a,b)=>(b.score-a.score)||(a.spatial-b.spatial));return rows[0].spatial===base.sortedSpatial[0]
+}
+function prep(cfg,ratio){
+ const w=360,h=128,m=new Uint8Array(w*h);shape(m,w,h,12,cfg.y1,cfg.body1,cfg.thick1,cfg.tail1,cfg.off1);shape(m,w,h,205,cfg.y2,cfg.body2,cfg.thick2,cfg.tail2,cfg.off2);const bases=[1000,1000*ratio];
+ const base=baseFor(m,w,h,bases);if(!base.valid)return {valid:false};const proof={valid:true,sufficient:base.sim.winnerChangedFromR296!==true&&(base.sim.candidateCount===1||base.sim.simulatedExactMargin>1e-9)};const audit=keyComponentExactContinuityRobustnessAuditR309(proof,base.sim),sensitivity=keyComponentExactContinuityRobustnessSensitivityR310(proof,base.sim,audit),boundary=keyComponentExactContinuityRobustnessBoundaryR311(proof,base.sim,audit,sensitivity);
+ return {valid:true,w,h,m,bases,base,r311:boundary.mathematicallyRobust}
+}
+function swapped(cfg){return {body1:cfg.body2,thick1:cfg.thick2,tail1:cfg.tail2,off1:cfg.off2,y1:cfg.y2,body2:cfg.body1,thick2:cfg.thick1,tail2:cfg.tail1,off2:cfg.off1,y2:cfg.y1,profile:cfg.profile,set:cfg.set}}
+function pair(cfg,r,doFull){
+ const a=prep(cfg,r),b=prep(swapped(cfg),1/r);if(!a.valid||!b.valid)return {valid:false};if(!(a.r311&&b.r311))return {valid:true,r311:false};
+ const oracle={},projected={},full={};let bboxVisits=0,oracleVisits=0;
+ for(const z of [a,b]){const bboxArea=z.base.spatial.reduce((v,c)=>v+c.w*c.h,0);bboxVisits+=modes.length*2*bboxArea;oracleVisits+=modes.length*2*z.w*z.h}
+ for(const mode of modes){
+   oracle[mode]=safeFromComponents(a.base,a.m,a.w,a.h,a.bases,mode,'oracle')&&safeFromComponents(b.base,b.m,b.w,b.h,b.bases,mode,'oracle');
+   projected[mode]=safeFromComponents(a.base,a.m,a.w,a.h,a.bases,mode,'projected')&&safeFromComponents(b.base,b.m,b.w,b.h,b.bases,mode,'projected');
+   if(doFull){const sa=simFor(morph(a.m,a.w,a.h,mode),a.w,a.h,a.bases),sb=simFor(morph(b.m,b.w,b.h,mode),b.w,b.h,b.bases);full[mode]=sa.valid&&sb.valid&&sa.simulatedWinnerCandidateIndex===a.base.sim.simulatedWinnerCandidateIndex&&sb.simulatedWinnerCandidateIndex===b.base.sim.simulatedWinnerCandidateIndex}
+ }
+ return {valid:true,r311:true,oracle,projected,full,bboxVisits,oracleVisits}
+}
+function offFor(thick,profile){const c=Math.floor(thick/2),top=1,bot=Math.max(1,thick-2);if(profile==='top')return top;if(profile==='bottom')return bot;return c}
+const bodies=[24,32,40],thicks=[4,6,8],tails=[8,14,20],trainYs=[[10,50],[18,58]],trainRatios=[0.975,0.98,0.985,1.015,1.02,1.025],holdYs=[[14,54]],holdRatios=[0.98,0.985,1.015,1.02];
+function configs(profile,ys,set){const out=[];for(const body1 of bodies)for(const body2 of bodies)for(const thick1 of thicks)for(const thick2 of thicks)for(const tail1 of tails)for(const tail2 of tails)for(const [y1,y2] of ys)out.push({body1,body2,thick1,thick2,tail1,tail2,off1:offFor(thick1,profile),off2:offFor(thick2,profile),y1,y2,profile,set});return out}
+const groups=[{name:'train-center',cfgs:configs('center',trainYs,'train'),ratios:trainRatios},{name:'holdout-top',cfgs:configs('top',holdYs,'holdout'),ratios:holdRatios},{name:'holdout-bottom',cfgs:configs('bottom',holdYs,'holdout'),ratios:holdRatios}];
+
+function baseRankMap(base){const m=new Map();for(let r=0;r<base.sortedSpatial.length;r++)m.set(base.sortedSpatial[r],r);return m}
+function safeFromComponentsR327(base,mask,w,h,bases,mode,kind){
+ if(!base.valid||base.sortedSpatial.length!==bases.length)return false;const rows=[],rankMap=baseRankMap(base);
+ for(let i=0;i<base.spatial.length;i++){const p=kind==='oracle'?oracleComponentLocal(mask,w,h,base.spatial[i],mode):projectedComponent(mask,w,h,base.spatial[i],mode);if(!p.valid)return false;rows.push({spatial:i,score:bases[i]*p.factor,baseRank:rankMap.get(i)})}
+ rows.sort((a,b)=>(b.score-a.score)||(a.baseRank-b.baseRank)||(a.spatial-b.spatial));return rows[0].spatial===base.sortedSpatial[0]
+}
+function pairR327(cfg,r,doFull){
+ const a=prep(cfg,r),b=prep(swapped(cfg),1/r);if(!a.valid||!b.valid)return {valid:false};if(!(a.r311&&b.r311))return {valid:true,r311:false};
+ const old={},oracle={},projected={},full={};let bboxVisits=0,canvasVisits=0;
+ for(const z of [a,b]){const bboxArea=z.base.spatial.reduce((v,c)=>v+c.w*c.h,0);bboxVisits+=modes.length*2*bboxArea;canvasVisits+=modes.length*2*z.w*z.h}
+ for(const mode of modes){
+   old[mode]=safeFromComponents(a.base,a.m,a.w,a.h,a.bases,mode,'projected')&&safeFromComponents(b.base,b.m,b.w,b.h,b.bases,mode,'projected');
+   oracle[mode]=safeFromComponentsR327(a.base,a.m,a.w,a.h,a.bases,mode,'oracle')&&safeFromComponentsR327(b.base,b.m,b.w,b.h,b.bases,mode,'oracle');
+   projected[mode]=safeFromComponentsR327(a.base,a.m,a.w,a.h,a.bases,mode,'projected')&&safeFromComponentsR327(b.base,b.m,b.w,b.h,b.bases,mode,'projected');
+   if(doFull){const sa=simFor(morph(a.m,a.w,a.h,mode),a.w,a.h,a.bases),sb=simFor(morph(b.m,b.w,b.h,mode),b.w,b.h,b.bases);full[mode]=sa.valid&&sb.valid&&sa.simulatedWinnerCandidateIndex===a.base.sim.simulatedWinnerCandidateIndex&&sb.simulatedWinnerCandidateIndex===b.base.sim.simulatedWinnerCandidateIndex}
+ }
+ return {valid:true,r311:true,a,b,old,oracle,projected,full,bboxVisits,canvasVisits}
+}
+
+function median(a){const z=a.slice().sort((x,y)=>x-y),n=z.length;return n%2?z[(n-1)>>1]:(z[n/2-1]+z[n/2])/2}
+function collectDeviceSamples(perGroup){const out=[];for(const g of groups){let got=0;outer:for(const cfg of g.cfgs){for(const ratio of g.ratios){const x=pairR327(cfg,ratio,false);if(x.valid&&x.r311){out.push({group:g.name,cfg,ratio,a:x.a,b:x.b});got++;if(got>=perGroup)break outer;}}}}return out}
+function localCount(samples){let n=0;for(const s of samples)for(const mode of modes){n+=safeFromComponentsR327(s.a.base,s.a.m,s.a.w,s.a.h,s.a.bases,mode,'projected')?1:0;n+=safeFromComponentsR327(s.b.base,s.b.m,s.b.w,s.b.h,s.b.bases,mode,'projected')?1:0}return n}
+function fullCount(samples){let n=0;for(const s of samples)for(const mode of modes)for(const z of [s.a,s.b]){const sm=simFor(morph(z.m,z.w,z.h,mode),z.w,z.h,z.bases);if(sm.valid&&sm.simulatedWinnerCandidateIndex===z.base.sim.simulatedWinnerCandidateIndex)n++}return n}
+function compareModes(samples){let comparisons=0,disagree=0,falseSafe=0,falseUnsafe=0;const examples=[];for(const s of samples)for(const mode of modes)for(const z of [s.a,s.b]){const p=safeFromComponentsR327(z.base,z.m,z.w,z.h,z.bases,mode,'projected');const sm=simFor(morph(z.m,z.w,z.h,mode),z.w,z.h,z.bases);const f=!!(sm.valid&&sm.simulatedWinnerCandidateIndex===z.base.sim.simulatedWinnerCandidateIndex);comparisons++;if(p!==f){disagree++;if(p&&!f)falseSafe++;if(!p&&f)falseUnsafe++;if(examples.length<8)examples.push({group:s.group,ratio:s.ratio,mode,projected:p,full:f})}}return {comparisons,disagree,falseSafe,falseUnsafe,examples}}
+function nowMs(){return(root.performance&&typeof root.performance.now==='function')?root.performance.now():Date.now()}
+
+function timeCall(fn){const t=nowMs(),value=fn();return {ms:nowMs()-t,value}}
+function run(opts){
+ opts=opts||{};
+ const perGroup=Math.max(2,Math.min(12,opts.perGroup||8));
+ const reps=Math.max(5,Math.min(9,opts.repetitions||7));
+ const warmups=Math.max(2,Math.min(5,opts.warmups||2));
+ const t0=nowMs(),samples=collectDeviceSamples(perGroup),setupMs=nowMs()-t0,agreement=compareModes(samples);
+ let sink=0;
+ const warmupOrder=[];
+ for(let i=0;i<warmups;i++){
+   const order=(i%2===0)?'local-full':'full-local'; warmupOrder.push(order);
+   if(order==='local-full'){sink+=localCount(samples);sink+=fullCount(samples)}
+   else{sink+=fullCount(samples);sink+=localCount(samples)}
+ }
+ const localMs=[],fullMs=[],pairTimings=[],timingOrder=[];
+ for(let i=0;i<reps;i++){
+   const order=(i%2===0)?'local-full':'full-local'; timingOrder.push(order);
+   let l,f;
+   if(order==='local-full'){
+     l=timeCall(()=>localCount(samples)); sink+=l.value;
+     f=timeCall(()=>fullCount(samples)); sink+=f.value;
+   }else{
+     f=timeCall(()=>fullCount(samples)); sink+=f.value;
+     l=timeCall(()=>localCount(samples)); sink+=l.value;
+   }
+   localMs.push(l.ms);fullMs.push(f.ms);pairTimings.push({iteration:i+1,order,localMs:l.ms,fullMs:f.ms});
+ }
+ const localMedianMs=median(localMs),fullMedianMs=median(fullMs),speedup=localMedianMs>0?fullMedianMs/localMedianMs:null;
+ const device={userAgent:(root.navigator&&root.navigator.userAgent)||'node',hardwareConcurrency:(root.navigator&&root.navigator.hardwareConcurrency)||null,deviceMemory:(root.navigator&&root.navigator.deviceMemory)||null,platform:(root.navigator&&root.navigator.platform)||null};
+ const expectedOrder=timingOrder.every((x,i)=>x===((i%2===0)?'local-full':'full-local'));
+ const checks={sampleCoverage:samples.length===perGroup*groups.length,modeAgreement:agreement.disagree===0,zeroFalseSafe:agreement.falseSafe===0,zeroFalseUnsafe:agreement.falseUnsafe===0,warmupExecuted:warmupOrder.length===warmups,benchmarkExecuted:localMs.length===reps&&fullMs.length===reps&&pairTimings.length===reps,orderAlternated:expectedOrder,projectedFaster:Number.isFinite(speedup)&&speedup>1};
+ return {schema:'bres-r331-device-benchmark-v1',milestone:'R331',mode:'diagnostic-only',engine:'V2.28 TEST R156',activeRule:'R305 only',stable:'V2.27 unchanged',createdAt:new Date().toISOString(),device,setupMs,samples:samples.length,modeDirectionOps:samples.length*modes.length*2,warmups,warmupOrder,repetitions:reps,timingOrder,pairTimings,agreement,localMs,fullMs,localMedianMs,fullMedianMs,speedup,sink,checks,ok:checks.sampleCoverage&&checks.modeAgreement&&checks.zeroFalseSafe&&checks.zeroFalseUnsafe&&checks.warmupExecuted&&checks.benchmarkExecuted&&checks.orderAlternated}
+}
+const api={run};root.BRES_R331_BENCH=api;if(typeof module!=='undefined'&&module.exports)module.exports=api;
+})(typeof globalThis!=='undefined'?globalThis:this);
+
+</script><script>
+const EXPECTED={schema:'bres-r331-device-benchmark-v1',milestone:'R331',mode:'diagnostic-only',engine:'V2.28 TEST R156',activeRule:'R305 only',stable:'V2.27 unchanged'};
+const EXPECTED_BENCHMARK_FILE_SHA256='a1cfdd1f427175bcf0601a9b9df6b808b578199b03c7bfafac2ca7ac710849e8';
+const EXPECTED_RUNTIME_RUN_SHA256='cb6ed90da456b42c950ae4b39eb8a59db241319b65b268ecefaa07d7c7dbd04b';
+const EXPECTED_RUNTIME_RUN_LENGTH=2632;
+let last=null,lastText='';
+const run=document.getElementById('run'),save=document.getElementById('save'),copy=document.getElementById('copy'),status=document.getElementById('status'),out=document.getElementById('out'),preflight=document.getElementById('preflight'),receipt=document.getElementById('receipt');
+function esc(x){return String(x==null?'':x).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
+function randHex(n=16){try{const a=new Uint8Array(n);crypto.getRandomValues(a);return Array.from(a).map(x=>x.toString(16).padStart(2,'0')).join('')}catch(e){return 'fallback-'+Date.now().toString(16)+'-'+Math.random().toString(16).slice(2)}}
+async function sha256(text){if(!(crypto&&crypto.subtle))return null;const b=new TextEncoder().encode(text);const h=await crypto.subtle.digest('SHA-256',b);return Array.from(new Uint8Array(h)).map(x=>x.toString(16).padStart(2,'0')).join('');}
+async function runtimeFingerprint(){if(!(window.BRES_R331_BENCH&&typeof window.BRES_R331_BENCH.run==='function'))return {source:null,sha256:null,length:0,ok:false};const source=Function.prototype.toString.call(window.BRES_R331_BENCH.run);const h=await sha256(source);return {source:null,sha256:h,length:source.length,ok:h===EXPECTED_RUNTIME_RUN_SHA256&&source.length===EXPECTED_RUNTIME_RUN_LENGTH};}
+async function deviceEvidence(){const ua=navigator.userAgent||'',uad=navigator.userAgentData||null;let high={};if(uad&&typeof uad.getHighEntropyValues==='function'){try{high=await uad.getHighEntropyValues(['model','platform','platformVersion','architecture','bitness']);}catch(e){high={error:String(e&&e.message?e.message:e)}}}const model=String(high.model||''),platform=String(high.platform||(uad&&uad.platform)||navigator.platform||'');const android=/android/i.test(ua)||/android/i.test(platform),samsung=/(samsung|sm-)/i.test(ua)||/(samsung|sm-)/i.test(model);return {source:'browser-runtime-r334',userAgent:ua,userAgentData:{brands:uad&&uad.brands?uad.brands:null,mobile:uad?uad.mobile:null,platform:uad?uad.platform:null,highEntropy:high},model,platform,android,samsung,visibility:document.visibilityState,secureContext:!!window.isSecureContext,screen:{width:screen.width,height:screen.height,availWidth:screen.availWidth,availHeight:screen.availHeight,pixelRatio:window.devicePixelRatio||1},hardwareConcurrency:navigator.hardwareConcurrency||null,deviceMemory:navigator.deviceMemory||null};}
+async function envCheck(){const ev=await deviceEvidence(),fp=await runtimeFingerprint();const checks={benchmarkLoaded:!!(window.BRES_R331_BENCH&&typeof window.BRES_R331_BENCH.run==='function'),performanceNow:!!(window.performance&&typeof performance.now==='function'),blob:typeof Blob==='function',objectUrl:!!(window.URL&&typeof URL.createObjectURL==='function'),visible:document.visibilityState==='visible',android:ev.android,samsung:ev.samsung,cryptoSha256:!!(crypto&&crypto.subtle),runtimeFingerprint:fp.ok};const critical=checks.benchmarkLoaded&&checks.performanceNow&&checks.blob&&checks.objectUrl&&checks.visible&&checks.android&&checks.cryptoSha256&&checks.runtimeFingerprint;preflight.className='card '+(critical?(checks.samsung?'ok':'warn'):'bad');preflight.innerHTML='<b>Pré-contrôle du téléphone :</b> '+(critical?'moteur exact + Android prêts':'pré-requis manquant ou moteur différent')+'<br><span class="small">Android : '+(checks.android?'oui':'non')+' • indice Samsung : '+(checks.samsung?'oui':'non détecté')+' • page visible : '+(checks.visible?'oui':'non')+' • empreinte moteur : '+(fp.ok?'conforme':'NON CONFORME')+' • modèle : '+esc(ev.model||'non exposé')+'<br>SHA moteur mémoire : <span class="mono">'+esc(fp.sha256||'indisponible')+'</span></span>';run.disabled=!critical;return {evidence:ev,checks,critical,fingerprint:fp};}
+function criticalValidate(d){const errors=[];for(const [k,v] of Object.entries(EXPECTED))if(d&&d[k]!==v)errors.push(k+'_mismatch');const order=['local-full','full-local','local-full','full-local','local-full','full-local','local-full'];if(!d||d.samples!==24)errors.push('samples_invalid');if(!d||d.modeDirectionOps!==192)errors.push('ops_invalid');if(!d||d.warmups!==2)errors.push('warmups_invalid');if(!d||d.repetitions!==7)errors.push('repetitions_invalid');if(!d||JSON.stringify(d.timingOrder)!==JSON.stringify(order))errors.push('order_invalid');if(!d||!d.agreement||d.agreement.comparisons!==192)errors.push('comparisons_invalid');if(!d||!d.agreement||d.agreement.disagree!==0)errors.push('disagree_nonzero');if(!d||!d.agreement||d.agreement.falseSafe!==0)errors.push('false_safe_nonzero');if(!d||!d.agreement||d.agreement.falseUnsafe!==0)errors.push('false_unsafe_nonzero');if(!d||d.ok!==true)errors.push('benchmark_not_ok');const m=d&&d.r334Meta;if(!m||m.schema!=='bres-r334-device-evidence-v1')errors.push('r334_meta_missing');if(!m||!m.deviceEvidence||m.deviceEvidence.android!==true)errors.push('android_evidence_missing');const ev=m&&m.deviceEvidence,uad=ev&&ev.userAgentData,hi=uad&&uad.highEntropy;if(ev&&hi&&typeof hi==='object'){if(ev.model&&hi.model&&String(ev.model)!==String(hi.model))errors.push('device_model_mismatch');if(ev.platform&&hi.platform&&String(ev.platform)!==String(hi.platform))errors.push('device_platform_mismatch');if(hi.platform&&!/android/i.test(String(hi.platform)))errors.push('high_entropy_platform_not_android')}if(ev&&uad&&uad.platform&&!/android/i.test(String(uad.platform)))errors.push('uad_platform_not_android');if(ev&&uad&&uad.mobile===false)errors.push('uad_mobile_false');if(!m||m.visibilityStart!=='visible'||m.visibilityEnd!=='visible')errors.push('visibility_invalid');if(!m||!(Number.isFinite(m.elapsedMs)&&m.elapsedMs>0))errors.push('elapsed_invalid');const f=d&&d.r335Meta;if(!f||f.schema!=='bres-r335-runtime-fingerprint-v1')errors.push('r335_meta_missing');if(!f||f.benchmarkFileSha256!==EXPECTED_BENCHMARK_FILE_SHA256)errors.push('benchmark_file_hash_invalid');if(!f||f.benchmarkRuntimeRunSha256!==EXPECTED_RUNTIME_RUN_SHA256)errors.push('runtime_hash_invalid');if(!f||f.runtimeRunSourceLength!==EXPECTED_RUNTIME_RUN_LENGTH)errors.push('runtime_length_invalid');const c=d&&d.r336Meta;if(!c||c.schema!=='bres-r336-chronology-v1')errors.push('r336_meta_missing');if(!c||c.milestone!=='R336')errors.push('r336_milestone_invalid');const st=c?Date.parse(c.startedAt):NaN,bt=c?Date.parse(c.benchmarkCreatedAt):NaN,ft=c?Date.parse(c.finishedAt):NaN;if(!(Number.isFinite(st)&&Number.isFinite(bt)&&Number.isFinite(ft)&&st<=bt&&bt<=ft))errors.push('chronology_window_invalid');const wall=(Number.isFinite(st)&&Number.isFinite(ft))?(ft-st):NaN;if(!c||!Number.isFinite(c.wallElapsedMs)||Math.abs(c.wallElapsedMs-wall)>1)errors.push('wall_elapsed_invalid');if(!c||!Number.isFinite(c.monotonicElapsedMs)||!m||Math.abs(c.monotonicElapsedMs-m.elapsedMs)>.1)errors.push('monotonic_elapsed_mismatch');const tol=c&&Number.isFinite(c.driftToleranceMs)?c.driftToleranceMs:NaN;if(!Number.isFinite(tol)||tol<2500)errors.push('drift_tolerance_invalid');if(Number.isFinite(wall)&&c&&Number.isFinite(c.monotonicElapsedMs)&&Number.isFinite(tol)&&Math.abs(wall-c.monotonicElapsedMs)>tol)errors.push('wall_monotonic_drift_high');if(!c||c.chronologyOk!==true)errors.push('chronology_flag_false');return {ok:errors.length===0,errors};}
+async function buildReceipt(d){const v=criticalValidate(d),ev=d&&d.r334Meta?d.r334Meta.deviceEvidence:null,f=d&&d.r335Meta;lastText=JSON.stringify(d,null,2)+'\n';const h=await sha256(lastText),bytes=new TextEncoder().encode(lastText).length,samsung=!!(ev&&ev.samsung);receipt.className='card '+(v.ok?(samsung?'ok':'warn'):'bad');receipt.innerHTML='<b>Reçu local R336 :</b> '+(v.ok?'sécurité/protocole/empreinte cohérents':'résultat rejeté localement')+'<br><span class="small">Android : '+(ev&&ev.android?'oui':'non')+' • indice Samsung : '+(samsung?'oui':'non détecté')+' • moteur : '+(f&&f.benchmarkRuntimeRunSha256===EXPECTED_RUNTIME_RUN_SHA256?'empreinte conforme':'NON CONFORME')+' • session : <span class="mono">'+esc(d&&d.r334Meta?d.r334Meta.runId:'')+'</span> • taille : '+bytes+' octets'+(h?' • SHA-256 résultat : <span class="mono">'+h+'</span>':'')+'</span>'+(v.errors.length?'<br><span class="small">Erreurs : '+v.errors.join(', ')+'</span>':'');save.disabled=!v.ok;copy.disabled=!v.ok;return {validation:v,sha256:h,bytes,samsung};}
+(async()=>{await envCheck()})();
+run.onclick=async()=>{run.disabled=true;save.disabled=true;copy.disabled=true;status.className='card warn';status.textContent='Benchmark en cours…';const pf=await envCheck();if(!pf.critical){status.className='card bad';status.textContent='Pré-contrôle refusé : utilisez le Samsung Android, page visible, avec le moteur R331 exact.';return;}const runId=randHex(16),startedAt=new Date().toISOString(),t0=performance.now(),visibilityStart=document.visibilityState;setTimeout(async()=>{try{last=BRES_R331_BENCH.run({repetitions:7,warmups:2,perGroup:8});const finishedAt=new Date().toISOString(),elapsedMs=performance.now()-t0,ev=await deviceEvidence(),fp=await runtimeFingerprint();last.r334Meta={schema:'bres-r334-device-evidence-v1',milestone:'R334',runId,startedAt,finishedAt,elapsedMs,visibilityStart,visibilityEnd:document.visibilityState,deviceEvidence:ev};last.r335Meta={schema:'bres-r335-runtime-fingerprint-v1',milestone:'R335',fingerprintMethod:'Function.prototype.toString + SHA-256',benchmarkFileSha256:EXPECTED_BENCHMARK_FILE_SHA256,benchmarkRuntimeRunSha256:fp.sha256,runtimeRunSourceLength:fp.length,expectedRuntimeRunSha256:EXPECTED_RUNTIME_RUN_SHA256,expectedRuntimeRunSourceLength:EXPECTED_RUNTIME_RUN_LENGTH,fingerprintOk:fp.ok};const wallElapsedMs=Date.parse(finishedAt)-Date.parse(startedAt),benchmarkCreatedMs=Date.parse(last.createdAt),driftToleranceMs=Math.max(2500,Math.abs(elapsedMs)*.25),chronologyOk=Number.isFinite(wallElapsedMs)&&Number.isFinite(benchmarkCreatedMs)&&Date.parse(startedAt)<=benchmarkCreatedMs&&benchmarkCreatedMs<=Date.parse(finishedAt)&&Math.abs(wallElapsedMs-elapsedMs)<=driftToleranceMs;last.r336Meta={schema:'bres-r336-chronology-v1',milestone:'R336',startedAt,benchmarkCreatedAt:last.createdAt,finishedAt,wallElapsedMs,monotonicElapsedMs:elapsedMs,driftToleranceMs,chronologyOk};out.textContent=JSON.stringify(last,null,2);const r=await buildReceipt(last);status.className='card '+(last.ok&&r.validation.ok?'ok':'bad');status.innerHTML=(last.ok&&r.validation.ok)?('<b>PASS local R336.</b> 192/192 comparaisons sans divergence. Médiane locale '+last.localMedianMs.toFixed(2)+' ms, plein-canvas '+last.fullMedianMs.toFixed(2)+' ms, gain ×'+last.speedup.toFixed(2)+'. Empreinte moteur conforme.'):'<b>À vérifier.</b> Résultat local refusé.';}catch(e){status.className='card bad';status.textContent='Erreur : '+(e&&e.message?e.message:e);out.textContent=String(e&&e.stack?e.stack:e)}finally{const pf2=await envCheck();run.disabled=!pf2.critical}},50)};
+save.onclick=()=>{if(!last||!lastText)return;const blob=new Blob([lastText],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='BRES_Cles_R336_Samsung_Benchmark_Result.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)};
+copy.onclick=async()=>{if(!lastText)return;try{await navigator.clipboard.writeText(lastText);status.className='card ok';status.textContent='Résultat R336 copié dans le presse-papiers.'}catch(e){status.className='card warn';status.textContent='Copie automatique indisponible : utilisez Enregistrer le résultat.'}};
+</script></main></body></html>
