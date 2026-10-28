@@ -1,0 +1,4 @@
+CAT-R362 PASS : 14/14 contrôles.
+393 paires hypothétiques ; 732 références dans 345 groupes de revue.
+68 paires OCR textuelles déjà connues et 325 transpositions de frappe ; zéro nouvelle preuve physique.
+File de revue : {'P1_multiref_OCR_review': 24, 'P3_multiref_typing_review': 12, 'P4_typing_review': 272, 'P2_OCR_review': 37} ; aucune référence fusionnée, aucun fabricant confirmé.
