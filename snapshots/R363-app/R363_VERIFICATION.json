@@ -1,0 +1,89 @@
+{
+  "schema": "bres-r363-app-verification-v1",
+  "milestone": "R363",
+  "parent": "R362",
+  "parent_changed_files": [
+    "index.html"
+  ],
+  "parent_files": 8843,
+  "R363_parent_index_sha256": "f4d080357d57c9f0c0034e63a5544b4c2b4fb8594b10e2988ce84ee4ed24ccb9",
+  "checks": {
+    "R362_archive_sha_matches_parent_manifest": true,
+    "R362_8843_parent_files_present": true,
+    "parent_files_only_index_changed": true,
+    "R363_UI_patch_exact_deterministic": true,
+    "R331_engine_preserved": true,
+    "R336_benchmark_unchanged": true,
+    "R336_autonomous_exact_unchanged": true,
+    "pilot_unchanged": true,
+    "browser_14_checks_PASS": true,
+    "browser_732_references_without_physical_validation": true,
+    "catalogue_393_pair_fixture_not_integrated": true,
+    "independent_CAT_R363_fixture_exact": true,
+    "prior_browser_replays_pass": true,
+    "130_prior_cases_still_safe": true,
+    "no_active_OCR_rule_or_catalogue_change": true,
+    "old_outputs_unchanged": true
+  },
+  "replays": {
+    "r362_samsung_autonomous_launcher_regression.py": {
+      "ok": true,
+      "checks": 13,
+      "expected": 13,
+      "tested": null,
+      "unsafe": 0,
+      "stderr": ""
+    },
+    "r361_thickness_staleness_regression.py": {
+      "ok": true,
+      "checks": 15,
+      "expected": 15,
+      "tested": null,
+      "unsafe": 0,
+      "stderr": ""
+    },
+    "r360_stale_feedback_regression.py": {
+      "ok": true,
+      "checks": 16,
+      "expected": 16,
+      "tested": null,
+      "unsafe": 0,
+      "stderr": ""
+    },
+    "r359_manual_state_transition_regression.py": {
+      "ok": true,
+      "checks": 14,
+      "expected": 14,
+      "tested": null,
+      "unsafe": 0,
+      "stderr": ""
+    },
+    "r358_pilot_confusable_regression.py": {
+      "ok": true,
+      "checks": 10,
+      "expected": 10,
+      "tested": 130,
+      "unsafe": 0,
+      "stderr": ""
+    },
+    "r356_chromium_offline_smoke.py": {
+      "ok": true,
+      "checks": 10,
+      "expected": 10,
+      "tested": null,
+      "unsafe": 0,
+      "stderr": ""
+    }
+  },
+  "new_test": {
+    "returncode": 0,
+    "stdout": "{\"ok\": true, \"checks\": 14, \"failed\": [], \"refs\": 732, \"bad\": 0, \"errors\": []}"
+  },
+  "safe_state": "V2.27 remains stable, V2.28 test R156 unchanged engine; no V3 activation",
+  "limitations": [
+    "Samsung physical benchmark R336 screenshot PASS 192/192, JSON receipt still absent",
+    "No Tesseract worker/wasm/traineddata offline bundle; cannot claim OCR cold offline",
+    "Textual collisions are not actual physical key matches"
+  ],
+  "ok": true
+}
