@@ -1,0 +1,24 @@
+{
+  "schema": "bres-cat-r363-verification-v1",
+  "milestone": "CAT-R363",
+  "parent": "CAT-R362",
+  "parent_files": 1481,
+  "parent_changed_files": [],
+  "script_exit": 0,
+  "script_stdout": "{\"ok\": true, \"checks\": 12, \"pairs\": 393, \"refs\": 732, \"failed\": []}",
+  "checks": {
+    "parent_CAT_R362_1481_files_preserved": true,
+    "parent_CAT_R362_results_unchanged": true,
+    "CAT_R363_script_reproducible_byte_for_byte": true,
+    "new_CAT_R363_all_12_controls_PASS": true,
+    "canonical_5103_refs_remain_unchanged": true,
+    "canonical_10_chunks_exact_hashes": true,
+    "all_393_edges_732_refs_345_groups": true,
+    "68_OCR_prior_plus_325_typing": true,
+    "CSV_same_393_pairs_exact_order": true,
+    "all_marked_not_physically_validated": true,
+    "zero_active_catalogue_or_OCR_change": true
+  },
+  "ok": true,
+  "limits": "No photography or real key measurements; do not merge and do not claim an OCR correction"
+}
