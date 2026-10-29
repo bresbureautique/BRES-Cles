@@ -1,0 +1,49 @@
+{
+  "schema": "bres-r363-ocr-dependency-and-collision-negative-v1",
+  "milestone": "R363",
+  "parent": "R362",
+  "checks": {
+    "test_runtime_V228_not_stable_unchanged": true,
+    "no_remote_OCR_library_cache_cold": true,
+    "offline_readiness_explicit_non_certification": true,
+    "manual_controls_remain_usable": true,
+    "no_photography_no_positive_decision": true,
+    "no_two_photos_OCR_is_refused": true,
+    "all_732_unverified_refs_exercised": true,
+    "all_732_manual_checks_fail_closed_without_geometry": true,
+    "all_393_collision_pairs_covered_by_refs": true,
+    "app_does_not_gain_5103_catalogue_active_entries": true,
+    "library_loaded_does_not_claim_offline_certified": true,
+    "no_browser_JS_exceptions": true,
+    "no_OCR_network_or_real_physical_test_claim": true,
+    "fixture_deterministic_and_separate": true
+  },
+  "check_total": 14,
+  "ok": true,
+  "errors": [],
+  "failed": [],
+  "network_denied": [
+    "https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"
+  ],
+  "source_sha256": {
+    "index": "f4d080357d57c9f0c0034e63a5544b4c2b4fb8594b10e2988ce84ee4ed24ccb9",
+    "pilot_lookup": "433c98851e99bfa116776e13eac95164b4c9c68d7e487763b31548194235fcd1",
+    "test_only_fixture": "059dd68cf5e524a654a53b45d82c51db451f0d89839429d733d8162c411d1410"
+  },
+  "evidence": {
+    "offline_banner": "OCR : moteur Tesseract non chargé. La lecture automatique peut être indisponible (connexion ou ressource distante). Vous pouvez saisir la référence manuellement ; aucune identification n’est validée par ce message.",
+    "all_catalogue_collision_refs": {
+      "total": 732,
+      "notFound": 732,
+      "foundWithoutValidation": 0,
+      "bad": [],
+      "badCount": 0,
+      "last": "RÉFÉRENCE NON VALIDÉECorrigez la référence ou la marque avant de poursuivre."
+    },
+    "loaded_banner": "OCR : bibliothèque Tesseract chargée, mais fonctionnement hors ligne NON certifié. Le worker, le moteur WebAssembly et les données linguistiques peuvent nécessiter Internet. Une lecture OCR ne prouve jamais l’identité physique d’une clé."
+  },
+  "physical_device_used": false,
+  "OCR_executed": false,
+  "full_catalogue_activated": false,
+  "cold_offline_OCR_certified": false
+}
