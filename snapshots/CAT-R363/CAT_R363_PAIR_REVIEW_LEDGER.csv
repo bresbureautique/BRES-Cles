@@ -1,395 +1,394 @@
-<PARSED TEXT FOR SHEET: 1 / 1 TABS
-TAB NAME: CAT_R363_PAIR_REVIEW_LEDGER.csv>index,component,review_priority_NOT_MATCH_CONFIDENCE,reference_a,reference_b,edit_types,already_known_hypothetical_OCR,manufacturer_a_UNVERIFIED,manufacturer_b_UNVERIFIED,same_manufacturer_SOURCE_ONLY,manufacturer_missing_SOURCE_ONLY,review_state,auto_validate
-0,C0037,P4_typing_review,AB1,BA1,adjacent_transposition,False,,BRIGGS & STRATTON,False,True,UNVERIFIED_TEXT_ONLY,False
-1,C0038,P4_typing_review,AB13,AB31,adjacent_transposition,False,,ABUS,False,True,UNVERIFIED_TEXT_ONLY,False
-2,C0039,P4_typing_review,AB14R,AB41R,adjacent_transposition,False,ABUS,ABUS,True,False,UNVERIFIED_TEXT_ONLY,False
-3,C0001,P1_multiref_OCR_review,AB15,AB51,adjacent_transposition,False,ABUS,ABUS,True,False,UNVERIFIED_TEXT_ONLY,False
-4,C0040,P4_typing_review,AB16,AB61,adjacent_transposition,False,ABUS,ABUS,True,False,UNVERIFIED_TEXT_ONLY,False
-5,C0041,P4_typing_review,AB17,AB71,adjacent_transposition,False,,ABUS,False,True,UNVERIFIED_TEXT_ONLY,False
-6,C0042,P4_typing_review,AB18,AB81,adjacent_transposition,False,ABUS,ABUS,True,False,UNVERIFIED_TEXT_ONLY,False
-7,C0043,P4_typing_review,AB19,AB91,adjacent_transposition,False,ABUS,ABUS,True,False,UNVERIFIED_TEXT_ONLY,False
-8,C0044,P4_typing_review,AB23,AB32,adjacent_transposition,False,ABUS,ABSA,False,False,UNVERIFIED_TEXT_ONLY,False
-9,C0045,P4_typing_review,AB27,AB72,adjacent_transposition,False,ABUS,ABUS,True,False,UNVERIFIED_TEXT_ONLY,False
-10,C0046,P4_typing_review,AB3,BA3,adjacent_transposition,False,ABUS,BRIGGS & STRATTON,False,False,UNVERIFIED_TEXT_ONLY,False
-11,C0007,P1_multiref_OCR_review,AB35,AB53,adjacent_transposition,False,,ABUS,False,True,UNVERIFIED_TEXT_ONLY,False
-12,C0047,P4_typing_review,AB39R,AB93R,adjacent_transposition,False,ABUS,ABUS,True,False,UNVERIFIED_TEXT_ONLY,False
-13,C0048,P4_typing_review,AB3R,BA3R,adjacent_transposition,False,ABUS,BRIGGS & STRATTON,False,False,UNVERIFIED_TEXT_ONLY,False
-14,C0049,P4_typing_review,AB4,BA4,adjacent_transposition,False,ABUS,BRIGGS & STRATTON,False,False,UNVERIFIED_TEXT_ONLY,False
-15,C0050,P4_typing_review,AB45,AB54,adjacent_transposition,False,ABUS,ABUS,True,False,UNVERIFIED_TEXT_ONLY,False
-16,C0051,P4_typing_review,AB48,AB84,adjacent_transposition,False,ABUS,ABUS,True,False,UNVERIFIED_TEXT_ONLY,False
-17,C0052,P4_typing_review,AB5,BA5,adjacent_transposition,False,ABUS,BASCO,False,False,UNVERIFIED_TEXT_ONLY,False
-18,C0001,P1_multiref_OCR_review,AB51,ABS1,glyph_confusable,True,ABUS,ABSA,False,False,UNVERIFIED_TEXT_ONLY,False
-19,C0053,P2_OCR_review,AB52,ABS2,glyph_confusable,True,ABUS,ABSA,False,False,UNVERIFIED_TEXT_ONLY,False
-20,C0007,P1_multiref_OCR_review,AB53,ABS3,glyph_confusable,True,ABUS,ABSA,False,False,UNVERIFIED_TEXT_ONLY,False
-21,C0054,P4_typing_review,AB6,BA6,adjacent_transposition,False,ABUS,BRIGGS & STRATTON,False,False,UNVERIFIED_TEXT_ONLY,False
-22,C0055,P4_typing_review,AB67,AB76,adjacent_transposition,False,ABUS,ABUS,True,False,UNVERIFIED_TEXT_ONLY,False
-23,C0056,P4_typing_review,AB7,BA7,adjacent_transposition,False,ABUS,BRIGGS & STRATTON,False,False,UNVERIFIED_TEXT_ONLY,False
-24,C0057,P4_typing_review,AB8,BA8,adjacent_transposition,False,ABUS,BASCO,False,False,UNVERIFIED_TEXT_ONLY,False
-25,C0058,P4_typing_review,AB89,AB98,adjacent_transposition,False,ABUS,ABUS,True,False,UNVERIFIED_TEXT_ONLY,False
-26,C0059,P4_typing_review,AB8R,BA8R,adjacent_transposition,False,ABUS,BASCO,False,False,UNVERIFIED_TEXT_ONLY,False
-27,C0001,P1_multiref_OCR_review,ABS1,BAS1,adjacent_transposition,False,ABSA,BASTA,False,False,UNVERIFIED_TEXT_ONLY,False
-28,C0060,P4_typing_review,AC1,CA1,adjacent_transposition,False,ABC,CITY,False,False,UNVERIFIED_TEXT_ONLY,False
-29,C0061,P4_typing_review,AC2,CA2,adjacent_transposition,False,ABC,ZENITH,False,False,UNVERIFIED_TEXT_ONLY,False
-30,C0062,P4_typing_review,ACR1,CAR1,adjacent_transposition,False,ANCHOR,CARACAL,False,False,UNVERIFIED_TEXT_ONLY,False
-31,C0063,P2_OCR_review,AI1,AL1,glyph_confusable,True,ALIANÇA,AL,False,False,UNVERIFIED_TEXT_ONLY,False
-32,C0064,P4_typing_review,AK2R,AKR2,adjacent_transposition,False,AKS,ANKERSLOT,False,False,UNVERIFIED_TEXT_ONLY,False
-33,C0065,P4_typing_review,ALP1,LAP1,adjacent_transposition,False,ALPHA,LA PORTE,False,False,UNVERIFIED_TEXT_ONLY,False
-34,C0066,P4_typing_review,ALP2,LAP2,adjacent_transposition,False,ALPHA,LA PORTE,False,False,UNVERIFIED_TEXT_ONLY,False
-35,C0067,P4_typing_review,ALP3,LAP3,adjacent_transposition,False,ALPHA,LA PORTE,False,False,UNVERIFIED_TEXT_ONLY,False
-36,C0068,P4_typing_review,ANB1,NAB1,adjacent_transposition,False,ANBO,NABOB,False,False,UNVERIFIED_TEXT_ONLY,False
-37,C0069,P4_typing_review,AS1,SA1,adjacent_transposition,False,CINA,SAMSONITE,False,False,UNVERIFIED_TEXT_ONLY,False
-38,C0070,P4_typing_review,ASN1,SAN1,adjacent_transposition,False,ASIAN,SÄNTIS,False,False,UNVERIFIED_TEXT_ONLY,False
-39,C0071,P4_typing_review,ASS36,ASS63,adjacent_transposition,False,ASSA,ASSA,True,False,UNVERIFIED_TEXT_ONLY,False
-40,C0072,P4_typing_review,ASS45,ASS54,adjacent_transposition,False,ASSA,ASSA,True,False,UNVERIFIED_TEXT_ONLY,False
-41,C0073,P4_typing_review,ASS59,ASS95,adjacent_transposition,False,ASSA,ASSA,True,False,UNVERIFIED_TEXT_ONLY,False
-42,C0074,P4_typing_review,ASS59R,ASS95R,adjacent_transposition,False,ASSA,ASSA,True,False,UNVERIFIED_TEXT_ONLY,False
-43,C0075,P4_typing_review,AVC1,VAC1,adjacent_transposition,False,AVOCET,VACHETTE,False,False,UNVERIFIED_TEXT_ONLY,False
-44,C0076,P4_typing_review,AVC2,VAC2,adjacent_transposition,False,AVOCET,VACHETTE,False,False,UNVERIFIED_TEXT_ONLY,False
-45,C0077,P4_typing_review,AW1,WA1,adjacent_transposition,False,ARROW,WALLY,False,False,UNVERIFIED_TEXT_ONLY,False
-46,C0078,P4_typing_review,AW2,WA2,adjacent_transposition,False,ARROW,WALLY,False,False,UNVERIFIED_TEXT_ONLY,False
-47,C0079,P4_typing_review,AW3,WA3,adjacent_transposition,False,ARROW,WALLY,False,False,UNVERIFIED_TEXT_ONLY,False
-48,C0080,P4_typing_review,AW4,WA4,adjacent_transposition,False,ARROW,WALLY,False,False,UNVERIFIED_TEXT_ONLY,False
-49,C0081,P4_typing_review,AW6,WA6,adjacent_transposition,False,ARROW,WALLY,False,False,UNVERIFIED_TEXT_ONLY,False
-50,C0082,P4_typing_review,AW7,WA7,adjacent_transposition,False,ARROW,WALLY,False,False,UNVERIFIED_TEXT_ONLY,False
-51,C0083,P4_typing_review,AY1,YA1,adjacent_transposition,False,ABLOY,RABBIT,False,False,UNVERIFIED_TEXT_ONLY,False
-52,C0084,P4_typing_review,AY12,AY21,adjacent_transposition,False,ABLOY,ABLOY,True,False,UNVERIFIED_TEXT_ONLY,False
-53,C0002,P3_multiref_typing_review,AY13,AY31,adjacent_transposition,False,ABLOY,ABLOY,True,False,UNVERIFIED_TEXT_ONLY,False
-54,C0002,P3_multiref_typing_review,AY13,YA13,adjacent_transposition,False,ABLOY,YALE (IT),False,False,UNVERIFIED_TEXT_ONLY,False
-55,C0008,P3_multiref_typing_review,AY14,YA14,adjacent_transposition,False,ABLOY,YALE (IT),False,False,UNVERIFIED_TEXT_ONLY,False
-56,C0009,P3_multiref_typing_review,AY15,YA15,adjacent_transposition,False,ABLOY,YALE,False,False,UNVERIFIED_TEXT_ONLY,False
-57,C0010,P3_multiref_typing_review,AY16,YA16,adjacent_transposition,False,ABLOY,YALE,False,False,UNVERIFIED_TEXT_ONLY,False
-58,C0011,P3_multiref_typing_review,AY17,YA17,adjacent_transposition,False,ABLOY,,False,True,UNVERIFIED_TEXT_ONLY,False
-59,C0085,P4_typing_review,AY18,YA18,adjacent_transposition,False,ABLOY,CHICAGO,False,False,UNVERIFIED_TEXT_ONLY,False
-60,C0086,P4_typing_review,AY2,YA2,adjacent_transposition,False,ABLOY,YALE (DE) (GB),False,False,UNVERIFIED_TEXT_ONLY,False
-61,C0087,P4_typing_review,AY20,YA20,adjacent_transposition,False,ABLOY,,False,True,UNVERIFIED_TEXT_ONLY,False
-62,C0012,P3_multiref_typing_review,AY23,YA23,adjacent_transposition,False,ABLOY,YALE,False,False,UNVERIFIED_TEXT_ONLY,False
-63,C0088,P4_typing_review,AY29,YA29,adjacent_transposition,False,ABLOY,YALE,False,False,UNVERIFIED_TEXT_ONLY,False
-64,C0089,P4_typing_review,AY3,YA3,adjacent_transposition,False,ABLOY,YALE,False,False,UNVERIFIED_TEXT_ONLY,False
-65,C0090,P4_typing_review,AY30,YA30,adjacent_transposition,False,ABLOY,YALE,False,False,UNVERIFIED_TEXT_ONLY,False
-66,C0002,P3_multiref_typing_review,AY31,YA31,adjacent_transposition,False,ABLOY,YALE (IT),False,False,UNVERIFIED_TEXT_ONLY,False
-67,C0091,P4_typing_review,AZ2R,ZA2R,adjacent_transposition,False,AZBE,ZANETTI ANGELO,False,False,UNVERIFIED_TEXT_ONLY,False
-68,C0092,P4_typing_review,BAB13,BAB31,adjacent_transposition,False,BAB,BAB,True,False,UNVERIFIED_TEXT_ONLY,False
-69,C0013,P1_multiref_OCR_review,BAI2,BAL2,glyph_confusable,True,BARAS,BAAL,False,False,UNVERIFIED_TEXT_ONLY,False
-70,C0014,P1_multiref_OCR_review,BAI3,BAL3,glyph_confusable,True,BASI,BAAL,False,False,UNVERIFIED_TEXT_ONLY,False
-71,C0093,P4_typing_review,BAL1,BLA1,adjacent_transposition,False,BAAL,BLASER,False,False,UNVERIFIED_TEXT_ONLY,False
-72,C0013,P1_multiref_OCR_review,BAL2,BLA2,adjacent_transposition,False,BAAL,BLASER,False,False,UNVERIFIED_TEXT_ONLY,False
-73,C0014,P1_multiref_OCR_review,BAL3,BLA3,adjacent_transposition,False,BAAL,BLASER,False,False,UNVERIFIED_TEXT_ONLY,False
-74,C0094,P4_typing_review,BAR1R,BRA1R,adjacent_transposition,False,BARAS,BRASIL,False,False,UNVERIFIED_TEXT_ONLY,False
-75,C0095,P4_typing_review,BC1,CB1,adjacent_transposition,False,BABY CLIP,CORBIN (IT),False,False,UNVERIFIED_TEXT_ONLY,False
-76,C0096,P4_typing_review,BC1R,CB1R,adjacent_transposition,False,BABY CLIP,CORBIN (IT),False,False,UNVERIFIED_TEXT_ONLY,False
-77,C0097,P4_typing_review,BD1,DB1,adjacent_transposition,False,BRICARD,DOBLINA,False,False,UNVERIFIED_TEXT_ONLY,False
-78,C0098,P4_typing_review,BD14,BD41,adjacent_transposition,False,BRICARD,BRICARD,True,False,UNVERIFIED_TEXT_ONLY,False
-79,C0099,P4_typing_review,BD16,DB16,adjacent_transposition,False,BRICARD,DOBLINA,False,False,UNVERIFIED_TEXT_ONLY,False
-80,C0100,P4_typing_review,BD17,DB17,adjacent_transposition,False,BRICARD,DOBLINA,False,False,UNVERIFIED_TEXT_ONLY,False
-81,C0101,P4_typing_review,BD2,DB2,adjacent_transposition,False,BRICARD,DOBLINA,False,False,UNVERIFIED_TEXT_ONLY,False
-82,C0102,P4_typing_review,BD2R,DB2R,adjacent_transposition,False,BRICARD,DOBLINA,False,False,UNVERIFIED_TEXT_ONLY,False
-83,C0103,P4_typing_review,BD3,DB3,adjacent_transposition,False,BRICARD,DOBLINA,False,False,UNVERIFIED_TEXT_ONLY,False
-84,C0104,P4_typing_review,BD3R,DB3R,adjacent_transposition,False,BRICARD,DOBLINA,False,False,UNVERIFIED_TEXT_ONLY,False
-85,C0105,P4_typing_review,BD4,DB4,adjacent_transposition,False,BRICARD,DOBLINA,False,False,UNVERIFIED_TEXT_ONLY,False
-86,C0106,P4_typing_review,BD5,DB5,adjacent_transposition,False,BRICARD,DOBLINA,False,False,UNVERIFIED_TEXT_ONLY,False
-87,C0107,P4_typing_review,BG1,GB1,adjacent_transposition,False,BIGLA,GABON,False,False,UNVERIFIED_TEXT_ONLY,False
-88,C0108,P4_typing_review,BK16,BK61,adjacent_transposition,False,BKS,BKS,True,False,UNVERIFIED_TEXT_ONLY,False
-89,C0109,P2_OCR_review,BK3-4,BK34,separator_omission,True,BKS,BKS,True,False,UNVERIFIED_TEXT_ONLY,False
-90,C0110,P4_typing_review,BM1,MB1,adjacent_transposition,False,BANHAM,MONOBLOC,False,False,UNVERIFIED_TEXT_ONLY,False
-91,C0111,P4_typing_review,BRT2,RBT2,adjacent_transposition,False,BERTO,RABBIT,False,False,UNVERIFIED_TEXT_ONLY,False
-92,C0112,P4_typing_review,BS1,SB1,adjacent_transposition,False,BSS,SABI,False,False,UNVERIFIED_TEXT_ONLY,False
-93,C0015,P3_multiref_typing_review,BU1R,BUR1,adjacent_transposition,False,BURAM,BURG,False,False,UNVERIFIED_TEXT_ONLY,False
-94,C0015,P3_multiref_typing_review,BU1R,UB1R,adjacent_transposition,False,BURAM,URBIS,False,False,UNVERIFIED_TEXT_ONLY,False
-95,C0113,P4_typing_review,BUR12,BUR21,adjacent_transposition,False,BURG,BURG,True,False,UNVERIFIED_TEXT_ONLY,False
-96,C0114,P4_typing_review,BUR13,BUR31,adjacent_transposition,False,BURG,BURG,True,False,UNVERIFIED_TEXT_ONLY,False
-97,C0115,P4_typing_review,BUR23,BUR32,adjacent_transposition,False,BURG,BURG,True,False,UNVERIFIED_TEXT_ONLY,False
-98,C0116,P4_typing_review,BUR26,BUR62,adjacent_transposition,False,BURG,BURG,True,False,UNVERIFIED_TEXT_ONLY,False
-99,C0117,P4_typing_review,BUR27,BUR72,adjacent_transposition,False,BURG,BURG,True,False,UNVERIFIED_TEXT_ONLY,False
-100,C0118,P4_typing_review,C1R,CR1,adjacent_transposition,False,C.R.,CLAUSOR,False,False,UNVERIFIED_TEXT_ONLY,False
-101,C0119,P4_typing_review,CB12,CB21,adjacent_transposition,False,CORBIN (US),CORBIN (IT),False,False,UNVERIFIED_TEXT_ONLY,False
-102,C0120,P4_typing_review,CB13,CB31,adjacent_transposition,False,CORBIN (US),CORBIN (IT),False,False,UNVERIFIED_TEXT_ONLY,False
-103,C0121,P4_typing_review,CB14R,CB41R,adjacent_transposition,False,CORBIN (US),CORBIN (US),True,False,UNVERIFIED_TEXT_ONLY,False
-104,C0122,P4_typing_review,CB18,CB81,adjacent_transposition,False,CORBIN (US),CORBIN (IT),False,False,UNVERIFIED_TEXT_ONLY,False
-105,C0123,P2_OCR_review,CB3-OR,CB30R,separator_omission_plus_glyph,True,CORBIN (IT),CORBIN (IT),True,False,UNVERIFIED_TEXT_ONLY,False
-106,C0124,P4_typing_review,CB34R,CB43R,adjacent_transposition,False,CORBIN (US),CORBIN (IT),False,False,UNVERIFIED_TEXT_ONLY,False
-107,C0125,P4_typing_review,CB38,CB83,adjacent_transposition,False,CORBIN (US),CORBIN (IT),False,False,UNVERIFIED_TEXT_ONLY,False
-108,C0126,P2_OCR_review,CB4-OR,CB40R,separator_omission_plus_glyph,True,CORBIN (IT),CORBIN (US),False,False,UNVERIFIED_TEXT_ONLY,False
-109,C0127,P4_typing_review,CB79,CB97,adjacent_transposition,False,CORBIN (IT),CORBIN,False,False,UNVERIFIED_TEXT_ONLY,False
-110,C0128,P2_OCR_review,CB9-OR,CB90R,separator_omission_plus_glyph,True,CORBIN (IT),CORBIN (IT),True,False,UNVERIFIED_TEXT_ONLY,False
-111,C0129,P4_typing_review,CE13,CE31,adjacent_transposition,False,CES,CES,True,False,UNVERIFIED_TEXT_ONLY,False
-112,C0130,P4_typing_review,CE23R,CE32R,adjacent_transposition,False,CES,CES,True,False,UNVERIFIED_TEXT_ONLY,False
-113,C0131,P4_typing_review,CE5,EC5,adjacent_transposition,False,CES,TESA,False,False,UNVERIFIED_TEXT_ONLY,False
-114,C0132,P4_typing_review,CEM1,ECM1,adjacent_transposition,False,CEM,ECM,False,False,UNVERIFIED_TEXT_ONLY,False
-115,C0016,P1_multiref_OCR_review,CI2,CL2,glyph_confusable,True,CASI,CLUM,False,False,UNVERIFIED_TEXT_ONLY,False
-116,C0017,P1_multiref_OCR_review,CI3,CL3,glyph_confusable,True,CASI,CLUM,False,False,UNVERIFIED_TEXT_ONLY,False
-117,C0018,P1_multiref_OCR_review,CI4,CL4,glyph_confusable,True,CASI,CLUM,False,False,UNVERIFIED_TEXT_ONLY,False
-118,C0019,P1_multiref_OCR_review,CI5,CL5,glyph_confusable,True,CASI,CLUM,False,False,UNVERIFIED_TEXT_ONLY,False
-119,C0020,P1_multiref_OCR_review,CIL1,CLI1,adjacent_transposition,True,CILA-GENTILI,CIL LIL,False,False,UNVERIFIED_TEXT_ONLY,False
-120,C0020,P1_multiref_OCR_review,CIL1,CLL1,glyph_confusable,True,CILA-GENTILI,COLL,False,False,UNVERIFIED_TEXT_ONLY,False
-121,C0021,P1_multiref_OCR_review,CIS1,CLS1,glyph_confusable,True,CAS-CISMA,CIELS,False,False,UNVERIFIED_TEXT_ONLY,False
-122,C0021,P1_multiref_OCR_review,CIS1,ICS1,adjacent_transposition,False,CAS-CISMA,ICSA,False,False,UNVERIFIED_TEXT_ONLY,False
-123,C0022,P1_multiref_OCR_review,CIS2,CLS2,glyph_confusable,True,CAS-CISMA,CIELS,False,False,UNVERIFIED_TEXT_ONLY,False
-124,C0022,P1_multiref_OCR_review,CIS2,ICS2,adjacent_transposition,False,CAS-CISMA,ICSA,False,False,UNVERIFIED_TEXT_ONLY,False
-125,C0133,P4_typing_review,CIS2R,ICS2R,adjacent_transposition,False,CAS-CISMA,ICSA,False,False,UNVERIFIED_TEXT_ONLY,False
-126,C0023,P1_multiref_OCR_review,CIS3,CLS3,glyph_confusable,True,CAS-CISMA,CIELS,False,False,UNVERIFIED_TEXT_ONLY,False
-127,C0023,P1_multiref_OCR_review,CIS3,ICS3,adjacent_transposition,False,CAS-CISMA,ICSA,False,False,UNVERIFIED_TEXT_ONLY,False
-128,C0134,P4_typing_review,CIS5,ICS5,adjacent_transposition,False,CAS-CISMA,ICSA,False,False,UNVERIFIED_TEXT_ONLY,False
-129,C0016,P1_multiref_OCR_review,CL2,LC2,adjacent_transposition,False,CLUM,LINCE,False,False,UNVERIFIED_TEXT_ONLY,False
-130,C0017,P1_multiref_OCR_review,CL3,LC3,adjacent_transposition,False,CLUM,LINCE,False,False,UNVERIFIED_TEXT_ONLY,False
-131,C0018,P1_multiref_OCR_review,CL4,LC4,adjacent_transposition,False,CLUM,LINCE,False,False,UNVERIFIED_TEXT_ONLY,False
-132,C0019,P1_multiref_OCR_review,CL5,LC5,adjacent_transposition,False,CLUM,LINCE,False,False,UNVERIFIED_TEXT_ONLY,False
-133,C0020,P1_multiref_OCR_review,CLI1,CLL1,glyph_confusable,True,CIL LIL,COLL,False,False,UNVERIFIED_TEXT_ONLY,False
-134,C0135,P4_typing_review,CM1,MC1,adjacent_transposition,False,CEMA,MCM,False,False,UNVERIFIED_TEXT_ONLY,False
-135,C0136,P4_typing_review,CM1R,MC1R,adjacent_transposition,False,CEMA,MCM,False,False,UNVERIFIED_TEXT_ONLY,False
-136,C0137,P4_typing_review,CM2,MC2,adjacent_transposition,False,GIOBERT,MCM,False,False,UNVERIFIED_TEXT_ONLY,False
-137,C0138,P4_typing_review,CM2R,MC2R,adjacent_transposition,False,GIOBERT,,False,True,UNVERIFIED_TEXT_ONLY,False
-138,C0139,P4_typing_review,CM3,MC3,adjacent_transposition,False,CEMA,MCM,False,False,UNVERIFIED_TEXT_ONLY,False
-139,C0140,P4_typing_review,CM4,MC4,adjacent_transposition,False,CEMA,,False,True,UNVERIFIED_TEXT_ONLY,False
-140,C0141,P4_typing_review,CM4R,MC4R,adjacent_transposition,False,CEMA,MCM,False,False,UNVERIFIED_TEXT_ONLY,False
-141,C0142,P4_typing_review,CO1,OC1,adjacent_transposition,False,COTICO,OMEC,False,False,UNVERIFIED_TEXT_ONLY,False
-142,C0024,P3_multiref_typing_review,CO1R,COR1,adjacent_transposition,False,COTICO,CORONA,False,False,UNVERIFIED_TEXT_ONLY,False
-143,C0024,P3_multiref_typing_review,CO1R,OC1R,adjacent_transposition,False,COTICO,,False,True,UNVERIFIED_TEXT_ONLY,False
-144,C0143,P4_typing_review,CR3R,RC3R,adjacent_transposition,False,CLAUSOR,CINA,False,False,UNVERIFIED_TEXT_ONLY,False
-145,C0144,P4_typing_review,CR5R,RC5R,adjacent_transposition,False,CLAUSOR,CINA,False,False,UNVERIFIED_TEXT_ONLY,False
-146,C0145,P4_typing_review,CS119,CS191,adjacent_transposition,False,CISA,CISA,True,False,UNVERIFIED_TEXT_ONLY,False
-147,C0146,P4_typing_review,CS12,CS21,adjacent_transposition,False,ALA,CISA,False,False,UNVERIFIED_TEXT_ONLY,False
-148,C0147,P4_typing_review,CS12R,CS21R,adjacent_transposition,False,ALA,CISA,False,False,UNVERIFIED_TEXT_ONLY,False
-149,C0148,P4_typing_review,CS13,CS31,adjacent_transposition,False,CISA,CISA,True,False,UNVERIFIED_TEXT_ONLY,False
-150,C0149,P4_typing_review,CS168,CS186,adjacent_transposition,False,CISA,CISA,True,False,UNVERIFIED_TEXT_ONLY,False
-151,C0150,P4_typing_review,CS178,CS187,adjacent_transposition,False,CISA,CISA,True,False,UNVERIFIED_TEXT_ONLY,False
-152,C0151,P4_typing_review,CS23,CS32,adjacent_transposition,False,CISA,BUGA,False,False,UNVERIFIED_TEXT_ONLY,False
-153,C0152,P4_typing_review,CS23R,CS32R,adjacent_transposition,False,CISA,BUGA,False,False,UNVERIFIED_TEXT_ONLY,False
-154,C0153,P4_typing_review,CS24,CS42,adjacent_transposition,False,CISA,CISA,True,False,UNVERIFIED_TEXT_ONLY,False
-155,C0154,P4_typing_review,CS26,CS62,adjacent_transposition,False,CISA,CISA,True,False,UNVERIFIED_TEXT_ONLY,False
-156,C0155,P4_typing_review,CT1,TC1,adjacent_transposition,False,CRISTANI,TICINO,False,False,UNVERIFIED_TEXT_ONLY,False
-157,C0156,P4_typing_review,CT1R,TC1R,adjacent_transposition,False,CRISTANI,TICINO,False,False,UNVERIFIED_TEXT_ONLY,False
-158,C0157,P4_typing_review,CV1,VC1,adjacent_transposition,False,CANDAVEN CV,VECO,False,False,UNVERIFIED_TEXT_ONLY,False
-159,C0158,P4_typing_review,CW1,WC1,adjacent_transposition,False,CROWN,WHITCO,False,False,UNVERIFIED_TEXT_ONLY,False
-160,C0025,P3_multiref_typing_review,DCR1,DRC1,adjacent_transposition,False,DOUBLE CIRCLE,DORIC,False,False,UNVERIFIED_TEXT_ONLY,False
-161,C0159,P4_typing_review,DM11,MD11,adjacent_transposition,False,DOM,MEDECO,False,False,UNVERIFIED_TEXT_ONLY,False
-162,C0160,P4_typing_review,DM1R,MD1R,adjacent_transposition,False,DOM,MEDECO,False,False,UNVERIFIED_TEXT_ONLY,False
-163,C0161,P4_typing_review,DM23,DM32,adjacent_transposition,False,DOM,DOM,True,False,UNVERIFIED_TEXT_ONLY,False
-164,C0162,P4_typing_review,DM24,DM42,adjacent_transposition,False,DOM,DOM,True,False,UNVERIFIED_TEXT_ONLY,False
-165,C0163,P4_typing_review,DM34,DM43,adjacent_transposition,False,DOM,DOM,True,False,UNVERIFIED_TEXT_ONLY,False
-166,C0164,P4_typing_review,DM4,MD4,adjacent_transposition,False,,MEDECO,False,True,UNVERIFIED_TEXT_ONLY,False
-167,C0165,P4_typing_review,DM49,DM94,adjacent_transposition,False,DOM,DOM,True,False,UNVERIFIED_TEXT_ONLY,False
-168,C0166,P4_typing_review,DM6,MD6,adjacent_transposition,False,DOM,MEDECO,False,False,UNVERIFIED_TEXT_ONLY,False
-169,C0167,P4_typing_review,DM7,MD7,adjacent_transposition,False,,MEDECO,False,True,UNVERIFIED_TEXT_ONLY,False
-170,C0168,P4_typing_review,DM8R,MD8R,adjacent_transposition,False,DOM,MEDECO,False,False,UNVERIFIED_TEXT_ONLY,False
-171,C0169,P4_typing_review,DP1,PD1,adjacent_transposition,False,DUPLOMATIC,PUNDRA,False,False,UNVERIFIED_TEXT_ONLY,False
-172,C0025,P3_multiref_typing_review,DRC1,RDC1,adjacent_transposition,False,DORIC,,False,True,UNVERIFIED_TEXT_ONLY,False
-173,C0170,P4_typing_review,DS1,SD1,adjacent_transposition,False,DOMUS (IT),SIDLEEN,False,False,UNVERIFIED_TEXT_ONLY,False
-174,C0171,P4_typing_review,DS2,SD2,adjacent_transposition,False,DOMUS (IT),SIDLEEN,False,False,UNVERIFIED_TEXT_ONLY,False
-175,C0172,P4_typing_review,DY1,YD1,adjacent_transposition,False,DAIYA,YANMAR,False,False,UNVERIFIED_TEXT_ONLY,False
-176,C0173,P4_typing_review,DY1R,YD1R,adjacent_transposition,False,DAIYA,YARDENI,False,False,UNVERIFIED_TEXT_ONLY,False
-177,C0174,P4_typing_review,EG1,GE1,adjacent_transposition,False,EAGLE,GEGE,False,False,UNVERIFIED_TEXT_ONLY,False
-178,C0175,P4_typing_review,EG2,GE2,adjacent_transposition,False,EAGLE,GEGE,False,False,UNVERIFIED_TEXT_ONLY,False
-179,C0176,P4_typing_review,EG2R,GE2R,adjacent_transposition,False,EAGLE,GEGE,False,False,UNVERIFIED_TEXT_ONLY,False
-180,C0177,P4_typing_review,EK1,KE1,adjacent_transposition,False,EUREKA,KASSEL,False,False,UNVERIFIED_TEXT_ONLY,False
-181,C0178,P4_typing_review,EK2,KE2,adjacent_transposition,False,EUREKA,KESO,False,False,UNVERIFIED_TEXT_ONLY,False
-182,C0179,P4_typing_review,EK3,KE3,adjacent_transposition,False,EUROBOX,KESO,False,False,UNVERIFIED_TEXT_ONLY,False
-183,C0180,P4_typing_review,EK4,KE4,adjacent_transposition,False,EUREKA,KESO,False,False,UNVERIFIED_TEXT_ONLY,False
-184,C0026,P3_multiref_typing_review,EM2R,ME2R,adjacent_transposition,False,EMR,MELSMETALL,False,False,UNVERIFIED_TEXT_ONLY,False
-185,C0181,P4_typing_review,EM3,ME3,adjacent_transposition,False,EMR,MELSMETALL,False,False,UNVERIFIED_TEXT_ONLY,False
-186,C0182,P4_typing_review,EM4,ME4,adjacent_transposition,False,EMR,MELSMETALL,False,False,UNVERIFIED_TEXT_ONLY,False
-187,C0183,P4_typing_review,ES1,SE1,adjacent_transposition,False,ESA,SELECT,False,False,UNVERIFIED_TEXT_ONLY,False
-188,C0184,P4_typing_review,ES1R,SE1R,adjacent_transposition,False,ESA,SELMACH,False,False,UNVERIFIED_TEXT_ONLY,False
-189,C0185,P4_typing_review,ET1,TE1,adjacent_transposition,False,ETNA,TESA,False,False,UNVERIFIED_TEXT_ONLY,False
-190,C0186,P4_typing_review,ET1R,TE1R,adjacent_transposition,False,ETNA,TESA,False,False,UNVERIFIED_TEXT_ONLY,False
-191,C0187,P4_typing_review,EU1R,EUR1,adjacent_transposition,False,EURO LOCKS,EURO PLUS,False,False,UNVERIFIED_TEXT_ONLY,False
-192,C0027,P3_multiref_typing_review,EU2R,EUR2,adjacent_transposition,False,EURO LOCKS,EURO PLUS,False,False,UNVERIFIED_TEXT_ONLY,False
-193,C0027,P3_multiref_typing_review,EU2R,UE2R,adjacent_transposition,False,EURO LOCKS,UEME,False,False,UNVERIFIED_TEXT_ONLY,False
-194,C0188,P4_typing_review,EU4R,UE4R,adjacent_transposition,False,EURO LOCKS,UEME,False,False,UNVERIFIED_TEXT_ONLY,False
-195,C0189,P4_typing_review,EU5R,UE5R,adjacent_transposition,False,EURO LOCKS,UEME,False,False,UNVERIFIED_TEXT_ONLY,False
-196,C0190,P4_typing_review,EZ1,ZE1,adjacent_transposition,False,EZCURRA,ZEISS IKON,False,False,UNVERIFIED_TEXT_ONLY,False
-197,C0191,P4_typing_review,EZ3,ZE3,adjacent_transposition,False,EZCURRA,ZEISS IKON,False,False,UNVERIFIED_TEXT_ONLY,False
-198,C0192,P4_typing_review,EZ4,ZE4,adjacent_transposition,False,EZCURRA,ZEISS IKON,False,False,UNVERIFIED_TEXT_ONLY,False
-199,C0193,P4_typing_review,EZ5,ZE5,adjacent_transposition,False,EZCURRA,ZEISS IKON,False,False,UNVERIFIED_TEXT_ONLY,False
-200,C0194,P4_typing_review,EZ7,ZE7,adjacent_transposition,False,EZCURRA,ZEISS IKON,False,False,UNVERIFIED_TEXT_ONLY,False
-201,C0195,P4_typing_review,FAC13,FAC31,adjacent_transposition,False,,FAC,False,True,UNVERIFIED_TEXT_ONLY,False
-202,C0196,P4_typing_review,FAC1R,FCA1R,adjacent_transposition,False,FAC,FAICA,False,False,UNVERIFIED_TEXT_ONLY,False
-203,C0197,P4_typing_review,FH1R,HF1R,adjacent_transposition,False,,HÄFELE,False,True,UNVERIFIED_TEXT_ONLY,False
-204,C0028,P1_multiref_OCR_review,FI1,IF1,adjacent_transposition,False,FIAM,IES,False,False,UNVERIFIED_TEXT_ONLY,False
-205,C0198,P4_typing_review,FI1R,FIR1,adjacent_transposition,False,FIAM,FIRMADOOR,False,False,UNVERIFIED_TEXT_ONLY,False
-206,C0003,P1_multiref_OCR_review,FI2,FL2,glyph_confusable,True,FIAM,FLORA,False,False,UNVERIFIED_TEXT_ONLY,False
-207,C0003,P1_multiref_OCR_review,FI2,IF2,adjacent_transposition,False,FIAM,IFAM,False,False,UNVERIFIED_TEXT_ONLY,False
-208,C0029,P3_multiref_typing_review,FI3R,FIR3,adjacent_transposition,False,FIAM,FIRST,False,False,UNVERIFIED_TEXT_ONLY,False
-209,C0029,P3_multiref_typing_review,FI3R,IF3R,adjacent_transposition,False,FIAM,IFAM,False,False,UNVERIFIED_TEXT_ONLY,False
-210,C0030,P1_multiref_OCR_review,FI6,IF6,adjacent_transposition,False,FIAM,IFAM,False,False,UNVERIFIED_TEXT_ONLY,False
-211,C0004,P1_multiref_OCR_review,FK1,KF1,adjacent_transposition,False,FLIK,KFV,False,False,UNVERIFIED_TEXT_ONLY,False
-212,C0003,P1_multiref_OCR_review,FL2,LF2,adjacent_transposition,False,FLORA,EURO LOCKS,False,False,UNVERIFIED_TEXT_ONLY,False
-213,C0199,P4_typing_review,FM1,MF1,adjacent_transposition,False,FASEM,MEDECO,False,False,UNVERIFIED_TEXT_ONLY,False
-214,C0200,P4_typing_review,FN1,NF1,adjacent_transposition,False,FAICA,NELFA,False,False,UNVERIFIED_TEXT_ONLY,False
-215,C0201,P4_typing_review,FS1,SF1,adjacent_transposition,False,FAS,SAFE,False,False,UNVERIFIED_TEXT_ONLY,False
-216,C0202,P4_typing_review,GE23,GE32,adjacent_transposition,False,GEGE,GEGE,True,False,UNVERIFIED_TEXT_ONLY,False
-217,C0203,P4_typing_review,GL12R,GL21R,adjacent_transposition,False,GLOBE,GLOBE,True,False,UNVERIFIED_TEXT_ONLY,False
-218,C0204,P4_typing_review,GP1,PG1,adjacent_transposition,False,GIP,PERINO PG,False,False,UNVERIFIED_TEXT_ONLY,False
-219,C0205,P4_typing_review,GS1,SG1,adjacent_transposition,False,GIUSSANI,SHANGHAI,False,False,UNVERIFIED_TEXT_ONLY,False
-220,C0206,P4_typing_review,GT1,TG1,adjacent_transposition,False,GIOBERT,TIGRIS,False,False,UNVERIFIED_TEXT_ONLY,False
-221,C0207,P4_typing_review,GV1,VG1,adjacent_transposition,False,GTV,VING,False,False,UNVERIFIED_TEXT_ONLY,False
-222,C0208,P4_typing_review,GV2,VG2,adjacent_transposition,False,GTV,VING,False,False,UNVERIFIED_TEXT_ONLY,False
-223,C0209,P4_typing_review,GV3,VG3,adjacent_transposition,False,GTV,VING,False,False,UNVERIFIED_TEXT_ONLY,False
-224,C0210,P4_typing_review,H1R,HR1,adjacent_transposition,False,HK,HR,False,False,UNVERIFIED_TEXT_ONLY,False
-225,C0211,P4_typing_review,HM2,MH2,adjacent_transposition,False,HAMA,MICHEL-SEAT,False,False,UNVERIFIED_TEXT_ONLY,False
-226,C0212,P4_typing_review,HM3,MH3,adjacent_transposition,False,HAMA,MICHEL-SEAT,False,False,UNVERIFIED_TEXT_ONLY,False
-227,C0213,P4_typing_review,HW1,WH1,adjacent_transposition,False,HUWIL,WILSON BOHANNON,False,False,UNVERIFIED_TEXT_ONLY,False
-228,C0028,P1_multiref_OCR_review,IF1,LF1,glyph_confusable,True,IES,LOWE & FLETCHER,False,False,UNVERIFIED_TEXT_ONLY,False
-229,C0214,P2_OCR_review,IF14,LF14,glyph_confusable,True,IFAM,LOWE & FLETCHER,False,False,UNVERIFIED_TEXT_ONLY,False
-230,C0031,P1_multiref_OCR_review,IF15R,LF15R,glyph_confusable,True,IFAM,EURO LOCKS,False,False,UNVERIFIED_TEXT_ONLY,False
-231,C0215,P2_OCR_review,IF16,LF16,glyph_confusable,True,IFAM,LOWE & FLETCHER,False,False,UNVERIFIED_TEXT_ONLY,False
-232,C0216,P2_OCR_review,IF17,LF17,glyph_confusable,True,IFAM,LOWE & FLETCHER,False,False,UNVERIFIED_TEXT_ONLY,False
-233,C0003,P1_multiref_OCR_review,IF2,LF2,glyph_confusable,True,IFAM,EURO LOCKS,False,False,UNVERIFIED_TEXT_ONLY,False
-234,C0217,P2_OCR_review,IF3,LF3,glyph_confusable,True,IFAM,LOWE & FLETCHER,False,False,UNVERIFIED_TEXT_ONLY,False
-235,C0030,P1_multiref_OCR_review,IF6,LF6,glyph_confusable,True,IFAM,LOWE & FLETCHER,False,False,UNVERIFIED_TEXT_ONLY,False
-236,C0218,P2_OCR_review,IF7,LF7,glyph_confusable,True,IFAM,EURO LOCKS,False,False,UNVERIFIED_TEXT_ONLY,False
-237,C0219,P2_OCR_review,IF8,LF8,glyph_confusable,True,IFAM,LOWE & FLETCHER,False,False,UNVERIFIED_TEXT_ONLY,False
-238,C0220,P2_OCR_review,IF8R,LF8R,glyph_confusable,True,IFAM,EURO LOCKS,False,False,UNVERIFIED_TEXT_ONLY,False
-239,C0221,P2_OCR_review,IL1,LL1,glyph_confusable,True,ILARGI,LOCKWOOD,False,False,UNVERIFIED_TEXT_ONLY,False
-240,C0222,P4_typing_review,IM1,MI1,adjacent_transposition,False,IMSA,MORI E.,False,False,UNVERIFIED_TEXT_ONLY,False
-241,C0223,P4_typing_review,IM2,MI2,adjacent_transposition,False,IMSA,MORI E.,False,False,UNVERIFIED_TEXT_ONLY,False
-242,C0032,P1_multiref_OCR_review,IM3R,LM3R,glyph_confusable,True,IMSA,LUMA,False,False,UNVERIFIED_TEXT_ONLY,False
-243,C0032,P1_multiref_OCR_review,IM3R,MI3R,adjacent_transposition,False,IMSA,MORI E.,False,False,UNVERIFIED_TEXT_ONLY,False
-244,C0224,P2_OCR_review,IM4R,LM4R,glyph_confusable,True,IMSA,LUMA,False,False,UNVERIFIED_TEXT_ONLY,False
-245,C0225,P4_typing_review,IM5R,MI5R,adjacent_transposition,False,,MORI E.,False,True,UNVERIFIED_TEXT_ONLY,False
-246,C0226,P2_OCR_review,IN1,LN1,glyph_confusable,True,ILLINOIS,LN,False,False,UNVERIFIED_TEXT_ONLY,False
-247,C0005,P1_multiref_OCR_review,IS1,LS1,glyph_confusable,True,IGS,RENZ,False,False,UNVERIFIED_TEXT_ONLY,False
-248,C0005,P1_multiref_OCR_review,IS1,SI1,adjacent_transposition,False,IGS,SOFI-SONAFI,False,False,UNVERIFIED_TEXT_ONLY,False
-249,C0227,P2_OCR_review,IS2,LS2,glyph_confusable,True,IGS,RENZ,False,False,UNVERIFIED_TEXT_ONLY,False
-250,C0006,P1_multiref_OCR_review,IT1,LT1,glyph_confusable,True,INT,BKS,False,False,UNVERIFIED_TEXT_ONLY,False
-251,C0006,P1_multiref_OCR_review,IT1,TI1,adjacent_transposition,False,INT,TIK,False,False,UNVERIFIED_TEXT_ONLY,False
-252,C0033,P1_multiref_OCR_review,IT2,LT2,glyph_confusable,True,INT,LITTO,False,False,UNVERIFIED_TEXT_ONLY,False
-253,C0228,P2_OCR_review,IW1R,LW1R,glyph_confusable,True,IWATA,LOCKWOOD,False,False,UNVERIFIED_TEXT_ONLY,False
-254,C0229,P2_OCR_review,IX1,LX1,glyph_confusable,True,IALEX,LUX,False,False,UNVERIFIED_TEXT_ONLY,False
-255,C0230,P2_OCR_review,IX1R,LX1R,glyph_confusable,True,IALEX,LUX,False,False,UNVERIFIED_TEXT_ONLY,False
-256,C0231,P4_typing_review,JS1R,SJ1R,adjacent_transposition,False,JIS,SJL,False,False,UNVERIFIED_TEXT_ONLY,False
-257,C0232,P4_typing_review,JW1R,WJ1R,adjacent_transposition,False,JUWEL,WANJIN,False,False,UNVERIFIED_TEXT_ONLY,False
-258,C0233,P4_typing_review,KER1,KRE1,adjacent_transposition,False,KEYRACK,KREMENCHUK,False,False,UNVERIFIED_TEXT_ONLY,False
-259,C0004,P1_multiref_OCR_review,KF1,KFI,glyph_confusable,True,KFV,KFV,True,False,UNVERIFIED_TEXT_ONLY,False
-260,C0004,P1_multiref_OCR_review,KF1,KFL,glyph_confusable,True,KFV,KFV,True,False,UNVERIFIED_TEXT_ONLY,False
-261,C0004,P1_multiref_OCR_review,KFI,KFL,glyph_confusable,True,KFV,KFV,True,False,UNVERIFIED_TEXT_ONLY,False
-262,C0234,P4_typing_review,LB23,LB32,adjacent_transposition,False,LÅSBOLAGET,LÅSBOLAGET,True,False,UNVERIFIED_TEXT_ONLY,False
-263,C0031,P1_multiref_OCR_review,LF15R,LF51R,adjacent_transposition,False,EURO LOCKS,LOWE & FLETCHER,False,False,UNVERIFIED_TEXT_ONLY,False
-264,C0235,P4_typing_review,LF16R,LF61R,adjacent_transposition,False,LOWE & FLETCHER,LOWE & FLETCHER,True,False,UNVERIFIED_TEXT_ONLY,False
-265,C0236,P4_typing_review,LF23R,LF32R,adjacent_transposition,False,LOWE & FLETCHER,LOWE & FLETCHER,True,False,UNVERIFIED_TEXT_ONLY,False
-266,C0237,P4_typing_review,LF25,LF52,adjacent_transposition,False,LOWE & FLETCHER,LOWE & FLETCHER,True,False,UNVERIFIED_TEXT_ONLY,False
-267,C0238,P4_typing_review,LF26,LF62,adjacent_transposition,False,EURO LOCKS,LOWE & FLETCHER,False,False,UNVERIFIED_TEXT_ONLY,False
-268,C0239,P4_typing_review,LF35,LF53,adjacent_transposition,False,LOWE & FLETCHER,LOWE & FLETCHER,True,False,UNVERIFIED_TEXT_ONLY,False
-269,C0240,P4_typing_review,LH14P,LH41P,adjacent_transposition,False,LAPERCHE,LAPERCHE,True,False,UNVERIFIED_TEXT_ONLY,False
-270,C0241,P4_typing_review,LH24,LH42,adjacent_transposition,False,LAPERCHE,LAPERCHE,True,False,UNVERIFIED_TEXT_ONLY,False
-271,C0242,P4_typing_review,LP12,LP21,adjacent_transposition,False,LIPS,LIPS,True,False,UNVERIFIED_TEXT_ONLY,False
-272,C0243,P4_typing_review,LP14,LP41,adjacent_transposition,False,LIPS,LIPS,True,False,UNVERIFIED_TEXT_ONLY,False
-273,C0005,P1_multiref_OCR_review,LS1,SL1,adjacent_transposition,False,RENZ,SEGAL,False,False,UNVERIFIED_TEXT_ONLY,False
-274,C0006,P1_multiref_OCR_review,LT1,TL1,adjacent_transposition,False,BKS,TRI-CIRCLE,False,False,UNVERIFIED_TEXT_ONLY,False
-275,C0033,P1_multiref_OCR_review,LT2,TL2,adjacent_transposition,False,LITTO,TRI-CIRCLE,False,False,UNVERIFIED_TEXT_ONLY,False
-276,C0244,P4_typing_review,LT3,TL3,adjacent_transposition,False,LITTO,TRI-CIRCLE,False,False,UNVERIFIED_TEXT_ONLY,False
-277,C0245,P4_typing_review,LT4,TL4,adjacent_transposition,False,LITTO,TRI-CIRCLE,False,False,UNVERIFIED_TEXT_ONLY,False
-278,C0246,P4_typing_review,LT5,TL5,adjacent_transposition,False,LITTO,TRI-CIRCLE,False,False,UNVERIFIED_TEXT_ONLY,False
-279,C0247,P4_typing_review,LT6R,TL6R,adjacent_transposition,False,LITTO,TRI-CIRCLE,False,False,UNVERIFIED_TEXT_ONLY,False
-280,C0248,P4_typing_review,LW12R,LW21R,adjacent_transposition,False,LOCKWOOD,LOCKWOOD,True,False,UNVERIFIED_TEXT_ONLY,False
-281,C0249,P4_typing_review,MC12,MC21,adjacent_transposition,False,MCM,MCM,True,False,UNVERIFIED_TEXT_ONLY,False
-282,C0250,P4_typing_review,MCE1,MEC1,adjacent_transposition,False,MEC,MECO,False,False,UNVERIFIED_TEXT_ONLY,False
-283,C0026,P3_multiref_typing_review,ME2R,MER2,adjacent_transposition,False,MELSMETALL,MERONI,False,False,UNVERIFIED_TEXT_ONLY,False
-284,C0251,P4_typing_review,ME4R,MER4,adjacent_transposition,False,MELSMETALL,MERONI,False,False,UNVERIFIED_TEXT_ONLY,False
-285,C0252,P4_typing_review,ME5R,MER5,adjacent_transposition,False,MELSMETALL,MERONI,False,False,UNVERIFIED_TEXT_ONLY,False
-286,C0253,P4_typing_review,MER23,MER32,adjacent_transposition,False,MERONI,MERONI,True,False,UNVERIFIED_TEXT_ONLY,False
-287,C0254,P4_typing_review,MER34R,MER43R,adjacent_transposition,False,MERONI,MERONI,True,False,UNVERIFIED_TEXT_ONLY,False
-288,C0255,P4_typing_review,MS1,SM1,adjacent_transposition,False,MASTER,BRETER,False,False,UNVERIFIED_TEXT_ONLY,False
-289,C0034,P1_multiref_OCR_review,MS11,MSL1,glyph_confusable,True,MASTER,MASTER LOCK,False,False,UNVERIFIED_TEXT_ONLY,False
-290,C0034,P1_multiref_OCR_review,MS11,SM11,adjacent_transposition,False,MASTER,SIS (IT),False,False,UNVERIFIED_TEXT_ONLY,False
-291,C0035,P1_multiref_OCR_review,MS12,MSL2,glyph_confusable,True,MASTER,MASTER LOCK,False,False,UNVERIFIED_TEXT_ONLY,False
-292,C0035,P1_multiref_OCR_review,MS12,SM12,adjacent_transposition,False,MASTER,SIMECA,False,False,UNVERIFIED_TEXT_ONLY,False
-293,C0256,P4_typing_review,MS16,SM16,adjacent_transposition,False,MASTER,SIMECA,False,False,UNVERIFIED_TEXT_ONLY,False
-294,C0257,P4_typing_review,MS3,SM3,adjacent_transposition,False,MASTER,SIMECA,False,False,UNVERIFIED_TEXT_ONLY,False
-295,C0258,P4_typing_review,MS6,SM6,adjacent_transposition,False,MASTER,SIMECA,False,False,UNVERIFIED_TEXT_ONLY,False
-296,C0259,P4_typing_review,MS8,SM8,adjacent_transposition,False,MASTER,SIMECA,False,False,UNVERIFIED_TEXT_ONLY,False
-297,C0260,P4_typing_review,MS9R,SM9R,adjacent_transposition,False,MASTER,SIMECA,False,False,UNVERIFIED_TEXT_ONLY,False
-298,C0261,P4_typing_review,MST1,MTS1,adjacent_transposition,False,MOSRENTGEN,MOTORSICH,False,False,UNVERIFIED_TEXT_ONLY,False
-299,C0262,P4_typing_review,NP1R,PN1R,adjacent_transposition,False,NEPTUNE,PERINO PG,False,False,UNVERIFIED_TEXT_ONLY,False
-300,C0263,P4_typing_review,OR1R,RO1R,adjacent_transposition,False,ORDO,RONIS,False,False,UNVERIFIED_TEXT_ONLY,False
-301,C0264,P2_OCR_review,PC11R,PCL1R,glyph_confusable,True,P.C. (CORTELLEZZI),PACO LOCKS,False,False,UNVERIFIED_TEXT_ONLY,False
-302,C0265,P4_typing_review,PDO12,PDO21,adjacent_transposition,False,PADO,PADO,True,False,UNVERIFIED_TEXT_ONLY,False
-303,C0266,P4_typing_review,PDO12R,PDO21R,adjacent_transposition,False,PADO,PADO,True,False,UNVERIFIED_TEXT_ONLY,False
-304,C0267,P4_typing_review,PF12,PF21,adjacent_transposition,False,PREFER,PREFER,True,False,UNVERIFIED_TEXT_ONLY,False
-305,C0268,P4_typing_review,PT1,TP1,adjacent_transposition,False,POTENT,BASSI,False,False,UNVERIFIED_TEXT_ONLY,False
-306,C0269,P4_typing_review,PT1R,TP1R,adjacent_transposition,False,POTENT,TAMPALINI,False,False,UNVERIFIED_TEXT_ONLY,False
-307,C0270,P4_typing_review,PT2,TP2,adjacent_transposition,False,POTENT,TAMPALINI,False,False,UNVERIFIED_TEXT_ONLY,False
-308,C0271,P4_typing_review,RC12R,RC21R,adjacent_transposition,False,CINA,CINA,True,False,UNVERIFIED_TEXT_ONLY,False
-309,C0272,P4_typing_review,RO12,RO21,adjacent_transposition,False,RONIS,RONIS,True,False,UNVERIFIED_TEXT_ONLY,False
-310,C0273,P4_typing_review,RO12R,RO21R,adjacent_transposition,False,RONIS,RONIS,True,False,UNVERIFIED_TEXT_ONLY,False
-311,C0274,P4_typing_review,RO14,RO41,adjacent_transposition,False,RONIS,VACHETTE,False,False,UNVERIFIED_TEXT_ONLY,False
-312,C0275,P4_typing_review,RO15,RO51,adjacent_transposition,False,RONIS,RONIS,True,False,UNVERIFIED_TEXT_ONLY,False
-313,C0276,P4_typing_review,RO68,RO86,adjacent_transposition,False,RONIS,RONIS,True,False,UNVERIFIED_TEXT_ONLY,False
-314,C0277,P4_typing_review,RU1,UR1,adjacent_transposition,False,RUKO,URKO,False,False,UNVERIFIED_TEXT_ONLY,False
-315,C0278,P4_typing_review,RU1R,UR1R,adjacent_transposition,False,RUKO,URKO,False,False,UNVERIFIED_TEXT_ONLY,False
-316,C0279,P4_typing_review,RV1,VR1,adjacent_transposition,False,RIVERS,VERA,False,False,UNVERIFIED_TEXT_ONLY,False
-317,C0280,P4_typing_review,SA1R,SAR1,adjacent_transposition,False,SAMSONITE,SARGENT,False,False,UNVERIFIED_TEXT_ONLY,False
-318,C0281,P4_typing_review,SA2R,SAR2,adjacent_transposition,False,SAMSONITE,SARGENT,False,False,UNVERIFIED_TEXT_ONLY,False
-319,C0282,P4_typing_review,SA3R,SAR3,adjacent_transposition,False,SAMSONITE,SARGENT,False,False,UNVERIFIED_TEXT_ONLY,False
-320,C0283,P4_typing_review,SAM1,SMA1,adjacent_transposition,False,SQUIRE & SONS,SAM,False,False,UNVERIFIED_TEXT_ONLY,False
-321,C0284,P4_typing_review,SDT1R,STD1R,adjacent_transposition,False,SÜDMETALL,STANDERS,False,False,UNVERIFIED_TEXT_ONLY,False
-322,C0005,P1_multiref_OCR_review,SI1,SL1,glyph_confusable,True,SOFI-SONAFI,SEGAL,False,False,UNVERIFIED_TEXT_ONLY,False
-323,C0285,P4_typing_review,ST1,TS1,adjacent_transposition,False,SCHLECHTENDAHL,TRAINS,False,False,UNVERIFIED_TEXT_ONLY,False
-324,C0286,P4_typing_review,SW2,WS2,adjacent_transposition,False,SWEDA,WESLOCK,False,False,UNVERIFIED_TEXT_ONLY,False
-325,C0287,P4_typing_review,SW3,WS3,adjacent_transposition,False,SWEDA,WESLOCK,False,False,UNVERIFIED_TEXT_ONLY,False
-326,C0288,P4_typing_review,SWA1,WSA1,adjacent_transposition,False,SHOWA,WASA-IVANA,False,False,UNVERIFIED_TEXT_ONLY,False
-327,C0006,P1_multiref_OCR_review,TI1,TL1,glyph_confusable,True,TIK,TRI-CIRCLE,False,False,UNVERIFIED_TEXT_ONLY,False
-328,C0289,P4_typing_review,TN13R,TN31R,adjacent_transposition,False,TITAN,TITAN,True,False,UNVERIFIED_TEXT_ONLY,False
-329,C0290,P4_typing_review,TN23,TN32,adjacent_transposition,False,TITAN,TITAN,True,False,UNVERIFIED_TEXT_ONLY,False
-330,C0291,P2_OCR_review,TO11,TOL1,glyph_confusable,True,TOK-WINKHAUS,TULA,False,False,UNVERIFIED_TEXT_ONLY,False
-331,C0036,P1_multiref_OCR_review,TO12,TO21,adjacent_transposition,False,TOK-TRELOCK,TOK-WINKHAUS,False,False,UNVERIFIED_TEXT_ONLY,False
-332,C0036,P1_multiref_OCR_review,TO12,TOL2,glyph_confusable,True,TOK-TRELOCK,TULA,False,False,UNVERIFIED_TEXT_ONLY,False
-333,C0292,P4_typing_review,TO16,TO61,adjacent_transposition,False,TOK-WINKHAUS,TOK-WINKHAUS,True,False,UNVERIFIED_TEXT_ONLY,False
-334,C0293,P4_typing_review,TO19,TO91,adjacent_transposition,False,TOK-WINKHAUS,TOK-WINKHAUS,True,False,UNVERIFIED_TEXT_ONLY,False
-335,C0294,P4_typing_review,TO34,TO43,adjacent_transposition,False,TOK-WINKHAUS,TOK-WINKHAUS,True,False,UNVERIFIED_TEXT_ONLY,False
-336,C0295,P4_typing_review,TO35,TO53,adjacent_transposition,False,TOK-WINKHAUS,TOK-WINKHAUS,True,False,UNVERIFIED_TEXT_ONLY,False
-337,C0296,P2_OCR_review,TR11R,TRI1R,glyph_confusable,True,TRIOVING,TRIMARK,False,False,UNVERIFIED_TEXT_ONLY,False
-338,C0297,P2_OCR_review,TR13R,TRI3R,glyph_confusable,True,TRIOVING,TRIMARK,False,False,UNVERIFIED_TEXT_ONLY,False
-339,C0298,P2_OCR_review,TR17R,TRI7R,glyph_confusable,True,TRIOVING,TRIMARK,False,False,UNVERIFIED_TEXT_ONLY,False
-340,C0299,P2_OCR_review,TR18R,TRI8R,glyph_confusable,True,TRIOVING,TRIMARK,False,False,UNVERIFIED_TEXT_ONLY,False
-341,C0300,P2_OCR_review,TR19R,TRI9R,glyph_confusable,True,TRIOVING,TRIMARK,False,False,UNVERIFIED_TEXT_ONLY,False
-342,C0301,P4_typing_review,TY1,YT1,adjacent_transposition,False,TAYLOR,YETI,False,False,UNVERIFIED_TEXT_ONLY,False
-343,C0302,P4_typing_review,UL046,UL064,adjacent_transposition,False,UNIVERSAL SERIE DISTINZIONE,UNIVERSAL SERIE DISTINZIONE,True,False,UNVERIFIED_TEXT_ONLY,False
-344,C0303,P4_typing_review,UNI13,UNI31,adjacent_transposition,False,UNION,UNION,True,False,UNVERIFIED_TEXT_ONLY,False
-345,C0304,P4_typing_review,UNI14,UNI41,adjacent_transposition,False,UNION,UNION,True,False,UNVERIFIED_TEXT_ONLY,False
-346,C0305,P4_typing_review,UNI15,UNI51,adjacent_transposition,False,UNION,UNION,True,False,UNVERIFIED_TEXT_ONLY,False
-347,C0306,P4_typing_review,UNI16,UNI61,adjacent_transposition,False,UNION,,False,True,UNVERIFIED_TEXT_ONLY,False
-348,C0307,P4_typing_review,UNI16R,UNI61R,adjacent_transposition,False,UNION,,False,True,UNVERIFIED_TEXT_ONLY,False
-349,C0308,P4_typing_review,UNI25,UNI52,adjacent_transposition,False,UNION,UNION,True,False,UNVERIFIED_TEXT_ONLY,False
-350,C0309,P4_typing_review,UNI45R,UNI54R,adjacent_transposition,False,UNION,UNION,True,False,UNVERIFIED_TEXT_ONLY,False
-351,C0310,P4_typing_review,VAC105,VAC150,adjacent_transposition,False,VACHETTE,VACHETTE,True,False,UNVERIFIED_TEXT_ONLY,False
-352,C0311,P4_typing_review,VAC106,VAC160,adjacent_transposition,False,VACHETTE,VACHETTE,True,False,UNVERIFIED_TEXT_ONLY,False
-353,C0312,P4_typing_review,VAC14,VAC41,adjacent_transposition,False,VACHETTE,VACHETTE,True,False,UNVERIFIED_TEXT_ONLY,False
-354,C0313,P4_typing_review,VAC17,VAC71,adjacent_transposition,False,VACHETTE,VACHETTE,True,False,UNVERIFIED_TEXT_ONLY,False
-355,C0314,P4_typing_review,VAC19,VAC91,adjacent_transposition,False,VACHETTE,VACHETTE,True,False,UNVERIFIED_TEXT_ONLY,False
-356,C0315,P4_typing_review,VAC45,VAC54,adjacent_transposition,False,,VACHETTE,False,True,UNVERIFIED_TEXT_ONLY,False
-357,C0316,P4_typing_review,VAC48,VAC84,adjacent_transposition,False,,,False,True,UNVERIFIED_TEXT_ONLY,False
-358,C0317,P4_typing_review,VAC68,VAC86,adjacent_transposition,False,VACHETTE,,False,True,UNVERIFIED_TEXT_ONLY,False
-359,C0318,P4_typing_review,VAC78,VAC87,adjacent_transposition,False,,,False,True,UNVERIFIED_TEXT_ONLY,False
-360,C0319,P2_OCR_review,VI2,VL2,glyph_confusable,True,,V.G.F. VILLATORE,False,True,UNVERIFIED_TEXT_ONLY,False
-361,C0320,P2_OCR_review,VI2R,VL2R,glyph_confusable,True,VIRO,V.G.F. VILLATORE,False,False,UNVERIFIED_TEXT_ONLY,False
-362,C0321,P2_OCR_review,VI3,VL3,glyph_confusable,True,VIRO,V.G.F. VILLATORE,False,False,UNVERIFIED_TEXT_ONLY,False
-363,C0322,P2_OCR_review,VI3R,VL3R,glyph_confusable,True,VIRO,V.G.F. VILLATORE,False,False,UNVERIFIED_TEXT_ONLY,False
-364,C0323,P2_OCR_review,VI4,VL4,glyph_confusable,True,VIRO,V.G.F. VILLATORE,False,False,UNVERIFIED_TEXT_ONLY,False
-365,C0324,P2_OCR_review,VI4R,VL4R,glyph_confusable,True,VIRO,V.G.F. VILLATORE,False,False,UNVERIFIED_TEXT_ONLY,False
-366,C0325,P2_OCR_review,WE12,WEI2,glyph_confusable,True,WELKA,WEISER,False,False,UNVERIFIED_TEXT_ONLY,False
-367,C0326,P2_OCR_review,WE13,WEI3,glyph_confusable,True,WELKA,WEISER,False,False,UNVERIFIED_TEXT_ONLY,False
-368,C0327,P2_OCR_review,WE14,WEI4,glyph_confusable,True,WELKA,WEISER,False,False,UNVERIFIED_TEXT_ONLY,False
-369,C0328,P2_OCR_review,WE15,WEI5,glyph_confusable,True,WELKA,WEISER,False,False,UNVERIFIED_TEXT_ONLY,False
-370,C0329,P4_typing_review,WK25R,WK52R,adjacent_transposition,False,WILKA,WILKA,True,False,UNVERIFIED_TEXT_ONLY,False
-371,C0330,P4_typing_review,WK29,WK92,adjacent_transposition,False,WILKA,WILKA,True,False,UNVERIFIED_TEXT_ONLY,False
-372,C0331,P4_typing_review,WK45R,WK54R,adjacent_transposition,False,WILKA,WILKA,True,False,UNVERIFIED_TEXT_ONLY,False
-373,C0332,P4_typing_review,WK69,WK96,adjacent_transposition,False,,WILKA,False,True,UNVERIFIED_TEXT_ONLY,False
-374,C0002,P3_multiref_typing_review,YA13,YA31,adjacent_transposition,False,YALE (IT),YALE (IT),True,False,UNVERIFIED_TEXT_ONLY,False
-375,C0333,P4_typing_review,YA13R,YA31R,adjacent_transposition,False,YALE (IT),YALE (IT),True,False,UNVERIFIED_TEXT_ONLY,False
-376,C0008,P3_multiref_typing_review,YA14,YA41,adjacent_transposition,False,YALE (IT),YALE (IT),True,False,UNVERIFIED_TEXT_ONLY,False
-377,C0009,P3_multiref_typing_review,YA15,YA51,adjacent_transposition,False,YALE,YALE (IT),False,False,UNVERIFIED_TEXT_ONLY,False
-378,C0010,P3_multiref_typing_review,YA16,YA61,adjacent_transposition,False,YALE,YALE (IT),False,False,UNVERIFIED_TEXT_ONLY,False
-379,C0011,P3_multiref_typing_review,YA17,YA71,adjacent_transposition,False,,YALE (DE) (GB),False,True,UNVERIFIED_TEXT_ONLY,False
-380,C0334,P4_typing_review,YA17R,YA71R,adjacent_transposition,False,YALE,YALE (DE) (GB),False,False,UNVERIFIED_TEXT_ONLY,False
-381,C0335,P4_typing_review,YA19,YA91,adjacent_transposition,False,YALE,YALE,True,False,UNVERIFIED_TEXT_ONLY,False
-382,C0336,P4_typing_review,YA1R,YAR1,adjacent_transposition,False,RABBIT,YANMAR,False,False,UNVERIFIED_TEXT_ONLY,False
-383,C0012,P3_multiref_typing_review,YA23,YA32,adjacent_transposition,False,YALE,,False,True,UNVERIFIED_TEXT_ONLY,False
-384,C0337,P4_typing_review,YA27R,YA72R,adjacent_transposition,False,XIEHE,YALE (DE) (GB),False,False,UNVERIFIED_TEXT_ONLY,False
-385,C0338,P4_typing_review,YA36,YA63,adjacent_transposition,False,YALE,YALE (IT),False,False,UNVERIFIED_TEXT_ONLY,False
-386,C0339,P4_typing_review,YA46,YA64,adjacent_transposition,False,YALE (IT),YALE,False,False,UNVERIFIED_TEXT_ONLY,False
-387,C0340,P4_typing_review,YA47,YA74,adjacent_transposition,False,YALE (IT),YALE (IT),True,False,UNVERIFIED_TEXT_ONLY,False
-388,C0341,P4_typing_review,YA48,YA84,adjacent_transposition,False,YALE (IT),YALE,False,False,UNVERIFIED_TEXT_ONLY,False
-389,C0342,P4_typing_review,YA49,YA94,adjacent_transposition,False,YALE (IT),YALE,False,False,UNVERIFIED_TEXT_ONLY,False
-390,C0343,P4_typing_review,YA68,YA86,adjacent_transposition,False,YALE,YALE,True,False,UNVERIFIED_TEXT_ONLY,False
-391,C0344,P4_typing_review,YA68R,YA86R,adjacent_transposition,False,,,False,True,UNVERIFIED_TEXT_ONLY,False
-392,C0345,P4_typing_review,ZE46R,ZE64R,adjacent_transposition,False,ZEISS IKON,ZEISS IKON,True,False,UNVERIFIED_TEXT_ONLY,False
+component,review_priority_NOT_MATCH_CONFIDENCE,reference_a,reference_b,edit_types,already_known_hypothetical_OCR,manufacturer_a_UNVERIFIED,manufacturer_b_UNVERIFIED,same_manufacturer_SOURCE_ONLY,manufacturer_missing_SOURCE_ONLY,review_state,auto_validate
+C0037,P4_typing_review,AB1,BA1,adjacent_transposition,False,,BRIGGS & STRATTON,False,True,UNVERIFIED_TEXT_ONLY,False
+C0038,P4_typing_review,AB13,AB31,adjacent_transposition,False,,ABUS,False,True,UNVERIFIED_TEXT_ONLY,False
+C0039,P4_typing_review,AB14R,AB41R,adjacent_transposition,False,ABUS,ABUS,True,False,UNVERIFIED_TEXT_ONLY,False
+C0001,P1_multiref_OCR_review,AB15,AB51,adjacent_transposition,False,ABUS,ABUS,True,False,UNVERIFIED_TEXT_ONLY,False
+C0040,P4_typing_review,AB16,AB61,adjacent_transposition,False,ABUS,ABUS,True,False,UNVERIFIED_TEXT_ONLY,False
+C0041,P4_typing_review,AB17,AB71,adjacent_transposition,False,,ABUS,False,True,UNVERIFIED_TEXT_ONLY,False
+C0042,P4_typing_review,AB18,AB81,adjacent_transposition,False,ABUS,ABUS,True,False,UNVERIFIED_TEXT_ONLY,False
+C0043,P4_typing_review,AB19,AB91,adjacent_transposition,False,ABUS,ABUS,True,False,UNVERIFIED_TEXT_ONLY,False
+C0044,P4_typing_review,AB23,AB32,adjacent_transposition,False,ABUS,ABSA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0045,P4_typing_review,AB27,AB72,adjacent_transposition,False,ABUS,ABUS,True,False,UNVERIFIED_TEXT_ONLY,False
+C0046,P4_typing_review,AB3,BA3,adjacent_transposition,False,ABUS,BRIGGS & STRATTON,False,False,UNVERIFIED_TEXT_ONLY,False
+C0007,P1_multiref_OCR_review,AB35,AB53,adjacent_transposition,False,,ABUS,False,True,UNVERIFIED_TEXT_ONLY,False
+C0047,P4_typing_review,AB39R,AB93R,adjacent_transposition,False,ABUS,ABUS,True,False,UNVERIFIED_TEXT_ONLY,False
+C0048,P4_typing_review,AB3R,BA3R,adjacent_transposition,False,ABUS,BRIGGS & STRATTON,False,False,UNVERIFIED_TEXT_ONLY,False
+C0049,P4_typing_review,AB4,BA4,adjacent_transposition,False,ABUS,BRIGGS & STRATTON,False,False,UNVERIFIED_TEXT_ONLY,False
+C0050,P4_typing_review,AB45,AB54,adjacent_transposition,False,ABUS,ABUS,True,False,UNVERIFIED_TEXT_ONLY,False
+C0051,P4_typing_review,AB48,AB84,adjacent_transposition,False,ABUS,ABUS,True,False,UNVERIFIED_TEXT_ONLY,False
+C0052,P4_typing_review,AB5,BA5,adjacent_transposition,False,ABUS,BASCO,False,False,UNVERIFIED_TEXT_ONLY,False
+C0001,P1_multiref_OCR_review,AB51,ABS1,glyph_confusable,True,ABUS,ABSA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0053,P2_OCR_review,AB52,ABS2,glyph_confusable,True,ABUS,ABSA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0007,P1_multiref_OCR_review,AB53,ABS3,glyph_confusable,True,ABUS,ABSA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0054,P4_typing_review,AB6,BA6,adjacent_transposition,False,ABUS,BRIGGS & STRATTON,False,False,UNVERIFIED_TEXT_ONLY,False
+C0055,P4_typing_review,AB67,AB76,adjacent_transposition,False,ABUS,ABUS,True,False,UNVERIFIED_TEXT_ONLY,False
+C0056,P4_typing_review,AB7,BA7,adjacent_transposition,False,ABUS,BRIGGS & STRATTON,False,False,UNVERIFIED_TEXT_ONLY,False
+C0057,P4_typing_review,AB8,BA8,adjacent_transposition,False,ABUS,BASCO,False,False,UNVERIFIED_TEXT_ONLY,False
+C0058,P4_typing_review,AB89,AB98,adjacent_transposition,False,ABUS,ABUS,True,False,UNVERIFIED_TEXT_ONLY,False
+C0059,P4_typing_review,AB8R,BA8R,adjacent_transposition,False,ABUS,BASCO,False,False,UNVERIFIED_TEXT_ONLY,False
+C0001,P1_multiref_OCR_review,ABS1,BAS1,adjacent_transposition,False,ABSA,BASTA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0060,P4_typing_review,AC1,CA1,adjacent_transposition,False,ABC,CITY,False,False,UNVERIFIED_TEXT_ONLY,False
+C0061,P4_typing_review,AC2,CA2,adjacent_transposition,False,ABC,ZENITH,False,False,UNVERIFIED_TEXT_ONLY,False
+C0062,P4_typing_review,ACR1,CAR1,adjacent_transposition,False,ANCHOR,CARACAL,False,False,UNVERIFIED_TEXT_ONLY,False
+C0063,P2_OCR_review,AI1,AL1,glyph_confusable,True,ALIANÇA,AL,False,False,UNVERIFIED_TEXT_ONLY,False
+C0064,P4_typing_review,AK2R,AKR2,adjacent_transposition,False,AKS,ANKERSLOT,False,False,UNVERIFIED_TEXT_ONLY,False
+C0065,P4_typing_review,ALP1,LAP1,adjacent_transposition,False,ALPHA,LA PORTE,False,False,UNVERIFIED_TEXT_ONLY,False
+C0066,P4_typing_review,ALP2,LAP2,adjacent_transposition,False,ALPHA,LA PORTE,False,False,UNVERIFIED_TEXT_ONLY,False
+C0067,P4_typing_review,ALP3,LAP3,adjacent_transposition,False,ALPHA,LA PORTE,False,False,UNVERIFIED_TEXT_ONLY,False
+C0068,P4_typing_review,ANB1,NAB1,adjacent_transposition,False,ANBO,NABOB,False,False,UNVERIFIED_TEXT_ONLY,False
+C0069,P4_typing_review,AS1,SA1,adjacent_transposition,False,CINA,SAMSONITE,False,False,UNVERIFIED_TEXT_ONLY,False
+C0070,P4_typing_review,ASN1,SAN1,adjacent_transposition,False,ASIAN,SÄNTIS,False,False,UNVERIFIED_TEXT_ONLY,False
+C0071,P4_typing_review,ASS36,ASS63,adjacent_transposition,False,ASSA,ASSA,True,False,UNVERIFIED_TEXT_ONLY,False
+C0072,P4_typing_review,ASS45,ASS54,adjacent_transposition,False,ASSA,ASSA,True,False,UNVERIFIED_TEXT_ONLY,False
+C0073,P4_typing_review,ASS59,ASS95,adjacent_transposition,False,ASSA,ASSA,True,False,UNVERIFIED_TEXT_ONLY,False
+C0074,P4_typing_review,ASS59R,ASS95R,adjacent_transposition,False,ASSA,ASSA,True,False,UNVERIFIED_TEXT_ONLY,False
+C0075,P4_typing_review,AVC1,VAC1,adjacent_transposition,False,AVOCET,VACHETTE,False,False,UNVERIFIED_TEXT_ONLY,False
+C0076,P4_typing_review,AVC2,VAC2,adjacent_transposition,False,AVOCET,VACHETTE,False,False,UNVERIFIED_TEXT_ONLY,False
+C0077,P4_typing_review,AW1,WA1,adjacent_transposition,False,ARROW,WALLY,False,False,UNVERIFIED_TEXT_ONLY,False
+C0078,P4_typing_review,AW2,WA2,adjacent_transposition,False,ARROW,WALLY,False,False,UNVERIFIED_TEXT_ONLY,False
+C0079,P4_typing_review,AW3,WA3,adjacent_transposition,False,ARROW,WALLY,False,False,UNVERIFIED_TEXT_ONLY,False
+C0080,P4_typing_review,AW4,WA4,adjacent_transposition,False,ARROW,WALLY,False,False,UNVERIFIED_TEXT_ONLY,False
+C0081,P4_typing_review,AW6,WA6,adjacent_transposition,False,ARROW,WALLY,False,False,UNVERIFIED_TEXT_ONLY,False
+C0082,P4_typing_review,AW7,WA7,adjacent_transposition,False,ARROW,WALLY,False,False,UNVERIFIED_TEXT_ONLY,False
+C0083,P4_typing_review,AY1,YA1,adjacent_transposition,False,ABLOY,RABBIT,False,False,UNVERIFIED_TEXT_ONLY,False
+C0084,P4_typing_review,AY12,AY21,adjacent_transposition,False,ABLOY,ABLOY,True,False,UNVERIFIED_TEXT_ONLY,False
+C0002,P3_multiref_typing_review,AY13,AY31,adjacent_transposition,False,ABLOY,ABLOY,True,False,UNVERIFIED_TEXT_ONLY,False
+C0002,P3_multiref_typing_review,AY13,YA13,adjacent_transposition,False,ABLOY,YALE (IT),False,False,UNVERIFIED_TEXT_ONLY,False
+C0008,P3_multiref_typing_review,AY14,YA14,adjacent_transposition,False,ABLOY,YALE (IT),False,False,UNVERIFIED_TEXT_ONLY,False
+C0009,P3_multiref_typing_review,AY15,YA15,adjacent_transposition,False,ABLOY,YALE,False,False,UNVERIFIED_TEXT_ONLY,False
+C0010,P3_multiref_typing_review,AY16,YA16,adjacent_transposition,False,ABLOY,YALE,False,False,UNVERIFIED_TEXT_ONLY,False
+C0011,P3_multiref_typing_review,AY17,YA17,adjacent_transposition,False,ABLOY,,False,True,UNVERIFIED_TEXT_ONLY,False
+C0085,P4_typing_review,AY18,YA18,adjacent_transposition,False,ABLOY,CHICAGO,False,False,UNVERIFIED_TEXT_ONLY,False
+C0086,P4_typing_review,AY2,YA2,adjacent_transposition,False,ABLOY,YALE (DE) (GB),False,False,UNVERIFIED_TEXT_ONLY,False
+C0087,P4_typing_review,AY20,YA20,adjacent_transposition,False,ABLOY,,False,True,UNVERIFIED_TEXT_ONLY,False
+C0012,P3_multiref_typing_review,AY23,YA23,adjacent_transposition,False,ABLOY,YALE,False,False,UNVERIFIED_TEXT_ONLY,False
+C0088,P4_typing_review,AY29,YA29,adjacent_transposition,False,ABLOY,YALE,False,False,UNVERIFIED_TEXT_ONLY,False
+C0089,P4_typing_review,AY3,YA3,adjacent_transposition,False,ABLOY,YALE,False,False,UNVERIFIED_TEXT_ONLY,False
+C0090,P4_typing_review,AY30,YA30,adjacent_transposition,False,ABLOY,YALE,False,False,UNVERIFIED_TEXT_ONLY,False
+C0002,P3_multiref_typing_review,AY31,YA31,adjacent_transposition,False,ABLOY,YALE (IT),False,False,UNVERIFIED_TEXT_ONLY,False
+C0091,P4_typing_review,AZ2R,ZA2R,adjacent_transposition,False,AZBE,ZANETTI ANGELO,False,False,UNVERIFIED_TEXT_ONLY,False
+C0092,P4_typing_review,BAB13,BAB31,adjacent_transposition,False,BAB,BAB,True,False,UNVERIFIED_TEXT_ONLY,False
+C0013,P1_multiref_OCR_review,BAI2,BAL2,glyph_confusable,True,BARAS,BAAL,False,False,UNVERIFIED_TEXT_ONLY,False
+C0014,P1_multiref_OCR_review,BAI3,BAL3,glyph_confusable,True,BASI,BAAL,False,False,UNVERIFIED_TEXT_ONLY,False
+C0093,P4_typing_review,BAL1,BLA1,adjacent_transposition,False,BAAL,BLASER,False,False,UNVERIFIED_TEXT_ONLY,False
+C0013,P1_multiref_OCR_review,BAL2,BLA2,adjacent_transposition,False,BAAL,BLASER,False,False,UNVERIFIED_TEXT_ONLY,False
+C0014,P1_multiref_OCR_review,BAL3,BLA3,adjacent_transposition,False,BAAL,BLASER,False,False,UNVERIFIED_TEXT_ONLY,False
+C0094,P4_typing_review,BAR1R,BRA1R,adjacent_transposition,False,BARAS,BRASIL,False,False,UNVERIFIED_TEXT_ONLY,False
+C0095,P4_typing_review,BC1,CB1,adjacent_transposition,False,BABY CLIP,CORBIN (IT),False,False,UNVERIFIED_TEXT_ONLY,False
+C0096,P4_typing_review,BC1R,CB1R,adjacent_transposition,False,BABY CLIP,CORBIN (IT),False,False,UNVERIFIED_TEXT_ONLY,False
+C0097,P4_typing_review,BD1,DB1,adjacent_transposition,False,BRICARD,DOBLINA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0098,P4_typing_review,BD14,BD41,adjacent_transposition,False,BRICARD,BRICARD,True,False,UNVERIFIED_TEXT_ONLY,False
+C0099,P4_typing_review,BD16,DB16,adjacent_transposition,False,BRICARD,DOBLINA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0100,P4_typing_review,BD17,DB17,adjacent_transposition,False,BRICARD,DOBLINA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0101,P4_typing_review,BD2,DB2,adjacent_transposition,False,BRICARD,DOBLINA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0102,P4_typing_review,BD2R,DB2R,adjacent_transposition,False,BRICARD,DOBLINA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0103,P4_typing_review,BD3,DB3,adjacent_transposition,False,BRICARD,DOBLINA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0104,P4_typing_review,BD3R,DB3R,adjacent_transposition,False,BRICARD,DOBLINA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0105,P4_typing_review,BD4,DB4,adjacent_transposition,False,BRICARD,DOBLINA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0106,P4_typing_review,BD5,DB5,adjacent_transposition,False,BRICARD,DOBLINA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0107,P4_typing_review,BG1,GB1,adjacent_transposition,False,BIGLA,GABON,False,False,UNVERIFIED_TEXT_ONLY,False
+C0108,P4_typing_review,BK16,BK61,adjacent_transposition,False,BKS,BKS,True,False,UNVERIFIED_TEXT_ONLY,False
+C0109,P2_OCR_review,BK3-4,BK34,separator_omission,True,BKS,BKS,True,False,UNVERIFIED_TEXT_ONLY,False
+C0110,P4_typing_review,BM1,MB1,adjacent_transposition,False,BANHAM,MONOBLOC,False,False,UNVERIFIED_TEXT_ONLY,False
+C0111,P4_typing_review,BRT2,RBT2,adjacent_transposition,False,BERTO,RABBIT,False,False,UNVERIFIED_TEXT_ONLY,False
+C0112,P4_typing_review,BS1,SB1,adjacent_transposition,False,BSS,SABI,False,False,UNVERIFIED_TEXT_ONLY,False
+C0015,P3_multiref_typing_review,BU1R,BUR1,adjacent_transposition,False,BURAM,BURG,False,False,UNVERIFIED_TEXT_ONLY,False
+C0015,P3_multiref_typing_review,BU1R,UB1R,adjacent_transposition,False,BURAM,URBIS,False,False,UNVERIFIED_TEXT_ONLY,False
+C0113,P4_typing_review,BUR12,BUR21,adjacent_transposition,False,BURG,BURG,True,False,UNVERIFIED_TEXT_ONLY,False
+C0114,P4_typing_review,BUR13,BUR31,adjacent_transposition,False,BURG,BURG,True,False,UNVERIFIED_TEXT_ONLY,False
+C0115,P4_typing_review,BUR23,BUR32,adjacent_transposition,False,BURG,BURG,True,False,UNVERIFIED_TEXT_ONLY,False
+C0116,P4_typing_review,BUR26,BUR62,adjacent_transposition,False,BURG,BURG,True,False,UNVERIFIED_TEXT_ONLY,False
+C0117,P4_typing_review,BUR27,BUR72,adjacent_transposition,False,BURG,BURG,True,False,UNVERIFIED_TEXT_ONLY,False
+C0118,P4_typing_review,C1R,CR1,adjacent_transposition,False,C.R.,CLAUSOR,False,False,UNVERIFIED_TEXT_ONLY,False
+C0119,P4_typing_review,CB12,CB21,adjacent_transposition,False,CORBIN (US),CORBIN (IT),False,False,UNVERIFIED_TEXT_ONLY,False
+C0120,P4_typing_review,CB13,CB31,adjacent_transposition,False,CORBIN (US),CORBIN (IT),False,False,UNVERIFIED_TEXT_ONLY,False
+C0121,P4_typing_review,CB14R,CB41R,adjacent_transposition,False,CORBIN (US),CORBIN (US),True,False,UNVERIFIED_TEXT_ONLY,False
+C0122,P4_typing_review,CB18,CB81,adjacent_transposition,False,CORBIN (US),CORBIN (IT),False,False,UNVERIFIED_TEXT_ONLY,False
+C0123,P2_OCR_review,CB3-OR,CB30R,separator_omission_plus_glyph,True,CORBIN (IT),CORBIN (IT),True,False,UNVERIFIED_TEXT_ONLY,False
+C0124,P4_typing_review,CB34R,CB43R,adjacent_transposition,False,CORBIN (US),CORBIN (IT),False,False,UNVERIFIED_TEXT_ONLY,False
+C0125,P4_typing_review,CB38,CB83,adjacent_transposition,False,CORBIN (US),CORBIN (IT),False,False,UNVERIFIED_TEXT_ONLY,False
+C0126,P2_OCR_review,CB4-OR,CB40R,separator_omission_plus_glyph,True,CORBIN (IT),CORBIN (US),False,False,UNVERIFIED_TEXT_ONLY,False
+C0127,P4_typing_review,CB79,CB97,adjacent_transposition,False,CORBIN (IT),CORBIN,False,False,UNVERIFIED_TEXT_ONLY,False
+C0128,P2_OCR_review,CB9-OR,CB90R,separator_omission_plus_glyph,True,CORBIN (IT),CORBIN (IT),True,False,UNVERIFIED_TEXT_ONLY,False
+C0129,P4_typing_review,CE13,CE31,adjacent_transposition,False,CES,CES,True,False,UNVERIFIED_TEXT_ONLY,False
+C0130,P4_typing_review,CE23R,CE32R,adjacent_transposition,False,CES,CES,True,False,UNVERIFIED_TEXT_ONLY,False
+C0131,P4_typing_review,CE5,EC5,adjacent_transposition,False,CES,TESA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0132,P4_typing_review,CEM1,ECM1,adjacent_transposition,False,CEM,ECM,False,False,UNVERIFIED_TEXT_ONLY,False
+C0016,P1_multiref_OCR_review,CI2,CL2,glyph_confusable,True,CASI,CLUM,False,False,UNVERIFIED_TEXT_ONLY,False
+C0017,P1_multiref_OCR_review,CI3,CL3,glyph_confusable,True,CASI,CLUM,False,False,UNVERIFIED_TEXT_ONLY,False
+C0018,P1_multiref_OCR_review,CI4,CL4,glyph_confusable,True,CASI,CLUM,False,False,UNVERIFIED_TEXT_ONLY,False
+C0019,P1_multiref_OCR_review,CI5,CL5,glyph_confusable,True,CASI,CLUM,False,False,UNVERIFIED_TEXT_ONLY,False
+C0020,P1_multiref_OCR_review,CIL1,CLI1,adjacent_transposition,True,CILA-GENTILI,CIL LIL,False,False,UNVERIFIED_TEXT_ONLY,False
+C0020,P1_multiref_OCR_review,CIL1,CLL1,glyph_confusable,True,CILA-GENTILI,COLL,False,False,UNVERIFIED_TEXT_ONLY,False
+C0021,P1_multiref_OCR_review,CIS1,CLS1,glyph_confusable,True,CAS-CISMA,CIELS,False,False,UNVERIFIED_TEXT_ONLY,False
+C0021,P1_multiref_OCR_review,CIS1,ICS1,adjacent_transposition,False,CAS-CISMA,ICSA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0022,P1_multiref_OCR_review,CIS2,CLS2,glyph_confusable,True,CAS-CISMA,CIELS,False,False,UNVERIFIED_TEXT_ONLY,False
+C0022,P1_multiref_OCR_review,CIS2,ICS2,adjacent_transposition,False,CAS-CISMA,ICSA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0133,P4_typing_review,CIS2R,ICS2R,adjacent_transposition,False,CAS-CISMA,ICSA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0023,P1_multiref_OCR_review,CIS3,CLS3,glyph_confusable,True,CAS-CISMA,CIELS,False,False,UNVERIFIED_TEXT_ONLY,False
+C0023,P1_multiref_OCR_review,CIS3,ICS3,adjacent_transposition,False,CAS-CISMA,ICSA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0134,P4_typing_review,CIS5,ICS5,adjacent_transposition,False,CAS-CISMA,ICSA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0016,P1_multiref_OCR_review,CL2,LC2,adjacent_transposition,False,CLUM,LINCE,False,False,UNVERIFIED_TEXT_ONLY,False
+C0017,P1_multiref_OCR_review,CL3,LC3,adjacent_transposition,False,CLUM,LINCE,False,False,UNVERIFIED_TEXT_ONLY,False
+C0018,P1_multiref_OCR_review,CL4,LC4,adjacent_transposition,False,CLUM,LINCE,False,False,UNVERIFIED_TEXT_ONLY,False
+C0019,P1_multiref_OCR_review,CL5,LC5,adjacent_transposition,False,CLUM,LINCE,False,False,UNVERIFIED_TEXT_ONLY,False
+C0020,P1_multiref_OCR_review,CLI1,CLL1,glyph_confusable,True,CIL LIL,COLL,False,False,UNVERIFIED_TEXT_ONLY,False
+C0135,P4_typing_review,CM1,MC1,adjacent_transposition,False,CEMA,MCM,False,False,UNVERIFIED_TEXT_ONLY,False
+C0136,P4_typing_review,CM1R,MC1R,adjacent_transposition,False,CEMA,MCM,False,False,UNVERIFIED_TEXT_ONLY,False
+C0137,P4_typing_review,CM2,MC2,adjacent_transposition,False,GIOBERT,MCM,False,False,UNVERIFIED_TEXT_ONLY,False
+C0138,P4_typing_review,CM2R,MC2R,adjacent_transposition,False,GIOBERT,,False,True,UNVERIFIED_TEXT_ONLY,False
+C0139,P4_typing_review,CM3,MC3,adjacent_transposition,False,CEMA,MCM,False,False,UNVERIFIED_TEXT_ONLY,False
+C0140,P4_typing_review,CM4,MC4,adjacent_transposition,False,CEMA,,False,True,UNVERIFIED_TEXT_ONLY,False
+C0141,P4_typing_review,CM4R,MC4R,adjacent_transposition,False,CEMA,MCM,False,False,UNVERIFIED_TEXT_ONLY,False
+C0142,P4_typing_review,CO1,OC1,adjacent_transposition,False,COTICO,OMEC,False,False,UNVERIFIED_TEXT_ONLY,False
+C0024,P3_multiref_typing_review,CO1R,COR1,adjacent_transposition,False,COTICO,CORONA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0024,P3_multiref_typing_review,CO1R,OC1R,adjacent_transposition,False,COTICO,,False,True,UNVERIFIED_TEXT_ONLY,False
+C0143,P4_typing_review,CR3R,RC3R,adjacent_transposition,False,CLAUSOR,CINA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0144,P4_typing_review,CR5R,RC5R,adjacent_transposition,False,CLAUSOR,CINA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0145,P4_typing_review,CS119,CS191,adjacent_transposition,False,CISA,CISA,True,False,UNVERIFIED_TEXT_ONLY,False
+C0146,P4_typing_review,CS12,CS21,adjacent_transposition,False,ALA,CISA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0147,P4_typing_review,CS12R,CS21R,adjacent_transposition,False,ALA,CISA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0148,P4_typing_review,CS13,CS31,adjacent_transposition,False,CISA,CISA,True,False,UNVERIFIED_TEXT_ONLY,False
+C0149,P4_typing_review,CS168,CS186,adjacent_transposition,False,CISA,CISA,True,False,UNVERIFIED_TEXT_ONLY,False
+C0150,P4_typing_review,CS178,CS187,adjacent_transposition,False,CISA,CISA,True,False,UNVERIFIED_TEXT_ONLY,False
+C0151,P4_typing_review,CS23,CS32,adjacent_transposition,False,CISA,BUGA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0152,P4_typing_review,CS23R,CS32R,adjacent_transposition,False,CISA,BUGA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0153,P4_typing_review,CS24,CS42,adjacent_transposition,False,CISA,CISA,True,False,UNVERIFIED_TEXT_ONLY,False
+C0154,P4_typing_review,CS26,CS62,adjacent_transposition,False,CISA,CISA,True,False,UNVERIFIED_TEXT_ONLY,False
+C0155,P4_typing_review,CT1,TC1,adjacent_transposition,False,CRISTANI,TICINO,False,False,UNVERIFIED_TEXT_ONLY,False
+C0156,P4_typing_review,CT1R,TC1R,adjacent_transposition,False,CRISTANI,TICINO,False,False,UNVERIFIED_TEXT_ONLY,False
+C0157,P4_typing_review,CV1,VC1,adjacent_transposition,False,CANDAVEN CV,VECO,False,False,UNVERIFIED_TEXT_ONLY,False
+C0158,P4_typing_review,CW1,WC1,adjacent_transposition,False,CROWN,WHITCO,False,False,UNVERIFIED_TEXT_ONLY,False
+C0025,P3_multiref_typing_review,DCR1,DRC1,adjacent_transposition,False,DOUBLE CIRCLE,DORIC,False,False,UNVERIFIED_TEXT_ONLY,False
+C0159,P4_typing_review,DM11,MD11,adjacent_transposition,False,DOM,MEDECO,False,False,UNVERIFIED_TEXT_ONLY,False
+C0160,P4_typing_review,DM1R,MD1R,adjacent_transposition,False,DOM,MEDECO,False,False,UNVERIFIED_TEXT_ONLY,False
+C0161,P4_typing_review,DM23,DM32,adjacent_transposition,False,DOM,DOM,True,False,UNVERIFIED_TEXT_ONLY,False
+C0162,P4_typing_review,DM24,DM42,adjacent_transposition,False,DOM,DOM,True,False,UNVERIFIED_TEXT_ONLY,False
+C0163,P4_typing_review,DM34,DM43,adjacent_transposition,False,DOM,DOM,True,False,UNVERIFIED_TEXT_ONLY,False
+C0164,P4_typing_review,DM4,MD4,adjacent_transposition,False,,MEDECO,False,True,UNVERIFIED_TEXT_ONLY,False
+C0165,P4_typing_review,DM49,DM94,adjacent_transposition,False,DOM,DOM,True,False,UNVERIFIED_TEXT_ONLY,False
+C0166,P4_typing_review,DM6,MD6,adjacent_transposition,False,DOM,MEDECO,False,False,UNVERIFIED_TEXT_ONLY,False
+C0167,P4_typing_review,DM7,MD7,adjacent_transposition,False,,MEDECO,False,True,UNVERIFIED_TEXT_ONLY,False
+C0168,P4_typing_review,DM8R,MD8R,adjacent_transposition,False,DOM,MEDECO,False,False,UNVERIFIED_TEXT_ONLY,False
+C0169,P4_typing_review,DP1,PD1,adjacent_transposition,False,DUPLOMATIC,PUNDRA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0025,P3_multiref_typing_review,DRC1,RDC1,adjacent_transposition,False,DORIC,,False,True,UNVERIFIED_TEXT_ONLY,False
+C0170,P4_typing_review,DS1,SD1,adjacent_transposition,False,DOMUS (IT),SIDLEEN,False,False,UNVERIFIED_TEXT_ONLY,False
+C0171,P4_typing_review,DS2,SD2,adjacent_transposition,False,DOMUS (IT),SIDLEEN,False,False,UNVERIFIED_TEXT_ONLY,False
+C0172,P4_typing_review,DY1,YD1,adjacent_transposition,False,DAIYA,YANMAR,False,False,UNVERIFIED_TEXT_ONLY,False
+C0173,P4_typing_review,DY1R,YD1R,adjacent_transposition,False,DAIYA,YARDENI,False,False,UNVERIFIED_TEXT_ONLY,False
+C0174,P4_typing_review,EG1,GE1,adjacent_transposition,False,EAGLE,GEGE,False,False,UNVERIFIED_TEXT_ONLY,False
+C0175,P4_typing_review,EG2,GE2,adjacent_transposition,False,EAGLE,GEGE,False,False,UNVERIFIED_TEXT_ONLY,False
+C0176,P4_typing_review,EG2R,GE2R,adjacent_transposition,False,EAGLE,GEGE,False,False,UNVERIFIED_TEXT_ONLY,False
+C0177,P4_typing_review,EK1,KE1,adjacent_transposition,False,EUREKA,KASSEL,False,False,UNVERIFIED_TEXT_ONLY,False
+C0178,P4_typing_review,EK2,KE2,adjacent_transposition,False,EUREKA,KESO,False,False,UNVERIFIED_TEXT_ONLY,False
+C0179,P4_typing_review,EK3,KE3,adjacent_transposition,False,EUROBOX,KESO,False,False,UNVERIFIED_TEXT_ONLY,False
+C0180,P4_typing_review,EK4,KE4,adjacent_transposition,False,EUREKA,KESO,False,False,UNVERIFIED_TEXT_ONLY,False
+C0026,P3_multiref_typing_review,EM2R,ME2R,adjacent_transposition,False,EMR,MELSMETALL,False,False,UNVERIFIED_TEXT_ONLY,False
+C0181,P4_typing_review,EM3,ME3,adjacent_transposition,False,EMR,MELSMETALL,False,False,UNVERIFIED_TEXT_ONLY,False
+C0182,P4_typing_review,EM4,ME4,adjacent_transposition,False,EMR,MELSMETALL,False,False,UNVERIFIED_TEXT_ONLY,False
+C0183,P4_typing_review,ES1,SE1,adjacent_transposition,False,ESA,SELECT,False,False,UNVERIFIED_TEXT_ONLY,False
+C0184,P4_typing_review,ES1R,SE1R,adjacent_transposition,False,ESA,SELMACH,False,False,UNVERIFIED_TEXT_ONLY,False
+C0185,P4_typing_review,ET1,TE1,adjacent_transposition,False,ETNA,TESA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0186,P4_typing_review,ET1R,TE1R,adjacent_transposition,False,ETNA,TESA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0187,P4_typing_review,EU1R,EUR1,adjacent_transposition,False,EURO LOCKS,EURO PLUS,False,False,UNVERIFIED_TEXT_ONLY,False
+C0027,P3_multiref_typing_review,EU2R,EUR2,adjacent_transposition,False,EURO LOCKS,EURO PLUS,False,False,UNVERIFIED_TEXT_ONLY,False
+C0027,P3_multiref_typing_review,EU2R,UE2R,adjacent_transposition,False,EURO LOCKS,UEME,False,False,UNVERIFIED_TEXT_ONLY,False
+C0188,P4_typing_review,EU4R,UE4R,adjacent_transposition,False,EURO LOCKS,UEME,False,False,UNVERIFIED_TEXT_ONLY,False
+C0189,P4_typing_review,EU5R,UE5R,adjacent_transposition,False,EURO LOCKS,UEME,False,False,UNVERIFIED_TEXT_ONLY,False
+C0190,P4_typing_review,EZ1,ZE1,adjacent_transposition,False,EZCURRA,ZEISS IKON,False,False,UNVERIFIED_TEXT_ONLY,False
+C0191,P4_typing_review,EZ3,ZE3,adjacent_transposition,False,EZCURRA,ZEISS IKON,False,False,UNVERIFIED_TEXT_ONLY,False
+C0192,P4_typing_review,EZ4,ZE4,adjacent_transposition,False,EZCURRA,ZEISS IKON,False,False,UNVERIFIED_TEXT_ONLY,False
+C0193,P4_typing_review,EZ5,ZE5,adjacent_transposition,False,EZCURRA,ZEISS IKON,False,False,UNVERIFIED_TEXT_ONLY,False
+C0194,P4_typing_review,EZ7,ZE7,adjacent_transposition,False,EZCURRA,ZEISS IKON,False,False,UNVERIFIED_TEXT_ONLY,False
+C0195,P4_typing_review,FAC13,FAC31,adjacent_transposition,False,,FAC,False,True,UNVERIFIED_TEXT_ONLY,False
+C0196,P4_typing_review,FAC1R,FCA1R,adjacent_transposition,False,FAC,FAICA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0197,P4_typing_review,FH1R,HF1R,adjacent_transposition,False,,HÄFELE,False,True,UNVERIFIED_TEXT_ONLY,False
+C0028,P1_multiref_OCR_review,FI1,IF1,adjacent_transposition,False,FIAM,IES,False,False,UNVERIFIED_TEXT_ONLY,False
+C0198,P4_typing_review,FI1R,FIR1,adjacent_transposition,False,FIAM,FIRMADOOR,False,False,UNVERIFIED_TEXT_ONLY,False
+C0003,P1_multiref_OCR_review,FI2,FL2,glyph_confusable,True,FIAM,FLORA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0003,P1_multiref_OCR_review,FI2,IF2,adjacent_transposition,False,FIAM,IFAM,False,False,UNVERIFIED_TEXT_ONLY,False
+C0029,P3_multiref_typing_review,FI3R,FIR3,adjacent_transposition,False,FIAM,FIRST,False,False,UNVERIFIED_TEXT_ONLY,False
+C0029,P3_multiref_typing_review,FI3R,IF3R,adjacent_transposition,False,FIAM,IFAM,False,False,UNVERIFIED_TEXT_ONLY,False
+C0030,P1_multiref_OCR_review,FI6,IF6,adjacent_transposition,False,FIAM,IFAM,False,False,UNVERIFIED_TEXT_ONLY,False
+C0004,P1_multiref_OCR_review,FK1,KF1,adjacent_transposition,False,FLIK,KFV,False,False,UNVERIFIED_TEXT_ONLY,False
+C0003,P1_multiref_OCR_review,FL2,LF2,adjacent_transposition,False,FLORA,EURO LOCKS,False,False,UNVERIFIED_TEXT_ONLY,False
+C0199,P4_typing_review,FM1,MF1,adjacent_transposition,False,FASEM,MEDECO,False,False,UNVERIFIED_TEXT_ONLY,False
+C0200,P4_typing_review,FN1,NF1,adjacent_transposition,False,FAICA,NELFA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0201,P4_typing_review,FS1,SF1,adjacent_transposition,False,FAS,SAFE,False,False,UNVERIFIED_TEXT_ONLY,False
+C0202,P4_typing_review,GE23,GE32,adjacent_transposition,False,GEGE,GEGE,True,False,UNVERIFIED_TEXT_ONLY,False
+C0203,P4_typing_review,GL12R,GL21R,adjacent_transposition,False,GLOBE,GLOBE,True,False,UNVERIFIED_TEXT_ONLY,False
+C0204,P4_typing_review,GP1,PG1,adjacent_transposition,False,GIP,PERINO PG,False,False,UNVERIFIED_TEXT_ONLY,False
+C0205,P4_typing_review,GS1,SG1,adjacent_transposition,False,GIUSSANI,SHANGHAI,False,False,UNVERIFIED_TEXT_ONLY,False
+C0206,P4_typing_review,GT1,TG1,adjacent_transposition,False,GIOBERT,TIGRIS,False,False,UNVERIFIED_TEXT_ONLY,False
+C0207,P4_typing_review,GV1,VG1,adjacent_transposition,False,GTV,VING,False,False,UNVERIFIED_TEXT_ONLY,False
+C0208,P4_typing_review,GV2,VG2,adjacent_transposition,False,GTV,VING,False,False,UNVERIFIED_TEXT_ONLY,False
+C0209,P4_typing_review,GV3,VG3,adjacent_transposition,False,GTV,VING,False,False,UNVERIFIED_TEXT_ONLY,False
+C0210,P4_typing_review,H1R,HR1,adjacent_transposition,False,HK,HR,False,False,UNVERIFIED_TEXT_ONLY,False
+C0211,P4_typing_review,HM2,MH2,adjacent_transposition,False,HAMA,MICHEL-SEAT,False,False,UNVERIFIED_TEXT_ONLY,False
+C0212,P4_typing_review,HM3,MH3,adjacent_transposition,False,HAMA,MICHEL-SEAT,False,False,UNVERIFIED_TEXT_ONLY,False
+C0213,P4_typing_review,HW1,WH1,adjacent_transposition,False,HUWIL,WILSON BOHANNON,False,False,UNVERIFIED_TEXT_ONLY,False
+C0028,P1_multiref_OCR_review,IF1,LF1,glyph_confusable,True,IES,LOWE & FLETCHER,False,False,UNVERIFIED_TEXT_ONLY,False
+C0214,P2_OCR_review,IF14,LF14,glyph_confusable,True,IFAM,LOWE & FLETCHER,False,False,UNVERIFIED_TEXT_ONLY,False
+C0031,P1_multiref_OCR_review,IF15R,LF15R,glyph_confusable,True,IFAM,EURO LOCKS,False,False,UNVERIFIED_TEXT_ONLY,False
+C0215,P2_OCR_review,IF16,LF16,glyph_confusable,True,IFAM,LOWE & FLETCHER,False,False,UNVERIFIED_TEXT_ONLY,False
+C0216,P2_OCR_review,IF17,LF17,glyph_confusable,True,IFAM,LOWE & FLETCHER,False,False,UNVERIFIED_TEXT_ONLY,False
+C0003,P1_multiref_OCR_review,IF2,LF2,glyph_confusable,True,IFAM,EURO LOCKS,False,False,UNVERIFIED_TEXT_ONLY,False
+C0217,P2_OCR_review,IF3,LF3,glyph_confusable,True,IFAM,LOWE & FLETCHER,False,False,UNVERIFIED_TEXT_ONLY,False
+C0030,P1_multiref_OCR_review,IF6,LF6,glyph_confusable,True,IFAM,LOWE & FLETCHER,False,False,UNVERIFIED_TEXT_ONLY,False
+C0218,P2_OCR_review,IF7,LF7,glyph_confusable,True,IFAM,EURO LOCKS,False,False,UNVERIFIED_TEXT_ONLY,False
+C0219,P2_OCR_review,IF8,LF8,glyph_confusable,True,IFAM,LOWE & FLETCHER,False,False,UNVERIFIED_TEXT_ONLY,False
+C0220,P2_OCR_review,IF8R,LF8R,glyph_confusable,True,IFAM,EURO LOCKS,False,False,UNVERIFIED_TEXT_ONLY,False
+C0221,P2_OCR_review,IL1,LL1,glyph_confusable,True,ILARGI,LOCKWOOD,False,False,UNVERIFIED_TEXT_ONLY,False
+C0222,P4_typing_review,IM1,MI1,adjacent_transposition,False,IMSA,MORI E.,False,False,UNVERIFIED_TEXT_ONLY,False
+C0223,P4_typing_review,IM2,MI2,adjacent_transposition,False,IMSA,MORI E.,False,False,UNVERIFIED_TEXT_ONLY,False
+C0032,P1_multiref_OCR_review,IM3R,LM3R,glyph_confusable,True,IMSA,LUMA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0032,P1_multiref_OCR_review,IM3R,MI3R,adjacent_transposition,False,IMSA,MORI E.,False,False,UNVERIFIED_TEXT_ONLY,False
+C0224,P2_OCR_review,IM4R,LM4R,glyph_confusable,True,IMSA,LUMA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0225,P4_typing_review,IM5R,MI5R,adjacent_transposition,False,,MORI E.,False,True,UNVERIFIED_TEXT_ONLY,False
+C0226,P2_OCR_review,IN1,LN1,glyph_confusable,True,ILLINOIS,LN,False,False,UNVERIFIED_TEXT_ONLY,False
+C0005,P1_multiref_OCR_review,IS1,LS1,glyph_confusable,True,IGS,RENZ,False,False,UNVERIFIED_TEXT_ONLY,False
+C0005,P1_multiref_OCR_review,IS1,SI1,adjacent_transposition,False,IGS,SOFI-SONAFI,False,False,UNVERIFIED_TEXT_ONLY,False
+C0227,P2_OCR_review,IS2,LS2,glyph_confusable,True,IGS,RENZ,False,False,UNVERIFIED_TEXT_ONLY,False
+C0006,P1_multiref_OCR_review,IT1,LT1,glyph_confusable,True,INT,BKS,False,False,UNVERIFIED_TEXT_ONLY,False
+C0006,P1_multiref_OCR_review,IT1,TI1,adjacent_transposition,False,INT,TIK,False,False,UNVERIFIED_TEXT_ONLY,False
+C0033,P1_multiref_OCR_review,IT2,LT2,glyph_confusable,True,INT,LITTO,False,False,UNVERIFIED_TEXT_ONLY,False
+C0228,P2_OCR_review,IW1R,LW1R,glyph_confusable,True,IWATA,LOCKWOOD,False,False,UNVERIFIED_TEXT_ONLY,False
+C0229,P2_OCR_review,IX1,LX1,glyph_confusable,True,IALEX,LUX,False,False,UNVERIFIED_TEXT_ONLY,False
+C0230,P2_OCR_review,IX1R,LX1R,glyph_confusable,True,IALEX,LUX,False,False,UNVERIFIED_TEXT_ONLY,False
+C0231,P4_typing_review,JS1R,SJ1R,adjacent_transposition,False,JIS,SJL,False,False,UNVERIFIED_TEXT_ONLY,False
+C0232,P4_typing_review,JW1R,WJ1R,adjacent_transposition,False,JUWEL,WANJIN,False,False,UNVERIFIED_TEXT_ONLY,False
+C0233,P4_typing_review,KER1,KRE1,adjacent_transposition,False,KEYRACK,KREMENCHUK,False,False,UNVERIFIED_TEXT_ONLY,False
+C0004,P1_multiref_OCR_review,KF1,KFI,glyph_confusable,True,KFV,KFV,True,False,UNVERIFIED_TEXT_ONLY,False
+C0004,P1_multiref_OCR_review,KF1,KFL,glyph_confusable,True,KFV,KFV,True,False,UNVERIFIED_TEXT_ONLY,False
+C0004,P1_multiref_OCR_review,KFI,KFL,glyph_confusable,True,KFV,KFV,True,False,UNVERIFIED_TEXT_ONLY,False
+C0234,P4_typing_review,LB23,LB32,adjacent_transposition,False,LÅSBOLAGET,LÅSBOLAGET,True,False,UNVERIFIED_TEXT_ONLY,False
+C0031,P1_multiref_OCR_review,LF15R,LF51R,adjacent_transposition,False,EURO LOCKS,LOWE & FLETCHER,False,False,UNVERIFIED_TEXT_ONLY,False
+C0235,P4_typing_review,LF16R,LF61R,adjacent_transposition,False,LOWE & FLETCHER,LOWE & FLETCHER,True,False,UNVERIFIED_TEXT_ONLY,False
+C0236,P4_typing_review,LF23R,LF32R,adjacent_transposition,False,LOWE & FLETCHER,LOWE & FLETCHER,True,False,UNVERIFIED_TEXT_ONLY,False
+C0237,P4_typing_review,LF25,LF52,adjacent_transposition,False,LOWE & FLETCHER,LOWE & FLETCHER,True,False,UNVERIFIED_TEXT_ONLY,False
+C0238,P4_typing_review,LF26,LF62,adjacent_transposition,False,EURO LOCKS,LOWE & FLETCHER,False,False,UNVERIFIED_TEXT_ONLY,False
+C0239,P4_typing_review,LF35,LF53,adjacent_transposition,False,LOWE & FLETCHER,LOWE & FLETCHER,True,False,UNVERIFIED_TEXT_ONLY,False
+C0240,P4_typing_review,LH14P,LH41P,adjacent_transposition,False,LAPERCHE,LAPERCHE,True,False,UNVERIFIED_TEXT_ONLY,False
+C0241,P4_typing_review,LH24,LH42,adjacent_transposition,False,LAPERCHE,LAPERCHE,True,False,UNVERIFIED_TEXT_ONLY,False
+C0242,P4_typing_review,LP12,LP21,adjacent_transposition,False,LIPS,LIPS,True,False,UNVERIFIED_TEXT_ONLY,False
+C0243,P4_typing_review,LP14,LP41,adjacent_transposition,False,LIPS,LIPS,True,False,UNVERIFIED_TEXT_ONLY,False
+C0005,P1_multiref_OCR_review,LS1,SL1,adjacent_transposition,False,RENZ,SEGAL,False,False,UNVERIFIED_TEXT_ONLY,False
+C0006,P1_multiref_OCR_review,LT1,TL1,adjacent_transposition,False,BKS,TRI-CIRCLE,False,False,UNVERIFIED_TEXT_ONLY,False
+C0033,P1_multiref_OCR_review,LT2,TL2,adjacent_transposition,False,LITTO,TRI-CIRCLE,False,False,UNVERIFIED_TEXT_ONLY,False
+C0244,P4_typing_review,LT3,TL3,adjacent_transposition,False,LITTO,TRI-CIRCLE,False,False,UNVERIFIED_TEXT_ONLY,False
+C0245,P4_typing_review,LT4,TL4,adjacent_transposition,False,LITTO,TRI-CIRCLE,False,False,UNVERIFIED_TEXT_ONLY,False
+C0246,P4_typing_review,LT5,TL5,adjacent_transposition,False,LITTO,TRI-CIRCLE,False,False,UNVERIFIED_TEXT_ONLY,False
+C0247,P4_typing_review,LT6R,TL6R,adjacent_transposition,False,LITTO,TRI-CIRCLE,False,False,UNVERIFIED_TEXT_ONLY,False
+C0248,P4_typing_review,LW12R,LW21R,adjacent_transposition,False,LOCKWOOD,LOCKWOOD,True,False,UNVERIFIED_TEXT_ONLY,False
+C0249,P4_typing_review,MC12,MC21,adjacent_transposition,False,MCM,MCM,True,False,UNVERIFIED_TEXT_ONLY,False
+C0250,P4_typing_review,MCE1,MEC1,adjacent_transposition,False,MEC,MECO,False,False,UNVERIFIED_TEXT_ONLY,False
+C0026,P3_multiref_typing_review,ME2R,MER2,adjacent_transposition,False,MELSMETALL,MERONI,False,False,UNVERIFIED_TEXT_ONLY,False
+C0251,P4_typing_review,ME4R,MER4,adjacent_transposition,False,MELSMETALL,MERONI,False,False,UNVERIFIED_TEXT_ONLY,False
+C0252,P4_typing_review,ME5R,MER5,adjacent_transposition,False,MELSMETALL,MERONI,False,False,UNVERIFIED_TEXT_ONLY,False
+C0253,P4_typing_review,MER23,MER32,adjacent_transposition,False,MERONI,MERONI,True,False,UNVERIFIED_TEXT_ONLY,False
+C0254,P4_typing_review,MER34R,MER43R,adjacent_transposition,False,MERONI,MERONI,True,False,UNVERIFIED_TEXT_ONLY,False
+C0255,P4_typing_review,MS1,SM1,adjacent_transposition,False,MASTER,BRETER,False,False,UNVERIFIED_TEXT_ONLY,False
+C0034,P1_multiref_OCR_review,MS11,MSL1,glyph_confusable,True,MASTER,MASTER LOCK,False,False,UNVERIFIED_TEXT_ONLY,False
+C0034,P1_multiref_OCR_review,MS11,SM11,adjacent_transposition,False,MASTER,SIS (IT),False,False,UNVERIFIED_TEXT_ONLY,False
+C0035,P1_multiref_OCR_review,MS12,MSL2,glyph_confusable,True,MASTER,MASTER LOCK,False,False,UNVERIFIED_TEXT_ONLY,False
+C0035,P1_multiref_OCR_review,MS12,SM12,adjacent_transposition,False,MASTER,SIMECA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0256,P4_typing_review,MS16,SM16,adjacent_transposition,False,MASTER,SIMECA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0257,P4_typing_review,MS3,SM3,adjacent_transposition,False,MASTER,SIMECA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0258,P4_typing_review,MS6,SM6,adjacent_transposition,False,MASTER,SIMECA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0259,P4_typing_review,MS8,SM8,adjacent_transposition,False,MASTER,SIMECA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0260,P4_typing_review,MS9R,SM9R,adjacent_transposition,False,MASTER,SIMECA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0261,P4_typing_review,MST1,MTS1,adjacent_transposition,False,MOSRENTGEN,MOTORSICH,False,False,UNVERIFIED_TEXT_ONLY,False
+C0262,P4_typing_review,NP1R,PN1R,adjacent_transposition,False,NEPTUNE,PERINO PG,False,False,UNVERIFIED_TEXT_ONLY,False
+C0263,P4_typing_review,OR1R,RO1R,adjacent_transposition,False,ORDO,RONIS,False,False,UNVERIFIED_TEXT_ONLY,False
+C0264,P2_OCR_review,PC11R,PCL1R,glyph_confusable,True,P.C. (CORTELLEZZI),PACO LOCKS,False,False,UNVERIFIED_TEXT_ONLY,False
+C0265,P4_typing_review,PDO12,PDO21,adjacent_transposition,False,PADO,PADO,True,False,UNVERIFIED_TEXT_ONLY,False
+C0266,P4_typing_review,PDO12R,PDO21R,adjacent_transposition,False,PADO,PADO,True,False,UNVERIFIED_TEXT_ONLY,False
+C0267,P4_typing_review,PF12,PF21,adjacent_transposition,False,PREFER,PREFER,True,False,UNVERIFIED_TEXT_ONLY,False
+C0268,P4_typing_review,PT1,TP1,adjacent_transposition,False,POTENT,BASSI,False,False,UNVERIFIED_TEXT_ONLY,False
+C0269,P4_typing_review,PT1R,TP1R,adjacent_transposition,False,POTENT,TAMPALINI,False,False,UNVERIFIED_TEXT_ONLY,False
+C0270,P4_typing_review,PT2,TP2,adjacent_transposition,False,POTENT,TAMPALINI,False,False,UNVERIFIED_TEXT_ONLY,False
+C0271,P4_typing_review,RC12R,RC21R,adjacent_transposition,False,CINA,CINA,True,False,UNVERIFIED_TEXT_ONLY,False
+C0272,P4_typing_review,RO12,RO21,adjacent_transposition,False,RONIS,RONIS,True,False,UNVERIFIED_TEXT_ONLY,False
+C0273,P4_typing_review,RO12R,RO21R,adjacent_transposition,False,RONIS,RONIS,True,False,UNVERIFIED_TEXT_ONLY,False
+C0274,P4_typing_review,RO14,RO41,adjacent_transposition,False,RONIS,VACHETTE,False,False,UNVERIFIED_TEXT_ONLY,False
+C0275,P4_typing_review,RO15,RO51,adjacent_transposition,False,RONIS,RONIS,True,False,UNVERIFIED_TEXT_ONLY,False
+C0276,P4_typing_review,RO68,RO86,adjacent_transposition,False,RONIS,RONIS,True,False,UNVERIFIED_TEXT_ONLY,False
+C0277,P4_typing_review,RU1,UR1,adjacent_transposition,False,RUKO,URKO,False,False,UNVERIFIED_TEXT_ONLY,False
+C0278,P4_typing_review,RU1R,UR1R,adjacent_transposition,False,RUKO,URKO,False,False,UNVERIFIED_TEXT_ONLY,False
+C0279,P4_typing_review,RV1,VR1,adjacent_transposition,False,RIVERS,VERA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0280,P4_typing_review,SA1R,SAR1,adjacent_transposition,False,SAMSONITE,SARGENT,False,False,UNVERIFIED_TEXT_ONLY,False
+C0281,P4_typing_review,SA2R,SAR2,adjacent_transposition,False,SAMSONITE,SARGENT,False,False,UNVERIFIED_TEXT_ONLY,False
+C0282,P4_typing_review,SA3R,SAR3,adjacent_transposition,False,SAMSONITE,SARGENT,False,False,UNVERIFIED_TEXT_ONLY,False
+C0283,P4_typing_review,SAM1,SMA1,adjacent_transposition,False,SQUIRE & SONS,SAM,False,False,UNVERIFIED_TEXT_ONLY,False
+C0284,P4_typing_review,SDT1R,STD1R,adjacent_transposition,False,SÜDMETALL,STANDERS,False,False,UNVERIFIED_TEXT_ONLY,False
+C0005,P1_multiref_OCR_review,SI1,SL1,glyph_confusable,True,SOFI-SONAFI,SEGAL,False,False,UNVERIFIED_TEXT_ONLY,False
+C0285,P4_typing_review,ST1,TS1,adjacent_transposition,False,SCHLECHTENDAHL,TRAINS,False,False,UNVERIFIED_TEXT_ONLY,False
+C0286,P4_typing_review,SW2,WS2,adjacent_transposition,False,SWEDA,WESLOCK,False,False,UNVERIFIED_TEXT_ONLY,False
+C0287,P4_typing_review,SW3,WS3,adjacent_transposition,False,SWEDA,WESLOCK,False,False,UNVERIFIED_TEXT_ONLY,False
+C0288,P4_typing_review,SWA1,WSA1,adjacent_transposition,False,SHOWA,WASA-IVANA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0006,P1_multiref_OCR_review,TI1,TL1,glyph_confusable,True,TIK,TRI-CIRCLE,False,False,UNVERIFIED_TEXT_ONLY,False
+C0289,P4_typing_review,TN13R,TN31R,adjacent_transposition,False,TITAN,TITAN,True,False,UNVERIFIED_TEXT_ONLY,False
+C0290,P4_typing_review,TN23,TN32,adjacent_transposition,False,TITAN,TITAN,True,False,UNVERIFIED_TEXT_ONLY,False
+C0291,P2_OCR_review,TO11,TOL1,glyph_confusable,True,TOK-WINKHAUS,TULA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0036,P1_multiref_OCR_review,TO12,TO21,adjacent_transposition,False,TOK-TRELOCK,TOK-WINKHAUS,False,False,UNVERIFIED_TEXT_ONLY,False
+C0036,P1_multiref_OCR_review,TO12,TOL2,glyph_confusable,True,TOK-TRELOCK,TULA,False,False,UNVERIFIED_TEXT_ONLY,False
+C0292,P4_typing_review,TO16,TO61,adjacent_transposition,False,TOK-WINKHAUS,TOK-WINKHAUS,True,False,UNVERIFIED_TEXT_ONLY,False
+C0293,P4_typing_review,TO19,TO91,adjacent_transposition,False,TOK-WINKHAUS,TOK-WINKHAUS,True,False,UNVERIFIED_TEXT_ONLY,False
+C0294,P4_typing_review,TO34,TO43,adjacent_transposition,False,TOK-WINKHAUS,TOK-WINKHAUS,True,False,UNVERIFIED_TEXT_ONLY,False
+C0295,P4_typing_review,TO35,TO53,adjacent_transposition,False,TOK-WINKHAUS,TOK-WINKHAUS,True,False,UNVERIFIED_TEXT_ONLY,False
+C0296,P2_OCR_review,TR11R,TRI1R,glyph_confusable,True,TRIOVING,TRIMARK,False,False,UNVERIFIED_TEXT_ONLY,False
+C0297,P2_OCR_review,TR13R,TRI3R,glyph_confusable,True,TRIOVING,TRIMARK,False,False,UNVERIFIED_TEXT_ONLY,False
+C0298,P2_OCR_review,TR17R,TRI7R,glyph_confusable,True,TRIOVING,TRIMARK,False,False,UNVERIFIED_TEXT_ONLY,False
+C0299,P2_OCR_review,TR18R,TRI8R,glyph_confusable,True,TRIOVING,TRIMARK,False,False,UNVERIFIED_TEXT_ONLY,False
+C0300,P2_OCR_review,TR19R,TRI9R,glyph_confusable,True,TRIOVING,TRIMARK,False,False,UNVERIFIED_TEXT_ONLY,False
+C0301,P4_typing_review,TY1,YT1,adjacent_transposition,False,TAYLOR,YETI,False,False,UNVERIFIED_TEXT_ONLY,False
+C0302,P4_typing_review,UL046,UL064,adjacent_transposition,False,UNIVERSAL SERIE DISTINZIONE,UNIVERSAL SERIE DISTINZIONE,True,False,UNVERIFIED_TEXT_ONLY,False
+C0303,P4_typing_review,UNI13,UNI31,adjacent_transposition,False,UNION,UNION,True,False,UNVERIFIED_TEXT_ONLY,False
+C0304,P4_typing_review,UNI14,UNI41,adjacent_transposition,False,UNION,UNION,True,False,UNVERIFIED_TEXT_ONLY,False
+C0305,P4_typing_review,UNI15,UNI51,adjacent_transposition,False,UNION,UNION,True,False,UNVERIFIED_TEXT_ONLY,False
+C0306,P4_typing_review,UNI16,UNI61,adjacent_transposition,False,UNION,,False,True,UNVERIFIED_TEXT_ONLY,False
+C0307,P4_typing_review,UNI16R,UNI61R,adjacent_transposition,False,UNION,,False,True,UNVERIFIED_TEXT_ONLY,False
+C0308,P4_typing_review,UNI25,UNI52,adjacent_transposition,False,UNION,UNION,True,False,UNVERIFIED_TEXT_ONLY,False
+C0309,P4_typing_review,UNI45R,UNI54R,adjacent_transposition,False,UNION,UNION,True,False,UNVERIFIED_TEXT_ONLY,False
+C0310,P4_typing_review,VAC105,VAC150,adjacent_transposition,False,VACHETTE,VACHETTE,True,False,UNVERIFIED_TEXT_ONLY,False
+C0311,P4_typing_review,VAC106,VAC160,adjacent_transposition,False,VACHETTE,VACHETTE,True,False,UNVERIFIED_TEXT_ONLY,False
+C0312,P4_typing_review,VAC14,VAC41,adjacent_transposition,False,VACHETTE,VACHETTE,True,False,UNVERIFIED_TEXT_ONLY,False
+C0313,P4_typing_review,VAC17,VAC71,adjacent_transposition,False,VACHETTE,VACHETTE,True,False,UNVERIFIED_TEXT_ONLY,False
+C0314,P4_typing_review,VAC19,VAC91,adjacent_transposition,False,VACHETTE,VACHETTE,True,False,UNVERIFIED_TEXT_ONLY,False
+C0315,P4_typing_review,VAC45,VAC54,adjacent_transposition,False,,VACHETTE,False,True,UNVERIFIED_TEXT_ONLY,False
+C0316,P4_typing_review,VAC48,VAC84,adjacent_transposition,False,,,False,True,UNVERIFIED_TEXT_ONLY,False
+C0317,P4_typing_review,VAC68,VAC86,adjacent_transposition,False,VACHETTE,,False,True,UNVERIFIED_TEXT_ONLY,False
+C0318,P4_typing_review,VAC78,VAC87,adjacent_transposition,False,,,False,True,UNVERIFIED_TEXT_ONLY,False
+C0319,P2_OCR_review,VI2,VL2,glyph_confusable,True,,V.G.F. VILLATORE,False,True,UNVERIFIED_TEXT_ONLY,False
+C0320,P2_OCR_review,VI2R,VL2R,glyph_confusable,True,VIRO,V.G.F. VILLATORE,False,False,UNVERIFIED_TEXT_ONLY,False
+C0321,P2_OCR_review,VI3,VL3,glyph_confusable,True,VIRO,V.G.F. VILLATORE,False,False,UNVERIFIED_TEXT_ONLY,False
+C0322,P2_OCR_review,VI3R,VL3R,glyph_confusable,True,VIRO,V.G.F. VILLATORE,False,False,UNVERIFIED_TEXT_ONLY,False
+C0323,P2_OCR_review,VI4,VL4,glyph_confusable,True,VIRO,V.G.F. VILLATORE,False,False,UNVERIFIED_TEXT_ONLY,False
+C0324,P2_OCR_review,VI4R,VL4R,glyph_confusable,True,VIRO,V.G.F. VILLATORE,False,False,UNVERIFIED_TEXT_ONLY,False
+C0325,P2_OCR_review,WE12,WEI2,glyph_confusable,True,WELKA,WEISER,False,False,UNVERIFIED_TEXT_ONLY,False
+C0326,P2_OCR_review,WE13,WEI3,glyph_confusable,True,WELKA,WEISER,False,False,UNVERIFIED_TEXT_ONLY,False
+C0327,P2_OCR_review,WE14,WEI4,glyph_confusable,True,WELKA,WEISER,False,False,UNVERIFIED_TEXT_ONLY,False
+C0328,P2_OCR_review,WE15,WEI5,glyph_confusable,True,WELKA,WEISER,False,False,UNVERIFIED_TEXT_ONLY,False
+C0329,P4_typing_review,WK25R,WK52R,adjacent_transposition,False,WILKA,WILKA,True,False,UNVERIFIED_TEXT_ONLY,False
+C0330,P4_typing_review,WK29,WK92,adjacent_transposition,False,WILKA,WILKA,True,False,UNVERIFIED_TEXT_ONLY,False
+C0331,P4_typing_review,WK45R,WK54R,adjacent_transposition,False,WILKA,WILKA,True,False,UNVERIFIED_TEXT_ONLY,False
+C0332,P4_typing_review,WK69,WK96,adjacent_transposition,False,,WILKA,False,True,UNVERIFIED_TEXT_ONLY,False
+C0002,P3_multiref_typing_review,YA13,YA31,adjacent_transposition,False,YALE (IT),YALE (IT),True,False,UNVERIFIED_TEXT_ONLY,False
+C0333,P4_typing_review,YA13R,YA31R,adjacent_transposition,False,YALE (IT),YALE (IT),True,False,UNVERIFIED_TEXT_ONLY,False
+C0008,P3_multiref_typing_review,YA14,YA41,adjacent_transposition,False,YALE (IT),YALE (IT),True,False,UNVERIFIED_TEXT_ONLY,False
+C0009,P3_multiref_typing_review,YA15,YA51,adjacent_transposition,False,YALE,YALE (IT),False,False,UNVERIFIED_TEXT_ONLY,False
+C0010,P3_multiref_typing_review,YA16,YA61,adjacent_transposition,False,YALE,YALE (IT),False,False,UNVERIFIED_TEXT_ONLY,False
+C0011,P3_multiref_typing_review,YA17,YA71,adjacent_transposition,False,,YALE (DE) (GB),False,True,UNVERIFIED_TEXT_ONLY,False
+C0334,P4_typing_review,YA17R,YA71R,adjacent_transposition,False,YALE,YALE (DE) (GB),False,False,UNVERIFIED_TEXT_ONLY,False
+C0335,P4_typing_review,YA19,YA91,adjacent_transposition,False,YALE,YALE,True,False,UNVERIFIED_TEXT_ONLY,False
+C0336,P4_typing_review,YA1R,YAR1,adjacent_transposition,False,RABBIT,YANMAR,False,False,UNVERIFIED_TEXT_ONLY,False
+C0012,P3_multiref_typing_review,YA23,YA32,adjacent_transposition,False,YALE,,False,True,UNVERIFIED_TEXT_ONLY,False
+C0337,P4_typing_review,YA27R,YA72R,adjacent_transposition,False,XIEHE,YALE (DE) (GB),False,False,UNVERIFIED_TEXT_ONLY,False
+C0338,P4_typing_review,YA36,YA63,adjacent_transposition,False,YALE,YALE (IT),False,False,UNVERIFIED_TEXT_ONLY,False
+C0339,P4_typing_review,YA46,YA64,adjacent_transposition,False,YALE (IT),YALE,False,False,UNVERIFIED_TEXT_ONLY,False
+C0340,P4_typing_review,YA47,YA74,adjacent_transposition,False,YALE (IT),YALE (IT),True,False,UNVERIFIED_TEXT_ONLY,False
+C0341,P4_typing_review,YA48,YA84,adjacent_transposition,False,YALE (IT),YALE,False,False,UNVERIFIED_TEXT_ONLY,False
+C0342,P4_typing_review,YA49,YA94,adjacent_transposition,False,YALE (IT),YALE,False,False,UNVERIFIED_TEXT_ONLY,False
+C0343,P4_typing_review,YA68,YA86,adjacent_transposition,False,YALE,YALE,True,False,UNVERIFIED_TEXT_ONLY,False
+C0344,P4_typing_review,YA68R,YA86R,adjacent_transposition,False,,,False,True,UNVERIFIED_TEXT_ONLY,False
+C0345,P4_typing_review,ZE46R,ZE64R,adjacent_transposition,False,ZEISS IKON,ZEISS IKON,True,False,UNVERIFIED_TEXT_ONLY,False
