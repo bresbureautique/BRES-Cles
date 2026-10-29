@@ -1,0 +1,32 @@
+{
+  "milestone": "R363 / CAT-R363",
+  "created": "2026-10-29",
+  "stable": "V2.27 unchanged; no main branch write",
+  "app_archive": {
+    "file": "BRES_Cles_Mobile_V2_28_CHECKPOINT_R363.zip",
+    "size_bytes": 33155627,
+    "sha256": "6334786d8e97166b3c703a38add37b03d5fa0513a96d71646137fb7c7014ea12",
+    "file_count": 8853,
+    "manifest_count": 8852,
+    "bad_crc": null,
+    "bad_sha256_entries": [],
+    "verified": true,
+    "manifest_sha256": "7065f07fc7ba77578ec8416d0547ed020402bbced0365d16f828ca9eda9b59df"
+  },
+  "catalogue_archive": {
+    "file": "BRES_Cles_Catalogue_Audit_CAT_R363.zip",
+    "size_bytes": 3840907,
+    "sha256": "690737657888422b05e39e6e25a7d158d1125f1c6cd9508ff4d9787369673dbe",
+    "file_count": 1489,
+    "manifest_count": 1488,
+    "bad_crc": null,
+    "bad_sha256_entries": [],
+    "verified": true,
+    "manifest_sha256": "e5655df84dae89886eac1b1997ef11c2498524013eb8e0b66331943de1f1c0c1"
+  },
+  "verified_app_regression": true,
+  "verified_cat_regression": true,
+  "physical_samsung_R336_last_observed": "2026-10-27 PASS screenshot 192/192; result JSON absent",
+  "OCR_offline_certified": false,
+  "ok": true
+}
