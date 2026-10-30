@@ -1,0 +1,14 @@
+BRES Clés — 2026-10-30 — catalogue indépendant CAT-R364
+Stable V2.27 untouched. NO MERGE to main; catalogue is never activated.
+Restorable full ZIP (not stored on GitHub): /BRES Cles/Sauvegardes/BRES_Cles_Catalogue_Audit_CAT_R364.zip
+ZIP SHA-256: c9b9233a142985a651ec867470d9c78821e211b456e4d3f0d42bab5c699006f8
+ZIP: 3,912,658 bytes, 1,498 entries; CRC PASS and 1,497 internal SHA-256 manifest entries verified.
+5,103 distinct references, 10 canonical chunks unchanged.
+64 theoretical glyph-normalization review groups, 130 source references, 68 OCR-risk pairs; remaining 325/393 pairs are typing transpositions.
+12/12 builder checks, 11/11 independent checks PASS; no maker, physical key or OCR equivalence confirmed.
+GitHub byte-identical sources/proofs (git blob SHA):
+catalogue_fold_homograph_audit_cat_r364.py 6bf70df44a3a48b3879b1cb51f6819da824fc875
+verify_catalogue_cat_r364.py 69d78ceafc8085598614da85c08738f1091649b1
+CAT_R364_OCR_FOLD_AUDIT.json 8ac25d61f165f1506cf4fa06388572f68a4a7040
+CAT_R364_VERIFICATION.json 45e6b327938617b1202c13b4146a6ea36dcc52f2
+Full ZIP also re-downloaded from Library and checked byte-for-byte with source; CRC+internal manifest PASS.
