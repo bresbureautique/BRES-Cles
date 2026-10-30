@@ -1,0 +1,96 @@
+{
+  "schema": "bres-r364-checkpoint-verification-v1",
+  "milestone": "R364",
+  "parent": "R363",
+  "parent_file_count": 8852,
+  "changed_parent_files": [
+    "index.html"
+  ],
+  "checks": {
+    "R363_index_parent_sha256_exact": true,
+    "all_R363_parent_files_present": true,
+    "only_index_modified_from_parent": true,
+    "patch_is_identical_to_source_replay": true,
+    "R331_core_benchmark_unchanged": true,
+    "R336_benchmark_unchanged": true,
+    "R336_autonomous_unchanged": true,
+    "R305_OCR_rule_and_pilot_unchanged": true,
+    "new_offline_18_checks_PASS": true,
+    "preflight_has_no_recognition_validation": true,
+    "seven_prior_regression_replays_PASS": true,
+    "prior_130_cases_without_unsafe_result": true,
+    "parent_732_text_collisions_still_fail_closed": true,
+    "full_V3_catalogue_not_embedded": true,
+    "offline_dependency_gap_not_hidden": true,
+    "V227_still_stable_V228_only_test": true
+  },
+  "replays": {
+    "r363_ocr_readiness_collision_regression.py": {
+      "ok": true,
+      "checks": 14,
+      "expected": 14,
+      "unsafe_results": 0,
+      "tested_references": null,
+      "stderr": ""
+    },
+    "r362_samsung_autonomous_launcher_regression.py": {
+      "ok": true,
+      "checks": 13,
+      "expected": 13,
+      "unsafe_results": 0,
+      "tested_references": null,
+      "stderr": ""
+    },
+    "r361_thickness_staleness_regression.py": {
+      "ok": true,
+      "checks": 15,
+      "expected": 15,
+      "unsafe_results": 0,
+      "tested_references": null,
+      "stderr": ""
+    },
+    "r360_stale_feedback_regression.py": {
+      "ok": true,
+      "checks": 16,
+      "expected": 16,
+      "unsafe_results": 0,
+      "tested_references": null,
+      "stderr": ""
+    },
+    "r359_manual_state_transition_regression.py": {
+      "ok": true,
+      "checks": 14,
+      "expected": 14,
+      "unsafe_results": 0,
+      "tested_references": null,
+      "stderr": ""
+    },
+    "r358_pilot_confusable_regression.py": {
+      "ok": true,
+      "checks": 10,
+      "expected": 10,
+      "unsafe_results": 0,
+      "tested_references": 130,
+      "stderr": ""
+    },
+    "r356_chromium_offline_smoke.py": {
+      "ok": true,
+      "checks": 10,
+      "expected": 10,
+      "unsafe_results": 0,
+      "tested_references": null,
+      "stderr": ""
+    }
+  },
+  "new_browser_test": {
+    "returncode": 0,
+    "stdout": "{\"ok\": true, \"checks\": 18, \"failed\": [], \"errors\": []}"
+  },
+  "ok": true,
+  "limitations": [
+    "Cold offline Tesseract worker/WASM/traineddata not bundled",
+    "R336 Android local screenshot PASS; raw JSON receipt absent",
+    "No real known key validation or manufacturer proof",
+    "No V2.27 deployment, no GitHub main change"
+  ]
+}
