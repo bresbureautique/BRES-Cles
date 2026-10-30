@@ -1,0 +1,15 @@
+BRES Clés — 2026-10-30 — application V2.28 TEST R156 checkpoint R364
+Stable: V2.27, main 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8 unchanged. NO PROMOTION.
+Restorable full ZIP (not stored on GitHub): /BRES Cles/Sauvegardes/BRES_Cles_Mobile_V2_28_CHECKPOINT_R364.zip
+ZIP SHA-256: 63fd49f5553c394134d6f426b56f08fbb5a9e076cbc99b892eb1316f699e48ba
+ZIP: 33,552,371 bytes, 8,862 entries; CRC PASS and 8,861 internal SHA-256 manifest entries verified.
+index.html SHA-256: f44156a51e3727f443ce19a3d4db2bd2cbe7c8a50bbb50fd79e5ebce482df0fd
+New OCR preflight UI is read-only, no worker/no photos/no request, cannot certify cold offline OCR.
+Browser: 18/18 new Chromium PASS; structural verification 16/16 PASS; seven previous regression suites PASS.
+R336 physical Samsung screenshot PASS 192/192 (27 Oct 2026); raw JSON receipt NOT available. No other physical validation.
+GitHub source blobs independently compared with byte-identical Library originals (git blob SHA):
+r364_ocr_preflight_export_patch.py 6c23fd9d1d97ec920dbf636f63c798ac0f088221
+r364_ocr_preflight_export_regression.py 0264bf0466f1a43519a8d2b19b68ed994c8a2c3c
+verify_checkpoint_r364.py e6362bfb7a78e06d5d05b9a3db79c9c923c90401
+R364_VERIFICATION.json f19863376d2ea54c5d83612abee90dcb3be07d74
+Full ZIP also re-downloaded from Library and checked byte-for-byte with source; CRC+internal manifest PASS.
