@@ -1,0 +1,26 @@
+{
+  "schema": "bres-cat-r364-verification-v1",
+  "milestone": "CAT-R364",
+  "checks": {
+    "all_parent_CAT_R363_files_hash_preserved": true,
+    "parent_verification_still_passed": true,
+    "audit_deterministic_byte_for_byte": true,
+    "audit_12_checks_passed": true,
+    "canonical_10_chunks_unchanged": true,
+    "5103_distinct_canonical_sources": true,
+    "64_csv_groups_identical_to_JSON": true,
+    "68_pairs_are_prior_review_edges_only": true,
+    "325_other_typing_pairs_no_auto_equivalence": true,
+    "no_physical_key_or_manufacturer_certification": true,
+    "no_catalogue_or_active_OCR_change": true
+  },
+  "ok": true,
+  "changed_parent_files": [],
+  "parent_file_count": 1488,
+  "generator_exit": 0,
+  "generator_stdout": "{\"ok\": true, \"checks\": 12, \"failed\": [], \"groups\": 64, \"pairs\": 68, \"unknown_maker_groups\": 1}",
+  "limitations": [
+    "No physical keys, source manufacturer proof, or actual OCR recognition",
+    "Do not activate lossy transcription folding in production"
+  ]
+}
