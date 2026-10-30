@@ -1,0 +1,8 @@
+BRES Clés — 30/10/2026 — V2.28 TEST R156, checkpoint R364
+STABLE : V2.27, aucune promotion ni modification de main.
+NOUVEAU : export JSON local de pré-contrôle OCR, sans aucune photo, référence, travail du worker ni requête réseau.
+Ce rapport conserve explicitement la non-certification OCR hors ligne. Le JS OCR distant, le worker, le WASM et la langue anglaise ne sont pas réunis dans une distribution autonome.
+NOUVEAUX TESTS : 18/18 Chromium hors réseau ; 16/16 vérifications structurelles ; sept séries antérieures rejouées (14+13+15+16+14+10+10) ; 130 anciens cas sans validation indue.
+Moteur R331 et benchmark R336 et catalogue pilote inchangés. OCR R305 inchangé.
+Catalogue V3 reste indépendant CAT-R364 (5 103 références, 10 fragments immuables).
+Samsung : capture R336 PASS 192/192 du 27/10, fichier JSON manquant. Aucun test physique nouveau, aucune demande utilisateur nécessaire à ce jalon.
