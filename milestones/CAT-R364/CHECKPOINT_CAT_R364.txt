@@ -1,0 +1,5 @@
+BRES Clés — 30/10/2026 — CAT-R364 (base catalogue indépendante)
+AUDIT : les 68 paires de transcription OCR théorique correspondent exactement à 64 groupes de normalisation avec perte, concernant 130 références canoniques distinctes.
+Les 325 autres paires restent de simples transpositions de frappe ; 393 paires textuelles au total, toutes NON VALIDÉES.
+5 103 références / 10 fragments canoniques inchangés. 12/12 contrôles génération, 11/11 contre-vérifications indépendantes.
+Aucune équivalence physique, aucun fabricant, aucune fusion, aucun seuil OCR ou activation automatique certifiés.
