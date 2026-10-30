@@ -1,0 +1,1475 @@
+{
+  "schema": "bres-cat-r364-lossy-ocr-fold-audit-v1",
+  "milestone": "CAT-R364",
+  "parent": "CAT-R363",
+  "fold_method": "uppercase, O/I/L/S/B glyph-to-digit, remove hyphen (analysis only)",
+  "meaning": "Lossy transcription is never a key identity or proof of common manufacturer.",
+  "canonical_sha256": {
+    "catalog-01.js": "e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b",
+    "catalog-02.js": "955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75",
+    "catalog-03.js": "9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210",
+    "catalog-04.js": "14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942",
+    "catalog-05.js": "5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b",
+    "catalog-06.js": "b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac",
+    "catalog-07.js": "b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1",
+    "catalog-08.js": "3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814",
+    "catalog-09.js": "4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f",
+    "catalog-10.js": "f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4"
+  },
+  "canonical_reference_count": 5103,
+  "fold_collision_groups": 64,
+  "distinct_endpoints": 130,
+  "folded_pairs": 68,
+  "distinct_typing_pairs_unrelated_to_fold": 325,
+  "folded_pair_sources": [
+    [
+      "AB51",
+      "ABS1"
+    ],
+    [
+      "AB52",
+      "ABS2"
+    ],
+    [
+      "AB53",
+      "ABS3"
+    ],
+    [
+      "AI1",
+      "AL1"
+    ],
+    [
+      "BAI2",
+      "BAL2"
+    ],
+    [
+      "BAI3",
+      "BAL3"
+    ],
+    [
+      "BK3-4",
+      "BK34"
+    ],
+    [
+      "CB3-OR",
+      "CB30R"
+    ],
+    [
+      "CB4-OR",
+      "CB40R"
+    ],
+    [
+      "CB9-OR",
+      "CB90R"
+    ],
+    [
+      "CI2",
+      "CL2"
+    ],
+    [
+      "CI3",
+      "CL3"
+    ],
+    [
+      "CI4",
+      "CL4"
+    ],
+    [
+      "CI5",
+      "CL5"
+    ],
+    [
+      "CIL1",
+      "CLI1"
+    ],
+    [
+      "CIL1",
+      "CLL1"
+    ],
+    [
+      "CIS1",
+      "CLS1"
+    ],
+    [
+      "CIS2",
+      "CLS2"
+    ],
+    [
+      "CIS3",
+      "CLS3"
+    ],
+    [
+      "CLI1",
+      "CLL1"
+    ],
+    [
+      "FI2",
+      "FL2"
+    ],
+    [
+      "IF1",
+      "LF1"
+    ],
+    [
+      "IF14",
+      "LF14"
+    ],
+    [
+      "IF15R",
+      "LF15R"
+    ],
+    [
+      "IF16",
+      "LF16"
+    ],
+    [
+      "IF17",
+      "LF17"
+    ],
+    [
+      "IF2",
+      "LF2"
+    ],
+    [
+      "IF3",
+      "LF3"
+    ],
+    [
+      "IF6",
+      "LF6"
+    ],
+    [
+      "IF7",
+      "LF7"
+    ],
+    [
+      "IF8",
+      "LF8"
+    ],
+    [
+      "IF8R",
+      "LF8R"
+    ],
+    [
+      "IL1",
+      "LL1"
+    ],
+    [
+      "IM3R",
+      "LM3R"
+    ],
+    [
+      "IM4R",
+      "LM4R"
+    ],
+    [
+      "IN1",
+      "LN1"
+    ],
+    [
+      "IS1",
+      "LS1"
+    ],
+    [
+      "IS2",
+      "LS2"
+    ],
+    [
+      "IT1",
+      "LT1"
+    ],
+    [
+      "IT2",
+      "LT2"
+    ],
+    [
+      "IW1R",
+      "LW1R"
+    ],
+    [
+      "IX1",
+      "LX1"
+    ],
+    [
+      "IX1R",
+      "LX1R"
+    ],
+    [
+      "KF1",
+      "KFI"
+    ],
+    [
+      "KF1",
+      "KFL"
+    ],
+    [
+      "KFI",
+      "KFL"
+    ],
+    [
+      "MS11",
+      "MSL1"
+    ],
+    [
+      "MS12",
+      "MSL2"
+    ],
+    [
+      "PC11R",
+      "PCL1R"
+    ],
+    [
+      "SI1",
+      "SL1"
+    ],
+    [
+      "TI1",
+      "TL1"
+    ],
+    [
+      "TO11",
+      "TOL1"
+    ],
+    [
+      "TO12",
+      "TOL2"
+    ],
+    [
+      "TR11R",
+      "TRI1R"
+    ],
+    [
+      "TR13R",
+      "TRI3R"
+    ],
+    [
+      "TR17R",
+      "TRI7R"
+    ],
+    [
+      "TR18R",
+      "TRI8R"
+    ],
+    [
+      "TR19R",
+      "TRI9R"
+    ],
+    [
+      "VI2",
+      "VL2"
+    ],
+    [
+      "VI2R",
+      "VL2R"
+    ],
+    [
+      "VI3",
+      "VL3"
+    ],
+    [
+      "VI3R",
+      "VL3R"
+    ],
+    [
+      "VI4",
+      "VL4"
+    ],
+    [
+      "VI4R",
+      "VL4R"
+    ],
+    [
+      "WE12",
+      "WEI2"
+    ],
+    [
+      "WE13",
+      "WEI3"
+    ],
+    [
+      "WE14",
+      "WEI4"
+    ],
+    [
+      "WE15",
+      "WEI5"
+    ]
+  ],
+  "groups": [
+    {
+      "folded_transcription_NOT_REFERENCE": "111",
+      "source_references_distinct": [
+        "IL1",
+        "LL1"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "IL1": "ILARGI",
+        "LL1": "LOCKWOOD"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "151",
+      "source_references_distinct": [
+        "IS1",
+        "LS1"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "IS1": "IGS",
+        "LS1": "RENZ"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "152",
+      "source_references_distinct": [
+        "IS2",
+        "LS2"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "IS2": "IGS",
+        "LS2": "RENZ"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "1F1",
+      "source_references_distinct": [
+        "IF1",
+        "LF1"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "IF1": "IES",
+        "LF1": "LOWE & FLETCHER"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "1F14",
+      "source_references_distinct": [
+        "IF14",
+        "LF14"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "IF14": "IFAM",
+        "LF14": "LOWE & FLETCHER"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "1F15R",
+      "source_references_distinct": [
+        "IF15R",
+        "LF15R"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "IF15R": "IFAM",
+        "LF15R": "EURO LOCKS"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "1F16",
+      "source_references_distinct": [
+        "IF16",
+        "LF16"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "IF16": "IFAM",
+        "LF16": "LOWE & FLETCHER"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "1F17",
+      "source_references_distinct": [
+        "IF17",
+        "LF17"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "IF17": "IFAM",
+        "LF17": "LOWE & FLETCHER"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "1F2",
+      "source_references_distinct": [
+        "IF2",
+        "LF2"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "IF2": "IFAM",
+        "LF2": "EURO LOCKS"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "1F3",
+      "source_references_distinct": [
+        "IF3",
+        "LF3"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "IF3": "IFAM",
+        "LF3": "LOWE & FLETCHER"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "1F6",
+      "source_references_distinct": [
+        "IF6",
+        "LF6"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "IF6": "IFAM",
+        "LF6": "LOWE & FLETCHER"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "1F7",
+      "source_references_distinct": [
+        "IF7",
+        "LF7"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "IF7": "IFAM",
+        "LF7": "EURO LOCKS"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "1F8",
+      "source_references_distinct": [
+        "IF8",
+        "LF8"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "IF8": "IFAM",
+        "LF8": "LOWE & FLETCHER"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "1F8R",
+      "source_references_distinct": [
+        "IF8R",
+        "LF8R"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "IF8R": "IFAM",
+        "LF8R": "EURO LOCKS"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "1M3R",
+      "source_references_distinct": [
+        "IM3R",
+        "LM3R"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "IM3R": "IMSA",
+        "LM3R": "LUMA"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "1M4R",
+      "source_references_distinct": [
+        "IM4R",
+        "LM4R"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "IM4R": "IMSA",
+        "LM4R": "LUMA"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "1N1",
+      "source_references_distinct": [
+        "IN1",
+        "LN1"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "IN1": "ILLINOIS",
+        "LN1": "LN"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "1T1",
+      "source_references_distinct": [
+        "IT1",
+        "LT1"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "IT1": "INT",
+        "LT1": "BKS"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "1T2",
+      "source_references_distinct": [
+        "IT2",
+        "LT2"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "IT2": "INT",
+        "LT2": "LITTO"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "1W1R",
+      "source_references_distinct": [
+        "IW1R",
+        "LW1R"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "IW1R": "IWATA",
+        "LW1R": "LOCKWOOD"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "1X1",
+      "source_references_distinct": [
+        "IX1",
+        "LX1"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "IX1": "IALEX",
+        "LX1": "LUX"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "1X1R",
+      "source_references_distinct": [
+        "IX1R",
+        "LX1R"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "IX1R": "IALEX",
+        "LX1R": "LUX"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "511",
+      "source_references_distinct": [
+        "SI1",
+        "SL1"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "SI1": "SOFI-SONAFI",
+        "SL1": "SEGAL"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "8A12",
+      "source_references_distinct": [
+        "BAI2",
+        "BAL2"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "BAI2": "BARAS",
+        "BAL2": "BAAL"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "8A13",
+      "source_references_distinct": [
+        "BAI3",
+        "BAL3"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "BAI3": "BASI",
+        "BAL3": "BAAL"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "8K34",
+      "source_references_distinct": [
+        "BK3-4",
+        "BK34"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "BK3-4": "BKS",
+        "BK34": "BKS"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": false,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "A11",
+      "source_references_distinct": [
+        "AI1",
+        "AL1"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "AI1": "ALIANÇA",
+        "AL1": "AL"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "A851",
+      "source_references_distinct": [
+        "AB51",
+        "ABS1"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "AB51": "ABUS",
+        "ABS1": "ABSA"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "A852",
+      "source_references_distinct": [
+        "AB52",
+        "ABS2"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "AB52": "ABUS",
+        "ABS2": "ABSA"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "A853",
+      "source_references_distinct": [
+        "AB53",
+        "ABS3"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "AB53": "ABUS",
+        "ABS3": "ABSA"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "C111",
+      "source_references_distinct": [
+        "CIL1",
+        "CLI1",
+        "CLL1"
+      ],
+      "reference_count": 3,
+      "source_makers_UNVERIFIED": {
+        "CIL1": "CILA-GENTILI",
+        "CLI1": "CIL LIL",
+        "CLL1": "COLL"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "C12",
+      "source_references_distinct": [
+        "CI2",
+        "CL2"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "CI2": "CASI",
+        "CL2": "CLUM"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "C13",
+      "source_references_distinct": [
+        "CI3",
+        "CL3"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "CI3": "CASI",
+        "CL3": "CLUM"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "C14",
+      "source_references_distinct": [
+        "CI4",
+        "CL4"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "CI4": "CASI",
+        "CL4": "CLUM"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "C15",
+      "source_references_distinct": [
+        "CI5",
+        "CL5"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "CI5": "CASI",
+        "CL5": "CLUM"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "C151",
+      "source_references_distinct": [
+        "CIS1",
+        "CLS1"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "CIS1": "CAS-CISMA",
+        "CLS1": "CIELS"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "C152",
+      "source_references_distinct": [
+        "CIS2",
+        "CLS2"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "CIS2": "CAS-CISMA",
+        "CLS2": "CIELS"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "C153",
+      "source_references_distinct": [
+        "CIS3",
+        "CLS3"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "CIS3": "CAS-CISMA",
+        "CLS3": "CIELS"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "C830R",
+      "source_references_distinct": [
+        "CB3-OR",
+        "CB30R"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "CB3-OR": "CORBIN (IT)",
+        "CB30R": "CORBIN (IT)"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": false,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "C840R",
+      "source_references_distinct": [
+        "CB4-OR",
+        "CB40R"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "CB4-OR": "CORBIN (IT)",
+        "CB40R": "CORBIN (US)"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "C890R",
+      "source_references_distinct": [
+        "CB9-OR",
+        "CB90R"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "CB9-OR": "CORBIN (IT)",
+        "CB90R": "CORBIN (IT)"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": false,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "F12",
+      "source_references_distinct": [
+        "FI2",
+        "FL2"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "FI2": "FIAM",
+        "FL2": "FLORA"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "KF1",
+      "source_references_distinct": [
+        "KF1",
+        "KFI",
+        "KFL"
+      ],
+      "reference_count": 3,
+      "source_makers_UNVERIFIED": {
+        "KF1": "KFV",
+        "KFI": "KFV",
+        "KFL": "KFV"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": false,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "M511",
+      "source_references_distinct": [
+        "MS11",
+        "MSL1"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "MS11": "MASTER",
+        "MSL1": "MASTER LOCK"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "M512",
+      "source_references_distinct": [
+        "MS12",
+        "MSL2"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "MS12": "MASTER",
+        "MSL2": "MASTER LOCK"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "PC11R",
+      "source_references_distinct": [
+        "PC11R",
+        "PCL1R"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "PC11R": "P.C. (CORTELLEZZI)",
+        "PCL1R": "PACO LOCKS"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "T011",
+      "source_references_distinct": [
+        "TO11",
+        "TOL1"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "TO11": "TOK-WINKHAUS",
+        "TOL1": "TULA"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "T012",
+      "source_references_distinct": [
+        "TO12",
+        "TOL2"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "TO12": "TOK-TRELOCK",
+        "TOL2": "TULA"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "T11",
+      "source_references_distinct": [
+        "TI1",
+        "TL1"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "TI1": "TIK",
+        "TL1": "TRI-CIRCLE"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "TR11R",
+      "source_references_distinct": [
+        "TR11R",
+        "TRI1R"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "TR11R": "TRIOVING",
+        "TRI1R": "TRIMARK"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "TR13R",
+      "source_references_distinct": [
+        "TR13R",
+        "TRI3R"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "TR13R": "TRIOVING",
+        "TRI3R": "TRIMARK"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "TR17R",
+      "source_references_distinct": [
+        "TR17R",
+        "TRI7R"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "TR17R": "TRIOVING",
+        "TRI7R": "TRIMARK"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "TR18R",
+      "source_references_distinct": [
+        "TR18R",
+        "TRI8R"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "TR18R": "TRIOVING",
+        "TRI8R": "TRIMARK"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "TR19R",
+      "source_references_distinct": [
+        "TR19R",
+        "TRI9R"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "TR19R": "TRIOVING",
+        "TRI9R": "TRIMARK"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "V12",
+      "source_references_distinct": [
+        "VI2",
+        "VL2"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "VI2": "",
+        "VL2": "V.G.F. VILLATORE"
+      },
+      "unknown_maker_in_group": true,
+      "different_maker_labels_SOURCE_ONLY": false,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "V12R",
+      "source_references_distinct": [
+        "VI2R",
+        "VL2R"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "VI2R": "VIRO",
+        "VL2R": "V.G.F. VILLATORE"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "V13",
+      "source_references_distinct": [
+        "VI3",
+        "VL3"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "VI3": "VIRO",
+        "VL3": "V.G.F. VILLATORE"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "V13R",
+      "source_references_distinct": [
+        "VI3R",
+        "VL3R"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "VI3R": "VIRO",
+        "VL3R": "V.G.F. VILLATORE"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "V14",
+      "source_references_distinct": [
+        "VI4",
+        "VL4"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "VI4": "VIRO",
+        "VL4": "V.G.F. VILLATORE"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "V14R",
+      "source_references_distinct": [
+        "VI4R",
+        "VL4R"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "VI4R": "VIRO",
+        "VL4R": "V.G.F. VILLATORE"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "WE12",
+      "source_references_distinct": [
+        "WE12",
+        "WEI2"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "WE12": "WELKA",
+        "WEI2": "WEISER"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "WE13",
+      "source_references_distinct": [
+        "WE13",
+        "WEI3"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "WE13": "WELKA",
+        "WEI3": "WEISER"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "WE14",
+      "source_references_distinct": [
+        "WE14",
+        "WEI4"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "WE14": "WELKA",
+        "WEI4": "WEISER"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    },
+    {
+      "folded_transcription_NOT_REFERENCE": "WE15",
+      "source_references_distinct": [
+        "WE15",
+        "WEI5"
+      ],
+      "reference_count": 2,
+      "source_makers_UNVERIFIED": {
+        "WE15": "WELKA",
+        "WEI5": "WEISER"
+      },
+      "unknown_maker_in_group": false,
+      "different_maker_labels_SOURCE_ONLY": true,
+      "risk_class": "TEXT_OCR_FOLD_ONLY",
+      "physical_equivalence_verified": false,
+      "automatic_recognition_allowed": false,
+      "manual_confirmation_required": true
+    }
+  ],
+  "checks": {
+    "parent_ledger_passes": true,
+    "5103_canonically_distinct": true,
+    "canonical_fragments_unchanged": true,
+    "64_theoretical_OCR_fold_groups": true,
+    "130_endpoints_in_groups": true,
+    "68_fold_pairs_match_prior_OCR_edges_exactly": true,
+    "325_typing_pairs_NOT_OCR_fold_equivalence": true,
+    "393_prior_review_pairs_exhaustively_partitioned": true,
+    "important_VI2_VL2_still_distinct_source_refs": true,
+    "important_BK3_4_BK34_distinct_source_refs": true,
+    "no_assignment_or_validation": true,
+    "no_input_canonical_changes": true
+  },
+  "ok": true,
+  "physical_key_review": false,
+  "manufacturer_attribution": false,
+  "catalogue_mutation": false,
+  "active_OCR_change": false
+}
