@@ -1,0 +1,112 @@
+{
+  "schema": "bres-r365-independent-verification-v1",
+  "milestone": "R365",
+  "parent": "R364",
+  "changed_parent_files": [
+    "index.html"
+  ],
+  "parent_file_count": 8861,
+  "checks": {
+    "R364_parent_exact_index_sha": true,
+    "R364_parent_8861_files_preserved": true,
+    "only_test_index_modified_from_parent": true,
+    "R365_patch_reproduced": true,
+    "core_R331_and_benchmark_R336_unchanged": true,
+    "pilot_catalogue_R305_unchanged": true,
+    "new_browser_27_checks_PASS": true,
+    "new_static_dependency_audit_7_checks_PASS": true,
+    "dependency_gap_is_explicitly_unresolved": true,
+    "previous_R364_browser_18_checks_PASS": true,
+    "seven_prior_replay_evidence_preserved_and_one_fresh_PASS": true,
+    "pilot_130_ref_no_unsafe_result": true,
+    "732_collision_strings_still_preserved": true,
+    "V227_stable_not_replaced": true,
+    "no_physical_OCR_claim": true,
+    "no_new_catalogue_embedded": true
+  },
+  "ok": true,
+  "replays": {
+    "r363_ocr_readiness_collision_regression.py": {
+      "ok": true,
+      "checks": 14,
+      "expected": 14,
+      "unsafe_results": 0,
+      "tested_references": null,
+      "stderr": "",
+      "source": "verified-R364-replay-evidence"
+    },
+    "r362_samsung_autonomous_launcher_regression.py": {
+      "ok": true,
+      "checks": 13,
+      "expected": 13,
+      "unsafe_results": 0,
+      "tested_references": null,
+      "stderr": "",
+      "source": "verified-R364-replay-evidence"
+    },
+    "r361_thickness_staleness_regression.py": {
+      "ok": true,
+      "checks": 15,
+      "expected": 15,
+      "unsafe_results": 0,
+      "tested_references": null,
+      "stderr": "",
+      "source": "verified-R364-replay-evidence"
+    },
+    "r360_stale_feedback_regression.py": {
+      "ok": true,
+      "checks": 16,
+      "expected": 16,
+      "unsafe_results": 0,
+      "tested_references": null,
+      "stderr": "",
+      "source": "verified-R364-replay-evidence"
+    },
+    "r359_manual_state_transition_regression.py": {
+      "ok": true,
+      "checks": 14,
+      "expected": 14,
+      "unsafe_results": 0,
+      "tested_references": null,
+      "stderr": "",
+      "source": "verified-R364-replay-evidence"
+    },
+    "r358_pilot_confusable_regression.py": {
+      "ok": true,
+      "checks": 10,
+      "expected": 10,
+      "unsafe_results": 0,
+      "tested_references": 130,
+      "stderr": "",
+      "source": "verified-R364-replay-evidence"
+    },
+    "r356_chromium_offline_smoke.py": {
+      "ok": true,
+      "checks": 10,
+      "expected": 10,
+      "unsafe_results": 0,
+      "source": "fresh-R365-replay"
+    }
+  },
+  "new_chromium": {
+    "exit_code": 0,
+    "stdout": "{\"ok\": true, \"checks\": 27, \"failed\": [], \"errors\": []}\n",
+    "stderr": ""
+  },
+  "static_dependency_audit": {
+    "exit_code": 0,
+    "stdout": "{\"ok\": true, \"checks\": 7, \"local_candidates\": {\"tesseract_script\": 0, \"ocr_worker_js\": 0, \"ocr_wasm\": 0, \"eng_traineddata\": 0}}\n",
+    "stderr": ""
+  },
+  "r364_compatibility": {
+    "exit_code": 0,
+    "stdout": "{\"ok\": true, \"checks\": 18, \"failed\": [], \"errors\": []}\n",
+    "stderr": ""
+  },
+  "limitations": [
+    "Cold-offline Tesseract resources not bundled",
+    "R336 physical screenshot PASS; JSON receipt absent",
+    "No physical key/maker certification",
+    "Main and V2.27 never modified"
+  ]
+}
