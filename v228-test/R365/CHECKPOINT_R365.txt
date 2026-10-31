@@ -1,0 +1,7 @@
+BRES Clés — 31/10/2026 — V2.28 TEST R156 checkpoint R365
+STABLE: V2.27, GitHub main NOT modified or promoted.
+R365: the R364 read-only OCR diagnostics now derive the script origin class from HTML markup. Covers remote/CDN script, local script tag NOT VERIFIED, and absent tag; no worker, fetch or key/photo access during diagnostic export. R364 JSON schema preserved.
+27/27 offline Chromium provenance checks, 18/18 prior R364 browser compatibility checks, 7/7 static dependency checks. One earlier Chromium smoke rerun fresh; six other prior suite results from the hash-verified R364 baseline. An interrupted initial audit run also passed six prior suites anew; it was not used as final proof.
+Offline dependency inventory: Tesseract JS is remotely linked; no local Tesseract JS, JS worker, WebAssembly core or English traineddata found inside this ZIP. Offline OCR remains UNVERIFIED, NOT CERTIFIED.
+Moteur R331, benchmark R336, active OCR R305, pilot catalogue unchanged; no real key test.
+Samsung R336 screenshot PASS 192/192 on 27/10; the JSON receipt is not yet received. No additional intervention needed at this checkpoint.
