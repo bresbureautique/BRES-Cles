@@ -1,0 +1,11 @@
+BRES Cles 2026-10-31 | V2.28 TEST checkpoint R365; V2.27 STABLE remains main 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8 (compare: identical, zero commits).
+ARCHIVE (full ZIP stored separately, NOT on GitHub): /BRES Cles/Sauvegardes/BRES_Cles_Mobile_V2_28_CHECKPOINT_R365.zip
+SHA256: 8509b0945f2ee7a883d837e0e5e60b55b592a95c28e064668df67fa11e76c4db
+SIZE: 33950242 bytes; ZIP entries: 8874; manifest SHA256: 5732ffbed868fb69360eb0a40f416d24a3c7106aae996159306044d8c9452fc5
+MANIFEST entries: 8873 SHA256; CRC PASS; ZIP restored from Library byte identical, manifest and all internal contents verified.
+Test index SHA256: d96713286ec99d4717c25aa209bb307f4fa2107d1842d3f5f7e42b5bd154d4ae.
+Independent: 16/16 controls; R365 offline Chromium 27/27; R364 Chromium backward compatibility 18/18; package static dependency audit 7/7.
+Previous seven regression suites: evidence preserved from R364 with immutable code; R356 Chromium 10/10 freshly rerun; six suites were also independently rerun in an initial interrupted audit (not counted as final proof).
+No local Tesseract JS, worker JS, WASM or traineddata; cold-offline OCR NOT CERTIFIED. No known physical key verification; Samsung PASS screenshot 192/192, raw JSON absent.
+Sources saved on this R365 branch, under v228-test/R365, and in Library R365-Sources.
+Restoration: download the full ZIP from Library, verify SHA256 and ZIP CRC, then verify every app/SNAPSHOT_MANIFEST_R365.sha256 entry; DO NOT PROMOTE OR CHANGE V2.27.
