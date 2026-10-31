@@ -1,0 +1,5 @@
+BRES Clés — 31/10/2026 — catalogue independent CAT-R365
+5 103 distinct canonical references and ten catalog JS fragments remain unchanged.
+A deterministic triage queue of all 68 historical theoretical OCR-fold confusion pairs: 3 with hypothetical geometric 2-axis overlap at ±1 mm, 1 more with an absent manufacturer source label, and 64 with both source labels present. These are sorting categories, never confidence or equivalence.
+No physical validation or manufacturer inference. The remaining 325 transposition-only pairs are preserved in CAT-R363, not folded as OCR aliases.
+11/11 generator controls and 10/10 independent controls pass. No mutations to active app, source catalogue or V2.27 stable.
