@@ -1,0 +1,10 @@
+BRES Cles 2026-10-31 | CATALOGUE CAT-R365 audit only; no merge, no maker attribution, no OCR threshold activation; V2.27 stable.
+ARCHIVE (full ZIP stored separately, NOT on GitHub): /BRES Cles/Sauvegardes/BRES_Cles_Catalogue_Audit_CAT_R365.zip
+SHA256: 246b0fe3e08cec2ae6c69ecbc493f6c4ec78b47fca898750cb80778fac12d877
+SIZE: 3991632 bytes; ZIP entries: 1508; manifest SHA256: b080604e705f21db702d59788428634527c53a2963a4c18748fc9214da4bcd9b
+MANIFEST entries: 1507 SHA256; CRC PASS; ZIP restored from Library byte identical, manifest and all internal contents verified.
+Canonical: 5103 distinct references in 10 JS fragments, unchanged.
+68 theoretical glyph-fold OCR pairs in CAT-R365 review queue; priorities: 3 with theoretical 2-axis overlap assuming each measurement error at most 1mm; 1 other missing maker source label; remaining 64 with source labels present. NOT physical equivalence or confidence.
+325 other pairs are transcription/typing-only and not merged. Generator checks 11/11; independent checks 10/10, no source edits.
+Sources saved on this R365 branch under catalogue-v3/R365 and in Library R365-Sources.
+Restoration: download full ZIP from Library, verify SHA256 and ZIP CRC, then verify every cat/SNAPSHOT_MANIFEST_CAT_R365.sha256 entry; never activate unverified equivalences.
