@@ -1,0 +1,23 @@
+{
+  "schema": "bres-cat-r365-independent-verification-v1",
+  "milestone": "CAT-R365",
+  "changed_parent_files": [],
+  "checks": {
+    "R364_parent_all_1497_files_immutable": true,
+    "R364_parent_prior_pass": true,
+    "deterministic_3_exports": true,
+    "new_queue_11_checks_PASS": true,
+    "source_5103_distinct": true,
+    "canonical_10_SHA_unmodified": true,
+    "CSV_exact_68_pairs": true,
+    "three_theoretical_overlaps_only": true,
+    "same_68_unverified_as_R364": true,
+    "no_new_alias_or_physical_claim": true
+  },
+  "ok": true,
+  "generator_stdout": "{\"ok\": true, \"checks\": 11, \"failed\": [], \"priority_counts\": {\"P1_theoretical_geometry_overlap\": 3, \"P2_maker_missing\": 1, \"P3_source_labels_present\": 64}}\n",
+  "limitations": [
+    "Geometry dimensions source-only and ±1mm theoretical",
+    "No known reference specimens, no real OCR, no manufacturer confirmed"
+  ]
+}
