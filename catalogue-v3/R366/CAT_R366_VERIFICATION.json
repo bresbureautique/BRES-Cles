@@ -1,0 +1,26 @@
+{
+  "schema": "bres-cat-r366-independent-fixture-verification-v1",
+  "milestone": "CAT-R366",
+  "checks": {
+    "CAT_R365_files_preserved": true,
+    "CAT_R365_verified": true,
+    "deterministic_outputs": true,
+    "generator_12_checks": true,
+    "canonical_source_untouched": true,
+    "64_unique_synthetic_transcriptions": true,
+    "68_exact_prior_review_pairs": true,
+    "130_distinct_refs": true,
+    "all_csv_fields_match_json": true,
+    "all_expected_abstain_no_key_cert": true,
+    "runtime_NOT_claimed": true
+  },
+  "ok": true,
+  "parent_sha_file_count": 1507,
+  "modified_parent_files": [],
+  "generator_stdout": "{\"ok\": true, \"checks\": 12, \"failures\": [], \"groups\": 64, \"pairs\": 68}\n",
+  "limitations": [
+    "fixtures specify desired abstention; they do not demonstrate active app decision",
+    "no physical key nor Samsung test",
+    "no OCR runtime executed"
+  ]
+}
