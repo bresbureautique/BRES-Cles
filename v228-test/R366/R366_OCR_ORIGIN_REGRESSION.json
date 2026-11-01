@@ -1,0 +1,108 @@
+{
+  "schema": "bres-r366-ocr-script-origin-offline-regression-v1",
+  "checkpoint": "R366",
+  "checks": {
+    "https_cdn_classification": true,
+    "https_cdn_api_present_is_not_certification": true,
+    "https_cdn_never_initialized_worker": true,
+    "https_cdn_no_verified_worker_wasm_lang": true,
+    "https_cdn_no_identity_or_auto_decision": true,
+    "https_cdn_schema_backward_compatible": true,
+    "http_non_cdn_classification": true,
+    "http_non_cdn_api_present_is_not_certification": true,
+    "http_non_cdn_never_initialized_worker": true,
+    "http_non_cdn_no_verified_worker_wasm_lang": true,
+    "http_non_cdn_no_identity_or_auto_decision": true,
+    "http_non_cdn_schema_backward_compatible": true,
+    "protocol_relative_classification": true,
+    "protocol_relative_api_present_is_not_certification": true,
+    "protocol_relative_never_initialized_worker": true,
+    "protocol_relative_no_verified_worker_wasm_lang": true,
+    "protocol_relative_no_identity_or_auto_decision": true,
+    "protocol_relative_schema_backward_compatible": true,
+    "spaced_https_classification": true,
+    "spaced_https_api_present_is_not_certification": true,
+    "spaced_https_never_initialized_worker": true,
+    "spaced_https_no_verified_worker_wasm_lang": true,
+    "spaced_https_no_identity_or_auto_decision": true,
+    "spaced_https_schema_backward_compatible": true,
+    "local_relative_classification": true,
+    "local_relative_api_present_is_not_certification": true,
+    "local_relative_never_initialized_worker": true,
+    "local_relative_no_verified_worker_wasm_lang": true,
+    "local_relative_no_identity_or_auto_decision": true,
+    "local_relative_schema_backward_compatible": true,
+    "local_rooted_classification": true,
+    "local_rooted_api_present_is_not_certification": true,
+    "local_rooted_never_initialized_worker": true,
+    "local_rooted_no_verified_worker_wasm_lang": true,
+    "local_rooted_no_identity_or_auto_decision": true,
+    "local_rooted_schema_backward_compatible": true,
+    "file_scheme_classification": true,
+    "file_scheme_api_present_is_not_certification": true,
+    "file_scheme_never_initialized_worker": true,
+    "file_scheme_no_verified_worker_wasm_lang": true,
+    "file_scheme_no_identity_or_auto_decision": true,
+    "file_scheme_schema_backward_compatible": true,
+    "ftp_scheme_classification": true,
+    "ftp_scheme_api_present_is_not_certification": true,
+    "ftp_scheme_never_initialized_worker": true,
+    "ftp_scheme_no_verified_worker_wasm_lang": true,
+    "ftp_scheme_no_identity_or_auto_decision": true,
+    "ftp_scheme_schema_backward_compatible": true,
+    "absent_classification": true,
+    "absent_api_present_is_not_certification": true,
+    "absent_never_initialized_worker": true,
+    "absent_no_verified_worker_wasm_lang": true,
+    "absent_no_identity_or_auto_decision": true,
+    "absent_schema_backward_compatible": true,
+    "no_js_runtime_errors": true,
+    "no_extraneous_network_requests": true,
+    "checkpoint_test_label": true
+  },
+  "ok": true,
+  "failures": [],
+  "request_count": 5,
+  "errors": [],
+  "cases": {
+    "https_cdn": {
+      "origin": "remote-cdn-not-embedded",
+      "api": true
+    },
+    "http_non_cdn": {
+      "origin": "remote-cdn-not-embedded",
+      "api": true
+    },
+    "protocol_relative": {
+      "origin": "remote-cdn-not-embedded",
+      "api": true
+    },
+    "spaced_https": {
+      "origin": "remote-cdn-not-embedded",
+      "api": true
+    },
+    "local_relative": {
+      "origin": "local-script-tag-unverified",
+      "api": true
+    },
+    "local_rooted": {
+      "origin": "local-script-tag-unverified",
+      "api": true
+    },
+    "file_scheme": {
+      "origin": "explicit-scheme-not-certifiable",
+      "api": true
+    },
+    "ftp_scheme": {
+      "origin": "explicit-scheme-not-certifiable",
+      "api": true
+    },
+    "absent": {
+      "origin": "script-tag-absent",
+      "api": true
+    }
+  },
+  "real_OCR_executed": false,
+  "physical_key_test": false,
+  "active_ocr_rule_unchanged": true
+}
