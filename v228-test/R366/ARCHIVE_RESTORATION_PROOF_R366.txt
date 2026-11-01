@@ -1,0 +1,35 @@
+BRES CLÉS — R366 / CAT-R366 — 01 NOVEMBRE 2026
+
+INTÉGRITÉ DE LA VERSION STABLE
+- V2.27 reste l'unique version stable.
+- GitHub main comparée à 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8 : IDENTICAL, 0 fichier modifié, 0 commit en avance.
+- Les deux pistes de test restent sur deux branches séparées ; aucune fusion ni promotion.
+
+APPLICATION V2.28 TEST R156 — R366
+- Portée : classification conservatrice des URI de scripts dans le diagnostic OCR en lecture seule. Un chemin //cdn est classé distant ; un schéma explicite non HTTP est classé non certifiable.
+- Versionnement du diagnostic R364 inchangé ; aucune modification du moteur R331, benchmark R336, règle OCR active R305, catalogue pilote, géométrie ou reconnaissance physique.
+- 57/57 nouveaux contrôles Chromium hors réseau, 10/10 contrôles smoke Chromium rejoués sur le nouvel index, 14/14 vérifications indépendantes. Les preuves des régressions antérieures sont conservées ; elles n'ont pas toutes été relancées dans ce jalon.
+- Checkpoint complet : /BRES Cles/Sauvegardes/BRES_Cles_Mobile_V2_28_CHECKPOINT_R366.zip
+- ZIP SHA-256 : 3d872d2a189fcb1c6c6b1e312660c70afa97cb1fb67aded0adcce391eed63907
+- 34 344 737 octets, 8 883 entrées ; CRC ZIP PASS, SHA-256 des 8 882 fichiers de manifeste PASS.
+- Récupération du ZIP depuis Library, comparaison octet par octet avec l'original : IDENTICAL ; CRC restauré PASS.
+- GitHub : v2.28-test-r366-proof-3d872d2a189f (depuis R365), 7 fichiers de source/diff/preuve ajoutés et lus en retour identiques à la Library.
+- Commit de source vérifiée avant attestation finale : 065ecc1626b6d04dac144a9f20653d860ca8c26a
+
+CATALOGUE — CAT-R366
+- Sources inchangées : 5 103 références et dix fragments catalogue canoniques.
+- Nouveau jeu de QA négative : 64 transcriptions OCR théoriquement ambiguës, 68 paires, 130 références distinctes ; le résultat attendu ABSTAIN est une spécification de test, PAS une mesure de l'application actuelle.
+- 12/12 contrôles du générateur, 11/11 vérifications indépendantes. Aucune fusion, reconnaissance, attribution de fabricant, validation physique ni activation dans le classificateur.
+- Checkpoint complet : /BRES Cles/Sauvegardes/BRES_Cles_Catalogue_Audit_CAT_R366.zip
+- ZIP SHA-256 : 39c4a94bde97cf144a9f0b015ea11dbec2518e746aed6a0987f45c54277d5d65
+- 4 056 439 octets, 1 516 entrées ; CRC ZIP PASS, SHA-256 des 1 515 fichiers de manifeste PASS.
+- Récupération du ZIP depuis Library, comparaison octet par octet avec l'original : IDENTICAL ; CRC restauré PASS.
+- GitHub : catalogue-v3-audit-r366-proof-39c4a94bde97 (depuis CAT-R365), 5 fichiers source/preuve ajoutés et relus identiques à la Library.
+- Commit de source vérifiée avant attestation finale : 36138b43beafc0e6d75e44ffa7f43cef54519501
+
+LIMITES ET PROCHAINS JALONS
+- OCR totalement hors connexion NON CERTIFIÉ : Tesseract chargé depuis CDN ; worker, WASM et eng.traineddata locaux manquants.
+- Aucune réelle photo ni référence de clé certaine testée pour ce jalon.
+- Samsung R336 : capture PASS 192/192 datée du 27/10/2026, reçu JSON brut non reçu.
+- Aucune intervention de l'utilisatrice nécessaire pour poursuivre l'analyse logicielle à ce jour.
+- Continuer intégration de dépendances OCR locales sur version de test exclusivement ; vérifier la décision d'abstention sur les 64 cas dans un vrai banc d'essai, puis demander un essai physique seulement si indispensable.
