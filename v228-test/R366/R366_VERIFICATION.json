@@ -1,0 +1,38 @@
+{
+  "schema": "bres-r366-independent-verification-v1",
+  "checkpoint": "R366",
+  "date": "2026-11-01",
+  "parent": "R365",
+  "changed_parent_files": [
+    "index.html"
+  ],
+  "parent_file_count": 8873,
+  "checks": {
+    "all_8873_R365_files_preserved": true,
+    "only_index_changed_R365_to_R366": true,
+    "parent_R365_index_sha_matches_ZIP": true,
+    "exact_R366_patch_reproduced": true,
+    "R365_verified_baseline": true,
+    "R366_57_new_chromium_checks": true,
+    "fresh_R356_10_chromium_smoke": true,
+    "R331_and_R336_identical_to_R365": true,
+    "R305_and_pilot_catalogue_unchanged": true,
+    "V227_stable_not_replaced": true,
+    "R363_collision_strings_preserved_732": true,
+    "R358_130_reference_proof_preserved": true,
+    "no_false_claim_of_offline_OCR": true,
+    "no_auto_merge_of_catalogue_v3": true
+  },
+  "ok": true,
+  "new_browser_checks": 57,
+  "fresh_smoke_checks": 10,
+  "smoke_stdout": "{\"ok\": true, \"checks\": 10, \"denied_requests\": 1, \"js_exceptions\": 0}\n",
+  "smoke_stderr": "",
+  "limitations": [
+    "Other historical suites are preserved, not freshly replayed",
+    "No physical keys tested",
+    "Samsung R336 screenshot PASS but JSON receipt missing",
+    "No bundled worker/WASM/traineddata, cold offline OCR unverified",
+    "No V2.27 promotion"
+  ]
+}
