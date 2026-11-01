@@ -1,0 +1,1069 @@
+{
+  "schema": "bres-cat-r366-ocr-negative-qa-fixtures-v1",
+  "milestone": "CAT-R366",
+  "parent": "CAT-R365",
+  "scope": "Read-only synthetic OCR text ambiguity fixtures (not live OCR runs)",
+  "canonical_ref_count": 5103,
+  "canonical_sha256": {
+    "catalog-01.js": "e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b",
+    "catalog-02.js": "955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75",
+    "catalog-03.js": "9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210",
+    "catalog-04.js": "14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942",
+    "catalog-05.js": "5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b",
+    "catalog-06.js": "b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac",
+    "catalog-07.js": "b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1",
+    "catalog-08.js": "3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814",
+    "catalog-09.js": "4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f",
+    "catalog-10.js": "f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4"
+  },
+  "fold_groups": 64,
+  "distinct_source_references": 130,
+  "theoretical_pairs": 68,
+  "fixtures": [
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "C111",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "CIL1",
+        "CLI1",
+        "CLL1"
+      ],
+      "candidate_count": 3,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "KF1",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "KF1",
+        "KFI",
+        "KFL"
+      ],
+      "candidate_count": 3,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "111",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "IL1",
+        "LL1"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "151",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "IS1",
+        "LS1"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "152",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "IS2",
+        "LS2"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "1F1",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "IF1",
+        "LF1"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "1F14",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "IF14",
+        "LF14"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "1F15R",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "IF15R",
+        "LF15R"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "1F16",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "IF16",
+        "LF16"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "1F17",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "IF17",
+        "LF17"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "1F2",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "IF2",
+        "LF2"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "1F3",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "IF3",
+        "LF3"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "1F6",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "IF6",
+        "LF6"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "1F7",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "IF7",
+        "LF7"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "1F8",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "IF8",
+        "LF8"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "1F8R",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "IF8R",
+        "LF8R"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "1M3R",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "IM3R",
+        "LM3R"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "1M4R",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "IM4R",
+        "LM4R"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "1N1",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "IN1",
+        "LN1"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "1T1",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "IT1",
+        "LT1"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "1T2",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "IT2",
+        "LT2"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "1W1R",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "IW1R",
+        "LW1R"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "1X1",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "IX1",
+        "LX1"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "1X1R",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "IX1R",
+        "LX1R"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "511",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "SI1",
+        "SL1"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "8A12",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "BAI2",
+        "BAL2"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "8A13",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "BAI3",
+        "BAL3"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "8K34",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "BK3-4",
+        "BK34"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "A11",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "AI1",
+        "AL1"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "A851",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "AB51",
+        "ABS1"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "A852",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "AB52",
+        "ABS2"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "A853",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "AB53",
+        "ABS3"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "C12",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "CI2",
+        "CL2"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "C13",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "CI3",
+        "CL3"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "C14",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "CI4",
+        "CL4"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "C15",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "CI5",
+        "CL5"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "C151",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "CIS1",
+        "CLS1"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "C152",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "CIS2",
+        "CLS2"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "C153",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "CIS3",
+        "CLS3"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "C830R",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "CB3-OR",
+        "CB30R"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "C840R",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "CB4-OR",
+        "CB40R"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "C890R",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "CB9-OR",
+        "CB90R"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "F12",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "FI2",
+        "FL2"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "M511",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "MS11",
+        "MSL1"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "M512",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "MS12",
+        "MSL2"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "PC11R",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "PC11R",
+        "PCL1R"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "T011",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "TO11",
+        "TOL1"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "T012",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "TO12",
+        "TOL2"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "T11",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "TI1",
+        "TL1"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "TR11R",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "TR11R",
+        "TRI1R"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "TR13R",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "TR13R",
+        "TRI3R"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "TR17R",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "TR17R",
+        "TRI7R"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "TR18R",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "TR18R",
+        "TRI8R"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "TR19R",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "TR19R",
+        "TRI9R"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "V12",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "VI2",
+        "VL2"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "V12R",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "VI2R",
+        "VL2R"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "V13",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "VI3",
+        "VL3"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "V13R",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "VI3R",
+        "VL3R"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "V14",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "VI4",
+        "VL4"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "V14R",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "VI4R",
+        "VL4R"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "WE12",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "WE12",
+        "WEI2"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "WE13",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "WE13",
+        "WEI3"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "WE14",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "WE14",
+        "WEI4"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    },
+    {
+      "synthetic_ocr_text_NOT_A_PHYSICAL_KEY": "WE15",
+      "source_candidates_DISTINCT_UNVERIFIED": [
+        "WE15",
+        "WEI5"
+      ],
+      "candidate_count": 2,
+      "expected_test_policy": "ABSTAIN_MANUAL_REVIEW",
+      "test_only": true,
+      "current_app_runtime_abstention_tested": false,
+      "physical_key_verified": false,
+      "maker_verified": false,
+      "automatic_alias_or_identity_permitted": false,
+      "input_kind": "lossy-OCR-fold-SYNTHETIC",
+      "notes": "Do not select a unique reference based on lossy text alone; recto/verso calibrated photos and certain reference required."
+    }
+  ],
+  "checks": {
+    "R364_fold_audit_pass": true,
+    "R365_queue_pass": true,
+    "source_5103_distinct": true,
+    "ten_canonical_hashes_same": true,
+    "64_complete_fold_groups": true,
+    "130_unique_source_refs": true,
+    "68_parent_review_pairs_exact": true,
+    "pair_endpoints_are_distinct": true,
+    "all_collisions_roundtrip_to_fold": true,
+    "all_test_expectations_abstain": true,
+    "no_implied_runtime_success": true,
+    "no_identity_manufacturer_or_alias": true
+  },
+  "ok": true,
+  "active_classifier_tested": false,
+  "physical_key_validation": false,
+  "source_catalogue_modified": false,
+  "active_OCR_rule_modified": false,
+  "manufacturer_attribution": false
+}
