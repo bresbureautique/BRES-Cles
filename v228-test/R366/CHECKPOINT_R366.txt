@@ -1,0 +1,6 @@
+BRES Clés — 01/11/2026 — V2.28 TEST R156 — checkpoint R366
+Stable: V2.27 is the only approved stable version. GitHub main untouched.
+Scope: conservative classification of OCR script URI in the R364 read-only diagnosis (recognises protocol-relative URLs as remote; explicit URL schemes as unverified). No worker, OCR data, photo, camera, classifier, R305 rules, catalogue or R331 benchmark changes.
+New evidence: 57/57 offline Chromium diagnostic checks; 14/14 independent verification checks; 10/10 fresh offline Chromium app smoke. Other historical proofs retained unchanged.
+Cold-offline OCR NOT certified. Tesseract JS is served by CDN and the archive still lacks pinned local worker/WASM/eng.traineddata.
+Physical key reference and real OCR tests NOT run. Samsung R336 screenshot PASS 192/192 on 27/10; raw receipt absent. No user action required yet.
