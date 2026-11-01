@@ -1,0 +1,4 @@
+BRES Clés — 01/11/2026 — catalogue independent CAT-R366
+5,103 source references and ten canonical JS fragments unchanged. New test-only abstention specifications for 64 theoretical lossy OCR fold groups (130 distinct references, 68 pairwise risks), generated reproducibly from CAT-R364/CAT-R365 evidence. Expected ABSTAIN_MANUAL_REVIEW is NOT a claim that the current engine passed a 64-case runtime test.
+CAT-R366 generator 12/12; independent verification 11/11. No manufacturer verification, alias, equivalence, OCR rule activation, classifier integration, catalogue mutation or physical key test.
+325 typing-only risks remain separately catalogued. V2.27 stable remains untouched; catalogue developed independently of V2.28 TEST.
