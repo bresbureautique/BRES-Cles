@@ -1,0 +1,33 @@
+--- R365/app/index.html
++++ R366/app/index.html
+@@ -33,9 +33,9 @@
+ </head>
+ <body>
+ <div class="app-version-badge">V2.28 TEST R156 • CATALOGUE SILCA MASSIF • STABLE NON REMPLACÉE</div>
+ <header><h1>BRES — Identification de clés</h1><p>V2.28 TEST R156 • application de test séparée + gabarit compact 0–50 mm + caméra guidée autofocus + OCR + catalogue Silca massif</p></header>
+-<div id="checkpointTrace" class="status ok"><b>Checkpoint de travail : R365 (provenance du diagnostic OCR)</b> — moteur V2.28 TEST R156 et téléchargement benchmark R336 conservés ; V2.27 reste la version stable. Les exports métier historiques conservent leur provenance R319 (moteur R156). Aucun statut de disponibilité OCR hors ligne n’est présumé.</div>
++<div id="checkpointTrace" class="status ok"><b>Checkpoint de travail : R366 (diagnostic OCR conservateur)</b> — moteur V2.28 TEST R156 et téléchargement benchmark R336 conservés ; V2.27 reste la version stable. Les exports métier historiques conservent leur provenance R319 (moteur R156). Aucun statut de disponibilité OCR hors ligne n’est présumé.</div>
+ <div class="status warn" id="deviceBenchmarkR336Link"><b>Diagnostic R336 — benchmark Samsung (sans effet sur l’identification).</b><br><a class="btn alt" id="r362BenchmarkStandaloneDownload" href="#" role="button">Télécharger le benchmark Samsung R336 autonome</a><p class="small" id="r362BenchmarkHelp">Sur Samsung : dans Mes fichiers &gt; Téléchargements, ouvrez ensuite <b>BRES_Cles_Benchmark_Samsung_R336_AUTONOME.html</b> avec Chrome. Le lien vers un fichier voisin ne fonctionne pas toujours depuis content://.</p></div>
+ 
+ <div id="cameraModal" class="camera-modal hidden" aria-hidden="true">
+  <div class="cam-top">BRES : CAMÉRA GUIDÉE V2.28 TEST R156 — <span id="camSideLabel">Recto</span></div>
+@@ -7095,12 +7095,16 @@
+    const scriptTag=Array.from(document.scripts).find(function(el){
+      const s=el.getAttribute('src')||'';
+      return /(?:^|\/)tesseract(?:\.min)?\.js(?:[?#]|$)/i.test(s);
+    });
+-   const scriptRef=scriptTag?(scriptTag.getAttribute('src')||''):'';
+-   const originClass=/^https?:\/\//i.test(scriptRef)
++   // URI classification is deliberately conservative: even a relative tag
++   // cannot demonstrate that any worker/WASM/language asset is available.
++   const scriptRef=scriptTag?(scriptTag.getAttribute('src')||'').trim():'';
++   const originClass=/^(?:https?:)?\/\//i.test(scriptRef)
+      ? 'remote-cdn-not-embedded'
+-     : (scriptRef ? 'local-script-tag-unverified' : 'script-tag-absent');
++     : (/^[a-z][a-z0-9+.-]*:/i.test(scriptRef)
++       ? 'explicit-scheme-not-certifiable'
++       : (scriptRef ? 'local-script-tag-unverified' : 'script-tag-absent'));
+    const preflight={
+      schema:'bres-r364-ocr-preflight-local-v1',
+      checkpoint:'R364',
+      engine:'V2.28 TEST R156',
