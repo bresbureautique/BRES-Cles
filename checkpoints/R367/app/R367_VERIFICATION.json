@@ -1,0 +1,48 @@
+{
+  "schema": "bres-r367-independent-checkpoint-verification-v1",
+  "milestone": "R367",
+  "date": "2026-11-02",
+  "parent": "R366",
+  "parent_file_count": 8882,
+  "changed_parent_files": [
+    "index.html"
+  ],
+  "checks": {
+    "R366_parent_ZIP_CRC": true,
+    "R366_8882_parent_files_present": true,
+    "R366_parent_only_index_changed": true,
+    "R366_index_matches_parent_manifest": true,
+    "exact_reproducible_R367_patch": true,
+    "R366_verification_parent_passed": true,
+    "64_folded_strings_in_actual_JS_decisions": true,
+    "130_collision_refs_no_prefill": true,
+    "250_noncollision_control_decisions_unchanged": true,
+    "57_prior_origin_chromium_checks_fresh": true,
+    "10_prior_offline_smoke_chromium_checks_fresh": true,
+    "R331_R336_and_pilot_catalogue_unchanged": true,
+    "R305_ocr_rule_text_retained": true,
+    "v228_test_title_still_R156": true,
+    "V227_stable_only": true,
+    "no_auto_activation_of_v3": true,
+    "no_cold_offline_OCR_claim": true,
+    "no_physical_key_claim": true,
+    "R367_guard_is_test_only": true
+  },
+  "ok": true,
+  "browser_checks_fresh": 100,
+  "synthetic_folded_texts": 64,
+  "source_refs_tested": 130,
+  "unrelated_controls_tested": 250,
+  "real_OCR_executed": false,
+  "physical_key_test": false,
+  "source_catalogue_modified": false,
+  "R305_interpretation_experimental_change": true,
+  "V227_stable_unmodified": true,
+  "limitations": [
+    "This is a V2.28 TEST parser guard; physical performance unverified",
+    "Full catalogue must be loaded for R367 glyph-collision guard",
+    "No cold-offline OCR certification",
+    "Samsung R336 screenshot PASS 192/192, raw JSON missing",
+    "Prior entire historical test collection not freshly rerun"
+  ]
+}
