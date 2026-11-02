@@ -1,0 +1,26 @@
+{
+  "schema": "bres-cat-r367-independent-verification-v1",
+  "milestone": "CAT-R367",
+  "date": "2026-11-02",
+  "checks": {
+    "R366_all_1515_catalogue_files_unchanged": true,
+    "CAT_R366_prior_verification_passed": true,
+    "generator_deterministic": true,
+    "12_runtime_risk_audit_checks": true,
+    "5103_source_refs_unchanged": true,
+    "ten_canonical_SHA256_same": true,
+    "64_rows_csv_json_agree": true,
+    "11_baseline_risks_from_JS": true,
+    "0_post_guard_automatic_prefills": true,
+    "130_ref_endpoint_immutability": true,
+    "no_physical_equivalence_claim": true,
+    "no_catalogue_data_changed": true
+  },
+  "ok": true,
+  "parent_files": 1515,
+  "changed_parent_files": [],
+  "limitations": [
+    "Actual JS parser tested with synthetic text, not photo/OCR",
+    "No manufacturer equivalence or key validated"
+  ]
+}
