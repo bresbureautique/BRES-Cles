@@ -1,0 +1,105 @@
+--- R366/app/index.html
++++ R367/app/index.html
+@@ -33,9 +33,9 @@
+ </head>
+ <body>
+ <div class="app-version-badge">V2.28 TEST R156 • CATALOGUE SILCA MASSIF • STABLE NON REMPLACÉE</div>
+ <header><h1>BRES — Identification de clés</h1><p>V2.28 TEST R156 • application de test séparée + gabarit compact 0–50 mm + caméra guidée autofocus + OCR + catalogue Silca massif</p></header>
+-<div id="checkpointTrace" class="status ok"><b>Checkpoint de travail : R366 (diagnostic OCR conservateur)</b> — moteur V2.28 TEST R156 et téléchargement benchmark R336 conservés ; V2.27 reste la version stable. Les exports métier historiques conservent leur provenance R319 (moteur R156). Aucun statut de disponibilité OCR hors ligne n’est présumé.</div>
++<div id="checkpointTrace" class="status ok"><b>Checkpoint de travail : R367 (anti-confusions OCR expérimentales)</b> — moteur V2.28 TEST R156 et téléchargement benchmark R336 conservés ; V2.27 reste la version stable. Les exports métier historiques conservent leur provenance R319 (moteur R156). Aucun statut de disponibilité OCR hors ligne n’est présumé.</div>
+ <div class="status warn" id="deviceBenchmarkR336Link"><b>Diagnostic R336 — benchmark Samsung (sans effet sur l’identification).</b><br><a class="btn alt" id="r362BenchmarkStandaloneDownload" href="#" role="button">Télécharger le benchmark Samsung R336 autonome</a><p class="small" id="r362BenchmarkHelp">Sur Samsung : dans Mes fichiers &gt; Téléchargements, ouvrez ensuite <b>BRES_Cles_Benchmark_Samsung_R336_AUTONOME.html</b> avec Chrome. Le lien vers un fichier voisin ne fonctionne pas toujours depuis content://.</p></div>
+ 
+ <div id="cameraModal" class="camera-modal hidden" aria-hidden="true">
+  <div class="cam-top">BRES : CAMÉRA GUIDÉE V2.28 TEST R156 — <span id="camSideLabel">Recto</span></div>
+@@ -4499,8 +4499,34 @@
+     }
+   }
+   return [...new Set(out)];
+ }
++// R367 TEST: read-only index of non-equivalent canonical spellings sharing a
++// LOSSY glyph transcript. Only a complete 5103-row catalogue can supply evidence.
++// This is NOT a physical key equivalence, OCR accuracy claim or maker inference.
++let ocrFoldIndexR367Cache=null,ocrFoldIndexR367Source=null;
++function ocrLossyGlyphGroupsR367(candidates){
++  const db=Array.isArray(globalThis.BRES_CATALOG_V3)?globalThis.BRES_CATALOG_V3:null;
++  if(!db||db.length!==5103)return []; // cannot assert a full-catalogue collision
++  if(!ocrFoldIndexR367Cache||ocrFoldIndexR367Source!==db){
++    const groups=new Map(), fold=ref=>compactRef(ref).replace(/[OILSB]/g,c=>({O:'0',I:'1',L:'1',S:'5',B:'8'})[c]);
++    for(const row of db){
++      const canon=String(row?.[0]||'').toUpperCase().trim();
++      if(!canon)continue;
++      const key=fold(canon);if(!groups.has(key))groups.set(key,new Set());
++      groups.get(key).add(canon);
++    }
++    ocrFoldIndexR367Cache=groups;
++    ocrFoldIndexR367Source=db;
++  }
++  const fold=ref=>compactRef(ref).replace(/[OILSB]/g,c=>({O:'0',I:'1',L:'1',S:'5',B:'8'})[c]);
++  const out=new Map();
++  for(const cand of candidates||[]){
++    const key=fold(cand),canons=[...(ocrFoldIndexR367Cache.get(key)||[])].sort();
++    if(canons.length>1)out.set(key,{foldedText:key,canons,policy:'manual-review-required',source:'full-catalogue-only'});
++  }
++  return [...out.values()];
++}
+ function interpretOCR(raw){
+   let txt=cleanOCR(raw);
+   const makerWords=["JMA","SILCA","ERREBI","KEYLINE","TESA","ILCO","ORION","CEA","LOTUS","BORKEY","ABUS","CISA","BRICARD","VACHETTE","FTH","DOM","YALE","ASSA","ISEO","RONIS"];
+   // R34: preserve Unicode context for maker boundaries; cleanOCR is still used only for reference candidates.
+@@ -4531,8 +4557,16 @@
+     if(bucket&&bucket.length>1){
+       compactAmbiguities.push({compact:cand,canons:bucket.map(x=>x.canon),makers:[...new Set(bucket.map(x=>x.maker).filter(Boolean))]});
+     }
+   }
++
++  // R367 TEST: a lossy OCR reading can be an exact catalogue reference *and*
++  // another canonical spelling when glyphs O/0, I/L/1, S/5, B/8 are confused.
++  // Do not publish an automatic reference based solely on this text. The full
++  // read-only catalogue must be present; neither aliases nor makers are merged.
++  const ocrFoldAmbiguitiesR367=ocrLossyGlyphGroupsR367(candidates).filter(g=>
++    !g.canons.every(canon=>compactAmbiguities.some(a=>(a.canons||[]).includes(canon)))
++  );
+ 
+   // R49: qualify XREF aliases by manufacturer and exclude descriptive metadata.
+   // An explicit blank manufacturer must not validate another manufacturer's alias.
+   const metaKeys=new Set(["JMA_URL","POUR","SILCA_PAGE","SILCA_VISUAL","PAGE","NOTE"]);
+@@ -4601,9 +4635,14 @@
+     // R209 : tant que la collision compacte n'a pas été départagée par la géométrie catalogue,
+     // aucune correspondance floue XREF ne doit contourner cette ambiguïté.
+     best=null;
+   }
+-  return {txt,makers,candidates,best,aliasMakers:detectedAliasMakers,aliasMakerConflict,referenceAmbiguity,ambiguousCanons,referenceRanking:referenceRanking.slice(0,4),compactAmbiguities};
++  if(ocrFoldAmbiguitiesR367.length){
++    referenceAmbiguity=true;
++    ambiguousCanons=[...new Set([...ambiguousCanons,...ocrFoldAmbiguitiesR367.flatMap(g=>g.canons)])];
++    best=null; // never accept an exact or fuzzy tie-broken spelling of lossy glyphs
++  }
++  return {txt,makers,candidates,best,aliasMakers:detectedAliasMakers,aliasMakerConflict,referenceAmbiguity,ambiguousCanons,referenceRanking:referenceRanking.slice(0,4),compactAmbiguities,ocrFoldAmbiguitiesR367};
+ }
+ function currentGeometryViewEvidenceR213(){
+   const sides=["recto","verso"],snapshot=mainPhotoSelectionSnapshot(),analyses=Array.isArray(currentAnalyses)?currentAnalyses.slice(0,2):[];
+   const currentIdentityValid=isCanonicalGeometryEpochR273(identificationEpoch)&&isCanonicalGeometryEpochR273(mainPhotoEpoch)&&isPublishedGeometryGenerationR273(geometryAnalysisGenerationR214);
+@@ -4630,8 +4669,10 @@
+   const allCurrent=currentIdentityValid&&faces.every(x=>x.ok);
+   return {ok:allCurrent,faces,viewSigs:allCurrent?faces.map(x=>x.sig):[],current:{identityValid:currentIdentityValid,identificationEpoch,mainPhotoEpoch,photoSelectionSnapshot:String(snapshot),photoIdentitySnapshot:mainPhotoIdentitySnapshotKeyR213(mainPhotoIdentitySnapshotR213()),analysisGenerationR214:geometryAnalysisGenerationR214}};
+ }
+ function resolveCompactCatalogueAmbiguityR213(info,sig,evidence=currentGeometryViewEvidenceR213()){
++  // R367: no geometry promotion of *lossy glyph* identities without a verified key.
++  if(info?.ocrFoldAmbiguitiesR367?.length)return info;
+   if(!info||info.best||!sig||typeof globalThis.bresCatalogueAmbiguityGeometryR227!=="function")return info;
+   const groups=(info.compactAmbiguities||[]).filter(g=>g&&Array.isArray(g.canons)&&g.canons.length>1);
+   if(groups.length!==1)return info;
+   const group=groups[0],groupSet=new Set(group.canons.map(String));
+@@ -4725,9 +4766,11 @@
+     const key=String(g.compact||"")+"|"+canons.join("|");
+     if(!compactAmbiguityMap.has(key))compactAmbiguityMap.set(key,{compact:String(g.compact||""),canons,makers:[...new Set((g.makers||[]).map(String))]});
+   }
+   const compactAmbiguities=[...compactAmbiguityMap.values()];
+-  return {txt:infos.map(i=>i.txt).filter(Boolean).join(" | "),makers,candidates,best,views:infos,crossViewConflict,conflictingCanons:crossViewConflict?strongCanons:[],referenceAmbiguity:infos.some(i=>i.referenceAmbiguity),ambiguousCanons,compactAmbiguities};
++  const ocrFoldAmbiguitiesR367=[...new Map(infos.flatMap(i=>i.ocrFoldAmbiguitiesR367||[]).map(g=>[g.foldedText,g])).values()];
++  if(ocrFoldAmbiguitiesR367.length)best=null; // conflict in either view blocks the other view's exact text
++  return {txt:infos.map(i=>i.txt).filter(Boolean).join(" | "),makers,candidates,best,views:infos,crossViewConflict,conflictingCanons:crossViewConflict?strongCanons:[],referenceAmbiguity:infos.some(i=>i.referenceAmbiguity),ambiguousCanons,compactAmbiguities,ocrFoldAmbiguitiesR367};
+ }
+ function mergePassMakerConsensus(info,reads){
+   // R98 : fusionne uniquement des marques confirmées par >=2 passes d'une même photo.
+   // Les codes/références restent exclusivement issus des lectures normales et des garde-fous existants.
