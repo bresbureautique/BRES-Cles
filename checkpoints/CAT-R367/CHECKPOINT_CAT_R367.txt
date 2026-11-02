@@ -1,0 +1,5 @@
+BRES Clés — 02/11/2026 — independent CAT-R367 audit (NO catalogue mutation)
+Canonical catalogue remains 5103 unique references in 10 fragments, exact SHA256 unchanged.
+Read-only audit compares actual V2.28 R366 and experimental R367 JS parser on 64 synthetic OCR homograph folds. 11/64 groups in R366 gave a potential automatic text-only prefill; R367 gives 0/64; all 130 colliding canonical ref texts are blocked from prefill; 250 unrelated controls unchanged. 12 generator and 12 independent catalogue checks PASS.
+Priority list is NOT proof of wrong physical key identification, actual OCR performance, cross-manufacturer identity, or equivalence. The 325 typing-only theoretical risks remain separate. No user physical action is needed to continue software auditing, but any future key identity certification requires certain real references and Samsung trials.
+V2.27 stable and GitHub main untouched. No catalogue sources modified, no app V2.28 test merged.
