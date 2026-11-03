@@ -1,0 +1,21 @@
+R368 PASS 20/20 independent gate checks; 16 fresh Chromium preflight checks, 635 typing-text controls. Stable V2.27 untouched.
+PASS parent_8899_files_crc
+PASS parent_8898_manifest_files_present
+PASS parent_index_sha_matches_manifest
+PASS only_existing_parent_file_edited_is_index
+PASS exact_reproducible_r368_html_patch
+PASS parent_r367_gate_passed
+PASS runtime_readiness_passes_16
+PASS 0_1_5_9_fragment_fail_closed
+PASS recovered_full_catalogue_preserves_386_decisions
+PASS 64_lossy_glyph_folds_preserved
+PASS 130_collision_refs_still_blocked
+PASS manual_TE8D_TE8I_nonvalidated
+PASS 325_typing_pair_audit_passed
+PASS R331_R336_pilot_unchanged
+PASS R305_rule_marker_retained
+PASS V228_test_not_promoted
+PASS V227_stable_only
+PASS V3_still_opt_in
+PASS Tesseract_still_remote_cold_offline_NOT_CERTIFIED
+PASS actual_physical_or_OCR_claim_absent
