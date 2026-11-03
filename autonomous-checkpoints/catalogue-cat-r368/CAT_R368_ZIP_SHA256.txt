@@ -1,0 +1,3 @@
+f63dface64145109186156d4f46f6373be83d3e5a2fca6038c9d80836827e953  BRES_Cles_Catalogue_Audit_CAT_R368.zip
+Size: 4210866 bytes. ZIP: 1534 members, 1533 manifest entries; CRC and SHA-256 verified.
+Stored in Library/BRES Cles/Sauvegardes; downloaded copy byte-identical. Catalogue 5103 refs / 10 fragments unchanged.
