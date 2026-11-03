@@ -1,0 +1,23 @@
+{
+  "schema": "bres-cat-r368-independent-verification-v1",
+  "milestone": "CAT-R368",
+  "date": "2026-11-03",
+  "ok": true,
+  "checks": {
+    "CAT_R367_1524_parent_files_unchanged": true,
+    "CAT_R367_parent_gate_passed": true,
+    "generator_reproducible_sha256": true,
+    "audit_9_checks_all_pass": true,
+    "325_pairs_match_csv_rows": true,
+    "635_distinct_endpoints": true,
+    "R367_to_R368_full_text_decisions_unchanged": true,
+    "10_canonical_fragments_sha256_stable": true,
+    "5103_distinct_references_stable": true,
+    "no_physical_equivalence_or_OCR_claim": true
+  },
+  "parent_files": 1524,
+  "changed_parent_files": [],
+  "limitations": [
+    "All 325 edit-neighbour pairs are theoretical text-only review candidates, not manufacturer or physical key validations"
+  ]
+}
