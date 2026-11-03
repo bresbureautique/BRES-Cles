@@ -1,0 +1,11 @@
+CAT-R368 PASS 10/10 checks; 325 typing-only pairs / 635 endpoints, source fragments unchanged.
+PASS CAT_R367_1524_parent_files_unchanged
+PASS CAT_R367_parent_gate_passed
+PASS generator_reproducible_sha256
+PASS audit_9_checks_all_pass
+PASS 325_pairs_match_csv_rows
+PASS 635_distinct_endpoints
+PASS R367_to_R368_full_text_decisions_unchanged
+PASS 10_canonical_fragments_sha256_stable
+PASS 5103_distinct_references_stable
+PASS no_physical_equivalence_or_OCR_claim
