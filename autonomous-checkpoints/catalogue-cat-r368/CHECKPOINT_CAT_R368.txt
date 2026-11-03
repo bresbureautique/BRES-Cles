@@ -1,0 +1,4 @@
+BRES Clés — 03/11/2026 — independent catalogue audit CAT-R368 (READ ONLY)
+Canonical sources: 5103 distinct references in 10 original fragments; SHA-256 unchanged.
+Replayed actual R367 and experimental R368 JavaScript parsers on 635 unique spellings derived from 325 typing-only pair edges. 0 changed decisions and 0 text-prefill to the opposite member of a reviewed pair. 9/9 audit and 10/10 independent verification checks PASS.
+These are text edits and possible OCR confusions for human review only, not physical key equivalences, actual OCR failures or manufacturers reliably attributed. No automatic merge, no catalogue edit, no promotion. V2.27 stable unchanged.
