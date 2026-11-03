@@ -1,0 +1,3 @@
+fb391dac10a251717000e65bae6df8668e712be060fcf5311cef355c7f2500dd  BRES_Cles_Mobile_V2_28_CHECKPOINT_R368.zip
+Size: 35163828 bytes. ZIP: 8908 members, 8907 manifest entries; CRC and SHA-256 verified.
+Stored in Library/BRES Cles/Sauvegardes; downloaded copy byte-identical. V2.27 stable / GitHub main unchanged.
