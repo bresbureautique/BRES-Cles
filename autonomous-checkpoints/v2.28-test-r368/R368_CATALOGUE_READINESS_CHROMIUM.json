@@ -1,0 +1,339 @@
+{
+  "schema": "bres-r368-catalogue-readiness-chromium-v1",
+  "date": "2026-11-03",
+  "milestone": "R368",
+  "ok": true,
+  "checks": {
+    "0_chunks_no_auto_prefill": true,
+    "1_chunk_no_auto_prefill": true,
+    "5_chunks_no_auto_prefill": true,
+    "9_chunks_no_auto_prefill": true,
+    "10_chunks_detect_complete": true,
+    "full_catalogue_pilot_TE8D_TE8I_preserved": true,
+    "full_130_collision_250_control_plus_smoke_decisions_unchanged": true,
+    "full_64_fold_decisions_unchanged": true,
+    "full_64_fold_no_automatic_prefill": true,
+    "130_collision_refs_remain_blocked": true,
+    "after_cached_9_fragment_state_reblocked": true,
+    "after_restore_full_behavior_restored": true,
+    "manual_TE8D_TE8I_not_validated": true,
+    "no_js_runtime_errors": true,
+    "no_physical_OCR_claim": true,
+    "canonical_data_unchanged_5103_10": true
+  },
+  "stages": {
+    "zero": [
+      {
+        "raw": "TE8D",
+        "one": null,
+        "pair": null,
+        "eligible": false,
+        "incomplete": true,
+        "groups": 0,
+        "ambiguous": true,
+        "candidates": 1,
+        "changed_geometry_absent": false
+      },
+      {
+        "raw": "TE8I",
+        "one": null,
+        "pair": null,
+        "eligible": false,
+        "incomplete": true,
+        "groups": 0,
+        "ambiguous": true,
+        "candidates": 1,
+        "changed_geometry_absent": false
+      },
+      {
+        "raw": "KF1",
+        "one": null,
+        "pair": null,
+        "eligible": false,
+        "incomplete": true,
+        "groups": 0,
+        "ambiguous": true,
+        "candidates": 1,
+        "changed_geometry_absent": false
+      },
+      {
+        "raw": "BK34",
+        "one": null,
+        "pair": null,
+        "eligible": false,
+        "incomplete": true,
+        "groups": 0,
+        "ambiguous": true,
+        "candidates": 1,
+        "changed_geometry_absent": false
+      }
+    ],
+    "one": [
+      {
+        "raw": "TE8D",
+        "one": null,
+        "pair": null,
+        "eligible": false,
+        "incomplete": true,
+        "groups": 0,
+        "ambiguous": true,
+        "candidates": 1,
+        "changed_geometry_absent": false
+      },
+      {
+        "raw": "TE8I",
+        "one": null,
+        "pair": null,
+        "eligible": false,
+        "incomplete": true,
+        "groups": 0,
+        "ambiguous": true,
+        "candidates": 1,
+        "changed_geometry_absent": false
+      },
+      {
+        "raw": "KF1",
+        "one": null,
+        "pair": null,
+        "eligible": false,
+        "incomplete": true,
+        "groups": 0,
+        "ambiguous": true,
+        "candidates": 1,
+        "changed_geometry_absent": false
+      },
+      {
+        "raw": "BK34",
+        "one": null,
+        "pair": null,
+        "eligible": false,
+        "incomplete": true,
+        "groups": 0,
+        "ambiguous": true,
+        "candidates": 1,
+        "changed_geometry_absent": false
+      }
+    ],
+    "five": [
+      {
+        "raw": "TE8D",
+        "one": null,
+        "pair": null,
+        "eligible": false,
+        "incomplete": true,
+        "groups": 0,
+        "ambiguous": true,
+        "candidates": 1,
+        "changed_geometry_absent": false
+      },
+      {
+        "raw": "TE8I",
+        "one": null,
+        "pair": null,
+        "eligible": false,
+        "incomplete": true,
+        "groups": 0,
+        "ambiguous": true,
+        "candidates": 1,
+        "changed_geometry_absent": false
+      },
+      {
+        "raw": "KF1",
+        "one": null,
+        "pair": null,
+        "eligible": false,
+        "incomplete": true,
+        "groups": 0,
+        "ambiguous": true,
+        "candidates": 1,
+        "changed_geometry_absent": false
+      },
+      {
+        "raw": "BK34",
+        "one": null,
+        "pair": null,
+        "eligible": false,
+        "incomplete": true,
+        "groups": 0,
+        "ambiguous": true,
+        "candidates": 1,
+        "changed_geometry_absent": false
+      }
+    ],
+    "nine": [
+      {
+        "raw": "TE8D",
+        "one": null,
+        "pair": null,
+        "eligible": false,
+        "incomplete": true,
+        "groups": 0,
+        "ambiguous": true,
+        "candidates": 1,
+        "changed_geometry_absent": false
+      },
+      {
+        "raw": "TE8I",
+        "one": null,
+        "pair": null,
+        "eligible": false,
+        "incomplete": true,
+        "groups": 0,
+        "ambiguous": true,
+        "candidates": 1,
+        "changed_geometry_absent": false
+      },
+      {
+        "raw": "KF1",
+        "one": null,
+        "pair": null,
+        "eligible": false,
+        "incomplete": true,
+        "groups": 0,
+        "ambiguous": true,
+        "candidates": 1,
+        "changed_geometry_absent": false
+      },
+      {
+        "raw": "BK34",
+        "one": null,
+        "pair": null,
+        "eligible": false,
+        "incomplete": true,
+        "groups": 0,
+        "ambiguous": true,
+        "candidates": 1,
+        "changed_geometry_absent": false
+      }
+    ],
+    "ten": [
+      {
+        "raw": "TE8D",
+        "one": "TE8D",
+        "pair": "TE8D",
+        "eligible": true,
+        "incomplete": false,
+        "groups": 0,
+        "ambiguous": false,
+        "candidates": 1,
+        "changed_geometry_absent": true
+      },
+      {
+        "raw": "TE8I",
+        "one": "TE8I",
+        "pair": "TE8I",
+        "eligible": true,
+        "incomplete": false,
+        "groups": 0,
+        "ambiguous": false,
+        "candidates": 1,
+        "changed_geometry_absent": true
+      },
+      {
+        "raw": "KF1",
+        "one": null,
+        "pair": null,
+        "eligible": false,
+        "incomplete": false,
+        "groups": 1,
+        "ambiguous": true,
+        "candidates": 1,
+        "changed_geometry_absent": false
+      },
+      {
+        "raw": "BK34",
+        "one": null,
+        "pair": null,
+        "eligible": false,
+        "incomplete": false,
+        "groups": 0,
+        "ambiguous": true,
+        "candidates": 1,
+        "changed_geometry_absent": false
+      }
+    ],
+    "temporarily_missing_one": [
+      {
+        "raw": "TE8D",
+        "one": null,
+        "pair": null,
+        "eligible": false,
+        "incomplete": true,
+        "groups": 0,
+        "ambiguous": true,
+        "candidates": 1,
+        "changed_geometry_absent": false
+      },
+      {
+        "raw": "KF1",
+        "one": null,
+        "pair": null,
+        "eligible": false,
+        "incomplete": true,
+        "groups": 0,
+        "ambiguous": true,
+        "candidates": 1,
+        "changed_geometry_absent": false
+      }
+    ],
+    "restored": [
+      {
+        "raw": "TE8D",
+        "one": "TE8D",
+        "pair": "TE8D",
+        "eligible": true,
+        "incomplete": false,
+        "groups": 0,
+        "ambiguous": false,
+        "candidates": 1,
+        "changed_geometry_absent": true
+      },
+      {
+        "raw": "KF1",
+        "one": null,
+        "pair": null,
+        "eligible": false,
+        "incomplete": false,
+        "groups": 1,
+        "ambiguous": true,
+        "candidates": 1,
+        "changed_geometry_absent": false
+      }
+    ]
+  },
+  "complete_rows": 5103,
+  "changed_full_catalogue_decisions": [],
+  "changed_full_fold_decisions": [],
+  "manual": [
+    {
+      "ref": "TE8D",
+      "decision": "RÉFÉRENCE TROUVÉE : TE8D\nAnalysez d'abord les deux photos."
+    },
+    {
+      "ref": "TE8I",
+      "decision": "RÉFÉRENCE TROUVÉE : TE8I\nAnalysez d'abord les deux photos."
+    }
+  ],
+  "errors": [],
+  "network_attempts_blocked": 2,
+  "r367_baseline_sha256": "d1c66c0f091f885527a2a590104196bc2e1b113f6307e6570f6df558223982b2",
+  "r368_html_sha256": "a26802dc036a0221c78d28b98260feca192ba318fc04423da6a19cc092124232",
+  "canonical_sha256": {
+    "catalog-01.js": "e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b",
+    "catalog-02.js": "955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75",
+    "catalog-03.js": "9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210",
+    "catalog-04.js": "14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942",
+    "catalog-05.js": "5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b",
+    "catalog-06.js": "b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac",
+    "catalog-07.js": "b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1",
+    "catalog-08.js": "3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814",
+    "catalog-09.js": "4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f",
+    "catalog-10.js": "f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4"
+  },
+  "limitations": [
+    "Real JavaScript parser, synthetic text only, no photograph or Tesseract",
+    "Catalogue length is a completeness precondition, NOT a cryptographic authentication",
+    "Manual entry remains possible; no physical equivalence claimed",
+    "Stable V2.27 unchanged"
+  ]
+}
