@@ -1,0 +1,49 @@
+{
+  "schema": "bres-r368-independent-checkpoint-v1",
+  "milestone": "R368",
+  "date": "2026-11-03",
+  "parent": "R367",
+  "parent_files": 8899,
+  "parent_manifest_entries": 8898,
+  "changed_parent_files": [
+    "index.html"
+  ],
+  "checks": {
+    "parent_8899_files_crc": true,
+    "parent_8898_manifest_files_present": true,
+    "parent_index_sha_matches_manifest": true,
+    "only_existing_parent_file_edited_is_index": true,
+    "exact_reproducible_r368_html_patch": true,
+    "parent_r367_gate_passed": true,
+    "runtime_readiness_passes_16": true,
+    "0_1_5_9_fragment_fail_closed": true,
+    "recovered_full_catalogue_preserves_386_decisions": true,
+    "64_lossy_glyph_folds_preserved": true,
+    "130_collision_refs_still_blocked": true,
+    "manual_TE8D_TE8I_nonvalidated": true,
+    "325_typing_pair_audit_passed": true,
+    "R331_R336_pilot_unchanged": true,
+    "R305_rule_marker_retained": true,
+    "V228_test_not_promoted": true,
+    "V227_stable_only": true,
+    "V3_still_opt_in": true,
+    "Tesseract_still_remote_cold_offline_NOT_CERTIFIED": true,
+    "actual_physical_or_OCR_claim_absent": true
+  },
+  "ok": true,
+  "fresh_chromium_checks": 25,
+  "synthetic_fold_groups": 64,
+  "collision_references": 130,
+  "unrelated_ref_controls": 250,
+  "typing_only_review_pairs": 325,
+  "Tesseract_cold_offline_certified": false,
+  "samsung_physical_test_performed": false,
+  "V227_stable_modified": false,
+  "catalogue_modified": false,
+  "limitations": [
+    "Tests are synthetic text passed to real JavaScript, not photos or real OCR",
+    "The 5103 length readiness gate is not a cryptographic catalogue signature",
+    "Cold offline Tesseract not certified; Samsung benchmark JSON not received",
+    "Historical entire test corpus not re-executed"
+  ]
+}
