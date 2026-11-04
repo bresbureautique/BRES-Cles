@@ -1,0 +1,25 @@
+{
+  "schema": "bres-cat-r369-independent-gate-v1",
+  "milestone": "CAT-R369",
+  "date": "2026-11-04",
+  "ok": true,
+  "checks": {
+    "prior_1533_manifest_rows_unchanged": true,
+    "parent_CAT_R368_passed": true,
+    "fragment_audit_reproducible": true,
+    "fragment_audit_10_checks_all_pass": true,
+    "runtime_comparison_6_checks_pass": true,
+    "393_csv_review_rows": true,
+    "732_distinct_endpoints_real_JS": true,
+    "10_canonical_hashes_preserved": true,
+    "5103_canonical_unique_references": true,
+    "no_automatic_ref_merges_or_maker_attribution": true
+  },
+  "parent_files": 1533,
+  "modified_parent_files": [],
+  "cross_fragment_ocr_pairs_UNVERIFIED": 59,
+  "cross_fragment_typing_pairs_UNVERIFIED": 297,
+  "limitations": [
+    "All pairs are textual review only; no manufacturer or physical validation"
+  ]
+}
