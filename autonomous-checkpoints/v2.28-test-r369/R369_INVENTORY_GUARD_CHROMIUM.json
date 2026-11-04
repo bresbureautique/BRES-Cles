@@ -1,0 +1,706 @@
+{
+  "schema": "bres-r369-js-inventory-guard-qa-v1",
+  "milestone": "R369",
+  "date": "2026-11-04",
+  "ok": true,
+  "checks": {
+    "parent_R368_real_js_full_136_input_decisions_preserved": true,
+    "parent_R368_real_js_64_fold_decisions_preserved": true,
+    "130_ocr_collision_catalogue_refs_not_auto_selected": true,
+    "64_folded_ambiguities_not_auto_selected": true,
+    "all_clean_inputs_ready": true,
+    "baseline_checksum_approved": true,
+    "all_7_faults_blocked": true,
+    "all_7_restores_release_gate": true,
+    "six_same_length_corruptions_detected": true,
+    "missing_last_marked_count": true,
+    "full_catalogue_pilot_positive": true,
+    "manual_pilot_ref_not_physically_validated": true,
+    "no_js_errors": true,
+    "no_ocr_physical_claim": true
+  },
+  "states": {
+    "full": {
+      "rows": [
+        {
+          "text": "TE8D",
+          "o": "TE8D",
+          "view": "TE8D",
+          "ready": true,
+          "status": "expected-inventory",
+          "ambiguous": false,
+          "eligible": true
+        },
+        {
+          "text": "TE8I",
+          "o": "TE8I",
+          "view": "TE8I",
+          "ready": true,
+          "status": "expected-inventory",
+          "ambiguous": false,
+          "eligible": true
+        },
+        {
+          "text": "BK34",
+          "o": null,
+          "view": null,
+          "ready": true,
+          "status": "expected-inventory",
+          "ambiguous": true,
+          "eligible": false
+        },
+        {
+          "text": "KF1",
+          "o": null,
+          "view": null,
+          "ready": true,
+          "status": "expected-inventory",
+          "ambiguous": true,
+          "eligible": false
+        }
+      ],
+      "inventory": {
+        "ok": true,
+        "reason": "expected-inventory"
+      }
+    },
+    "duplicate-record": {
+      "rows": [
+        {
+          "text": "TE8D",
+          "o": null,
+          "view": null,
+          "ready": false,
+          "status": "inventory-mismatch",
+          "ambiguous": true,
+          "eligible": false
+        },
+        {
+          "text": "TE8I",
+          "o": null,
+          "view": null,
+          "ready": false,
+          "status": "inventory-mismatch",
+          "ambiguous": true,
+          "eligible": false
+        },
+        {
+          "text": "BK34",
+          "o": null,
+          "view": null,
+          "ready": false,
+          "status": "inventory-mismatch",
+          "ambiguous": true,
+          "eligible": false
+        },
+        {
+          "text": "KF1",
+          "o": null,
+          "view": null,
+          "ready": false,
+          "status": "inventory-mismatch",
+          "ambiguous": true,
+          "eligible": false
+        }
+      ],
+      "inventory": {
+        "ok": false,
+        "reason": "inventory-mismatch"
+      }
+    },
+    "restored-duplicate-record": {
+      "rows": [
+        {
+          "text": "TE8D",
+          "o": "TE8D",
+          "view": "TE8D",
+          "ready": true,
+          "status": "expected-inventory",
+          "ambiguous": false,
+          "eligible": true
+        },
+        {
+          "text": "TE8I",
+          "o": "TE8I",
+          "view": "TE8I",
+          "ready": true,
+          "status": "expected-inventory",
+          "ambiguous": false,
+          "eligible": true
+        },
+        {
+          "text": "BK34",
+          "o": null,
+          "view": null,
+          "ready": true,
+          "status": "expected-inventory",
+          "ambiguous": true,
+          "eligible": false
+        },
+        {
+          "text": "KF1",
+          "o": null,
+          "view": null,
+          "ready": true,
+          "status": "expected-inventory",
+          "ambiguous": true,
+          "eligible": false
+        }
+      ],
+      "inventory": {
+        "ok": true,
+        "reason": "expected-inventory"
+      }
+    },
+    "mutated-reference": {
+      "rows": [
+        {
+          "text": "TE8D",
+          "o": null,
+          "view": null,
+          "ready": false,
+          "status": "inventory-mismatch",
+          "ambiguous": true,
+          "eligible": false
+        },
+        {
+          "text": "TE8I",
+          "o": null,
+          "view": null,
+          "ready": false,
+          "status": "inventory-mismatch",
+          "ambiguous": true,
+          "eligible": false
+        },
+        {
+          "text": "BK34",
+          "o": null,
+          "view": null,
+          "ready": false,
+          "status": "inventory-mismatch",
+          "ambiguous": true,
+          "eligible": false
+        },
+        {
+          "text": "KF1",
+          "o": null,
+          "view": null,
+          "ready": false,
+          "status": "inventory-mismatch",
+          "ambiguous": true,
+          "eligible": false
+        }
+      ],
+      "inventory": {
+        "ok": false,
+        "reason": "inventory-mismatch"
+      }
+    },
+    "restored-mutated-reference": {
+      "rows": [
+        {
+          "text": "TE8D",
+          "o": "TE8D",
+          "view": "TE8D",
+          "ready": true,
+          "status": "expected-inventory",
+          "ambiguous": false,
+          "eligible": true
+        },
+        {
+          "text": "TE8I",
+          "o": "TE8I",
+          "view": "TE8I",
+          "ready": true,
+          "status": "expected-inventory",
+          "ambiguous": false,
+          "eligible": true
+        },
+        {
+          "text": "BK34",
+          "o": null,
+          "view": null,
+          "ready": true,
+          "status": "expected-inventory",
+          "ambiguous": true,
+          "eligible": false
+        },
+        {
+          "text": "KF1",
+          "o": null,
+          "view": null,
+          "ready": true,
+          "status": "expected-inventory",
+          "ambiguous": true,
+          "eligible": false
+        }
+      ],
+      "inventory": {
+        "ok": true,
+        "reason": "expected-inventory"
+      }
+    },
+    "mutated-maker": {
+      "rows": [
+        {
+          "text": "TE8D",
+          "o": null,
+          "view": null,
+          "ready": false,
+          "status": "inventory-mismatch",
+          "ambiguous": true,
+          "eligible": false
+        },
+        {
+          "text": "TE8I",
+          "o": null,
+          "view": null,
+          "ready": false,
+          "status": "inventory-mismatch",
+          "ambiguous": true,
+          "eligible": false
+        },
+        {
+          "text": "BK34",
+          "o": null,
+          "view": null,
+          "ready": false,
+          "status": "inventory-mismatch",
+          "ambiguous": true,
+          "eligible": false
+        },
+        {
+          "text": "KF1",
+          "o": null,
+          "view": null,
+          "ready": false,
+          "status": "inventory-mismatch",
+          "ambiguous": true,
+          "eligible": false
+        }
+      ],
+      "inventory": {
+        "ok": false,
+        "reason": "inventory-mismatch"
+      }
+    },
+    "restored-mutated-maker": {
+      "rows": [
+        {
+          "text": "TE8D",
+          "o": "TE8D",
+          "view": "TE8D",
+          "ready": true,
+          "status": "expected-inventory",
+          "ambiguous": false,
+          "eligible": true
+        },
+        {
+          "text": "TE8I",
+          "o": "TE8I",
+          "view": "TE8I",
+          "ready": true,
+          "status": "expected-inventory",
+          "ambiguous": false,
+          "eligible": true
+        },
+        {
+          "text": "BK34",
+          "o": null,
+          "view": null,
+          "ready": true,
+          "status": "expected-inventory",
+          "ambiguous": true,
+          "eligible": false
+        },
+        {
+          "text": "KF1",
+          "o": null,
+          "view": null,
+          "ready": true,
+          "status": "expected-inventory",
+          "ambiguous": true,
+          "eligible": false
+        }
+      ],
+      "inventory": {
+        "ok": true,
+        "reason": "expected-inventory"
+      }
+    },
+    "mutated-dimension": {
+      "rows": [
+        {
+          "text": "TE8D",
+          "o": null,
+          "view": null,
+          "ready": false,
+          "status": "inventory-mismatch",
+          "ambiguous": true,
+          "eligible": false
+        },
+        {
+          "text": "TE8I",
+          "o": null,
+          "view": null,
+          "ready": false,
+          "status": "inventory-mismatch",
+          "ambiguous": true,
+          "eligible": false
+        },
+        {
+          "text": "BK34",
+          "o": null,
+          "view": null,
+          "ready": false,
+          "status": "inventory-mismatch",
+          "ambiguous": true,
+          "eligible": false
+        },
+        {
+          "text": "KF1",
+          "o": null,
+          "view": null,
+          "ready": false,
+          "status": "inventory-mismatch",
+          "ambiguous": true,
+          "eligible": false
+        }
+      ],
+      "inventory": {
+        "ok": false,
+        "reason": "inventory-mismatch"
+      }
+    },
+    "restored-mutated-dimension": {
+      "rows": [
+        {
+          "text": "TE8D",
+          "o": "TE8D",
+          "view": "TE8D",
+          "ready": true,
+          "status": "expected-inventory",
+          "ambiguous": false,
+          "eligible": true
+        },
+        {
+          "text": "TE8I",
+          "o": "TE8I",
+          "view": "TE8I",
+          "ready": true,
+          "status": "expected-inventory",
+          "ambiguous": false,
+          "eligible": true
+        },
+        {
+          "text": "BK34",
+          "o": null,
+          "view": null,
+          "ready": true,
+          "status": "expected-inventory",
+          "ambiguous": true,
+          "eligible": false
+        },
+        {
+          "text": "KF1",
+          "o": null,
+          "view": null,
+          "ready": true,
+          "status": "expected-inventory",
+          "ambiguous": true,
+          "eligible": false
+        }
+      ],
+      "inventory": {
+        "ok": true,
+        "reason": "expected-inventory"
+      }
+    },
+    "swapped-order": {
+      "rows": [
+        {
+          "text": "TE8D",
+          "o": null,
+          "view": null,
+          "ready": false,
+          "status": "inventory-mismatch",
+          "ambiguous": true,
+          "eligible": false
+        },
+        {
+          "text": "TE8I",
+          "o": null,
+          "view": null,
+          "ready": false,
+          "status": "inventory-mismatch",
+          "ambiguous": true,
+          "eligible": false
+        },
+        {
+          "text": "BK34",
+          "o": null,
+          "view": null,
+          "ready": false,
+          "status": "inventory-mismatch",
+          "ambiguous": true,
+          "eligible": false
+        },
+        {
+          "text": "KF1",
+          "o": null,
+          "view": null,
+          "ready": false,
+          "status": "inventory-mismatch",
+          "ambiguous": true,
+          "eligible": false
+        }
+      ],
+      "inventory": {
+        "ok": false,
+        "reason": "inventory-mismatch"
+      }
+    },
+    "restored-swapped-order": {
+      "rows": [
+        {
+          "text": "TE8D",
+          "o": "TE8D",
+          "view": "TE8D",
+          "ready": true,
+          "status": "expected-inventory",
+          "ambiguous": false,
+          "eligible": true
+        },
+        {
+          "text": "TE8I",
+          "o": "TE8I",
+          "view": "TE8I",
+          "ready": true,
+          "status": "expected-inventory",
+          "ambiguous": false,
+          "eligible": true
+        },
+        {
+          "text": "BK34",
+          "o": null,
+          "view": null,
+          "ready": true,
+          "status": "expected-inventory",
+          "ambiguous": true,
+          "eligible": false
+        },
+        {
+          "text": "KF1",
+          "o": null,
+          "view": null,
+          "ready": true,
+          "status": "expected-inventory",
+          "ambiguous": true,
+          "eligible": false
+        }
+      ],
+      "inventory": {
+        "ok": true,
+        "reason": "expected-inventory"
+      }
+    },
+    "missing-last": {
+      "rows": [
+        {
+          "text": "TE8D",
+          "o": null,
+          "view": null,
+          "ready": false,
+          "status": "count-not-5103",
+          "ambiguous": true,
+          "eligible": false
+        },
+        {
+          "text": "TE8I",
+          "o": null,
+          "view": null,
+          "ready": false,
+          "status": "count-not-5103",
+          "ambiguous": true,
+          "eligible": false
+        },
+        {
+          "text": "BK34",
+          "o": null,
+          "view": null,
+          "ready": false,
+          "status": "count-not-5103",
+          "ambiguous": true,
+          "eligible": false
+        },
+        {
+          "text": "KF1",
+          "o": null,
+          "view": null,
+          "ready": false,
+          "status": "count-not-5103",
+          "ambiguous": true,
+          "eligible": false
+        }
+      ],
+      "inventory": {
+        "ok": false,
+        "reason": "count-not-5103"
+      }
+    },
+    "restored-missing-last": {
+      "rows": [
+        {
+          "text": "TE8D",
+          "o": "TE8D",
+          "view": "TE8D",
+          "ready": true,
+          "status": "expected-inventory",
+          "ambiguous": false,
+          "eligible": true
+        },
+        {
+          "text": "TE8I",
+          "o": "TE8I",
+          "view": "TE8I",
+          "ready": true,
+          "status": "expected-inventory",
+          "ambiguous": false,
+          "eligible": true
+        },
+        {
+          "text": "BK34",
+          "o": null,
+          "view": null,
+          "ready": true,
+          "status": "expected-inventory",
+          "ambiguous": true,
+          "eligible": false
+        },
+        {
+          "text": "KF1",
+          "o": null,
+          "view": null,
+          "ready": true,
+          "status": "expected-inventory",
+          "ambiguous": true,
+          "eligible": false
+        }
+      ],
+      "inventory": {
+        "ok": true,
+        "reason": "expected-inventory"
+      }
+    },
+    "same-length-last-replaced": {
+      "rows": [
+        {
+          "text": "TE8D",
+          "o": null,
+          "view": null,
+          "ready": false,
+          "status": "inventory-mismatch",
+          "ambiguous": true,
+          "eligible": false
+        },
+        {
+          "text": "TE8I",
+          "o": null,
+          "view": null,
+          "ready": false,
+          "status": "inventory-mismatch",
+          "ambiguous": true,
+          "eligible": false
+        },
+        {
+          "text": "BK34",
+          "o": null,
+          "view": null,
+          "ready": false,
+          "status": "inventory-mismatch",
+          "ambiguous": true,
+          "eligible": false
+        },
+        {
+          "text": "KF1",
+          "o": null,
+          "view": null,
+          "ready": false,
+          "status": "inventory-mismatch",
+          "ambiguous": true,
+          "eligible": false
+        }
+      ],
+      "inventory": {
+        "ok": false,
+        "reason": "inventory-mismatch"
+      }
+    },
+    "restored-same-length-last-replaced": {
+      "rows": [
+        {
+          "text": "TE8D",
+          "o": "TE8D",
+          "view": "TE8D",
+          "ready": true,
+          "status": "expected-inventory",
+          "ambiguous": false,
+          "eligible": true
+        },
+        {
+          "text": "TE8I",
+          "o": "TE8I",
+          "view": "TE8I",
+          "ready": true,
+          "status": "expected-inventory",
+          "ambiguous": false,
+          "eligible": true
+        },
+        {
+          "text": "BK34",
+          "o": null,
+          "view": null,
+          "ready": true,
+          "status": "expected-inventory",
+          "ambiguous": true,
+          "eligible": false
+        },
+        {
+          "text": "KF1",
+          "o": null,
+          "view": null,
+          "ready": true,
+          "status": "expected-inventory",
+          "ambiguous": true,
+          "eligible": false
+        }
+      ],
+      "inventory": {
+        "ok": true,
+        "reason": "expected-inventory"
+      }
+    }
+  },
+  "samples": 134,
+  "folds": 64,
+  "manual": [
+    {
+      "ref": "TE8D",
+      "output": "RÉFÉRENCE TROUVÉE : TE8D\nAnalysez d'abord les deux photos."
+    },
+    {
+      "ref": "TE8I",
+      "output": "RÉFÉRENCE TROUVÉE : TE8I\nAnalysez d'abord les deux photos."
+    }
+  ],
+  "js_errors": [],
+  "blocked_network_requests": 2,
+  "sha256_r368": "a26802dc036a0221c78d28b98260feca192ba318fc04423da6a19cc092124232",
+  "sha256_r369": "82b65cfb803f0c4d4ac2af76d815d1b0deace551bb4b7abfe4b6a29d5239f324",
+  "limitations": [
+    "Synthetic OCR text via actual JavaScript interpreter; no Tesseract or Samsung physical test",
+    "Double-32bit ordered fingerprint is not cryptographic authentication; columns 5 onward not covered",
+    "Any altered catalogue requires re-validation of the inventory in a future release",
+    "Full historical corpus not executed"
+  ]
+}
