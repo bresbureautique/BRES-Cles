@@ -1,0 +1,20 @@
+{
+  "app": {
+    "filename": "BRES_Cles_Mobile_V2_28_CHECKPOINT_R369.zip",
+    "size_bytes": 35563658,
+    "sha256": "87a9c046e628831667699e8283243c6023a1e0f85b0371e20175f8c34a8c306a",
+    "file_count": 8917,
+    "manifest_count": 8916,
+    "all_internal_hashes_verified": true,
+    "zip_crc_valid": true
+  },
+  "cat": {
+    "filename": "BRES_Cles_Catalogue_Audit_CAT_R369.zip",
+    "size_bytes": 4299081,
+    "sha256": "e67dbfae68da8be9dfa46cf430f8c084d00c107b75e5fd6fc78b0d766d0c0491",
+    "file_count": 1547,
+    "manifest_count": 1546,
+    "all_internal_hashes_verified": true,
+    "zip_crc_valid": true
+  }
+}
