@@ -1,0 +1,24 @@
+{
+  "schema": "bres-cat-r369-js-text-regression-v1",
+  "date": "2026-11-04",
+  "milestone": "CAT-R369",
+  "ok": true,
+  "checks": {
+    "all_732_endpoints_compared": true,
+    "all_393_theoretical_edges_loaded": true,
+    "no_R368_to_R369_changes": true,
+    "all_complete_catalogue_ready": true,
+    "no_js_errors": true,
+    "not_physical_OCR_or_manufacturer_proof": true
+  },
+  "distinct_endpoints": 732,
+  "pairs": 393,
+  "changed_decisions": 0,
+  "changed_examples": [],
+  "js_errors": [],
+  "parent_r368_html_sha256": "a26802dc036a0221c78d28b98260feca192ba318fc04423da6a19cc092124232",
+  "new_r369_html_sha256": "82b65cfb803f0c4d4ac2af76d815d1b0deace551bb4b7abfe4b6a29d5239f324",
+  "actual_ocr_executed": false,
+  "physical_validation": false,
+  "catalogue_modified": false
+}
