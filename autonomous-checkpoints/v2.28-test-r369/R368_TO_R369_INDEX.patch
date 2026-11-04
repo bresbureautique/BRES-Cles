@@ -1,0 +1,98 @@
+--- R368/app/index.html
++++ R369/app/index.html
+@@ -34,7 +34,7 @@
+ <body>
+ <div class="app-version-badge">V2.28 TEST R156 • CATALOGUE SILCA MASSIF • STABLE NON REMPLACÉE</div>
+ <header><h1>BRES — Identification de clés</h1><p>V2.28 TEST R156 • application de test séparée + gabarit compact 0–50 mm + caméra guidée autofocus + OCR + catalogue Silca massif</p></header>
+-<div id="checkpointTrace" class="status ok"><b>Checkpoint de travail : R368 (catalogue complet requis pour OCR)</b> — moteur V2.28 TEST R156 et téléchargement benchmark R336 conservés ; V2.27 reste la version stable. Les exports métier historiques conservent leur provenance R319 (moteur R156). Aucun statut de disponibilité OCR hors ligne n’est présumé.</div>
++<div id="checkpointTrace" class="status ok"><b>Checkpoint de travail : R369 (inventaire catalogue contrôlé)</b> — moteur V2.28 TEST R156 et téléchargement benchmark R336 conservés ; V2.27 reste la version stable. Les exports métier historiques conservent leur provenance R319 (moteur R156). Aucun statut de disponibilité OCR hors ligne n’est présumé.</div>
+ <div class="status warn" id="deviceBenchmarkR336Link"><b>Diagnostic R336 — benchmark Samsung (sans effet sur l’identification).</b><br><a class="btn alt" id="r362BenchmarkStandaloneDownload" href="#" role="button">Télécharger le benchmark Samsung R336 autonome</a><p class="small" id="r362BenchmarkHelp">Sur Samsung : dans Mes fichiers &gt; Téléchargements, ouvrez ensuite <b>BRES_Cles_Benchmark_Samsung_R336_AUTONOME.html</b> avec Chrome. Le lien vers un fichier voisin ne fonctionne pas toujours depuis content://.</p></div>
+ 
+ <div id="cameraModal" class="camera-modal hidden" aria-hidden="true">
+@@ -4504,9 +4504,31 @@
+ // LOSSY glyph transcript. Only a complete 5103-row catalogue can supply evidence.
+ // This is NOT a physical key equivalence, OCR accuracy claim or maker inference.
+ let ocrFoldIndexR367Cache=null,ocrFoldIndexR367Source=null;
+-function ocrLossyGlyphGroupsR367(candidates){
++// R369 TEST: inventory check, not cryptographic authenticity. Two independent
++// 32-bit checksums cover ordered canonical reference, manufacturer, class and
++// dimensions (columns 0..4). This fails closed on accidental repeated/modified
++// chunks that otherwise produce exactly 5103 rows. Recomputed per call to catch
++// in-place edits even if the global array object and row count do not change.
++function ocrCatalogueInventoryR369(){
++  const db=globalThis.BRES_CATALOG_V3;
++  if(!Array.isArray(db)||db.length!==5103)return {ok:false,reason:'count-not-5103'};
++  let h=2166136261>>>0,g=5381>>>0;
++  for(const row of db){
++    if(!Array.isArray(row)||row.length<5)return {ok:false,reason:'malformed-row'};
++    const s=JSON.stringify(row.slice(0,5))+'\n';
++    for(let i=0;i<s.length;i++){
++      const x=s.charCodeAt(i);
++      h=Math.imul(h^x,16777619)>>>0;
++      g=(Math.imul(g,33)^x)>>>0;
++    }
++  }
++  return h===2511607957&&g===2549944249
++    ?{ok:true,reason:'expected-inventory'}
++    :{ok:false,reason:'inventory-mismatch'};
++}
++function ocrLossyGlyphGroupsR367(candidates,inventoryReady=false){
+   const db=Array.isArray(globalThis.BRES_CATALOG_V3)?globalThis.BRES_CATALOG_V3:null;
+-  if(!db||db.length!==5103)return []; // cannot assert a full-catalogue collision
++  if(!inventoryReady||!db||db.length!==5103)return []; // no unsupported collision claims
+   if(!ocrFoldIndexR367Cache||ocrFoldIndexR367Source!==db){
+     const groups=new Map(), fold=ref=>compactRef(ref).replace(/[OILSB]/g,c=>({O:'0',I:'1',L:'1',S:'5',B:'8'})[c]);
+     for(const row of db){
+@@ -4567,9 +4589,10 @@
+   // missing. The glyph-collision gate is only meaningful for all 5103 rows.
+   // Manual reference entry stays available. This checks completeness, not
+   // catalogue authenticity or the accuracy of a photographic recognition.
+-  const ocrCatalogueReadyR368=Array.isArray(globalThis.BRES_CATALOG_V3)&&
+-    globalThis.BRES_CATALOG_V3.length===5103;
+-  const ocrFoldAmbiguitiesR367=ocrLossyGlyphGroupsR367(candidates).filter(g=>
++  const catalogueInventoryR369=ocrCatalogueInventoryR369();
++  const ocrCatalogueReadyR368=catalogueInventoryR369.ok;
++  const ocrCatalogueStatusR369=catalogueInventoryR369.reason;
++  const ocrFoldAmbiguitiesR367=ocrLossyGlyphGroupsR367(candidates,ocrCatalogueReadyR368).filter(g=>
+     !g.canons.every(canon=>compactAmbiguities.some(a=>(a.canons||[]).includes(canon)))
+   );
+ 
+@@ -4653,7 +4676,7 @@
+     best=null;
+     if(candidates.length)referenceAmbiguity=true;
+   }
+-  return {txt,makers,candidates,best,aliasMakers:detectedAliasMakers,aliasMakerConflict,referenceAmbiguity,ambiguousCanons,referenceRanking:referenceRanking.slice(0,4),compactAmbiguities,ocrFoldAmbiguitiesR367,ocrCatalogueReadyR368};
++  return {txt,makers,candidates,best,aliasMakers:detectedAliasMakers,aliasMakerConflict,referenceAmbiguity,ambiguousCanons,referenceRanking:referenceRanking.slice(0,4),compactAmbiguities,ocrFoldAmbiguitiesR367,ocrCatalogueReadyR368,ocrCatalogueStatusR369};
+ }
+ function currentGeometryViewEvidenceR213(){
+   const sides=["recto","verso"],snapshot=mainPhotoSelectionSnapshot(),analyses=Array.isArray(currentAnalyses)?currentAnalyses.slice(0,2):[];
+@@ -4782,8 +4805,10 @@
+   const compactAmbiguities=[...compactAmbiguityMap.values()];
+   const ocrFoldAmbiguitiesR367=[...new Map(infos.flatMap(i=>i.ocrFoldAmbiguitiesR367||[]).map(g=>[g.foldedText,g])).values()];
+   const ocrCatalogueReadyR368=infos.every(i=>i.ocrCatalogueReadyR368===true);
++  const ocrCatalogueStatusR369=ocrCatalogueReadyR368?'expected-inventory':
++    (infos.find(i=>i.ocrCatalogueReadyR368===false)?.ocrCatalogueStatusR369||'inventory-unavailable');
+   if(ocrFoldAmbiguitiesR367.length||!ocrCatalogueReadyR368)best=null;
+-  return {txt:infos.map(i=>i.txt).filter(Boolean).join(" | "),makers,candidates,best,views:infos,crossViewConflict,conflictingCanons:crossViewConflict?strongCanons:[],referenceAmbiguity:infos.some(i=>i.referenceAmbiguity),ambiguousCanons,compactAmbiguities,ocrFoldAmbiguitiesR367,ocrCatalogueReadyR368};
++  return {txt:infos.map(i=>i.txt).filter(Boolean).join(" | "),makers,candidates,best,views:infos,crossViewConflict,conflictingCanons:crossViewConflict?strongCanons:[],referenceAmbiguity:infos.some(i=>i.referenceAmbiguity),ambiguousCanons,compactAmbiguities,ocrFoldAmbiguitiesR367,ocrCatalogueReadyR368,ocrCatalogueStatusR369};
+ }
+ function mergePassMakerConsensus(info,reads){
+   // R98 : fusionne uniquement des marques confirmées par >=2 passes d'une même photo.
+@@ -5367,7 +5392,7 @@
+    }
+    syncOCRBrand(info);
+    if(info.candidates.length)text+=`<b>Code(s) brut(s) lu(s) :</b> ${info.candidates.join(", ")}<br>`;
+-   if(info.ocrCatalogueReadyR368===false)text+=`<b>Catalogue incomplet :</b> attendre le chargement des 10 fichiers — sélection OCR automatique désactivée.<br>`;
++   if(info.ocrCatalogueReadyR368===false)text+=`<b>Catalogue incomplet ou non conforme :</b> chargement / inventaire à vérifier (${info.ocrCatalogueStatusR369||'inconnu'}) — sélection OCR automatique désactivée.<br>`;
+    if(info.crossViewConflict){
+      text+=`<b>Conflit recto/verso :</b> ${info.conflictingCanons.join(" / ")} — <b>aucune sélection automatique</b>.<br>`;
+    }
+@@ -6961,7 +6986,7 @@
+     out+=`<small><b>Temps par passe :</b> ${compactOCRPassTiming(reads)}.</small><br>`;
+     syncOCRBrand(info);
+     if(info.candidates.length) out+=`<b>Code(s) lu(s) :</b> ${info.candidates.join(", ")}<br>`;
+-    if(info.ocrCatalogueReadyR368===false)out+=`<b>Catalogue incomplet :</b> sélection OCR automatique désactivée.<br>`;
++    if(info.ocrCatalogueReadyR368===false)out+=`<b>Catalogue incomplet ou non conforme :</b> sélection OCR automatique désactivée.<br>`;
+     if(info.referenceAmbiguity && info.ambiguousCanons?.length) out+=`<b>Référence OCR ambiguë :</b> ${info.ambiguousCanons.join(" / ")} — aucune sélection automatique.<br>`;
+     if(info.catalogueGeometryResolution?.status==="resolved") out+=`<b>Ambiguïté compacte départagée par géométrie catalogue :</b> ${info.catalogueGeometryResolution.ref} (${info.catalogueGeometryResolution.topScore} %, marge ${info.catalogueGeometryResolution.margin}).<br>`;
+ 
