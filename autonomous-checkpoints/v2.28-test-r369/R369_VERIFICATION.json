@@ -1,0 +1,43 @@
+{
+  "schema": "bres-r369-independent-checkpoint-v1",
+  "date": "2026-11-04",
+  "milestone": "R369",
+  "parent": "R368",
+  "parent_files": 8908,
+  "parent_manifest": 8907,
+  "changed_existing_files": [
+    "index.html"
+  ],
+  "ok": true,
+  "checks": {
+    "parent_R368_zip_crc_and_entries": true,
+    "parent_R368_manifest_files_8907": true,
+    "parent_R368_html_equal_its_manifest": true,
+    "only_index_html_changed_existing": true,
+    "exact_reproducible_R369_patch": true,
+    "new_chromium_checks_all_14": true,
+    "all_seven_faults_and_restores_detected": true,
+    "no_130_collision_ref_regression": true,
+    "no_64_fold_ocr_regression": true,
+    "732_review_endpoints_no_regression": true,
+    "393_pairs_fragment_audit_pass": true,
+    "ten_catalogue_fragments_unchanged": true,
+    "R331_R336_pilot_unchanged": true,
+    "R305_rule_marker_retained": true,
+    "V2_28_remains_test": true,
+    "V2_27_stable_label_unmodified": true,
+    "catalogue_v3_still_opt_in": true,
+    "Tesseract_cold_offline_NOT_CERTIFIED": true,
+    "new_inventory_guard_not_cryptographic_claim": true,
+    "no_physical_test_claim": true
+  },
+  "physical_samsung_test": false,
+  "stable_version_changed": false,
+  "catalogue_canonical_modified": false,
+  "limitations": [
+    "Only 14 new Chromium assertions; 136 tested sample inputs plus 64 OCR folds, 732 catalogue endpoints",
+    "No real photo, physical key or OCR Tesseract run",
+    "Noncryptographic double checksum for ordered columns 0..4, not source authenticity",
+    "Older R368 history retained but not all old suites rerun"
+  ]
+}
