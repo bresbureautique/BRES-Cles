@@ -1,0 +1,596 @@
+{
+  "schema": "bres-cat-r370-ocr-maker-label-risk-v1",
+  "milestone": "CAT-R370",
+  "date": "2026-11-05",
+  "source": "snapshots/CAT-R363/CAT_R363_PAIR_REVIEW_LEDGER.csv",
+  "total_theoretical_pairs": 393,
+  "distinct_references": 732,
+  "review_groups": 345,
+  "categories": {
+    "ocr": {
+      "total": 68,
+      "same_label": 6,
+      "different_labels": 61,
+      "missing_label": 1,
+      "unclassified": 0
+    },
+    "typing": {
+      "total": 325,
+      "same_label": 88,
+      "different_labels": 212,
+      "missing_label": 25,
+      "unclassified": 0
+    }
+  },
+  "ocr_label_review_queue": [
+    {
+      "ref_a": "AB51",
+      "ref_b": "ABS1",
+      "label_a_UNVERIFIED": "ABUS",
+      "label_b_UNVERIFIED": "ABSA",
+      "component": "C0001",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "AB52",
+      "ref_b": "ABS2",
+      "label_a_UNVERIFIED": "ABUS",
+      "label_b_UNVERIFIED": "ABSA",
+      "component": "C0053",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "AB53",
+      "ref_b": "ABS3",
+      "label_a_UNVERIFIED": "ABUS",
+      "label_b_UNVERIFIED": "ABSA",
+      "component": "C0007",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "AI1",
+      "ref_b": "AL1",
+      "label_a_UNVERIFIED": "ALIANÇA",
+      "label_b_UNVERIFIED": "AL",
+      "component": "C0063",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "BAI2",
+      "ref_b": "BAL2",
+      "label_a_UNVERIFIED": "BARAS",
+      "label_b_UNVERIFIED": "BAAL",
+      "component": "C0013",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "BAI3",
+      "ref_b": "BAL3",
+      "label_a_UNVERIFIED": "BASI",
+      "label_b_UNVERIFIED": "BAAL",
+      "component": "C0014",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "CB4-OR",
+      "ref_b": "CB40R",
+      "label_a_UNVERIFIED": "CORBIN (IT)",
+      "label_b_UNVERIFIED": "CORBIN (US)",
+      "component": "C0126",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "CI2",
+      "ref_b": "CL2",
+      "label_a_UNVERIFIED": "CASI",
+      "label_b_UNVERIFIED": "CLUM",
+      "component": "C0016",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "CI3",
+      "ref_b": "CL3",
+      "label_a_UNVERIFIED": "CASI",
+      "label_b_UNVERIFIED": "CLUM",
+      "component": "C0017",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "CI4",
+      "ref_b": "CL4",
+      "label_a_UNVERIFIED": "CASI",
+      "label_b_UNVERIFIED": "CLUM",
+      "component": "C0018",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "CI5",
+      "ref_b": "CL5",
+      "label_a_UNVERIFIED": "CASI",
+      "label_b_UNVERIFIED": "CLUM",
+      "component": "C0019",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "CIL1",
+      "ref_b": "CLI1",
+      "label_a_UNVERIFIED": "CILA-GENTILI",
+      "label_b_UNVERIFIED": "CIL LIL",
+      "component": "C0020",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "CIL1",
+      "ref_b": "CLL1",
+      "label_a_UNVERIFIED": "CILA-GENTILI",
+      "label_b_UNVERIFIED": "COLL",
+      "component": "C0020",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "CIS1",
+      "ref_b": "CLS1",
+      "label_a_UNVERIFIED": "CAS-CISMA",
+      "label_b_UNVERIFIED": "CIELS",
+      "component": "C0021",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "CIS2",
+      "ref_b": "CLS2",
+      "label_a_UNVERIFIED": "CAS-CISMA",
+      "label_b_UNVERIFIED": "CIELS",
+      "component": "C0022",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "CIS3",
+      "ref_b": "CLS3",
+      "label_a_UNVERIFIED": "CAS-CISMA",
+      "label_b_UNVERIFIED": "CIELS",
+      "component": "C0023",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "CLI1",
+      "ref_b": "CLL1",
+      "label_a_UNVERIFIED": "CIL LIL",
+      "label_b_UNVERIFIED": "COLL",
+      "component": "C0020",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "FI2",
+      "ref_b": "FL2",
+      "label_a_UNVERIFIED": "FIAM",
+      "label_b_UNVERIFIED": "FLORA",
+      "component": "C0003",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "IF1",
+      "ref_b": "LF1",
+      "label_a_UNVERIFIED": "IES",
+      "label_b_UNVERIFIED": "LOWE & FLETCHER",
+      "component": "C0028",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "IF14",
+      "ref_b": "LF14",
+      "label_a_UNVERIFIED": "IFAM",
+      "label_b_UNVERIFIED": "LOWE & FLETCHER",
+      "component": "C0214",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "IF15R",
+      "ref_b": "LF15R",
+      "label_a_UNVERIFIED": "IFAM",
+      "label_b_UNVERIFIED": "EURO LOCKS",
+      "component": "C0031",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "IF16",
+      "ref_b": "LF16",
+      "label_a_UNVERIFIED": "IFAM",
+      "label_b_UNVERIFIED": "LOWE & FLETCHER",
+      "component": "C0215",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "IF17",
+      "ref_b": "LF17",
+      "label_a_UNVERIFIED": "IFAM",
+      "label_b_UNVERIFIED": "LOWE & FLETCHER",
+      "component": "C0216",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "IF2",
+      "ref_b": "LF2",
+      "label_a_UNVERIFIED": "IFAM",
+      "label_b_UNVERIFIED": "EURO LOCKS",
+      "component": "C0003",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "IF3",
+      "ref_b": "LF3",
+      "label_a_UNVERIFIED": "IFAM",
+      "label_b_UNVERIFIED": "LOWE & FLETCHER",
+      "component": "C0217",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "IF6",
+      "ref_b": "LF6",
+      "label_a_UNVERIFIED": "IFAM",
+      "label_b_UNVERIFIED": "LOWE & FLETCHER",
+      "component": "C0030",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "IF7",
+      "ref_b": "LF7",
+      "label_a_UNVERIFIED": "IFAM",
+      "label_b_UNVERIFIED": "EURO LOCKS",
+      "component": "C0218",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "IF8",
+      "ref_b": "LF8",
+      "label_a_UNVERIFIED": "IFAM",
+      "label_b_UNVERIFIED": "LOWE & FLETCHER",
+      "component": "C0219",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "IF8R",
+      "ref_b": "LF8R",
+      "label_a_UNVERIFIED": "IFAM",
+      "label_b_UNVERIFIED": "EURO LOCKS",
+      "component": "C0220",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "IL1",
+      "ref_b": "LL1",
+      "label_a_UNVERIFIED": "ILARGI",
+      "label_b_UNVERIFIED": "LOCKWOOD",
+      "component": "C0221",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "IM3R",
+      "ref_b": "LM3R",
+      "label_a_UNVERIFIED": "IMSA",
+      "label_b_UNVERIFIED": "LUMA",
+      "component": "C0032",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "IM4R",
+      "ref_b": "LM4R",
+      "label_a_UNVERIFIED": "IMSA",
+      "label_b_UNVERIFIED": "LUMA",
+      "component": "C0224",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "IN1",
+      "ref_b": "LN1",
+      "label_a_UNVERIFIED": "ILLINOIS",
+      "label_b_UNVERIFIED": "LN",
+      "component": "C0226",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "IS1",
+      "ref_b": "LS1",
+      "label_a_UNVERIFIED": "IGS",
+      "label_b_UNVERIFIED": "RENZ",
+      "component": "C0005",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "IS2",
+      "ref_b": "LS2",
+      "label_a_UNVERIFIED": "IGS",
+      "label_b_UNVERIFIED": "RENZ",
+      "component": "C0227",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "IT1",
+      "ref_b": "LT1",
+      "label_a_UNVERIFIED": "INT",
+      "label_b_UNVERIFIED": "BKS",
+      "component": "C0006",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "IT2",
+      "ref_b": "LT2",
+      "label_a_UNVERIFIED": "INT",
+      "label_b_UNVERIFIED": "LITTO",
+      "component": "C0033",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "IW1R",
+      "ref_b": "LW1R",
+      "label_a_UNVERIFIED": "IWATA",
+      "label_b_UNVERIFIED": "LOCKWOOD",
+      "component": "C0228",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "IX1",
+      "ref_b": "LX1",
+      "label_a_UNVERIFIED": "IALEX",
+      "label_b_UNVERIFIED": "LUX",
+      "component": "C0229",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "IX1R",
+      "ref_b": "LX1R",
+      "label_a_UNVERIFIED": "IALEX",
+      "label_b_UNVERIFIED": "LUX",
+      "component": "C0230",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "MS11",
+      "ref_b": "MSL1",
+      "label_a_UNVERIFIED": "MASTER",
+      "label_b_UNVERIFIED": "MASTER LOCK",
+      "component": "C0034",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "MS12",
+      "ref_b": "MSL2",
+      "label_a_UNVERIFIED": "MASTER",
+      "label_b_UNVERIFIED": "MASTER LOCK",
+      "component": "C0035",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "PC11R",
+      "ref_b": "PCL1R",
+      "label_a_UNVERIFIED": "P.C. (CORTELLEZZI)",
+      "label_b_UNVERIFIED": "PACO LOCKS",
+      "component": "C0264",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "SI1",
+      "ref_b": "SL1",
+      "label_a_UNVERIFIED": "SOFI-SONAFI",
+      "label_b_UNVERIFIED": "SEGAL",
+      "component": "C0005",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "TI1",
+      "ref_b": "TL1",
+      "label_a_UNVERIFIED": "TIK",
+      "label_b_UNVERIFIED": "TRI-CIRCLE",
+      "component": "C0006",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "TO11",
+      "ref_b": "TOL1",
+      "label_a_UNVERIFIED": "TOK-WINKHAUS",
+      "label_b_UNVERIFIED": "TULA",
+      "component": "C0291",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "TO12",
+      "ref_b": "TOL2",
+      "label_a_UNVERIFIED": "TOK-TRELOCK",
+      "label_b_UNVERIFIED": "TULA",
+      "component": "C0036",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "TR11R",
+      "ref_b": "TRI1R",
+      "label_a_UNVERIFIED": "TRIOVING",
+      "label_b_UNVERIFIED": "TRIMARK",
+      "component": "C0296",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "TR13R",
+      "ref_b": "TRI3R",
+      "label_a_UNVERIFIED": "TRIOVING",
+      "label_b_UNVERIFIED": "TRIMARK",
+      "component": "C0297",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "TR17R",
+      "ref_b": "TRI7R",
+      "label_a_UNVERIFIED": "TRIOVING",
+      "label_b_UNVERIFIED": "TRIMARK",
+      "component": "C0298",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "TR18R",
+      "ref_b": "TRI8R",
+      "label_a_UNVERIFIED": "TRIOVING",
+      "label_b_UNVERIFIED": "TRIMARK",
+      "component": "C0299",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "TR19R",
+      "ref_b": "TRI9R",
+      "label_a_UNVERIFIED": "TRIOVING",
+      "label_b_UNVERIFIED": "TRIMARK",
+      "component": "C0300",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "VI2",
+      "ref_b": "VL2",
+      "label_a_UNVERIFIED": null,
+      "label_b_UNVERIFIED": "V.G.F. VILLATORE",
+      "component": "C0319",
+      "label_issue": "missing-label",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "VI2R",
+      "ref_b": "VL2R",
+      "label_a_UNVERIFIED": "VIRO",
+      "label_b_UNVERIFIED": "V.G.F. VILLATORE",
+      "component": "C0320",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "VI3",
+      "ref_b": "VL3",
+      "label_a_UNVERIFIED": "VIRO",
+      "label_b_UNVERIFIED": "V.G.F. VILLATORE",
+      "component": "C0321",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "VI3R",
+      "ref_b": "VL3R",
+      "label_a_UNVERIFIED": "VIRO",
+      "label_b_UNVERIFIED": "V.G.F. VILLATORE",
+      "component": "C0322",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "VI4",
+      "ref_b": "VL4",
+      "label_a_UNVERIFIED": "VIRO",
+      "label_b_UNVERIFIED": "V.G.F. VILLATORE",
+      "component": "C0323",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "VI4R",
+      "ref_b": "VL4R",
+      "label_a_UNVERIFIED": "VIRO",
+      "label_b_UNVERIFIED": "V.G.F. VILLATORE",
+      "component": "C0324",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "WE12",
+      "ref_b": "WEI2",
+      "label_a_UNVERIFIED": "WELKA",
+      "label_b_UNVERIFIED": "WEISER",
+      "component": "C0325",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "WE13",
+      "ref_b": "WEI3",
+      "label_a_UNVERIFIED": "WELKA",
+      "label_b_UNVERIFIED": "WEISER",
+      "component": "C0326",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "WE14",
+      "ref_b": "WEI4",
+      "label_a_UNVERIFIED": "WELKA",
+      "label_b_UNVERIFIED": "WEISER",
+      "component": "C0327",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    },
+    {
+      "ref_a": "WE15",
+      "ref_b": "WEI5",
+      "label_a_UNVERIFIED": "WELKA",
+      "label_b_UNVERIFIED": "WEISER",
+      "component": "C0328",
+      "label_issue": "different-labels",
+      "physically_equivalent": false
+    }
+  ],
+  "checks": {
+    "exact_partition_ocr_68_typing_325": true,
+    "labelled_categories_exhaustive": true,
+    "ocr_61_different_plus_1_missing": true,
+    "typing_212_different_25_missing": true,
+    "queue_exactly_62": true,
+    "no_auto_validation": true,
+    "no_physical_equivalence_claim": true
+  },
+  "ok": true,
+  "source_git_blob_sha": "042b84ef1a44d3e28ef73ec6b1b76fd2e64b1957"
+}
