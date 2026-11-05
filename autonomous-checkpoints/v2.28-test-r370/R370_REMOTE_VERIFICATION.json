@@ -1,0 +1,21 @@
+{
+  "schema": "bres-r370-github-prototype-verification-v1",
+  "date": "2026-11-05",
+  "state": "prototype_only_NOT_integrated",
+  "tested_runtime": "V8 Javascript (exact published files retrieved from GitHub; Node imports shimmed)",
+  "synthetic_checks_passed": 10,
+  "synthetic_checks_total": 10,
+  "app_chromium_tested": false,
+  "real_catalogue_tested": false,
+  "offline_tesseract_tested": false,
+  "samsung_tested": false,
+  "stable_main_sha": "9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8",
+  "github_branch_head_at_verification": "814188fca4e28cd3cc9732ebc44040d4a2b5dd02",
+  "verified_remote_blobs": {
+    "full_row_guard_r370_js": "f9321acc05c55b22e9dc65d113441fef89e83bd8",
+    "test_full_row_guard_r370_js": "e3e91c8ff67d7a26380ed0d2e0aa17ba92f4a944",
+    "README_R370_GUARD_STATUS_md": "40de64fc78793bd6e4a7a696d23a4a75e7aa8cf4"
+  },
+  "zip_r370_created": false,
+  "library_r370_uploaded": false
+}
