@@ -1,0 +1,26 @@
+{
+  "schema": "bres-cat-r370-github-audit-verification-v1",
+  "date": "2026-11-05",
+  "state": "read_only_audit_no_catalogue_edit",
+  "audit_checks_passed": 7,
+  "audit_checks_total": 7,
+  "source_ledger_git_blob": "042b84ef1a44d3e28ef73ec6b1b76fd2e64b1957",
+  "recalculated_audit_matches_saved_json_exactly": true,
+  "unverified_pairs": 393,
+  "review_groups": 345,
+  "distinct_review_refs": 732,
+  "ocr_pairs": 68,
+  "ocr_diff_maker_labels": 61,
+  "ocr_missing_label": 1,
+  "real_ocr_tested": false,
+  "physical_key_validation": false,
+  "stable_main_sha": "9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8",
+  "github_branch_head_at_verification": "9891e9fc1c2e40c2ccb032228a4ec0331a78a7df",
+  "verified_remote_blobs": {
+    "catalogue_r370_ocr_maker_triage_js": "263055bb7a444bc55b841eeceba45cc4a3f3d789",
+    "CAT_R370_OCR_LABEL_TRIAGE_json": "891d4d5c51e6c48833fa83c84a3a4597a267afc2",
+    "CHECKPOINT_CAT_R370_md": "68ab3751b995b3c27f38ca434e205bd88c7ddf35"
+  },
+  "zip_r370_created": false,
+  "library_r370_uploaded": false
+}
