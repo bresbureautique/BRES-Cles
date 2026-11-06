@@ -1,0 +1,26 @@
+{
+  "schema": "bres-r371-github-proof-v1",
+  "date": "2026-11-06",
+  "milestone": "R371",
+  "parent_app": "R369 + R370 isolated prototype",
+  "stable_main_expected": "9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8",
+  "version": "V2.28 TEST",
+  "zip_filename": "BRES_Cles_Mobile_V2_28_CHECKPOINT_R371.zip",
+  "zip_sha256": "4d7924dd23f2d263a1eafbb7c536f4a11e449bdbec6e47d5063a9f5180e1c75f",
+  "zip_bytes": 35964758,
+  "zip_files": 8927,
+  "zip_manifest_count": 8926,
+  "tests": {
+    "chromium": 13,
+    "mutation_restore_pairs": 12,
+    "structural": 17,
+    "folded_ocr_ambiguities": 64,
+    "physical": 0
+  },
+  "canonical_refs_unchanged": 5103,
+  "canonical_chunks_unchanged": 10,
+  "stable_version_touched": false,
+  "ocr_offline_certified": false,
+  "samsung_json_received": false,
+  "library_backup_status": "blocked: AccessDeny"
+}
