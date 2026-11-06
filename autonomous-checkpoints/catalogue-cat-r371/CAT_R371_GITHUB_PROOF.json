@@ -1,0 +1,40 @@
+{
+  "schema": "bres-cat-r371-github-proof-v1",
+  "date": "2026-11-06",
+  "milestone": "CAT-R371",
+  "parent": "CAT-R369 archive, CAT-R370 Github triage",
+  "stable_main_expected": "9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8",
+  "zip_filename": "BRES_Cles_Catalogue_Audit_CAT_R371.zip",
+  "zip_sha256": "ed0035225c27dfeffd592adad6a66e6049d2e75ffd3473e3b7b3128e1e994efc",
+  "zip_bytes": 4375882,
+  "zip_files": 1556,
+  "manifest_entries": 1555,
+  "canonical_refs": 5103,
+  "chunks_unchanged": 10,
+  "unverified_pairs": 393,
+  "ocr_pairs": 68,
+  "typing_pairs": 325,
+  "distinct_refs": 732,
+  "report_only_flags": {
+    "ocr": {
+      "measurements_both_within_1mm": 0,
+      "profiles_RMS_below_0_05": 9,
+      "mask_hamming_le_8": 2,
+      "same_maker_label_UNVERIFIED": 6
+    },
+    "typing": {
+      "measurements_both_within_1mm": 10,
+      "profiles_RMS_below_0_05": 49,
+      "mask_hamming_le_8": 29,
+      "same_maker_label_UNVERIFIED": 88
+    }
+  },
+  "checks": {
+    "audit": 9,
+    "independent": 10
+  },
+  "automatic_merges": 0,
+  "physical_equivalence_certified": false,
+  "samsung_test": false,
+  "library_backup_status": "blocked: AccessDeny"
+}
