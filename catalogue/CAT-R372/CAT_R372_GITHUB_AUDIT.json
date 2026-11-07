@@ -1,0 +1,23 @@
+{
+  "schema": "bres-cat-r372-github-proof-v1",
+  "date": "2026-11-07",
+  "stable": "V2.27 main untouched",
+  "milestone": "CAT-R372",
+  "audit_ok": true,
+  "checks_passed": 9,
+  "checks_total": 9,
+  "canonical_refs": 5103,
+  "canonical_chunks_unchanged": 10,
+  "previous_ocr": {"groups": 64, "pairs": 68, "references": 130},
+  "extended_ocr": {"groups": 66, "pairs": 70, "references": 134},
+  "added_unverified_pairs": [
+    {"a": "TO22", "b": "TOZ2", "text_fold": "T022", "manual_confirmation": true, "physical_equivalence_proven": false},
+    {"a": "TO26", "b": "TOZ6", "text_fold": "T026", "manual_confirmation": true, "physical_equivalence_proven": false}
+  ],
+  "full_archive_sha256": "d118631140fe5064e9778c9549029d457686288f167c710367e19960710e0d32",
+  "full_archive_files": 1562,
+  "archive_crc_and_sha256_manifest_verified": true,
+  "catalogue_source_script_sha256": "47ed66dcd7625a152f7f8255e3dba712e0182b357b44e96e2944b011394c1790",
+  "library_copy": "AccessDeny; NOT VERIFIED",
+  "limits": "Textual risk hypotheses only; no key photographs or physical equivalence validation"
+}
