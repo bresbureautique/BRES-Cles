@@ -1,0 +1,20 @@
+--- R371/index.html
++++ R372/index.html
+@@ -4561,7 +4561,7 @@
+   const db=Array.isArray(globalThis.BRES_CATALOG_V3)?globalThis.BRES_CATALOG_V3:null;
+   if(!inventoryReady||!db||db.length!==5103)return []; // no unsupported collision claims
+   if(!ocrFoldIndexR367Cache||ocrFoldIndexR367Source!==db){
+-    const groups=new Map(), fold=ref=>compactRef(ref).replace(/[OILSB]/g,c=>({O:'0',I:'1',L:'1',S:'5',B:'8'})[c]);
++    const groups=new Map(), fold=ref=>compactRef(ref).replace(/[OILSBGZ]/g,c=>({O:'0',I:'1',L:'1',S:'5',B:'8',G:'6',Z:'2'})[c]);
+     for(const row of db){
+       const canon=String(row?.[0]||'').toUpperCase().trim();
+       if(!canon)continue;
+@@ -4571,7 +4571,7 @@
+     ocrFoldIndexR367Cache=groups;
+     ocrFoldIndexR367Source=db;
+   }
+-  const fold=ref=>compactRef(ref).replace(/[OILSB]/g,c=>({O:'0',I:'1',L:'1',S:'5',B:'8'})[c]);
++  const fold=ref=>compactRef(ref).replace(/[OILSBGZ]/g,c=>({O:'0',I:'1',L:'1',S:'5',B:'8',G:'6',Z:'2'})[c]);
+   const out=new Map();
+   for(const cand of candidates||[]){
+     const key=fold(cand),canons=[...(ocrFoldIndexR367Cache.get(key)||[])].sort();
