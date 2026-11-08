@@ -18,7 +18,7 @@
    }
 +  if(r.status==="strong-other-face-outside-compact-group")return "une autre face indique une référence différente : vérification manuelle nécessaire";
    if(r.status==="face-disagreement")return "recto et verso ne désignent pas la même référence";
-   if(r.status==="face-geometry-weak")return "au moins une face trop faible pour confirmer";
+   if(r.status==="face-geometry-weak")return "au moins une face est trop faible pour confirmer";
    if(r.status==="face-evidence-missing")return "les deux géométries recto/verso ne sont pas disponibles";
 @@ -4840,7 +4846,11 @@
    const ocrCatalogueReadyR368=infos.every(i=>i.ocrCatalogueReadyR368===true);
