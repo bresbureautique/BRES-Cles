@@ -1,0 +1,9 @@
+CAT-R373 PASS 8/8 checks.
+PASS canonical_5103_12_fields
+PASS canonical_10_hashes_still_match_R372
+PASS exactly_one_compact_collision_group
+PASS 66_ocr_glyph_groups_70_pairs
+PASS compact_group_not_automatically_equivalent
+PASS twelve_bidirectional_negative_fixtures
+PASS physical_confirmation_required
+PASS canon_is_read_only
