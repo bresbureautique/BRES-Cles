@@ -1,0 +1,12 @@
+BRES CLES CAT-R373 - INDEPENDENT CATALOGUE AUDIT - 2026-11-08
+Stable main untouched. No canonical data edited.
+Base full CAT-R372 ZIP SHA256: d118631140fe5064e9778c9549029d457686288f167c710367e19960710e0d32
+CAT-R373 audit source: cat-r373/catalogue_cat_r373_cross_view_audit.py
+Audit source Git blob SHA1: b4fedd9651e067a4c3a4cd0d60a89cfb1b8e66fb
+CSV negative fixtures Git blob SHA1: af0f4b207ef74c9092532066dcb375065d6273c9
+Expected catalogue 5103 rows / 12 fields; 10 canonical fragments unchanged.
+Read-only audit 8/8 PASS; one compact collision BK3-4 vs BK34; 66 glyph groups / 70 pairs.
+Twelve cross-view synthetic negative fixtures; no equivalence or maker confirmation.
+LOCAL VERIFIED CAT-R373 full ZIP SHA256: 7eff067783de0c85d466eafa98d091b0225c328a0d99e0b3ccbf27a31e40bc05
+CAT ZIP 1569 entries, CRC and all internal SHA256 checked.
+No complete ZIP stored on GitHub (audit delta, fixtures and proof are backed up here).
