@@ -1,0 +1,13 @@
+﻿recto_ocr_TEXT_SYNTHETIC,verso_ocr_TEXT_SYNTHETIC,expected_automatic_reference,review_required,geometry_may_override_opposing_strong_face
+BK3-4,TRF1,,True,False
+TRF1,BK3-4,,True,False
+BK3-4,AB10,,True,False
+AB10,BK3-4,,True,False
+BK3-4,LS12,,True,False
+LS12,BK3-4,,True,False
+BK34,TRF1,,True,False
+TRF1,BK34,,True,False
+BK34,AB10,,True,False
+AB10,BK34,,True,False
+BK34,LS12,,True,False
+LS12,BK34,,True,False
