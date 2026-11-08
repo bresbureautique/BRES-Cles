@@ -1,0 +1,35 @@
+--- R372/index.html
++++ R373/index.html
+@@ -4745,6 +4745,11 @@
+   const groups=(info.compactAmbiguities||[]).filter(g=>g&&Array.isArray(g.canons)&&g.canons.length>1);
+   if(groups.length!==1)return info;
+   const group=groups[0],groupSet=new Set(group.canons.map(String));
++  // R373 TEST: a confident, DIFFERENT reference on the other face vetoes
++  // any geometry-only release of a compact spelling collision. Without this,
++  // a BK34/BK3-4 ambiguity could be released despite recto/verso disagreeing.
++  const opposingStrong=(info.views||[]).some(v=>v?.best&&v.best.sim>=.92&&!groupSet.has(String(v.best.canon)));
++  if(opposingStrong)return {...info,catalogueGeometryResolution:{status:'strong-other-face-outside-compact-group',ref:null,topScore:0,margin:0}};
+   const allAmbiguous=(info.ambiguousCanons||[]).map(String);
+   if(allAmbiguous.some(c=>!groupSet.has(c)))return info;
+   if(!evidence||!evidence.ok){
+@@ -4803,6 +4808,7 @@
+   if(r.status==="face-detection-mode-disagreement"){
+     const c=r.faceCalibrations||[];return `modes recto/verso différents (${c[0]?.detectionMode||"?"} / ${c[1]?.detectionMode||"?"})`;
+   }
++  if(r.status==="strong-other-face-outside-compact-group")return "une autre face indique une référence différente : vérification manuelle nécessaire";
+   if(r.status==="face-disagreement")return "recto et verso ne désignent pas la même référence";
+   if(r.status==="face-geometry-weak")return "au moins une face trop faible pour confirmer";
+   if(r.status==="face-evidence-missing")return "les deux géométries recto/verso ne sont pas disponibles";
+@@ -4840,7 +4846,11 @@
+   const ocrCatalogueReadyR368=infos.every(i=>i.ocrCatalogueReadyR368===true);
+   const ocrCatalogueStatusR369=ocrCatalogueReadyR368?'expected-inventory':
+     (infos.find(i=>i.ocrCatalogueReadyR368===false)?.ocrCatalogueStatusR369||'inventory-unavailable');
+-  if(ocrFoldAmbiguitiesR367.length||!ocrCatalogueReadyR368)best=null;
++  // R373 TEST: a clean code on one face cannot override an UNRESOLVED
++  // ambiguous code on the other face. This applied already to lossy glyph
++  // groups, but compact catalogue spellings (BK3-4/BK34) were still exposed.
++  // Preserve manual input and any later *coherent* geometry review.
++  if(ocrFoldAmbiguitiesR367.length||!ocrCatalogueReadyR368||infos.some(i=>i.referenceAmbiguity))best=null;
+   return {txt:infos.map(i=>i.txt).filter(Boolean).join(" | "),makers,candidates,best,views:infos,crossViewConflict,conflictingCanons:crossViewConflict?strongCanons:[],referenceAmbiguity:infos.some(i=>i.referenceAmbiguity),ambiguousCanons,compactAmbiguities,ocrFoldAmbiguitiesR367,ocrCatalogueReadyR368,ocrCatalogueStatusR369};
+ }
+ function mergePassMakerConsensus(info,reads){
