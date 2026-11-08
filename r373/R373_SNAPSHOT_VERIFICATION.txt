@@ -1,0 +1,13 @@
+BRES CLES R373 - V2.28 TEST ONLY - 2026-11-08
+Stable V2.27 / GitHub main MUST stay at 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8.
+Base full R372 app ZIP SHA256: b0026476be1417a72fe9de6120ebd5aa7e8f8871b21a7ea48c1561b044f95c83
+GitHub exact patch: r373/R372_TO_R373_CROSS_VIEW_AMBIGUITY.patch
+Patch Git blob SHA1: 4e5820b886e3d3924f7ed2fb28fa59c10cdece82
+Patch file SHA256: 89eb62f9755ea37f87847e707fc0362bb6d3ce7027d6b10a64e73cc378a78306
+Apply patch -p1 to R372 app/index.html -> R373 index SHA256:
+07567fccacddd95c38a93302de06632f627e0931dc827927e8f555e1a7d08f69
+LOCAL VERIFIED R373 app ZIP SHA256: 67f45295f7ca368455597d09fd0c8c50b7ce85206185bfe09d4199dd656f32f8
+R373 app ZIP 8942 entries, CRC and all internal SHA256 checked.
+Chromium 18/18 checks; 12 mixed recto/verso unsafe automatic choices in R372 -> 0 in R373.
+Synthetic OCR strings only; no live Tesseract, Samsung or physical-key certification.
+No complete ZIP stored on GitHub (delta + proof are backed up here).
