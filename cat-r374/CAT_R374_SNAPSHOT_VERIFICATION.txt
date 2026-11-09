@@ -1,0 +1,8 @@
+CAT-R374 2026-11-09 — Catalogue read-only.
+5103 references, 12 columns, ten canonical file hashes unchanged versus CAT-R373.
+24 bidirectional synthetic OCR text fixtures: "JMA SILCA" or "SILCA JMA" with/without TE8D, against TRF1 / AB10 / LS12 on other view.
+Expected: no automatic selection when two alias manufacturer namespaces conflict on one photo.
+Prior 12 compact BK34/BK3-4 cases and 66 fold groups / 70 pairs remain unchanged.
+Audit 9/9 PASS. No physical manufacturer equivalence, no photographs, no Tesseract certification.
+ZIP CAT-R374 SHA256 e8a8b99eb5f4fba97f95fb6cd6e576a190b2f78d45f8c1a1bb9425a423669a8b, 1575 files, internal checksums verified.
+GitHub stores source and proof, not complete ZIP.

@@ -1,0 +1,10 @@
+CAT-R374 PASS 9/9 checks; 24 synthetic vectors.
+PASS canonical_5103_12_columns
+PASS canonical_10_chunks_unchanged_from_CAT_R373
+PASS aliases_JMA_SILCA_distinct_synthetic_only
+PASS 24_bidirectional_unique_scenarios
+PASS requires_review_no_autofill
+PASS no_physical_equivalence_claimed
+PASS old_12_recto_verso_compact_fixtures_preserved
+PASS old_66_glyph_groups_70_pairs_preserved
+PASS no_canonical_mutation
