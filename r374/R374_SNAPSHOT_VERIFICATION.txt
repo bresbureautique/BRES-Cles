@@ -1,0 +1,7 @@
+BRES Cles V2.28 TEST R374 — 2026-11-09
+STABLE: V2.27; main GitHub 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8 NOT MODIFIED.
+SOURCE: Apply R373_TO_R374_ALIAS_MAKER_CONFLICT.patch to R373/index.html; target SHA256 63123b827c31f0977ad0c0c2712a44cdaff5fcb12c9a8f748eba38cd83939661.
+TEST: 22/22 Chromium offline, original 24/24 unsafe alias-cross-view prefill -> 0/24.
+NONREGRESSION: 12 compact, 64 OCR ambiguity, 120 safe reference controls, geometry fail closed, catalogue corruption/restoration.
+ZIP: BRES_Cles_Mobile_V2_28_CHECKPOINT_R374.zip SHA256 ea69c382b328977aae1558d1f25424d37230ba24547e30ee08aa5740827a2741; 8950 files; manifest verified. ZIP not hosted on GitHub.
+LIMITS: Synthetic OCR text, no Samsung physical capture; OCR Tesseract fully offline uncertified.

@@ -1,0 +1,39 @@
+--- R373/index.html
++++ R374/index.html
+@@ -4741,6 +4741,9 @@
+   // R367: no geometry promotion of *lossy glyph* identities without a verified key.
+   if(info?.ocrCatalogueReadyR368===false)return info; // incomplete catalogue cannot release any automatic OCR guess
+   if(info?.ocrFoldAmbiguitiesR367?.length)return info;
++  // R374 TEST: an incompatible manufacturer namespace on either view cannot
++  // be cleared by geometric tie-breaking of a different catalogue reference.
++  if(info?.aliasMakerConflict)return {...info,catalogueGeometryResolution:{status:"cross-view-alias-maker-conflict",ref:null,topScore:0,margin:0}};
+   if(!info||info.best||!sig||typeof globalThis.bresCatalogueAmbiguityGeometryR227!=="function")return info;
+   const groups=(info.compactAmbiguities||[]).filter(g=>g&&Array.isArray(g.canons)&&g.canons.length>1);
+   if(groups.length!==1)return info;
+@@ -4809,6 +4812,7 @@
+     const c=r.faceCalibrations||[];return `modes recto/verso différents (${c[0]?.detectionMode||"?"} / ${c[1]?.detectionMode||"?"})`;
+   }
+   if(r.status==="strong-other-face-outside-compact-group")return "une autre face indique une référence différente : vérification manuelle nécessaire";
++  if(r.status==="cross-view-alias-maker-conflict")return "fabricants d’ébauche contradictoires détectés sur une face : vérification manuelle nécessaire";
+   if(r.status==="face-disagreement")return "recto et verso ne désignent pas la même référence";
+   if(r.status==="face-geometry-weak")return "au moins une face est trop faible pour confirmer";
+   if(r.status==="face-evidence-missing")return "les deux géométries recto/verso ne sont pas disponibles";
+@@ -4846,12 +4850,16 @@
+   const ocrCatalogueReadyR368=infos.every(i=>i.ocrCatalogueReadyR368===true);
+   const ocrCatalogueStatusR369=ocrCatalogueReadyR368?'expected-inventory':
+     (infos.find(i=>i.ocrCatalogueReadyR368===false)?.ocrCatalogueStatusR369||'inventory-unavailable');
++  // R374 TEST: carry forward a same-view contradiction between two recognised
++  // alias manufacturer namespaces; a confident reading on the other side
++  // cannot silently override a contradiction present in one OCR view.
++  const aliasMakerConflict=infos.some(i=>i.aliasMakerConflict===true);
+   // R373 TEST: a clean code on one face cannot override an UNRESOLVED
+   // ambiguous code on the other face. This applied already to lossy glyph
+   // groups, but compact catalogue spellings (BK3-4/BK34) were still exposed.
+   // Preserve manual input and any later *coherent* geometry review.
+-  if(ocrFoldAmbiguitiesR367.length||!ocrCatalogueReadyR368||infos.some(i=>i.referenceAmbiguity))best=null;
+-  return {txt:infos.map(i=>i.txt).filter(Boolean).join(" | "),makers,candidates,best,views:infos,crossViewConflict,conflictingCanons:crossViewConflict?strongCanons:[],referenceAmbiguity:infos.some(i=>i.referenceAmbiguity),ambiguousCanons,compactAmbiguities,ocrFoldAmbiguitiesR367,ocrCatalogueReadyR368,ocrCatalogueStatusR369};
++  if(ocrFoldAmbiguitiesR367.length||!ocrCatalogueReadyR368||infos.some(i=>i.referenceAmbiguity)||aliasMakerConflict)best=null;
++  return {txt:infos.map(i=>i.txt).filter(Boolean).join(" | "),makers,candidates,best,views:infos,aliasMakerConflict,crossViewConflict,conflictingCanons:crossViewConflict?strongCanons:[],referenceAmbiguity:infos.some(i=>i.referenceAmbiguity),ambiguousCanons,compactAmbiguities,ocrFoldAmbiguitiesR367,ocrCatalogueReadyR368,ocrCatalogueStatusR369};
+ }
+ function mergePassMakerConsensus(info,reads){
+   // R98 : fusionne uniquement des marques confirmées par >=2 passes d'une même photo.
