@@ -1,0 +1,11 @@
+{
+  "schema": "bres-r375-source-sha256",
+  "date": "2026-11-10",
+  "stable": "V2.27 only, untouched",
+  "r374_index_sha256": "63123b827c31f0977ad0c0c2712a44cdaff5fcb12c9a8f748eba38cd83939661",
+  "r375_index_sha256": "10c457fad9fcab5287cebbcf2df2ac0451ea462de85c3866824e831259d53e98",
+  "patch_sha256": "017d98b6ca18f5e2d37ed5acd5ccfdd373d4af4473ea89cef61eecc0f0fecf58",
+  "chromium_tests_sha256": "34c670048cc87298baf7ba5a571ba58ff86ab072e35c76618044e1f214eab977",
+  "chromium_report_sha256": "700e15b243146812721f3394a6cad84eb8ca6d60315656e77b756e8b399bae3e",
+  "patch_roundtrip_rebuild_exact": true
+}
