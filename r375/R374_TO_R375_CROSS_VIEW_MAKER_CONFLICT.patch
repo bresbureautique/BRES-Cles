@@ -1,0 +1,25 @@
+--- a/index.html
++++ b/index.html
+@@ -4853,13 +4853,20 @@
+   // R374 TEST: carry forward a same-view contradiction between two recognised
+   // alias manufacturer namespaces; a confident reading on the other side
+   // cannot silently override a contradiction present in one OCR view.
+-  const aliasMakerConflict=infos.some(i=>i.aliasMakerConflict===true);
++  // R375 TEST: one alias manufacturer on recto and a different alias manufacturer
++  // on verso are also contradictory for a *single* physical key. R374 protected
++  // conflicts within a single view only. Do not infer that two maker namespaces
++  // are equivalent simply because a fuzzy candidate maps to the same canon.
++  // Non-alias lock brands remain excluded (aliasMakers is qualified by XREF).
++  const crossViewAliasMakerNamespacesR375=[...new Set(infos.flatMap(i=>i.aliasMakers||[]))];
++  const crossViewAliasMakerConflictR375=crossViewAliasMakerNamespacesR375.length>1;
++  const aliasMakerConflict=infos.some(i=>i.aliasMakerConflict===true)||crossViewAliasMakerConflictR375;
+   // R373 TEST: a clean code on one face cannot override an UNRESOLVED
+   // ambiguous code on the other face. This applied already to lossy glyph
+   // groups, but compact catalogue spellings (BK3-4/BK34) were still exposed.
+   // Preserve manual input and any later *coherent* geometry review.
+   if(ocrFoldAmbiguitiesR367.length||!ocrCatalogueReadyR368||infos.some(i=>i.referenceAmbiguity)||aliasMakerConflict)best=null;
+-  return {txt:infos.map(i=>i.txt).filter(Boolean).join(" | "),makers,candidates,best,views:infos,aliasMakerConflict,crossViewConflict,conflictingCanons:crossViewConflict?strongCanons:[],referenceAmbiguity:infos.some(i=>i.referenceAmbiguity),ambiguousCanons,compactAmbiguities,ocrFoldAmbiguitiesR367,ocrCatalogueReadyR368,ocrCatalogueStatusR369};
++  return {txt:infos.map(i=>i.txt).filter(Boolean).join(" | "),makers,candidates,best,views:infos,aliasMakerConflict,crossViewAliasMakerConflictR375,crossViewAliasMakerNamespacesR375,crossViewConflict,conflictingCanons:crossViewConflict?strongCanons:[],referenceAmbiguity:infos.some(i=>i.referenceAmbiguity),ambiguousCanons,compactAmbiguities,ocrFoldAmbiguitiesR367,ocrCatalogueReadyR368,ocrCatalogueStatusR369};
+ }
+ function mergePassMakerConsensus(info,reads){
+   // R98 : fusionne uniquement des marques confirmées par >=2 passes d'une même photo.
