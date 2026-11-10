@@ -1,0 +1,14 @@
+CAT-R375 PASS 13/13 checks, 24 negative synthetic scenarios.
+PASS catalogue_5103_unique_codes_12_columns
+PASS ten_canonical_fragments_unchanged_from_r374
+PASS prior_r374_audit_passed
+PASS historical_r373_compact_cases_preserved
+PASS historical_fold_groups_preserved
+PASS twenty_four_unique_bidirectional_synthetic_vectors
+PASS both_namespaces_across_two_views
+PASS three_reference_tokens_four_scenarios_two_sides
+PASS all_fixtures_manual_only
+PASS canonical_catalogue_reference_tokens_exist
+PASS pilot_reference_TE8D_in_XREF_not_canon
+PASS manufacturer_attribution_unchanged
+PASS no_canonical_mutation
