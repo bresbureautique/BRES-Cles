@@ -1,0 +1,11 @@
+CAT-R376 PASS 10/10 checks
+PASS exactly_5103_unique_codes
+PASS twelve_columns_in_each_row
+PASS ten_canonical_chunks_untouched
+PASS unknown_makers_unchanged
+PASS lossy_ocr_groups_unchanged
+PASS compact_collision_BK34_present
+PASS five_distinct_existing_samples
+PASS five_unique_simulated_codes_absent_from_canon
+PASS canonical_snapshot_unchanged
+PASS no_real_physical_equivalence_created
