@@ -1,0 +1,12 @@
+R376 PASS 11/11 checks
+PASS prior_r375_poison_reproduced_all_five
+PASS r376_all_five_fail_closed
+PASS r376_all_five_rebuild_correct_after_restore
+PASS r375_24_opposed_faces_still_block
+PASS r374_24_same_view_still_block
+PASS r373_12_compact_still_block
+PASS r366_64_lossy_still_block
+PASS safe_prefill_preserved
+PASS cross_face_conflict_preserved
+PASS all_5103_rows_with_both_integrity_guards_valid
+PASS no_js_page_errors
