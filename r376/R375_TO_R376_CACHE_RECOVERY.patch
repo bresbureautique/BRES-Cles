@@ -1,0 +1,17 @@
+--- a/index.html
++++ b/index.html
+@@ -4708,6 +4708,14 @@
+     // This is a readiness guard, not a claim that the catalogue is authentic.
+     best=null;
+     if(candidates.length)referenceAmbiguity=true;
++    // R376 TEST: recoverOCRCandidates/ocrReferenceRegistryR208 may have built
++    // a reference cache from an in-place corrupted catalogue before the
++    // R369/R371 inventory checks ran. Never retain that cache across a later
++    // restoration of canonical rows (same array identity and row count).
++    // This only invalidates a derived index; it never edits catalogue data.
++    ocrReferenceRegistryR208Cache=null;
++    ocrReferenceRegistryR208CatalogueRef=null;
++    ocrReferenceRegistryR208CatalogueSize=-1;
+   }
+   return {txt,makers,candidates,best,aliasMakers:detectedAliasMakers,aliasMakerConflict,referenceAmbiguity,ambiguousCanons,referenceRanking:referenceRanking.slice(0,4),compactAmbiguities,ocrFoldAmbiguitiesR367,ocrCatalogueReadyR368,ocrCatalogueStatusR369};
+ }
