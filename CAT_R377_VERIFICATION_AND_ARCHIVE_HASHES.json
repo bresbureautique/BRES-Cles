@@ -1,0 +1,16 @@
+{
+  "checkpoint": "CAT-R377",
+  "date": "2026-11-12",
+  "stable_branch": "main",
+  "stable_commit": "9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8",
+  "source_branch": "catalogue-v3-audit-r377-display-20261112",
+  "audit_script_git_blob": "81e59cf54f8d242816f51f15073c9cc6f8079ff9",
+  "full_zip_sha256": "beed22a33183ffdd5bbf89f14ab2420305340108f7623bf83650c4d13b0598a8",
+  "archive_entries": 1596,
+  "catalogue_references": 5103,
+  "canonical_chunks": 10,
+  "checks_passed": 10,
+  "checks_total": 10,
+  "manufacturer_ampersand_records": 79,
+  "library_upload_succeeded": false
+}
