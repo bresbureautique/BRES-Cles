@@ -1,0 +1,50 @@
+{
+  "schema": "bres-cat-r377-display-surface-audit-v1",
+  "date": "2026-11-12",
+  "milestone": "CAT-R377",
+  "ok": true,
+  "checks": {
+    "5103_unique_codes": true,
+    "12_columns_all_rows": true,
+    "ten_canonical_sha256_match_r376": true,
+    "unknown_manufacturers_164_unchanged": true,
+    "ocr_collision_groups_66_unchanged": true,
+    "ocr_collision_pairs_70_unchanged": true,
+    "compact_reference_collision_unchanged": true,
+    "manufacturer_ampersands_present_for_escape_regression": true,
+    "manufacturer_markup_angle_quotes_absent": true,
+    "audit_never_modifies_canonical_rows": true
+  },
+  "catalogue_count": 5103,
+  "canonical_sha256": {
+    "catalog-01.js": "e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b",
+    "catalog-02.js": "955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75",
+    "catalog-03.js": "9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210",
+    "catalog-04.js": "14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942",
+    "catalog-05.js": "5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b",
+    "catalog-06.js": "b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac",
+    "catalog-07.js": "b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b",
+    "catalog-08.js": "3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814",
+    "catalog-09.js": "4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f",
+    "catalog-10.js": "f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4"
+  },
+  "unknown_manufacturer_count": 164,
+  "makers_with_ampersand_records": 79,
+  "maker_ampersand_unique_labels": [
+    "BRIGGS & STRATTON",
+    "LOWE & FLETCHER",
+    "SQUIRE & SONS"
+  ],
+  "unsafe_markup_in_code_maker": [],
+  "ocr_collision_groups": 66,
+  "ocr_collision_pairs": 70,
+  "compact_collision_refs": [
+    "BK3-4",
+    "BK34"
+  ],
+  "limits": [
+    "Manufacturer strings with & require HTML escaping when rendered; they are not malicious records",
+    "No OCR photo test",
+    "No physical equivalence or maker assignment inferred"
+  ]
+}
