@@ -1,0 +1,33 @@
+{
+  "schema": "bres-r377-chromium-ocr-display-v1",
+  "date": "2026-11-12",
+  "milestone": "R377",
+  "ok": true,
+  "checks": {
+    "both_status_paths_escape_direct_ocr_and_manual_interpolation": true,
+    "original_r376_index_preserved_in_source_archive": true,
+    "14_unsafe_display_cases_render_as_text": true,
+    "no_injected_dom_script_executed": true,
+    "full_canonical_catalogue_integrity_preserved": true,
+    "24_cross_face_makers_blocked": true,
+    "24_same_face_makers_blocked": true,
+    "12_compact_conflicts_blocked": true,
+    "64_lossy_glyph_conflicts_blocked": true,
+    "control_references_unchanged": true,
+    "no_page_errors": true
+  },
+  "test_case_count": 14,
+  "synthetic_regressions": 124,
+  "tesseract_engine_called": false,
+  "physical_photos_tested": false,
+  "errors": [],
+  "script_http_attempts": [
+    "https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"
+  ],
+  "index_sha256": "f4ab58a5e4521702ed0019457e71d7d145a70f6ed9a2b144b4a880836089db12",
+  "limitations": [
+    "The OCR strings are synthetic",
+    "No Samsung photograph was interpreted",
+    "Uncertified Tesseract CDN/worker/WASM/language assets"
+  ]
+}
