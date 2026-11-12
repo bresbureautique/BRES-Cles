@@ -1,0 +1,18 @@
+{
+  "checkpoint": "R377",
+  "date": "2026-11-12",
+  "stable_branch": "main",
+  "stable_commit": "9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8",
+  "source_branch": "v2.28-test-r377-ocr-display-20261112",
+  "reproducer_git_blob": "d04170c2ffa9caebbfccbc865efd816d282f71ee",
+  "test_report_git_blob": "b21358c025563d62fcea6a4ac3030923a39e77c0",
+  "patched_index_sha256": "f4ab58a5e4521702ed0019457e71d7d145a70f6ed9a2b144b4a880836089db12",
+  "full_zip_sha256": "028a2f6f99530918517bc658383288acff116c7434e5a0bec6e472ba52529c08",
+  "archive_entries": 8972,
+  "checks_passed": 11,
+  "checks_total": 11,
+  "synthetic_cases": 124,
+  "offline_cold_ocr_certified": false,
+  "samsung_tested": false,
+  "library_upload_succeeded": false
+}
