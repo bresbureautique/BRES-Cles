@@ -1,0 +1,50 @@
+{
+  "schema": "bres-r378-head-ocr-result-escaping-v1",
+  "date": "2026-11-13",
+  "milestone": "R378",
+  "ok": true,
+  "checks": {
+    "r377_source_differs_and_only_head_photo_function_changed": true,
+    "four_result_scenarios_no_html_nodes_or_script_execution": true,
+    "non_https_jma_url_rejected": true,
+    "safe_https_jma_url_preserved": true,
+    "strong_maker_branch_escaped": true,
+    "weak_maker_branch_escaped": true,
+    "full_catalogue_5103_and_integrity": true,
+    "no_final_verified_claim_for_unverified_branches": true,
+    "no_browser_js_errors": true,
+    "ten_canonical_catalogue_chunks_identical_to_r377_zip": true
+  },
+  "scenarios": {
+    "cases": [
+      {
+        "name": "best-dangerous-metadata",
+        "injected": false,
+        "executed": false
+      },
+      {
+        "name": "best-safe-link",
+        "injected": false,
+        "executed": false
+      },
+      {
+        "name": "strong-maker-branch",
+        "injected": false,
+        "executed": false
+      },
+      {
+        "name": "weak-maker-branch",
+        "injected": false,
+        "executed": false
+      }
+    ]
+  },
+  "elapsed_seconds": 1.56,
+  "browser_errors": [],
+  "network_requests_blocked": 1,
+  "limits": [
+    "Synthetic strings and mocked OCR photo responses only",
+    "No physical Samsung measurement",
+    "No offline cold-start OCR certification"
+  ]
+}
