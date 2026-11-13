@@ -1,0 +1,26 @@
+{
+  "schema": "bres-r378-source-hashes-v1",
+  "date": "2026-11-13",
+  "stable": "V2.27 / GitHub main 9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8",
+  "files": {
+    "index_R377_BASE.html": "f4ab58a5e4521702ed0019457e71d7d145a70f6ed9a2b144b4a880836089db12",
+    "index.html": "a68f211e403b7b6047f1494af186004b6bdb1497a0edee12494d77bcc38c35d1",
+    "r378_apply_head_result_escape.py": "a64cc2be7d8b6aceeba5947bb86d28424f0b1aecab1a2940bc341d9574c31627",
+    "r378_head_results_chromium.py": "370266afaad816cdfedd7ab9fef9759c478acaedb0cd822e9d8854cb5c0e63db",
+    "R378_HEAD_RESULTS_CHROMIUM.json": "9b0dd301eb263056a9ef2d766f6688300393ae6316680b434d33c5fc3ea77579",
+    "R378_HEAD_RESULTS_CHROMIUM.txt": "b5c64a34ac6784c8080d3124482323810a481030eca733d63079f68031604afd"
+  },
+  "r377_index_from_archive_sha256": "f4ab58a5e4521702ed0019457e71d7d145a70f6ed9a2b144b4a880836089db12",
+  "canonical_fragments": {
+    "catalog-01.js": "e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b",
+    "catalog-02.js": "955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75",
+    "catalog-03.js": "9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210",
+    "catalog-04.js": "14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942",
+    "catalog-05.js": "5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b",
+    "catalog-06.js": "b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac",
+    "catalog-07.js": "b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1",
+    "catalog-08.js": "3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814",
+    "catalog-09.js": "4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f",
+    "catalog-10.js": "f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4"
+  }
+}
