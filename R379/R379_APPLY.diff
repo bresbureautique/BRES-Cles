@@ -1,0 +1,50 @@
+--- index_R378.html
++++ index_R379.html
+@@ -3545,15 +3545,25 @@
+  }finally{finishGeometryAnalysisR215(expectedAnalysisGeneration,publishedR215);}
+ }
+ 
++// R379: protect all routes to the pilot JMA links, not only the OCR-head view.
++// URL() validates the parsed origin, not a misleading https:// prefix. No fetch.
++function safePilotJmaLinkR379(raw){
++ try{
++   const u=new URL(String(raw??""));
++   return u.protocol==="https:" && u.hostname==="ecatalogo.jma.es" &&
++          !u.username && !u.password && (!u.port || u.port==="443") ? u.href : "";
++ }catch(_){return "";}
++}
+ function showXref(ref){
+  let x=XREF[norm(ref)];
+- if(!x){el("xref").innerHTML="<b>"+ref+"</b> — aucune équivalence pilote enregistrée.";return}
+- let h=`<b>${ref}</b>${x.Pour?` — pour ${x.Pour}`:""}<br>`;
++ if(!x){el("xref").innerHTML="<b>"+escapeOCRDisplayR377(ref)+"</b> — aucune équivalence pilote enregistrée.";return}
++ let h=`<b>${escapeOCRDisplayR377(ref)}</b>${x.Pour?` — pour ${escapeOCRDisplayR377(x.Pour)}`:""}<br>`;
+  for(const [k,v] of Object.entries(x)){
+    if(["JMA_URL","Pour","SILCA_PAGE","SILCA_VISUAL"].includes(k)||!v)continue;
+-   h+=`<span class="pill"><b>${k}</b> ${v}</span>`;
++   h+=`<span class="pill"><b>${escapeOCRDisplayR377(k)}</b> ${escapeOCRDisplayR377(v)}</span>`;
+  }
+- if(x.JMA_URL) h+=`<br><a class="btn alt" href="${x.JMA_URL}" target="_blank">Vérifier dans le catalogue JMA</a>`;
++ const safeLink=safePilotJmaLinkR379(x.JMA_URL);
++ if(safeLink)h+=`<br><a class="btn alt" href="${escapeOCRDisplayR377(safeLink)}" target="_blank" rel="noopener noreferrer">Vérifier dans le catalogue JMA</a>`;
+  el("xref").innerHTML=h;
+ }
+ function match(sig){
+@@ -4984,7 +4994,7 @@
+       if(["JMA_URL","Pour","SILCA_PAGE","SILCA_VISUAL"].includes(k)||!v)continue;
+       msg+=`<span class="pill"><b>${escapeManualHtmlR357(k)}</b> ${escapeManualHtmlR357(v)}</span>`;
+     }
+-    if(x.JMA_URL && /^https:\/\//i.test(String(x.JMA_URL))) msg+=`<br><a class="btn alt" href="${escapeManualHtmlR357(x.JMA_URL)}" target="_blank" rel="noopener noreferrer">Ouvrir la fiche JMA</a>`;
++    if(safePilotJmaLinkR379(x.JMA_URL)) msg+=`<br><a class="btn alt" href="${escapeManualHtmlR357(safePilotJmaLinkR379(x.JMA_URL))}" target="_blank" rel="noopener noreferrer">Ouvrir la fiche JMA</a>`;
+     return {ok:true,canon,msg};
+   }
+   if(makerConflict)return {ok:false,msg:`Plusieurs fabricants d’ébauches contradictoires sont indiqués dans « ${escapeManualHtmlR357(makerHint)} ». Précisez un seul fabricant ou saisissez une référence canonique certaine.`};
+@@ -7088,7 +7098,7 @@
+           if(["JMA_URL","Pour","SILCA_PAGE","SILCA_VISUAL"].includes(k)||!v)continue;
+           cat+=`<span class="pill"><b>${escapeOCRDisplayR377(k)}</b> ${escapeOCRDisplayR377(v)}</span>`;
+         }
+-        if(x.JMA_URL && /^https:\/\//i.test(String(x.JMA_URL))) cat+=`<br><a class="btn alt" href="${escapeOCRDisplayR377(x.JMA_URL)}" target="_blank" rel="noopener noreferrer">Ouvrir la fiche JMA</a>`;
++        if(safePilotJmaLinkR379(x.JMA_URL)) cat+=`<br><a class="btn alt" href="${escapeOCRDisplayR377(safePilotJmaLinkR379(x.JMA_URL))}" target="_blank" rel="noopener noreferrer">Ouvrir la fiche JMA</a>`;
+       }
+       el("catalogResult").className="status ok";
+       el("catalogResult").innerHTML=cat;
