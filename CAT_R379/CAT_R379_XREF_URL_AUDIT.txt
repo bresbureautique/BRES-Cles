@@ -1,0 +1,18 @@
+CAT-R379 PASS 17/17 checks
+PASS canonical_5103_unique
+PASS 12_fields_each
+PASS ten_canonical_chunks_equal_CAT_R378
+PASS pilot_xref_entries_unmodified
+PASS pilot_only_TE8D_TE8I
+PASS original_jma_urls_https_trusted_host
+PASS 164_blank_maker_unchanged
+PASS 79_maker_ampersand_unchanged
+PASS 66_ocr_collision_groups
+PASS 70_ocr_collision_pairs
+PASS three_automated_link_surfaces_covered
+PASS no_ocr_decoder_changes
+PASS new_link_rejects_wrong_host
+PASS new_link_rejects_userinfo
+PASS new_link_protocol_https_only
+PASS new_url_not_used_for_decision
+PASS canonical_data_read_only
