@@ -1,0 +1,71 @@
+﻿OCR_fold,reference_A,maker_A,reference_B,maker_B,review_priority,reason,physical_equivalence_verified,review_status
+V12,VI2,,VL2,V.G.F. VILLATORE,1,manufacturer_missing,NO,PENDING
+111,IL1,ILARGI,LL1,LOCKWOOD,2,different_manufacturers,NO,PENDING
+151,IS1,IGS,LS1,RENZ,2,different_manufacturers,NO,PENDING
+152,IS2,IGS,LS2,RENZ,2,different_manufacturers,NO,PENDING
+1F1,IF1,IES,LF1,LOWE & FLETCHER,2,different_manufacturers,NO,PENDING
+1F14,IF14,IFAM,LF14,LOWE & FLETCHER,2,different_manufacturers,NO,PENDING
+1F15R,IF15R,IFAM,LF15R,EURO LOCKS,2,different_manufacturers,NO,PENDING
+1F16,IF16,IFAM,LF16,LOWE & FLETCHER,2,different_manufacturers,NO,PENDING
+1F17,IF17,IFAM,LF17,LOWE & FLETCHER,2,different_manufacturers,NO,PENDING
+1F2,IF2,IFAM,LF2,EURO LOCKS,2,different_manufacturers,NO,PENDING
+1F3,IF3,IFAM,LF3,LOWE & FLETCHER,2,different_manufacturers,NO,PENDING
+1F6,IF6,IFAM,LF6,LOWE & FLETCHER,2,different_manufacturers,NO,PENDING
+1F7,IF7,IFAM,LF7,EURO LOCKS,2,different_manufacturers,NO,PENDING
+1F8,IF8,IFAM,LF8,LOWE & FLETCHER,2,different_manufacturers,NO,PENDING
+1F8R,IF8R,IFAM,LF8R,EURO LOCKS,2,different_manufacturers,NO,PENDING
+1M3R,IM3R,IMSA,LM3R,LUMA,2,different_manufacturers,NO,PENDING
+1M4R,IM4R,IMSA,LM4R,LUMA,2,different_manufacturers,NO,PENDING
+1N1,IN1,ILLINOIS,LN1,LN,2,different_manufacturers,NO,PENDING
+1T1,IT1,INT,LT1,BKS,2,different_manufacturers,NO,PENDING
+1T2,IT2,INT,LT2,LITTO,2,different_manufacturers,NO,PENDING
+1W1R,IW1R,IWATA,LW1R,LOCKWOOD,2,different_manufacturers,NO,PENDING
+1X1,IX1,IALEX,LX1,LUX,2,different_manufacturers,NO,PENDING
+1X1R,IX1R,IALEX,LX1R,LUX,2,different_manufacturers,NO,PENDING
+511,SI1,SOFI-SONAFI,SL1,SEGAL,2,different_manufacturers,NO,PENDING
+8A12,BAI2,BARAS,BAL2,BAAL,2,different_manufacturers,NO,PENDING
+8A13,BAI3,BASI,BAL3,BAAL,2,different_manufacturers,NO,PENDING
+A11,AI1,ALIANÇA,AL1,AL,2,different_manufacturers,NO,PENDING
+A851,AB51,ABUS,ABS1,ABSA,2,different_manufacturers,NO,PENDING
+A852,AB52,ABUS,ABS2,ABSA,2,different_manufacturers,NO,PENDING
+A853,AB53,ABUS,ABS3,ABSA,2,different_manufacturers,NO,PENDING
+C111,CIL1,CILA-GENTILI,CLI1,CIL LIL,2,different_manufacturers,NO,PENDING
+C111,CIL1,CILA-GENTILI,CLL1,COLL,2,different_manufacturers,NO,PENDING
+C111,CLI1,CIL LIL,CLL1,COLL,2,different_manufacturers,NO,PENDING
+C12,CI2,CASI,CL2,CLUM,2,different_manufacturers,NO,PENDING
+C13,CI3,CASI,CL3,CLUM,2,different_manufacturers,NO,PENDING
+C14,CI4,CASI,CL4,CLUM,2,different_manufacturers,NO,PENDING
+C15,CI5,CASI,CL5,CLUM,2,different_manufacturers,NO,PENDING
+C151,CIS1,CAS-CISMA,CLS1,CIELS,2,different_manufacturers,NO,PENDING
+C152,CIS2,CAS-CISMA,CLS2,CIELS,2,different_manufacturers,NO,PENDING
+C153,CIS3,CAS-CISMA,CLS3,CIELS,2,different_manufacturers,NO,PENDING
+C840R,CB4-OR,CORBIN (IT),CB40R,CORBIN (US),2,different_manufacturers,NO,PENDING
+F12,FI2,FIAM,FL2,FLORA,2,different_manufacturers,NO,PENDING
+M511,MS11,MASTER,MSL1,MASTER LOCK,2,different_manufacturers,NO,PENDING
+M512,MS12,MASTER,MSL2,MASTER LOCK,2,different_manufacturers,NO,PENDING
+PC11R,PC11R,P.C. (CORTELLEZZI),PCL1R,PACO LOCKS,2,different_manufacturers,NO,PENDING
+T011,TO11,TOK-WINKHAUS,TOL1,TULA,2,different_manufacturers,NO,PENDING
+T012,TO12,TOK-TRELOCK,TOL2,TULA,2,different_manufacturers,NO,PENDING
+T022,TO22,TOK-TRELOCK,TOZ2,TOKOZ,2,different_manufacturers,NO,PENDING
+T026,TO26,TOK-TRELOCK,TOZ6,TOKOZ,2,different_manufacturers,NO,PENDING
+T11,TI1,TIK,TL1,TRI-CIRCLE,2,different_manufacturers,NO,PENDING
+TR11R,TR11R,TRIOVING,TRI1R,TRIMARK,2,different_manufacturers,NO,PENDING
+TR13R,TR13R,TRIOVING,TRI3R,TRIMARK,2,different_manufacturers,NO,PENDING
+TR17R,TR17R,TRIOVING,TRI7R,TRIMARK,2,different_manufacturers,NO,PENDING
+TR18R,TR18R,TRIOVING,TRI8R,TRIMARK,2,different_manufacturers,NO,PENDING
+TR19R,TR19R,TRIOVING,TRI9R,TRIMARK,2,different_manufacturers,NO,PENDING
+V12R,VI2R,VIRO,VL2R,V.G.F. VILLATORE,2,different_manufacturers,NO,PENDING
+V13,VI3,VIRO,VL3,V.G.F. VILLATORE,2,different_manufacturers,NO,PENDING
+V13R,VI3R,VIRO,VL3R,V.G.F. VILLATORE,2,different_manufacturers,NO,PENDING
+V14,VI4,VIRO,VL4,V.G.F. VILLATORE,2,different_manufacturers,NO,PENDING
+V14R,VI4R,VIRO,VL4R,V.G.F. VILLATORE,2,different_manufacturers,NO,PENDING
+WE12,WE12,WELKA,WEI2,WEISER,2,different_manufacturers,NO,PENDING
+WE13,WE13,WELKA,WEI3,WEISER,2,different_manufacturers,NO,PENDING
+WE14,WE14,WELKA,WEI4,WEISER,2,different_manufacturers,NO,PENDING
+WE15,WE15,WELKA,WEI5,WEISER,2,different_manufacturers,NO,PENDING
+8K34,BK3-4,BKS,BK34,BKS,3,same_manufacturer,NO,PENDING
+C830R,CB3-OR,CORBIN (IT),CB30R,CORBIN (IT),3,same_manufacturer,NO,PENDING
+C890R,CB9-OR,CORBIN (IT),CB90R,CORBIN (IT),3,same_manufacturer,NO,PENDING
+KF1,KF1,KFV,KFI,KFV,3,same_manufacturer,NO,PENDING
+KF1,KF1,KFV,KFL,KFV,3,same_manufacturer,NO,PENDING
+KF1,KFI,KFV,KFL,KFV,3,same_manufacturer,NO,PENDING
