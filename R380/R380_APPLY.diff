@@ -1,0 +1,47 @@
+--- index_R379_BASE.html
++++ index.html
+@@ -5433,15 +5433,29 @@
+ function escapeOCRDisplayListR377(values,sep=", "){
+   return (values||[]).map(escapeOCRDisplayR377).join(sep);
+ }
++// R380: a new OCR attempt without an initialized API must not leave a stale
++// OCR-derived reference, maker, verification, JMA link or diagnostic on screen.
++// Manual typing remains unchanged; no network request, worker or recognition.
++function rejectUnavailableOCRR380(source,statusId){
++ beginFreshCatalogueQa2OcrCycleR171(source);
++ const request=beginOCRRequest(); // invalidates any older in-flight request
++ invalidateOCRDiagnosticForNewRequestR251(request.requestEpoch,source);
++ clearOCRReferenceIfCurrent();
++ clearOCRBrandIfCurrent();
++ invalidateIdentificationOutputs("Ancien résultat rendu obsolète : moteur OCR indisponible.");
++ const target=el(statusId);
++ target.className="status bad";
++ target.textContent="OCR indisponible : bibliothèque ou API Tesseract absente. Aucun ancien résultat automatique n’est valable pour cette nouvelle lecture. La saisie manuelle reste possible ; l’OCR totalement hors connexion n’est pas encore certifié.";
++ return {blocked:true,source,requestEpoch:request.requestEpoch};
++}
+ async function runOCR(){
+   if(typeof globalThis.ensureBresCatalogueR208==="function"){try{await globalThis.ensureBresCatalogueR208();}catch(_){/* OCR reste utilisable sans catalogue massif */}}
+  const geometryEvidenceR215=captureDecisionGeometryEvidenceR215();
+  if(!geometryEvidenceR215){
+    el("ocrStatus").className="status bad";el("ocrStatus").textContent=geometryDecisionUnavailableMessageR215();return;
+  }
+- if(typeof Tesseract==="undefined"){
+-   el("ocrStatus").className="status bad";
+-   el("ocrStatus").textContent="Moteur OCR non chargé. Vérifiez la connexion Internet puis rechargez l'application.";
++ if(!globalThis.Tesseract || typeof globalThis.Tesseract.createWorker!=="function"){
++   rejectUnavailableOCRR380("ocr-main","ocrStatus");
+    return;
+  }
+  beginFreshCatalogueQa2OcrCycleR171("ocr-main");
+@@ -7020,9 +7034,8 @@
+     el("headSearchStatus").textContent="Ajoutez au moins une photo rapprochée de la tête.";
+     return;
+   }
+-  if(typeof Tesseract==="undefined"){
+-    el("headSearchStatus").className="status bad";
+-    el("headSearchStatus").textContent="Moteur OCR non chargé. Vérifiez Internet puis rechargez l'application.";
++  if(!globalThis.Tesseract || typeof globalThis.Tesseract.createWorker!=="function"){
++    rejectUnavailableOCRR380("ocr-head","headSearchStatus");
+     return;
+   }
+ 
