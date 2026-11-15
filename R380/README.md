@@ -14,6 +14,6 @@ Patch reproductible : [R380_APPLY.diff](R380_APPLY.diff), empreinte Git `1ac8829
 ## Contrôles
 Chromium hors réseau **36/36** (défaut reproduit sur R379 puis corrigé sur R380, champs OCR/manuels, diagnostic, résultats). Non-régression R377 sur source R380 **11/11** : 124 textes OCR synthétiques et 14 tentatives d'injection dans l'affichage. Audit indépendant CAT-R380 **15/15**.
 
-Archive intégrale R380 (Library `/BRES Cles/Sauvegardes`) SHA-256 `038f9c55f98337c3b1b621d4822f8493b2c31d3368541b807dba7a4091bb15f2`, 9 000 entrées; CRC et 8 999 empreintes internes vérifiés avant dépôt.
+Archive intégrale R380 (Library `/BRES Cles/Sauvegardes`) SHA-256 `0cb91434a39e296abee6f58128feb69212cd435808884cbaf93e943ff9983499`, 9 000 entrées; CRC et 8 999 empreintes internes vérifiés avant dépôt.
 
 **Limites :** les worker/WASM/données linguistiques Tesseract hors connexion ne sont pas embarqués et l'OCR à froid sans Internet reste non certifié. Les essais sont synthétiques, sans photo réelle du Samsung. Aucun reçu JSON benchmark R336 original.
