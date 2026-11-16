@@ -1,0 +1,40 @@
+--- index_R380_BASE.html	2026-11-16 09:14:45.522126674 +0000
++++ index.html	2026-11-16 09:14:46.213154321 +0000
+@@ -5448,11 +5448,26 @@
+  target.textContent="OCR indisponible : bibliothèque ou API Tesseract absente. Aucun ancien résultat automatique n’est valable pour cette nouvelle lecture. La saisie manuelle reste possible ; l’OCR totalement hors connexion n’est pas encore certifié.";
+  return {blocked:true,source,requestEpoch:request.requestEpoch};
+ }
++// R381 TEST: an explicit OCR attempt with missing prerequisites (no published
++// main geometry / no head photograph) must invalidate older OCR-derived UI.
++// This is deliberately fail-closed and never changes the manually typed values.
++function rejectMissingOCRInputR381(source,statusId,reason){
++ beginFreshCatalogueQa2OcrCycleR171(source);
++ const request=beginOCRRequest(); // invalidate any in-flight recognition
++ invalidateOCRDiagnosticForNewRequestR251(request.requestEpoch,source);
++ clearOCRReferenceIfCurrent();
++ clearOCRBrandIfCurrent();
++ invalidateIdentificationOutputs("Ancien résultat rendu obsolète : données nécessaires à la lecture OCR absentes.");
++ const target=el(statusId);
++ target.className="status bad";
++ target.textContent=String(reason||"Lecture OCR impossible : données manquantes.");
++ return {blocked:true,source,requestEpoch:request.requestEpoch};
++}
+ async function runOCR(){
+   if(typeof globalThis.ensureBresCatalogueR208==="function"){try{await globalThis.ensureBresCatalogueR208();}catch(_){/* OCR reste utilisable sans catalogue massif */}}
+  const geometryEvidenceR215=captureDecisionGeometryEvidenceR215();
+  if(!geometryEvidenceR215){
+-   el("ocrStatus").className="status bad";el("ocrStatus").textContent=geometryDecisionUnavailableMessageR215();return;
++   rejectMissingOCRInputR381("ocr-main","ocrStatus",geometryDecisionUnavailableMessageR215());return;
+  }
+  if(!globalThis.Tesseract || typeof globalThis.Tesseract.createWorker!=="function"){
+    rejectUnavailableOCRR380("ocr-main","ocrStatus");
+@@ -7030,8 +7045,7 @@
+   if(typeof globalThis.ensureBresCatalogueR208==="function"){try{await globalThis.ensureBresCatalogueR208();}catch(_){/* OCR tête reste utilisable sans catalogue massif */}}
+   let fr=getHeadPhoto("recto"), fv=getHeadPhoto("verso");
+   if(!fr && !fv){
+-    el("headSearchStatus").className="status bad";
+-    el("headSearchStatus").textContent="Ajoutez au moins une photo rapprochée de la tête.";
++    rejectMissingOCRInputR381("ocr-head","headSearchStatus","Ajoutez au moins une photo rapprochée de la tête. Aucune ancienne lecture OCR ne reste valable.");
+     return;
+   }
+   if(!globalThis.Tesseract || typeof globalThis.Tesseract.createWorker!=="function"){
