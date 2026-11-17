@@ -1,0 +1,47 @@
+--- index_R381_BASE.html
++++ index_R382.html
+@@ -5464,7 +5464,6 @@
+  return {blocked:true,source,requestEpoch:request.requestEpoch};
+ }
+ async function runOCR(){
+-  if(typeof globalThis.ensureBresCatalogueR208==="function"){try{await globalThis.ensureBresCatalogueR208();}catch(_){/* OCR reste utilisable sans catalogue massif */}}
+  const geometryEvidenceR215=captureDecisionGeometryEvidenceR215();
+  if(!geometryEvidenceR215){
+    rejectMissingOCRInputR381("ocr-main","ocrStatus",geometryDecisionUnavailableMessageR215());return;
+@@ -5477,6 +5476,14 @@
+  const request=beginOCRRequest(), epoch=request.identificationEpoch, requestEpoch=request.requestEpoch;
+  invalidateOCRDiagnosticForNewRequestR251(requestEpoch,"ocr-main");
+  const requestIsCurrent=()=>ocrRequestIsCurrent(requestEpoch,epoch);
++ // R382: new intent takes ownership BEFORE possibly asynchronous catalogue loading.
++ // Never display an older OCR approval while a new capture is waiting for scripts.
++ clearOCRReferenceIfCurrent();clearOCRBrandIfCurrent();
++ invalidateIdentificationOutputs("Nouvelle lecture OCR principale en préparation : résultat précédent annulé.");
++ if(typeof globalThis.ensureBresCatalogueR208==="function"){
++   try{await globalThis.ensureBresCatalogueR208();}catch(_){/* OCR peut continuer sans catalogue complet */}
++ }
++ if(!requestIsCurrent())return; // superseded while the catalogue awaited
+  const deadline=Date.now()+OCR_ACTION_BUDGET_MS;
+  try{
+    let ocrRecto=await getOCRCanvas("recto"); if(!requestIsCurrent())return;
+@@ -7042,7 +7049,6 @@
+ }
+ 
+ async function searchFromHeadPhotos(){
+-  if(typeof globalThis.ensureBresCatalogueR208==="function"){try{await globalThis.ensureBresCatalogueR208();}catch(_){/* OCR tête reste utilisable sans catalogue massif */}}
+   let fr=getHeadPhoto("recto"), fv=getHeadPhoto("verso");
+   if(!fr && !fv){
+     rejectMissingOCRInputR381("ocr-head","headSearchStatus","Ajoutez au moins une photo rapprochée de la tête. Aucune ancienne lecture OCR ne reste valable.");
+@@ -7057,6 +7063,13 @@
+   const request=beginOCRRequest(), epoch=request.identificationEpoch, requestEpoch=request.requestEpoch;
+   invalidateOCRDiagnosticForNewRequestR251(requestEpoch,"ocr-head");
+   const requestIsCurrent=()=>ocrRequestIsCurrent(requestEpoch,epoch);
++  // R382: revoke old OCR conclusions while catalogue load is still pending.
++  clearOCRReferenceIfCurrent();clearOCRBrandIfCurrent();
++  invalidateIdentificationOutputs("Nouvelle lecture OCR de tête en préparation : résultat précédent annulé.");
++  if(typeof globalThis.ensureBresCatalogueR208==="function"){
++    try{await globalThis.ensureBresCatalogueR208();}catch(_){/* pas de sélection automatique sur catalogue incomplet */}
++  }
++  if(!requestIsCurrent())return; // a newer request won the race
+   const geometryEvidenceR215=captureDecisionGeometryEvidenceR215();
+   const deadline=Date.now()+OCR_ACTION_BUDGET_MS;
+ 
