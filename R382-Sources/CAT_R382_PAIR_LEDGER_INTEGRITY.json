@@ -1,0 +1,118 @@
+{
+  "schema": "bres-cat-r382-pair-ledger-integrity-v1",
+  "date": "2026-11-17",
+  "milestone": "CAT-R382",
+  "ok": true,
+  "checks": {
+    "prior_R381_audit_success": true,
+    "canonical_sha_identical_R381": true,
+    "canonical_5103_12_fields": true,
+    "70_in_prior_queue": true,
+    "unaltered_evidence_passes": true,
+    "all_pairs_wait_for_physical_and_documented_reference": true,
+    "one_missing_maker_case": true,
+    "manufacturer_divergence_counts": true,
+    "all_row_hashes_64_hex": true,
+    "tamper_block_changed_reference": true,
+    "tamper_block_changed_ocr_fold": true,
+    "tamper_block_changed_manufacturer": true,
+    "tamper_block_changed_code": true,
+    "tamper_block_changed_digest": true,
+    "tamper_block_changed_length": true,
+    "tamper_block_changed_width": true,
+    "tamper_block_changed_profile": true,
+    "tamper_block_false_automatic_equivalence": true,
+    "tamper_block_false_review_approval": true,
+    "tamper_block_remove_documentation_guard": true,
+    "tamper_block_alter_priority": true,
+    "tamper_block_duplicated_pair": true,
+    "tamper_block_removed_pair": true
+  },
+  "baseline_errors": [],
+  "negative_mutation_detected": {
+    "changed_reference": true,
+    "changed_ocr_fold": true,
+    "changed_manufacturer": true,
+    "changed_code": true,
+    "changed_digest": true,
+    "changed_length": true,
+    "changed_width": true,
+    "changed_profile": true,
+    "false_automatic_equivalence": true,
+    "false_review_approval": true,
+    "remove_documentation_guard": true,
+    "alter_priority": true,
+    "duplicated_pair": true,
+    "removed_pair": true
+  },
+  "negative_error_reasons": {
+    "changed_reference": [
+      "pair_set_mismatch",
+      "unknown_pair"
+    ],
+    "changed_ocr_fold": [
+      "row_0_OCR_fold"
+    ],
+    "changed_manufacturer": [
+      "row_0_maker_B"
+    ],
+    "changed_code": [
+      "row_0_catalogue_code_A"
+    ],
+    "changed_digest": [
+      "row_0_full_row_SHA256_A"
+    ],
+    "changed_length": [
+      "row_0_length_delta_mm_REPORT_ONLY"
+    ],
+    "changed_width": [
+      "row_0_width_delta_mm_REPORT_ONLY"
+    ],
+    "changed_profile": [
+      "row_0_mean_profile_delta_REPORT_ONLY"
+    ],
+    "false_automatic_equivalence": [
+      "row_0_auto_equivalence"
+    ],
+    "false_review_approval": [
+      "row_0_review_status"
+    ],
+    "remove_documentation_guard": [
+      "row_0_requires_documented_reference"
+    ],
+    "alter_priority": [
+      "row_0_priority"
+    ],
+    "duplicated_pair": [
+      "duplicate_pair",
+      "wrong_pair_count"
+    ],
+    "removed_pair": [
+      "pair_set_mismatch",
+      "wrong_pair_count"
+    ]
+  },
+  "reference_count": 5103,
+  "pair_count": 70,
+  "manufacturer_missing_count": 164,
+  "canonical_sha256": {
+    "catalog-01.js": "e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b",
+    "catalog-02.js": "955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75",
+    "catalog-03.js": "9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210",
+    "catalog-04.js": "14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942",
+    "catalog-05.js": "5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b",
+    "catalog-06.js": "b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac",
+    "catalog-07.js": "b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1",
+    "catalog-08.js": "3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814",
+    "catalog-09.js": "4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f",
+    "catalog-10.js": "f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4"
+  },
+  "evidence_source": "CAT_R381_OCR_PAIR_EVIDENCE.csv",
+  "autonomous_manufacturer_assignment": false,
+  "physical_equivalence_verified": false,
+  "limits": [
+    "Theoretical OCR-fold pairs: no physical-key verification",
+    "Reports and geometry do not establish key compatibility",
+    "Actual cold-offline OCR remains unverified"
+  ]
+}
