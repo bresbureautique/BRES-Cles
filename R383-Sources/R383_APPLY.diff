@@ -36,6 +36,7 @@
 + }
   const deadline=Date.now()+OCR_ACTION_BUDGET_MS;
   try{
+    let ocrRecto=await getOCRCanvas("recto"); if(!requestIsCurrent())return;
 @@ -7066,10 +7082,12 @@
    // R382: revoke old OCR conclusions while catalogue load is still pending.
    clearOCRReferenceIfCurrent();clearOCRBrandIfCurrent();
