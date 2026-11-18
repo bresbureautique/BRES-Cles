@@ -1,0 +1,54 @@
+--- index_R382.html
++++ index_R383.html
+@@ -238,6 +238,20 @@
+ const OCR_REFERENCE_NEAR_TIE_DELTA=0.02;
+ // R95 : budget OCR mobile. Une lecture ne doit plus enchaîner 40 puis 48 passes.
+ const OCR_ACTION_BUDGET_MS=25000;
++// R383: a missing/hung catalogue script must not hold OCR forever. A late
++// rejection is handled, and each caller still owns its request epoch check.
++const OCR_CATALOGUE_WAIT_MAX_MS_R383=3000;
++async function waitForOCRCatalogueR383(){
++ if(typeof globalThis.ensureBresCatalogueR208!=="function")return "unavailable";
++ let timer=null;
++ try{
++   return await Promise.race([
++     Promise.resolve().then(()=>globalThis.ensureBresCatalogueR208()).then(()=>"loaded",()=>"failed"),
++     new Promise(resolve=>{timer=setTimeout(()=>resolve("timeout"),OCR_CATALOGUE_WAIT_MAX_MS_R383);})
++   ]);
++ }finally{if(timer!==null)clearTimeout(timer);}
++}
++
+ const OCR_PASS_TIMEOUT_MS=7000;
+ const OCR_PRIMARY_MAX_PASSES=4;
+ const OCR_REINFORCED_MAX_PASSES=4;
+@@ -5480,10 +5494,12 @@
+  // Never display an older OCR approval while a new capture is waiting for scripts.
+  clearOCRReferenceIfCurrent();clearOCRBrandIfCurrent();
+  invalidateIdentificationOutputs("Nouvelle lecture OCR principale en préparation : résultat précédent annulé.");
+- if(typeof globalThis.ensureBresCatalogueR208==="function"){
+-   try{await globalThis.ensureBresCatalogueR208();}catch(_){/* OCR peut continuer sans catalogue complet */}
+- }
++ const catalogueWaitR383=await waitForOCRCatalogueR383();
+  if(!requestIsCurrent())return; // superseded while the catalogue awaited
++ if(catalogueWaitR383!=="loaded"){
++   el("ocrStatus").className="status warn";
++   el("ocrStatus").textContent="Catalogue non disponible ou trop lent : OCR poursuivi sans sélection catalogue non vérifiée.";
++ }
+  const deadline=Date.now()+OCR_ACTION_BUDGET_MS;
+  try{
+@@ -7066,10 +7082,12 @@
+   // R382: revoke old OCR conclusions while catalogue load is still pending.
+   clearOCRReferenceIfCurrent();clearOCRBrandIfCurrent();
+   invalidateIdentificationOutputs("Nouvelle lecture OCR de tête en préparation : résultat précédent annulé.");
+-  if(typeof globalThis.ensureBresCatalogueR208==="function"){
+-    try{await globalThis.ensureBresCatalogueR208();}catch(_){/* pas de sélection automatique sur catalogue incomplet */}
+-  }
++  const catalogueWaitR383=await waitForOCRCatalogueR383();
+   if(!requestIsCurrent())return; // a newer request won the race
++  if(catalogueWaitR383!=="loaded"){
++    el("headSearchStatus").className="status warn";
++    el("headSearchStatus").textContent="Catalogue non disponible ou trop lent : OCR poursuivi sans sélection catalogue non vérifiée.";
++  }
+   const geometryEvidenceR215=captureDecisionGeometryEvidenceR215();
+   const deadline=Date.now()+OCR_ACTION_BUDGET_MS;
+ 
