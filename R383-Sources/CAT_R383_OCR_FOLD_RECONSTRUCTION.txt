@@ -1,0 +1,19 @@
+CAT-R383 PASS 17/17; 66 groups, 70 pairs
+PASS R382_evidence_audit_passed
+PASS R382_canonic_sha_unchanged
+PASS canonical_5103_unique_12_field
+PASS blank_makers_164
+PASS OCR_fold_groups_66
+PASS OCR_fold_pairs_70
+PASS pairs_independently_rebuild_prior_queue
+PASS pairs_have_correct_prior_fold
+PASS pair_reference_and_maker_match_prior
+PASS compact_collision_BK3-4_BK34_recorded
+PASS review_not_automatic
+PASS all_fold_keys_nonempty_ascii
+PASS idempotent_fold
+PASS edit_reference_detected
+PASS edit_maker_detected
+PASS maker_partition_1_6_63
+PASS canonical_chunks_ten
+{"missing_maker": 1, "same_maker": 6, "different_makers": 63, "close_dimensions_only_not_equivalence": 3, "groups_with_3_or_more": 2}
