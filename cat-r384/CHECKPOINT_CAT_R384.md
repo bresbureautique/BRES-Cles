@@ -1,0 +1,5 @@
+# BRES Clés — catalogue CAT-R384, 19 novembre 2026
+
+Independent read-only audit from 10 canonical catalogue chunks and the 70-pair R383 OCR collision queue. 5,103 unique 12-field records preserved, 164 unspecified manufacturers unchanged, 66 OCR-fold confusion groups / 70 pairs preserved. **68/68 checks passed**, including 39 copied-fragment negative cases (ten omissions, ten duplications, ten geometry mutations and nine adjacent-pair permutations). Every canonical fragment SHA-256 matches CAT-R383. No corrections made to manufacturer, geometry or aliases; no physical equivalence claimed.
+
+`catalogue_cat_r384_fragment_retry_audit.py` creates JSON, CSV and text proof; no canonical writes. R383 17/17 and R382 23/23 independent regressions re-run successfully. Cold-offline Tesseract and real Samsung recognition remain unverified.
