@@ -1,0 +1,163 @@
+{
+  "schema": "bres-cat-r384-fragment-retry-audit-v1",
+  "date": "2026-11-19",
+  "milestone": "CAT-R384",
+  "checks": {
+    "catalog-01.js_sha256_matches_R383": true,
+    "catalog-01.js_12_columns_immutable": true,
+    "catalog-02.js_sha256_matches_R383": true,
+    "catalog-02.js_12_columns_immutable": true,
+    "catalog-03.js_sha256_matches_R383": true,
+    "catalog-03.js_12_columns_immutable": true,
+    "catalog-04.js_sha256_matches_R383": true,
+    "catalog-04.js_12_columns_immutable": true,
+    "catalog-05.js_sha256_matches_R383": true,
+    "catalog-05.js_12_columns_immutable": true,
+    "catalog-06.js_sha256_matches_R383": true,
+    "catalog-06.js_12_columns_immutable": true,
+    "catalog-07.js_sha256_matches_R383": true,
+    "catalog-07.js_12_columns_immutable": true,
+    "catalog-08.js_sha256_matches_R383": true,
+    "catalog-08.js_12_columns_immutable": true,
+    "catalog-09.js_sha256_matches_R383": true,
+    "catalog-09.js_12_columns_immutable": true,
+    "catalog-10.js_sha256_matches_R383": true,
+    "catalog-10.js_12_columns_immutable": true,
+    "global_5103_distinct_refs": true,
+    "164_blank_makers": true,
+    "ten_chunks_complete": true,
+    "chunk_01_omission_detected": true,
+    "chunk_01_duplicate_detected": true,
+    "chunk_01_geometry_mutation_detected": true,
+    "chunk_02_omission_detected": true,
+    "chunk_02_duplicate_detected": true,
+    "chunk_02_geometry_mutation_detected": true,
+    "chunk_03_omission_detected": true,
+    "chunk_03_duplicate_detected": true,
+    "chunk_03_geometry_mutation_detected": true,
+    "chunk_04_omission_detected": true,
+    "chunk_04_duplicate_detected": true,
+    "chunk_04_geometry_mutation_detected": true,
+    "chunk_05_omission_detected": true,
+    "chunk_05_duplicate_detected": true,
+    "chunk_05_geometry_mutation_detected": true,
+    "chunk_06_omission_detected": true,
+    "chunk_06_duplicate_detected": true,
+    "chunk_06_geometry_mutation_detected": true,
+    "chunk_07_omission_detected": true,
+    "chunk_07_duplicate_detected": true,
+    "chunk_07_geometry_mutation_detected": true,
+    "chunk_08_omission_detected": true,
+    "chunk_08_duplicate_detected": true,
+    "chunk_08_geometry_mutation_detected": true,
+    "chunk_09_omission_detected": true,
+    "chunk_09_duplicate_detected": true,
+    "chunk_09_geometry_mutation_detected": true,
+    "chunk_10_omission_detected": true,
+    "chunk_10_duplicate_detected": true,
+    "chunk_10_geometry_mutation_detected": true,
+    "chunk_pair_01_02_swap_detected": true,
+    "chunk_pair_02_03_swap_detected": true,
+    "chunk_pair_03_04_swap_detected": true,
+    "chunk_pair_04_05_swap_detected": true,
+    "chunk_pair_05_06_swap_detected": true,
+    "chunk_pair_06_07_swap_detected": true,
+    "chunk_pair_07_08_swap_detected": true,
+    "chunk_pair_08_09_swap_detected": true,
+    "chunk_pair_09_10_swap_detected": true,
+    "unchanged_66_ocr_groups": true,
+    "unchanged_70_ocr_pairs": true,
+    "pair_identity_matches_R383": true,
+    "no_auto_maker_or_equivalence_edits": true,
+    "previous_CAT_R383_pass": true,
+    "source_unchanged_read_only": true
+  },
+  "ok": true,
+  "record_count": 5103,
+  "field_count": 12,
+  "canonical_digest_SHA256_report_only": "01344a3e593e4d6f35a9b8a2562ecf5a6be1e954c3aec661768b65ecea31ca2d",
+  "canonical_sha256": {
+    "catalog-01.js": "e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b",
+    "catalog-02.js": "955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75",
+    "catalog-03.js": "9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210",
+    "catalog-04.js": "14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942",
+    "catalog-05.js": "5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b",
+    "catalog-06.js": "b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac",
+    "catalog-07.js": "b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1",
+    "catalog-08.js": "3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814",
+    "catalog-09.js": "4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f",
+    "catalog-10.js": "f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4"
+  },
+  "fragments": {
+    "catalog-01.js": {
+      "records": 511,
+      "sha256": "e105dc58c5a5466861f7c77e6259ce19aed2a9c47916feb61ada5509244d3a1b",
+      "first_ref": "TRF1",
+      "last_ref": "ZOL1"
+    },
+    "catalog-02.js": {
+      "records": 511,
+      "sha256": "955843144211e70ca729aedc9cde82a93fd4ae6fafa81529d8470101116f4f75",
+      "first_ref": "TRF2",
+      "last_ref": "ZO1"
+    },
+    "catalog-03.js": {
+      "records": 511,
+      "sha256": "9f1940683f9a52c7a0c7c4a886811107e7a832b1f7daf218969cc0b40c7f6210",
+      "first_ref": "TRF1R",
+      "last_ref": "MTK2P"
+    },
+    "catalog-04.js": {
+      "records": 510,
+      "sha256": "14652e82b2c34c5ba8fabf8c4434556545ed1c642cbfe5d225cfa11030235942",
+      "first_ref": "TRF3",
+      "last_ref": "CA12"
+    },
+    "catalog-05.js": {
+      "records": 510,
+      "sha256": "5867e331e50e932ff3cc8dc57beffc16e501f922eae0c7419cd400ad8341801b",
+      "first_ref": "TRF3R",
+      "last_ref": "CA7"
+    },
+    "catalog-06.js": {
+      "records": 510,
+      "sha256": "b32995f4f0713933804e73d8464b5e05a8cbc79249d7c1b5abac832958f285ac",
+      "first_ref": "TRF4",
+      "last_ref": "CA10"
+    },
+    "catalog-07.js": {
+      "records": 510,
+      "sha256": "b7bbf9e751298c948029a746f8c6000310ee89958f70d829842db5b4194231b1",
+      "first_ref": "TRF6R",
+      "last_ref": "CA11"
+    },
+    "catalog-08.js": {
+      "records": 510,
+      "sha256": "3fc124a98ee082aa63516daa64b7ffd5d9d83290255632accb654db8b229a814",
+      "first_ref": "TRF5R",
+      "last_ref": "CA11R"
+    },
+    "catalog-09.js": {
+      "records": 510,
+      "sha256": "4c7fcc349a620e354ca1224f68099c9c3fb4bedc90e4d9451cfc452314890d1f",
+      "first_ref": "TRM1R",
+      "last_ref": "CA10R"
+    },
+    "catalog-10.js": {
+      "records": 510,
+      "sha256": "f92b2c802862e385643c2b7c3bf0e797105a9652625da704a3fd72993020e9e4",
+      "first_ref": "TRM2",
+      "last_ref": "ZH1R"
+    }
+  },
+  "ocr_fold_groups": 66,
+  "ocr_fold_pairs": 70,
+  "negative_fragment_scenarios": 39,
+  "canonical_edited": false,
+  "maker_assigned": 0,
+  "physical_equivalence_created": 0,
+  "limitations": [
+    "Read-only digital fragment checks; not manufacturer documentation or physical equivalence evidence",
+    "No actual Samsung image or cold-offline Tesseract processed"
+  ]
+}
