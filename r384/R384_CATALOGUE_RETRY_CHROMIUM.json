@@ -1,0 +1,141 @@
+{
+  "schema": "bres-r384-catalogue-retry-real-chromium-v1",
+  "date": "2026-11-19",
+  "milestone": "R384",
+  "ok": true,
+  "checks": {
+    "network-fail_first_load_failed": true,
+    "network-fail_partial_rows_discarded": true,
+    "network-fail_retry_complete_5103": true,
+    "network-fail_no_duplicate_unnecessary_chunk_loads": true,
+    "short-payload_first_load_failed": true,
+    "short-payload_partial_rows_discarded": true,
+    "short-payload_retry_complete_5103": true,
+    "short-payload_no_duplicate_unnecessary_chunk_loads": true,
+    "two-call-single-flight_same_payload_for_concurrent_clients": true,
+    "two-call-single-flight_exactly_ten_chunk_loads": true,
+    "two-call-single-flight_integrity_true": true,
+    "two-call-single-flight_cached_canonical_no_reload": true,
+    "corrupted-loaded_mutation_detected": true,
+    "corrupted-loaded_full_rebuild_recovers": true,
+    "corrupted-loaded_fresh_ten_chunks_loaded": true,
+    "no-api_fail_closed_without_integrity_api": true,
+    "no-api_partial_rows_cleared": true,
+    "all_browser_errors_avoided": true,
+    "canonical_chunk_10_unchanged": true
+  },
+  "details": {
+    "network-fail": {
+      "first_error": "Chargement impossible : catalogue/v3/catalog-04.js?v=228r156",
+      "first_state": {
+        "len": 0,
+        "integrity": false,
+        "unique": 0,
+        "first": null
+      },
+      "second_state": {
+        "len": 5103,
+        "integrity": true,
+        "unique": 5103,
+        "first": "TRF1"
+      },
+      "chunk_requests": {
+        "catalog-01.js": 2,
+        "catalog-02.js": 2,
+        "catalog-03.js": 2,
+        "catalog-04.js": 2,
+        "catalog-05.js": 1,
+        "catalog-06.js": 1,
+        "catalog-07.js": 1,
+        "catalog-08.js": 1,
+        "catalog-09.js": 1,
+        "catalog-10.js": 1
+      }
+    },
+    "short-payload": {
+      "first_error": "Catalogue incomplet ou altéré : inventaire R371 non conforme",
+      "first_state": {
+        "len": 0,
+        "integrity": false,
+        "unique": 0,
+        "first": null
+      },
+      "second_state": {
+        "len": 5103,
+        "integrity": true,
+        "unique": 5103,
+        "first": "TRF1"
+      },
+      "chunk_requests": {
+        "catalog-01.js": 2,
+        "catalog-02.js": 2,
+        "catalog-03.js": 2,
+        "catalog-04.js": 2,
+        "catalog-05.js": 2,
+        "catalog-06.js": 2,
+        "catalog-07.js": 2,
+        "catalog-08.js": 2,
+        "catalog-09.js": 2,
+        "catalog-10.js": 2
+      }
+    },
+    "two-call-single-flight": {
+      "after": {
+        "len": 5103,
+        "integrity": true,
+        "unique": 5103,
+        "first": "TRF1"
+      },
+      "loads": {
+        "catalog-01.js": 1,
+        "catalog-02.js": 1,
+        "catalog-03.js": 1,
+        "catalog-04.js": 1,
+        "catalog-05.js": 1,
+        "catalog-06.js": 1,
+        "catalog-07.js": 1,
+        "catalog-08.js": 1,
+        "catalog-09.js": 1,
+        "catalog-10.js": 1
+      }
+    },
+    "corrupted-loaded": {
+      "corrupt": {
+        "len": 5103,
+        "integrity": false,
+        "unique": 5103,
+        "first": "TRF1"
+      },
+      "recovered": {
+        "len": 5103,
+        "integrity": true,
+        "unique": 5103,
+        "first": "TRF1"
+      },
+      "loads": {
+        "catalog-01.js": 2,
+        "catalog-02.js": 2,
+        "catalog-03.js": 2,
+        "catalog-04.js": 2,
+        "catalog-05.js": 2,
+        "catalog-06.js": 2,
+        "catalog-07.js": 2,
+        "catalog-08.js": 2,
+        "catalog-09.js": 2,
+        "catalog-10.js": 2
+      }
+    },
+    "no-api": {
+      "failure": "Catalogue incomplet ou altéré : inventaire R371 non conforme"
+    }
+  },
+  "browser_errors": [],
+  "duration_seconds": 3.86,
+  "r383_js_sha256": "433c98851e99bfa116776e13eac95164b4c9c68d7e487763b31548194235fcd1",
+  "r384_js_sha256": "872dc2cef6257403732a0c58ce42d34bb4b8239a74e0d32358c6a525bb13f234",
+  "limits": [
+    "Real Chromium / local fulfilled script requests; network exceptions simulated",
+    "Canonical catalogue content loaded from immutable R383 fragments",
+    "No cold-offline Tesseract or physical Samsung recognition tested"
+  ]
+}
