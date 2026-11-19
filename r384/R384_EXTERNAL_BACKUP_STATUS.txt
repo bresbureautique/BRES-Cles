@@ -1,0 +1,48 @@
+BRES CLES — R384 / CAT-R384 — CONTROLE EXTERNE
+Date: 2026-11-19
+
+STABILITE
+- V2.27 reste la seule version stable.
+- GitHub bresbureautique/BRES-Cles, branche main vérifiée après publications:
+  9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8 (inchangée).
+- Aucune fusion sur main.
+
+APPLICATION V2.28 EXPERIMENTALE (R384)
+- Correctif: restauration après erreur temporaire de chargement d'un fragment catalogue;
+  invalidation du cache partiel, verification de l'inventaire canonique (5103)
+  avant acceptation, reprise sans duplication, chargements concurrents mutualisés.
+- Chromium 19/19 controles R384 réussis.
+- Non-regressions exécutées: R383 (30/30), R382 (68/68), R381 (83/83),
+  R380 (36/36). Ancien test R377 non réexécuté dans ce jalon.
+- Tests d'erreur réseau simulée avec véritable moteur Chromium; pas de validation
+  photographique physique et pas de certification Tesseract intégralement hors connexion.
+
+CATALOGUE INDEPENDANT CAT-R384
+- Audit 68/68 controles, y compris 39 corruptions intentionnelles correctement détectées.
+- 5103 references uniques, 12 champs, 10 fragments canoniques inchangés.
+- 164 fabricants manquants; 66 groupes / 70 paires OCR théoriques inchangés.
+- Réexécutions audit CAT-R383 17/17 et CAT-R382 23/23.
+- Aucune attribution automatique ni équivalence physique validée.
+
+GITHUB
+- Branche application: v2.28-test-r384-catalogue-retry-20261119
+  https://github.com/bresbureautique/BRES-Cles/tree/v2.28-test-r384-catalogue-retry-20261119
+- Branche catalogue: catalogue-v3-audit-r384-fragment-retry-20261119
+  https://github.com/bresbureautique/BRES-Cles/tree/catalogue-v3-audit-r384-fragment-retry-20261119
+- 11 nouveaux fichiers publiés et relus via GitHub; 11/11 empreintes Git blob
+  comparées aux sources locales identiques. Les fins de ligne LF ont été préservées.
+
+ARCHIVES LOCALES ET LIBRARY
+- Application: BRES_Cles_Mobile_V2_28_CHECKPOINT_R384.zip, 42 734 150 octets,
+  9 035 entrées, SHA-256 d90cd29331ba7990853103bec1ac855dd967d9a0bec48ab42c37863c56410c6a.
+- Catalogue: BRES_Cles_Catalogue_Audit_CAT_R384.zip, 5 307 426 octets,
+  1 636 entrées, SHA-256 1521f43d145c84b0fa2452bcccea771974f2c02d2d553ef5e0b9aaf010e1ce0b.
+- ZIP CRC et manifestes SHA-256 internes réussis.
+- Deux ZIP déposés dans Library/BRES Cles/Sauvegardes, rematérialisés et
+  comparés octet par octet aux fichiers locaux: 2/2 identiques.
+- Code, tests, audits et rapports copiés dans Library/BRES Cles/Sauvegardes/R384-Sources.
+
+RESTANT NON CERTIFIE
+- OCR Tesseract intégralement hors connexion.
+- Photos de clés réelles sur Samsung et reçu JSON original du benchmark R336.
+- Aucune intervention physique demandée à cette étape.
