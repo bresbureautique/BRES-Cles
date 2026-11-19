@@ -1,0 +1,25 @@
+{
+  "checkpoint": "R384",
+  "date": "2026-11-19",
+  "local_verified": true,
+  "archives": {
+    "app": {
+      "name": "BRES_Cles_Mobile_V2_28_CHECKPOINT_R384.zip",
+      "size": 42734150,
+      "entries": 9035,
+      "manifest_files": 9034,
+      "sha256": "d90cd29331ba7990853103bec1ac855dd967d9a0bec48ab42c37863c56410c6a",
+      "CRC": "PASS",
+      "manifest": "PASS"
+    },
+    "cat": {
+      "name": "BRES_Cles_Catalogue_Audit_CAT_R384.zip",
+      "size": 5307426,
+      "entries": 1636,
+      "manifest_files": 1635,
+      "sha256": "1521f43d145c84b0fa2452bcccea771974f2c02d2d553ef5e0b9aaf010e1ce0b",
+      "CRC": "PASS",
+      "manifest": "PASS"
+    }
+  }
+}
