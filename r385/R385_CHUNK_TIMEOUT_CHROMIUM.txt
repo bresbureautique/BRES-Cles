@@ -1,0 +1,17 @@
+R385 PASS 16/16
+PASS hang-first_bounded_timeout
+PASS hang-first_partial_catalogue_discarded
+PASS hang-first_timed_out_script_detached
+PASS hang-first_retry_5103_and_singleflight
+PASS hang-first_only_expected_script_requests
+PASS hang-first_no_stale_script_tags
+PASS hang-first_valid_cached_inventory_no_reload
+PASS hang-fourth_bounded_timeout
+PASS hang-fourth_partial_catalogue_discarded
+PASS hang-fourth_timed_out_script_detached
+PASS hang-fourth_retry_5103_and_singleflight
+PASS hang-fourth_only_expected_script_requests
+PASS hang-fourth_no_stale_script_tags
+PASS hang-fourth_valid_cached_inventory_no_reload
+PASS no_uncaught_chromium_exceptions
+PASS source_canonical_chunks_unchanged
