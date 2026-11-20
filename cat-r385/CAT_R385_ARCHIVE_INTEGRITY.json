@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-20",
+  "catalogue_zip": {
+    "filename": "BRES_Cles_Catalogue_Audit_CAT_R385.zip",
+    "bytes": 5386630,
+    "entries": 1642,
+    "sha256": "f6b9754a3c4ca0aa09d339f1c8b4ecaaf2997d7cf8ccd94bd5c62a645859b77b",
+    "crc_and_manifest": "verified"
+  },
+  "library_upload": "FAILED AccessDeny: id=None",
+  "claims": {
+    "canonical_references": 5103,
+    "missing_makers": 164,
+    "ocr_collision_groups": 66,
+    "ocr_collision_pairs": 70,
+    "physical_equivalence_added": 0
+  }
+}
