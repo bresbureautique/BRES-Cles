@@ -1,0 +1,23 @@
+CAT-R385 PASS 22/22
+PASS catalog-01.js_unaltered_sha256
+PASS catalog-02.js_unaltered_sha256
+PASS catalog-03.js_unaltered_sha256
+PASS catalog-04.js_unaltered_sha256
+PASS catalog-05.js_unaltered_sha256
+PASS catalog-06.js_unaltered_sha256
+PASS catalog-07.js_unaltered_sha256
+PASS catalog-08.js_unaltered_sha256
+PASS catalog-09.js_unaltered_sha256
+PASS catalog-10.js_unaltered_sha256
+PASS 5103_records_12_fields
+PASS 164_makers_unfilled
+PASS 66_groups_70_pairs
+PASS maker_partition_63_6_1
+PASS runtime_reports_all_expected_groups
+PASS runtime_all_groups_require_review
+PASS no_runtime_extra_duplicates
+PASS runtime_false_inventory_abstains
+PASS runtime_empty_input_abstains
+PASS full_12_field_inventory_integrity
+PASS maker_mutation_detected_and_restored
+PASS no_browser_errors
