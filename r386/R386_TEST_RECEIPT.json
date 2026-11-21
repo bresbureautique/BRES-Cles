@@ -1,0 +1,31 @@
+{
+  "schema": "bres-r386-test-receipt-v1",
+  "date": "2026-11-21",
+  "version": "V2.28 TEST R386",
+  "stable": "V2.27",
+  "stable_main_unchanged": true,
+  "experimental_js_sha256": "eaff91aa1784fb7cb6e845de42feb83c9dd4122338f8710275c445b2483f68bf",
+  "chromium_r386": {
+    "passed": 46,
+    "total": 46,
+    "report_sha256": "1984e279f4da233fcd369e3336211b1e6eecc930a52a1fb9bdb30e0861571ca3"
+  },
+  "r384_semantic_adaptation": {
+    "passed": 19,
+    "total": 19,
+    "report_sha256": "eebd80119be225e73a53590db9a6acdd9a0622f3b876d9613d5d4d6000815218"
+  },
+  "older_suites_on_r386": {
+    "R385": "16/16",
+    "R383": "30/30",
+    "R382": "68/68",
+    "R381": "83/83",
+    "R380": "36/36"
+  },
+  "historical_r384_unmodified": "17/19: earlier rejection changed two obsolete expectations",
+  "r377": "not_run_missing_R376_zip",
+  "source_mode": "offline_Chromium_network_fault_simulations",
+  "samsung_physical_test": false,
+  "tesseract_cold_offline_verified": false,
+  "app_zip_sha256": "b572b383e1a35706e849508bd901cc1a277deb0352b28a26ed5155dabb812259"
+}
