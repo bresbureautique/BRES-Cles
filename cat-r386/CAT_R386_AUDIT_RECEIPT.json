@@ -1,0 +1,23 @@
+{
+  "schema": "bres-cat-r386-audit-receipt-v1",
+  "date": "2026-11-21",
+  "version": "CAT-R386",
+  "canonical_changed": false,
+  "refs": 5103,
+  "fields": 12,
+  "chunks": 10,
+  "blank_makers": 164,
+  "ocr_theoretical_groups": 66,
+  "ocr_theoretical_pairs": 70,
+  "tests": {
+    "CAT_R386": "106/106",
+    "CAT_R385": "22/22",
+    "CAT_R384": "68/68",
+    "CAT_R383": "17/17",
+    "CAT_R382": "23/23"
+  },
+  "independent_report_sha256": "739903209fdea5a8a1d7f823a4eb1f970b888631aab013588a582251a00bf549",
+  "canonical_equivalences_inferred": 0,
+  "manufacturers_inferred": 0,
+  "cat_zip_sha256": "f0e8dd72bbc200b33830631b17ac528a5fb34d88847cee47bd9035cca98f5d44"
+}
