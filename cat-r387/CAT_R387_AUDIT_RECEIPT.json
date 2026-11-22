@@ -1,0 +1,22 @@
+{
+  "schema": "bres-cat-r387-release-audit-receipt-v1",
+  "date": "2026-11-22",
+  "series": {
+    "CAT_R387": 47,
+    "CAT_R386": 106,
+    "CAT_R385": 22,
+    "CAT_R384": 68,
+    "CAT_R383": 17,
+    "CAT_R382": 23
+  },
+  "passed": 283,
+  "total": 283,
+  "references": 5103,
+  "fields": 12,
+  "canonical_fragments": 10,
+  "missing_makers": 164,
+  "ocr_fold_groups": 66,
+  "ocr_fold_pairs": 70,
+  "physical_equivalence_inferred": 0,
+  "manufacturers_inferred": 0
+}
