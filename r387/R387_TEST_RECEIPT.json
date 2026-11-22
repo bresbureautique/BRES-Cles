@@ -1,0 +1,24 @@
+{
+  "schema": "bres-r387-release-test-receipt-v1",
+  "date": "2026-11-22",
+  "stable": "V2.27 (main unchanged)",
+  "test_version": "V2.28 R387",
+  "new_checks": 63,
+  "regression_checks": {
+    "R387": 63,
+    "R387_R386": 46,
+    "R386_R384": 19,
+    "R385": 16,
+    "R383": 30,
+    "R382": 68,
+    "R381": 83,
+    "R380": 36
+  },
+  "passed": 361,
+  "total": 361,
+  "js_sha256": "10e28efc474ef78f5dbd54d815f84fa5f1c2d7615dd489c273f40dc5d6e68f62",
+  "digest_scope": "per-canonical-chunk double 32-bit integrity, not cryptographic authenticity",
+  "physical_certified": false,
+  "offline_tesseract_certified": false,
+  "r336_original_receipt_found": false
+}
