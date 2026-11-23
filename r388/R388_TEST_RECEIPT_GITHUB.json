@@ -1,0 +1,26 @@
+{
+  "schema": "bres-r388-github-regression-receipt-v1",
+  "date": "2026-11-23",
+  "stable_ref": "main",
+  "stable_sha": "9a5ea3c256e05a4049d568c9afc6d03e2c0eb1c8",
+  "v228_test_runtime_sha256": "10e28efc474ef78f5dbd54d815f84fa5f1c2d7615dd489c273f40dc5d6e68f62",
+  "tests": {
+    "r388": {
+      "passed": 42,
+      "total": 42
+    },
+    "r387": {
+      "passed": 63,
+      "total": 63
+    },
+    "selected_total": {
+      "passed": 105,
+      "total": 105
+    }
+  },
+  "test_source_sha256": "b43c508978db6f0df4e8d6e5b6ac06246b66dfe3aec2636ba59469c4c808c126",
+  "app_zip_sha256": "238d1922ffd28a60618cdc43c3e20b2af418268b1a1a6fab36fa5fc8151416eb",
+  "app_zip_entries": 9073,
+  "library_upload": "AccessDeny; unverified/not saved",
+  "no_physical_or_offline_ocr_certification": true
+}
