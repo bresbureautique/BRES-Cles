@@ -1,0 +1,41 @@
+{
+  "schema": "bres-cat-r388-github-audit-receipt-v1",
+  "date": "2026-11-23",
+  "references": 5103,
+  "fields": 12,
+  "canonical_fragments": 10,
+  "missing_manufacturers": 164,
+  "original_ocr_fold": {
+    "groups": 66,
+    "pairs": 70
+  },
+  "one_edit_pairs": {
+    "substitutions": 19882,
+    "insertion_deletion": 4368,
+    "adjacent_swap": 326,
+    "total": 24576
+  },
+  "near_dimensions_within_1mm": 2459,
+  "review_queue_missing_maker": 170,
+  "tests": {
+    "cat_r388": {
+      "passed": 29,
+      "total": 29
+    },
+    "cat_r387": {
+      "passed": 47,
+      "total": 47
+    },
+    "selected_total": {
+      "passed": 76,
+      "total": 76
+    }
+  },
+  "independent_audit_source_sha256": "70a9687fffe5184727798dec270590332b1d7d4613ee3f2336f979a23f5c951a",
+  "queue_csv_sha256": "593d1ce73cfc6fcb4d23562e5f23f98a10e5775cfde65f7eab3db956939e1830",
+  "catalogue_zip_sha256": "260c26583e6d110547c1108adac1559e57afa8f677053c3e8c795dd314c56135",
+  "catalogue_zip_entries": 1659,
+  "physical_equivalences_added": 0,
+  "manufacturers_inferred": 0,
+  "library_upload": "AccessDeny; unverified/not saved"
+}
