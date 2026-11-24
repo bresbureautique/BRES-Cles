@@ -1,0 +1,30 @@
+{
+  "milestone": "R389",
+  "checks": {
+    "canonical": true,
+    "recovery": true,
+    "no_uncaught_error": true,
+    "no_false_ocr_available": true
+  },
+  "evidence": {
+    "file_and_http_navigation": "ERR_BLOCKED_BY_ADMINISTRATOR; not certified",
+    "native_data_script": {
+      "result": {
+        "clean": {
+          "rows": 5103,
+          "unique": 5103,
+          "verified": true,
+          "shared": true,
+          "calls": 10
+        },
+        "detected": true,
+        "repaired": true,
+        "calls": 20,
+        "ocrLoaded": false
+      },
+      "errors": []
+    }
+  },
+  "ok": true,
+  "limit": "Desktop Chromium, data URLs, no external network. Not file/HTTP or Samsung certification."
+}
