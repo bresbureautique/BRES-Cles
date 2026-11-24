@@ -1,0 +1,31 @@
+{
+  "milestone": "CAT-R389",
+  "checks": {
+    "catalog-01.js": true,
+    "catalog-02.js": true,
+    "catalog-03.js": true,
+    "catalog-04.js": true,
+    "catalog-05.js": true,
+    "catalog-06.js": true,
+    "catalog-07.js": true,
+    "catalog-08.js": true,
+    "catalog-09.js": true,
+    "catalog-10.js": true,
+    "rows": true,
+    "pairs": true,
+    "float_near": true,
+    "old_queue": true,
+    "no_float_false_positive": true,
+    "priority_only_real_pairs": true
+  },
+  "ok": true,
+  "pairs": 24576,
+  "exact_near": 2459,
+  "float_near": 2459,
+  "exact_priority": 170,
+  "prior_priority": 170,
+  "new_priority": [],
+  "boundary_differences": [],
+  "physical_equivalences": 0,
+  "manufacturers_imputed": 0
+}
