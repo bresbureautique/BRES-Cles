@@ -1,0 +1,30 @@
+{
+  "milestone": "R390",
+  "ok": true,
+  "checks": {
+    "priority_coverage": true,
+    "full_catalogue": true,
+    "manual_without_geometry_no_validation": true,
+    "corrupted_catalogue_blocks_all_text_guesses": true,
+    "canonical_recovery": true,
+    "no_uncaught_error": true,
+    "no_real_ocr_claim": true
+  },
+  "evidence": {
+    "complete": true,
+    "rows": 5103,
+    "recovered": true,
+    "found": 0,
+    "rejected": 247,
+    "bad": [],
+    "prefill": 243,
+    "ambiguous": 4,
+    "blocked": true,
+    "ocrAvailable": false
+  },
+  "errors": [],
+  "refs": 247,
+  "pair_count": 170,
+  "fixture_sha256": "f0de8235a0843a2eedbf8c6acc5e750ddd44f5441d1111147ec7c9c39d89d6c0",
+  "limit": "Text simulation only; no physical key, no Samsung, no Tesseract recognition. Requires sibling CAT-R389 queue."
+}
