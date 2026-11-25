@@ -1,0 +1,30 @@
+{
+  "milestone": "CAT-R390",
+  "ok": true,
+  "checks": {
+    "catalog-01.js": true,
+    "catalog-02.js": true,
+    "catalog-03.js": true,
+    "catalog-04.js": true,
+    "catalog-05.js": true,
+    "catalog-06.js": true,
+    "catalog-07.js": true,
+    "catalog-08.js": true,
+    "catalog-09.js": true,
+    "catalog-10.js": true,
+    "canonical_rows": true,
+    "queue_integrity": true,
+    "all_refs_covered": true,
+    "all_edges_covered": true,
+    "exact_edges_covered": true,
+    "no_cross_group_edge": true
+  },
+  "priority_pairs": 170,
+  "references": 247,
+  "review_groups": 89,
+  "identical_length_height_pairs": 118,
+  "policy": "Worklist grouping only; connected paths are not direct OCR pairs or physical equivalences. Identical two dimensions are not identity.",
+  "manufacturers_imputed": 0,
+  "physical_equivalences": 0,
+  "full_graph_sha256": "1f7d4f636a9f74c9624a0a3d89bf226775f6253f3a884a15dcd19f44c7e924ef"
+}
